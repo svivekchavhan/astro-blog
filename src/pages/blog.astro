@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BlogListItem from "../components/BlogListItem.astro";
+
+const posts = [
+  { title: "The Future of Web Development in 2026", href: "/blog/sample-post", date: "May 15, 2026" },
+  { title: "Mastering AI: A Comprehensive Guide", href: "/blog/sample-post", date: "May 12, 2026" },
+  { title: "Designing for the Next Generation", href: "/blog/sample-post", date: "May 10, 2026" },
+  { title: "10 Tips for Better CSS Performance", href: "/blog/sample-post", date: "May 08, 2026" },
+  { title: "The Rise of Edge Computing", href: "/blog/sample-post", date: "May 05, 2026" },
+  { title: "Astro vs Next.js: Which one to choose?", href: "/blog/sample-post", date: "May 03, 2026" },
+  { title: "Building accessible web apps", href: "/blog/sample-post", date: "May 01, 2026" },
+  { title: "Modern state management in JavaScript", href: "/blog/sample-post", date: "Apr 28, 2026" },
+  { title: "The importance of Web Vitals", href: "/blog/sample-post", date: "Apr 25, 2026" },
+  { title: "Server-side rendering vs Static generation", href: "/blog/sample-post", date: "Apr 22, 2026" },
+];
+---
+
+<Layout title="Archive | AstroBlog" description="Browse all our articles and tutorials in a clean list format.">
+  <section class="py-8 pb-24">
+    <div class="mb-12 border-b border-border-card pb-8">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight text-text-main m-0">Article <span class="gradient-text">Archive</span></h1>
+      <p class="text-text-muted text-lg m-0">Discover our full collection of articles organized by date.</p>
+    </div>
+
+    <div class="bg-bg-surface border border-border-card rounded-3xl transition-all duration-300 shadow-xl overflow-hidden px-6 md:px-10">
+      <div class="flex flex-col">
+        {
+          posts.map((post, index) => (
+            <div class="opacity-0 animate-[fadeInUp_0.6s_ease_forwards]" style={`animation-delay: ${index * 0.08}s`}>
+              <BlogListItem {...post} number={index + 1} />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Layout>

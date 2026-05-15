@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="About Us | AstroBlog" description="Learn more about AstroBlog, our mission, and the team behind the content.">
+  <article class="max-w-4xl mx-auto py-12 px-4">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-8 tracking-tight text-text-main">About <span class="gradient-text">AstroBlog</span></h1>
+    
+    <div class="prose prose-lg dark:prose-invert max-w-none text-text-muted leading-relaxed space-y-6">
+      <p class="text-xl text-text-main font-medium">Welcome to AstroBlog, your premier destination for high-quality technical content, web development tutorials, and insights into the future of technology.</p>
+      
+      <h2 class="text-2xl font-bold text-text-main pt-6">Our Mission</h2>
+      <p>Our mission is to simplify complex technology for developers, designers, and tech enthusiasts. We believe that great information should be accessible, well-structured, and easy to digest.</p>
+      
+      <h2 class="text-2xl font-bold text-text-main pt-6">What We Cover</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Web Development:</strong> Deep dives into Astro, React, Tailwind CSS, and modern JavaScript.</li>
+        <li><strong>AI & Innovation:</strong> Exploring how artificial intelligence is shaping our digital world.</li>
+        <li><strong>Design Systems:</strong> Best practices for creating scalable and beautiful user interfaces.</li>
+        <li><strong>Performance:</strong> Tips and tricks for achieving perfect Core Web Vitals scores.</li>
+      </ul>
+      
+      <h2 class="text-2xl font-bold text-text-main pt-6">The Team</h2>
+      <p>AstroBlog is run by a dedicated team of developers and writers who are passionate about sharing their knowledge. We pride ourselves on accuracy, clarity, and providing value to our readers.</p>
+      
+      <div class="bg-bg-surface border border-border-card rounded-2xl p-8 mt-12">
+        <h3 class="text-xl font-bold text-text-main mb-4">Want to contribute?</h3>
+        <p class="mb-6">We're always looking for guest writers and collaborators. If you have something interesting to share with our community, get in touch!</p>
+        <a href="/contact" class="btn-primary inline-flex">Contact Us</a>
+      </div>
+    </div>
+  </article>
+</Layout>

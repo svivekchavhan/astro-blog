@@ -1,0 +1,134 @@
+---
+import { HiOutlineHome, HiOutlineNewspaper, HiOutlineEnvelope, HiOutlineBell, HiOutlineMagnifyingGlass, HiOutlineQueueList, HiOutlineSun, HiOutlineMoon } from "react-icons/hi2";
+---
+<header class="h-[70px] bg-bg-navbar backdrop-blur-md border-b border-border-card sticky top-0 z-50 transition-colors duration-300">
+	<div class="max-w-[1200px] mx-auto px-6 w-full h-full flex justify-between items-center">
+		<a href="/" class="text-[1.5rem] font-bold text-text-main no-underline whitespace-nowrap lg:text-[1.25rem]">
+			<span class="gradient-text">Astro</span>Blog
+		</a>
+
+		<div class="flex items-center gap-8 lg:gap-4">
+			<div class="relative flex items-center bg-bg-card border border-border-card px-4 py-2 rounded-full w-[250px] transition-all duration-300 focus-within:border-primary focus-within:bg-white/10 focus-within:w-[300px] hidden lg:flex">
+				<HiOutlineMagnifyingGlass className="text-text-muted mr-2 text-lg" />
+				<input type="text" placeholder="Search articles..." id="search-input" class="bg-transparent border-none text-text-main font-sans text-sm outline-none w-full placeholder-text-muted" />
+			</div>
+			
+			<ul class="hidden lg:flex items-center gap-8 list-none m-0 p-0">
+				<li><a href="/" class="flex items-center gap-2 text-text-muted font-medium hover:text-text-main transition-colors text-[0.95rem]"><HiOutlineHome className="text-lg" /> Home</a></li>
+				<li><a href="/blog" class="flex items-center gap-2 text-text-muted font-medium hover:text-text-main transition-colors text-[0.95rem]"><HiOutlineNewspaper className="text-lg" /> Blog</a></li>
+				<li><a href="/result" class="flex items-center gap-2 text-text-muted font-medium hover:text-text-main transition-colors text-[0.95rem]"><HiOutlineQueueList className="text-lg" /> Result</a></li>
+				<li><a href="/contact" class="flex items-center gap-2 text-text-muted font-medium hover:text-text-main transition-colors text-[0.95rem]"><HiOutlineEnvelope className="text-lg" /> Contact</a></li>
+				<li><a href="#" class="btn-primary !text-sm !py-2"><HiOutlineBell className="text-lg" /> Subscribe</a></li>
+			</ul>
+
+			<button id="theme-toggle" class="w-10 h-10 rounded-full border border-border-card flex items-center justify-center relative overflow-hidden text-text-main hover:bg-black/5 dark:hover:bg-white/5 hover:border-primary transition-all duration-300 cursor-pointer group" aria-label="Toggle theme">
+				<span class="sun-icon absolute flex items-center justify-center text-xl transition-all duration-500 transform group-data-[theme=light]:translate-y-[40px] group-data-[theme=light]:opacity-0 translate-y-0 opacity-100"><HiOutlineSun /></span>
+				<span class="moon-icon absolute flex items-center justify-center text-xl transition-all duration-500 transform group-data-[theme=light]:translate-y-0 group-data-[theme=light]:opacity-100 -translate-y-[40px] opacity-0"><HiOutlineMoon /></span>
+			</button>
+
+			<button class="lg:hidden flex flex-col justify-between w-6 h-[18px] bg-transparent border-none cursor-pointer p-0 z-[1001]" id="menu-toggle" aria-label="Toggle Menu">
+				<span class="w-full h-[2px] bg-text-main transition-all duration-300 origin-center"></span>
+				<span class="w-full h-[2px] bg-text-main transition-all duration-300"></span>
+				<span class="w-full h-[2px] bg-text-main transition-all duration-300 origin-center"></span>
+			</button>
+		</div>
+	</div>
+</header>
+
+<div class="fixed top-0 right-0 w-[80%] max-w-[300px] h-screen bg-bg-base pt-[6rem] px-8 pb-8 z-[1000] border-l border-border-card flex flex-col transition-transform duration-400 ease-[cubic-bezier(0.4,0,0.2,1)] translate-x-full shadow-[-10px_0_30px_rgba(0,0,0,0.5)]" id="mobile-menu">
+	<div class="flex items-center bg-bg-card border border-border-card p-3 rounded-xl gap-3 text-text-muted mb-8">
+		<HiOutlineMagnifyingGlass className="text-xl" />
+		<input type="text" placeholder="Search articles..." class="bg-transparent border-none text-text-main font-sans outline-none w-full" />
+	</div>
+	<ul class="flex flex-col gap-6 list-none p-0 m-0">
+		<li><a href="/" class="flex items-center gap-3 text-text-main text-[1.1rem] font-medium py-2 border-b border-border-card"><HiOutlineHome className="text-xl" /> Home</a></li>
+		<li><a href="/blog" class="flex items-center gap-3 text-text-main text-[1.1rem] font-medium py-2 border-b border-border-card"><HiOutlineNewspaper className="text-xl" /> Blog</a></li>
+		<li><a href="/result" class="flex items-center gap-3 text-text-main text-[1.1rem] font-medium py-2 border-b border-border-card"><HiOutlineQueueList className="text-xl" /> Result</a></li>
+		<li><a href="/contact" class="flex items-center gap-3 text-text-main text-[1.1rem] font-medium py-2 border-b border-border-card"><HiOutlineEnvelope className="text-xl" /> Contact</a></li>
+		<li class="mt-4"><a href="#" class="btn-primary w-full"><HiOutlineBell className="text-xl" /> Subscribe</a></li>
+	</ul>
+</div>
+
+<div class="fixed inset-0 bg-black/60 backdrop-blur-[4px] z-[999] opacity-0 invisible transition-all duration-300" id="mobile-overlay"></div>
+
+<script>
+	function initNavbar() {
+		const menuToggle = document.getElementById('menu-toggle');
+		const mobileMenu = document.getElementById('mobile-menu');
+		const mobileOverlay = document.getElementById('mobile-overlay');
+		const themeToggle = document.getElementById('theme-toggle');
+
+		// Sync initial theme toggle button state
+		if (themeToggle) {
+			const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+			themeToggle.setAttribute('data-theme', currentTheme);
+		}
+
+		function toggleMenu() {
+			const isActive = menuToggle?.classList.contains('active');
+			
+			if (isActive) {
+				// Close menu
+				menuToggle.classList.remove('active');
+				mobileMenu?.classList.add('translate-x-full');
+				mobileMenu?.classList.remove('translate-x-0');
+				mobileOverlay?.classList.remove('!opacity-100', '!visible');
+				document.body.classList.remove('overflow-hidden');
+				
+				// Reset hamburger animation
+				const spans = menuToggle?.querySelectorAll('span');
+				if (spans && spans.length === 3) {
+					spans[0].style.transform = 'none';
+					spans[1].style.opacity = '1';
+					spans[2].style.transform = 'none';
+				}
+			} else {
+				// Open menu
+				menuToggle?.classList.add('active');
+				mobileMenu?.classList.remove('translate-x-full');
+				mobileMenu?.classList.add('translate-x-0');
+				mobileOverlay?.classList.add('!opacity-100', '!visible');
+				document.body.classList.add('overflow-hidden');
+				
+				// Animate hamburger to X
+				const spans = menuToggle?.querySelectorAll('span');
+				if (spans && spans.length === 3) {
+					spans[0].style.transform = 'translateY(8px) rotate(45deg)';
+					spans[1].style.opacity = '0';
+					spans[2].style.transform = 'translateY(-8px) rotate(-45deg)';
+				}
+			}
+		}
+
+		function toggleTheme() {
+			const currentTheme = document.documentElement.getAttribute('data-theme');
+			const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+			
+			if (newTheme === 'light') {
+				document.documentElement.setAttribute('data-theme', 'light');
+			} else {
+				document.documentElement.removeAttribute('data-theme');
+			}
+			
+			localStorage.setItem('theme', newTheme);
+			if (themeToggle) themeToggle.setAttribute('data-theme', newTheme);
+		}
+
+		if (themeToggle && !themeToggle.hasAttribute('data-initialized')) {
+			themeToggle.addEventListener('click', toggleTheme);
+			themeToggle.setAttribute('data-initialized', 'true');
+		}
+		
+		if (menuToggle && !menuToggle.hasAttribute('data-initialized')) {
+			menuToggle.addEventListener('click', toggleMenu);
+			mobileOverlay?.addEventListener('click', toggleMenu);
+			menuToggle.setAttribute('data-initialized', 'true');
+		}
+	}
+
+	// Initialize on page load and after view transitions
+	document.addEventListener('astro:page-load', () => {
+		initNavbar();
+	});
+</script>
+

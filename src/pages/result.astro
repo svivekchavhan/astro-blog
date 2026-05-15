@@ -1,0 +1,55 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const upcomingArticles = [
+  { title: "Quantum Computing: The Next Frontier", days: 3, description: "A deep dive into how quantum bits will revolutionize cryptography and speed." },
+  { title: "Sustainable Tech: Eco-Friendly Gadgets", days: 7, description: "Exploring the latest innovations in green technology and renewable energy sources." },
+  { title: "The Evolution of Neural Networks", days: 12, description: "How deep learning is moving from simple pattern recognition to creative intelligence." },
+  { title: "Building for the Metaverse", days: 18, description: "Practical tips for developers entering the world of 3D spatial computing." },
+  { title: "TypeScript 6.0: What to Expect", days: 25, description: "A preview of the highly anticipated features coming to our favorite typed language." },
+];
+---
+
+<Layout title="Release Schedule | AstroBlog" description="Check out our upcoming articles and release dates.">
+  <section class="py-8 pb-24">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-2 tracking-tight text-text-main m-0">Content <span class="gradient-text">Schedule</span></h1>
+      <p class="text-text-secondary text-[1.1rem] m-0">Upcoming articles and their expected release timeline.</p>
+    </div>
+
+    <div class="bg-black/5 dark:bg-white/5 border border-border-card rounded-2xl overflow-hidden transition-colors duration-300">
+      <div class="flex flex-col">
+        {upcomingArticles.map((article, index) => (
+          <div class="opacity-0 animate-[fadeInUp_0.6s_ease_forwards]" style={`animation-delay: ${index * 0.1}s`}>
+            <div class="flex px-6 sm:px-8 py-6 gap-6 sm:gap-8 items-center transition-all duration-300 hover:bg-black/5 hover:dark:bg-white/5 border-b border-border-card/30 last:border-0">
+              <span class="text-2xl font-extrabold text-border-card font-sans shrink-0 w-10 flex items-center justify-center border-r border-border-card pr-8 -mr-4 h-10">
+                {(index + 1).toString().padStart(2, '0')}
+              </span>
+              
+              <div class="flex-1 flex items-center">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-6 flex-1">
+                  <h2 class="text-xl text-text-main font-semibold m-0 leading-tight">{article.title}</h2>
+                  <span class="text-[0.65rem] bg-primary/5 text-primary px-3 py-1 rounded-full font-bold uppercase tracking-wide border border-primary/20 flex items-center gap-1.5 whitespace-nowrap">
+                    <span class="w-1.5 h-1.5 bg-primary rounded-full shadow-[0_0_8px] shadow-primary animate-pulse inline-block"></span>
+                    Upcoming
+                  </span>
+                </div>
+              </div>
+
+              <div class="relative w-[60px] h-[60px] shrink-0 flex items-center justify-center ml-auto">
+                <svg viewBox="0 0 100 100" class="absolute w-full h-full -rotate-90">
+                  <circle cx="50" cy="50" r="45" fill="none" stroke-width="10" stroke-linecap="round" class="stroke-black/5 dark:stroke-white/5 transition-colors duration-300"></circle>
+                  <circle cx="50" cy="50" r="45" fill="none" stroke-width="10" stroke-linecap="round" class="stroke-primary [stroke-dasharray:283] transition-[stroke-dashoffset] duration-1000 ease-out" style={`stroke-dashoffset: ${283 - (283 * (30 - article.days)) / 30}`}></circle>
+                </svg>
+                <div class="flex flex-col items-center leading-none z-10">
+                  <span class="text-[1.1rem] font-bold text-text-main">{article.days}</span>
+                  <span class="text-[0.45rem] uppercase text-text-secondary mt-0.5">days</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

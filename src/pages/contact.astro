@@ -1,0 +1,77 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Contact Us | AstroBlog" description="Get in touch with us for inquiries, feedback, or collaboration.">
+  <section class="py-8 pb-24">
+    <div class="text-center mb-16">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight text-text-main m-0">Get in <span class="gradient-text">Touch</span></h1>
+      <p class="text-text-secondary text-[1.1rem] max-w-[700px] mx-auto m-0 leading-relaxed">Have a question or want to collaborate? We'd love to hear from you. Send us a message and we'll get back to you as soon as possible.</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-12 items-start">
+      <div class="bg-black/5 dark:bg-white/5 border border-border-card rounded-3xl p-6 md:p-10 transition-colors duration-300">
+        <form class="flex flex-col gap-6">
+          <div class="flex flex-col gap-2">
+            <label for="name" class="text-[0.9rem] font-medium text-text-main">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required class="bg-black/5 dark:bg-white/5 border border-border-card rounded-xl px-4 py-3 text-text-main font-sans outline-none focus:border-primary focus:bg-white/10 transition-colors" />
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="email" class="text-[0.9rem] font-medium text-text-main">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required class="bg-black/5 dark:bg-white/5 border border-border-card rounded-xl px-4 py-3 text-text-main font-sans outline-none focus:border-primary focus:bg-white/10 transition-colors" />
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="subject" class="text-[0.9rem] font-medium text-text-main">Subject</label>
+            <select id="subject" name="subject" class="bg-black/5 dark:bg-white/5 border border-border-card rounded-xl px-4 py-3 text-text-main font-sans outline-none focus:border-primary focus:bg-white/10 transition-colors [&>option]:bg-bg-base">
+              <option value="general">General Inquiry</option>
+              <option value="collaboration">Collaboration</option>
+              <option value="feedback">Feedback</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="message" class="text-[0.9rem] font-medium text-text-main">Your Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="How can we help you?" required class="bg-black/5 dark:bg-white/5 border border-border-card rounded-xl px-4 py-3 text-text-main font-sans outline-none focus:border-primary focus:bg-white/10 transition-colors resize-y"></textarea>
+          </div>
+          <button type="submit" class="mt-4 py-4 px-8 bg-gradient-to-r from-primary to-secondary text-white border-none rounded-xl font-bold text-base cursor-pointer flex items-center justify-center gap-3 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/20">
+            <span>Send Message</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          </button>
+        </form>
+      </div>
+
+      <div class="flex flex-col gap-8">
+        <div class="bg-gradient-to-r from-primary to-secondary rounded-3xl p-10 text-white shadow-xl shadow-primary/10">
+          <h3 class="text-2xl font-bold mb-8">Contact Information</h3>
+          <div class="flex gap-4 mb-6">
+            <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <div>
+              <p class="text-sm opacity-80 mb-1">Email</p>
+              <p class="font-semibold">hello@astroblog.com</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <div>
+              <p class="text-sm opacity-80 mb-1">Location</p>
+              <p class="font-semibold">San Francisco, CA</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-black/5 dark:bg-white/5 border border-border-card rounded-3xl p-8 transition-colors duration-300">
+          <h3 class="text-xl font-bold text-text-main mb-6">Follow Us</h3>
+          <div class="flex flex-wrap gap-4">
+            <a href="#" class="bg-black/10 dark:bg-white/5 px-4 py-2 rounded-lg no-underline text-text-main text-[0.9rem] transition-colors hover:bg-primary hover:text-white">Twitter</a>
+            <a href="#" class="bg-black/10 dark:bg-white/5 px-4 py-2 rounded-lg no-underline text-text-main text-[0.9rem] transition-colors hover:bg-primary hover:text-white">LinkedIn</a>
+            <a href="#" class="bg-black/10 dark:bg-white/5 px-4 py-2 rounded-lg no-underline text-text-main text-[0.9rem] transition-colors hover:bg-primary hover:text-white">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
