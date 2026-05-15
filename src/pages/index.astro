@@ -13,59 +13,16 @@ const posts = [
   { title: "Modern state management in JavaScript", href: "/blog/sample-post", date: "Apr 28, 2026", category: "JavaScript" },
   { title: "The importance of Web Vitals", href: "/blog/sample-post", date: "Apr 25, 2026", category: "SEO" },
   { title: "Server-side rendering vs Static generation", href: "/blog/sample-post", date: "Apr 22, 2026", category: "Web Dev" },
-  { title: "Deep dive into React Server Components", href: "/blog/sample-post", date: "Apr 20, 2026", category: "React" },
 ];
 
-const featuredPost = posts[0];
-const trendingPosts = posts.slice(1, 4);
-const latestPosts = posts.slice(4);
+const latestPosts = posts;
 ---
 
 <Layout title="AstroBlog | Home of Technical Insights">
-  <!-- Hero Section -->
-  <section class="py-12 border-b border-border-card mb-12">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      <div class="space-y-6">
-        <span class="text-primary font-bold uppercase tracking-wider text-sm">{featuredPost.category}</span>
-        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-text-main m-0 leading-[1.1]">
-          {featuredPost.title}
-        </h1>
-        <p class="text-text-muted text-lg leading-relaxed max-w-xl">
-          Discover how the landscape of web development is evolving in 2026 and what tools you need to stay ahead of the curve.
-        </p>
-        <div class="flex items-center gap-4 pt-4">
-          <a href={featuredPost.href} class="btn-primary">Read Full Story</a>
-          <span class="text-text-muted text-sm">{featuredPost.date} • 8 min read</span>
-        </div>
-      </div>
-      <div class="relative group cursor-pointer overflow-hidden rounded-3xl aspect-[4/3] bg-bg-surface border border-border-card shadow-2xl">
-        <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 group-hover:scale-105 transition-transform duration-700"></div>
-        <div class="absolute inset-0 flex items-center justify-center text-8xl opacity-30 select-none">🚀</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Trending Section -->
-  <section class="mb-20">
-    <h2 class="text-2xl font-bold text-text-main mb-8 flex items-center gap-3">
-      <span class="w-8 h-1 bg-primary rounded-full"></span>
-      Trending Now
-    </h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      {trendingPosts.map((post) => (
-        <a href={post.href} class="group block bg-bg-surface border border-border-card p-6 rounded-2xl hover:border-primary transition-all duration-300">
-          <span class="text-primary text-xs font-bold uppercase tracking-widest block mb-3">{post.category}</span>
-          <h3 class="text-xl font-bold text-text-main group-hover:text-primary transition-colors line-clamp-2 mb-4">{post.title}</h3>
-          <span class="text-text-muted text-sm">{post.date}</span>
-        </a>
-      ))}
-    </div>
-  </section>
-
   <!-- Latest Articles Section -->
-  <section id="posts" class="pb-24">
-    <div class="mb-8 flex justify-between items-end border-b border-border-card pb-4">
-      <h2 class="text-3xl font-bold tracking-tight text-text-main m-0">Latest <span class="gradient-text">Articles</span></h2>
+  <section id="posts" class="py-12 pb-24">
+    <div class="mb-12 flex justify-between items-end border-b border-border-card pb-6">
+      <h2 class="text-3xl font-black tracking-tight text-text-main m-0 uppercase italic">Latest <span class="gradient-text">Articles</span></h2>
       <a href="/blog" class="text-primary hover:underline font-medium">Browse Archive →</a>
     </div>
 
