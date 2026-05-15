@@ -15,21 +15,7 @@
 
 @layer base {
   :root {
-    /* Dark Mode Defaults */
-    --color-primary: #38bdf8;
-    --color-secondary: #818cf8;
-    
-    --color-bg-base: #0f172a;
-    --color-bg-surface: rgba(255, 255, 255, 0.03);
-    --color-bg-navbar: rgba(15, 23, 42, 0.9);
-    --color-border-card: rgba(255, 255, 255, 0.1);
-    
-    --color-text-main: #f1f5f9;
-    --color-text-muted: #94a3b8;
-  }
-
-  [data-theme='light'] {
-    /* Light Mode Overrides */
+    /* Light Mode Defaults */
     --color-primary: #0ea5e9;
     --color-secondary: #4f46e5;
     
@@ -40,6 +26,20 @@
     
     --color-text-main: #0f172a;
     --color-text-muted: #475569;
+  }
+
+  [data-theme='dark'] {
+    /* Dark Mode Overrides */
+    --color-primary: #38bdf8;
+    --color-secondary: #818cf8;
+    
+    --color-bg-base: #0f172a;
+    --color-bg-surface: rgba(255, 255, 255, 0.03);
+    --color-bg-navbar: rgba(15, 23, 42, 0.9);
+    --color-border-card: rgba(255, 255, 255, 0.1);
+    
+    --color-text-main: #f1f5f9;
+    --color-text-muted: #94a3b8;
   }
 
   html, body, *, *::before, *::after {

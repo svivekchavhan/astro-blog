@@ -31,14 +31,11 @@ const { title, description = "A premium blog layout built with Astro." } = Astro
 					if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
 						return localStorage.getItem('theme');
 					}
-					if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-						return 'dark';
-					}
 					return 'light';
 				})();
 			
-				if (theme === 'light') {
-					document.documentElement.setAttribute('data-theme', 'light');
+				if (theme === 'dark') {
+					document.documentElement.setAttribute('data-theme', 'dark');
 				} else {
 					document.documentElement.removeAttribute('data-theme');
 				}

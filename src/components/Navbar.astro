@@ -1,5 +1,5 @@
 ---
-import { HiOutlineHome, HiOutlineNewspaper, HiOutlineEnvelope, HiOutlineBell, HiOutlineMagnifyingGlass, HiOutlineQueueList, HiOutlineSun, HiOutlineMoon, HiOutlineClock, HiOutlineCalendarDays } from "react-icons/hi2";
+import { HiOutlineHome, HiOutlineNewspaper, HiOutlineEnvelope, HiOutlineBell, HiOutlineMagnifyingGlass, HiOutlineQueueList, HiOutlineSun, HiOutlineMoon, HiOutlineClock, HiOutlineCalendarDays, HiOutlineShieldCheck, HiOutlineDocumentText, HiOutlineExclamationTriangle, HiOutlineMap } from "react-icons/hi2";
 import Marquee from "./Marquee.astro";
 ---
 <!-- Sticky Header Wrapper -->
@@ -11,16 +11,16 @@ import Marquee from "./Marquee.astro";
         <span class="flex items-center gap-1.5"><HiOutlineCalendarDays className="text-primary text-sm" /> <span id="current-date">May 15, 2026</span></span>
         <span class="flex items-center gap-1.5"><HiOutlineClock className="text-primary text-sm" /> <span id="current-time">17:49:41</span></span>
       </div>
-      <div class="flex items-center gap-3">
-        <a href="/privacy" class="hover:text-primary transition-colors">Privacy Policy</a>
+      <div class="flex items-center gap-4">
+        <a href="/privacy" class="hover:text-primary transition-colors flex items-center gap-1"><HiOutlineShieldCheck className="text-sm" /> Privacy Policy</a>
         <span class="text-border-card">|</span>
-        <a href="/terms" class="hover:text-primary transition-colors">Terms of Service</a>
+        <a href="/terms" class="hover:text-primary transition-colors flex items-center gap-1"><HiOutlineDocumentText className="text-sm" /> Terms of Service</a>
         <span class="text-border-card">|</span>
-        <a href="/disclaimer" class="hover:text-primary transition-colors">Disclaimer</a>
+        <a href="/disclaimer" class="hover:text-primary transition-colors flex items-center gap-1"><HiOutlineExclamationTriangle className="text-sm" /> Disclaimer</a>
         <span class="text-border-card">|</span>
-        <a href="/sitemap" class="hover:text-primary transition-colors">Sitemap</a>
+        <a href="/sitemap" class="hover:text-primary transition-colors flex items-center gap-1"><HiOutlineMap className="text-sm" /> Sitemap</a>
         <span class="text-border-card">|</span>
-        <a href="/contact" class="hover:text-primary transition-colors">Contact Us</a>
+        <a href="/contact" class="hover:text-primary transition-colors flex items-center gap-1"><HiOutlineEnvelope className="text-sm" /> Contact Us</a>
       </div>
     </div>
   </div>
@@ -46,8 +46,8 @@ import Marquee from "./Marquee.astro";
 			</ul>
 
 			<button id="theme-toggle" class="w-10 h-10 rounded-full border border-border-card flex items-center justify-center relative overflow-hidden text-text-main hover:bg-black/5 dark:hover:bg-white/5 hover:border-primary transition-all duration-300 cursor-pointer group" aria-label="Toggle theme">
-				<span class="sun-icon absolute flex items-center justify-center text-xl transition-all duration-500 transform group-data-[theme=light]:translate-y-[40px] group-data-[theme=light]:opacity-0 translate-y-0 opacity-100"><HiOutlineSun /></span>
-				<span class="moon-icon absolute flex items-center justify-center text-xl transition-all duration-500 transform group-data-[theme=light]:translate-y-0 group-data-[theme=light]:opacity-100 -translate-y-[40px] opacity-0"><HiOutlineMoon /></span>
+				<span class="sun-icon absolute flex items-center justify-center text-xl transition-all duration-500 transform group-data-[theme=dark]:translate-y-[40px] group-data-[theme=dark]:opacity-0 translate-y-0 opacity-100"><HiOutlineSun /></span>
+				<span class="moon-icon absolute flex items-center justify-center text-xl transition-all duration-500 transform group-data-[theme=dark]:translate-y-0 group-data-[theme=dark]:opacity-100 -translate-y-[40px] opacity-0"><HiOutlineMoon /></span>
 			</button>
 
 			<button class="lg:hidden flex flex-col justify-between w-6 h-[18px] bg-transparent border-none cursor-pointer p-0 z-[1001]" id="menu-toggle" aria-label="Toggle Menu">
@@ -86,7 +86,7 @@ import Marquee from "./Marquee.astro";
 
 		// Sync initial theme toggle button state
 		if (themeToggle) {
-			const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+			const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
 			themeToggle.setAttribute('data-theme', currentTheme);
 		}
 
@@ -128,10 +128,10 @@ import Marquee from "./Marquee.astro";
 
 		function toggleTheme() {
 			const currentTheme = document.documentElement.getAttribute('data-theme');
-			const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+			const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
 			
-			if (newTheme === 'light') {
-				document.documentElement.setAttribute('data-theme', 'light');
+			if (newTheme === 'dark') {
+				document.documentElement.setAttribute('data-theme', 'dark');
 			} else {
 				document.documentElement.removeAttribute('data-theme');
 			}
