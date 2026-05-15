@@ -1,0 +1,69 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const pages = [
+  { name: "Home", href: "/" },
+  { name: "Blog", href: "/blog" },
+  { name: "Result", href: "/result" },
+  { name: "About Us", href: "/about" },
+  { name: "Contact Us", href: "/contact" },
+  { name: "Privacy Policy", href: "/privacy" },
+  { name: "Terms of Service", href: "/terms" },
+  { name: "Disclaimer", href: "/disclaimer" },
+];
+
+const categories = [
+  { name: "Web Development", href: "/#posts" },
+  { name: "AI & Machine Learning", href: "/#posts" },
+  { name: "Design Systems", href: "/#posts" },
+  { name: "Astro Tutorials", href: "/#posts" },
+];
+---
+
+<Layout title="Sitemap | AstroBlog" description="A comprehensive list of all pages on AstroBlog.">
+  <article class="max-w-4xl mx-auto py-12 px-4">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-8 tracking-tight text-text-main">Site <span class="gradient-text">Map</span></h1>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
+      <div>
+        <h2 class="text-2xl font-bold text-text-main mb-6 border-b border-border-card pb-2 flex items-center gap-2">
+          <span class="w-2 h-6 bg-primary rounded-full"></span>
+          Main Pages
+        </h2>
+        <ul class="space-y-4">
+          {pages.map((page) => (
+            <li>
+              <a href={page.href} class="text-lg text-text-muted hover:text-primary transition-colors flex items-center gap-3 group">
+                <span class="w-1.5 h-1.5 bg-border-card rounded-full group-hover:bg-primary transition-colors"></span>
+                {page.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-text-main mb-6 border-b border-border-card pb-2 flex items-center gap-2">
+          <span class="w-2 h-6 bg-secondary rounded-full"></span>
+          Categories
+        </h2>
+        <ul class="space-y-4">
+          {categories.map((cat) => (
+            <li>
+              <a href={cat.href} class="text-lg text-text-muted hover:text-primary transition-colors flex items-center gap-3 group">
+                <span class="w-1.5 h-1.5 bg-border-card rounded-full group-hover:bg-secondary transition-colors"></span>
+                {cat.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-20 p-8 bg-bg-surface border border-border-card rounded-3xl">
+      <h3 class="text-xl font-bold text-text-main mb-4">Technical Sitemap</h3>
+      <p class="text-text-muted mb-6">If you are looking for the XML sitemap for search engines, please use the link below:</p>
+      <a href="/sitemap-index.xml" class="btn-primary inline-flex">View XML Sitemap</a>
+    </div>
+  </article>
+</Layout>
