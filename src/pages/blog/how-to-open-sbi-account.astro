@@ -1,0 +1,73 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import BlogCard from "../../components/BlogCard.astro";
+
+const title = "How to Open a Savings Account in SBI: A Step-by-Step Guide";
+const description = "Learn the complete process of opening a savings account in State Bank of India (SBI) both online and offline.";
+const date = "May 15, 2026";
+const category = "Banking";
+---
+
+<Layout title={title} description={description}>
+  <article class="max-w-4xl mx-auto py-12 px-4">
+    <div class="mb-12">
+      <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-bold uppercase tracking-wider">{category}</span>
+      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-text-main mt-6 mb-4 leading-[1.1]">
+        {title}
+      </h1>
+      <p class="text-text-muted text-xl leading-relaxed">
+        {description}
+      </p>
+      <div class="flex items-center gap-4 mt-8 pt-8 border-t border-border-card">
+        <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-xl">V</div>
+        <div>
+          <p class="text-text-main font-bold m-0 text-lg">Vivek Chavhan</p>
+          <p class="text-text-muted m-0 text-sm">{date} • 10 min read</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="prose prose-invert max-w-none">
+      <h2>Introduction to SBI Savings Account</h2>
+      <p>State Bank of India (SBI) is the largest public sector bank in India, offering a wide range of banking products. Opening a savings account with SBI is the first step towards secure financial management.</p>
+
+      <h2>Eligibility Criteria</h2>
+      <ul>
+        <li>Must be a citizen of India.</li>
+        <li>Must be 18 years of age or older (Minor accounts also available).</li>
+        <li>Valid KYC documents are required.</li>
+      </ul>
+
+      <h2>Documents Required</h2>
+      <p>To open an SBI savings account, you will need the following documents:</p>
+      <ol>
+        <li><strong>Identity Proof:</strong> Aadhar Card, PAN Card, Voter ID, or Passport.</li>
+        <li><strong>Address Proof:</strong> Utility bills, Aadhar Card, or Rent Agreement.</li>
+        <li><strong>Photographs:</strong> 2-3 recent passport-size color photographs.</li>
+      </ol>
+
+      <h2>Step-by-Step Process (Online via YONO App)</h2>
+      <p>1. Download the SBI YONO app from Play Store or App Store.</p>
+      <p>2. Select 'New to SBI' and then 'Open Savings Account'.</p>
+      <p>3. Choose 'Without Branch Visit' for a paperless process (requires Video KYC).</p>
+      <p>4. Enter your mobile number and email ID.</p>
+      <p>5. Complete your E-KYC using Aadhar and PAN details.</p>
+      <p>6. Schedule and complete the Video KYC call with an SBI official.</p>
+
+      <h2>Step-by-Step Process (Offline)</h2>
+      <p>1. Visit your nearest SBI branch with original documents and photocopies.</p>
+      <p>2. Ask for the Savings Bank Account Opening Form.</p>
+      <p>3. Fill in the details carefully and attach your photographs.</p>
+      <p>4. Submit the form along with self-attested copies of your KYC documents.</p>
+      <p>5. Once verified, your account will be activated within 24-48 hours.</p>
+    </div>
+
+    <section class="mt-20 pt-12 border-t border-border-card">
+      <h3 class="text-2xl font-bold text-text-main mb-8">Related Articles</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <BlogCard title="What is Aadhar Card and Why You Need It" href="/blog/what-is-aadhar-card" date="May 14, 2026" />
+        <BlogCard title="Which is the Best Mutual Fund Plan for 2026?" href="/blog/best-mutual-fund-plan" date="May 13, 2026" />
+      </div>
+    </section>
+  </article>
+</Layout>

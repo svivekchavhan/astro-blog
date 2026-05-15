@@ -1,0 +1,64 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import BlogCard from "../../components/BlogCard.astro";
+
+const title = "What is Aadhar Card: Benefits, Features, and How to Get It";
+const description = "Everything you need to know about the 12-digit unique identity number issued by UIDAI for residents of India.";
+const date = "May 14, 2026";
+const category = "Government";
+---
+
+<Layout title={title} description={description}>
+  <article class="max-w-4xl mx-auto py-12 px-4">
+    <div class="mb-12">
+      <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm font-bold uppercase tracking-wider">{category}</span>
+      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-text-main mt-6 mb-4 leading-[1.1]">
+        {title}
+      </h1>
+      <p class="text-text-muted text-xl leading-relaxed">
+        {description}
+      </p>
+      <div class="flex items-center gap-4 mt-8 pt-8 border-t border-border-card">
+        <div class="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center text-secondary font-bold text-xl">V</div>
+        <div>
+          <p class="text-text-main font-bold m-0 text-lg">Vivek Chavhan</p>
+          <p class="text-text-muted m-0 text-sm">{date} • 8 min read</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="prose prose-invert max-w-none">
+      <h2>Introduction to Aadhar</h2>
+      <p>Aadhar is a 12-digit unique identity number that can be obtained voluntarily by the residents of India, based on their biometric and demographic data. The data is collected by the Unique Identification Authority of India (UIDAI).</p>
+
+      <h2>Key Features of Aadhar</h2>
+      <ul>
+        <li><strong>Uniqueness:</strong> No two individuals can have the same Aadhar number.</li>
+        <li><strong>Portability:</strong> Aadhar provides a single identity throughout the country.</li>
+        <li><strong>Online Authentication:</strong> It can be used for online identity verification anywhere.</li>
+      </ul>
+
+      <h2>Benefits of Having an Aadhar Card</h2>
+      <p>1. <strong>Direct Benefit Transfer (DBT):</strong> Subsidies for gas, kerosene, etc., are directly credited to Aadhar-linked bank accounts.</p>
+      <p>2. <strong>Simplified KYC:</strong> Aadhar serves as both identity and address proof for opening bank accounts or getting SIM cards.</p>
+      <p>3. <strong>Passport Acquisition:</strong> Aadhar can speed up the process of obtaining a passport.</p>
+      <p>4. <strong>Digital Locker:</strong> You can use Aadhar to sign in to DigiLocker and store your documents digitally.</p>
+
+      <h2>How to Apply for Aadhar Card</h2>
+      <p>1. Locate an authorized Aadhar Enrollment Center near you.</p>
+      <p>2. Carry your proof of identity (POI) and proof of address (POA).</p>
+      <p>3. Fill out the enrollment form at the center.</p>
+      <p>4. Provide your biometric data (fingerprints and iris scan) and a photograph.</p>
+      <p>5. Collect the acknowledgment slip containing your EID (Enrollment ID).</p>
+      <p>6. You can download your E-Aadhar online within 1-2 weeks.</p>
+    </div>
+
+    <section class="mt-20 pt-12 border-t border-border-card">
+      <h3 class="text-2xl font-bold text-text-main mb-8">Related Articles</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <BlogCard title="How to Open a Savings Account in SBI" href="/blog/how-to-open-sbi-account" date="May 15, 2026" />
+        <BlogCard title="Which is the Best Mutual Fund Plan for 2026?" href="/blog/best-mutual-fund-plan" date="May 13, 2026" />
+      </div>
+    </section>
+  </article>
+</Layout>

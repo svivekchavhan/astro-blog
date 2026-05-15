@@ -1,6 +1,28 @@
 ---
 import { HiOutlineHome, HiOutlineNewspaper, HiOutlineEnvelope, HiOutlineBell, HiOutlineMagnifyingGlass, HiOutlineQueueList, HiOutlineSun, HiOutlineMoon, HiOutlineClock, HiOutlineCalendarDays, HiOutlineShieldCheck, HiOutlineDocumentText, HiOutlineExclamationTriangle, HiOutlineMap } from "react-icons/hi2";
 import Marquee from "./Marquee.astro";
+
+// Fetch posts for search suggestions
+const postFiles = import.meta.glob("../pages/blog/*.astro");
+const articles = Object.keys(postFiles).map(file => {
+  const name = file.split('/').pop()?.replace('.astro', '').replace(/-/g, ' ');
+  const href = file.replace('../pages', '').replace('.astro', '');
+  return { title: name, href };
+});
+
+const mainPages = [
+  { title: "Home", href: "/" },
+  { title: "Blog Archive", href: "/blog" },
+  { title: "Result Page", href: "/result" },
+  { title: "About Us", href: "/about" },
+  { title: "Contact Us", href: "/contact" },
+  { title: "Sitemap", href: "/sitemap" },
+  { title: "Privacy Policy", href: "/privacy" },
+  { title: "Terms of Service", href: "/terms" },
+  { title: "Disclaimer", href: "/disclaimer" },
+];
+
+const searchData = [...mainPages, ...articles];
 ---
 <!-- Sticky Header Wrapper -->
 <div class="sticky top-0 z-50 bg-bg-navbar/80 backdrop-blur-lg border-b border-border-card transition-all duration-300">
@@ -32,9 +54,17 @@ import Marquee from "./Marquee.astro";
 		</a>
 
 		<div class="flex items-center gap-8 lg:gap-4">
-			<div class="relative flex items-center bg-bg-card border border-border-card px-4 py-2 rounded-full w-[250px] transition-all duration-300 focus-within:border-primary focus-within:bg-white/10 focus-within:w-[300px] hidden lg:flex">
-				<HiOutlineMagnifyingGlass className="text-text-muted mr-2 text-lg" />
-				<input type="text" placeholder="Search articles..." id="search-input" class="bg-transparent border-none text-text-main font-sans text-sm outline-none w-full placeholder-text-muted" />
+			<div class="relative hidden lg:block">
+				<div class="flex items-center bg-bg-card border border-border-card px-4 py-2 rounded-full w-[250px] transition-all duration-300 focus-within:border-primary focus-within:bg-white/10 focus-within:w-[320px]">
+					<HiOutlineMagnifyingGlass className="text-text-muted mr-2 text-lg" />
+					<input type="text" placeholder="Search articles..." id="search-input" autocomplete="off" class="bg-transparent border-none text-text-main font-sans text-sm outline-none w-full placeholder-text-muted" />
+				</div>
+				<!-- Search Suggestions Dropdown -->
+				<div id="search-suggestions" class="absolute top-full left-0 right-0 mt-2 bg-bg-surface border border-border-card rounded-2xl shadow-2xl overflow-hidden hidden opacity-0 translate-y-2 transition-all duration-300 z-[60] backdrop-blur-xl">
+					<div class="p-2" id="suggestions-list">
+						<!-- Suggestions will be injected here -->
+					</div>
+				</div>
 			</div>
 			
 			<ul class="hidden lg:flex items-center gap-8 list-none m-0 p-0">
@@ -77,12 +107,62 @@ import Marquee from "./Marquee.astro";
 
 <div class="fixed inset-0 bg-black/60 backdrop-blur-[4px] z-[999] opacity-0 invisible transition-all duration-300" id="mobile-overlay"></div>
 
-<script>
+<script define:vars={{ searchData }}>
 	function initNavbar() {
 		const menuToggle = document.getElementById('menu-toggle');
 		const mobileMenu = document.getElementById('mobile-menu');
 		const mobileOverlay = document.getElementById('mobile-overlay');
 		const themeToggle = document.getElementById('theme-toggle');
+    const searchInput = document.getElementById('search-input');
+    const suggestionsContainer = document.getElementById('search-suggestions');
+    const suggestionsList = document.getElementById('suggestions-list');
+
+    // Live Search Suggestions
+    if (searchInput && suggestionsContainer && suggestionsList) {
+      function highlightMatch(text, query) {
+        if (!query) return text;
+        const regex = new RegExp(`(${query})`, 'gi');
+        return text.replace(regex, '<u class="text-primary no-underline font-bold">$1</u>');
+      }
+
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        
+        if (query.length < 2) {
+          suggestionsContainer.classList.add('hidden', 'opacity-0', 'translate-y-2');
+          return;
+        }
+
+        const filtered = searchData.filter(post => 
+          post.title.toLowerCase().includes(query)
+        ).slice(0, 5);
+
+        if (filtered.length > 0) {
+          suggestionsList.innerHTML = filtered.map(post => `
+            <a href="${post.href}" class="flex items-center gap-3 px-4 py-3 hover:bg-white/5 rounded-xl transition-colors group">
+              <div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+              </div>
+              <span class="text-sm text-text-main font-medium line-clamp-1">${highlightMatch(post.title, query)}</span>
+            </a>
+          `).join('');
+          
+          suggestionsContainer.classList.remove('hidden');
+          setTimeout(() => {
+            suggestionsContainer.classList.remove('opacity-0', 'translate-y-2');
+          }, 10);
+        } else {
+          suggestionsContainer.classList.add('hidden', 'opacity-0', 'translate-y-2');
+        }
+      });
+
+      // Close suggestions when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!searchInput.contains(e.target) && !suggestionsContainer.contains(e.target)) {
+          suggestionsContainer.classList.add('hidden', 'opacity-0', 'translate-y-2');
+        }
+      });
+    }
 
 		// Sync initial theme toggle button state
 		if (themeToggle) {

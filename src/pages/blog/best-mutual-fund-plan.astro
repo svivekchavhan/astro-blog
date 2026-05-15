@@ -1,0 +1,62 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import BlogCard from "../../components/BlogCard.astro";
+
+const title = "Which is the Best Mutual Fund Plan for 2026? A Complete Guide";
+const description = "Compare the top-performing mutual fund categories and find the best plan for your long-term wealth creation goals.";
+const date = "May 13, 2026";
+const category = "Finance";
+---
+
+<Layout title={title} description={description}>
+  <article class="max-w-4xl mx-auto py-12 px-4">
+    <div class="mb-12">
+      <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-bold uppercase tracking-wider">{category}</span>
+      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-text-main mt-6 mb-4 leading-[1.1]">
+        {title}
+      </h1>
+      <p class="text-text-muted text-xl leading-relaxed">
+        {description}
+      </p>
+      <div class="flex items-center gap-4 mt-8 pt-8 border-t border-border-card">
+        <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-xl">V</div>
+        <div>
+          <p class="text-text-main font-bold m-0 text-lg">Vivek Chavhan</p>
+          <p class="text-text-muted m-0 text-sm">{date} • 12 min read</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="prose prose-invert max-w-none">
+      <h2>Understanding Mutual Fund Plans</h2>
+      <p>Mutual funds are one of the most effective tools for building wealth in India. However, with thousands of plans available, choosing the right one can be overwhelming. The "best" plan depends on your risk appetite and investment horizon.</p>
+
+      <h2>1. Index Funds (Low Risk, Low Cost)</h2>
+      <p>Index funds track a specific market index like Nifty 50 or Sensex. They are passive funds with low expense ratios and are excellent for beginners who want steady market returns.</p>
+
+      <h2>2. Large Cap Funds (Moderate Risk)</h2>
+      <p>These funds invest in India's top 100 companies. They provide stability and are less volatile during market downturns, making them suitable for long-term conservative investors.</p>
+
+      <h2>3. Flexi Cap Funds (Flexible Growth)</h2>
+      <p>Flexi cap funds can invest across companies of all sizes—large, mid, and small. This flexibility allows fund managers to shift investments where the growth potential is highest.</p>
+
+      <h2>4. ELSS Funds (Tax Saving)</h2>
+      <p>Equity Linked Savings Schemes (ELSS) offer tax deductions under Section 80C. They have a lock-in period of 3 years and have historically provided high returns compared to other tax-saving options.</p>
+
+      <h2>How to Choose the Best Plan for You</h2>
+      <ul>
+        <li><strong>Time Horizon:</strong> If you need money in 3 years, avoid small caps. If you have 10+ years, small and mid caps are great.</li>
+        <li><strong>Risk Appetite:</strong> Can you tolerate a 20% drop in your portfolio temporarily? If not, stick to Large Cap or Index funds.</li>
+        <li><strong>Direct vs Regular:</strong> Always choose 'Direct' plans to save on commissions and get higher returns over time.</li>
+      </ul>
+    </div>
+
+    <section class="mt-20 pt-12 border-t border-border-card">
+      <h3 class="text-2xl font-bold text-text-main mb-8">Related Articles</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <BlogCard title="How to Open a Savings Account in SBI" href="/blog/how-to-open-sbi-account" date="May 15, 2026" />
+        <BlogCard title="What is Aadhar Card and Why You Need It" href="/blog/what-is-aadhar-card" date="May 14, 2026" />
+      </div>
+    </section>
+  </article>
+</Layout>
