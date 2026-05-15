@@ -1,7 +1,31 @@
 ---
-import { HiOutlineHome, HiOutlineNewspaper, HiOutlineEnvelope, HiOutlineBell, HiOutlineMagnifyingGlass, HiOutlineQueueList, HiOutlineSun, HiOutlineMoon } from "react-icons/hi2";
+import { HiOutlineHome, HiOutlineNewspaper, HiOutlineEnvelope, HiOutlineBell, HiOutlineMagnifyingGlass, HiOutlineQueueList, HiOutlineSun, HiOutlineMoon, HiOutlineClock, HiOutlineCalendarDays } from "react-icons/hi2";
+import Marquee from "./Marquee.astro";
 ---
-<header class="h-[70px] bg-bg-navbar backdrop-blur-md border-b border-border-card sticky top-0 z-50 transition-colors duration-300">
+<!-- Sticky Header Wrapper -->
+<div class="sticky top-0 z-50 bg-bg-navbar/80 backdrop-blur-lg border-b border-border-card transition-all duration-300">
+  <!-- Top Bar -->
+  <div class="border-b border-border-card/30 py-2 text-[0.7rem] font-medium text-text-muted hidden md:block">
+    <div class="max-w-[1200px] mx-auto px-6 flex justify-between items-center">
+      <div class="flex items-center gap-6">
+        <span class="flex items-center gap-1.5"><HiOutlineCalendarDays className="text-primary text-sm" /> <span id="current-date">May 15, 2026</span></span>
+        <span class="flex items-center gap-1.5"><HiOutlineClock className="text-primary text-sm" /> <span id="current-time">17:49:41</span></span>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="/privacy" class="hover:text-primary transition-colors">Privacy Policy</a>
+        <span class="text-border-card">|</span>
+        <a href="/terms" class="hover:text-primary transition-colors">Terms of Service</a>
+        <span class="text-border-card">|</span>
+        <a href="/disclaimer" class="hover:text-primary transition-colors">Disclaimer</a>
+        <span class="text-border-card">|</span>
+        <a href="/sitemap" class="hover:text-primary transition-colors">Sitemap</a>
+        <span class="text-border-card">|</span>
+        <a href="/contact" class="hover:text-primary transition-colors">Contact Us</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="h-[70px] transition-colors duration-300">
 	<div class="max-w-[1200px] mx-auto px-6 w-full h-full flex justify-between items-center">
 		<a href="/" class="text-[1.5rem] font-bold text-text-main no-underline whitespace-nowrap lg:text-[1.25rem]">
 			<span class="gradient-text">Astro</span>Blog
@@ -34,6 +58,8 @@ import { HiOutlineHome, HiOutlineNewspaper, HiOutlineEnvelope, HiOutlineBell, Hi
 		</div>
 	</div>
 </header>
+<Marquee />
+</div>
 
 <div class="fixed top-0 right-0 w-[80%] max-w-[300px] h-screen bg-bg-base pt-[6rem] px-8 pb-8 z-[1000] border-l border-border-card flex flex-col transition-transform duration-400 ease-[cubic-bezier(0.4,0,0.2,1)] translate-x-full shadow-[-10px_0_30px_rgba(0,0,0,0.5)]" id="mobile-menu">
 	<div class="flex items-center bg-bg-card border border-border-card p-3 rounded-xl gap-3 text-text-muted mb-8">
@@ -126,9 +152,37 @@ import { HiOutlineHome, HiOutlineNewspaper, HiOutlineEnvelope, HiOutlineBell, Hi
 		}
 	}
 
+	function initDateTime() {
+		const dateEl = document.getElementById('current-date');
+		const timeEl = document.getElementById('current-time');
+
+		function update() {
+			const now = new Date();
+			if (dateEl) {
+				dateEl.textContent = now.toLocaleDateString('en-US', { 
+					month: 'short', 
+					day: 'numeric', 
+					year: 'numeric' 
+				});
+			}
+			if (timeEl) {
+				timeEl.textContent = now.toLocaleTimeString('en-US', { 
+					hour12: false, 
+					hour: '2-digit', 
+					minute: '2-digit', 
+					second: '2-digit' 
+				});
+			}
+		}
+
+		update();
+		setInterval(update, 1000);
+	}
+
 	// Initialize on page load and after view transitions
 	document.addEventListener('astro:page-load', () => {
 		initNavbar();
+		initDateTime();
 	});
 </script>
 
