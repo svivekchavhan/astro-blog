@@ -6,6 +6,8 @@ export async function GET() {
     '',
     '/latest-job',
     '/admit-card',
+    '/answer-key',
+    '/admission',
     '/blog',
     '/result',
     '/contact',
@@ -32,7 +34,7 @@ export async function GET() {
     <loc>${siteUrl}${page}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>${page === '' ? '1.0' : (page === '/latest-job' || page === '/admit-card') ? '0.9' : page.includes('/blog/') ? '0.8' : '0.5'}</priority>
+    <priority>${page === '' ? '1.0' : (page === '/latest-job' || page === '/admit-card' || page === '/answer-key' || page === '/admission') ? '0.9' : page.includes('/blog/') ? '0.8' : '0.5'}</priority>
   </url>`).join('')}
 </urlset>`;
 

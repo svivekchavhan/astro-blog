@@ -16,6 +16,8 @@ import {
   HiOutlineMap,
   HiOutlineIdentification,
   HiOutlineBriefcase,
+  HiOutlineKey,
+  HiOutlineAcademicCap,
 } from "react-icons/hi2";
 import Marquee from "./Marquee.astro";
 
@@ -32,6 +34,8 @@ const mainPages = [
   { title: "Latest Job", href: "/latest-job" },
   { title: "Result Page", href: "/result" },
   { title: "Admit Card", href: "/admit-card" },
+  { title: "Answer Key", href: "/answer-key" },
+  { title: "Admission", href: "/admission" },
   { title: "About Us", href: "/about" },
   { title: "Contact Us", href: "/contact" },
   { title: "Sitemap", href: "/sitemap" },
@@ -163,6 +167,18 @@ const searchData = [...mainPages, ...articles];
               class="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-rose-500/5 dark:bg-rose-500/10 border border-solid border-rose-500/25 text-text-main font-bold hover:bg-rose-500/10 hover:border-rose-500 hover:shadow-sm hover:shadow-rose-500/5 transition-all duration-300 text-[0.7rem] uppercase tracking-wider"
               ><HiOutlineIdentification className="text-sm shrink-0" /> Admit Card</a>
           </li>
+          <li>
+            <a
+              href="/answer-key"
+              class="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-violet-500/5 dark:bg-violet-500/10 border border-solid border-violet-500/25 text-text-main font-bold hover:bg-violet-500/10 hover:border-violet-500 hover:shadow-sm hover:shadow-violet-500/5 transition-all duration-300 text-[0.7rem] uppercase tracking-wider"
+              ><HiOutlineKey className="text-sm shrink-0" /> Answer Key</a>
+          </li>
+          <li>
+            <a
+              href="/admission"
+              class="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-cyan-500/5 dark:bg-cyan-500/10 border border-solid border-cyan-500/25 text-text-main font-bold hover:bg-cyan-500/10 hover:border-cyan-500 hover:shadow-sm hover:shadow-cyan-500/5 transition-all duration-300 text-[0.7rem] uppercase tracking-wider"
+              ><HiOutlineAcademicCap className="text-sm shrink-0" /> Admission</a>
+          </li>
         </ul>
 
         <button
@@ -242,6 +258,18 @@ const searchData = [...mainPages, ...articles];
         href="/admit-card"
         class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-rose-500/5 dark:bg-rose-500/10 border border-solid border-rose-500/20 text-text-main font-bold hover:bg-rose-500/10 transition-all duration-300 text-xs uppercase tracking-wider"
         ><HiOutlineIdentification className="text-lg shrink-0" /> Admit Card</a>
+    </li>
+    <li>
+      <a
+        href="/answer-key"
+        class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-violet-500/5 dark:bg-violet-500/10 border border-solid border-violet-500/20 text-text-main font-bold hover:bg-violet-500/10 transition-all duration-300 text-xs uppercase tracking-wider"
+        ><HiOutlineKey className="text-lg shrink-0" /> Answer Key</a>
+    </li>
+    <li>
+      <a
+        href="/admission"
+        class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-cyan-500/5 dark:bg-cyan-500/10 border border-solid border-cyan-500/20 text-text-main font-bold hover:bg-cyan-500/10 transition-all duration-300 text-xs uppercase tracking-wider"
+        ><HiOutlineAcademicCap className="text-lg shrink-0" /> Admission</a>
     </li>
   </ul>
 </div>

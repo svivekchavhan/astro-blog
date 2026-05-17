@@ -1,77 +1,77 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { HiOutlineMagnifyingGlass, HiOutlineQueueList, HiOutlineCalendarDays, HiOutlineArrowTopRightOnSquare, HiOutlineBell, HiOutlineBuildingOffice } from "react-icons/hi2";
+import { HiOutlineMagnifyingGlass, HiOutlineKey, HiOutlineCalendarDays, HiOutlineArrowTopRightOnSquare, HiOutlineBell, HiOutlineBuildingOffice } from "react-icons/hi2";
 
-const results = [
+const answerKeys = [
   {
-    title: "UPSC Civil Services Mains 2025 Result",
+    title: "UPSC Civil Services Prelims 2026 Answer Key",
     organisation: "Union Public Service Commission",
     category: "UPSC",
-    releaseDate: "May 10, 2026",
-    examDate: "January 15, 2026",
-    status: "declared",
+    releaseDate: "June 01, 2026",
+    examDate: "May 24, 2026",
+    status: "available",
     link: "https://upsc.gov.in"
   },
   {
-    title: "SSC CGL 2025 Final Merit List & Cutoff",
+    title: "SSC CGL Tier 1 Answer Key & OMR Sheet",
     organisation: "Staff Selection Commission",
     category: "SSC",
-    releaseDate: "May 16, 2026",
-    examDate: "December 10, 2025",
-    status: "declared",
+    releaseDate: "June 12, 2026",
+    examDate: "June 05, 2026",
+    status: "expected",
     link: "https://ssc.gov.in"
   },
   {
-    title: "SBI PO Prelims 2026 Result & Scorecard",
+    title: "SBI PO Mains Official Answer Key",
     organisation: "State Bank of India",
     category: "Banking",
-    releaseDate: "May 14, 2026",
-    examDate: "April 28, 2026",
-    status: "declared",
+    releaseDate: "May 30, 2026",
+    examDate: "May 22, 2026",
+    status: "available",
     link: "https://sbi.co.in"
   },
   {
-    title: "RRB NTPC CBT Stage 1 Merit List",
+    title: "RRB NTPC CBT Stage 1 Answer Key",
     organisation: "Railway Recruitment Board",
     category: "Railways",
-    releaseDate: "May 25, 2026",
-    examDate: "March 15, 2026",
+    releaseDate: "June 25, 2026",
+    examDate: "June 15, 2026",
     status: "expected",
     link: "https://rrcb.gov.in"
   },
   {
-    title: "IBPS Clerk Mains Official Scorecard",
+    title: "IBPS Clerk Prelims Answer Key & Solutions",
     organisation: "Institute of Banking Personnel Selection",
     category: "Banking",
-    releaseDate: "May 12, 2026",
-    examDate: "April 05, 2026",
-    status: "declared",
+    releaseDate: "June 10, 2026",
+    examDate: "June 02, 2026",
+    status: "available",
     link: "https://ibps.in"
   },
   {
-    title: "MPSC State Services Mains Result",
+    title: "MPSC State Services Prelims Answer Key",
     organisation: "Maharashtra Public Service Commission",
     category: "State Exams",
-    releaseDate: "May 28, 2026",
-    examDate: "February 20, 2026",
-    status: "expected",
+    releaseDate: "May 02, 2026",
+    examDate: "April 28, 2026",
+    status: "available",
     link: "https://mpsc.gov.in"
   },
   {
-    title: "SSC CHSL Tier 1 Result & Cutoff Marks",
+    title: "SSC CHSL Tier 1 Answer Key",
     organisation: "Staff Selection Commission",
     category: "SSC",
-    releaseDate: "May 18, 2026",
-    examDate: "May 02, 2026",
-    status: "declared",
+    releaseDate: "May 29, 2026",
+    examDate: "May 25, 2026",
+    status: "available",
     link: "https://ssc.gov.in"
   },
   {
-    title: "ISRO Scientist/Engineer Written Exam Result",
+    title: "ISRO Scientist/Engineer Official Solutions",
     organisation: "Indian Space Research Organisation",
     category: "Direct Recruitment",
-    releaseDate: "June 05, 2026",
-    examDate: "May 10, 2026",
+    releaseDate: "June 15, 2026",
+    examDate: "June 07, 2026",
     status: "expected",
     link: "https://isro.gov.in"
   }
@@ -80,18 +80,18 @@ const results = [
 const categories = ["All", "UPSC", "SSC", "Banking", "Railways", "State Exams", "Direct Recruitment"];
 ---
 
-<Layout title="Government Exam Results 2026 - Cutoff Marks & Merit List Download | TechFixSteps" description="Check latest government exam results 2026. Download official scorecards, cutoff marks, and merit lists for UPSC, SSC, SBI, IBPS, RRB, MPSC exams. Get direct result check links at techfixsteps.com.">
+<Layout title="Official Answer Key 2026 - Exam Solutions & OMR Sheet Download | TechFixSteps" description="Download official answer keys and exam solutions 2026. Get UPSC, SSC, SBI, IBPS, RRB, MPSC solved question papers, OMR sheets, and objection tracker links at techfixsteps.com.">
   <section class="pt-4 pb-16 not-prose">
     <!-- Header Section -->
     <div class="text-center mb-6">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-bold uppercase tracking-wider mb-2">
-        <HiOutlineQueueList className="text-sm" /> Official Declared Lists
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/10 border border-violet-500/20 text-violet-600 dark:text-violet-400 text-xs font-bold uppercase tracking-wider mb-2">
+        <HiOutlineKey className="text-sm" /> Solved Papers & Keys
       </div>
       <h1 class="text-4xl md:text-5xl font-extrabold mb-2 tracking-tight text-text-main m-0">
-        Exam Results
+        Answer Keys
       </h1>
       <p class="text-text-secondary text-[1.1rem] m-0 max-w-[600px] mx-auto">
-        Stay updated with official cutoff scores, live recruitment results, merit lists, and direct scorecard portals.
+        Stay updated with official solved papers, live answer keys, OMR sheet calculations, and direct recruitment portals.
       </p>
     </div>
 
@@ -99,13 +99,13 @@ const categories = ["All", "UPSC", "SSC", "Banking", "Railways", "State Exams", 
     <div id="sticky-search-wrapper" class="sticky top-[124px] lg:top-[154px] z-30 transition-all duration-300 w-full mb-12 max-w-[1000px] mx-auto px-4 md:px-0">
       <div id="search-controls-panel" class="bg-bg-surface/95 backdrop-blur-md border border-border-card rounded-3xl p-6 md:p-8 shadow-sm transition-all duration-300">
         <!-- Search Input Container -->
-        <div id="search-input-container" class="flex items-center w-full bg-emerald-500/5 border border-solid border-emerald-500/20 px-4 py-3 rounded-full transition-all duration-300 focus-within:border-emerald-500 focus-within:bg-emerald-500/10 focus-within:shadow-md focus-within:shadow-emerald-500/5 mb-6">
-          <HiOutlineMagnifyingGlass className="text-emerald-600/70 mr-3 text-lg shrink-0" />
+        <div id="search-input-container" class="flex items-center w-full bg-violet-500/5 border border-solid border-violet-500/20 px-4 py-3 rounded-full transition-all duration-300 focus-within:border-violet-500 focus-within:bg-violet-500/10 focus-within:shadow-md focus-within:shadow-violet-500/5 mb-6">
+          <HiOutlineMagnifyingGlass className="text-violet-600/70 mr-3 text-lg shrink-0" />
           <input 
             type="text" 
-            id="result-search" 
-            placeholder="Search by exam result, post, or commission..." 
-            class="w-full bg-transparent border-none text-text-main font-sans text-sm outline-none placeholder-emerald-600/50"
+            id="answer-key-search" 
+            placeholder="Search by exam name, paper, or department..." 
+            class="w-full bg-transparent border-none text-text-main font-sans text-sm outline-none placeholder-violet-600/50"
           />
         </div>
 
@@ -117,8 +117,8 @@ const categories = ["All", "UPSC", "SSC", "Banking", "Railways", "State Exams", 
               data-target={cat === "All" ? "all" : cat}
               class={`filter-tab px-4 py-2 text-xs font-bold tracking-wide uppercase border border-solid rounded-full cursor-pointer transition-all duration-300 outline-none ${
                 cat === "All"
-                  ? "bg-gradient-to-r from-emerald-600 to-teal-600 text-white border-transparent active-tab shadow-sm shadow-emerald-500/20"
-                  : "bg-emerald-500/5 text-emerald-600 dark:text-emerald-400 border-emerald-500/20 hover:bg-emerald-500/10 hover:text-emerald-700"
+                  ? "bg-gradient-to-r from-violet-600 to-indigo-600 text-white border-transparent active-tab shadow-sm shadow-violet-500/20"
+                  : "bg-violet-500/5 text-violet-600 dark:text-violet-400 border-violet-500/20 hover:bg-violet-500/10 hover:text-violet-700"
               }`}
             >
               {cat}
@@ -128,28 +128,28 @@ const categories = ["All", "UPSC", "SSC", "Banking", "Railways", "State Exams", 
       </div>
     </div>
 
-    <!-- Results List -->
+    <!-- Answer Keys List -->
     <div class="max-w-[1000px] mx-auto px-4 md:px-0">
-      <div id="results-grid" class="flex flex-col gap-4 transition-all duration-300">
-        {results.map((card, index) => (
+      <div id="answer-keys-grid" class="flex flex-col gap-4 transition-all duration-300">
+        {answerKeys.map((card, index) => (
           <div
             data-title={card.title}
             data-org={card.organisation}
             data-category={card.category}
-            class="result-item flex flex-col md:flex-row md:items-center justify-between p-5 bg-bg-surface border border-border-card rounded-2xl transition-all duration-300 hover:border-emerald-500 opacity-0 animate-[fadeInUp_0.6s_ease_forwards] gap-4"
+            class="answer-key-item flex flex-col md:flex-row md:items-center justify-between p-5 bg-bg-surface border border-border-card rounded-2xl transition-all duration-300 hover:border-violet-500 opacity-0 animate-[fadeInUp_0.6s_ease_forwards] gap-4"
             style={`animation-delay: ${index * 0.08}s`}
           >
             <!-- Left: Info Block -->
             <div class="flex-1 min-w-0">
               <div class="flex items-center gap-2 mb-2 flex-wrap">
-                <span class="text-[0.65rem] bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 px-2 py-0.5 rounded font-bold uppercase tracking-wider border border-emerald-500/20 whitespace-nowrap">
+                <span class="text-[0.65rem] bg-violet-500/10 text-violet-600 dark:text-violet-400 px-2 py-0.5 rounded font-bold uppercase tracking-wider border border-violet-500/20 whitespace-nowrap">
                   {card.category}
                 </span>
 
-                {card.status === "declared" && (
+                {card.status === "available" && (
                   <span class="text-[0.6rem] bg-emerald-500/10 text-emerald-500 px-2 py-0.5 rounded-full font-bold uppercase tracking-wide border border-emerald-500/20 flex items-center gap-1 whitespace-nowrap">
                     <span class="w-1 h-1 bg-emerald-500 rounded-full shadow-[0_0_6px] shadow-emerald-500 animate-pulse inline-block"></span>
-                    Declared
+                    Available Now
                   </span>
                 )}
 
@@ -157,6 +157,13 @@ const categories = ["All", "UPSC", "SSC", "Banking", "Railways", "State Exams", 
                   <span class="text-[0.6rem] bg-amber-500/10 text-amber-500 px-2 py-0.5 rounded-full font-bold uppercase tracking-wide border border-amber-500/20 flex items-center gap-1 whitespace-nowrap">
                     <span class="w-1 h-1 bg-amber-500 rounded-full shadow-[0_0_6px] shadow-amber-500 animate-pulse inline-block"></span>
                     Expected Soon
+                  </span>
+                )}
+
+                {card.status === "closed" && (
+                  <span class="text-[0.6rem] bg-rose-500/10 text-rose-500 px-2 py-0.5 rounded-full font-bold uppercase tracking-wide border border-rose-500/20 flex items-center gap-1 whitespace-nowrap">
+                    <span class="w-1 h-1 bg-rose-500 rounded-full inline-block"></span>
+                    Closed
                   </span>
                 )}
               </div>
@@ -168,32 +175,32 @@ const categories = ["All", "UPSC", "SSC", "Banking", "Railways", "State Exams", 
               </div>
             </div>
 
-            <!-- Middle: Dates (Exam & Declaration Date) -->
+            <!-- Middle: Dates (Exam & Answer Key Release) -->
             <div class="flex flex-row gap-6 md:gap-8 shrink-0 py-2 md:py-0 border-y md:border-y-0 border-border-card dark:border-border-card/20 my-1 md:my-0">
               <div>
                 <span class="block text-[0.6rem] text-text-muted uppercase tracking-wider mb-0.5">Exam Date</span>
                 <span class="flex items-center gap-1 text-xs font-bold text-text-main">
-                  <HiOutlineCalendarDays className="text-emerald-500 text-xs shrink-0" /> {card.examDate}
+                  <HiOutlineCalendarDays className="text-violet-500 text-xs shrink-0" /> {card.examDate}
                 </span>
               </div>
               <div>
-                <span class="block text-[0.6rem] text-text-muted uppercase tracking-wider mb-0.5">Declared Date</span>
+                <span class="block text-[0.6rem] text-text-muted uppercase tracking-wider mb-0.5">Release Date</span>
                 <span class="flex items-center gap-1 text-xs font-bold text-text-main">
-                  <HiOutlineCalendarDays className="text-emerald-500 text-xs shrink-0" /> {card.releaseDate}
+                  <HiOutlineCalendarDays className="text-violet-500 text-xs shrink-0" /> {card.releaseDate}
                 </span>
               </div>
             </div>
 
             <!-- Right: CTA Buttons -->
             <div class="shrink-0 w-full md:w-auto md:min-w-[180px]">
-              {card.status === "declared" && (
+              {card.status === "available" && (
                 <a
                   href={card.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="w-full md:w-auto btn-primary !bg-gradient-to-r !from-emerald-600 !to-teal-600 hover:!from-emerald-500 hover:!to-teal-500 !border-transparent !rounded-xl !py-2 flex items-center justify-center gap-2 group/btn text-[0.65rem] font-bold uppercase tracking-wider px-5 shadow-sm shadow-emerald-500/20"
+                  class="w-full md:w-auto btn-primary !bg-gradient-to-r !from-violet-600 !to-indigo-600 hover:!from-violet-500 hover:!to-indigo-500 !border-transparent !rounded-xl !py-2 flex items-center justify-center gap-2 group/btn text-[0.65rem] font-bold uppercase tracking-wider px-5 shadow-sm shadow-violet-500/20"
                 >
-                  <span>Check Result</span>
+                  <span>Download Key</span>
                   <HiOutlineArrowTopRightOnSquare className="text-xs transition-transform duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 shrink-0" />
                 </a>
               )}
@@ -208,6 +215,16 @@ const categories = ["All", "UPSC", "SSC", "Banking", "Railways", "State Exams", 
                   <span>Expected Soon</span>
                 </button>
               )}
+
+              {card.status === "closed" && (
+                <button
+                  type="button"
+                  disabled
+                  class="w-full md:w-auto inline-flex items-center justify-center gap-2 px-5 py-2 bg-rose-500/5 border border-solid border-rose-500/15 text-rose-500/60 dark:text-rose-400/60 font-bold uppercase tracking-wider text-[0.65rem] rounded-xl cursor-not-allowed text-center"
+                >
+                  <span>Objection Closed</span>
+                </button>
+              )}
             </div>
           </div>
         ))}
@@ -216,10 +233,10 @@ const categories = ["All", "UPSC", "SSC", "Banking", "Railways", "State Exams", 
 
     <!-- Empty State -->
     <div id="no-results-message" class="hidden text-center py-16 px-4 bg-bg-surface border border-border-card rounded-2xl max-w-[500px] mx-auto mt-6">
-      <HiOutlineQueueList className="text-4xl text-text-muted mx-auto mb-3" />
-      <h3 class="text-lg font-bold text-text-main mb-1">No Results Found</h3>
+      <HiOutlineKey className="text-4xl text-text-muted mx-auto mb-3" />
+      <h3 class="text-lg font-bold text-text-main mb-1">No Answer Keys Found</h3>
       <p class="text-sm text-text-muted">
-        We couldn't find any scorecards matching your search query. Try another keyword or clear the search.
+        We couldn't find any solved papers matching your search query. Try another keyword or clear the search.
       </p>
     </div>
 
@@ -232,7 +249,7 @@ const categories = ["All", "UPSC", "SSC", "Banking", "Railways", "State Exams", 
     padding: 0.75rem 1rem !important;
     border-radius: 1.5rem !important;
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05) !important;
-    border-color: rgba(16, 185, 129, 0.3) !important; /* emerald-500 border glow */
+    border-color: rgba(139, 92, 246, 0.3) !important; /* violet-500 border glow */
     background-color: var(--bg-surface-sticky, rgba(15, 23, 42, 0.95)) !important;
     backdrop-filter: blur(16px) !important;
   }
@@ -267,9 +284,9 @@ const categories = ["All", "UPSC", "SSC", "Banking", "Railways", "State Exams", 
   let scrollListener: (() => void) | null = null;
 
   function initFilters() {
-    const searchInput = document.getElementById('result-search') as HTMLInputElement;
+    const searchInput = document.getElementById('answer-key-search') as HTMLInputElement;
     const tabButtons = document.querySelectorAll('.filter-tab');
-    const cardItems = document.querySelectorAll('.result-item') as NodeListOf<HTMLElement>;
+    const cardItems = document.querySelectorAll('.answer-key-item') as NodeListOf<HTMLElement>;
     const noResults = document.getElementById('no-results-message');
 
     // Remove previous scroll listener to prevent double registration on Astro navigation
@@ -339,12 +356,12 @@ const categories = ["All", "UPSC", "SSC", "Banking", "Railways", "State Exams", 
     tabButtons.forEach((btn) => {
       btn.addEventListener('click', () => {
         tabButtons.forEach((b) => {
-          b.classList.remove('bg-gradient-to-r', 'from-emerald-600', 'to-teal-600', 'text-white', 'border-transparent', 'active-tab', 'shadow-sm', 'shadow-emerald-500/20');
-          b.classList.add('bg-emerald-500/5', 'text-emerald-600', 'dark:text-emerald-400', 'border-emerald-500/20');
+          b.classList.remove('bg-gradient-to-r', 'from-violet-600', 'to-indigo-600', 'text-white', 'border-transparent', 'active-tab', 'shadow-sm', 'shadow-violet-500/20');
+          b.classList.add('bg-violet-500/5', 'text-violet-600', 'dark:text-violet-400', 'border-violet-500/20');
         });
 
-        btn.classList.add('bg-gradient-to-r', 'from-emerald-600', 'to-teal-600', 'text-white', 'border-transparent', 'active-tab', 'shadow-sm', 'shadow-emerald-500/20');
-        btn.classList.remove('bg-emerald-500/5', 'text-emerald-600', 'dark:text-emerald-400', 'border-emerald-500/20');
+        btn.classList.add('bg-gradient-to-r', 'from-violet-600', 'to-indigo-600', 'text-white', 'border-transparent', 'active-tab', 'shadow-sm', 'shadow-violet-500/20');
+        btn.classList.remove('bg-violet-500/5', 'text-violet-600', 'dark:text-violet-400', 'border-violet-500/20');
 
         currentCategory = btn.getAttribute('data-target')?.toLowerCase() || 'all';
         filterCards();

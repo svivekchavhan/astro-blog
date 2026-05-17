@@ -12,6 +12,7 @@
   --color-border-card: var(--color-border-card);
   --color-text-main: var(--color-text-main);
   --color-text-muted: var(--color-text-muted);
+  --color-text-secondary: var(--color-text-secondary);
 }
 
 @layer base {
@@ -27,6 +28,7 @@
     
     --color-text-main: #0f172a;
     --color-text-muted: #475569;
+    --color-text-secondary: #475569;
   }
 
   [data-theme='dark'] {
@@ -39,8 +41,9 @@
     --color-bg-navbar: rgba(15, 23, 42, 0.9);
     --color-border-card: rgba(255, 255, 255, 0.1);
     
-    --color-text-main: #f1f5f9;
-    --color-text-muted: #94a3b8;
+    --color-text-main: #ffffff;            /* Pure White */
+    --color-text-muted: #bae6fd;           /* Gorgeous Light Blue (sky-200) */
+    --color-text-secondary: #bae6fd;       /* Gorgeous Light Blue (sky-200) */
   }
 
   html, body, *, *::before, *::after {
