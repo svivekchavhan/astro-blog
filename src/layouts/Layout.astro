@@ -2,6 +2,7 @@
 import Navbar from '../components/Navbar.astro';
 import Marquee from '../components/Marquee.astro';
 import { ClientRouter } from 'astro:transitions';
+import { HiOutlineBriefcase } from 'react-icons/hi2';
 import '../styles/global.css';
 
 interface Props {
@@ -19,6 +20,29 @@ const {
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://techfixsteps.com");
+
+const latestJobs = [
+  {
+    title: "UPSC Civil Services Examination 2026",
+    link: "/latest-job"
+  },
+  {
+    title: "SSC CGL Recruitment 2026",
+    link: "/latest-job"
+  },
+  {
+    title: "SBI Probationary Officers (PO) 2026",
+    link: "/latest-job"
+  },
+  {
+    title: "RRB Assistant Loco Pilot (ALP) Vacancies",
+    link: "/latest-job"
+  },
+  {
+    title: "MPSC State Services Examination 2026",
+    link: "/latest-job"
+  }
+];
 ---
 
 <!doctype html>
@@ -101,8 +125,27 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://techfixs
 			
 			<aside class="flex-1 space-y-10 lg:sticky lg:top-[100px] h-fit">
 				<div class="bg-bg-surface border border-border-card p-6 rounded-xl">
-					<h4 class="text-[1.1rem] text-text-main border-b-2 border-primary inline-block pb-1 mb-4 font-semibold">About Me</h4>
-					<p class="text-text-muted text-[0.9rem] leading-[1.6]">I'm Vivek, a developer and designer passionate about building beautiful web experiences with Astro.</p>
+					<h4 class="text-[1.1rem] text-text-main border-b-2 border-primary inline-flex items-center gap-2 pb-1.5 mb-4 font-semibold">
+						<span class="text-primary flex items-center shrink-0">
+							<HiOutlineBriefcase className="text-primary text-[1.15rem]" />
+						</span>
+						<span>Latest Jobs</span>
+					</h4>
+					<div class="flex flex-col">
+						{latestJobs.map((job, idx) => (
+							<div class="flex gap-2.5 py-3 border-b border-border-card dark:border-border-card/30 last:border-b-0 last:pb-0 first:pt-0">
+								<span class="text-primary font-bold text-xs select-none mt-0.5 shrink-0">
+									0{idx + 1}.
+								</span>
+								<a 
+									href={job.link} 
+									class="text-text-muted text-[0.9rem] hover:text-primary transition-colors duration-300 block font-medium leading-snug"
+								>
+									{job.title}
+								</a>
+							</div>
+						))}
+					</div>
 				</div>
 				<div class="bg-bg-surface border border-border-card p-6 rounded-xl">
 					<h4 class="text-[1.1rem] text-text-main border-b-2 border-primary inline-block pb-1 mb-4 font-semibold">Categories</h4>

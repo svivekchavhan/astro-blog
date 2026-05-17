@@ -49,7 +49,7 @@ const searchData = [...mainPages, ...articles];
 >
   <!-- Top Bar -->
   <div
-    class="border-b border-border-card/30 py-2 text-[0.7rem] font-medium text-text-muted hidden md:block"
+    class="border-b border-border-card dark:border-border-card/30 py-2 text-[0.7rem] font-medium text-text-muted hidden md:block"
   >
     <div class="max-w-[1200px] mx-auto px-6 flex justify-between items-center">
       <div class="flex items-center gap-6">
@@ -137,20 +137,30 @@ const searchData = [...mainPages, ...articles];
         <ul class="hidden lg:flex items-center gap-3 list-none m-0 p-0">
           <li>
             <a
+              href="/"
+              class="flex items-center justify-center w-[38px] h-[38px] rounded-full bg-amber-500/5 dark:bg-amber-500/10 border border-solid border-amber-500/25 text-amber-600 dark:text-amber-400 hover:bg-amber-500/10 hover:border-amber-500 hover:shadow-sm hover:shadow-amber-500/5 transition-all duration-300 shadow-sm"
+              title="Home"
+              aria-label="Home"
+            >
+              <HiOutlineHome className="text-base shrink-0" />
+            </a>
+          </li>
+          <li>
+            <a
               href="/latest-job"
-              class="flex items-center gap-1.5 px-4 py-2 rounded-full bg-blue-500/5 dark:bg-blue-500/10 border border-solid border-blue-500/25 text-text-main font-bold hover:bg-blue-500/10 hover:border-blue-500 hover:shadow-sm hover:shadow-blue-500/5 transition-all duration-300 text-[0.7rem] uppercase tracking-wider"
+              class="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-blue-500/5 dark:bg-blue-500/10 border border-solid border-blue-500/25 text-text-main font-bold hover:bg-blue-500/10 hover:border-blue-500 hover:shadow-sm hover:shadow-blue-500/5 transition-all duration-300 text-[0.7rem] uppercase tracking-wider"
               ><HiOutlineBriefcase className="text-sm shrink-0" /> Latest Job</a>
           </li>
           <li>
             <a
               href="/result"
-              class="flex items-center gap-1.5 px-4 py-2 rounded-full bg-emerald-500/5 dark:bg-emerald-500/10 border border-solid border-emerald-500/25 text-text-main font-bold hover:bg-emerald-500/10 hover:border-emerald-500 hover:shadow-sm hover:shadow-emerald-500/5 transition-all duration-300 text-[0.7rem] uppercase tracking-wider"
+              class="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-emerald-500/5 dark:bg-emerald-500/10 border border-solid border-emerald-500/25 text-text-main font-bold hover:bg-emerald-500/10 hover:border-emerald-500 hover:shadow-sm hover:shadow-emerald-500/5 transition-all duration-300 text-[0.7rem] uppercase tracking-wider"
               ><HiOutlineQueueList className="text-sm shrink-0" /> Result</a>
           </li>
           <li>
             <a
               href="/admit-card"
-              class="flex items-center gap-1.5 px-4 py-2 rounded-full bg-rose-500/5 dark:bg-rose-500/10 border border-solid border-rose-500/25 text-text-main font-bold hover:bg-rose-500/10 hover:border-rose-500 hover:shadow-sm hover:shadow-rose-500/5 transition-all duration-300 text-[0.7rem] uppercase tracking-wider"
+              class="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-rose-500/5 dark:bg-rose-500/10 border border-solid border-rose-500/25 text-text-main font-bold hover:bg-rose-500/10 hover:border-rose-500 hover:shadow-sm hover:shadow-rose-500/5 transition-all duration-300 text-[0.7rem] uppercase tracking-wider"
               ><HiOutlineIdentification className="text-sm shrink-0" /> Admit Card</a>
           </li>
         </ul>
@@ -205,6 +215,16 @@ const searchData = [...mainPages, ...articles];
     />
   </div>
   <ul class="flex flex-col gap-3 list-none p-0 m-0">
+    <li>
+      <a
+        href="/"
+        class="flex items-center justify-center w-full py-3.5 rounded-2xl bg-amber-500/5 dark:bg-amber-500/10 border border-solid border-amber-500/20 text-amber-600 dark:text-amber-400 hover:bg-amber-500/10 transition-all duration-300 shadow-sm"
+        title="Home"
+        aria-label="Home"
+      >
+        <HiOutlineHome className="text-xl shrink-0" />
+      </a>
+    </li>
     <li>
       <a
         href="/latest-job"

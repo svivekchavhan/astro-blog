@@ -4,6 +4,8 @@ export async function GET() {
   // Static pages
   const staticPages = [
     '',
+    '/latest-job',
+    '/admit-card',
     '/blog',
     '/result',
     '/contact',
@@ -30,7 +32,7 @@ export async function GET() {
     <loc>${siteUrl}${page}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>${page === '' ? '1.0' : page.includes('/blog/') ? '0.8' : '0.5'}</priority>
+    <priority>${page === '' ? '1.0' : (page === '/latest-job' || page === '/admit-card') ? '0.9' : page.includes('/blog/') ? '0.8' : '0.5'}</priority>
   </url>`).join('')}
 </urlset>`;
 

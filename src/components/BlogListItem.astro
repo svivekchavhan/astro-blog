@@ -9,7 +9,7 @@ interface Props {
 const { title, href, date = "2026", number } = Astro.props;
 ---
 
-<div class="group py-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-12 border-b border-border-card/30 last:border-0 hover:pl-2 transition-all duration-300 cursor-pointer" onclick={`window.location.href='${href}'`}>
+<div class="group py-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-12 border-b border-border-card dark:border-border-card/30 last:border-0 hover:pl-2 transition-all duration-300 cursor-pointer" onclick={`window.location.href='${href}'`}>
 	<div class="flex-1 min-w-0 flex items-start gap-6">
     {number && (
       <span class="text-3xl md:text-4xl font-black text-text-muted/20 group-hover:text-primary/40 transition-colors duration-300 shrink-0 leading-none tabular-nums">
