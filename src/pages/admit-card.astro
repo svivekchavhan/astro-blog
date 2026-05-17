@@ -99,13 +99,13 @@ const categories = ["All", "UPSC", "SSC", "Banking", "Railways", "State Exams", 
 ---
 
 <Layout title="Admit Card & Hall Ticket Downloads | AstroBlog" description="Download your official exam admit cards and hall tickets. Stay updated with live release dates, exam schedules, and direct download links.">
-  <section class="py-8 pb-24 not-prose">
+  <section class="pt-4 pb-16 not-prose">
     <!-- Header Section -->
-    <div class="text-center mb-12">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wider mb-3">
+    <div class="text-center mb-6">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wider mb-2">
         <HiOutlineIdentification className="text-sm" /> Official Releases
       </div>
-      <h1 class="text-4xl md:text-5xl font-extrabold mb-3 tracking-tight text-text-main m-0">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-2 tracking-tight text-text-main m-0">
         Admit Cards
       </h1>
       <p class="text-text-secondary text-[1.1rem] m-0 max-w-[600px] mx-auto">
@@ -114,7 +114,7 @@ const categories = ["All", "UPSC", "SSC", "Banking", "Railways", "State Exams", 
     </div>
 
     <!-- Search & Filter Controls Panel (Sticky on scroll) -->
-    <div id="sticky-search-wrapper" class="sticky top-[108px] lg:top-[140px] z-30 transition-all duration-300 w-full mb-12 max-w-[700px] mx-auto px-4 md:px-0">
+    <div id="sticky-search-wrapper" class="sticky top-[124px] lg:top-[154px] z-30 transition-all duration-300 w-full mb-12 max-w-[1000px] mx-auto px-4 md:px-0">
       <div id="search-controls-panel" class="bg-bg-surface/95 backdrop-blur-md border border-border-card rounded-3xl p-6 md:p-8 shadow-sm transition-all duration-300">
         <!-- Search Input Container (Horizontal Flexbox) -->
         <div id="search-input-container" class="flex items-center w-full bg-primary/5 border border-solid border-primary/20 px-4 py-3 rounded-full transition-all duration-300 focus-within:border-primary focus-within:bg-primary/10 focus-within:shadow-md focus-within:shadow-primary/5 mb-6">
@@ -147,7 +147,7 @@ const categories = ["All", "UPSC", "SSC", "Banking", "Railways", "State Exams", 
     </div>
 
     <!-- Admit Cards List -->
-    <div class="max-w-[1000px] mx-auto">
+    <div class="max-w-[1000px] mx-auto px-4 md:px-0">
       <div id="admit-cards-grid" class="flex flex-col gap-4 transition-all duration-300">
         {admitCards.map((card, index) => (
           <div
@@ -278,34 +278,20 @@ const categories = ["All", "UPSC", "SSC", "Banking", "Railways", "State Exams", 
     padding-bottom: 0.5rem !important;
   }
 
-  /* Shrink filter pills and search bar when sticky on mobile */
+  /* Mobile Specific Search Div Customizations (Hide tags on mobile) */
   @media (max-width: 768px) {
-    #sticky-search-wrapper {
-      padding-left: 0.75rem !important;
-      padding-right: 0.75rem !important;
-      margin-bottom: 1.5rem !important;
+    #search-controls-panel {
+      padding: 1rem !important;
+      border-radius: 1.5rem !important;
     }
-    #search-controls-panel.sticky-active {
-      padding: 0.5rem 0.75rem !important;
-      border-radius: 1.25rem !important;
+    #categories-pills-container {
+      display: none !important;
     }
-    #search-controls-panel.sticky-active .filter-tab {
-      padding: 0.25rem 0.6rem !important;
-      font-size: 0.6rem !important;
+    #search-controls-panel #search-input-container {
+      margin-bottom: 0 !important;
     }
     #search-controls-panel.sticky-active #search-input-container {
-      margin-bottom: 0.35rem !important;
-      padding-top: 0.35rem !important;
-      padding-bottom: 0.35rem !important;
-      padding-left: 0.75rem !important;
-      padding-right: 0.75rem !important;
-    }
-    #search-controls-panel.sticky-active #search-input-container input {
-      font-size: 0.75rem !important;
-    }
-    #search-controls-panel.sticky-active #search-input-container svg {
-      font-size: 0.9rem !important;
-      margin-right: 0.5rem !important;
+      margin-bottom: 0 !important;
     }
   }
 </style>
@@ -333,7 +319,7 @@ const categories = ["All", "UPSC", "SSC", "Banking", "Railways", "State Exams", 
     if (searchWrapper && searchPanel) {
       scrollListener = () => {
         const rect = searchWrapper.getBoundingClientRect();
-        const threshold = window.innerWidth < 1024 ? 108 : 140;
+        const threshold = window.innerWidth < 1024 ? 124 : 154;
         
         if (rect.top <= threshold + 2) {
           searchPanel.classList.add('sticky-active');

@@ -1,18 +1,35 @@
 ---
-import { HiOutlineHome, HiOutlineNewspaper, HiOutlineEnvelope, HiOutlineBell, HiOutlineMagnifyingGlass, HiOutlineQueueList, HiOutlineSun, HiOutlineMoon, HiOutlineClock, HiOutlineCalendarDays, HiOutlineShieldCheck, HiOutlineDocumentText, HiOutlineExclamationTriangle, HiOutlineMap, HiOutlineIdentification } from "react-icons/hi2";
+import {
+  HiOutlineHome,
+  HiOutlineNewspaper,
+  HiOutlineEnvelope,
+  HiOutlineBell,
+  HiOutlineMagnifyingGlass,
+  HiOutlineQueueList,
+  HiOutlineSun,
+  HiOutlineMoon,
+  HiOutlineClock,
+  HiOutlineCalendarDays,
+  HiOutlineShieldCheck,
+  HiOutlineDocumentText,
+  HiOutlineExclamationTriangle,
+  HiOutlineMap,
+  HiOutlineIdentification,
+  HiOutlineBriefcase,
+} from "react-icons/hi2";
 import Marquee from "./Marquee.astro";
 
 // Fetch posts for search suggestions
 const postFiles = import.meta.glob("../pages/blog/*.astro");
-const articles = Object.keys(postFiles).map(file => {
-  const name = file.split('/').pop()?.replace('.astro', '').replace(/-/g, ' ');
-  const href = file.replace('../pages', '').replace('.astro', '');
+const articles = Object.keys(postFiles).map((file) => {
+  const name = file.split("/").pop()?.replace(".astro", "").replace(/-/g, " ");
+  const href = file.replace("../pages", "").replace(".astro", "");
   return { title: name, href };
 });
 
 const mainPages = [
   { title: "Home", href: "/" },
-  { title: "Blog Archive", href: "/blog" },
+  { title: "Latest Job", href: "/latest-job" },
   { title: "Result Page", href: "/result" },
   { title: "Admit Card", href: "/admit-card" },
   { title: "About Us", href: "/about" },
@@ -25,242 +42,378 @@ const mainPages = [
 
 const searchData = [...mainPages, ...articles];
 ---
+
 <!-- Sticky Header Wrapper -->
-<div class="sticky top-0 z-50 bg-bg-navbar/80 backdrop-blur-lg border-b border-border-card transition-all duration-300">
+<div
+  class="sticky top-0 z-50 bg-bg-navbar/80 backdrop-blur-lg border-b border-border-card transition-all duration-300"
+>
   <!-- Top Bar -->
-  <div class="border-b border-border-card/30 py-2 text-[0.7rem] font-medium text-text-muted hidden md:block">
+  <div
+    class="border-b border-border-card/30 py-2 text-[0.7rem] font-medium text-text-muted hidden md:block"
+  >
     <div class="max-w-[1200px] mx-auto px-6 flex justify-between items-center">
       <div class="flex items-center gap-6">
-        <span class="flex items-center gap-1.5"><HiOutlineCalendarDays className="text-primary text-sm" /> <span id="current-date">May 15, 2026</span></span>
-        <span class="flex items-center gap-1.5"><HiOutlineClock className="text-primary text-sm" /> <span id="current-time">17:49:41</span></span>
+        <span class="flex items-center gap-1.5"
+          ><HiOutlineCalendarDays className="text-primary text-sm" />
+          <span id="current-date">May 15, 2026</span>
+        </span>
+        <span class="flex items-center gap-1.5"
+          ><HiOutlineClock className="text-primary text-sm" />
+          <span id="current-time">17:49:41</span>
+        </span>
       </div>
       <div class="flex items-center gap-4">
-        <a href="/privacy" class="hover:text-primary transition-colors flex items-center gap-1"><HiOutlineShieldCheck className="text-sm" /> Privacy Policy</a>
+        <a
+          href="/privacy"
+          class="hover:text-primary transition-colors flex items-center gap-1"
+          ><HiOutlineShieldCheck className="text-sm" /> Privacy Policy</a
+        >
         <span class="text-border-card">|</span>
-        <a href="/terms" class="hover:text-primary transition-colors flex items-center gap-1"><HiOutlineDocumentText className="text-sm" /> Terms of Service</a>
+        <a
+          href="/terms"
+          class="hover:text-primary transition-colors flex items-center gap-1"
+          ><HiOutlineDocumentText className="text-sm" /> Terms of Service</a
+        >
         <span class="text-border-card">|</span>
-        <a href="/disclaimer" class="hover:text-primary transition-colors flex items-center gap-1"><HiOutlineExclamationTriangle className="text-sm" /> Disclaimer</a>
+        <a
+          href="/disclaimer"
+          class="hover:text-primary transition-colors flex items-center gap-1"
+          ><HiOutlineExclamationTriangle className="text-sm" /> Disclaimer</a
+        >
         <span class="text-border-card">|</span>
-        <a href="/sitemap" class="hover:text-primary transition-colors flex items-center gap-1"><HiOutlineMap className="text-sm" /> Sitemap</a>
+        <a
+          href="/sitemap"
+          class="hover:text-primary transition-colors flex items-center gap-1"
+          ><HiOutlineMap className="text-sm" /> Sitemap</a
+        >
         <span class="text-border-card">|</span>
-        <a href="/contact" class="hover:text-primary transition-colors flex items-center gap-1"><HiOutlineEnvelope className="text-sm" /> Contact Us</a>
+        <a
+          href="/contact"
+          class="hover:text-primary transition-colors flex items-center gap-1"
+          ><HiOutlineEnvelope className="text-sm" /> Contact Us</a
+        >
       </div>
     </div>
   </div>
 
   <header class="h-[70px] transition-colors duration-300">
-	<div class="max-w-[1200px] mx-auto px-6 w-full h-full flex justify-between items-center">
-		<a href="/" class="text-[1.5rem] font-bold text-text-main no-underline whitespace-nowrap lg:text-[1.25rem]">
-			<span class="gradient-text">Astro</span>Blog
-		</a>
+    <div
+      class="max-w-[1200px] mx-auto px-6 w-full h-full flex justify-between items-center"
+    >
+      <a
+        href="/"
+        class="text-[1.5rem] font-bold text-text-main no-underline whitespace-nowrap lg:text-[1.25rem]"
+      >
+        <span class="gradient-text">Astro</span>Blog
+      </a>
 
-		<div class="flex items-center gap-8 lg:gap-4">
-			<div class="relative hidden lg:block">
-				<div class="flex items-center bg-bg-card border border-border-card px-4 py-2 rounded-full w-[250px] transition-all duration-300 focus-within:border-primary focus-within:bg-white/10 focus-within:w-[320px]">
-					<HiOutlineMagnifyingGlass className="text-text-muted mr-2 text-lg" />
-					<input type="text" placeholder="Search articles..." id="search-input" autocomplete="off" class="bg-transparent border-none text-text-main font-sans text-sm outline-none w-full placeholder-text-muted" />
-				</div>
-				<!-- Search Suggestions Dropdown -->
-				<div id="search-suggestions" class="absolute top-full left-0 right-0 mt-2 bg-bg-surface border border-border-card rounded-2xl shadow-2xl overflow-hidden hidden opacity-0 translate-y-2 transition-all duration-300 z-[60] backdrop-blur-xl">
-					<div class="p-2" id="suggestions-list">
-						<!-- Suggestions will be injected here -->
-					</div>
-				</div>
-			</div>
-			
-			<ul class="hidden lg:flex items-center gap-8 list-none m-0 p-0">
-				<li><a href="/" class="flex items-center gap-2 text-text-muted font-medium hover:text-text-main transition-colors text-[0.95rem]"><HiOutlineHome className="text-lg" /> Home</a></li>
-				<li><a href="/blog" class="flex items-center gap-2 text-text-muted font-medium hover:text-text-main transition-colors text-[0.95rem]"><HiOutlineNewspaper className="text-lg" /> Blog</a></li>
-				<li><a href="/result" class="flex items-center gap-2 text-text-muted font-medium hover:text-text-main transition-colors text-[0.95rem]"><HiOutlineQueueList className="text-lg" /> Result</a></li>
-				<li><a href="/admit-card" class="flex items-center gap-2 text-text-muted font-medium hover:text-text-main transition-colors text-[0.95rem]"><HiOutlineIdentification className="text-lg" /> Admit Card</a></li>
-			</ul>
+      <div class="flex items-center gap-8 lg:gap-4">
+        <div class="relative hidden lg:block">
+          <div
+            class="flex items-center bg-bg-card border border-border-card px-4 py-2 rounded-full w-[250px] transition-all duration-300 focus-within:border-primary focus-within:bg-white/10 focus-within:w-[320px]"
+          >
+            <HiOutlineMagnifyingGlass
+              className="text-text-muted mr-2 text-lg"
+            />
+            <input
+              type="text"
+              placeholder="Search articles..."
+              id="search-input"
+              autocomplete="off"
+              class="bg-transparent border-none text-text-main font-sans text-sm outline-none w-full placeholder-text-muted"
+            />
+          </div>
+          <!-- Search Suggestions Dropdown -->
+          <div
+            id="search-suggestions"
+            class="absolute top-full left-0 right-0 mt-2 bg-bg-surface border border-border-card rounded-2xl shadow-2xl overflow-hidden hidden opacity-0 translate-y-2 transition-all duration-300 z-[60] backdrop-blur-xl"
+          >
+            <div class="p-2" id="suggestions-list">
+              <!-- Suggestions will be injected here -->
+            </div>
+          </div>
+        </div>
 
-			<button id="theme-toggle" class="w-10 h-10 rounded-full border border-border-card flex items-center justify-center relative overflow-hidden text-text-main hover:bg-black/5 dark:hover:bg-white/5 hover:border-primary transition-all duration-300 cursor-pointer group" aria-label="Toggle theme">
-				<span class="sun-icon absolute flex items-center justify-center text-xl transition-all duration-500 transform group-data-[theme=dark]:translate-y-[40px] group-data-[theme=dark]:opacity-0 translate-y-0 opacity-100"><HiOutlineSun /></span>
-				<span class="moon-icon absolute flex items-center justify-center text-xl transition-all duration-500 transform group-data-[theme=dark]:translate-y-0 group-data-[theme=dark]:opacity-100 -translate-y-[40px] opacity-0"><HiOutlineMoon /></span>
-			</button>
+        <ul class="hidden lg:flex items-center gap-3 list-none m-0 p-0">
+          <li>
+            <a
+              href="/latest-job"
+              class="flex items-center gap-1.5 px-4 py-2 rounded-full bg-blue-500/5 dark:bg-blue-500/10 border border-solid border-blue-500/25 text-text-main font-bold hover:bg-blue-500/10 hover:border-blue-500 hover:shadow-sm hover:shadow-blue-500/5 transition-all duration-300 text-[0.7rem] uppercase tracking-wider"
+              ><HiOutlineBriefcase className="text-sm shrink-0" /> Latest Job</a>
+          </li>
+          <li>
+            <a
+              href="/result"
+              class="flex items-center gap-1.5 px-4 py-2 rounded-full bg-emerald-500/5 dark:bg-emerald-500/10 border border-solid border-emerald-500/25 text-text-main font-bold hover:bg-emerald-500/10 hover:border-emerald-500 hover:shadow-sm hover:shadow-emerald-500/5 transition-all duration-300 text-[0.7rem] uppercase tracking-wider"
+              ><HiOutlineQueueList className="text-sm shrink-0" /> Result</a>
+          </li>
+          <li>
+            <a
+              href="/admit-card"
+              class="flex items-center gap-1.5 px-4 py-2 rounded-full bg-rose-500/5 dark:bg-rose-500/10 border border-solid border-rose-500/25 text-text-main font-bold hover:bg-rose-500/10 hover:border-rose-500 hover:shadow-sm hover:shadow-rose-500/5 transition-all duration-300 text-[0.7rem] uppercase tracking-wider"
+              ><HiOutlineIdentification className="text-sm shrink-0" /> Admit Card</a>
+          </li>
+        </ul>
 
-			<button class="lg:hidden flex flex-col justify-between w-6 h-[18px] bg-transparent border-none cursor-pointer p-0 z-[1001]" id="menu-toggle" aria-label="Toggle Menu">
-				<span class="w-full h-[2px] bg-text-main transition-all duration-300 origin-center"></span>
-				<span class="w-full h-[2px] bg-text-main transition-all duration-300"></span>
-				<span class="w-full h-[2px] bg-text-main transition-all duration-300 origin-center"></span>
-			</button>
-		</div>
-	</div>
-</header>
-<Marquee />
+        <button
+          id="theme-toggle"
+          class="w-10 h-10 rounded-full border border-border-card flex items-center justify-center relative overflow-hidden text-text-main hover:bg-black/5 dark:hover:bg-white/5 hover:border-primary transition-all duration-300 cursor-pointer group"
+          aria-label="Toggle theme"
+        >
+          <span
+            class="sun-icon absolute flex items-center justify-center text-xl transition-all duration-500 transform group-data-[theme=dark]:translate-y-[40px] group-data-[theme=dark]:opacity-0 translate-y-0 opacity-100"
+            ><HiOutlineSun />
+          </span>
+          <span
+            class="moon-icon absolute flex items-center justify-center text-xl transition-all duration-500 transform group-data-[theme=dark]:translate-y-0 group-data-[theme=dark]:opacity-100 -translate-y-[40px] opacity-0"
+            ><HiOutlineMoon />
+          </span>
+        </button>
+
+        <button
+          class="lg:hidden flex flex-col justify-between w-6 h-[18px] bg-transparent border-none cursor-pointer p-0 z-[1001]"
+          id="menu-toggle"
+          aria-label="Toggle Menu"
+        >
+          <span
+            class="w-full h-[2px] bg-text-main transition-all duration-300 origin-center"
+          ></span>
+          <span class="w-full h-[2px] bg-text-main transition-all duration-300"
+          ></span>
+          <span
+            class="w-full h-[2px] bg-text-main transition-all duration-300 origin-center"
+          ></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <Marquee />
 </div>
 
-<div class="fixed top-0 right-0 w-[80%] max-w-[300px] h-screen bg-bg-base pt-[6rem] px-8 pb-8 z-[1000] border-l border-border-card flex flex-col transition-transform duration-400 ease-[cubic-bezier(0.4,0,0.2,1)] translate-x-full shadow-[-10px_0_30px_rgba(0,0,0,0.5)]" id="mobile-menu">
-	<div class="flex items-center bg-bg-card border border-border-card p-3 rounded-xl gap-3 text-text-muted mb-8">
-		<HiOutlineMagnifyingGlass className="text-xl" />
-		<input type="text" placeholder="Search articles..." class="bg-transparent border-none text-text-main font-sans outline-none w-full" />
-	</div>
-	<ul class="flex flex-col gap-6 list-none p-0 m-0">
-		<li><a href="/" class="flex items-center gap-3 text-text-main text-[1.1rem] font-medium py-2 border-b border-border-card"><HiOutlineHome className="text-xl" /> Home</a></li>
-		<li><a href="/blog" class="flex items-center gap-3 text-text-main text-[1.1rem] font-medium py-2 border-b border-border-card"><HiOutlineNewspaper className="text-xl" /> Blog</a></li>
-		<li><a href="/result" class="flex items-center gap-3 text-text-main text-[1.1rem] font-medium py-2 border-b border-border-card"><HiOutlineQueueList className="text-xl" /> Result</a></li>
-		<li><a href="/admit-card" class="flex items-center gap-3 text-text-main text-[1.1rem] font-medium py-2 border-b border-border-card"><HiOutlineIdentification className="text-xl" /> Admit Card</a></li>
-	</ul>
+<div
+  class="fixed top-0 right-0 w-[80%] max-w-[300px] h-screen bg-bg-base pt-[6rem] px-8 pb-8 z-[1000] border-l border-border-card flex flex-col transition-transform duration-400 ease-[cubic-bezier(0.4,0,0.2,1)] translate-x-full shadow-[-10px_0_30px_rgba(0,0,0,0.5)]"
+  id="mobile-menu"
+>
+  <div
+    class="flex items-center bg-bg-card border border-border-card p-3 rounded-xl gap-3 text-text-muted mb-8"
+  >
+    <HiOutlineMagnifyingGlass className="text-xl" />
+    <input
+      type="text"
+      placeholder="Search articles..."
+      class="bg-transparent border-none text-text-main font-sans outline-none w-full"
+    />
+  </div>
+  <ul class="flex flex-col gap-3 list-none p-0 m-0">
+    <li>
+      <a
+        href="/latest-job"
+        class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-blue-500/5 dark:bg-blue-500/10 border border-solid border-blue-500/20 text-text-main font-bold hover:bg-blue-500/10 transition-all duration-300 text-xs uppercase tracking-wider"
+        ><HiOutlineBriefcase className="text-lg shrink-0" /> Latest Job</a>
+    </li>
+    <li>
+      <a
+        href="/result"
+        class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-emerald-500/5 dark:bg-emerald-500/10 border border-solid border-emerald-500/20 text-text-main font-bold hover:bg-emerald-500/10 transition-all duration-300 text-xs uppercase tracking-wider"
+        ><HiOutlineQueueList className="text-lg shrink-0" /> Result</a>
+    </li>
+    <li>
+      <a
+        href="/admit-card"
+        class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-rose-500/5 dark:bg-rose-500/10 border border-solid border-rose-500/20 text-text-main font-bold hover:bg-rose-500/10 transition-all duration-300 text-xs uppercase tracking-wider"
+        ><HiOutlineIdentification className="text-lg shrink-0" /> Admit Card</a>
+    </li>
+  </ul>
 </div>
 
-<div class="fixed inset-0 bg-black/60 backdrop-blur-[4px] z-[999] opacity-0 invisible transition-all duration-300" id="mobile-overlay"></div>
+<div
+  class="fixed inset-0 bg-black/60 backdrop-blur-[4px] z-[999] opacity-0 invisible transition-all duration-300"
+  id="mobile-overlay"
+>
+</div>
 
 <script define:vars={{ searchData }}>
-	function initNavbar() {
-		const menuToggle = document.getElementById('menu-toggle');
-		const mobileMenu = document.getElementById('mobile-menu');
-		const mobileOverlay = document.getElementById('mobile-overlay');
-		const themeToggle = document.getElementById('theme-toggle');
-    const searchInput = document.getElementById('search-input');
-    const suggestionsContainer = document.getElementById('search-suggestions');
-    const suggestionsList = document.getElementById('suggestions-list');
+  function initNavbar() {
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const mobileOverlay = document.getElementById("mobile-overlay");
+    const themeToggle = document.getElementById("theme-toggle");
+    const searchInput = document.getElementById("search-input");
+    const suggestionsContainer = document.getElementById("search-suggestions");
+    const suggestionsList = document.getElementById("suggestions-list");
 
     // Live Search Suggestions
     if (searchInput && suggestionsContainer && suggestionsList) {
       function highlightMatch(text, query) {
         if (!query) return text;
-        const regex = new RegExp(`(${query})`, 'gi');
-        return text.replace(regex, '<u class="text-primary no-underline font-bold">$1</u>');
+        const regex = new RegExp(`(${query})`, "gi");
+        return text.replace(
+          regex,
+          '<u class="text-primary no-underline font-bold">$1</u>',
+        );
       }
 
-      searchInput.addEventListener('input', (e) => {
+      searchInput.addEventListener("input", (e) => {
         const query = e.target.value.toLowerCase().trim();
-        
+
         if (query.length < 2) {
-          suggestionsContainer.classList.add('hidden', 'opacity-0', 'translate-y-2');
+          suggestionsContainer.classList.add(
+            "hidden",
+            "opacity-0",
+            "translate-y-2",
+          );
           return;
         }
 
-        const filtered = searchData.filter(post => 
-          post.title.toLowerCase().includes(query)
-        ).slice(0, 5);
+        const filtered = searchData
+          .filter((post) => post.title.toLowerCase().includes(query))
+          .slice(0, 5);
 
         if (filtered.length > 0) {
-          suggestionsList.innerHTML = filtered.map(post => `
-            <a href="${post.href}" class="flex items-center gap-3 px-4 py-3 hover:bg-white/5 rounded-xl transition-colors group">
+          suggestionsList.innerHTML = filtered
+            .map(
+              (post) => `
+            <a href="${
+              post.href
+            }" class="flex items-center gap-3 px-4 py-3 hover:bg-white/5 rounded-xl transition-colors group">
               <div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
               </div>
-              <span class="text-sm text-text-main font-medium line-clamp-1">${highlightMatch(post.title, query)}</span>
+              <span class="text-sm text-text-main font-medium line-clamp-1">${highlightMatch(
+                post.title,
+                query,
+              )}</span>
             </a>
-          `).join('');
-          
-          suggestionsContainer.classList.remove('hidden');
+          `,
+            )
+            .join("");
+
+          suggestionsContainer.classList.remove("hidden");
           setTimeout(() => {
-            suggestionsContainer.classList.remove('opacity-0', 'translate-y-2');
+            suggestionsContainer.classList.remove("opacity-0", "translate-y-2");
           }, 10);
         } else {
-          suggestionsContainer.classList.add('hidden', 'opacity-0', 'translate-y-2');
+          suggestionsContainer.classList.add(
+            "hidden",
+            "opacity-0",
+            "translate-y-2",
+          );
         }
       });
 
       // Close suggestions when clicking outside
-      document.addEventListener('click', (e) => {
-        if (!searchInput.contains(e.target) && !suggestionsContainer.contains(e.target)) {
-          suggestionsContainer.classList.add('hidden', 'opacity-0', 'translate-y-2');
+      document.addEventListener("click", (e) => {
+        if (
+          !searchInput.contains(e.target) &&
+          !suggestionsContainer.contains(e.target)
+        ) {
+          suggestionsContainer.classList.add(
+            "hidden",
+            "opacity-0",
+            "translate-y-2",
+          );
         }
       });
     }
 
-		// Sync initial theme toggle button state
-		if (themeToggle) {
-			const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
-			themeToggle.setAttribute('data-theme', currentTheme);
-		}
+    // Sync initial theme toggle button state
+    if (themeToggle) {
+      const currentTheme =
+        document.documentElement.getAttribute("data-theme") || "light";
+      themeToggle.setAttribute("data-theme", currentTheme);
+    }
 
-		function toggleMenu() {
-			const isActive = menuToggle?.classList.contains('active');
-			
-			if (isActive) {
-				// Close menu
-				menuToggle.classList.remove('active');
-				mobileMenu?.classList.add('translate-x-full');
-				mobileMenu?.classList.remove('translate-x-0');
-				mobileOverlay?.classList.remove('!opacity-100', '!visible');
-				document.body.classList.remove('overflow-hidden');
-				
-				// Reset hamburger animation
-				const spans = menuToggle?.querySelectorAll('span');
-				if (spans && spans.length === 3) {
-					spans[0].style.transform = 'none';
-					spans[1].style.opacity = '1';
-					spans[2].style.transform = 'none';
-				}
-			} else {
-				// Open menu
-				menuToggle?.classList.add('active');
-				mobileMenu?.classList.remove('translate-x-full');
-				mobileMenu?.classList.add('translate-x-0');
-				mobileOverlay?.classList.add('!opacity-100', '!visible');
-				document.body.classList.add('overflow-hidden');
-				
-				// Animate hamburger to X
-				const spans = menuToggle?.querySelectorAll('span');
-				if (spans && spans.length === 3) {
-					spans[0].style.transform = 'translateY(8px) rotate(45deg)';
-					spans[1].style.opacity = '0';
-					spans[2].style.transform = 'translateY(-8px) rotate(-45deg)';
-				}
-			}
-		}
+    function toggleMenu() {
+      const isActive = menuToggle?.classList.contains("active");
 
-		function toggleTheme() {
-			const currentTheme = document.documentElement.getAttribute('data-theme');
-			const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-			
-			if (newTheme === 'dark') {
-				document.documentElement.setAttribute('data-theme', 'dark');
-			} else {
-				document.documentElement.removeAttribute('data-theme');
-			}
-			
-			localStorage.setItem('theme', newTheme);
-			if (themeToggle) themeToggle.setAttribute('data-theme', newTheme);
-		}
+      if (isActive) {
+        // Close menu
+        menuToggle.classList.remove("active");
+        mobileMenu?.classList.add("translate-x-full");
+        mobileMenu?.classList.remove("translate-x-0");
+        mobileOverlay?.classList.remove("!opacity-100", "!visible");
+        document.body.classList.remove("overflow-hidden");
 
-		if (themeToggle && !themeToggle.hasAttribute('data-initialized')) {
-			themeToggle.addEventListener('click', toggleTheme);
-			themeToggle.setAttribute('data-initialized', 'true');
-		}
-		
-		if (menuToggle && !menuToggle.hasAttribute('data-initialized')) {
-			menuToggle.addEventListener('click', toggleMenu);
-			mobileOverlay?.addEventListener('click', toggleMenu);
-			menuToggle.setAttribute('data-initialized', 'true');
-		}
-	}
+        // Reset hamburger animation
+        const spans = menuToggle?.querySelectorAll("span");
+        if (spans && spans.length === 3) {
+          spans[0].style.transform = "none";
+          spans[1].style.opacity = "1";
+          spans[2].style.transform = "none";
+        }
+      } else {
+        // Open menu
+        menuToggle?.classList.add("active");
+        mobileMenu?.classList.remove("translate-x-full");
+        mobileMenu?.classList.add("translate-x-0");
+        mobileOverlay?.classList.add("!opacity-100", "!visible");
+        document.body.classList.add("overflow-hidden");
 
-	function initDateTime() {
-		const dateEl = document.getElementById('current-date');
-		const timeEl = document.getElementById('current-time');
+        // Animate hamburger to X
+        const spans = menuToggle?.querySelectorAll("span");
+        if (spans && spans.length === 3) {
+          spans[0].style.transform = "translateY(8px) rotate(45deg)";
+          spans[1].style.opacity = "0";
+          spans[2].style.transform = "translateY(-8px) rotate(-45deg)";
+        }
+      }
+    }
 
-		function update() {
-			const now = new Date();
-			if (dateEl) {
-				dateEl.textContent = now.toLocaleDateString('en-US', { 
-					month: 'short', 
-					day: 'numeric', 
-					year: 'numeric' 
-				});
-			}
-			if (timeEl) {
-				timeEl.textContent = now.toLocaleTimeString('en-US', { 
-					hour12: true, 
-					hour: '2-digit', 
-					minute: '2-digit'
-				});
-			}
-		}
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute("data-theme");
+      const newTheme = currentTheme === "dark" ? "light" : "dark";
 
-		update();
-		setInterval(update, 1000);
-	}
+      if (newTheme === "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+      } else {
+        document.documentElement.removeAttribute("data-theme");
+      }
 
-	// Initialize on page load and after view transitions
-	document.addEventListener('astro:page-load', () => {
-		initNavbar();
-		initDateTime();
-	});
+      localStorage.setItem("theme", newTheme);
+      if (themeToggle) themeToggle.setAttribute("data-theme", newTheme);
+    }
+
+    if (themeToggle && !themeToggle.hasAttribute("data-initialized")) {
+      themeToggle.addEventListener("click", toggleTheme);
+      themeToggle.setAttribute("data-initialized", "true");
+    }
+
+    if (menuToggle && !menuToggle.hasAttribute("data-initialized")) {
+      menuToggle.addEventListener("click", toggleMenu);
+      mobileOverlay?.addEventListener("click", toggleMenu);
+      menuToggle.setAttribute("data-initialized", "true");
+    }
+  }
+
+  function initDateTime() {
+    const dateEl = document.getElementById("current-date");
+    const timeEl = document.getElementById("current-time");
+
+    function update() {
+      const now = new Date();
+      if (dateEl) {
+        dateEl.textContent = now.toLocaleDateString("en-US", {
+          month: "short",
+          day: "numeric",
+          year: "numeric",
+        });
+      }
+      if (timeEl) {
+        timeEl.textContent = now.toLocaleTimeString("en-US", {
+          hour12: true,
+          hour: "2-digit",
+          minute: "2-digit",
+        });
+      }
+    }
+
+    update();
+    setInterval(update, 1000);
+  }
+
+  // Initialize on page load and after view transitions
+  document.addEventListener("astro:page-load", () => {
+    initNavbar();
+    initDateTime();
+  });
 </script>
-

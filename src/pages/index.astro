@@ -1,117 +1,223 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import BlogCard from "../components/BlogCard.astro";
+import { 
+  HiOutlineCalendarDays, 
+  HiOutlineArrowTopRightOnSquare, 
+  HiOutlineBell, 
+  HiOutlineXCircle, 
+  HiOutlineBuildingOffice, 
+  HiOutlineAcademicCap, 
+  HiOutlineBriefcase 
+} from "react-icons/hi2";
 
-const posts = [
-  { 
-    title: "The Ultimate Guide to Google Gemini AI: What It Is, How It Works, and How to Use It Every Day", 
-    href: "/blog/google-gemini-guide", 
-    date: "May 15, 2026", 
-    category: "AI",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80"
+const latestJobs = [
+  {
+    title: "UPSC Civil Services Examination 2026",
+    organisation: "Union Public Service Commission",
+    qualification: "Degree in any discipline",
+    vacancies: "1,056 Posts",
+    startDate: "May 20, 2026",
+    lastDate: "June 18, 2026",
+    category: "UPSC",
+    status: "apply-now",
+    link: "https://upsc.gov.in"
   },
-  { 
-    title: "How to Open a Savings Account in SBI: A Step-by-Step Guide", 
-    href: "/blog/how-to-open-sbi-account", 
-    date: "May 15, 2026", 
+  {
+    title: "SSC CGL Recruitment 2026",
+    organisation: "Staff Selection Commission",
+    qualification: "Bachelor's Degree",
+    vacancies: "8,412 Posts",
+    startDate: "June 10, 2026",
+    lastDate: "July 10, 2026",
+    category: "SSC",
+    status: "upcoming",
+    link: "https://ssc.gov.in"
+  },
+  {
+    title: "SBI Probationary Officers (PO) 2026",
+    organisation: "State Bank of India",
+    qualification: "Graduation",
+    vacancies: "2,000 Posts",
+    startDate: "April 15, 2026",
+    lastDate: "May 15, 2026",
     category: "Banking",
-    image: "https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?auto=format&fit=crop&w=800&q=80"
+    status: "closed",
+    link: "https://sbi.co.in"
   },
-  { 
-    title: "What is Aadhar Card: Benefits, Features, and How to Get It", 
-    href: "/blog/what-is-aadhar-card", 
-    date: "May 14, 2026", 
-    category: "Government",
-    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80"
+  {
+    title: "RRB Assistant Loco Pilot (ALP) Vacancies",
+    organisation: "Railway Recruitment Board",
+    qualification: "Matriculation / ITI",
+    vacancies: "5,696 Posts",
+    startDate: "May 01, 2026",
+    lastDate: "June 02, 2026",
+    category: "Railways",
+    status: "apply-now",
+    link: "https://rrbcdg.gov.in"
   },
-  { 
-    title: "Which is the Best Mutual Fund Plan for 2026? A Complete Guide", 
-    href: "/blog/best-mutual-fund-plan", 
-    date: "May 13, 2026", 
-    category: "Finance",
-    image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=800&q=80"
+  {
+    title: "MPSC State Services Examination 2026",
+    organisation: "Maharashtra Public Service Commission",
+    qualification: "Graduate Degree",
+    vacancies: "500+ Posts",
+    startDate: "June 15, 2026",
+    lastDate: "July 15, 2026",
+    category: "State Exams",
+    status: "upcoming",
+    link: "https://mpsc.gov.in"
+  },
+  {
+    title: "IBPS Clerk CWE XII Recruitment",
+    organisation: "Institute of Banking Personnel Selection",
+    qualification: "Any Graduation Degree",
+    vacancies: "6,000+ Posts",
+    startDate: "May 25, 2026",
+    lastDate: "June 20, 2026",
+    category: "Banking",
+    status: "upcoming",
+    link: "https://ibps.in"
+  },
+  {
+    title: "DRDO Scientist 'B' Recruitment",
+    organisation: "Defence Research and Development Organisation",
+    qualification: "First Class B.E / B.Tech",
+    vacancies: "320 Posts",
+    startDate: "June 02, 2026",
+    lastDate: "June 25, 2026",
+    category: "Direct Recruitment",
+    status: "upcoming",
+    link: "https://drdo.gov.in"
   }
 ];
-
-const latestPosts = posts;
 ---
 
-<Layout title="AstroBlog | Home of Technical Insights">
-  <!-- Latest Articles Section -->
-  <section id="posts" class="py-12 pb-24">
-    <div class="mb-12 flex justify-between items-end border-b border-border-card pb-6">
-      <h2 class="text-3xl font-black tracking-tight text-text-main m-0 uppercase italic">Latest <span class="gradient-text">Articles</span></h2>
-      <a href="/blog" class="text-primary hover:underline font-medium">Browse Archive →</a>
+<Layout title="AstroBlog | Latest Government Jobs & Vacancies" description="Explore the latest open government recruitments, ssc, banking, upsc, railways exam calendars and apply portals.">
+  <section class="py-8 pb-20 not-prose">
+    <!-- Header Section -->
+    <div class="mb-8 border-b border-border-card/60 dark:border-border-card/30 pb-4">
+      <h2 class="text-2xl md:text-3xl font-black tracking-tight text-text-main m-0 uppercase italic flex items-center gap-2">
+        Latest <span class="gradient-text">Jobs & Vacancies</span>
+      </h2>
     </div>
 
-    <div class="mt-8">
-      <div id="posts-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {
-          latestPosts.map((post, index) => (
-            <div
-              class={`post-item-wrapper h-full ${index >= 6 ? "hidden" : ""}`}
-              data-index={index}
-            >
-              <BlogCard {...post} />
+    <!-- Jobs List Container (List format - no cards) -->
+    <div class="max-w-[1000px] mx-auto px-4 md:px-0">
+      <div id="jobs-list" class="flex flex-col">
+        {latestJobs.map((job, index) => (
+          <div 
+            class="py-5 border-b border-border-card/60 dark:border-border-card/30 last:border-b-0 last:pb-0 opacity-0 animate-[fadeInUp_0.5s_ease_forwards]"
+            style={`animation-delay: ${index * 0.06}s`}
+          >
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <!-- Left: Info Block -->
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 mb-2 flex-wrap">
+                  <span class="text-[0.6rem] bg-primary/10 text-primary px-2 py-0.5 rounded font-bold uppercase tracking-wider border border-primary/20 whitespace-nowrap">
+                    {job.category}
+                  </span>
+
+                  {job.status === "apply-now" && (
+                    <span class="text-[0.55rem] bg-emerald-500/10 text-emerald-500 px-2 py-0.5 rounded-full font-bold uppercase tracking-wide border border-emerald-500/20 flex items-center gap-1 whitespace-nowrap">
+                      <span class="w-1 h-1 bg-emerald-500 rounded-full shadow-[0_0_6px] shadow-emerald-500 animate-pulse inline-block"></span>
+                      Apply Now
+                    </span>
+                  )}
+
+                  {job.status === "upcoming" && (
+                    <span class="text-[0.55rem] bg-amber-500/10 text-amber-500 px-2 py-0.5 rounded-full font-bold uppercase tracking-wide border border-amber-500/20 flex items-center gap-1 whitespace-nowrap">
+                      <span class="w-1 h-1 bg-amber-500 rounded-full shadow-[0_0_6px] shadow-amber-500 animate-pulse inline-block"></span>
+                      Upcoming
+                    </span>
+                  )}
+
+                  {job.status === "closed" && (
+                    <span class="text-[0.55rem] bg-rose-500/10 text-rose-500 px-2 py-0.5 rounded-full font-bold uppercase tracking-wide border border-rose-500/20 flex items-center gap-1 whitespace-nowrap">
+                      <span class="w-1 h-1 bg-rose-500 rounded-full inline-block"></span>
+                      Closed
+                    </span>
+                  )}
+                </div>
+
+                <h3 class="text-base text-text-main font-bold leading-tight mb-1.5 hover:text-primary transition-colors cursor-pointer">
+                  {job.title}
+                </h3>
+                
+                <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-text-muted mb-2.5">
+                  <div class="flex items-center gap-1 min-w-0">
+                    <HiOutlineBuildingOffice className="shrink-0 text-xs text-primary/70" />
+                    <span class="truncate">{job.organisation}</span>
+                  </div>
+                  <div class="flex items-center gap-1.5 shrink-0">
+                    <HiOutlineAcademicCap className="text-xs text-primary/70" />
+                    <span>{job.qualification}</span>
+                  </div>
+                </div>
+
+                <!-- Bottom Meta Row: Last Date & Total Posts -->
+                <div class="flex flex-wrap items-center gap-2.5">
+                  <span class="text-[0.6rem] font-bold bg-primary/5 text-primary border border-solid border-primary/20 px-2.5 py-0.5 rounded uppercase tracking-wide">
+                    Total Posts: <strong class="text-primary font-extrabold">{job.vacancies}</strong>
+                  </span>
+                  <span class="text-border-card/30 hidden sm:inline text-xs">|</span>
+                  <span class="flex items-center gap-1 text-[0.6rem] font-bold bg-rose-500/5 dark:bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-solid border-rose-500/20 px-2.5 py-0.5 rounded uppercase tracking-wide">
+                    <HiOutlineCalendarDays className="text-rose-500 text-xs shrink-0" /> Last Date: <strong class="font-extrabold">{job.lastDate}</strong>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Right: CTA Buttons -->
+              <div class="shrink-0 w-full md:w-auto md:min-w-[170px]">
+                {job.status === "apply-now" && (
+                  <a
+                    href={job.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="w-full md:w-auto btn-primary !rounded-lg !py-2 flex items-center justify-center gap-1.5 group/btn text-[0.6rem] font-bold uppercase tracking-wider px-4"
+                  >
+                    <span>Apply Online</span>
+                    <HiOutlineArrowTopRightOnSquare className="text-xs transition-transform duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 shrink-0" />
+                  </a>
+                )}
+
+                {job.status === "upcoming" && (
+                  <button
+                    type="button"
+                    disabled
+                    class="w-full md:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-2 bg-red-500/10 dark:bg-red-500/5 border border-solid border-red-500/20 text-red-500 dark:text-red-400 font-bold uppercase tracking-wider text-[0.6rem] rounded-lg cursor-not-allowed text-center animate-pulse"
+                  >
+                    <HiOutlineBell className="text-xs text-red-500 dark:text-red-400 shrink-0" />
+                    <span>Upcoming</span>
+                  </button>
+                )}
+
+                {job.status === "closed" && (
+                  <button
+                    type="button"
+                    disabled
+                    class="w-full md:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-2 bg-rose-500/5 border border-solid border-rose-500/15 text-rose-500/60 dark:text-rose-400/60 font-bold uppercase tracking-wider text-[0.6rem] rounded-lg cursor-not-allowed text-center"
+                  >
+                    <HiOutlineXCircle className="text-xs shrink-0" />
+                    <span>Closed</span>
+                  </button>
+                )}
+              </div>
             </div>
-          ))
-        }
+          </div>
+        ))}
       </div>
-    </div>
-
-    <div class="mt-12 flex justify-center">
-      <button id="load-more-btn" class="btn-primary !px-12 !py-4 shadow-lg hover:shadow-primary/30 flex items-center gap-3">
-        <span class="btn-text">Load More Stories</span>
-        <div class="loader hidden w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" id="loader"></div>
-      </button>
     </div>
   </section>
 </Layout>
 
-<script>
-  function initLoadMore() {
-    const loadMoreBtn = document.getElementById("load-more-btn") as HTMLButtonElement;
-    const loader = document.getElementById("loader");
-    const btnText = loadMoreBtn?.querySelector(".btn-text");
-
-    let currentVisible = 6;
-    const increment = 4;
-
-    loadMoreBtn?.addEventListener("click", () => {
-      loader?.classList.remove("hidden");
-      if (btnText) btnText.textContent = "Fetching...";
-      loadMoreBtn.disabled = true;
-      loadMoreBtn.classList.add('opacity-80', 'cursor-not-allowed');
-
-      setTimeout(() => {
-        const hiddenItems = document.querySelectorAll(".post-item-wrapper.hidden");
-        let revealedCount = 0;
-
-        hiddenItems.forEach((item, index) => {
-          if (index < increment) {
-            item.classList.remove("hidden");
-            item.classList.add("animate-[fadeInUp_0.6s_ease_forwards]");
-            revealedCount++;
-          }
-        });
-
-        currentVisible += revealedCount;
-
-        loader?.classList.add("hidden");
-        if (btnText) btnText.textContent = "Load More Stories";
-        loadMoreBtn.disabled = false;
-        loadMoreBtn.classList.remove('opacity-80', 'cursor-not-allowed');
-
-        if (document.querySelectorAll(".post-item-wrapper.hidden").length === 0) {
-          loadMoreBtn.style.display = "none";
-        }
-      }, 800);
-    });
+<style is:global>
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
-
-  // Initialize on first load
-  initLoadMore();
-
-  // Re-initialize after view transitions
-  document.addEventListener('astro:page-load', initLoadMore);
-</script>
+</style>
