@@ -3,70 +3,282 @@ import Layout from "../../layouts/Layout.astro";
 import BlogCard from "../../components/BlogCard.astro";
 
 const title = "How to Open a Savings Account in SBI: A Step-by-Step Guide";
-const description = "Learn the complete process of opening a savings account in State Bank of India (SBI) both online and offline.";
+const description =
+  "Learn the complete process of opening a savings account in State Bank of India (SBI) both online and offline.";
 const date = "May 15, 2026";
 const category = "Banking";
 ---
 
-<Layout title={title} description={description}>
-  <article class="max-w-4xl mx-auto py-12 px-4">
+<Layout 
+  title={title} 
+  description={description}
+  image="https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?auto=format&fit=crop&q=80&w=1200"
+  article={true}
+>
+  <article class="py-8">
+    <!-- Header -->
     <div class="mb-12">
-      <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-bold uppercase tracking-wider">{category}</span>
-      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-text-main mt-6 mb-4 leading-[1.1]">
+      <div class="flex items-center gap-3 mb-6">
+        <span
+          class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"
+          >{category}
+        </span>
+        <span class="text-text-muted text-sm">• {date}</span>
+      </div>
+      <h1
+        class="text-4xl md:text-5xl font-black tracking-tight text-text-main mb-6 leading-[1.2]"
+      >
         {title}
       </h1>
-      <p class="text-text-muted text-xl leading-relaxed">
+      <p
+        class="text-text-muted text-lg leading-relaxed border-l-4 border-primary pl-6 py-2 italic"
+      >
         {description}
       </p>
-      <div class="flex items-center gap-4 mt-8 pt-8 border-t border-border-card">
-        <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-xl">V</div>
-        <div>
-          <p class="text-text-main font-bold m-0 text-lg">Vivek Chavhan</p>
-          <p class="text-text-muted m-0 text-sm">{date} • 10 min read</p>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="bg-bg-surface border border-border-card rounded-3xl p-8 mb-12">
+      <h2
+        class="text-xl font-bold text-text-main mb-4 flex items-center gap-2 m-0"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="text-primary"
+          ><line x1="8" y1="6" x2="21" y2="6"></line><line
+            x1="8"
+            y1="12"
+            x2="21"
+            y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line
+            x1="3"
+            y1="6"
+            x2="3.01"
+            y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line
+            x1="3"
+            y1="18"
+            x2="3.01"
+            y2="18"></line>
+        </svg>
+        In this article
+      </h2>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 list-none p-0 m-0">
+        <li>
+          <a
+            href="#eligibility"
+            class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+            >Eligibility Criteria</a
+          >
+        </li>
+        <li>
+          <a
+            href="#documents"
+            class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+            >Documents Required</a
+          >
+        </li>
+        <li>
+          <a
+            href="#online-process"
+            class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+            >Online Process (YONO)</a
+          >
+        </li>
+        <li>
+          <a
+            href="#offline-process"
+            class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+            >Offline Branch Process</a
+          >
+        </li>
+        <li>
+          <a
+            href="#faq"
+            class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+            >Frequently Asked Questions</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Content -->
+    <div class="space-y-8">
+      <h2>Introduction</h2>
+      <p>
+        State Bank of India (SBI) is the largest public sector bank in India,
+        offering a wide range of banking products. Opening a savings account
+        with SBI is the first step towards secure financial management. In 2026,
+        SBI has made the process even easier with digital-first solutions.
+      </p>
+
+      <h2 id="eligibility">Eligibility Criteria</h2>
+      <div
+        class="bg-bg-surface/50 border-l-4 border-secondary p-6 rounded-r-2xl my-8"
+      >
+        <ul class="m-0">
+          <li>Must be a resident citizen of India.</li>
+          <li>
+            Must be 18 years of age or older (Minor accounts available with
+            guardian).
+          </li>
+          <li>
+            Valid KYC documents (Aadhar and PAN) are mandatory for digital
+            accounts.
+          </li>
+        </ul>
+      </div>
+
+      <h2 id="documents">Documents Required</h2>
+      <p>
+        To open an SBI savings account, ensure you have the original and
+        photocopies of the following:
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8">
+        <div class="bg-bg-card border border-border-card p-4 rounded-xl">
+          <strong class="text-text-main block mb-1">Identity Proof</strong>
+          <span class="text-sm">Aadhar Card, PAN Card, or Voter ID.</span>
         </div>
+        <div class="bg-bg-card border border-border-card p-4 rounded-xl">
+          <strong class="text-text-main block mb-1">Address Proof</strong>
+          <span class="text-sm"
+            >Aadhar Card, Utility Bills, or Rent Agreement.</span
+          >
+        </div>
+      </div>
+
+      <h2 id="online-process">Step-by-Step Process (Online via YONO App)</h2>
+      <p>
+        The YONO SBI app allows you to open an "Insta Plus Savings Account"
+        without visiting a branch.
+      </p>
+      <ol>
+        <li>
+          Download the <strong>SBI YONO app</strong> and select 'New to SBI'.
+        </li>
+        <li>Click on 'Open Savings Account' → 'Without Branch Visit'.</li>
+        <li>Enter your Mobile Number and Email ID.</li>
+        <li>Authenticate using Aadhar OTP and provide your PAN details.</li>
+        <li>
+          Complete the <strong>Video KYC</strong> process by choosing a preferred
+          time slot.
+        </li>
+        <li>
+          Your account will be activated and your kit will be mailed to your
+          address.
+        </li>
+      </ol>
+
+      <h2 id="offline-process">Step-by-Step Process (Offline)</h2>
+      <p>If you prefer a physical visit, follow these steps:</p>
+      <ol>
+        <li>
+          Visit the nearest SBI branch and request an account opening form.
+        </li>
+        <li>Attach two passport-size photographs.</li>
+        <li>Submit the self-attested KYC documents.</li>
+        <li>
+          Initial deposit might be required depending on the account type (Zero
+          balance options available).
+        </li>
+      </ol>
+    </div>
+    <div>
+      <h1>How to open sbi saving account in yout mobile follow below step</h1>
+
+      <ol>
+        <li class="text-text-muted">
+          first of all download sbi YONO app from google play store or apple app
+          store
+        </li>
+        <li>click on open account on the top right corner of the app</li>
+        <li>click on the video kyc tab and then click on open account</li>
+        <li>enter your mobile number and email id and click on submit</li>
+        <li>enter the otp sent to your mobile number and email id</li>
+        <li>enter your pan card number and click on submit</li>
+      </ol>
+      <div class="flex items-center justify-center">
+        <img
+          src="https://loanjagat-appven.s3.ap-south-1.amazonaws.com/1738662582479_blob"
+          alt=""
+        />
       </div>
     </div>
 
-    <div class="prose prose-invert max-w-none">
-      <h2>Introduction to SBI Savings Account</h2>
-      <p>State Bank of India (SBI) is the largest public sector bank in India, offering a wide range of banking products. Opening a savings account with SBI is the first step towards secure financial management.</p>
-
-      <h2>Eligibility Criteria</h2>
-      <ul>
-        <li>Must be a citizen of India.</li>
-        <li>Must be 18 years of age or older (Minor accounts also available).</li>
-        <li>Valid KYC documents are required.</li>
-      </ul>
-
-      <h2>Documents Required</h2>
-      <p>To open an SBI savings account, you will need the following documents:</p>
-      <ol>
-        <li><strong>Identity Proof:</strong> Aadhar Card, PAN Card, Voter ID, or Passport.</li>
-        <li><strong>Address Proof:</strong> Utility bills, Aadhar Card, or Rent Agreement.</li>
-        <li><strong>Photographs:</strong> 2-3 recent passport-size color photographs.</li>
-      </ol>
-
-      <h2>Step-by-Step Process (Online via YONO App)</h2>
-      <p>1. Download the SBI YONO app from Play Store or App Store.</p>
-      <p>2. Select 'New to SBI' and then 'Open Savings Account'.</p>
-      <p>3. Choose 'Without Branch Visit' for a paperless process (requires Video KYC).</p>
-      <p>4. Enter your mobile number and email ID.</p>
-      <p>5. Complete your E-KYC using Aadhar and PAN details.</p>
-      <p>6. Schedule and complete the Video KYC call with an SBI official.</p>
-
-      <h2>Step-by-Step Process (Offline)</h2>
-      <p>1. Visit your nearest SBI branch with original documents and photocopies.</p>
-      <p>2. Ask for the Savings Bank Account Opening Form.</p>
-      <p>3. Fill in the details carefully and attach your photographs.</p>
-      <p>4. Submit the form along with self-attested copies of your KYC documents.</p>
-      <p>5. Once verified, your account will be activated within 24-48 hours.</p>
+    <!-- FAQ Section -->
+    <div class="mt-20" id="faq">
+      <h2
+        class="text-2xl font-black text-text-main mb-8 flex items-center gap-3"
+      >
+        <span class="w-10 h-1 bg-primary rounded-full"></span>
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-4">
+        {
+          [
+            {
+              q: "Is there a minimum balance for SBI Savings Account?",
+              a: "As per current guidelines, SBI has waived the Average Monthly Balance (AMB) requirement for all basic savings bank accounts.",
+            },
+            {
+              q: "Can I open an SBI account without a PAN card?",
+              a: "For digital accounts via YONO, PAN is mandatory. For offline accounts, you can submit Form 60 if you don't have a PAN.",
+            },
+            {
+              q: "How long does it take to activate the account?",
+              a: "Digital accounts are often activated within hours of Video KYC. Offline accounts may take 1-2 working days.",
+            },
+          ].map((item) => (
+            <div class="bg-bg-surface border border-border-card rounded-2xl p-6">
+              <h4 class="text-text-main font-bold mb-2 m-0">{item.q}</h4>
+              <p class="text-text-muted text-sm m-0 leading-relaxed">
+                {item.a}
+              </p>
+            </div>
+          ))
+        }
+      </div>
     </div>
 
+    <!-- Newsletter -->
+    <div
+      class="mt-20 bg-gradient-to-br from-primary/20 to-secondary/20 border border-primary/20 rounded-3xl p-10 text-center"
+    >
+      <h3 class="text-2xl font-bold text-text-main mb-2">Stay Updated!</h3>
+      <p class="text-text-muted mb-8 max-w-md mx-auto">
+        Get the latest banking and financial tips delivered straight to your
+        inbox.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+        <input
+          type="email"
+          placeholder="your@email.com"
+          class="bg-bg-base border border-border-card px-6 py-3 rounded-xl flex-1 text-text-main outline-none focus:border-primary transition-colors"
+        />
+        <button class="btn-primary">Subscribe</button>
+      </div>
+    </div>
+
+    <!-- Related -->
     <section class="mt-20 pt-12 border-t border-border-card">
-      <h3 class="text-2xl font-bold text-text-main mb-8">Related Articles</h3>
+      <h3 class="text-xl font-bold text-text-main mb-8">Related Articles</h3>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <BlogCard title="What is Aadhar Card and Why You Need It" href="/blog/what-is-aadhar-card" date="May 14, 2026" />
-        <BlogCard title="Which is the Best Mutual Fund Plan for 2026?" href="/blog/best-mutual-fund-plan" date="May 13, 2026" />
+        <BlogCard
+          title="What is Aadhar Card: Benefits and Features"
+          href="/blog/what-is-aadhar-card"
+          date="May 14, 2026"
+        />
+        <BlogCard
+          title="Best Mutual Fund Plans for 2026"
+          href="/blog/best-mutual-fund-plan"
+          date="May 13, 2026"
+        />
       </div>
     </section>
   </article>

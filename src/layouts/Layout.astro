@@ -7,21 +7,51 @@ import '../styles/global.css';
 interface Props {
 	title: string;
 	description?: string;
+	image?: string;
+	article?: boolean;
 }
 
-const { title, description = "A premium blog layout built with Astro." } = Astro.props;
+const { 
+	title, 
+	description = "A premium blog layout built with Astro.", 
+	image = "/blog-placeholder.jpg",
+	article = false
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://techfixsteps.com");
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
+
+		<!-- Primary Meta Tags -->
 		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+		<link rel="canonical" href={canonicalURL} />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content={article ? "article" : "website"} />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={new URL(image, canonicalURL)} />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={canonicalURL} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={new URL(image, canonicalURL)} />
+
+		<!-- Robots -->
+		<meta name="robots" content="index, follow" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -65,7 +95,7 @@ const { title, description = "A premium blog layout built with Astro." } = Astro
 		<Navbar />
 
 		<div class="max-w-[1200px] mx-auto px-6 w-full flex-1 flex flex-col lg:flex-row gap-12 py-12">
-			<main class="flex-[3] min-w-0 prose prose-invert prose-headings:text-text-main prose-p:text-text-muted max-w-none">
+			<main class="flex-[3] min-w-0 prose prose-invert max-w-none">
 				<slot />
 			</main>
 			

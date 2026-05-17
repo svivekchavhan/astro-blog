@@ -8,54 +8,110 @@ const date = "May 13, 2026";
 const category = "Finance";
 ---
 
-<Layout title={title} description={description}>
-  <article class="max-w-4xl mx-auto py-12 px-4">
+<Layout 
+  title={title} 
+  description={description}
+  image="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&q=80&w=1200"
+  article={true}
+>
+  <article class="py-8">
+    <!-- Header -->
     <div class="mb-12">
-      <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-bold uppercase tracking-wider">{category}</span>
-      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-text-main mt-6 mb-4 leading-[1.1]">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">{category}</span>
+        <span class="text-text-muted text-sm">• {date}</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-black tracking-tight text-text-main mb-6 leading-[1.2]">
         {title}
       </h1>
-      <p class="text-text-muted text-xl leading-relaxed">
+      <p class="text-text-muted text-lg leading-relaxed border-l-4 border-primary pl-6 py-2 italic">
         {description}
       </p>
-      <div class="flex items-center gap-4 mt-8 pt-8 border-t border-border-card">
-        <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-xl">V</div>
-        <div>
-          <p class="text-text-main font-bold m-0 text-lg">Vivek Chavhan</p>
-          <p class="text-text-muted m-0 text-sm">{date} • 12 min read</p>
-        </div>
-      </div>
     </div>
 
-    <div class="prose prose-invert max-w-none">
-      <h2>Understanding Mutual Fund Plans</h2>
-      <p>Mutual funds are one of the most effective tools for building wealth in India. However, with thousands of plans available, choosing the right one can be overwhelming. The "best" plan depends on your risk appetite and investment horizon.</p>
-
-      <h2>1. Index Funds (Low Risk, Low Cost)</h2>
-      <p>Index funds track a specific market index like Nifty 50 or Sensex. They are passive funds with low expense ratios and are excellent for beginners who want steady market returns.</p>
-
-      <h2>2. Large Cap Funds (Moderate Risk)</h2>
-      <p>These funds invest in India's top 100 companies. They provide stability and are less volatile during market downturns, making them suitable for long-term conservative investors.</p>
-
-      <h2>3. Flexi Cap Funds (Flexible Growth)</h2>
-      <p>Flexi cap funds can invest across companies of all sizes—large, mid, and small. This flexibility allows fund managers to shift investments where the growth potential is highest.</p>
-
-      <h2>4. ELSS Funds (Tax Saving)</h2>
-      <p>Equity Linked Savings Schemes (ELSS) offer tax deductions under Section 80C. They have a lock-in period of 3 years and have historically provided high returns compared to other tax-saving options.</p>
-
-      <h2>How to Choose the Best Plan for You</h2>
-      <ul>
-        <li><strong>Time Horizon:</strong> If you need money in 3 years, avoid small caps. If you have 10+ years, small and mid caps are great.</li>
-        <li><strong>Risk Appetite:</strong> Can you tolerate a 20% drop in your portfolio temporarily? If not, stick to Large Cap or Index funds.</li>
-        <li><strong>Direct vs Regular:</strong> Always choose 'Direct' plans to save on commissions and get higher returns over time.</li>
+    <!-- Table of Contents -->
+    <div class="bg-bg-surface border border-border-card rounded-3xl p-8 mb-12">
+      <h2 class="text-xl font-bold text-text-main mb-4 flex items-center gap-2 m-0">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+        In this article
+      </h2>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 list-none p-0 m-0">
+        <li><a href="#understanding" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">Understanding Mutual Funds</a></li>
+        <li><a href="#categories" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">Top Fund Categories</a></li>
+        <li><a href="#choosing" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">How to Choose the Best Plan</a></li>
+        <li><a href="#faq" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">Frequently Asked Questions</a></li>
       </ul>
     </div>
 
+    <!-- Content -->
+    <div class="space-y-8">
+      <h2 id="understanding">Understanding Mutual Fund Plans</h2>
+      <p>Mutual funds are one of the most effective tools for building wealth in India. However, with thousands of plans available, choosing the right one can be overwhelming. The "best" plan depends on your risk appetite and investment horizon.</p>
+
+      <h2 id="categories">Top Mutual Fund Categories for 2026</h2>
+      <div class="space-y-6 my-10">
+        <div class="bg-bg-surface border border-border-card p-6 rounded-2xl">
+          <h4 class="text-text-main font-bold mb-2 m-0">1. Index Funds (Low Risk)</h4>
+          <p class="text-sm text-text-muted m-0">Index funds track a specific market index like Nifty 50. They are passive funds with low expense ratios, perfect for beginners seeking steady returns.</p>
+        </div>
+        <div class="bg-bg-surface border border-border-card p-6 rounded-2xl">
+          <h4 class="text-text-main font-bold mb-2 m-0">2. Large Cap Funds (Moderate Risk)</h4>
+          <p class="text-sm text-text-muted m-0">Invests in India's top 100 companies. They provide stability and are less volatile during market downturns.</p>
+        </div>
+        <div class="bg-bg-surface border border-border-card p-6 rounded-2xl">
+          <h4 class="text-text-main font-bold mb-2 m-0">3. Flexi Cap Funds (Flexible Growth)</h4>
+          <p class="text-sm text-text-muted m-0">Fund managers can shift investments across companies of all sizes, maximizing growth potential regardless of market conditions.</p>
+        </div>
+        <div class="bg-bg-surface border border-border-card p-6 rounded-2xl">
+          <h4 class="text-text-main font-bold mb-2 m-0">4. ELSS Funds (Tax Saving)</h4>
+          <p class="text-sm text-text-muted m-0">Offers tax deductions under Section 80C. They have a lock-in period of 3 years and historically high long-term returns.</p>
+        </div>
+      </div>
+
+      <h2 id="choosing">How to Choose the Best Plan for You</h2>
+      <ul>
+        <li><strong>Time Horizon:</strong> If you need money in less than 3 years, avoid small caps. For 10+ years, small and mid caps offer higher growth.</li>
+        <li><strong>Risk Appetite:</strong> If you can't tolerate a 20% temporary drop in your portfolio, stick to Large Cap or Index funds.</li>
+        <li><strong>Direct vs Regular:</strong> Always choose <strong>'Direct'</strong> plans to save on commissions and earn roughly 1% more every year.</li>
+      </ul>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="mt-20" id="faq">
+      <h2 class="text-2xl font-black text-text-main mb-8 flex items-center gap-3">
+        <span class="w-10 h-1 bg-primary rounded-full"></span>
+        Investment FAQs
+      </h2>
+      <div class="space-y-4">
+        {[
+          { q: "What is the minimum amount for SIP?", a: "Most mutual funds allow you to start a Systematic Investment Plan (SIP) with as little as ₹500 per month." },
+          { q: "Are mutual fund returns guaranteed?", a: "No, mutual fund returns are subject to market risks and are not guaranteed by any authority." },
+          { q: "Can I withdraw money from mutual funds anytime?", a: "Except for ELSS (which has a 3-year lock-in), you can withdraw from open-ended funds anytime, though exit loads may apply if withdrawn early." }
+        ].map(item => (
+          <div class="bg-bg-surface border border-border-card rounded-2xl p-6">
+            <h4 class="text-text-main font-bold mb-2 m-0">{item.q}</h4>
+            <p class="text-text-muted text-sm m-0 leading-relaxed">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="mt-20 bg-gradient-to-tr from-primary/10 to-transparent border border-border-card rounded-3xl p-10 text-center">
+      <h3 class="text-2xl font-bold text-text-main mb-2">Grow Your Wealth</h3>
+      <p class="text-text-muted mb-8 max-w-md mx-auto">Subscribe to get monthly market insights and top-performing fund picks.</p>
+      <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+        <input type="email" placeholder="your@email.com" class="bg-bg-base border border-border-card px-6 py-3 rounded-xl flex-1 text-text-main outline-none focus:border-primary transition-colors" />
+        <button class="btn-primary">Get Insights</button>
+      </div>
+    </div>
+
+    <!-- Related -->
     <section class="mt-20 pt-12 border-t border-border-card">
-      <h3 class="text-2xl font-bold text-text-main mb-8">Related Articles</h3>
+      <h3 class="text-xl font-bold text-text-main mb-8">Related Articles</h3>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <BlogCard title="How to Open a Savings Account in SBI" href="/blog/how-to-open-sbi-account" date="May 15, 2026" />
-        <BlogCard title="What is Aadhar Card and Why You Need It" href="/blog/what-is-aadhar-card" date="May 14, 2026" />
+        <BlogCard title="What is Aadhar Card: Benefits and Features" href="/blog/what-is-aadhar-card" date="May 14, 2026" />
       </div>
     </section>
   </article>

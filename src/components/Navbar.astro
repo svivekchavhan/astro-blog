@@ -1,5 +1,5 @@
 ---
-import { HiOutlineHome, HiOutlineNewspaper, HiOutlineEnvelope, HiOutlineBell, HiOutlineMagnifyingGlass, HiOutlineQueueList, HiOutlineSun, HiOutlineMoon, HiOutlineClock, HiOutlineCalendarDays, HiOutlineShieldCheck, HiOutlineDocumentText, HiOutlineExclamationTriangle, HiOutlineMap } from "react-icons/hi2";
+import { HiOutlineHome, HiOutlineNewspaper, HiOutlineEnvelope, HiOutlineBell, HiOutlineMagnifyingGlass, HiOutlineQueueList, HiOutlineSun, HiOutlineMoon, HiOutlineClock, HiOutlineCalendarDays, HiOutlineShieldCheck, HiOutlineDocumentText, HiOutlineExclamationTriangle, HiOutlineMap, HiOutlineIdentification } from "react-icons/hi2";
 import Marquee from "./Marquee.astro";
 
 // Fetch posts for search suggestions
@@ -14,6 +14,7 @@ const mainPages = [
   { title: "Home", href: "/" },
   { title: "Blog Archive", href: "/blog" },
   { title: "Result Page", href: "/result" },
+  { title: "Admit Card", href: "/admit-card" },
   { title: "About Us", href: "/about" },
   { title: "Contact Us", href: "/contact" },
   { title: "Sitemap", href: "/sitemap" },
@@ -71,8 +72,7 @@ const searchData = [...mainPages, ...articles];
 				<li><a href="/" class="flex items-center gap-2 text-text-muted font-medium hover:text-text-main transition-colors text-[0.95rem]"><HiOutlineHome className="text-lg" /> Home</a></li>
 				<li><a href="/blog" class="flex items-center gap-2 text-text-muted font-medium hover:text-text-main transition-colors text-[0.95rem]"><HiOutlineNewspaper className="text-lg" /> Blog</a></li>
 				<li><a href="/result" class="flex items-center gap-2 text-text-muted font-medium hover:text-text-main transition-colors text-[0.95rem]"><HiOutlineQueueList className="text-lg" /> Result</a></li>
-
-
+				<li><a href="/admit-card" class="flex items-center gap-2 text-text-muted font-medium hover:text-text-main transition-colors text-[0.95rem]"><HiOutlineIdentification className="text-lg" /> Admit Card</a></li>
 			</ul>
 
 			<button id="theme-toggle" class="w-10 h-10 rounded-full border border-border-card flex items-center justify-center relative overflow-hidden text-text-main hover:bg-black/5 dark:hover:bg-white/5 hover:border-primary transition-all duration-300 cursor-pointer group" aria-label="Toggle theme">
@@ -100,8 +100,7 @@ const searchData = [...mainPages, ...articles];
 		<li><a href="/" class="flex items-center gap-3 text-text-main text-[1.1rem] font-medium py-2 border-b border-border-card"><HiOutlineHome className="text-xl" /> Home</a></li>
 		<li><a href="/blog" class="flex items-center gap-3 text-text-main text-[1.1rem] font-medium py-2 border-b border-border-card"><HiOutlineNewspaper className="text-xl" /> Blog</a></li>
 		<li><a href="/result" class="flex items-center gap-3 text-text-main text-[1.1rem] font-medium py-2 border-b border-border-card"><HiOutlineQueueList className="text-xl" /> Result</a></li>
-
-
+		<li><a href="/admit-card" class="flex items-center gap-3 text-text-main text-[1.1rem] font-medium py-2 border-b border-border-card"><HiOutlineIdentification className="text-xl" /> Admit Card</a></li>
 	</ul>
 </div>
 

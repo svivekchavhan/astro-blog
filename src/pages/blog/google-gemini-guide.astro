@@ -1,0 +1,552 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import BlogCard from "../../components/BlogCard.astro";
+
+const title =
+  "The Ultimate Guide to Google Gemini AI: What It Is, How It Works, and How to Use It Every Day";
+const description =
+  "Discover everything you need to know about Google Gemini, from installation to advanced AI image generation and daily productivity tips.";
+const date = "May 15, 2026";
+const category = "Technology";
+---
+
+<Layout
+  title={title}
+  description={description}
+  image="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200"
+  article={true}
+>
+  <article class="py-8">
+    <!-- Header -->
+    <div class="mb-16">
+      <div class="flex items-center gap-3 mb-6">
+        <span
+          class="bg-blue-500/10 text-blue-500 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest border border-blue-500/20"
+          >{category}
+        </span>
+        <span class="text-text-muted text-sm font-medium"
+          >Published on {date} • 15 min read</span
+        >
+      </div>
+      <h1
+        class="text-4xl md:text-6xl font-black tracking-tight text-text-main mb-8 leading-[1.1] lg:max-w-4xl"
+      >
+        {title}
+      </h1>
+      <p
+        class="text-text-muted text-xl leading-relaxed border-l-4 border-blue-500 pl-8 py-3 italic bg-blue-500/5 rounded-r-2xl"
+      >
+        {description}
+      </p>
+    </div>
+
+    <!-- Infographic: Features at a Glance -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
+      {
+        [
+          {
+            title: "Smart Chat",
+            desc: "Human-like conversations",
+            icon: "💬",
+            color: "blue",
+          },
+          {
+            title: "Image Gen",
+            desc: "Turn text into art",
+            icon: "🎨",
+            color: "purple",
+          },
+          {
+            title: "Voice Mode",
+            desc: "Hands-free assistance",
+            icon: "🎙️",
+            color: "green",
+          },
+          {
+            title: "Vision AI",
+            desc: "Understand your photos",
+            icon: "👁️",
+            color: "orange",
+          },
+        ].map((item) => (
+          <div class="bg-bg-surface border border-border-card p-6 rounded-3xl text-center group hover:border-blue-500/50 transition-all duration-500 hover:-translate-y-2">
+            <div class="text-4xl mb-4 transform group-hover:scale-125 transition-transform">
+              {item.icon}
+            </div>
+            <h4 class="text-text-main font-bold mb-1">{item.title}</h4>
+            <p class="text-xs text-text-muted">{item.desc}</p>
+          </div>
+        ))
+      }
+    </div>
+
+    <!-- Table of Contents -->
+    <div
+      class="bg-bg-surface border border-border-card rounded-[2rem] p-8 md:p-12 mb-16 relative overflow-hidden"
+    >
+      <div
+        class="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full -mr-16 -mt-16 blur-3xl"
+      >
+      </div>
+      <h2
+        class="text-2xl font-black text-text-main mb-8 flex items-center gap-3 m-0"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="text-blue-500"
+          ><line x1="8" y1="6" x2="21" y2="6"></line><line
+            x1="8"
+            y1="12"
+            x2="21"
+            y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line
+            x1="3"
+            y1="6"
+            x2="3.01"
+            y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line
+            x1="3"
+            y1="18"
+            x2="3.01"
+            y2="18"></line>
+        </svg>
+        Navigation Guide
+      </h2>
+      <ul
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-4 list-none p-0 m-0"
+      >
+        {
+          [
+            { id: "what-is-gemini", text: "What is Gemini?" },
+            { id: "why-learn-ai", text: "Why Learn AI Today?" },
+            { id: "install", text: "Installation Steps" },
+            { id: "ask-questions", text: "Ask Anything" },
+            { id: "image-gen", text: "Image Generation" },
+            { id: "visual-search", text: "Visual Search" },
+            { id: "comparison", text: "Gemini vs Search" },
+            { id: "tips", text: "Expert Tips" },
+          ].map((item) => (
+            <li>
+              <a
+                href={`#${item.id}`}
+                class="text-text-muted hover:text-blue-500 transition-all flex items-center gap-2 group py-1"
+              >
+                <span class="w-1.5 h-1.5 rounded-full bg-border-card group-hover:bg-blue-500 transition-colors" />
+                <span class="text-sm font-semibold">{item.text}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <!-- Content Section -->
+    <div class="space-y-24">
+      <div>
+        <img
+          src="https://www.gstatic.com/lamda/images/gemini_aurora_thumbnail_4g_e74822ff0ca4259beb718.png"
+          alt=""
+        />
+      </div>
+      <section>
+        <p class="text-lg leading-relaxed text-text-muted">
+          Artificial Intelligence, or AI, is the biggest topic in the world
+          right now. Everywhere you look—on the internet, on television, in
+          schools, and in offices—people are talking about how AI is changing
+          the way we live and work. You might be feeling a little bit left
+          behind. You might be thinking, "I will learn about AI tomorrow," or "I
+          will figure it out next month."
+        </p>
+        <p class="text-lg leading-relaxed text-text-muted">
+          However, the best time to learn about AI is right now. If you keep
+          delaying it, understanding this new technology will only become more
+          difficult. The good news is that you do not need to be a computer
+          expert to learn AI. You do not need to know how to write computer
+          code. Whether you are a student, a teacher, a doctor, a farmer, a
+          business owner, or a stay-at-home parent, this guide is written
+          perfectly for you.
+        </p>
+      </section>
+
+      <section id="what-is-gemini" class="scroll-mt-32">
+        <h2
+          class="text-3xl font-black text-text-main mb-8 border-b-4 border-blue-500/20 pb-4 inline-block"
+        >
+          What Exactly is Google Gemini?
+        </h2>
+        <p class="text-text-muted leading-relaxed mb-8">
+          To understand Google Gemini, we first need to understand the basic
+          idea of Artificial Intelligence. Simply put, Artificial Intelligence
+          is a computer system that has been trained to think, learn, and solve
+          problems in a way that is very similar to a human brain. It reads
+          millions of pages of information, finds patterns in that data, and
+          uses those patterns to answer your questions or create new things.
+        </p>
+        <div
+          class="bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-blue-500/20 p-10 rounded-[2.5rem] shadow-2xl relative overflow-hidden group"
+        >
+          <div
+            class="absolute -bottom-10 -right-10 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700"
+          >
+          </div>
+          <p
+            class="text-xl text-text-main leading-relaxed m-0 relative z-10 font-medium italic"
+          >
+            "Google Gemini is Google’s newest and smartest AI assistant. Think
+            of Gemini as an incredibly smart, helpful friend who knows almost
+            everything about the world, is available 24 hours a day, and never
+            gets tired of answering your questions."
+          </p>
+        </div>
+      </section>
+
+      <section id="why-learn-ai" class="scroll-mt-32">
+        <h2
+          class="text-3xl font-black text-text-main mb-8 border-b-4 border-blue-500/20 pb-4 inline-block"
+        >
+          Why You Need to Learn AI Today
+        </h2>
+        <p class="mb-10 text-text-muted">
+          AI is designed for everyone, and it is quickly becoming a basic skill,
+          just like reading, writing, or doing basic math.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {
+            [
+              {
+                role: "Students",
+                icon: "🎓",
+                desc: "Gemini acts as a private tutor, explaining steps for tricky math or science projects.",
+              },
+              {
+                role: "Creators",
+                icon: "📸",
+                desc: "Brainstorm titles, write scripts, and suggest keywords for social media.",
+              },
+              {
+                role: "Office Workers",
+                icon: "💼",
+                desc: "Draft professional emails and reports in seconds.",
+              },
+              {
+                role: "Travelers",
+                icon: "✈️",
+                desc: "Create full, day-by-day travel plans and itineraries.",
+              },
+            ].map((item) => (
+              <div class="flex gap-6 items-start p-8 bg-bg-surface border border-border-card rounded-3xl hover:bg-blue-500/5 transition-colors">
+                <div class="text-4xl">{item.icon}</div>
+                <div>
+                  <h4 class="text-text-main font-bold mb-2 text-lg">
+                    {item.role}
+                  </h4>
+                  <p class="text-sm text-text-muted leading-relaxed m-0">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </section>
+
+      <section id="install" class="scroll-mt-32">
+        <h2 class="text-3xl font-black text-text-main mb-12">
+          How to Install and Set Up
+        </h2>
+        <div class="space-y-12">
+          {
+            [
+              {
+                device: "Android Devices",
+                steps: [
+                  "Open Google Play Store",
+                  "Search for 'Google Gemini'",
+                  "Tap Install",
+                  "Sign in with Gmail",
+                ],
+              },
+              {
+                device: "iPhone (iOS)",
+                steps: [
+                  "Open App Store",
+                  "Search for 'Google Gemini'",
+                  "Tap Get",
+                  "Sign in with Google Account",
+                ],
+              },
+              {
+                device: "Web Browser",
+                steps: [
+                  "Go to gemini.google.com",
+                  "Sign in with email",
+                  "Start chatting immediately",
+                ],
+              },
+            ].map((item, idx) => (
+              <div class="relative pl-12 border-l-2 border-dashed border-blue-500/30">
+                <div class="absolute -left-[1.35rem] top-0 w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center font-black text-xl shadow-lg shadow-blue-500/20">
+                  {idx + 1}
+                </div>
+                <h3 class="text-xl font-bold text-text-main mb-6">
+                  {item.device}
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {item.steps.map((step) => (
+                    <div class="bg-bg-surface border border-border-card px-6 py-4 rounded-2xl flex items-center gap-3 text-sm font-semibold text-text-muted">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="text-blue-500"
+                      >
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                      {step}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </section>
+
+      <section id="ask-questions" class="scroll-mt-32">
+        <h2 class="text-3xl font-black text-text-main mb-8">
+          Mastering the Conversation
+        </h2>
+        <div
+          class="bg-bg-base border border-border-card rounded-[2.5rem] p-8 md:p-12"
+        >
+          <div class="flex flex-col md:flex-row gap-12 items-center">
+            <div class="flex-1 space-y-6">
+              <h3 class="text-2xl font-bold text-text-main">
+                The Power of Natural Language
+              </h3>
+              <p class="text-text-muted leading-relaxed">
+                You do not need special computer codes. Talk to Gemini exactly
+                how you would talk to a human. It understands English, Hindi,
+                Spanish, and more.
+              </p>
+              <div class="flex gap-4">
+                <span
+                  class="px-4 py-2 bg-white/5 rounded-full text-xs font-bold border border-border-card text-text-muted"
+                  >English</span
+                >
+                <span
+                  class="px-4 py-2 bg-white/5 rounded-full text-xs font-bold border border-border-card text-text-muted"
+                  >Hindi</span
+                >
+                <span
+                  class="px-4 py-2 bg-white/5 rounded-full text-xs font-bold border border-border-card text-text-muted"
+                  >Spanish</span
+                >
+              </div>
+            </div>
+            <div
+              class="w-full md:w-72 aspect-square bg-gradient-to-br from-blue-500 to-purple-600 rounded-[2rem] flex items-center justify-center p-8 text-center shadow-2xl"
+            >
+              <div class="text-white">
+                <div class="text-5xl mb-4">🎙️</div>
+                <h4 class="font-bold text-lg mb-2">Voice Feature</h4>
+                <p class="text-xs opacity-80">
+                  Tap the mic and speak naturally to get answers instantly.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="image-gen" class="scroll-mt-32">
+        <h2 class="text-3xl font-black text-text-main mb-8">
+          AI Image Generation Chart
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div
+            class="border-2 border-red-500/20 bg-red-500/5 p-10 rounded-[2.5rem] relative overflow-hidden"
+          >
+            <div
+              class="absolute top-4 right-6 text-red-500 font-black text-4xl opacity-10"
+            >
+              ❌
+            </div>
+            <h4
+              class="text-red-500 font-bold mb-4 uppercase tracking-widest text-sm"
+            >
+              Poor Prompting
+            </h4>
+            <p class="text-text-main text-lg font-medium italic mb-2">
+              "Draw a dog."
+            </p>
+            <p class="text-xs text-text-muted">
+              Too vague. The AI has no context for breed, setting, or mood.
+            </p>
+          </div>
+          <div
+            class="border-2 border-green-500/20 bg-green-500/5 p-10 rounded-[2.5rem] relative overflow-hidden"
+          >
+            <div
+              class="absolute top-4 right-6 text-green-500 font-black text-4xl opacity-10"
+            >
+              ✅
+            </div>
+            <h4
+              class="text-green-500 font-bold mb-4 uppercase tracking-widest text-sm"
+            >
+              Expert Prompting
+            </h4>
+            <p class="text-text-main text-lg font-medium italic mb-2">
+              "Realistic photograph of a fluffy golden retriever running through
+              a green park at sunset."
+            </p>
+            <p class="text-xs text-text-muted">
+              Detailed and specific. Results will be highly professional.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="comparison" class="scroll-mt-32">
+        <h2 class="text-3xl font-black text-text-main mb-12 text-center">
+          Google Search vs. Google Gemini
+        </h2>
+        <div
+          class="overflow-hidden border border-border-card rounded-3xl bg-bg-surface shadow-xl"
+        >
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-blue-500 text-white font-bold">
+                <th class="p-6">Feature</th>
+                <th class="p-6">Google Search</th>
+                <th class="p-6">Google Gemini AI</th>
+              </tr>
+            </thead>
+            <tbody class="text-text-muted">
+              <tr class="border-b border-border-card">
+                <td class="p-6 font-bold text-text-main">Result Type</td>
+                <td class="p-6">Blue links to websites</td>
+                <td class="p-6">Direct conversational answer</td>
+              </tr>
+              <tr class="border-b border-border-card">
+                <td class="p-6 font-bold text-text-main">User Effort</td>
+                <td class="p-6">High (Manual reading)</td>
+                <td class="p-6">Low (AI summarizes everything)</td>
+              </tr>
+              <tr class="border-b border-border-card">
+                <td class="p-6 font-bold text-text-main">Creativity</td>
+                <td class="p-6">Finds existing info</td>
+                <td class="p-6">Generates new art/scripts</td>
+              </tr>
+              <tr>
+                <td class="p-6 font-bold text-text-main">Memory</td>
+                <td class="p-6">Forgetful (New search each time)</td>
+                <td class="p-6">Smart (Remembers context)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <div class="flex items-center justify-center w-full">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTFVZg5EndbarZKCOWmPIVmy8lW6kpekUuNw&s"
+          alt=""
+        />
+      </div>
+      <section id="tips" class="scroll-mt-32">
+        <h2 class="text-3xl font-black text-text-main mb-10">
+          Pro Tips for Best Results
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {
+            [
+              {
+                t: "Be Specific",
+                d: "Tell the AI exactly how long or short you want the answer to be.",
+              },
+              {
+                t: "Give it a Role",
+                d: "Ask it to act like a 'Financial Advisor' or 'Chef' to get better tone.",
+              },
+              {
+                t: "Deep Research",
+                d: "Use the 'Pro' mode for heavy academic research and databases.",
+              },
+            ].map((tip) => (
+              <div class="p-8 bg-bg-surface border border-border-card rounded-3xl hover:border-blue-500/30 transition-colors">
+                <div class="w-12 h-12 rounded-2xl bg-blue-500/10 text-blue-500 flex items-center justify-center font-black mb-6">
+                  !
+                </div>
+                <h4 class="text-text-main font-bold mb-3">{tip.t}</h4>
+                <p class="text-sm text-text-muted leading-relaxed m-0">
+                  {tip.d}
+                </p>
+              </div>
+            ))
+          }
+        </div>
+      </section>
+
+      <section
+        class="bg-gradient-to-br from-primary/30 to-secondary/30 border border-primary/20 rounded-[3rem] p-12 text-center relative overflow-hidden"
+      >
+        <div class="relative z-10">
+          <h2
+            class="text-3xl md:text-5xl font-black text-text-main mb-6 leading-tight"
+          >
+            Welcome to the Future
+          </h2>
+          <p class="text-text-muted text-lg max-w-2xl mx-auto mb-10">
+            AI is not here to make life more complicated; it is here to take
+            away the boring tasks so you have more time to focus on what you
+            truly enjoy.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <button
+              class="px-10 py-5 bg-blue-500 text-white rounded-2xl font-black text-lg hover:bg-blue-600 transition-colors shadow-xl shadow-blue-500/20"
+              >Download Gemini App</button
+            >
+            <button
+              class="px-10 py-5 bg-white/10 text-text-main rounded-2xl font-black text-lg backdrop-blur-md border border-white/10 hover:bg-white/20 transition-all"
+              >Explore Documentation</button
+            >
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Related Articles -->
+    <section class="mt-32 pt-16 border-t border-border-card">
+      <h3 class="text-2xl font-black text-text-main mb-12">
+        Continue Your Journey
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <BlogCard
+          title="How to Open a Savings Account in SBI"
+          href="/blog/how-to-open-sbi-account"
+          date="May 15, 2026"
+          image="https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?auto=format&fit=crop&q=80&w=800"
+        />
+        <BlogCard
+          title="What is Aadhar Card: Benefits and Features"
+          href="/blog/what-is-aadhar-card"
+          date="May 14, 2026"
+          image="https://images.unsplash.com/photo-1610056494052-6a4f83a8368c?auto=format&fit=crop&q=80&w=800"
+        />
+      </div>
+    </section>
+  </article>
+</Layout>
