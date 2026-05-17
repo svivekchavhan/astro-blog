@@ -188,12 +188,14 @@ const searchData = [...mainPages, ...articles];
     </div>
   </header>
   
-  <!-- Search Bar Row (Centered below navbar outside) -->
-  <div class="border-t border-border-card dark:border-border-card/30 py-3 bg-bg-navbar/95 backdrop-blur-md hidden lg:block">
+  <Marquee />
+
+  <!-- Search Bar Row (Centered below marquee with proper padding, margin and container) -->
+  <div class="py-4 bg-bg-navbar/95 hidden lg:block border-t border-border-card dark:border-border-card/30">
     <div class="max-w-[1200px] mx-auto px-6 flex justify-center">
-      <div class="relative w-full max-w-[550px]">
+      <div class="relative w-full max-w-[600px]">
         <div
-          class="flex items-center bg-bg-card border border-border-card px-4 py-2.5 rounded-full w-full transition-all duration-300 focus-within:border-primary focus-within:bg-white/10 focus-within:shadow-md focus-within:shadow-primary/5"
+          class="flex items-center bg-bg-card border border-border-card px-5 py-3 rounded-full w-full transition-all duration-300 focus-within:border-primary focus-within:bg-white/10 focus-within:shadow-md focus-within:shadow-primary/5"
         >
           <HiOutlineMagnifyingGlass
             className="text-text-muted mr-3 text-lg"
@@ -218,8 +220,6 @@ const searchData = [...mainPages, ...articles];
       </div>
     </div>
   </div>
-
-  <Marquee />
 </div>
 
 <div
