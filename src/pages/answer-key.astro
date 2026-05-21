@@ -96,7 +96,7 @@ const categories = ["All", "UPSC", "SSC", "Banking", "Railways", "State Exams", 
     </div>
 
     <!-- Search & Filter Controls Panel (Sticky on scroll) -->
-    <div id="sticky-search-wrapper" class="sticky top-[124px] lg:top-[154px] z-30 transition-all duration-300 w-full mb-12 max-w-[1000px] mx-auto px-4 md:px-0">
+    <div id="sticky-search-wrapper" class="sticky top-[var(--navbar-height,124px)] z-30 transition-all duration-300 w-full mb-12 max-w-[1000px] mx-auto px-4 md:px-0">
       <div id="search-controls-panel" class="bg-bg-surface/95 backdrop-blur-md border border-border-card rounded-3xl p-6 md:p-8 shadow-sm transition-all duration-300">
         <!-- Search Input Container -->
         <div id="search-input-container" class="flex items-center w-full bg-violet-500/5 border border-solid border-violet-500/20 px-4 py-3 rounded-full transition-all duration-300 focus-within:border-violet-500 focus-within:bg-violet-500/10 focus-within:shadow-md focus-within:shadow-violet-500/5 mb-6">
@@ -301,9 +301,9 @@ const categories = ["All", "UPSC", "SSC", "Banking", "Railways", "State Exams", 
     if (searchWrapper && searchPanel) {
       scrollListener = () => {
         const rect = searchWrapper.getBoundingClientRect();
-        const threshold = window.innerWidth < 1024 ? 124 : 154;
+        const computedNavbarHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--navbar-height')) || (window.innerWidth < 1024 ? 124 : 154);
         
-        if (rect.top <= threshold + 2) {
+        if (rect.top <= computedNavbarHeight + 2) {
           searchPanel.classList.add('sticky-active');
         } else {
           searchPanel.classList.remove('sticky-active');
