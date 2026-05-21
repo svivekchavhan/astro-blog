@@ -7,18 +7,6 @@ import {
 } from "react-icons/hi2";
 const latestJobs = [
   {
-    title: "UPSC Civil Services Examination 2026",
-    organisation: "Union Public Service Commission",
-    qualification: "Degree in any discipline",
-    vacancies: "1,056",
-    startDate: "May 20, 2026",
-    lastDate: "June 18, 2026",
-    category: "UPSC",
-    status: "apply-now",
-    link: "https://upsc.gov.in",
-    description: "Apply for prestigious IAS, IPS, IFS, and Group A central service administrative officer vacancies through the official UPSC Civil Services recruitment notification guidelines."
-  },
-  {
     title: "SSC CGL Recruitment 2026",
     organisation: "Staff Selection Commission",
     qualification: "Bachelor's Degree",
@@ -27,68 +15,8 @@ const latestJobs = [
     lastDate: "July 10, 2026",
     category: "SSC",
     status: "upcoming",
-    link: "https://ssc.gov.in",
+    link: "/ssc-cgl-recruitment-2026",
     description: "Staff Selection Commission Combined Graduate Level examination for inspector, assistant section officer, sub-inspector, and auditor vacancies across central government ministries."
-  },
-  {
-    title: "SBI Probationary Officers (PO) 2026",
-    organisation: "State Bank of India",
-    qualification: "Graduation",
-    vacancies: "2,000",
-    startDate: "April 15, 2026",
-    lastDate: "May 15, 2026",
-    category: "Banking",
-    status: "closed",
-    link: "https://sbi.co.in",
-    description: "National public-sector recruitment program for Probationary Officer vacancies within State Bank of India's corporate, retail, and international banking operational zones."
-  },
-  {
-    title: "RRB Assistant Loco Pilot (ALP) Vacancies",
-    organisation: "Railway Recruitment Board",
-    qualification: "Matriculation / ITI",
-    vacancies: "5,696",
-    startDate: "May 01, 2026",
-    lastDate: "June 02, 2026",
-    category: "Railways",
-    status: "apply-now",
-    link: "https://rrbcdg.gov.in",
-    description: "Indian Railways technical recruitment for Assistant Loco Pilot posts across multiple railway zones, covering standard qualification benchmarks and CBT guidelines."
-  },
-  {
-    title: "MPSC State Services Examination 2026",
-    organisation: "Maharashtra Public Service Commission",
-    qualification: "Graduate Degree",
-    vacancies: "500+",
-    startDate: "June 15, 2026",
-    lastDate: "July 15, 2026",
-    category: "State Exams",
-    status: "upcoming",
-    link: "https://mpsc.gov.in",
-    description: "Maharashtra state administration services recruitment for Deputy Collector, Deputy Superintendent of Police (DySP), and Block Development Officer (BDO) vacancies."
-  },
-  {
-    title: "IBPS Clerk CWE XII Recruitment",
-    organisation: "Institute of Banking Personnel Selection",
-    qualification: "Any Graduation Degree",
-    vacancies: "6,000+",
-    startDate: "May 25, 2026",
-    lastDate: "June 20, 2026",
-    category: "Banking",
-    status: "upcoming",
-    link: "https://ibps.in",
-    description: "Common recruitment process for clerical cadre vacancies in participating public sector banks across India, including exam patterns and reservation policies."
-  },
-  {
-    title: "DRDO Scientist 'B' Recruitment",
-    organisation: "Defence Research and Development Organisation",
-    qualification: "First Class B.E / B.Tech",
-    vacancies: "320",
-    startDate: "June 02, 2026",
-    lastDate: "June 25, 2026",
-    category: "Direct Recruitment",
-    status: "upcoming",
-    link: "https://drdo.gov.in",
-    description: "Direct entry level scientist vacancies at the Defence Research and Development Organisation for outstanding engineering graduates with valid GATE score metrics."
   }
 ];
 ---
@@ -140,9 +68,11 @@ const latestJobs = [
             </div>
 
             <!-- Job Title (Responsive Text size) -->
-            <h3 class="text-base sm:text-lg md:text-xl text-text-main font-bold leading-tight mb-2 hover:text-primary transition-colors cursor-pointer">
-              {job.title}
-            </h3>
+            <a href={job.link} class="no-underline hover:no-underline block group">
+              <h3 class="text-base sm:text-lg md:text-xl text-text-main font-bold leading-tight mb-2 group-hover:text-primary transition-colors cursor-pointer">
+                {job.title}
+              </h3>
+            </a>
 
             <!-- Description (Responsive Text size) -->
             <p class="text-xs sm:text-sm text-text-secondary leading-relaxed mb-3.5 max-w-[850px]">

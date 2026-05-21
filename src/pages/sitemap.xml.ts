@@ -18,12 +18,16 @@ export async function GET() {
     '/sitemap'
   ];
 
-  // Dynamically find all blog posts in src/pages/blog/
-  const postFiles = import.meta.glob('/src/pages/blog/*.astro');
-  const dynamicPages = Object.keys(postFiles).map(file => {
-    const name = file.split('/').pop()?.replace('.astro', '');
-    return `/blog/${name}`;
-  });
+  // Dynamically find all articles in src/pages/
+  const postFiles = import.meta.glob('/src/pages/*.astro');
+  const mainSlugs = ['index', 'blog', 'latest-job', 'result', 'admit-card', 'answer-key', 'admission', 'about', 'contact', 'sitemap', 'privacy', 'terms', 'disclaimer'];
+  
+  const dynamicPages = Object.keys(postFiles)
+    .map(file => {
+      const slug = file.split('/').pop()?.replace('.astro', '');
+      return `/${slug}`;
+    })
+    .filter(page => page && !mainSlugs.includes(page.replace('/', '')));
 
   const allPages = [...staticPages, ...dynamicPages];
 
@@ -34,7 +38,7 @@ export async function GET() {
     <loc>${siteUrl}${page}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>${page === '' ? '1.0' : (page === '/latest-job' || page === '/admit-card' || page === '/answer-key' || page === '/admission') ? '0.9' : page.includes('/blog/') ? '0.8' : '0.5'}</priority>
+    <priority>${page === '' ? '1.0' : (page === '/latest-job' || page === '/admit-card' || page === '/answer-key' || page === '/admission') ? '0.9' : dynamicPages.includes(page) ? '0.8' : '0.5'}</priority>
   </url>`).join('')}
 </urlset>`;
 

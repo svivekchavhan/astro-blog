@@ -80,29 +80,9 @@ const latestJobs = [
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 		<script is:inline>
-			const applyTheme = () => {
-				const theme = (() => {
-					if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-						return localStorage.getItem('theme');
-					}
-					return 'light';
-				})();
-			
-				if (theme === 'dark') {
-					document.documentElement.setAttribute('data-theme', 'dark');
-				} else {
-					document.documentElement.removeAttribute('data-theme');
-				}
-
-				// Also sync the icon in the Navbar if it exists
-				const themeToggle = document.getElementById('theme-toggle');
-				if (themeToggle) {
-					themeToggle.setAttribute('data-theme', theme);
-				}
-			};
-
-			applyTheme();
-			document.addEventListener('astro:after-swap', applyTheme);
+			// Force clean light mode theme default
+			document.documentElement.removeAttribute('data-theme');
+			localStorage.removeItem('theme');
 		</script>
 		<script type="application/ld+json">
 			{

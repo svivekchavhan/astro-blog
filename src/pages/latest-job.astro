@@ -12,17 +12,6 @@ import {
 
 const latestJobs = [
   {
-    title: "UPSC Civil Services Examination 2026",
-    organisation: "Union Public Service Commission",
-    qualification: "Degree in any discipline",
-    vacancies: "1,056",
-    startDate: "May 20, 2026",
-    lastDate: "June 18, 2026",
-    category: "UPSC",
-    status: "apply-now",
-    link: "https://upsc.gov.in"
-  },
-  {
     title: "SSC CGL Recruitment 2026",
     organisation: "Staff Selection Commission",
     qualification: "Bachelor's Degree",
@@ -31,62 +20,7 @@ const latestJobs = [
     lastDate: "July 10, 2026",
     category: "SSC",
     status: "upcoming",
-    link: "https://ssc.gov.in"
-  },
-  {
-    title: "SBI Probationary Officers (PO) 2026",
-    organisation: "State Bank of India",
-    qualification: "Graduation",
-    vacancies: "2,000",
-    startDate: "April 15, 2026",
-    lastDate: "May 15, 2026",
-    category: "Banking",
-    status: "closed",
-    link: "https://sbi.co.in"
-  },
-  {
-    title: "RRB Assistant Loco Pilot (ALP) Vacancies",
-    organisation: "Railway Recruitment Board",
-    qualification: "Matriculation / ITI",
-    vacancies: "5,696",
-    startDate: "May 01, 2026",
-    lastDate: "June 02, 2026",
-    category: "Railways",
-    status: "apply-now",
-    link: "https://rrbcdg.gov.in"
-  },
-  {
-    title: "MPSC State Services Examination 2026",
-    organisation: "Maharashtra Public Service Commission",
-    qualification: "Graduate Degree",
-    vacancies: "500+",
-    startDate: "June 15, 2026",
-    lastDate: "July 15, 2026",
-    category: "State Exams",
-    status: "upcoming",
-    link: "https://mpsc.gov.in"
-  },
-  {
-    title: "IBPS Clerk CWE XII Recruitment",
-    organisation: "Institute of Banking Personnel Selection",
-    qualification: "Any Graduation Degree",
-    vacancies: "6,000+",
-    startDate: "May 25, 2026",
-    lastDate: "June 20, 2026",
-    category: "Banking",
-    status: "upcoming",
-    link: "https://ibps.in"
-  },
-  {
-    title: "DRDO Scientist 'B' Recruitment",
-    organisation: "Defence Research and Development Organisation",
-    qualification: "First Class B.E / B.Tech",
-    vacancies: "320",
-    startDate: "June 02, 2026",
-    lastDate: "June 25, 2026",
-    category: "Direct Recruitment",
-    status: "upcoming",
-    link: "https://drdo.gov.in"
+    link: "/ssc-cgl-recruitment-2026"
   }
 ];
 
@@ -144,7 +78,9 @@ const latestJobs = [
                 )}
               </div>
 
-              <h3 class="text-base text-text-main font-bold leading-tight mb-1.5 truncate">{job.title}</h3>
+              <a href={job.link} class="no-underline hover:no-underline block group">
+                <h3 class="text-base text-text-main font-bold leading-tight mb-1.5 truncate group-hover:text-primary transition-colors">{job.title}</h3>
+              </a>
               
               <div class="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs text-text-muted mb-3">
                 <div class="flex items-center gap-1.5 min-w-0">
@@ -184,14 +120,13 @@ const latestJobs = [
               )}
 
               {job.status === "upcoming" && (
-                <button
-                  type="button"
-                  disabled
-                  class="w-full md:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-red-500/10 dark:bg-red-500/5 border border-solid border-red-500/20 text-red-500 dark:text-red-400 font-bold uppercase tracking-wider text-[0.65rem] rounded-xl cursor-not-allowed text-center animate-pulse"
+                <a
+                  href={job.link}
+                  class="w-full md:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-amber-500/10 hover:bg-amber-500/20 border border-solid border-amber-500/30 text-amber-600 dark:text-amber-400 font-bold uppercase tracking-wider text-[0.65rem] rounded-xl text-center no-underline transition-colors"
                 >
-                  <HiOutlineBell className="text-xs text-red-500 dark:text-red-400 shrink-0" />
-                  <span>Upcoming Release</span>
-                </button>
+                  <HiOutlineBell className="text-xs text-amber-500 shrink-0 animate-bounce" />
+                  <span>Read Details</span>
+                </a>
               )}
 
               {job.status === "closed" && (

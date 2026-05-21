@@ -22,12 +22,17 @@ import {
 import Marquee from "./Marquee.astro";
 
 // Fetch posts for search suggestions
-const postFiles = import.meta.glob("../pages/blog/*.astro");
-const articles = Object.keys(postFiles).map((file) => {
-  const name = file.split("/").pop()?.replace(".astro", "").replace(/-/g, " ");
-  const href = file.replace("../pages", "").replace(".astro", "");
-  return { title: name, href };
-});
+const postFiles = import.meta.glob("../pages/*.astro");
+const mainSlugs = ["index", "blog", "latest-job", "result", "admit-card", "answer-key", "admission", "about", "contact", "sitemap", "privacy", "terms", "disclaimer"];
+
+const articles = Object.keys(postFiles)
+  .map((file) => {
+    const slug = file.split("/").pop()?.replace(".astro", "");
+    const name = slug?.replace(/-/g, " ");
+    const href = `/${slug}`;
+    return { title: name, href, slug };
+  })
+  .filter((item) => item.slug && !mainSlugs.includes(item.slug));
 
 const mainPages = [
   { title: "Home", href: "/" },
@@ -112,20 +117,20 @@ const searchData = [...mainPages, ...articles];
           <span class="gradient-text">Recent</span> AstroBlog
         </a>
 
-        <!-- Search Bar next to Brand Name -->
-        <div class="relative hidden lg:block w-[280px]">
+        <!-- Search Bar next to Brand Name (Size increased) -->
+        <div class="relative hidden lg:block w-[450px]">
           <div
-            class="flex items-center bg-bg-card border border-border-card px-4 py-1.5 rounded-full w-full transition-all duration-300 focus-within:border-primary focus-within:bg-white/10"
+            class="flex items-center bg-transparent border-2 border-primary px-4 py-2 rounded-full w-full transition-all duration-300 focus-within:border-secondary focus-within:shadow-md focus-within:shadow-primary/10"
           >
             <HiOutlineMagnifyingGlass
-              className="text-text-muted mr-2 text-base"
+              className="text-text-muted mr-2.5 text-lg"
             />
             <input
               type="text"
-              placeholder="Search..."
+              placeholder="Search latest jobs, results, exams..."
               id="search-input"
               autocomplete="off"
-              class="bg-transparent border-none text-text-main font-sans text-xs outline-none w-full placeholder-text-muted"
+              class="bg-transparent border-none text-text-main font-sans text-sm outline-none w-full placeholder-text-muted"
             />
           </div>
           <!-- Search Suggestions Dropdown -->
@@ -141,21 +146,6 @@ const searchData = [...mainPages, ...articles];
       </div>
 
       <div class="flex items-center gap-4">
-        <button
-          id="theme-toggle"
-          class="w-10 h-10 rounded-full border border-border-card flex items-center justify-center relative overflow-hidden text-text-main hover:bg-black/5 dark:hover:bg-white/5 hover:border-primary transition-all duration-300 cursor-pointer group"
-          aria-label="Toggle theme"
-        >
-          <span
-            class="sun-icon absolute flex items-center justify-center text-xl transition-all duration-500 transform group-data-[theme=dark]:translate-y-[40px] group-data-[theme=dark]:opacity-0 translate-y-0 opacity-100"
-            ><HiOutlineSun />
-          </span>
-          <span
-            class="moon-icon absolute flex items-center justify-center text-xl transition-all duration-500 transform group-data-[theme=dark]:translate-y-0 group-data-[theme=dark]:opacity-100 -translate-y-[40px] opacity-0"
-            ><HiOutlineMoon />
-          </span>
-        </button>
-
         <button
           class="lg:hidden flex flex-col justify-between w-6 h-[18px] bg-transparent border-none cursor-pointer p-0 z-[1001]"
           id="menu-toggle"
@@ -174,9 +164,11 @@ const searchData = [...mainPages, ...articles];
     </div>
   </header>
 
-  <!-- Navigation Links Row (Centered above marquee container) -->
-  <div class="border-t border-border-card dark:border-border-card/30 py-3 bg-bg-navbar/95 hidden lg:block">
-    <div class="max-w-[1200px] mx-auto px-6 flex justify-center">
+  <!-- Navigation Links Row (Aligned starting from right side) -->
+  <div
+    class="border-t border-border-card dark:border-border-card/30 py-3 bg-bg-navbar/95 hidden lg:block"
+  >
+    <div class="max-w-[1200px] mx-auto px-6 flex justify-end">
       <ul class="flex items-center gap-3 list-none m-0 p-0">
         <li>
           <a
@@ -192,31 +184,36 @@ const searchData = [...mainPages, ...articles];
           <a
             href="/latest-job"
             class="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-blue-500/5 dark:bg-blue-500/10 border border-solid border-blue-500/25 text-text-main font-bold hover:bg-blue-500/10 hover:border-blue-500 hover:shadow-sm hover:shadow-blue-500/5 transition-all duration-300 text-[0.7rem] uppercase tracking-wider"
-            ><HiOutlineBriefcase className="text-sm shrink-0" /> Latest Job</a>
+            ><HiOutlineBriefcase className="text-sm shrink-0" /> Latest Job</a
+          >
         </li>
         <li>
           <a
             href="/result"
             class="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-emerald-500/5 dark:bg-emerald-500/10 border border-solid border-emerald-500/25 text-text-main font-bold hover:bg-emerald-500/10 hover:border-emerald-500 hover:shadow-sm hover:shadow-emerald-500/5 transition-all duration-300 text-[0.7rem] uppercase tracking-wider"
-            ><HiOutlineQueueList className="text-sm shrink-0" /> Result</a>
+            ><HiOutlineQueueList className="text-sm shrink-0" /> Result</a
+          >
         </li>
         <li>
           <a
             href="/admit-card"
             class="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-rose-500/5 dark:bg-rose-500/10 border border-solid border-rose-500/25 text-text-main font-bold hover:bg-rose-500/10 hover:border-rose-500 hover:shadow-sm hover:shadow-rose-500/5 transition-all duration-300 text-[0.7rem] uppercase tracking-wider"
-            ><HiOutlineIdentification className="text-sm shrink-0" /> Admit Card</a>
+            ><HiOutlineIdentification className="text-sm shrink-0" /> Admit Card</a
+          >
         </li>
         <li>
           <a
             href="/answer-key"
             class="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-violet-500/5 dark:bg-violet-500/10 border border-solid border-violet-500/25 text-text-main font-bold hover:bg-violet-500/10 hover:border-violet-500 hover:shadow-sm hover:shadow-violet-500/5 transition-all duration-300 text-[0.7rem] uppercase tracking-wider"
-            ><HiOutlineKey className="text-sm shrink-0" /> Answer Key</a>
+            ><HiOutlineKey className="text-sm shrink-0" /> Answer Key</a
+          >
         </li>
         <li>
           <a
             href="/admission"
             class="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-cyan-500/5 dark:bg-cyan-500/10 border border-solid border-cyan-500/25 text-text-main font-bold hover:bg-cyan-500/10 hover:border-cyan-500 hover:shadow-sm hover:shadow-cyan-500/5 transition-all duration-300 text-[0.7rem] uppercase tracking-wider"
-            ><HiOutlineAcademicCap className="text-sm shrink-0" /> Admission</a>
+            ><HiOutlineAcademicCap className="text-sm shrink-0" /> Admission</a
+          >
         </li>
       </ul>
     </div>
@@ -254,31 +251,36 @@ const searchData = [...mainPages, ...articles];
       <a
         href="/latest-job"
         class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-blue-500/5 dark:bg-blue-500/10 border border-solid border-blue-500/20 text-text-main font-bold hover:bg-blue-500/10 transition-all duration-300 text-xs uppercase tracking-wider"
-        ><HiOutlineBriefcase className="text-lg shrink-0" /> Latest Job</a>
+        ><HiOutlineBriefcase className="text-lg shrink-0" /> Latest Job</a
+      >
     </li>
     <li>
       <a
         href="/result"
         class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-emerald-500/5 dark:bg-emerald-500/10 border border-solid border-emerald-500/20 text-text-main font-bold hover:bg-emerald-500/10 transition-all duration-300 text-xs uppercase tracking-wider"
-        ><HiOutlineQueueList className="text-lg shrink-0" /> Result</a>
+        ><HiOutlineQueueList className="text-lg shrink-0" /> Result</a
+      >
     </li>
     <li>
       <a
         href="/admit-card"
         class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-rose-500/5 dark:bg-rose-500/10 border border-solid border-rose-500/20 text-text-main font-bold hover:bg-rose-500/10 transition-all duration-300 text-xs uppercase tracking-wider"
-        ><HiOutlineIdentification className="text-lg shrink-0" /> Admit Card</a>
+        ><HiOutlineIdentification className="text-lg shrink-0" /> Admit Card</a
+      >
     </li>
     <li>
       <a
         href="/answer-key"
         class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-violet-500/5 dark:bg-violet-500/10 border border-solid border-violet-500/20 text-text-main font-bold hover:bg-violet-500/10 transition-all duration-300 text-xs uppercase tracking-wider"
-        ><HiOutlineKey className="text-lg shrink-0" /> Answer Key</a>
+        ><HiOutlineKey className="text-lg shrink-0" /> Answer Key</a
+      >
     </li>
     <li>
       <a
         href="/admission"
         class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-cyan-500/5 dark:bg-cyan-500/10 border border-solid border-cyan-500/20 text-text-main font-bold hover:bg-cyan-500/10 transition-all duration-300 text-xs uppercase tracking-wider"
-        ><HiOutlineAcademicCap className="text-lg shrink-0" /> Admission</a>
+        ><HiOutlineAcademicCap className="text-lg shrink-0" /> Admission</a
+      >
     </li>
   </ul>
 </div>
@@ -294,7 +296,6 @@ const searchData = [...mainPages, ...articles];
     const menuToggle = document.getElementById("menu-toggle");
     const mobileMenu = document.getElementById("mobile-menu");
     const mobileOverlay = document.getElementById("mobile-overlay");
-    const themeToggle = document.getElementById("theme-toggle");
     const searchInput = document.getElementById("search-input");
     const suggestionsContainer = document.getElementById("search-suggestions");
     const suggestionsList = document.getElementById("suggestions-list");
@@ -373,13 +374,6 @@ const searchData = [...mainPages, ...articles];
       });
     }
 
-    // Sync initial theme toggle button state
-    if (themeToggle) {
-      const currentTheme =
-        document.documentElement.getAttribute("data-theme") || "light";
-      themeToggle.setAttribute("data-theme", currentTheme);
-    }
-
     function toggleMenu() {
       const isActive = menuToggle?.classList.contains("active");
 
@@ -414,25 +408,6 @@ const searchData = [...mainPages, ...articles];
           spans[2].style.transform = "translateY(-8px) rotate(-45deg)";
         }
       }
-    }
-
-    function toggleTheme() {
-      const currentTheme = document.documentElement.getAttribute("data-theme");
-      const newTheme = currentTheme === "dark" ? "light" : "dark";
-
-      if (newTheme === "dark") {
-        document.documentElement.setAttribute("data-theme", "dark");
-      } else {
-        document.documentElement.removeAttribute("data-theme");
-      }
-
-      localStorage.setItem("theme", newTheme);
-      if (themeToggle) themeToggle.setAttribute("data-theme", newTheme);
-    }
-
-    if (themeToggle && !themeToggle.hasAttribute("data-initialized")) {
-      themeToggle.addEventListener("click", toggleTheme);
-      themeToggle.setAttribute("data-initialized", "true");
     }
 
     if (menuToggle && !menuToggle.hasAttribute("data-initialized")) {

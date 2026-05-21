@@ -18,13 +18,18 @@ const legalPages = [
   { name: "Disclaimer", href: "/disclaimer" },
 ];
 
-// Dynamically fetch all blog posts
-const postFiles = import.meta.glob("./blog/*.astro");
-const articles = Object.keys(postFiles).map(file => {
-  const name = file.split('/').pop()?.replace('.astro', '').replace(/-/g, ' ');
-  const href = file.replace('./', '/blog/').replace('.astro', '');
-  return { name, href };
-});
+// Dynamically fetch all articles
+const postFiles = import.meta.glob("./*.astro");
+const mainSlugs = ["index", "blog", "latest-job", "result", "admit-card", "answer-key", "admission", "about", "contact", "sitemap", "privacy", "terms", "disclaimer"];
+
+const articles = Object.keys(postFiles)
+  .map(file => {
+    const slug = file.split('/').pop()?.replace('.astro', '');
+    const name = slug?.replace(/-/g, ' ');
+    const href = `/${slug}`;
+    return { name, href, slug };
+  })
+  .filter(item => item.slug && !mainSlugs.includes(item.slug));
 ---
 
 <Layout title="Sitemap - All Pages & Navigation Index | TechFixSteps" description="Complete sitemap of TechFixSteps website. Find all pages including government jobs, exam results, admit cards, answer keys, admissions, blog articles, and legal pages at techfixsteps.com.">

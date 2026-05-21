@@ -26,9 +26,9 @@
     --color-bg-navbar: rgba(255, 255, 255, 0.9);
     --color-border-card: #e2e8f0;
     
-    --color-text-main: #0f172a;
-    --color-text-muted: #475569;
-    --color-text-secondary: #475569;
+    --color-text-main: #000000;
+    --color-text-muted: #111111;
+    --color-text-secondary: #111111;
   }
 
   [data-theme='dark'] {

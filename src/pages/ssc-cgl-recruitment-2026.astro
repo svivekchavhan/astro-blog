@@ -1,0 +1,334 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BlogCard from "../components/BlogCard.astro";
+
+const title = "SSC CGL Recruitment 2026: Vacancies, Eligibility, Pattern & Apply Online";
+const description = "Complete guide to Staff Selection Commission Combined Graduate Level (SSC CGL) 2026: Notification details, 15,000+ expected vacancies, eligibility checklist, syllabus, and step-by-step registration.";
+const date = "May 17, 2026";
+const category = "Latest Jobs";
+
+// Optional post parameters (conditionally rendered)
+const salary = "Pay Level 4 to 8 (₹25,500 - ₹1,51,100 per month)";
+const jobLocation = "Across India (All States)";
+const experience = "Freshers Eligible (No Experience Required)";
+---
+
+<Layout 
+  title={title} 
+  description={description}
+  image="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1200"
+  article={true}
+>
+  <article class="py-8">
+    <!-- Header -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="bg-blue-500/10 text-blue-600 dark:text-blue-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">{category}</span>
+        <span class="text-text-muted text-sm">• {date}</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-black tracking-tight text-text-main mb-6 leading-[1.2]">
+        {title}
+      </h1>
+      <p class="text-text-muted text-lg leading-relaxed border-l-4 border-primary pl-6 py-2 italic mb-8">
+        {description}
+      </p>
+
+      <!-- Post Details separate Cards in a Grid Pattern (Color Coded Themes) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-bg-surface border border-border-card rounded-2xl p-6 hover:border-blue-300 hover:shadow-md transition-all duration-300">
+          <span class="text-[0.65rem] font-black uppercase tracking-wider text-blue-600 dark:text-blue-400 block mb-2">Post Name</span>
+          <strong class="text-text-main text-base font-black block">Staff Selection Commission Combined Graduate Level (SSC CGL) 2026</strong>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card rounded-2xl p-6 hover:border-purple-300 hover:shadow-md transition-all duration-300">
+          <span class="text-[0.65rem] font-black uppercase tracking-wider text-purple-600 dark:text-purple-400 block mb-2">Education Qualification</span>
+          <strong class="text-text-main text-base font-black block">Bachelor's Degree in any discipline from a recognized University</strong>
+        </div>
+
+        {salary && (
+          <div class="bg-bg-surface border border-border-card rounded-2xl p-6 hover:border-emerald-300 hover:shadow-md transition-all duration-300">
+            <span class="text-[0.65rem] font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-400 block mb-2">Salary / Pay Scale</span>
+            <strong class="text-text-main text-base font-black block">{salary}</strong>
+          </div>
+        )}
+
+        {jobLocation && (
+          <div class="bg-bg-surface border border-border-card rounded-2xl p-6 hover:border-amber-300 hover:shadow-md transition-all duration-300">
+            <span class="text-[0.65rem] font-black uppercase tracking-wider text-amber-600 dark:text-amber-500 block mb-2">Job Location</span>
+            <strong class="text-text-main text-base font-black block">{jobLocation}</strong>
+          </div>
+        )}
+
+        {experience && (
+          <div class="bg-bg-surface border border-border-card rounded-2xl p-6 hover:border-rose-300 hover:shadow-md transition-all duration-300 md:col-span-2">
+            <span class="text-[0.65rem] font-black uppercase tracking-wider text-rose-600 dark:text-rose-400 block mb-2">Experience Required</span>
+            <strong class="text-text-main text-base font-black block">{experience}</strong>
+          </div>
+        )}
+      </div>
+
+      <!-- Two-Column Recruitment Parameters Table -->
+      <div class="bg-bg-surface border border-border-card rounded-3xl overflow-hidden mb-8 shadow-sm">
+        <table class="w-full text-left border-collapse m-0">
+          <thead>
+            <tr class="bg-primary/5 border-b border-border-card">
+              <th class="p-4 font-bold text-sm text-text-main w-1/2">Important Parameters</th>
+              <th class="p-4 font-bold text-sm text-text-main w-1/2">Details & Links</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-border-card hover:bg-bg-surface/50 transition-colors">
+              <td class="p-4 text-sm font-semibold text-text-secondary">Start Date</td>
+              <td class="p-4 text-sm font-bold text-emerald-600 dark:text-emerald-400">June 10, 2026</td>
+            </tr>
+            <tr class="border-b border-border-card hover:bg-bg-surface/50 transition-colors">
+              <td class="p-4 text-sm font-semibold text-text-secondary">Last Date</td>
+              <td class="p-4 text-sm font-bold text-rose-600 dark:text-rose-400">July 10, 2026</td>
+            </tr>
+            <tr class="border-b border-border-card hover:bg-bg-surface/50 transition-colors">
+              <td class="p-4 text-sm font-semibold text-text-secondary">Official Advertisement</td>
+              <td class="p-4 text-sm">
+                <a 
+                  href="https://ssc.gov.in" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="inline-flex items-center gap-1 font-bold text-blue-600 hover:text-blue-800 hover:underline dark:text-blue-400 dark:hover:text-blue-300 no-underline"
+                >
+                  Download PDF Notification
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="shrink-0"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                </a>
+              </td>
+            </tr>
+            <tr class="hover:bg-bg-surface/50 transition-colors">
+              <td class="p-4 text-sm font-semibold text-text-secondary">Apply Online Link</td>
+              <td class="p-4 text-sm">
+                <a 
+                  href="https://ssc.gov.in" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary text-white text-xs font-bold uppercase tracking-wider hover:opacity-90 transition-opacity no-underline"
+                >
+                  Direct Apply Link
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="shrink-0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Latest Update Container (Light Red Background, Solid Black Text) -->
+      <div class="bg-[#fef2f2] border-2 border-[#fecaca] rounded-2xl p-6 mb-8 flex gap-4 items-start relative overflow-hidden">
+        <div class="absolute -right-4 -bottom-4 text-8xl text-red-500/10 select-none pointer-events-none font-black">🔔</div>
+        <div class="text-2xl mt-0.5 animate-bounce">📢</div>
+        <div class="flex-1">
+          <h4 class="text-black font-black text-sm uppercase tracking-wider m-0 mb-1">Latest Active Update</h4>
+          <p class="text-black text-xs sm:text-sm font-bold leading-relaxed m-0">
+            Staff Selection Commission will publish the official combined graduate level CGL notification on ssc.gov.in in June 2026. The online application link will activate instantly upon release. Mark your calendar!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="bg-bg-surface border border-border-card rounded-3xl p-8 mb-12">
+      <h2 class="text-xl font-bold text-text-main mb-4 flex items-center gap-2 m-0 border-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+        In this article
+      </h2>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 list-none p-0 m-0 mt-2">
+        <li><a href="#overview" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">1. SSC CGL 2026 Overview</a></li>
+        <li><a href="#dates" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">2. Important Dates & Schedule</a></li>
+        <li><a href="#vacancies" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">3. Vacancy Details & Posts</a></li>
+        <li><a href="#eligibility" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">4. Eligibility Criteria Checklist</a></li>
+        <li><a href="#pattern" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">5. Exam Scheme & Pattern</a></li>
+        <li><a href="#apply" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">6. How to Fill Application Form</a></li>
+        <li><a href="#faq" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">7. Frequently Asked Questions</a></li>
+      </ul>
+    </div>
+
+    <!-- Content -->
+    <div class="space-y-8 text-text-main leading-relaxed">
+      <!-- Section 1 -->
+      <h2 id="overview" class="text-2xl font-bold tracking-tight mb-4 border-b border-border-card pb-2">1. SSC CGL 2026 Recruitment Overview</h2>
+      <p>
+        The <strong>Staff Selection Commission Combined Graduate Level (SSC CGL)</strong> is one of the most highly sought-after competitive recruitment exams in India. Conducted annually, the exam paves the way for graduate-level vacancies in various Ministries, Departments, and Organizations of the Government of India. 
+      </p>
+      <p>
+        Positions like Income Tax Inspector, Central Excise Inspector, Assistant Section Officer (ASO), and Assistant Audit Officer are filled through this selection process, offering prestigious Group 'B' and Group 'C' gazetted and non-gazetted status.
+      </p>
+
+      <!-- Section 2 -->
+      <h2 id="dates" class="text-2xl font-bold tracking-tight mb-4 border-b border-border-card pb-2">2. Important Dates & Schedule</h2>
+      <p>
+        Candidates interested in applying for SSC CGL 2026 should keep track of all milestones. The tentative schedule as per the official SSC Exam Calendar is structured below:
+      </p>
+      <div class="overflow-x-auto my-6 border border-border-card rounded-2xl">
+        <table class="w-full text-left border-collapse m-0">
+          <thead>
+            <tr class="bg-bg-base border-b border-border-card">
+              <th class="p-4 font-bold text-sm text-text-main">Event Milestone</th>
+              <th class="p-4 font-bold text-sm text-text-main">Tentative Schedule</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-border-card hover:bg-bg-surface transition-colors">
+              <td class="p-4 text-sm font-medium">SSC CGL 2026 Notification Release</td>
+              <td class="p-4 text-sm text-text-muted">June 2026</td>
+            </tr>
+            <tr class="border-b border-border-card hover:bg-bg-surface transition-colors">
+              <td class="p-4 text-sm font-medium">Online Registration Starts</td>
+              <td class="p-4 text-sm text-text-muted">June 2026</td>
+            </tr>
+            <tr class="border-b border-border-card hover:bg-bg-surface transition-colors">
+              <td class="p-4 text-sm font-medium">Last Date to Submit Online Application</td>
+              <td class="p-4 text-sm text-text-muted">July 2026</td>
+            </tr>
+            <tr class="border-b border-border-card hover:bg-bg-surface transition-colors">
+              <td class="p-4 text-sm font-medium">Last Date for Online Fee Payment</td>
+              <td class="p-4 text-sm text-text-muted">July 2026</td>
+            </tr>
+            <tr class="border-b border-border-card hover:bg-bg-surface transition-colors">
+              <td class="p-4 text-sm font-medium">Tier-1 Computer Based Examination</td>
+              <td class="p-4 text-sm text-text-muted">September – October 2026</td>
+            </tr>
+            <tr class="hover:bg-bg-surface transition-colors">
+              <td class="p-4 text-sm font-medium">Tier-2 CBT & Typing Test Date</td>
+              <td class="p-4 text-sm text-text-muted">December 2026</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Section 3 -->
+      <h2 id="vacancies" class="text-2xl font-bold tracking-tight mb-4 border-b border-border-card pb-2">3. Vacancy Details & Prestigious Posts</h2>
+      <p>
+        For the 2026 cycle, a bumper vacancy release of approximately <strong>15,000+ posts</strong> is expected across various ministries. The vacancies are broadly categorized under Level-8, Level-7, Level-6, Level-5, and Level-4 pay structures. Below is a breakdown of the most popular posts:
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+        <div class="bg-bg-surface border border-border-card p-6 rounded-2xl transition-all hover:border-primary">
+          <div class="text-2xl mb-2 text-primary font-bold">👮‍♂️ Pay Level-7</div>
+          <h4 class="text-text-main font-extrabold mb-1 mt-0">Inspectors</h4>
+          <p class="text-xs text-text-muted leading-relaxed m-0">Income Tax Inspector, Central Excise & GST Inspector, Preventive Officer, Examiner.</p>
+        </div>
+        <div class="bg-bg-surface border border-border-card p-6 rounded-2xl transition-all hover:border-primary">
+          <div class="text-2xl mb-2 text-primary font-bold">🏛️ Pay Level-7</div>
+          <h4 class="text-text-main font-extrabold mb-1 mt-0">ASO Positions</h4>
+          <p class="text-xs text-text-muted leading-relaxed m-0">Assistant Section Officer in Central Secretariat Service (CSS), MEA, Railway, IB.</p>
+        </div>
+        <div class="bg-bg-surface border border-border-card p-6 rounded-2xl transition-all hover:border-primary">
+          <div class="text-2xl mb-2 text-primary font-bold">📊 Pay Level-5/6</div>
+          <h4 class="text-text-main font-extrabold mb-1 mt-0">Auditor & Sub-Inspector</h4>
+          <p class="text-xs text-text-muted leading-relaxed m-0">Auditor under CAG, CGDA, Sub-Inspector in CBI, NIA, Statistical Investigator.</p>
+        </div>
+      </div>
+
+      <!-- Section 4 -->
+      <h2 id="eligibility" class="text-2xl font-bold tracking-tight mb-4 border-b border-border-card pb-2">4. Eligibility Criteria Checklist</h2>
+      <p>
+        Before filling out the registration form, ensure you check off all criteria detailed in the official parameters:
+      </p>
+      <ul class="space-y-3 pl-0 list-none">
+        <li class="flex items-start gap-3">
+          <span class="text-green-500 font-bold">✔</span>
+          <div>
+            <strong>Educational Qualification:</strong> Candidates must hold a Bachelor’s Degree in any discipline from a recognized University or Institute by the cutoff date in 2026. (Specific posts like JSO require additional statistics criteria).
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-500 font-bold">✔</span>
+          <div>
+            <strong>Age Limit:</strong> The standard age brackets range between <strong>18 to 30 years</strong> or <strong>20 to 32 years</strong> depending on the specific post profiles.
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-500 font-bold">✔</span>
+          <div>
+            <strong>Age Relaxation:</strong> Government norms apply: OBC enjoys 3 years relaxation, SC/ST gets 5 years, and PwD receives 10 years of buffer age limit.
+          </div>
+        </li>
+      </ul>
+
+      <!-- Section 5 -->
+      <h2 id="pattern" class="text-2xl font-bold tracking-tight mb-4 border-b border-border-card pb-2">5. Scheme of Examination & Selection Pattern</h2>
+      <p>
+        The SSC CGL selection pipeline is strictly divided into two primary stages, both conducted in a computer-based online format (CBT):
+      </p>
+      <h3 class="text-lg font-bold text-text-main mt-4">Stage 1: Tier-I CBE (Qualifying Stage)</h3>
+      <p>
+        Comprises 100 questions of 2 marks each, totaling <strong>200 marks</strong>. The duration is exactly 60 minutes. There is a negative marking of 0.50 marks for each incorrect response.
+      </p>
+      <ul>
+        <li>General Intelligence & Reasoning (25 Qs - 50 Marks)</li>
+        <li>General Awareness (25 Qs - 50 Marks)</li>
+        <li>Quantitative Aptitude (25 Qs - 50 Marks)</li>
+        <li>English Comprehension (25 Qs - 50 Marks)</li>
+      </ul>
+
+      <h3 class="text-lg font-bold text-text-main mt-6">Stage 2: Tier-II CBE (Final Selection Merit)</h3>
+      <p>
+        Features three sections conducted on the same day. Section 3 is a mandatory Qualifying **Data Entry Speed Test (DEST)** (15 minutes typing task).
+      </p>
+      <ul>
+        <li><strong>Paper-I Section I:</strong> Mathematical Abilities & Reasoning (60 Qs - 180 Marks)</li>
+        <li><strong>Paper-I Section II:</strong> English Language & General Awareness (70 Qs - 210 Marks)</li>
+        <li><strong>Paper-I Section III:</strong> Computer Knowledge Module (20 Qs - 60 Marks)</li>
+      </ul>
+
+      <!-- Section 6 -->
+      <h2 id="apply" class="text-2xl font-bold tracking-tight mb-4 border-b border-border-card pb-2">6. How to Register & Apply Online on ssc.gov.in</h2>
+      <p>
+        Follow these standardized steps to register correctly on the new Staff Selection Commission recruitment portal:
+      </p>
+      <ol class="space-y-2 pl-6 list-decimal">
+        <li>Go to the new official website portal: <a href="https://ssc.gov.in" target="_blank" rel="noopener noreferrer" class="text-primary font-bold hover:underline">ssc.gov.in</a>.</li>
+        <li>Click on the <strong>'OTR' (One Time Registration)</strong> tab and complete your profile generation using Aadhaar Card, Email, and Phone validation.</li>
+        <li>Log in with your new Registration Number and Password credentials.</li>
+        <li>Locate the <strong>'Combined Graduate Level Examination 2026'</strong> section under the active dashboard list and click 'Apply'.</li>
+        <li>Upload a high-quality passport photograph with a clean background and clear signature scans.</li>
+        <li>Verify all information carefully via the preview screen, then click submit to finalize.</li>
+        <li>Pay the application fee of **₹100** (Women, SC/ST, and PwD candidates are fully exempt from fee payments).</li>
+        <li>Download and print your final registration receipt for future verification procedures.</li>
+      </ol>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="mt-20" id="faq">
+      <h2 class="text-2xl font-black text-text-main mb-8 flex items-center gap-3">
+        <span class="w-10 h-1 bg-primary rounded-full"></span>
+        Common Questions
+      </h2>
+      <div class="space-y-4">
+        {[
+          { q: "Is there an interview stage in SSC CGL recruitment?", a: "No, all interview posts have been completely discontinued. Final merit is declared based purely on marks achieved in the Tier-II Computer Based Examination." },
+          { q: "Can final-year college students apply for SSC CGL 2026?", a: "Yes, final year students are eligible to apply, provided they acquire and present their qualifying degree certificates before the designated cutoff date." },
+          { q: "What is the application fee for female candidates?", a: "There is no fee for female candidates. All women applicants, SC, ST, and PwD candidates are fully exempt from paying the application fee." }
+        ].map(item => (
+          <div class="bg-bg-surface border border-border-card rounded-2xl p-6">
+            <h4 class="text-text-main font-bold mb-2 m-0">{item.q}</h4>
+            <p class="text-text-muted text-sm m-0 leading-relaxed">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Newsletter Policy Alert -->
+    <div class="mt-20 bg-bg-surface border border-border-card rounded-3xl p-10 text-center">
+      <h3 class="text-2xl font-bold text-text-main mb-2">Government Job Alerts</h3>
+      <p class="text-text-muted mb-8 max-w-md mx-auto">Get notified instantly about the official release of SSC CGL 2026 notification and application forms.</p>
+      <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+        <input type="email" placeholder="your@email.com" class="bg-bg-base border border-border-card px-6 py-3 rounded-xl flex-1 text-text-main outline-none focus:border-primary transition-colors" />
+        <button class="bg-primary text-white px-8 py-3 rounded-xl font-bold hover:opacity-90 transition-opacity cursor-pointer">Notify Me</button>
+      </div>
+    </div>
+
+    <!-- Related -->
+    <section class="mt-20 pt-12 border-t border-border-card">
+      <h3 class="text-xl font-bold text-text-main mb-8">Related Articles</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <BlogCard title="What is Aadhar Card: Benefits and Features" href="/what-is-aadhar-card" date="May 14, 2026" />
+        <BlogCard title="How to Open a Savings Account in SBI" href="/how-to-open-sbi-account" date="May 15, 2026" />
+      </div>
+    </section>
+  </article>
+</Layout>
