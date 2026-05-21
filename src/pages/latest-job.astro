@@ -42,11 +42,11 @@ const latestJobs = [
     </div>
 
     <!-- Latest Jobs List -->
-    <div class="max-w-[1000px] mx-auto px-4 md:px-0">
-      <div id="jobs-grid" class="flex flex-col gap-4 transition-all duration-300">
+    <div class="max-w-[1000px] mx-auto px-2 md:px-0">
+      <div id="jobs-grid" class="flex flex-col gap-3 md:gap-4 transition-all duration-300">
         {latestJobs.map((job, index) => (
           <div
-            class="job-card-item flex flex-col md:flex-row md:items-center justify-between p-5 bg-bg-surface border border-border-card rounded-2xl transition-all duration-300 hover:border-primary opacity-0 animate-[fadeInUp_0.6s_ease_forwards] gap-4"
+            class="job-card-item flex flex-col md:flex-row md:items-center justify-between p-3.5 md:p-5 bg-bg-surface border border-border-card rounded-2xl transition-all duration-300 hover:border-primary opacity-0 animate-[fadeInUp_0.6s_ease_forwards] gap-3 md:gap-4"
             style={`animation-delay: ${index * 0.08}s`}
           >
             <!-- Left: Info Block -->

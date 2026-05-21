@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { HiOutlineMagnifyingGlass, HiOutlineQueueList, HiOutlineCalendarDays, HiOutlineArrowTopRightOnSquare, HiOutlineBell, HiOutlineBuildingOffice } from "react-icons/hi2";
+import { HiOutlineCalendarDays, HiOutlineArrowTopRightOnSquare, HiOutlineBell, HiOutlineBuildingOffice } from "react-icons/hi2";
 
 const results = [
   {
@@ -77,66 +77,22 @@ const results = [
   }
 ];
 
-const categories = ["All", "UPSC", "SSC", "Banking", "Railways", "State Exams", "Direct Recruitment"];
+
 ---
 
 <Layout title="Government Exam Results 2026 - Cutoff Marks & Merit List Download | TechFixSteps" description="Check latest government exam results 2026. Download official scorecards, cutoff marks, and merit lists for UPSC, SSC, SBI, IBPS, RRB, MPSC exams. Get direct result check links at techfixsteps.com.">
-  <section class="pt-4 pb-16 not-prose">
-    <!-- Header Section -->
-    <div class="text-center mb-6">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-bold uppercase tracking-wider mb-2">
-        <HiOutlineQueueList className="text-sm" /> Official Declared Lists
-      </div>
-      <h1 class="text-4xl md:text-5xl font-extrabold mb-2 tracking-tight text-text-main m-0">
-        Exam Results
-      </h1>
-      <p class="text-text-secondary text-[1.1rem] m-0 max-w-[600px] mx-auto">
-        Stay updated with official cutoff scores, live recruitment results, merit lists, and direct scorecard portals.
-      </p>
-    </div>
-
-    <!-- Search & Filter Controls Panel (Sticky on scroll) -->
-    <div id="sticky-search-wrapper" class="sticky top-[var(--navbar-height,124px)] z-30 transition-all duration-300 w-full mb-12 max-w-[1000px] mx-auto px-4 md:px-0">
-      <div id="search-controls-panel" class="bg-bg-surface/95 backdrop-blur-md border border-border-card rounded-3xl p-6 md:p-8 shadow-sm transition-all duration-300">
-        <!-- Search Input Container -->
-        <div id="search-input-container" class="flex items-center w-full bg-emerald-500/5 border border-solid border-emerald-500/20 px-4 py-3 rounded-full transition-all duration-300 focus-within:border-emerald-500 focus-within:bg-emerald-500/10 focus-within:shadow-md focus-within:shadow-emerald-500/5 mb-6">
-          <HiOutlineMagnifyingGlass className="text-emerald-600/70 mr-3 text-lg shrink-0" />
-          <input 
-            type="text" 
-            id="result-search" 
-            placeholder="Search by exam result, post, or commission..." 
-            class="w-full bg-transparent border-none text-text-main font-sans text-sm outline-none placeholder-emerald-600/50"
-          />
-        </div>
-
-        <!-- Categories Pills -->
-        <div id="categories-pills-container" class="flex flex-wrap justify-center gap-2">
-          {categories.map((cat) => (
-            <button
-              type="button"
-              data-target={cat === "All" ? "all" : cat}
-              class={`filter-tab px-4 py-2 text-xs font-bold tracking-wide uppercase border border-solid rounded-full cursor-pointer transition-all duration-300 outline-none ${
-                cat === "All"
-                  ? "bg-gradient-to-r from-emerald-600 to-teal-600 text-white border-transparent active-tab shadow-sm shadow-emerald-500/20"
-                  : "bg-emerald-500/5 text-emerald-600 dark:text-emerald-400 border-emerald-500/20 hover:bg-emerald-500/10 hover:text-emerald-700"
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-      </div>
-    </div>
+  <section class="pt-12 pb-16 not-prose">
+    <h1 class="sr-only">Exam Results</h1>
 
     <!-- Results List -->
-    <div class="max-w-[1000px] mx-auto px-4 md:px-0">
-      <div id="results-grid" class="flex flex-col gap-4 transition-all duration-300">
+    <div class="max-w-[1000px] mx-auto px-2 md:px-0">
+      <div id="results-grid" class="flex flex-col gap-3 md:gap-4 transition-all duration-300">
         {results.map((card, index) => (
           <div
             data-title={card.title}
             data-org={card.organisation}
             data-category={card.category}
-            class="result-item flex flex-col md:flex-row md:items-center justify-between p-5 bg-bg-surface border border-border-card rounded-2xl transition-all duration-300 hover:border-emerald-500 opacity-0 animate-[fadeInUp_0.6s_ease_forwards] gap-4"
+            class="result-item flex flex-col md:flex-row md:items-center justify-between p-3.5 md:p-5 bg-bg-surface border border-border-card rounded-2xl transition-all duration-300 hover:border-emerald-500 opacity-0 animate-[fadeInUp_0.6s_ease_forwards] gap-3 md:gap-4"
             style={`animation-delay: ${index * 0.08}s`}
           >
             <!-- Left: Info Block -->
@@ -214,146 +170,5 @@ const categories = ["All", "UPSC", "SSC", "Banking", "Railways", "State Exams", 
       </div>
     </div>
 
-    <!-- Empty State -->
-    <div id="no-results-message" class="hidden text-center py-16 px-4 bg-bg-surface border border-border-card rounded-2xl max-w-[500px] mx-auto mt-6">
-      <HiOutlineQueueList className="text-4xl text-text-muted mx-auto mb-3" />
-      <h3 class="text-lg font-bold text-text-main mb-1">No Results Found</h3>
-      <p class="text-sm text-text-muted">
-        We couldn't find any scorecards matching your search query. Try another keyword or clear the search.
-      </p>
-    </div>
-
   </section>
 </Layout>
-
-<style is:global>
-  /* Sticky Search Container Styles */
-  #search-controls-panel.sticky-active {
-    padding: 0.75rem 1rem !important;
-    border-radius: 1.5rem !important;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05) !important;
-    border-color: rgba(16, 185, 129, 0.3) !important; /* emerald-500 border glow */
-    background-color: var(--bg-surface-sticky, rgba(15, 23, 42, 0.95)) !important;
-    backdrop-filter: blur(16px) !important;
-  }
-
-  #search-controls-panel.sticky-active #search-input-container {
-    margin-bottom: 0.5rem !important;
-    padding-top: 0.5rem !important;
-    padding-bottom: 0.5rem !important;
-  }
-
-  /* Mobile Specific Search Div Customizations (Hide tags on mobile) */
-  @media (max-width: 768px) {
-    #search-controls-panel {
-      padding: 1rem !important;
-      border-radius: 1.5rem !important;
-    }
-    #categories-pills-container {
-      display: none !important;
-    }
-    #search-controls-panel #search-input-container {
-      margin-bottom: 0 !important;
-    }
-    #search-controls-panel.sticky-active #search-input-container {
-      margin-bottom: 0 !important;
-    }
-  }
-</style>
-
-<script>
-  let currentCategory = 'all';
-  let searchQuery = '';
-  let scrollListener: (() => void) | null = null;
-
-  function initFilters() {
-    const searchInput = document.getElementById('result-search') as HTMLInputElement;
-    const tabButtons = document.querySelectorAll('.filter-tab');
-    const cardItems = document.querySelectorAll('.result-item') as NodeListOf<HTMLElement>;
-    const noResults = document.getElementById('no-results-message');
-
-    // Remove previous scroll listener to prevent double registration on Astro navigation
-    if (scrollListener) {
-      window.removeEventListener('scroll', scrollListener);
-    }
-
-    // Sticky Scroll Handler
-    const searchWrapper = document.getElementById('sticky-search-wrapper');
-    const searchPanel = document.getElementById('search-controls-panel');
-
-    if (searchWrapper && searchPanel) {
-      scrollListener = () => {
-        const rect = searchWrapper.getBoundingClientRect();
-        const computedNavbarHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--navbar-height')) || (window.innerWidth < 1024 ? 124 : 154);
-        
-        if (rect.top <= computedNavbarHeight + 2) {
-          searchPanel.classList.add('sticky-active');
-        } else {
-          searchPanel.classList.remove('sticky-active');
-        }
-      };
-
-      window.addEventListener('scroll', scrollListener);
-      scrollListener(); // Run initially
-    }
-
-    function filterCards() {
-      let visibleCount = 0;
-      cardItems.forEach((card) => {
-        const title = card.getAttribute('data-title')?.toLowerCase() || '';
-        const org = card.getAttribute('data-org')?.toLowerCase() || '';
-        const category = card.getAttribute('data-category')?.toLowerCase() || '';
-
-        const matchesSearch = title.includes(searchQuery) || org.includes(searchQuery);
-        const matchesCategory = currentCategory === 'all' || category === currentCategory;
-
-        if (matchesSearch && matchesCategory) {
-          card.style.display = '';
-          // Trigger smooth fade-in
-          setTimeout(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-          }, 20);
-          visibleCount++;
-        } else {
-          card.style.opacity = '0';
-          card.style.transform = 'translateY(10px)';
-          card.style.display = 'none';
-        }
-      });
-
-      if (noResults) {
-        if (visibleCount === 0) {
-          noResults.classList.remove('hidden');
-        } else {
-          noResults.classList.add('hidden');
-        }
-      }
-    }
-
-    searchInput?.addEventListener('input', (e) => {
-      searchQuery = (e.target as HTMLInputElement).value.toLowerCase().trim();
-      filterCards();
-    });
-
-    tabButtons.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        tabButtons.forEach((b) => {
-          b.classList.remove('bg-gradient-to-r', 'from-emerald-600', 'to-teal-600', 'text-white', 'border-transparent', 'active-tab', 'shadow-sm', 'shadow-emerald-500/20');
-          b.classList.add('bg-emerald-500/5', 'text-emerald-600', 'dark:text-emerald-400', 'border-emerald-500/20');
-        });
-
-        btn.classList.add('bg-gradient-to-r', 'from-emerald-600', 'to-teal-600', 'text-white', 'border-transparent', 'active-tab', 'shadow-sm', 'shadow-emerald-500/20');
-        btn.classList.remove('bg-emerald-500/5', 'text-emerald-600', 'dark:text-emerald-400', 'border-emerald-500/20');
-
-        currentCategory = btn.getAttribute('data-target')?.toLowerCase() || 'all';
-        filterCards();
-      });
-    });
-
-    filterCards();
-  }
-
-  initFilters();
-  document.addEventListener('astro:page-load', initFilters);
-</script>

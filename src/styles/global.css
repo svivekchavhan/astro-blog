@@ -29,6 +29,21 @@
     --color-text-main: #000000;
     --color-text-muted: #111111;
     --color-text-secondary: #111111;
+    
+    --navbar-height: 143px;
+    --bg-surface-sticky: rgba(255, 255, 255, 0.95);
+  }
+
+  @media (min-width: 768px) {
+    :root {
+      --navbar-height: 176px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    :root {
+      --navbar-height: 205px;
+    }
   }
 
   [data-theme='dark'] {
@@ -44,6 +59,7 @@
     --color-text-main: #ffffff;            /* Pure White */
     --color-text-muted: #bae6fd;           /* Gorgeous Light Blue (sky-200) */
     --color-text-secondary: #bae6fd;       /* Gorgeous Light Blue (sky-200) */
+    --bg-surface-sticky: rgba(15, 23, 42, 0.95);
   }
 
   html, body, *, *::before, *::after {

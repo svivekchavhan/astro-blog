@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { HiOutlineMagnifyingGlass, HiOutlineIdentification, HiOutlineCalendarDays, HiOutlineArrowTopRightOnSquare, HiOutlineBell, HiOutlineBuildingOffice } from "react-icons/hi2";
+import { HiOutlineCalendarDays, HiOutlineArrowTopRightOnSquare, HiOutlineBell, HiOutlineBuildingOffice } from "react-icons/hi2";
 
 const admitCards = [
   {
@@ -95,66 +95,22 @@ const admitCards = [
   }
 ];
 
-const categories = ["All", "UPSC", "SSC", "Banking", "Railways", "State Exams", "Direct Recruitment"];
+
 ---
 
 <Layout title="Admit Card Download 2026 - Hall Ticket & Exam Date Schedule | TechFixSteps" description="Download official admit cards and hall tickets 2026. Get UPSC, SSC, SBI, IBPS, RRB, MPSC exam admit card release dates, exam schedules, and direct download links at techfixsteps.com.">
-  <section class="pt-4 pb-16 not-prose">
-    <!-- Header Section -->
-    <div class="text-center mb-6">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wider mb-2">
-        <HiOutlineIdentification className="text-sm" /> Official Releases
-      </div>
-      <h1 class="text-4xl md:text-5xl font-extrabold mb-2 tracking-tight text-text-main m-0">
-        Admit Cards
-      </h1>
-      <p class="text-text-secondary text-[1.1rem] m-0 max-w-[600px] mx-auto">
-        Stay updated with live exam release dates, schedules, and official direct download portals.
-      </p>
-    </div>
-
-    <!-- Search & Filter Controls Panel (Sticky on scroll) -->
-    <div id="sticky-search-wrapper" class="sticky top-[var(--navbar-height,124px)] z-30 transition-all duration-300 w-full mb-12 max-w-[1000px] mx-auto px-4 md:px-0">
-      <div id="search-controls-panel" class="bg-bg-surface/95 backdrop-blur-md border border-border-card rounded-3xl p-6 md:p-8 shadow-sm transition-all duration-300">
-        <!-- Search Input Container (Horizontal Flexbox) -->
-        <div id="search-input-container" class="flex items-center w-full bg-primary/5 border border-solid border-primary/20 px-4 py-3 rounded-full transition-all duration-300 focus-within:border-primary focus-within:bg-primary/10 focus-within:shadow-md focus-within:shadow-primary/5 mb-6">
-          <HiOutlineMagnifyingGlass className="text-primary/70 mr-3 text-lg shrink-0" />
-          <input 
-            type="text" 
-            id="admit-card-search" 
-            placeholder="Search by exam name or department..." 
-            class="w-full bg-transparent border-none text-text-main font-sans text-sm outline-none placeholder-primary/50"
-          />
-        </div>
-
-        <!-- Categories Pills -->
-        <div id="categories-pills-container" class="flex flex-wrap justify-center gap-2">
-          {categories.map((cat) => (
-            <button
-              type="button"
-              data-target={cat === "All" ? "all" : cat}
-              class={`filter-tab px-4 py-2 text-xs font-bold tracking-wide uppercase border border-solid rounded-full cursor-pointer transition-all duration-300 outline-none ${
-                cat === "All"
-                  ? "bg-gradient-to-r from-primary to-secondary text-white border-transparent active-tab shadow-sm shadow-primary/20"
-                  : "bg-primary/5 text-primary border-primary/20 hover:bg-primary/10 hover:text-primary-dark"
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-      </div>
-    </div>
+  <section class="pt-12 pb-16 not-prose">
+    <h1 class="sr-only">Admit Cards</h1>
 
     <!-- Admit Cards List -->
-    <div class="max-w-[1000px] mx-auto px-4 md:px-0">
-      <div id="admit-cards-grid" class="flex flex-col gap-4 transition-all duration-300">
+    <div class="max-w-[1000px] mx-auto px-2 md:px-0">
+      <div id="admit-cards-grid" class="flex flex-col gap-3 md:gap-4 transition-all duration-300">
         {admitCards.map((card, index) => (
           <div
             data-title={card.title}
             data-org={card.organisation}
             data-category={card.category}
-            class="admit-card-item flex flex-col md:flex-row md:items-center justify-between p-5 bg-bg-surface border border-border-card rounded-2xl transition-all duration-300 hover:border-primary opacity-0 animate-[fadeInUp_0.6s_ease_forwards] gap-4"
+            class="admit-card-item flex flex-col md:flex-row md:items-center justify-between p-3.5 md:p-5 bg-bg-surface border border-border-card rounded-2xl transition-all duration-300 hover:border-primary opacity-0 animate-[fadeInUp_0.6s_ease_forwards] gap-3 md:gap-4"
             style={`animation-delay: ${index * 0.08}s`}
           >
             <!-- Left: Info Block -->
@@ -249,149 +205,5 @@ const categories = ["All", "UPSC", "SSC", "Banking", "Railways", "State Exams", 
       </div>
     </div>
 
-    <!-- Empty State -->
-    <div id="no-results-message" class="hidden text-center py-16 px-4 bg-bg-surface border border-border-card rounded-2xl max-w-[500px] mx-auto mt-6">
-      <HiOutlineIdentification className="text-4xl text-text-muted mx-auto mb-3" />
-      <h3 class="text-lg font-bold text-text-main mb-1">No Admit Cards Found</h3>
-      <p class="text-sm text-text-muted">
-        We couldn't find any hall tickets matching your search query. Try another keyword or clear the search.
-      </p>
-    </div>
-
   </section>
 </Layout>
-
-<style is:global>
-  /* Sticky Search Container Styles */
-  #search-controls-panel.sticky-active {
-    padding: 0.75rem 1rem !important;
-    border-radius: 1.5rem !important;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05) !important;
-    border-color: rgba(56, 189, 248, 0.3) !important;
-    background-color: var(--bg-surface-sticky, rgba(15, 23, 42, 0.95)) !important;
-    backdrop-filter: blur(16px) !important;
-  }
-
-  #search-controls-panel.sticky-active #search-input-container {
-    margin-bottom: 0.5rem !important;
-    padding-top: 0.5rem !important;
-    padding-bottom: 0.5rem !important;
-  }
-
-  /* Mobile Specific Search Div Customizations (Hide tags on mobile) */
-  @media (max-width: 768px) {
-    #search-controls-panel {
-      padding: 1rem !important;
-      border-radius: 1.5rem !important;
-    }
-    #categories-pills-container {
-      display: none !important;
-    }
-    #search-controls-panel #search-input-container {
-      margin-bottom: 0 !important;
-    }
-    #search-controls-panel.sticky-active #search-input-container {
-      margin-bottom: 0 !important;
-    }
-  }
-</style>
-
-<script>
-  let currentCategory = 'all';
-  let searchQuery = '';
-  let scrollListener: (() => void) | null = null;
-
-  function initFilters() {
-    const searchInput = document.getElementById('admit-card-search') as HTMLInputElement;
-    const tabButtons = document.querySelectorAll('.filter-tab');
-    const cardItems = document.querySelectorAll('.admit-card-item') as NodeListOf<HTMLElement>;
-    const noResults = document.getElementById('no-results-message');
-
-    // Remove previous scroll listener to prevent double registration on Astro navigation
-    if (scrollListener) {
-      window.removeEventListener('scroll', scrollListener);
-    }
-
-    // Sticky Scroll Handler
-    const searchWrapper = document.getElementById('sticky-search-wrapper');
-    const searchPanel = document.getElementById('search-controls-panel');
-
-    if (searchWrapper && searchPanel) {
-      scrollListener = () => {
-        const rect = searchWrapper.getBoundingClientRect();
-        const computedNavbarHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--navbar-height')) || (window.innerWidth < 1024 ? 124 : 154);
-        
-        if (rect.top <= computedNavbarHeight + 2) {
-          searchPanel.classList.add('sticky-active');
-        } else {
-          searchPanel.classList.remove('sticky-active');
-        }
-      };
-
-      window.addEventListener('scroll', scrollListener);
-      scrollListener(); // Run initially
-    }
-
-    function filterCards() {
-      let visibleCount = 0;
-      cardItems.forEach((card) => {
-        const title = card.getAttribute('data-title')?.toLowerCase() || '';
-        const org = card.getAttribute('data-org')?.toLowerCase() || '';
-        const category = card.getAttribute('data-category')?.toLowerCase() || '';
-
-        const matchesSearch = title.includes(searchQuery) || org.includes(searchQuery);
-        const matchesCategory = currentCategory === 'all' || category === currentCategory;
-
-        if (matchesSearch && matchesCategory) {
-          card.style.display = '';
-          // Trigger smooth fade-in
-          setTimeout(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-          }, 20);
-          visibleCount++;
-        } else {
-          card.style.opacity = '0';
-          card.style.transform = 'translateY(10px)';
-          // Hide completely after fade transition completes
-          card.style.display = 'none';
-        }
-      });
-
-      if (noResults) {
-        if (visibleCount === 0) {
-          noResults.classList.remove('hidden');
-        } else {
-          noResults.classList.add('hidden');
-        }
-      }
-    }
-
-    searchInput?.addEventListener('input', (e) => {
-      searchQuery = (e.target as HTMLInputElement).value.toLowerCase().trim();
-      filterCards();
-    });
-
-    tabButtons.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        tabButtons.forEach((b) => {
-          b.classList.remove('bg-gradient-to-r', 'from-primary', 'to-secondary', 'text-white', 'border-transparent', 'active-tab', 'shadow-sm', 'shadow-primary/20');
-          b.classList.add('bg-primary/5', 'text-primary', 'border-primary/20');
-        });
-
-        btn.classList.add('bg-gradient-to-r', 'from-primary', 'to-secondary', 'text-white', 'border-transparent', 'active-tab', 'shadow-sm', 'shadow-primary/20');
-        btn.classList.remove('bg-primary/5', 'text-primary', 'border-primary/20');
-
-        currentCategory = btn.getAttribute('data-target')?.toLowerCase() || 'all';
-        filterCards();
-      });
-    });
-
-    // Run initial filter to keep states on page-load sync
-    filterCards();
-  }
-
-  // Initialize filters on load
-  initFilters();
-  document.addEventListener('astro:page-load', initFilters);
-</script>
