@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 @theme {
   --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
 
@@ -16,6 +18,10 @@
 }
 
 @layer base {
+  .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+    color: var(--color-text-main) !important;
+  }
+
   :root {
     /* Light Mode Defaults */
     --color-primary: #0ea5e9;

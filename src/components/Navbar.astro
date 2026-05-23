@@ -24,13 +24,12 @@ import Marquee from "./Marquee.astro";
 // Fetch posts for search suggestions
 const postFiles = import.meta.glob("../pages/blog/*.astro");
 
-const articles = Object.keys(postFiles)
-  .map((file) => {
-    const slug = file.split("/").pop()?.replace(".astro", "");
-    const name = slug?.replace(/-/g, " ");
-    const href = `/blog/${slug}`;
-    return { title: name, href, slug };
-  });
+const articles = Object.keys(postFiles).map((file) => {
+  const slug = file.split("/").pop()?.replace(".astro", "");
+  const name = slug?.replace(/-/g, " ");
+  const href = `/blog/${slug}`;
+  return { title: name, href, slug };
+});
 
 const mainPages = [
   { title: "Home", href: "/" },
@@ -103,7 +102,9 @@ const searchData = [...mainPages, ...articles];
     </div>
   </div>
 
-  <header class="min-h-[70px] py-3 lg:py-0 lg:h-[70px] transition-all duration-300 flex items-center">
+  <header
+    class="min-h-[70px] py-3 lg:py-0 lg:h-[70px] transition-all duration-300 flex items-center"
+  >
     <div
       class="max-w-[1200px] mx-auto px-6 w-full flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-6"
     >
@@ -216,15 +217,12 @@ const searchData = [...mainPages, ...articles];
       </ul>
     </div>
   </div>
-
-  <Marquee />
 </div>
 
 <div
   class="fixed top-0 right-0 w-[80%] max-w-[300px] h-screen bg-bg-base pt-[6rem] px-8 pb-8 z-[1000] border-l border-border-card flex flex-col transition-transform duration-400 ease-[cubic-bezier(0.4,0,0.2,1)] translate-x-full shadow-[-10px_0_30px_rgba(0,0,0,0.5)]"
   id="mobile-menu"
 >
-
   <ul class="flex flex-col gap-3 list-none p-0 m-0">
     <li>
       <a
@@ -296,7 +294,7 @@ const searchData = [...mainPages, ...articles];
         const regex = new RegExp(`(${query})`, "gi");
         return text.replace(
           regex,
-          '<u class="text-primary no-underline font-bold">$1</u>',
+          '<u class="text-primary no-underline font-bold">$1</u>'
         );
       }
 
@@ -307,7 +305,7 @@ const searchData = [...mainPages, ...articles];
           suggestionsContainer.classList.add(
             "hidden",
             "opacity-0",
-            "translate-y-2",
+            "translate-y-2"
           );
           return;
         }
@@ -328,10 +326,10 @@ const searchData = [...mainPages, ...articles];
               </div>
               <span class="text-sm text-text-main font-medium line-clamp-1">${highlightMatch(
                 post.title,
-                query,
+                query
               )}</span>
             </a>
-          `,
+          `
             )
             .join("");
 
@@ -343,7 +341,7 @@ const searchData = [...mainPages, ...articles];
           suggestionsContainer.classList.add(
             "hidden",
             "opacity-0",
-            "translate-y-2",
+            "translate-y-2"
           );
         }
       });
@@ -357,7 +355,7 @@ const searchData = [...mainPages, ...articles];
           suggestionsContainer.classList.add(
             "hidden",
             "opacity-0",
-            "translate-y-2",
+            "translate-y-2"
           );
         }
       });
@@ -437,7 +435,10 @@ const searchData = [...mainPages, ...articles];
       const navbar = document.querySelector(".sticky.top-0");
       if (navbar) {
         const height = navbar.getBoundingClientRect().height;
-        document.documentElement.style.setProperty("--navbar-height", `${height}px`);
+        document.documentElement.style.setProperty(
+          "--navbar-height",
+          `${height}px`
+        );
       }
     });
   }
@@ -447,7 +448,7 @@ const searchData = [...mainPages, ...articles];
     initNavbar();
     initDateTime();
     updateNavbarHeight();
-    
+
     // Add event listener to recalculate height on window resize
     window.removeEventListener("resize", updateNavbarHeight);
     window.addEventListener("resize", updateNavbarHeight);
