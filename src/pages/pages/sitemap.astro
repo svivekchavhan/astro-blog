@@ -1,5 +1,5 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "../../layouts/Layout.astro";
 
 const pages = [
   { name: "Home", href: "/" },
@@ -8,28 +8,26 @@ const pages = [
   { name: "Admit Card", href: "/admit-card" },
   { name: "Answer Key", href: "/answer-key" },
   { name: "Admission", href: "/admission" },
-  { name: "About Us", href: "/about" },
-  { name: "Contact Us", href: "/contact" },
+  { name: "About Us", href: "/pages/about" },
+  { name: "Contact Us", href: "/pages/contact" },
 ];
 
 const legalPages = [
-  { name: "Privacy Policy", href: "/privacy" },
-  { name: "Terms of Service", href: "/terms" },
-  { name: "Disclaimer", href: "/disclaimer" },
+  { name: "Privacy Policy", href: "/pages/privacy" },
+  { name: "Terms of Service", href: "/pages/terms" },
+  { name: "Disclaimer", href: "/pages/disclaimer" },
 ];
 
 // Dynamically fetch all articles
-const postFiles = import.meta.glob("./*.astro");
-const mainSlugs = ["index", "blog", "latest-job", "result", "admit-card", "answer-key", "admission", "about", "contact", "sitemap", "privacy", "terms", "disclaimer"];
+const postFiles = import.meta.glob("../blog/*.astro");
 
 const articles = Object.keys(postFiles)
   .map(file => {
     const slug = file.split('/').pop()?.replace('.astro', '');
     const name = slug?.replace(/-/g, ' ');
-    const href = `/${slug}`;
+    const href = `/blog/${slug}`;
     return { name, href, slug };
-  })
-  .filter(item => item.slug && !mainSlugs.includes(item.slug));
+  });
 ---
 
 <Layout title="Sitemap - All Pages & Navigation Index | TechFixSteps" description="Complete sitemap of TechFixSteps website. Find all pages including government jobs, exam results, admit cards, answer keys, admissions, blog articles, and legal pages at techfixsteps.com.">

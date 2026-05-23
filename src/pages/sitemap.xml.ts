@@ -10,24 +10,22 @@ export async function GET() {
     '/admission',
     '/blog',
     '/result',
-    '/contact',
-    '/about',
-    '/privacy',
-    '/terms',
-    '/disclaimer',
-    '/sitemap'
+    '/pages/contact',
+    '/pages/about',
+    '/pages/privacy',
+    '/pages/terms',
+    '/pages/disclaimer',
+    '/pages/sitemap'
   ];
 
-  // Dynamically find all articles in src/pages/
-  const postFiles = import.meta.glob('/src/pages/*.astro');
-  const mainSlugs = ['index', 'blog', 'latest-job', 'result', 'admit-card', 'answer-key', 'admission', 'about', 'contact', 'sitemap', 'privacy', 'terms', 'disclaimer'];
+  // Dynamically find all articles in src/pages/blog/
+  const postFiles = import.meta.glob('/src/pages/blog/*.astro');
   
   const dynamicPages = Object.keys(postFiles)
     .map(file => {
       const slug = file.split('/').pop()?.replace('.astro', '');
-      return `/${slug}`;
-    })
-    .filter(page => page && !mainSlugs.includes(page.replace('/', '')));
+      return `/blog/${slug}`;
+    });
 
   const allPages = [...staticPages, ...dynamicPages];
 

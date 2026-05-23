@@ -22,17 +22,15 @@ import {
 import Marquee from "./Marquee.astro";
 
 // Fetch posts for search suggestions
-const postFiles = import.meta.glob("../pages/*.astro");
-const mainSlugs = ["index", "blog", "latest-job", "result", "admit-card", "answer-key", "admission", "about", "contact", "sitemap", "privacy", "terms", "disclaimer"];
+const postFiles = import.meta.glob("../pages/blog/*.astro");
 
 const articles = Object.keys(postFiles)
   .map((file) => {
     const slug = file.split("/").pop()?.replace(".astro", "");
     const name = slug?.replace(/-/g, " ");
-    const href = `/${slug}`;
+    const href = `/blog/${slug}`;
     return { title: name, href, slug };
-  })
-  .filter((item) => item.slug && !mainSlugs.includes(item.slug));
+  });
 
 const mainPages = [
   { title: "Home", href: "/" },
@@ -41,12 +39,12 @@ const mainPages = [
   { title: "Admit Card", href: "/admit-card" },
   { title: "Answer Key", href: "/answer-key" },
   { title: "Admission", href: "/admission" },
-  { title: "About Us", href: "/about" },
-  { title: "Contact Us", href: "/contact" },
-  { title: "Sitemap", href: "/sitemap" },
-  { title: "Privacy Policy", href: "/privacy" },
-  { title: "Terms of Service", href: "/terms" },
-  { title: "Disclaimer", href: "/disclaimer" },
+  { title: "About Us", href: "/pages/about" },
+  { title: "Contact Us", href: "/pages/contact" },
+  { title: "Sitemap", href: "/pages/sitemap" },
+  { title: "Privacy Policy", href: "/pages/privacy" },
+  { title: "Terms of Service", href: "/pages/terms" },
+  { title: "Disclaimer", href: "/pages/disclaimer" },
 ];
 
 const searchData = [...mainPages, ...articles];
@@ -73,31 +71,31 @@ const searchData = [...mainPages, ...articles];
       </div>
       <div class="flex items-center gap-4">
         <a
-          href="/privacy"
+          href="/pages/privacy"
           class="hover:text-primary transition-colors flex items-center gap-1"
           ><HiOutlineShieldCheck className="text-sm" /> Privacy Policy</a
         >
         <span class="text-border-card">|</span>
         <a
-          href="/terms"
+          href="/pages/terms"
           class="hover:text-primary transition-colors flex items-center gap-1"
           ><HiOutlineDocumentText className="text-sm" /> Terms of Service</a
         >
         <span class="text-border-card">|</span>
         <a
-          href="/disclaimer"
+          href="/pages/disclaimer"
           class="hover:text-primary transition-colors flex items-center gap-1"
           ><HiOutlineExclamationTriangle className="text-sm" /> Disclaimer</a
         >
         <span class="text-border-card">|</span>
         <a
-          href="/sitemap"
+          href="/pages/sitemap"
           class="hover:text-primary transition-colors flex items-center gap-1"
           ><HiOutlineMap className="text-sm" /> Sitemap</a
         >
         <span class="text-border-card">|</span>
         <a
-          href="/contact"
+          href="/pages/contact"
           class="hover:text-primary transition-colors flex items-center gap-1"
           ><HiOutlineEnvelope className="text-sm" /> Contact Us</a
         >
