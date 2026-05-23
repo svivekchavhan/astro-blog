@@ -9,6 +9,7 @@ const admissions = [
     category: "Vocational",
     releaseDate: "21 May 2026",
     examDate: "21 June 2026",
+    
     status: "upcoming",
     link: "/blog/iti-admission-2026-maharashtra"
   }
@@ -74,14 +75,22 @@ const admissions = [
             <div class="flex flex-row gap-6 md:gap-8 shrink-0 py-2 md:py-0 border-y md:border-y-0 border-border-card dark:border-border-card/20 my-1 md:my-0">
               <div>
                 <span class="block text-[0.6rem] text-text-muted uppercase tracking-wider mb-0.5">Start Date</span>
-                <span class="flex items-center gap-1 text-xs font-bold text-text-main">
-                  <HiOutlineCalendarDays className="text-cyan-500 text-xs shrink-0" /> {card.releaseDate}
+                <span class="flex items-center gap-1 text-xs font-bold text-emerald-600 dark:text-emerald-400">
+                  <HiOutlineCalendarDays className="text-emerald-500 text-xs shrink-0" /> {card.releaseDate}
                 </span>
               </div>
               <div>
                 <span class="block text-[0.6rem] text-text-muted uppercase tracking-wider mb-0.5">Last Date</span>
-                <span class="flex items-center gap-1 text-xs font-bold text-text-main">
-                  <HiOutlineCalendarDays className="text-cyan-500 text-xs shrink-0" /> {card.examDate}
+                <span class="flex items-center gap-1 text-xs font-bold text-rose-600 dark:text-rose-400">
+                  <HiOutlineCalendarDays className="text-rose-500 text-xs shrink-0" />
+                  {card.extendedDate ? (
+                    <span class="flex items-center gap-1.5">
+                      <span class="line-through text-text-muted/70 font-medium">{card.examDate}</span>
+                      <span class="text-rose-600 dark:text-rose-400 font-extrabold">{card.extendedDate}</span>
+                    </span>
+                  ) : (
+                    <span class={card.status === "closed" ? "line-through text-text-muted/70" : ""}>{card.examDate}</span>
+                  )}
                 </span>
               </div>
             </div>

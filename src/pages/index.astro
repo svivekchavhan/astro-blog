@@ -78,8 +78,16 @@ const latestJobs = [];
                 </span>
 
                 <span class="flex items-center gap-1.5 text-[0.65rem] sm:text-[0.75rem] md:text-xs font-black bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-solid border-rose-500/30 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-lg uppercase tracking-wider shadow-sm">
-                  <HiOutlineCalendarDays className="text-rose-500 text-xs sm:text-sm shrink-0" /> Last Date: <span class="font-black">{job.lastDate}</span>
-                </span>
+                <HiOutlineCalendarDays className="text-rose-500 text-xs sm:text-sm shrink-0" /> Last Date: 
+                {job.extendedDate ? (
+                  <span class="flex items-center gap-1.5 font-bold">
+                    <span class="line-through text-text-muted/70 font-medium">{job.lastDate}</span>
+                    <span class="text-rose-600 dark:text-rose-400 font-extrabold">{job.extendedDate}</span>
+                  </span>
+                ) : (
+                  <span class={`font-black ${job.status === "closed" ? "line-through text-text-muted/70" : ""}`}>{job.lastDate}</span>
+                )}
+              </span>
               </div>
             </div>
           ))
