@@ -10,16 +10,20 @@ interface Props {
 	description?: string;
 	image?: string;
 	article?: boolean;
+	canonicalURL?: string;
 }
 
 const { 
 	title, 
 	description = "TechFixSteps - Your trusted source for latest government jobs, sarkari naukri, exam results, admit cards, answer keys, and college admissions in India.", 
 	image = "/blog-placeholder.jpg",
-	article = false
+	article = false,
+	canonicalURL: customCanonicalURL
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://techfixsteps.com");
+const canonicalURL = customCanonicalURL 
+	? new URL(customCanonicalURL, Astro.site || "https://techfixsteps.com")
+	: new URL(Astro.url.pathname, Astro.site || "https://techfixsteps.com");
 
 const latestJobs = [
   {
