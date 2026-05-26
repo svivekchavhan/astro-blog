@@ -38,232 +38,489 @@ const category = "Admission";
       </p>
     </div>
 
-    <!-- Table of Contents -->
-    <div class="bg-bg-surface border border-border-card rounded-3xl p-8 mb-12">
-      <h2
-        class="text-xl font-bold text-text-main mb-4 flex items-center gap-2 m-0 border-none"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="text-primary"
-          ><line x1="8" y1="6" x2="21" y2="6"></line><line
-            x1="8"
-            y1="12"
-            x2="21"
-            y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line
-            x1="3"
-            y1="6"
-            x2="3.01"
-            y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line
-            x1="3"
-            y1="18"
-            x2="3.01"
-            y2="18"></line>
-        </svg>
-        या लेखातील मुख्य मुद्दे
-      </h2>
-      <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 list-none p-0 m-0 mt-2">
-        <li>
-          <a
-            href="#changes"
-            class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
-            >ITI प्रवेश 2026 मधील बदल</a
-          >
-        </li>
-        <li>
-          <a
-            href="#documents"
-            class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
-            >अर्जासाठी आवश्यक कागदपत्रे</a
-          >
-        </li>
-        <li>
-          <a
-            href="#online-process"
-            class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
-            >नोंदणी (Registration) कशी करावी?</a
-          >
-        </li>
-        <li>
-          <a
-            href="#details-filling"
-            class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
-            >पत्ता, पालकांची व शैक्षणिक माहिती</a
-          >
-        </li>
-        <li>
-          <a
-            href="#checklist"
-            class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
-            >अर्ज सबमिट करण्यापूर्वी तपासा</a
-          >
-        </li>
-      </ul>
+    <!-- Quick Language Navigation Links -->
+    <div class="flex gap-4 mb-8">
+      <a href="#marathi-version" class="text-primary font-bold text-sm hover:underline">↓ मराठी आवृत्ती (Marathi Version)</a>
+      <span class="text-text-muted">|</span>
+      <a href="#english-version" class="text-primary font-bold text-sm hover:underline">↓ English Version</a>
     </div>
 
-    <!-- Content -->
-    <div class="space-y-8 text-text-main leading-relaxed">
-      <p>
-        महाराष्ट्र राज्यातील औद्योगिक प्रशिक्षण संस्था (ITI) प्रवेश प्रक्रिया 2026 सुरू झाली आहे. यावर्षी प्रवेश पोर्टलमध्ये काही महत्त्वाचे बदल करण्यात आले आहेत. त्यामुळे विद्यार्थ्यांनी अर्ज भरताना विशेष काळजी घेणे आवश्यक आहे. नवीन नियमांनुसार आधार कार्ड, दहावीचे गुणपत्रक आणि इतर माहिती योग्य प्रकारे भरल्यास प्रवेश प्रक्रियेत कोणतीही अडचण येणार नाही.
-      </p>
+    <!-- ================= MARATHI VERSION ================= -->
+    <div id="marathi-version">
+      <!-- Table of Contents (Marathi) -->
+      <div class="bg-bg-surface border border-border-card rounded-3xl p-8 mb-12">
+        <h2
+          class="text-xl font-bold text-text-main mb-4 flex items-center gap-2 m-0 border-none animate-[none]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="text-primary"
+            ><line x1="8" y1="6" x2="21" y2="6"></line><line
+              x1="8"
+              y1="12"
+              x2="21"
+              y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line
+              x1="3"
+              y1="6"
+              x2="3.01"
+              y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line
+              x1="3"
+              y1="18"
+              x2="3.01"
+              y2="18"></line>
+          </svg>
+          या लेखातील मुख्य मुद्दे (मराठी)
+        </h2>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 list-none p-0 m-0 mt-2">
+          <li>
+            <a
+              href="#changes"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >ITI प्रवेश 2026 मधील बदल</a
+            >
+          </li>
+          <li>
+            <a
+              href="#documents"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >अर्जासाठी आवश्यक कागदपत्रे</a
+            >
+          </li>
+          <li>
+            <a
+              href="#online-process"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >नोंदणी (Registration) कशी करावी?</a
+            >
+          </li>
+          <li>
+            <a
+              href="#details-filling"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >पत्ता, पालकांची व शैक्षणिक माहिती</a
+            >
+          </li>
+          <li>
+            <a
+              href="#checklist"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >अर्ज सबमिट करण्यापूर्वी तपासा</a
+            >
+          </li>
+        </ul>
+      </div>
 
-      <h2 id="changes">आयटीआय प्रवेश 2026 मध्ये काय बदल झाले?</h2>
-      <div class="bg-bg-surface border border-border-card p-6 rounded-2xl">
-        <p class="m-0">
-          यंदाच्या प्रवेश प्रक्रियेत <strong>सर्व माहिती आधार कार्डनुसार भरणे अनिवार्य</strong> करण्यात आले आहे. विद्यार्थ्याचे नाव, वडिलांचे नाव, आडनाव आणि जन्मतारीख आधार कार्ड व दहावीच्या गुणपत्रकावर एकसारखी असणे आवश्यक आहे. जर माहितीमध्ये फरक असेल तर प्रथम आधार कार्ड अपडेट करून घ्यावे.
+      <!-- Content (Marathi) -->
+      <div class="space-y-8 text-text-main leading-relaxed">
+        <p>
+          महाराष्ट्र राज्यातील औद्योगिक प्रशिक्षण संस्था (ITI) प्रवेश प्रक्रिया 2026 सुरू झाली आहे. यावर्षी प्रवेश पोर्टलमध्ये काही महत्त्वाचे बदल करण्यात आले आहेत. त्यामुळे विद्यार्थ्यांनी अर्ज भरताना विशेष काळजी घेणे आवश्यक आहे. नवीन नियमांनुसार आधार कार्ड, दहावीचे गुणपत्रक आणि इतर माहिती योग्य प्रकारे भरल्यास प्रवेश प्रक्रियेत कोणतीही अडचण येणार नाही.
+        </p>
+
+        <h2 id="changes">आयटीआय प्रवेश 2026 मध्ये काय बदल झाले?</h2>
+        <div class="bg-bg-surface border border-border-card p-6 rounded-2xl">
+          <p class="m-0">
+            यंदाच्या प्रवेश प्रक्रियेत <strong>सर्व माहिती आधार कार्डनुसार भरणे अनिवार्य</strong> करण्यात आले आहे. विद्यार्थ्याचे नाव, वडिलांचे नाव, आडनाव आणि जन्मतारीख आधार कार्ड व दहावीच्या गुणपत्रकावर एकसारखी असणे आवश्यक आहे. जर माहितीमध्ये फरक असेल तर प्रथम आधार कार्ड अपडेट करून घ्यावे.
+          </p>
+        </div>
+
+        <h2 id="documents">अर्जासाठी आवश्यक कागदपत्रे</h2>
+        <p>अर्ज भरण्यापूर्वी खालील कागदपत्रे तयार ठेवा:</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 my-8">
+          {[
+            { title: "आधार कार्ड", desc: "नाव व जन्मतारीख पडताळणीसाठी आवश्यक." },
+            { title: "दहावीचे गुणपत्रक (SSC Marksheet)", desc: "शैक्षणिक गुणांची पडताळणी करण्यासाठी." },
+            { title: "मोबाईल नंबर व ईमेल", desc: "OTP व महत्वाचे अपडेट्स मिळण्यासाठी." },
+            { title: "उत्पन्न प्रमाणपत्र", desc: "शिष्यवृत्ती व शुल्कात सवलत मिळवण्यासाठी (लागू असल्यास)." },
+            { title: "जात प्रमाणपत्र", desc: "आरक्षण सवलतीचा लाभ घेण्यासाठी (लागू असल्यास)." },
+            { title: "रहिवासी प्रमाणपत्र", desc: "महाराष्ट्र रहिवासी डोमासाईल कोटा कोट्यासाठी." },
+            { title: "अपार आयडी (APAAR ID)", desc: "उपलब्ध असल्यास नोंदणी दरम्यान जोडावे." },
+            { title: "आरक्षण प्रमाणपत्रे", desc: "इतर संबंधित आरक्षणे (उदा. दिव्यांग, अनाथ)." }
+          ].map((doc) => (
+            <div class="bg-bg-card border border-border-card p-4 rounded-xl">
+              <strong class="text-text-main block mb-1">🗂️ {doc.title}</strong>
+              <span class="text-xs text-text-muted">{doc.desc}</span>
+            </div>
+          ))}
+        </div>
+
+        <h2 id="online-process">ITI Admission 2026 Registration कसे करावे?</h2>
+        
+        <div class="space-y-6 pl-2 border-l-2 border-primary/30">
+          <div class="relative pl-8">
+            <span class="absolute left-[-1.05rem] top-0.5 flex items-center justify-center w-5 h-5 rounded-full bg-primary text-white text-xs font-bold">1</span>
+            <h4 class="text-text-main font-bold m-0 mb-1">Step 1: अधिकृत वेबसाइटला भेट द्या</h4>
+            <p class="text-sm text-text-muted m-0">सर्वप्रथम ITI Admission 2026 किंवा DVET Maharashtra Admission Portal शोधा आणि अधिकृत प्रवेश पोर्टल (<strong>admission.dvet.gov.in</strong>) उघडा.</p>
+          </div>
+          <div class="relative pl-8">
+            <span class="absolute left-[-1.05rem] top-0.5 flex items-center justify-center w-5 h-5 rounded-full bg-primary text-white text-xs font-bold">2</span>
+            <h4 class="text-text-main font-bold m-0 mb-1">Step 2: New Candidate Registration</h4>
+            <p class="text-sm text-text-muted m-0">होमपेजवर <strong>"New Candidate Registration"</strong> या पर्यायावर क्लिक करा.</p>
+          </div>
+          <div class="relative pl-8">
+            <span class="absolute left-[-1.05rem] top-0.5 flex items-center justify-center w-5 h-5 rounded-full bg-primary text-white text-xs font-bold">3</span>
+            <h4 class="text-text-main font-bold m-0 mb-1">Step 3: प्राथमिक माहिती भरा</h4>
+            <p class="text-sm text-text-muted m-0">
+              खालील प्रश्नांची योग्य उत्तरे निवडा:<br />
+              • पूर्वी 2017 ते 2025 दरम्यान अर्ज भरला आहे का?<br />
+              • MSBTE प्रवेश पोर्टलवर नोंदणी केली आहे का?
+            </p>
+          </div>
+          <div class="relative pl-8">
+            <span class="absolute left-[-1.05rem] top-0.5 flex items-center justify-center w-5 h-5 rounded-full bg-primary text-white text-xs font-bold">4</span>
+            <h4 class="text-text-main font-bold m-0 mb-1">Step 4: वैयक्तिक माहिती भरा</h4>
+            <p class="text-sm text-text-muted m-0">
+              आधार कार्डनुसार खालील माहिती भरा: <em>नाव, वडिलांचे नाव, आडनाव, लिंग आणि जन्मतारीख</em>. यानंतर मोबाईल नंबर OTP द्वारे पडताळणी करा.
+            </p>
+          </div>
+          <div class="relative pl-8">
+            <span class="absolute left-[-1.05rem] top-0.5 flex items-center justify-center w-5 h-5 rounded-full bg-primary text-white text-xs font-bold">5</span>
+            <h4 class="text-text-main font-bold m-0 mb-1">Step 5: ई-मेल आणि पासवर्ड तयार करा</h4>
+            <p class="text-sm text-text-muted m-0">
+              तुमचा ई-मेल आयडी भरा, सुरक्षित पासवर्ड तयार करा आणि Security Questions निवडा. यानंतर Registration पूर्ण करा.
+            </p>
+          </div>
+        </div>
+
+        <h2>आधार पडताळणी (Aadhaar Verification)</h2>
+        <p>
+          लॉगिन केल्यानंतर आधार क्रमांक टाकून <strong>Aadhaar Verification</strong> पूर्ण करणे आवश्यक आहे. आधारवरील माहिती आणि अर्जातील माहिती जुळणे अत्यंत महत्त्वाचे आहे.
+        </p>
+
+        <h2 id="details-filling">अर्ज माहिती भरण्याची प्रक्रिया</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+          <!-- Address Details -->
+          <div class="bg-bg-surface border border-border-card p-6 rounded-2xl">
+            <h4 class="text-text-main font-bold mt-0 mb-3">📍 पत्ता (Address Details)</h4>
+            <p class="text-sm text-text-muted leading-relaxed mb-0">
+              • कायमचा पत्ता आणि पत्रव्यवहाराचा पत्ता भरा.<br />
+              • पिनकोड आणि गाव/शहर अचूक निवडा.<br />
+              • जर कायमचा आणि पत्रव्यवहाराचा पत्ता समान असेल तर <strong>"Same Address"</strong> पर्याय निवडा.
+            </p>
+          </div>
+
+          <!-- Parent Details -->
+          <div class="bg-bg-surface border border-border-card p-6 rounded-2xl">
+            <h4 class="text-text-main font-bold mt-0 mb-3">👨‍👩‍👦 पालकांची माहिती (Parent Details)</h4>
+            <p class="text-sm text-text-muted leading-relaxed mb-0">
+              • <strong>वडिलांची माहिती:</strong> नाव, व्यवसाय, वार्षिक उत्पन्न आणि राहण्याचा जिल्हा.<br />
+              • <strong>आईची माहिती:</strong> नाव, व्यवसाय, वार्षिक उत्पन्न.
+            </p>
+          </div>
+
+          <!-- Reservation Details -->
+          <div class="bg-bg-surface border border-border-card p-6 rounded-2xl">
+            <h4 class="text-text-main font-bold mt-0 mb-3">🏷️ जात व आरक्षण माहिती</h4>
+            <p class="text-sm text-text-muted leading-relaxed mb-0">
+              • जात वर्गवारी (Category) अचूक निवडा.<br />
+              • तुमची मातृभाषा आणि Minority Status माहिती भरा.<br />
+              • Maharashtra Domicile Status काळजीपूर्वक निवडा (चुकीची माहिती दिल्यास प्रवेशात अडचण येऊ शकते).
+            </p>
+          </div>
+
+          <!-- Academic Details -->
+          <div class="bg-bg-surface border border-border-card p-6 rounded-2xl">
+            <h4 class="text-text-main font-bold mt-0 mb-3">🎓 शैक्षणिक पात्रता (Qualification Details)</h4>
+            <p class="text-sm text-text-muted leading-relaxed mb-0">
+              • परीक्षा मंडळ, रोल नंबर आणि शाळेचा जिल्हा भरा.<br />
+              • गणित आणि विज्ञान विषयाचे गुण भरा.<br />
+              • यावर्षी प्रत्येक विषयाचे गुण वेगळे भरण्याऐवजी मुख्य गुणांची माहिती भरावी लागते. <strong>मेरिट याच गुणांच्या आधारे तयार केली जाते.</strong>
+            </p>
+          </div>
+        </div>
+
+        <h2>अतिरिक्त गुणांसाठी विशेष श्रेणी</h2>
+        <p>
+          खालील श्रेणीतील विद्यार्थ्यांना अतिरिक्त गुणांचा किंवा कोट्याचा लाभ मिळू शकतो (मात्र संबंधित प्रमाणपत्र असल्यास आणि पडताळणी झाली असल्यास "Yes" निवडावे):
+        </p>
+        <ul>
+          <li>दिव्यांग विद्यार्थी (PwD)</li>
+          <li>संरक्षण दल श्रेणी (Ex-Servicemen quota)</li>
+          <li>राज्य/राष्ट्रीय स्तराचे क्रीडा प्रमाणपत्र धारक</li>
+          <li>सरकारी मान्यताप्राप्त निवासी शाळा विद्यार्थी</li>
+        </ul>
+
+        <h2 id="checklist">अर्ज सबमिट करण्यापूर्वी तपासा</h2>
+        <p>अर्ज अंतिम सबमिट करण्यापूर्वी पुढील बाबी काळजीपूर्वक तपासा:</p>
+        
+        <div class="bg-bg-surface border border-border-card p-6 rounded-2xl space-y-3">
+          {[
+            "नाव आधार कार्ड व दहावीच्या गुणपत्रकाप्रमाणे अचूक आहे का?",
+            "आधार क्रमांक अचूक भरला आहे का?",
+            "मोबाईल नंबर व ई-मेल पडताळणी पूर्ण झाली आहे का?",
+            "दहावीचे गुण आणि रोल नंबर अचूक भरले आहेत का?",
+            "जात आणि आरक्षणाची माहिती योग्य निवडली आहे का?"
+          ].map((item) => (
+            <div class="flex items-start gap-3">
+              <span class="text-emerald-500 font-bold shrink-0">✅</span>
+              <span class="text-sm font-semibold text-text-muted">{item}</span>
+            </div>
+          ))}
+        </div>
+        <p class="text-sm text-text-muted mt-4">
+          सर्व माहिती तपासल्यानंतर <strong>"Lock Profile"</strong> वर क्लिक करा. प्रोफाइल लॉक झाल्यानंतर तुमचा युनिक <strong>Application ID</strong> तयार होईल.
+        </p>
+
+        <h2>निष्कर्ष</h2>
+        <p>
+          महाराष्ट्र ITI Admission 2026 प्रक्रियेमध्ये अनेक नवीन बदल करण्यात आले आहेत. त्यामुळे अर्ज भरताना आधार कार्ड आणि दहावीच्या गुणपत्रकातील माहिती अचूक असणे अत्यंत आवश्यक आहे. योग्य कागदपत्रे तयार ठेवून आणि सर्व माहिती काळजीपूर्वक भरून विद्यार्थी सहजपणे आपला ITI प्रवेश अर्ज पूर्ण करू शकतात.
+        </p>
+      </div>
+    </div>
+
+    <!-- ================= LANGUAGE SEPARATOR ================= -->
+    <div class="my-16 border-t-2 border-dashed border-border-card flex items-center justify-center relative">
+      <span class="absolute bg-bg-base px-8 py-2 text-base sm:text-lg font-extrabold uppercase tracking-widest text-primary border border-border-card rounded-full shadow-md">
+        English
+      </span>
+    </div>
+
+    <!-- ================= ENGLISH VERSION ================= -->
+    <div id="english-version" class="opacity-95">
+      <div class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-extrabold text-text-main mb-4">
+          Maharashtra ITI Admission 2026: Application Process, Required Documents & Complete Guide
+        </h2>
+        <p class="text-text-muted leading-relaxed italic">
+          The Industrial Training Institute (ITI) admission process for the academic year 2026 has started in Maharashtra. Some crucial updates have been introduced to the admission portal this year. Check the step-by-step registration guidelines, eligibility criteria, and key details below.
         </p>
       </div>
 
-      <h2 id="documents">अर्जासाठी आवश्यक कागदपत्रे</h2>
-      <p>अर्ज भरण्यापूर्वी खालील कागदपत्रे तयार ठेवा:</p>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 my-8">
-        {[
-          { title: "आधार कार्ड", desc: "नाव व जन्मतारीख पडताळणीसाठी आवश्यक." },
-          { title: "दहावीचे गुणपत्रक (SSC Marksheet)", desc: "शैक्षणिक गुणांची पडताळणी करण्यासाठी." },
-          { title: "मोबाईल नंबर व ईमेल", desc: "OTP व महत्वाचे अपडेट्स मिळण्यासाठी." },
-          { title: "उत्पन्न प्रमाणपत्र", desc: "शिष्यवृत्ती व शुल्कात सवलत मिळवण्यासाठी (लागू असल्यास)." },
-          { title: "जात प्रमाणपत्र", desc: "आरक्षण सवलतीचा लाभ घेण्यासाठी (लागू असल्यास)." },
-          { title: "रहिवासी प्रमाणपत्र", desc: "महाराष्ट्र रहिवासी डोमासाईल कोटा कोट्यासाठी." },
-          { title: "अपार आयडी (APAAR ID)", desc: "उपलब्ध असल्यास नोंदणी दरम्यान जोडावे." },
-          { title: "आरक्षण प्रमाणपत्रे", desc: "इतर संबंधित आरक्षणे (उदा. दिव्यांग, अनाथ)." }
-        ].map((doc) => (
-          <div class="bg-bg-card border border-border-card p-4 rounded-xl">
-            <strong class="text-text-main block mb-1">🗂️ {doc.title}</strong>
-            <span class="text-xs text-text-muted">{doc.desc}</span>
+      <!-- Table of Contents (English) -->
+      <div class="bg-bg-surface border border-border-card rounded-3xl p-8 mb-12">
+        <h2
+          class="text-xl font-bold text-text-main mb-4 flex items-center gap-2 m-0 border-none animate-[none]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="text-primary"
+            ><line x1="8" y1="6" x2="21" y2="6"></line><line
+              x1="8"
+              y1="12"
+              x2="21"
+              y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line
+              x1="3"
+              y1="6"
+              x2="3.01"
+              y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line
+              x1="3"
+              y1="18"
+              x2="3.01"
+              y2="18"></line>
+          </svg>
+          Key Topics in this Article (English)
+        </h2>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 list-none p-0 m-0 mt-2">
+          <li>
+            <a
+              href="#en-changes"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >Key Changes in ITI Admission 2026</a
+            >
+          </li>
+          <li>
+            <a
+              href="#en-documents"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >Required Documents</a
+            >
+          </li>
+          <li>
+            <a
+              href="#en-online-process"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >Step-by-Step Registration Guide</a
+            >
+          </li>
+          <li>
+            <a
+              href="#en-details-filling"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >Personal, Parent & Qualification Details</a
+            >
+          </li>
+          <li>
+            <a
+              href="#en-checklist"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >Final Check Before Submission</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!-- Content (English) -->
+      <div class="space-y-8 text-text-main leading-relaxed">
+        <p>
+          The Industrial Training Institute (ITI) admission process 2026 for Maharashtra State has officially commenced. This year, the Directorate of Vocational Education and Training (DVET) has introduced significant modifications to the registration procedure. Candidates are advised to fill out the application form with utmost precision. Ensuring that the details match your Aadhaar Card and 10th-grade (SSC) marksheet will prevent administrative discrepancies during counseling.
+        </p>
+
+        <h2 id="en-changes">Key Changes in ITI Admission 2026</h2>
+        <div class="bg-bg-surface border border-border-card p-6 rounded-2xl">
+          <p class="m-0">
+            For this academic year, it is <strong>mandatory to fill all details exactly as they appear on your Aadhaar Card</strong>. Your name, father's name, surname, and date of birth must match perfectly between your Aadhaar Card and 10th-grade marksheet. If there are any differences, you should get your Aadhaar Card updated immediately before locking the profile.
+          </p>
+        </div>
+
+        <h2 id="en-documents">Required Documents for Application</h2>
+        <p>Make sure you have soft/hard copies of the following documents ready before starting your application:</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 my-8">
+          {[
+            { title: "Aadhaar Card", desc: "Required for identity and date of birth verification." },
+            { title: "SSC Marksheet (10th)", desc: "Needed to verify overall scores and board details." },
+            { title: "Mobile Number & Email", desc: "For verifying registrations via OTP and receiving updates." },
+            { title: "Income Certificate", desc: "Required for scholarships and fee concession eligibility." },
+            { title: "Caste Certificate", desc: "Mandatory for availing reservation category benefits." },
+            { title: "Domicile Certificate", desc: "To verify residency for the Maharashtra state quota." },
+            { title: "APAAR ID", desc: "Should be linked during registration if already generated." },
+            { title: "Special Reservations", desc: "Relevant certificates for PwD, Orphan, or Defense quotas." }
+          ].map((doc) => (
+            <div class="bg-bg-card border border-border-card p-4 rounded-xl">
+              <strong class="text-text-main block mb-1">🗂️ {doc.title}</strong>
+              <span class="text-xs text-text-muted">{doc.desc}</span>
+            </div>
+          ))}
+        </div>
+
+        <h2 id="en-online-process">How to Register for ITI Admission 2026?</h2>
+        
+        <div class="space-y-6 pl-2 border-l-2 border-primary/30">
+          <div class="relative pl-8">
+            <span class="absolute left-[-1.05rem] top-0.5 flex items-center justify-center w-5 h-5 rounded-full bg-primary text-white text-xs font-bold">1</span>
+            <h4 class="text-text-main font-bold m-0 mb-1">Step 1: Visit the Official Portal</h4>
+            <p class="text-sm text-text-muted m-0">Navigate to the official DVET Maharashtra Admission Portal at <strong>admission.dvet.gov.in</strong>.</p>
           </div>
-        ))}
-      </div>
-
-      <h2 id="online-process">ITI Admission 2026 Registration कसे करावे?</h2>
-      
-      <div class="space-y-6 pl-2 border-l-2 border-primary/30">
-        <div class="relative pl-8">
-          <span class="absolute left-[-1.05rem] top-0.5 flex items-center justify-center w-5 h-5 rounded-full bg-primary text-white text-xs font-bold">1</span>
-          <h4 class="text-text-main font-bold m-0 mb-1">Step 1: अधिकृत वेबसाइटला भेट द्या</h4>
-          <p class="text-sm text-text-muted m-0">सर्वप्रथम ITI Admission 2026 किंवा DVET Maharashtra Admission Portal शोधा आणि अधिकृत प्रवेश पोर्टल (<strong>admission.dvet.gov.in</strong>) उघडा.</p>
-        </div>
-        <div class="relative pl-8">
-          <span class="absolute left-[-1.05rem] top-0.5 flex items-center justify-center w-5 h-5 rounded-full bg-primary text-white text-xs font-bold">2</span>
-          <h4 class="text-text-main font-bold m-0 mb-1">Step 2: New Candidate Registration</h4>
-          <p class="text-sm text-text-muted m-0">होमपेजवर <strong>"New Candidate Registration"</strong> या पर्यायावर क्लिक करा.</p>
-        </div>
-        <div class="relative pl-8">
-          <span class="absolute left-[-1.05rem] top-0.5 flex items-center justify-center w-5 h-5 rounded-full bg-primary text-white text-xs font-bold">3</span>
-          <h4 class="text-text-main font-bold m-0 mb-1">Step 3: प्राथमिक माहिती भरा</h4>
-          <p class="text-sm text-text-muted m-0">
-            खालील प्रश्नांची योग्य उत्तरे निवडा:<br />
-            • पूर्वी 2017 ते 2025 दरम्यान अर्ज भरला आहे का?<br />
-            • MSBTE प्रवेश पोर्टलवर नोंदणी केली आहे का?
-          </p>
-        </div>
-        <div class="relative pl-8">
-          <span class="absolute left-[-1.05rem] top-0.5 flex items-center justify-center w-5 h-5 rounded-full bg-primary text-white text-xs font-bold">4</span>
-          <h4 class="text-text-main font-bold m-0 mb-1">Step 4: वैयक्तिक माहिती भरा</h4>
-          <p class="text-sm text-text-muted m-0">
-            आधार कार्डनुसार खालील माहिती भरा: <em>नाव, वडिलांचे नाव, आडनाव, लिंग आणि जन्मतारीख</em>. यानंतर मोबाईल नंबर OTP द्वारे पडताळणी करा.
-          </p>
-        </div>
-        <div class="relative pl-8">
-          <span class="absolute left-[-1.05rem] top-0.5 flex items-center justify-center w-5 h-5 rounded-full bg-primary text-white text-xs font-bold">5</span>
-          <h4 class="text-text-main font-bold m-0 mb-1">Step 5: ई-मेल आणि पासवर्ड तयार करा</h4>
-          <p class="text-sm text-text-muted m-0">
-            तुमचा ई-मेल आयडी भरा, सुरक्षित पासवर्ड तयार करा आणि Security Questions निवडा. यानंतर Registration पूर्ण करा.
-          </p>
-        </div>
-      </div>
-
-      <h2>आधार पडताळणी (Aadhaar Verification)</h2>
-      <p>
-        लॉगिन केल्यानंतर आधार क्रमांक टाकून <strong>Aadhaar Verification</strong> पूर्ण करणे आवश्यक आहे. आधारवरील माहिती आणि अर्जातील माहिती जुळणे अत्यंत महत्त्वाचे आहे.
-      </p>
-
-      <h2 id="details-filling">अर्ज माहिती भरण्याची प्रक्रिया</h2>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-        <!-- Address Details -->
-        <div class="bg-bg-surface border border-border-card p-6 rounded-2xl">
-          <h4 class="text-text-main font-bold mt-0 mb-3">📍 पत्ता (Address Details)</h4>
-          <p class="text-sm text-text-muted leading-relaxed mb-0">
-            • कायमचा पत्ता आणि पत्रव्यवहाराचा पत्ता भरा.<br />
-            • पिनकोड आणि गाव/शहर अचूक निवडा.<br />
-            • जर कायमचा आणि पत्रव्यवहाराचा पत्ता समान असेल तर <strong>"Same Address"</strong> पर्याय निवडा.
-          </p>
-        </div>
-
-        <!-- Parent Details -->
-        <div class="bg-bg-surface border border-border-card p-6 rounded-2xl">
-          <h4 class="text-text-main font-bold mt-0 mb-3">👨‍👩‍👦 पालकांची माहिती (Parent Details)</h4>
-          <p class="text-sm text-text-muted leading-relaxed mb-0">
-            • <strong>वडिलांची माहिती:</strong> नाव, व्यवसाय, वार्षिक उत्पन्न आणि राहण्याचा जिल्हा.<br />
-            • <strong>आईची माहिती:</strong> नाव, व्यवसाय, वार्षिक उत्पन्न.
-          </p>
-        </div>
-
-        <!-- Reservation Details -->
-        <div class="bg-bg-surface border border-border-card p-6 rounded-2xl">
-          <h4 class="text-text-main font-bold mt-0 mb-3">🏷️ जात व आरक्षण माहिती</h4>
-          <p class="text-sm text-text-muted leading-relaxed mb-0">
-            • जात वर्गवारी (Category) अचूक निवडा.<br />
-            • तुमची मातृभाषा आणि Minority Status माहिती भरा.<br />
-            • Maharashtra Domicile Status काळजीपूर्वक निवडा (चुकीची माहिती दिल्यास प्रवेशात अडचण येऊ शकते).
-          </p>
-        </div>
-
-        <!-- Academic Details -->
-        <div class="bg-bg-surface border border-border-card p-6 rounded-2xl">
-          <h4 class="text-text-main font-bold mt-0 mb-3">🎓 शैक्षणिक पात्रता (Qualification Details)</h4>
-          <p class="text-sm text-text-muted leading-relaxed mb-0">
-            • परीक्षा मंडळ, रोल नंबर आणि शाळेचा जिल्हा भरा.<br />
-            • गणित आणि विज्ञान विषयाचे गुण भरा.<br />
-            • यावर्षी प्रत्येक विषयाचे गुण वेगळे भरण्याऐवजी मुख्य गुणांची माहिती भरावी लागते. <strong>मेरिट याच गुणांच्या आधारे तयार केली जाते.</strong>
-          </p>
-        </div>
-      </div>
-
-      <h2>अतिरिक्त गुणांसाठी विशेष श्रेणी</h2>
-      <p>
-        खालील श्रेणीतील विद्यार्थ्यांना अतिरिक्त गुणांचा किंवा कोट्याचा लाभ मिळू शकतो (मात्र संबंधित प्रमाणपत्र असल्यास आणि पडताळणी झाली असल्यास "Yes" निवडावे):
-      </p>
-      <ul>
-        <li>दिव्यांग विद्यार्थी (PwD)</li>
-        <li>संरक्षण दल श्रेणी (Ex-Servicemen quota)</li>
-        <li>राज्य/राष्ट्रीय स्तराचे क्रीडा प्रमाणपत्र धारक</li>
-        <li>सरकारी मान्यताप्राप्त निवासी शाळा विद्यार्थी</li>
-      </ul>
-
-      <h2 id="checklist">अर्ज सबमिट करण्यापूर्वी तपासा</h2>
-      <p>अर्ज अंतिम सबमिट करण्यापूर्वी पुढील बाबी काळजीपूर्वक तपासा:</p>
-      
-      <div class="bg-bg-surface border border-border-card p-6 rounded-2xl space-y-3">
-        {[
-          "नाव आधार कार्ड व दहावीच्या गुणपत्रकाप्रमाणे अचूक आहे का?",
-          "आधार क्रमांक अचूक भरला आहे का?",
-          "मोबाईल नंबर व ई-मेल पडताळणी पूर्ण झाली आहे का?",
-          "दहावीचे गुण आणि रोल नंबर अचूक भरले आहेत का?",
-          "जात आणि आरक्षणाची माहिती योग्य निवडली आहे का?"
-        ].map((item) => (
-          <div class="flex items-start gap-3">
-            <span class="text-emerald-500 font-bold shrink-0">✅</span>
-            <span class="text-sm font-semibold text-text-muted">{item}</span>
+          <div class="relative pl-8">
+            <span class="absolute left-[-1.05rem] top-0.5 flex items-center justify-center w-5 h-5 rounded-full bg-primary text-white text-xs font-bold">2</span>
+            <h4 class="text-text-main font-bold m-0 mb-1">Step 2: New Candidate Registration</h4>
+            <p class="text-sm text-text-muted m-0">Click on the <strong>"New Candidate Registration"</strong> option displayed on the homepage.</p>
           </div>
-        ))}
-      </div>
-      <p class="text-sm text-text-muted mt-4">
-        सर्व माहिती तपासल्यानंतर <strong>"Lock Profile"</strong> वर क्लिक करा. प्रोफाइल लॉक झाल्यानंतर तुमचा युनिक <strong>Application ID</strong> तयार होईल.
-      </p>
+          <div class="relative pl-8">
+            <span class="absolute left-[-1.05rem] top-0.5 flex items-center justify-center w-5 h-5 rounded-full bg-primary text-white text-xs font-bold">3</span>
+            <h4 class="text-text-main font-bold m-0 mb-1">Step 3: Basic Questionnaire</h4>
+            <p class="text-sm text-text-muted m-0">
+              Provide answers to basic background questions:<br />
+              • Have you applied for ITI admissions previously between 2017 and 2025?<br />
+              • Have you registered on the MSBTE portal before?
+            </p>
+          </div>
+          <div class="relative pl-8">
+            <span class="absolute left-[-1.05rem] top-0.5 flex items-center justify-center w-5 h-5 rounded-full bg-primary text-white text-xs font-bold">4</span>
+            <h4 class="text-text-main font-bold m-0 mb-1">Step 4: Enter Personal Details</h4>
+            <p class="text-sm text-text-muted m-0">
+              Enter your name, parents' names, gender, and date of birth exactly as printed on your Aadhaar card. Verify your phone number with the OTP code sent.
+            </p>
+          </div>
+          <div class="relative pl-8">
+            <span class="absolute left-[-1.05rem] top-0.5 flex items-center justify-center w-5 h-5 rounded-full bg-primary text-white text-xs font-bold">5</span>
+            <h4 class="text-text-main font-bold m-0 mb-1">Step 5: Account Setup</h4>
+            <p class="text-sm text-text-muted m-0">
+              Enter a valid email address, set up a secure password, and answer the security recovery questions to complete your account registration.
+            </p>
+          </div>
+        </div>
 
-      <h2>निष्कर्ष</h2>
-      <p>
-        महाराष्ट्र ITI Admission 2026 प्रक्रियेमध्ये अनेक नवीन बदल करण्यात आले आहेत. त्यामुळे अर्ज भरताना आधार कार्ड आणि दहावीच्या गुणपत्रकातील माहिती अचूक असणे अत्यंत आवश्यक आहे. योग्य कागदपत्रे तयार ठेवून आणि सर्व माहिती काळजीपूर्वक भरून विद्यार्थी सहजपणे आपला ITI प्रवेश अर्ज पूर्ण करू शकतात.
-      </p>
+        <h2>Aadhaar Card Verification</h2>
+        <p>
+          Once registered, log in to your dashboard and complete the <strong>Aadhaar Verification</strong>. The system cross-checks details with the UIDAI database. A verification match is essential to proceed further.
+        </p>
+
+        <h2 id="en-details-filling">Detailed Application Entry</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+          <!-- Address Details -->
+          <div class="bg-bg-surface border border-border-card p-6 rounded-2xl">
+            <h4 class="text-text-main font-bold mt-0 mb-3">📍 Address Details</h4>
+            <p class="text-sm text-text-muted leading-relaxed mb-0">
+              • Enter permanent and temporary communication addresses.<br />
+              • Make sure city, state, and postal pincode are entered accurately.<br />
+              • Check <strong>"Same Address"</strong> if your current address is the same as the permanent one.
+            </p>
+          </div>
+
+          <!-- Parent Details -->
+          <div class="bg-bg-surface border border-border-card p-6 rounded-2xl">
+            <h4 class="text-text-main font-bold mt-0 mb-3">👨‍👩‍👦 Parent Details</h4>
+            <p class="text-sm text-text-muted leading-relaxed mb-0">
+              • <strong>Father's Details:</strong> Full name, occupation, annual income, and domicile district.<br />
+              • <strong>Mother's Details:</strong> Full name, occupation, and annual income.
+            </p>
+          </div>
+
+          <!-- Reservation Details -->
+          <div class="bg-bg-surface border border-border-card p-6 rounded-2xl">
+            <h4 class="text-text-main font-bold mt-0 mb-3">🏷️ Category & Domicile Details</h4>
+            <p class="text-sm text-text-muted leading-relaxed mb-0">
+              • Select your correct caste category (General/OBC/SC/ST/VJNT).<br />
+              • Declare your mother tongue and Minority Status.<br />
+              • Ensure your Maharashtra Domicile Status is correctly selected to qualify for local seat quotas.
+            </p>
+          </div>
+
+          <!-- Academic Details -->
+          <div class="bg-bg-surface border border-border-card p-6 rounded-2xl">
+            <h4 class="text-text-main font-bold mt-0 mb-3">🎓 Qualification Details</h4>
+            <p class="text-sm text-text-muted leading-relaxed mb-0">
+              • Input Board Name (SSC), Roll Number, and School District.<br />
+              • Provide subject-wise grades, particularly for Science and Mathematics.<br />
+              • Instead of manual itemization, overall aggregate scores are evaluated to compile the official merit ranks.
+            </p>
+          </div>
+        </div>
+
+        <h2>Special Category Points</h2>
+        <p>
+          Applicants can claim additional weightage points if they qualify for these special quotas (relevant documents must be validated at the facilitation centers):
+        </p>
+        <ul>
+          <li>Persons with Disabilities (PwD)</li>
+          <li>Children of Ex-Servicemen / Defense personnel</li>
+          <li>State or National-level Sports Certificate holders</li>
+          <li>Candidates from government-approved residential schools</li>
+        </ul>
+
+        <h2 id="en-checklist">Final Verification Checklist</h2>
+        <p>Double-check the following items before confirming your submission:</p>
+        
+        <div class="bg-bg-surface border border-border-card p-6 rounded-2xl space-y-3">
+          {[
+            "Is the candidate's name exactly spelling-aligned with the Aadhaar and SSC Marksheet?",
+            "Is the Aadhaar number entered correctly and verified?",
+            "Have you successfully verified both mobile number and email via OTP?",
+            "Are the 10th standard roll number and total marks exact?",
+            "Has the correct caste reservation category been declared?"
+          ].map((item) => (
+            <div class="flex items-start gap-3">
+              <span class="text-emerald-500 font-bold shrink-0">✅</span>
+              <span class="text-sm font-semibold text-text-muted">{item}</span>
+            </div>
+          ))}
+        </div>
+        <p class="text-sm text-text-muted mt-4">
+          Once satisfied with all fields, click <strong>"Lock Profile"</strong>. Please note that after locking, editing will be disabled and your official <strong>Application ID</strong> will be generated.
+        </p>
+
+        <h2>Conclusion</h2>
+        <p>
+          The Maharashtra ITI Admission 2026 process has transitioned to stricter identity checks. Having mismatch-free documents (Aadhaar and SSC marksheet) is critical for a smooth registration. By keeping files organized and verifying all inputs, students can secure their Application ID without errors.
+        </p>
+      </div>
     </div>
   </article>
 </Layout>
