@@ -8,13 +8,13 @@ const pages = [
   { name: "Admit Card", href: "/admit-card" },
   { name: "Answer Key", href: "/answer-key" },
   { name: "Admission", href: "/admission" },
-  { name: "About Us", href: "/about" },
-  { name: "Contact Us", href: "/contact" },
+  { name: "About Us", href: "/about-us" },
+  { name: "Contact Us", href: "/contact-us" },
 ];
 
 const legalPages = [
-  { name: "Privacy Policy", href: "/privacy" },
-  { name: "Terms of Service", href: "/terms" },
+  { name: "Privacy Policy", href: "/privacy-policy" },
+  { name: "Terms of Service", href: "/terms-of-service" },
   { name: "Disclaimer", href: "/disclaimer" },
 ];
 
@@ -27,89 +27,121 @@ const nonArticleFiles = [
   "admit-card.astro",
   "answer-key.astro",
   "admission.astro",
-  "about.astro",
-  "contact.astro",
+  "about-us.astro",
+  "contact-us.astro",
   "sitemap.astro",
-  "privacy.astro",
-  "terms.astro",
+  "privacy-policy.astro",
+  "terms-of-service.astro",
   "disclaimer.astro",
-  "blog.astro"
+  "blog.astro",
 ];
 
 const articles = Object.keys(postFiles)
   .filter((file) => {
-    const filename = file.split('/').pop() || "";
+    const filename = file.split("/").pop() || "";
     return !nonArticleFiles.includes(filename);
   })
-  .map(file => {
-    const slug = file.split('/').pop()?.replace('.astro', '');
-    const name = slug?.replace(/-/g, ' ');
+  .map((file) => {
+    const slug = file.split("/").pop()?.replace(".astro", "");
+    const name = slug?.replace(/-/g, " ");
     const href = `/${slug}`;
     return { name, href, slug };
   });
 ---
 
-<Layout title="Sitemap - All Pages & Navigation Index | TechFixSteps" description="Complete sitemap of TechFixSteps website. Find all pages including government jobs, exam results, admit cards, answer keys, admissions, blog articles, and legal pages at techfixsteps.com.">
+<Layout
+  title="Sitemap - All Pages & Navigation Index | TechFixSteps"
+  description="Complete sitemap of TechFixSteps website. Find all pages including government jobs, exam results, admit cards, answer keys, admissions, blog articles, and legal pages at techfixsteps.com."
+>
   <article class="max-w-4xl mx-auto py-12 px-4">
-    <h1 class="text-4xl md:text-5xl font-extrabold mb-8 tracking-tight text-text-main">Site <span class="gradient-text">Map</span></h1>
-    
+    <h1
+      class="text-4xl md:text-5xl font-extrabold mb-8 tracking-tight text-text-main"
+    >
+      Sitemap
+    </h1>
+
     <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mt-12">
       <div>
-        <h2 class="text-xl font-bold text-text-main mb-6 border-b border-border-card pb-2 flex items-center gap-2">
+        <h2
+          class="text-xl font-bold text-text-main mb-6 border-b border-border-card pb-2 flex items-center gap-2"
+        >
           <span class="w-2 h-6 bg-primary rounded-full"></span>
           Main Pages
         </h2>
         <ul class="space-y-4">
-          {pages.map((page) => (
-            <li>
-              <a href={page.href} class="text-base text-text-muted hover:text-primary transition-colors flex items-center gap-3 group">
-                <span class="w-1.5 h-1.5 bg-border-card rounded-full group-hover:bg-primary transition-colors"></span>
-                {page.name}
-              </a>
-            </li>
-          ))}
+          {
+            pages.map((page) => (
+              <li>
+                <a
+                  href={page.href}
+                  class="text-base text-text-muted hover:text-primary transition-colors flex items-center gap-3 group"
+                >
+                  <span class="w-1.5 h-1.5 bg-border-card rounded-full group-hover:bg-primary transition-colors" />
+                  {page.name}
+                </a>
+              </li>
+            ))
+          }
         </ul>
       </div>
 
       <div>
-        <h2 class="text-xl font-bold text-text-main mb-6 border-b border-border-card pb-2 flex items-center gap-2">
+        <h2
+          class="text-xl font-bold text-text-main mb-6 border-b border-border-card pb-2 flex items-center gap-2"
+        >
           <span class="w-2 h-6 bg-secondary rounded-full"></span>
           Articles
         </h2>
         <ul class="space-y-4">
-          {articles.map((art) => (
-            <li>
-              <a href={art.href} class="text-base text-text-muted hover:text-primary transition-colors flex items-center gap-3 group">
-                <span class="w-1.5 h-1.5 bg-border-card rounded-full group-hover:bg-secondary transition-colors"></span>
-                <span class="capitalize">{art.name}</span>
-              </a>
-            </li>
-          ))}
+          {
+            articles.map((art) => (
+              <li>
+                <a
+                  href={art.href}
+                  class="text-base text-text-muted hover:text-primary transition-colors flex items-center gap-3 group"
+                >
+                  <span class="w-1.5 h-1.5 bg-border-card rounded-full group-hover:bg-secondary transition-colors" />
+                  <span class="capitalize">{art.name}</span>
+                </a>
+              </li>
+            ))
+          }
         </ul>
       </div>
 
       <div>
-        <h2 class="text-xl font-bold text-text-main mb-6 border-b border-border-card pb-2 flex items-center gap-2">
+        <h2
+          class="text-xl font-bold text-text-main mb-6 border-b border-border-card pb-2 flex items-center gap-2"
+        >
           <span class="w-2 h-6 bg-text-muted rounded-full"></span>
           Legal
         </h2>
         <ul class="space-y-4">
-          {legalPages.map((page) => (
-            <li>
-              <a href={page.href} class="text-base text-text-muted hover:text-primary transition-colors flex items-center gap-3 group">
-                <span class="w-1.5 h-1.5 bg-border-card rounded-full group-hover:bg-text-muted transition-colors"></span>
-                {page.name}
-              </a>
-            </li>
-          ))}
+          {
+            legalPages.map((page) => (
+              <li>
+                <a
+                  href={page.href}
+                  class="text-base text-text-muted hover:text-primary transition-colors flex items-center gap-3 group"
+                >
+                  <span class="w-1.5 h-1.5 bg-border-card rounded-full group-hover:bg-text-muted transition-colors" />
+                  {page.name}
+                </a>
+              </li>
+            ))
+          }
         </ul>
       </div>
     </div>
 
     <div class="mt-20 p-8 bg-bg-surface border border-border-card rounded-3xl">
       <h3 class="text-xl font-bold text-text-main mb-4">Technical Sitemap</h3>
-      <p class="text-text-muted mb-6">If you are looking for the XML sitemap for search engines, please use the link below:</p>
-      <a href="/sitemap.xml" class="btn-primary inline-flex">View XML Sitemap</a>
+      <p class="text-text-muted mb-6">
+        If you are looking for the XML sitemap for search engines, please use
+        the link below:
+      </p>
+      <a href="/sitemap.xml" class="btn-primary inline-flex">View XML Sitemap</a
+      >
     </div>
   </article>
 </Layout>

@@ -10,10 +10,10 @@ export async function GET() {
     '/admission',
     '/blog',
     '/result',
-    '/contact',
-    '/about',
-    '/privacy',
-    '/terms',
+    '/contact-us',
+    '/about-us',
+    '/privacy-policy',
+    '/terms-of-service',
     '/disclaimer',
     '/sitemap'
   ];
@@ -27,11 +27,11 @@ export async function GET() {
     "admit-card.astro",
     "answer-key.astro",
     "admission.astro",
-    "about.astro",
-    "contact.astro",
+    "about-us.astro",
+    "contact-us.astro",
     "sitemap.astro",
-    "privacy.astro",
-    "terms.astro",
+    "privacy-policy.astro",
+    "terms-of-service.astro",
     "disclaimer.astro",
     "blog.astro"
   ];
