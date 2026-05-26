@@ -1,5 +1,5 @@
 ---
-import Layout from "../../layouts/Layout.astro";
+import Layout from "../layouts/Layout.astro";
 
 const pages = [
   { name: "Home", href: "/" },
@@ -8,24 +8,43 @@ const pages = [
   { name: "Admit Card", href: "/admit-card" },
   { name: "Answer Key", href: "/answer-key" },
   { name: "Admission", href: "/admission" },
-  { name: "About Us", href: "/pages/about" },
-  { name: "Contact Us", href: "/pages/contact" },
+  { name: "About Us", href: "/about" },
+  { name: "Contact Us", href: "/contact" },
 ];
 
 const legalPages = [
-  { name: "Privacy Policy", href: "/pages/privacy" },
-  { name: "Terms of Service", href: "/pages/terms" },
-  { name: "Disclaimer", href: "/pages/disclaimer" },
+  { name: "Privacy Policy", href: "/privacy" },
+  { name: "Terms of Service", href: "/terms" },
+  { name: "Disclaimer", href: "/disclaimer" },
 ];
 
-// Dynamically fetch all articles
-const postFiles = import.meta.glob("../blog/*.astro");
+// Dynamically fetch all articles from the current directory (src/pages/)
+const postFiles = import.meta.glob("./*.astro");
+const nonArticleFiles = [
+  "index.astro",
+  "latest-job.astro",
+  "result.astro",
+  "admit-card.astro",
+  "answer-key.astro",
+  "admission.astro",
+  "about.astro",
+  "contact.astro",
+  "sitemap.astro",
+  "privacy.astro",
+  "terms.astro",
+  "disclaimer.astro",
+  "blog.astro"
+];
 
 const articles = Object.keys(postFiles)
+  .filter((file) => {
+    const filename = file.split('/').pop() || "";
+    return !nonArticleFiles.includes(filename);
+  })
   .map(file => {
     const slug = file.split('/').pop()?.replace('.astro', '');
     const name = slug?.replace(/-/g, ' ');
-    const href = `/blog/${slug}`;
+    const href = `/${slug}`;
     return { name, href, slug };
   });
 ---

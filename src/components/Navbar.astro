@@ -22,14 +22,34 @@ import {
 import Marquee from "./Marquee.astro";
 
 // Fetch posts for search suggestions
-const postFiles = import.meta.glob("../pages/blog/*.astro");
+const postFiles = import.meta.glob("../pages/*.astro");
+const nonArticleFiles = [
+  "index.astro",
+  "latest-job.astro",
+  "result.astro",
+  "admit-card.astro",
+  "answer-key.astro",
+  "admission.astro",
+  "about.astro",
+  "contact.astro",
+  "sitemap.astro",
+  "privacy.astro",
+  "terms.astro",
+  "disclaimer.astro",
+  "blog.astro"
+];
 
-const articles = Object.keys(postFiles).map((file) => {
-  const slug = file.split("/").pop()?.replace(".astro", "");
-  const name = slug?.replace(/-/g, " ");
-  const href = `/blog/${slug}`;
-  return { title: name, href, slug };
-});
+const articles = Object.keys(postFiles)
+  .filter((file) => {
+    const filename = file.split("/").pop() || "";
+    return !nonArticleFiles.includes(filename);
+  })
+  .map((file) => {
+    const slug = file.split("/").pop()?.replace(".astro", "");
+    const name = slug?.replace(/-/g, " ");
+    const href = `/${slug}`;
+    return { title: name, href, slug };
+  });
 
 const mainPages = [
   { title: "Home", href: "/" },
@@ -38,12 +58,12 @@ const mainPages = [
   { title: "Admit Card", href: "/admit-card" },
   { title: "Answer Key", href: "/answer-key" },
   { title: "Admission", href: "/admission" },
-  { title: "About Us", href: "/pages/about" },
-  { title: "Contact Us", href: "/pages/contact" },
-  { title: "Sitemap", href: "/pages/sitemap" },
-  { title: "Privacy Policy", href: "/pages/privacy" },
-  { title: "Terms of Service", href: "/pages/terms" },
-  { title: "Disclaimer", href: "/pages/disclaimer" },
+  { title: "About Us", href: "/about" },
+  { title: "Contact Us", href: "/contact" },
+  { title: "Sitemap", href: "/sitemap" },
+  { title: "Privacy Policy", href: "/privacy" },
+  { title: "Terms of Service", href: "/terms" },
+  { title: "Disclaimer", href: "/disclaimer" },
 ];
 
 const searchData = [...mainPages, ...articles];
@@ -70,31 +90,31 @@ const searchData = [...mainPages, ...articles];
       </div>
       <div class="flex items-center gap-4">
         <a
-          href="/pages/privacy"
+          href="/privacy"
           class="hover:text-primary transition-colors flex items-center gap-1"
           ><HiOutlineShieldCheck className="text-sm" /> Privacy Policy</a
         >
         <span class="text-border-card">|</span>
         <a
-          href="/pages/terms"
+          href="/terms"
           class="hover:text-primary transition-colors flex items-center gap-1"
           ><HiOutlineDocumentText className="text-sm" /> Terms of Service</a
         >
         <span class="text-border-card">|</span>
         <a
-          href="/pages/disclaimer"
+          href="/disclaimer"
           class="hover:text-primary transition-colors flex items-center gap-1"
           ><HiOutlineExclamationTriangle className="text-sm" /> Disclaimer</a
         >
         <span class="text-border-card">|</span>
         <a
-          href="/pages/sitemap"
+          href="/sitemap"
           class="hover:text-primary transition-colors flex items-center gap-1"
           ><HiOutlineMap className="text-sm" /> Sitemap</a
         >
         <span class="text-border-card">|</span>
         <a
-          href="/pages/contact"
+          href="/contact"
           class="hover:text-primary transition-colors flex items-center gap-1"
           ><HiOutlineEnvelope className="text-sm" /> Contact Us</a
         >

@@ -10,21 +10,40 @@ export async function GET() {
     '/admission',
     '/blog',
     '/result',
-    '/pages/contact',
-    '/pages/about',
-    '/pages/privacy',
-    '/pages/terms',
-    '/pages/disclaimer',
-    '/pages/sitemap'
+    '/contact',
+    '/about',
+    '/privacy',
+    '/terms',
+    '/disclaimer',
+    '/sitemap'
   ];
 
-  // Dynamically find all articles in src/pages/blog/
-  const postFiles = import.meta.glob('/src/pages/blog/*.astro');
+  // Dynamically find all articles in src/pages/
+  const postFiles = import.meta.glob('/src/pages/*.astro');
+  const nonArticleFiles = [
+    "index.astro",
+    "latest-job.astro",
+    "result.astro",
+    "admit-card.astro",
+    "answer-key.astro",
+    "admission.astro",
+    "about.astro",
+    "contact.astro",
+    "sitemap.astro",
+    "privacy.astro",
+    "terms.astro",
+    "disclaimer.astro",
+    "blog.astro"
+  ];
   
   const dynamicPages = Object.keys(postFiles)
+    .filter((file) => {
+      const filename = file.split('/').pop() || "";
+      return !nonArticleFiles.includes(filename);
+    })
     .map(file => {
       const slug = file.split('/').pop()?.replace('.astro', '');
-      return `/blog/${slug}`;
+      return `/${slug}`;
     });
 
   const allPages = [...staticPages, ...dynamicPages];
