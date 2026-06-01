@@ -212,7 +212,7 @@ const upcomingCount = recruitments.filter(r => r.status === "upcoming").length;
         </div>
 
         <!-- Filter Buttons Grid -->
-        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-t border-border-card dark:border-border-card/30 pt-4">
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 border-t border-border-card dark:border-border-card/30 pt-4">
           
           <!-- Category Filter Tabs -->
           <div>
@@ -238,7 +238,6 @@ const upcomingCount = recruitments.filter(r => r.status === "upcoming").length;
 
           <!-- Qualification Filter Dropdown -->
           <div class="min-w-[180px]">
-            <span class="block text-[0.65rem] text-text-muted uppercase tracking-wider font-extrabold mb-2.5">Qualification Criteria</span>
             <select 
               id="qual-select"
               class="w-full p-2 bg-bg-base/60 dark:bg-black/30 border border-border-card rounded-lg text-xs font-bold text-text-main uppercase tracking-wider outline-none focus:border-primary cursor-pointer transition-colors"

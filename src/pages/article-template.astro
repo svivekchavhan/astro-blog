@@ -5,7 +5,8 @@ import {
   HiOutlineCursorArrowRays,
   HiOutlineArrowTopRightOnSquare,
   HiOutlineDocumentText,
-  HiOutlineCurrencyRupee
+  HiOutlineCurrencyRupee,
+  HiOutlineMapPin
 } from "react-icons/hi2";
 
 const title = "YOUR ARTICLE TITLE (MARATHI) - 2026";
@@ -53,7 +54,7 @@ const category = "Latest Job";
 
     <!-- ================= MARATHI VERSION ================= -->
     <div id="marathi-version">
-      <div class="space-y-8 text-text-main leading-relaxed">
+      <div class="space-y-6 text-text-main leading-relaxed">
         
         <!-- SEO Title Main Keyword -->
         <h2 id="main-keyword-mr" class="text-2xl font-bold mt-2">Main Keyword / SEO Title Here (Marathi)</h2>
@@ -61,37 +62,100 @@ const category = "Latest Job";
         <!-- Introduction -->
         <div class="mb-6">
           <p>
-            <strong>Introduction:</strong> येथे लेखाची सुरुवात करा. माहिती मराठीत द्या. भरतीबद्दल थोडक्यात सांगा.
+            <strong>Introduction:</strong> येथे लेखाची सुरुवात करा. माहिती मराठीत द्या. भरतीबद्दल थोдक्यात सांगा.
           </p>
           <hr class="border-border-card my-6" />
         </div>
 
-        <!-- Post Details Table -->
-        <h2 id="details">पदांचा तपशील आणि शैक्षणिक पात्रता (Post Details)</h2>
-        <div class="overflow-x-auto my-6">
+        <!-- Key Information / भरतीची महत्वाची माहिती -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
+          <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
+            <HiOutlineDocumentText className="text-primary text-2xl shrink-0 mt-0.5" />
+            <div>
+              <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">जाहिरात क्रमांक (Advt No.)</span>
+              <span class="text-text-main font-semibold text-sm">XX/2026</span>
+            </div>
+          </div>
+          <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
+            <HiOutlineMapPin className="text-primary text-2xl shrink-0 mt-0.5" />
+            <div>
+              <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">नोकरीचे ठिकाण (Job Location)</span>
+              <span class="text-text-main font-semibold text-sm">संपूर्ण महाराष्ट्र (Maharashtra)</span>
+            </div>
+          </div>
+          <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
+            <HiOutlineCurrencyRupee className="text-primary text-2xl shrink-0 mt-0.5" />
+            <div>
+              <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">अर्ज शुल्क (Application Fees)</span>
+              <span class="text-text-main font-semibold text-sm">खुला प्रवर्ग: ₹XXX, राखीव प्रवर्ग: ₹YYY</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Post Details & Education Qualification Table -->
+        <h2 id="details" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">पदांचे नाव आणि शैक्षणिक पात्रता (Post Details & Eligibility)</h2>
+        <div class="overflow-x-auto mt-3 mb-8">
           <table class="w-full text-left border-collapse">
             <thead>
               <tr class="bg-primary/10">
                 <th class="p-3 border border-border-card font-bold text-text-main whitespace-nowrap"><span class="flex items-center gap-1.5"><HiOutlineDocumentText className="text-primary" /> पदाचे नाव (Post Name)</span></th>
-                <th class="p-3 border border-border-card font-bold text-text-main">एकूण पदे (Total Posts)</th>
                 <th class="p-3 border border-border-card font-bold text-text-main">शैक्षणिक पात्रता (Education Qualification)</th>
+                <th class="p-3 border border-border-card font-bold text-text-main">अनुभव (Experience)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td class="p-3 border border-border-card text-text-muted font-medium">Post 1 Name</td>
-                <td class="p-3 border border-border-card text-text-muted">XX</td>
                 <td class="p-3 border border-border-card text-text-muted">
                   <ul class="list-disc pl-5 m-0 space-y-1">
                     <li>Qualification requirement 1</li>
                     <li>Qualification requirement 2</li>
                   </ul>
                 </td>
+                <td class="p-3 border border-border-card text-text-muted">
+                  <span class="inline-block px-2 py-1 rounded text-xs font-bold bg-amber-500/10 text-amber-600 dark:text-amber-400">१ वर्ष अनुभव आवश्यक (1 Year Experience Required)</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">Post 2 Name</td>
+                <td class="p-3 border border-border-card text-text-muted">
+                  <ul class="list-disc pl-5 m-0 space-y-1">
+                    <li>Qualification requirement 1</li>
+                  </ul>
+                </td>
+                <td class="p-3 border border-border-card text-text-muted">
+                  <span class="inline-block px-2 py-1 rounded text-xs font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">अनुभव आवश्यक नाही (Fresher / No Experience)</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Age Limit & Total Posts Table -->
+        <h2 id="age-limit" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">वयोमर्यादा आणि एकूण पदे (Age Limit & Total Posts)</h2>
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-primary/10">
+                <th class="p-3 border border-border-card font-bold text-text-main whitespace-nowrap">पदाचे नाव (Post Name)</th>
+                <th class="p-3 border border-border-card font-bold text-text-main">एकूण पदे (Total Posts)</th>
+                <th class="p-3 border border-border-card font-bold text-text-main">वयोमर्यादा (Age Limit)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">Post 1 Name</td>
+                <td class="p-3 border border-border-card text-text-muted">XX</td>
+                <td class="p-3 border border-border-card text-text-muted">३० ते ३५ वर्षे (30 to 35 Years)</td>
               </tr>
               <tr>
                 <td class="p-3 border border-border-card text-text-muted font-medium">Post 2 Name</td>
                 <td class="p-3 border border-border-card text-text-muted">YY</td>
-                <td class="p-3 border border-border-card text-text-muted">
+                <td class="p-3 border border-border-card text-text-muted">१८ ते ३८ वर्षे (18 to 38 Years)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>der-card text-text-muted">
                   <ul class="list-disc pl-5 m-0 space-y-1">
                     <li>Qualification requirement 1</li>
                   </ul>
@@ -102,8 +166,8 @@ const category = "Latest Job";
         </div>
 
         <!-- Salary Table -->
-        <h2 id="salary">पगार / वेतनमान (Salary Details)</h2>
-        <div class="overflow-x-auto my-6">
+        <h2 id="salary" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">पगार / वेतनमान (Salary Details)</h2>
+        <div class="overflow-x-auto mt-3 mb-8">
           <table class="w-full text-left border-collapse">
             <thead>
               <tr class="bg-primary/10">
@@ -125,8 +189,8 @@ const category = "Latest Job";
         </div>
 
         <!-- Important Dates & Links Table -->
-        <h2 id="important-dates">महत्त्वाच्या तारखा आणि लिंक्स (Important Dates & Links)</h2>
-        <div class="overflow-x-auto my-6">
+        <h2 id="important-dates" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">महत्त्वाच्या तारखा आणि लिंक्स (Important Dates & Links)</h2>
+        <div class="overflow-x-auto mt-3 mb-8">
           <table class="w-full text-left border-collapse">
             <thead>
               <tr class="bg-primary/10">
@@ -168,8 +232,8 @@ const category = "Latest Job";
         </div>
 
         <!-- FAQ Section -->
-        <h2 id="faq">वारंवार विचारले जाणारे प्रश्न (FAQ)</h2>
-        <div class="space-y-4 my-6">
+        <h2 id="faq" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">वारंवार विचारले जाणारे प्रश्न (FAQ)</h2>
+        <div class="space-y-4 mt-3 mb-8">
           <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
             <h3 class="text-lg font-bold text-text-main mb-2">प्रश्न १: येथे प्रश्न टाका?</h3>
             <p class="text-text-muted m-0">उत्तर १: येथे उत्तर द्या.</p>
@@ -206,50 +270,105 @@ const category = "Latest Job";
 
     <!-- ================= ENGLISH VERSION ================= -->
     <div id="english-version" class="opacity-95">
-      <div class="space-y-8 text-text-main leading-relaxed">
+      <div class="space-y-6 text-text-main leading-relaxed">
         
         <!-- SEO Title Main Keyword -->
         <h2 id="main-keyword-en" class="text-2xl font-bold mt-2">Main Keyword / SEO Title Here (English)</h2>
         <!-- (No Introduction needed for English version as requested) -->
 
-        <!-- Post Details Table -->
-        <h2 id="en-details">Vacancy Details & Eligibility</h2>
-        <div class="overflow-x-auto my-6">
+        <!-- Key Information -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
+          <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
+            <HiOutlineDocumentText className="text-primary text-2xl shrink-0 mt-0.5" />
+            <div>
+              <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">Advertisement No.</span>
+              <span class="text-text-main font-semibold text-sm">XX/2026</span>
+            </div>
+          </div>
+          <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
+            <HiOutlineMapPin className="text-primary text-2xl shrink-0 mt-0.5" />
+            <div>
+              <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">Job Location</span>
+              <span class="text-text-main font-semibold text-sm">All Maharashtra</span>
+            </div>
+          </div>
+          <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
+            <HiOutlineCurrencyRupee className="text-primary text-2xl shrink-0 mt-0.5" />
+            <div>
+              <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">Application Fees</span>
+              <span class="text-text-main font-semibold text-sm">General: ₹XXX, Reserved: ₹YYY</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vacancy Details & Eligibility Table -->
+        <h2 id="en-details" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">Vacancy Details & Eligibility</h2>
+        <div class="overflow-x-auto mt-3 mb-8">
           <table class="w-full text-left border-collapse">
             <thead>
               <tr class="bg-primary/10">
                 <th class="p-3 border border-border-card font-bold text-text-main whitespace-nowrap"><span class="flex items-center gap-1.5"><HiOutlineDocumentText className="text-primary" /> Post Name</span></th>
-                <th class="p-3 border border-border-card font-bold text-text-main">Total Posts</th>
                 <th class="p-3 border border-border-card font-bold text-text-main">Education Qualification</th>
+                <th class="p-3 border border-border-card font-bold text-text-main">Experience</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td class="p-3 border border-border-card text-text-muted font-medium">Post 1 Name</td>
-                <td class="p-3 border border-border-card text-text-muted">XX</td>
                 <td class="p-3 border border-border-card text-text-muted">
                   <ul class="list-disc pl-5 m-0 space-y-1">
                     <li>Qualification requirement 1</li>
                     <li>Qualification requirement 2</li>
                   </ul>
                 </td>
+                <td class="p-3 border border-border-card text-text-muted">
+                  <span class="inline-block px-2 py-1 rounded text-xs font-bold bg-amber-500/10 text-amber-600 dark:text-amber-400">1 Year Experience Required</span>
+                </td>
               </tr>
               <tr>
                 <td class="p-3 border border-border-card text-text-muted font-medium">Post 2 Name</td>
-                <td class="p-3 border border-border-card text-text-muted">YY</td>
                 <td class="p-3 border border-border-card text-text-muted">
                   <ul class="list-disc pl-5 m-0 space-y-1">
                     <li>Qualification requirement 1</li>
                   </ul>
+                </td>
+                <td class="p-3 border border-border-card text-text-muted">
+                  <span class="inline-block px-2 py-1 rounded text-xs font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">No Experience Required</span>
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
 
+        <!-- Age Limit & Total Posts Table -->
+        <h2 id="en-age-limit" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">Age Limit & Vacancies</h2>
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-primary/10">
+                <th class="p-3 border border-border-card font-bold text-text-main whitespace-nowrap">Post Name</th>
+                <th class="p-3 border border-border-card font-bold text-text-main">Total Posts</th>
+                <th class="p-3 border border-border-card font-bold text-text-main">Age Limit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">Post 1 Name</td>
+                <td class="p-3 border border-border-card text-text-muted">XX</td>
+                <td class="p-3 border border-border-card text-text-muted">30 to 35 Years</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">Post 2 Name</td>
+                <td class="p-3 border border-border-card text-text-muted">YY</td>
+                <td class="p-3 border border-border-card text-text-muted">18 to 38 Years</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
         <!-- Salary Table -->
-        <h2 id="en-salary">Salary Details</h2>
-        <div class="overflow-x-auto my-6">
+        <h2 id="en-salary" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">Salary Details</h2>
+        <div class="overflow-x-auto mt-3 mb-8">
           <table class="w-full text-left border-collapse">
             <thead>
               <tr class="bg-primary/10">
@@ -271,8 +390,8 @@ const category = "Latest Job";
         </div>
 
         <!-- Important Dates & Links Table -->
-        <h2 id="en-important-dates">Important Dates & Apply Links</h2>
-        <div class="overflow-x-auto my-6">
+        <h2 id="en-important-dates" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">Important Dates & Apply Links</h2>
+        <div class="overflow-x-auto mt-3 mb-8">
           <table class="w-full text-left border-collapse">
             <thead>
               <tr class="bg-primary/10">
@@ -314,8 +433,8 @@ const category = "Latest Job";
         </div>
 
         <!-- FAQ Section -->
-        <h2 id="en-faq">Frequently Asked Questions (FAQ)</h2>
-        <div class="space-y-4 my-6">
+        <h2 id="en-faq" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">Frequently Asked Questions (FAQ)</h2>
+        <div class="space-y-4 mt-3 mb-8">
           <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
             <h3 class="text-lg font-bold text-text-main mb-2">Q1: Question goes here?</h3>
             <p class="text-text-muted m-0">A1: Answer goes here.</p>

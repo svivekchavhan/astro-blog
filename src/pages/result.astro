@@ -34,7 +34,7 @@ const results = [
               data-title={card.title}
               data-org={card.organisation}
               data-category={card.category}
-              class="result-item flex flex-col md:flex-row md:items-center justify-between p-3.5 md:p-5 bg-bg-surface border border-border-card rounded-2xl transition-all duration-300 hover:border-emerald-500 opacity-0 animate-[fadeInUp_0.6s_ease_forwards] gap-3 md:gap-4"
+              class="group result-item flex flex-col md:flex-row md:items-center justify-between p-3.5 md:p-5 bg-bg-surface border border-border-card rounded-2xl transition-all duration-300 hover:border-emerald-500 opacity-0 animate-[fadeInUp_0.6s_ease_forwards] gap-3 md:gap-4"
               style={`animation-delay: ${index * 0.08}s`}
             >
               <!-- Left: Info Block -->
@@ -59,7 +59,9 @@ const results = [
                   )}
                 </div>
 
-                <h3 class="text-base text-text-main font-bold leading-tight mb-1 truncate">{card.title}</h3>
+                <a href={card.link} class="no-underline hover:no-underline block">
+                  <h3 class="text-base text-text-main font-bold leading-tight mb-1 truncate group-hover:text-primary transition-colors">{card.title}</h3>
+                </a>
                 <div class="flex items-center gap-1.5 text-xs text-text-muted">
                   <HiOutlineBuildingOffice className="shrink-0 text-xs" />
                   <span class="truncate">{card.organisation}</span>

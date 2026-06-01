@@ -5,7 +5,8 @@ import {
   HiOutlineCursorArrowRays,
   HiOutlineArrowTopRightOnSquare,
   HiOutlineDocumentText,
-  HiOutlineCurrencyRupee
+  HiOutlineCurrencyRupee,
+  HiOutlineMapPin
 } from "react-icons/hi2";
 
 const title = "BSNL Bharti 2026: भारत संचार निगम लिमिटेड मध्ये 100 जागांसाठी भरती";
@@ -66,35 +67,82 @@ const category = "Latest Job";
           <hr class="border-border-card my-6" />
         </div>
 
-        <!-- Post Details Table -->
-        <h2 id="details">पदांचा तपशील आणि शैक्षणिक पात्रता (Post Details)</h2>
-        <div class="overflow-x-auto my-6">
+        <!-- Key Information / भरतीची महत्वाची माहिती -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
+          <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
+            <HiOutlineDocumentText className="text-primary text-2xl shrink-0 mt-0.5" />
+            <div>
+              <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">जाहिरात क्रमांक (Advt No.)</span>
+              <span class="text-text-main font-semibold text-sm">मूळ जाहिरात वाचावी</span>
+            </div>
+          </div>
+          <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
+            <HiOutlineMapPin className="text-primary text-2xl shrink-0 mt-0.5" />
+            <div>
+              <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">नोकरीचे ठिकाण (Job Location)</span>
+              <span class="text-text-main font-semibold text-sm">संपूर्ण भारत (All India)</span>
+            </div>
+          </div>
+          <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
+            <HiOutlineCurrencyRupee className="text-primary text-2xl shrink-0 mt-0.5" />
+            <div>
+              <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">अर्ज शुल्क (Application Fees)</span>
+              <span class="text-text-main font-semibold text-sm">मूळ जाहिरात वाचावी</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Post Details & Education Qualification Table -->
+        <h2 id="details" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">पदांचे नाव आणि शैक्षणिक पात्रता (Post Details & Eligibility)</h2>
+        <div class="overflow-x-auto mt-3 mb-8">
           <table class="w-full text-left border-collapse">
             <thead>
               <tr class="bg-primary/10">
                 <th class="p-3 border border-border-card font-bold text-text-main whitespace-nowrap"><span class="flex items-center gap-1.5"><HiOutlineDocumentText className="text-primary" /> पदाचे नाव (Post Name)</span></th>
-                <th class="p-3 border border-border-card font-bold text-text-main">एकूण पदे (Total Posts)</th>
                 <th class="p-3 border border-border-card font-bold text-text-main">शैक्षणिक पात्रता (Education Qualification)</th>
+                <th class="p-3 border border-border-card font-bold text-text-main">अनुभव (Experience)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td class="p-3 border border-border-card text-text-muted font-medium">कनिष्ठ दूरसंचार अधिकारी (JTO)</td>
-                <td class="p-3 border border-border-card text-text-muted">१०० जागा</td>
                 <td class="p-3 border border-border-card text-text-muted">
                   <ul class="list-disc pl-5 m-0 space-y-1">
                     <li>शैक्षणिक पात्रता पदाच्या आवश्यकतेनुसार आहे (मूळ जाहिरात वाचावी).</li>
-                    <li>वयोमर्यादा: ३० – ३५ वर्षे</li>
                   </ul>
+                </td>
+                <td class="p-3 border border-border-card text-text-muted">
+                  <span class="inline-block px-2 py-1 rounded text-xs font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">अनुभव आवश्यक नाही (Fresher / No Experience)</span>
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
 
+        <!-- Age Limit & Total Posts Table -->
+        <h2 id="age-limit" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">वयोमर्यादा आणि एकूण पदे (Age Limit & Total Posts)</h2>
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-primary/10">
+                <th class="p-3 border border-border-card font-bold text-text-main whitespace-nowrap">पदाचे नाव (Post Name)</th>
+                <th class="p-3 border border-border-card font-bold text-text-main">एकूण पदे (Total Posts)</th>
+                <th class="p-3 border border-border-card font-bold text-text-main">वयोमर्यादा (Age Limit)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">कनिष्ठ दूरसंचार अधिकारी (JTO)</td>
+                <td class="p-3 border border-border-card text-text-muted">१०० जागा</td>
+                <td class="p-3 border border-border-card text-text-muted">३० ते ३५ वर्षे</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
         <!-- Salary Table -->
-        <h2 id="salary">पगार / वेतनमान (Salary Details)</h2>
-        <div class="overflow-x-auto my-6">
+        <h2 id="salary" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">पगार / वेतनमान (Salary Details)</h2>
+        <div class="overflow-x-auto mt-3 mb-8">
           <table class="w-full text-left border-collapse">
             <thead>
               <tr class="bg-primary/10">
@@ -112,8 +160,8 @@ const category = "Latest Job";
         </div>
 
         <!-- Important Dates & Links Table -->
-        <h2 id="important-dates">महत्त्वाच्या तारखा आणि लिंक्स (Important Dates & Links)</h2>
-        <div class="overflow-x-auto my-6">
+        <h2 id="important-dates" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">महत्त्वाच्या तारखा आणि लिंक्स (Important Dates & Links)</h2>
+        <div class="overflow-x-auto mt-3 mb-8">
           <table class="w-full text-left border-collapse">
             <thead>
               <tr class="bg-primary/10">
@@ -153,6 +201,34 @@ const category = "Latest Job";
             </tbody>
           </table>
         </div>
+
+        <!-- FAQ Section -->
+        <h2 id="faq" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">वारंवार विचारले जाणारे प्रश्न (FAQ)</h2>
+        <div class="space-y-4 mt-3 mb-8">
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+            <h3 class="text-lg font-bold text-text-main mb-2">प्रश्न १: BSNL भरती 2026 साठी अर्ज कसा करावा?</h3>
+            <p class="text-text-muted m-0">उत्तर: आपण BSNL च्या अधिकृत वेबसाइटवर जाऊन ऑनलाइन अर्ज करू शकता.</p>
+          </div>
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+            <h3 class="text-lg font-bold text-text-main mb-2">प्रश्न २: अर्जाची शेवटची तारीख काय आहे?</h3>
+            <p class="text-text-muted m-0">उत्तर: ऑनलाइन अर्ज करण्याची शेवटची तारीख ३० जून २०२६ आहे.</p>
+          </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="bg-primary/5 border border-primary/20 p-8 rounded-3xl text-center my-8">
+          <h2 class="text-2xl font-black text-text-main mb-4 border-none p-0 mt-0">ताज्या अपडेट्ससाठी जॉईन करा!</h2>
+          <p class="text-text-muted mb-6">नोकरीच्या आणि निकालाच्या ताज्या अपडेट्स थेट तुमच्या मोबाईलवर मिळवण्यासाठी आमच्या ग्रुपमध्ये सामील व्हा.</p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="#" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-600 text-white text-sm font-bold uppercase tracking-wider rounded-xl transition-colors shadow-sm">
+              WhatsApp Group
+            </a>
+            <a href="#" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white text-sm font-bold uppercase tracking-wider rounded-xl transition-colors shadow-sm">
+              Telegram Channel
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -171,35 +247,82 @@ const category = "Latest Job";
         <h2 id="main-keyword-en" class="text-2xl font-bold mt-2">BSNL Recruitment 2026: Apply Online for 100 Vacancies</h2>
         <!-- (No Introduction needed for English version as requested) -->
 
-        <!-- Post Details Table -->
-        <h2 id="en-details">Vacancy Details & Eligibility</h2>
-        <div class="overflow-x-auto my-6">
+        <!-- Key Information -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
+          <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
+            <HiOutlineDocumentText className="text-primary text-2xl shrink-0 mt-0.5" />
+            <div>
+              <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">Advertisement No.</span>
+              <span class="text-text-main font-semibold text-sm">Read notification</span>
+            </div>
+          </div>
+          <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
+            <HiOutlineMapPin className="text-primary text-2xl shrink-0 mt-0.5" />
+            <div>
+              <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">Job Location</span>
+              <span class="text-text-main font-semibold text-sm">All India</span>
+            </div>
+          </div>
+          <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
+            <HiOutlineCurrencyRupee className="text-primary text-2xl shrink-0 mt-0.5" />
+            <div>
+              <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">Application Fees</span>
+              <span class="text-text-main font-semibold text-sm">Read notification</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vacancy Details & Eligibility Table -->
+        <h2 id="en-details" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">Vacancy Details & Eligibility</h2>
+        <div class="overflow-x-auto mt-3 mb-8">
           <table class="w-full text-left border-collapse">
             <thead>
               <tr class="bg-primary/10">
                 <th class="p-3 border border-border-card font-bold text-text-main whitespace-nowrap"><span class="flex items-center gap-1.5"><HiOutlineDocumentText className="text-primary" /> Post Name</span></th>
-                <th class="p-3 border border-border-card font-bold text-text-main">Total Posts</th>
                 <th class="p-3 border border-border-card font-bold text-text-main">Education Qualification</th>
+                <th class="p-3 border border-border-card font-bold text-text-main">Experience</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td class="p-3 border border-border-card text-text-muted font-medium">Junior Telecom Officer (JTO)</td>
-                <td class="p-3 border border-border-card text-text-muted">100</td>
                 <td class="p-3 border border-border-card text-text-muted">
                   <ul class="list-disc pl-5 m-0 space-y-1">
                     <li>As per post requirement (Please read official notification).</li>
-                    <li>Age Limit: 30 – 35 Years</li>
                   </ul>
+                </td>
+                <td class="p-3 border border-border-card text-text-muted">
+                  <span class="inline-block px-2 py-1 rounded text-xs font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">No Experience Required</span>
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
 
+        <!-- Age Limit & Total Posts Table -->
+        <h2 id="en-age-limit" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">Age Limit & Vacancies</h2>
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-primary/10">
+                <th class="p-3 border border-border-card font-bold text-text-main whitespace-nowrap">Post Name</th>
+                <th class="p-3 border border-border-card font-bold text-text-main">Total Vacancies</th>
+                <th class="p-3 border border-border-card font-bold text-text-main">Age Limit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">Junior Telecom Officer (JTO)</td>
+                <td class="p-3 border border-border-card text-text-muted">100</td>
+                <td class="p-3 border border-border-card text-text-muted">30 to 35 Years</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
         <!-- Salary Table -->
-        <h2 id="en-salary">Salary Details</h2>
-        <div class="overflow-x-auto my-6">
+        <h2 id="en-salary" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">Salary Details</h2>
+        <div class="overflow-x-auto mt-3 mb-8">
           <table class="w-full text-left border-collapse">
             <thead>
               <tr class="bg-primary/10">
@@ -217,8 +340,8 @@ const category = "Latest Job";
         </div>
 
         <!-- Important Dates & Links Table -->
-        <h2 id="en-important-dates">Important Dates & Apply Links</h2>
-        <div class="overflow-x-auto my-6">
+        <h2 id="en-important-dates" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">Important Dates & Apply Links</h2>
+        <div class="overflow-x-auto mt-3 mb-8">
           <table class="w-full text-left border-collapse">
             <thead>
               <tr class="bg-primary/10">
@@ -257,6 +380,33 @@ const category = "Latest Job";
               </tr>
             </tbody>
           </table>
+        </div>
+
+        <!-- FAQ Section -->
+        <h2 id="en-faq" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">Frequently Asked Questions (FAQ)</h2>
+        <div class="space-y-4 mt-3 mb-8">
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+            <h3 class="text-lg font-bold text-text-main mb-2">Q1: How to apply for BSNL Recruitment 2026?</h3>
+            <p class="text-text-muted m-0">A1: You can apply online through the official BSNL portal before the last date.</p>
+          </div>
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+            <h3 class="text-lg font-bold text-text-main mb-2">Q2: What is the last date to apply?</h3>
+            <p class="text-text-muted m-0">A2: The last date to submit the online application is 30 June 2026.</p>
+          </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="bg-primary/5 border border-primary/20 p-8 rounded-3xl text-center my-8">
+          <h2 class="text-2xl font-black text-text-main mb-4 border-none p-0 mt-0">Join For Latest Updates!</h2>
+          <p class="text-text-muted mb-6">Get the latest job alerts and result updates directly on your phone.</p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="#" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-600 text-white text-sm font-bold uppercase tracking-wider rounded-xl transition-colors shadow-sm">
+              WhatsApp Group
+            </a>
+            <a href="#" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white text-sm font-bold uppercase tracking-wider rounded-xl transition-colors shadow-sm">
+              Telegram Channel
+            </a>
+          </div>
         </div>
 
       </div>
