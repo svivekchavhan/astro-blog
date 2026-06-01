@@ -4,7 +4,8 @@ import {
   HiOutlineCalendarDays, 
   HiOutlineCursorArrowRays,
   HiOutlineArrowTopRightOnSquare,
-  HiOutlineDocumentText
+  HiOutlineDocumentText,
+  HiOutlineCurrencyRupee
 } from "react-icons/hi2";
 
 const title = "YOUR ARTICLE TITLE (MARATHI) - 2026";
@@ -53,82 +54,146 @@ const category = "Latest Job";
     <!-- ================= MARATHI VERSION ================= -->
     <div id="marathi-version">
       <div class="space-y-8 text-text-main leading-relaxed">
-        <p>
-          <strong>Introduction:</strong> येथे लेखाची सुरुवात करा. माहिती मराठीत द्या.
-        </p>
+        
+        <!-- SEO Title Main Keyword -->
+        <h2 id="main-keyword-mr" class="text-2xl font-bold mt-2">Main Keyword / SEO Title Here (Marathi)</h2>
 
-        <h2 id="overview">सविस्तर माहिती</h2>
-        <div class="bg-bg-surface border border-border-card p-6 rounded-2xl">
-          <p class="m-0">
-            येथे नोकरीची किंवा निकालाची सविस्तर माहिती द्या.
+        <!-- Introduction -->
+        <div class="mb-6">
+          <p>
+            <strong>Introduction:</strong> येथे लेखाची सुरुवात करा. माहिती मराठीत द्या. भरतीबद्दल थोडक्यात सांगा.
           </p>
+          <hr class="border-border-card my-6" />
         </div>
 
-        <h2 id="details">पदांचा तपशील आणि रिक्त जागा (Vacancy Table)</h2>
+        <!-- Post Details Table -->
+        <h2 id="details">पदांचा तपशील आणि शैक्षणिक पात्रता (Post Details)</h2>
         <div class="overflow-x-auto my-6">
           <table class="w-full text-left border-collapse">
             <thead>
               <tr class="bg-primary/10">
-                <th class="p-3 border border-border-card font-bold text-text-main whitespace-nowrap"><span class="flex items-center gap-1.5"><HiOutlineDocumentText className="text-primary" /> पदाचे नाव</span></th>
-                <th class="p-3 border border-border-card font-bold text-text-main">रिक्त जागा</th>
-                <th class="p-3 border border-border-card font-bold text-text-main">शैक्षणिक पात्रता</th>
+                <th class="p-3 border border-border-card font-bold text-text-main whitespace-nowrap"><span class="flex items-center gap-1.5"><HiOutlineDocumentText className="text-primary" /> पदाचे नाव (Post Name)</span></th>
+                <th class="p-3 border border-border-card font-bold text-text-main">एकूण पदे (Total Posts)</th>
+                <th class="p-3 border border-border-card font-bold text-text-main">शैक्षणिक पात्रता (Education Qualification)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="p-3 border border-border-card text-text-muted">Post 1</td>
+                <td class="p-3 border border-border-card text-text-muted font-medium">Post 1 Name</td>
                 <td class="p-3 border border-border-card text-text-muted">XX</td>
-                <td class="p-3 border border-border-card text-text-muted">Qualification 1</td>
+                <td class="p-3 border border-border-card text-text-muted">
+                  <ul class="list-disc pl-5 m-0 space-y-1">
+                    <li>Qualification requirement 1</li>
+                    <li>Qualification requirement 2</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">Post 2 Name</td>
+                <td class="p-3 border border-border-card text-text-muted">YY</td>
+                <td class="p-3 border border-border-card text-text-muted">
+                  <ul class="list-disc pl-5 m-0 space-y-1">
+                    <li>Qualification requirement 1</li>
+                  </ul>
+                </td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <h2 id="important-dates">महत्त्वाच्या तारखा आणि लिंक्स (Dates & Links Table)</h2>
+        <!-- Salary Table -->
+        <h2 id="salary">पगार / वेतनमान (Salary Details)</h2>
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-primary/10">
+                <th class="p-3 border border-border-card font-bold text-text-main whitespace-nowrap">पदाचे नाव (Post Name)</th>
+                <th class="p-3 border border-border-card font-bold text-text-main whitespace-nowrap"><span class="flex items-center gap-1.5"><HiOutlineCurrencyRupee className="text-primary" /> पगार (Salary)</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">Post 1 Name</td>
+                <td class="p-3 border border-border-card text-text-muted">₹XX,XXX - ₹XX,XXX</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">Post 2 Name</td>
+                <td class="p-3 border border-border-card text-text-muted">₹YY,YYY - ₹YY,YYY</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Important Dates & Links Table -->
+        <h2 id="important-dates">महत्त्वाच्या तारखा आणि लिंक्स (Important Dates & Links)</h2>
         <div class="overflow-x-auto my-6">
           <table class="w-full text-left border-collapse">
             <thead>
               <tr class="bg-primary/10">
                 <th class="p-3 border border-border-card font-bold text-text-main">तपशील (Event)</th>
-                <th class="p-3 border border-border-card font-bold text-text-main">तारीख (Date)</th>
-                <th class="p-3 border border-border-card font-bold text-text-main">लिंक (Action)</th>
+                <th class="p-3 border border-border-card font-bold text-text-main">तारीख / लिंक (Date / Action)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="p-3 border border-border-card text-text-muted font-medium">ऑनलाइन अर्ज सुरू होण्याची तारीख</td>
+                <td class="p-3 border border-border-card text-text-muted font-medium">ऑनलाइन अर्ज सुरू होण्याची तारीख (Start Date)</td>
                 <td class="p-3 border border-border-card text-text-main font-bold whitespace-nowrap">
                   <span class="flex items-center gap-1.5"><HiOutlineCalendarDays className="text-primary text-lg shrink-0" /> DD Month YYYY</span>
                 </td>
-                <td class="p-3 border border-border-card">
-                  <a href="#" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider rounded-lg transition-colors border border-primary/20 w-full sm:w-auto">
-                    <HiOutlineCursorArrowRays className="text-base shrink-0" /> अर्ज करा (Apply)
-                  </a>
-                </td>
               </tr>
               <tr>
-                <td class="p-3 border border-border-card text-text-muted font-medium">ऑनलाइन अर्ज करण्याची शेवटची तारीख</td>
+                <td class="p-3 border border-border-card text-text-muted font-medium">ऑनलाइन अर्ज करण्याची शेवटची तारीख (End Date)</td>
                 <td class="p-3 border border-border-card text-rose-500 font-bold whitespace-nowrap">
                   <span class="flex items-center gap-1.5"><HiOutlineCalendarDays className="text-rose-500 text-lg shrink-0" /> DD Month YYYY</span>
                 </td>
-                <td class="p-3 border border-border-card">
-                  <a href="#" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary text-white hover:bg-primary/90 text-xs font-bold uppercase tracking-wider rounded-lg transition-colors shadow-sm shadow-primary/30 w-full sm:w-auto">
-                    <HiOutlineArrowTopRightOnSquare className="text-base shrink-0" /> Apply Online
-                  </a>
-                </td>
               </tr>
               <tr>
-                <td class="p-3 border border-border-card text-text-muted font-medium">अधिकृत जाहिरात (Notification PDF)</td>
-                <td class="p-3 border border-border-card text-text-main font-bold text-center">-</td>
+                <td class="p-3 border border-border-card text-text-muted font-medium">अधिकृत जाहिरात (Official Notification PDF)</td>
                 <td class="p-3 border border-border-card">
                   <a href="#" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-amber-500/10 hover:bg-amber-500/20 text-amber-600 dark:text-amber-400 text-xs font-bold uppercase tracking-wider rounded-lg transition-colors border border-amber-500/30 w-full sm:w-auto">
                     <HiOutlineDocumentText className="text-base shrink-0" /> PDF डाउनलोड
                   </a>
                 </td>
               </tr>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">ऑनलाइन अर्ज लिंक (Online Application Link)</td>
+                <td class="p-3 border border-border-card">
+                  <a href="#" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider rounded-lg transition-colors border border-primary/20 w-full sm:w-auto">
+                    <HiOutlineCursorArrowRays className="text-base shrink-0" /> अर्ज करा (Apply Now)
+                  </a>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
+
+        <!-- FAQ Section -->
+        <h2 id="faq">वारंवार विचारले जाणारे प्रश्न (FAQ)</h2>
+        <div class="space-y-4 my-6">
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+            <h3 class="text-lg font-bold text-text-main mb-2">प्रश्न १: येथे प्रश्न टाका?</h3>
+            <p class="text-text-muted m-0">उत्तर १: येथे उत्तर द्या.</p>
+          </div>
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+            <h3 class="text-lg font-bold text-text-main mb-2">प्रश्न २: येथे प्रश्न टाका?</h3>
+            <p class="text-text-muted m-0">उत्तर २: येथे उत्तर द्या.</p>
+          </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="bg-primary/5 border border-primary/20 p-8 rounded-3xl text-center my-8">
+          <h2 class="text-2xl font-black text-text-main mb-4 border-none p-0 mt-0">ताज्या अपडेट्ससाठी जॉईन करा!</h2>
+          <p class="text-text-muted mb-6">नोकरीच्या आणि निकालाच्या ताज्या अपडेट्स थेट तुमच्या मोबाईलवर मिळवण्यासाठी आमच्या ग्रुपमध्ये सामील व्हा.</p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="#" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-600 text-white text-sm font-bold uppercase tracking-wider rounded-xl transition-colors shadow-sm">
+              WhatsApp Group
+            </a>
+            <a href="#" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white text-sm font-bold uppercase tracking-wider rounded-xl transition-colors shadow-sm">
+              Telegram Channel
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -141,44 +206,78 @@ const category = "Latest Job";
 
     <!-- ================= ENGLISH VERSION ================= -->
     <div id="english-version" class="opacity-95">
-      <div class="mb-8">
-        <h2 class="text-2xl md:text-3xl font-extrabold text-text-main mb-4">
-          ENGLISH TITLE HERE
-        </h2>
-        <p class="text-text-muted leading-relaxed italic">
-          English description and introduction goes here.
-        </p>
-      </div>
-
       <div class="space-y-8 text-text-main leading-relaxed">
+        
+        <!-- SEO Title Main Keyword -->
+        <h2 id="main-keyword-en" class="text-2xl font-bold mt-2">Main Keyword / SEO Title Here (English)</h2>
+        <!-- (No Introduction needed for English version as requested) -->
+
+        <!-- Post Details Table -->
         <h2 id="en-details">Vacancy Details & Eligibility</h2>
         <div class="overflow-x-auto my-6">
           <table class="w-full text-left border-collapse">
             <thead>
               <tr class="bg-primary/10">
                 <th class="p-3 border border-border-card font-bold text-text-main whitespace-nowrap"><span class="flex items-center gap-1.5"><HiOutlineDocumentText className="text-primary" /> Post Name</span></th>
-                <th class="p-3 border border-border-card font-bold text-text-main">Vacancies</th>
-                <th class="p-3 border border-border-card font-bold text-text-main">Qualification</th>
+                <th class="p-3 border border-border-card font-bold text-text-main">Total Posts</th>
+                <th class="p-3 border border-border-card font-bold text-text-main">Education Qualification</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="p-3 border border-border-card text-text-muted">Post 1</td>
+                <td class="p-3 border border-border-card text-text-muted font-medium">Post 1 Name</td>
                 <td class="p-3 border border-border-card text-text-muted">XX</td>
-                <td class="p-3 border border-border-card text-text-muted">Qualification 1</td>
+                <td class="p-3 border border-border-card text-text-muted">
+                  <ul class="list-disc pl-5 m-0 space-y-1">
+                    <li>Qualification requirement 1</li>
+                    <li>Qualification requirement 2</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">Post 2 Name</td>
+                <td class="p-3 border border-border-card text-text-muted">YY</td>
+                <td class="p-3 border border-border-card text-text-muted">
+                  <ul class="list-disc pl-5 m-0 space-y-1">
+                    <li>Qualification requirement 1</li>
+                  </ul>
+                </td>
               </tr>
             </tbody>
           </table>
         </div>
 
+        <!-- Salary Table -->
+        <h2 id="en-salary">Salary Details</h2>
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-primary/10">
+                <th class="p-3 border border-border-card font-bold text-text-main whitespace-nowrap">Post Name</th>
+                <th class="p-3 border border-border-card font-bold text-text-main whitespace-nowrap"><span class="flex items-center gap-1.5"><HiOutlineCurrencyRupee className="text-primary" /> Salary</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">Post 1 Name</td>
+                <td class="p-3 border border-border-card text-text-muted">₹XX,XXX - ₹XX,XXX</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">Post 2 Name</td>
+                <td class="p-3 border border-border-card text-text-muted">₹YY,YYY - ₹YY,YYY</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Important Dates & Links Table -->
         <h2 id="en-important-dates">Important Dates & Apply Links</h2>
         <div class="overflow-x-auto my-6">
           <table class="w-full text-left border-collapse">
             <thead>
               <tr class="bg-primary/10">
                 <th class="p-3 border border-border-card font-bold text-text-main">Event</th>
-                <th class="p-3 border border-border-card font-bold text-text-main">Date</th>
-                <th class="p-3 border border-border-card font-bold text-text-main">Action</th>
+                <th class="p-3 border border-border-card font-bold text-text-main">Date / Action</th>
               </tr>
             </thead>
             <tbody>
@@ -187,35 +286,60 @@ const category = "Latest Job";
                 <td class="p-3 border border-border-card text-text-main font-bold whitespace-nowrap">
                   <span class="flex items-center gap-1.5"><HiOutlineCalendarDays className="text-primary text-lg shrink-0" /> DD Month YYYY</span>
                 </td>
-                <td class="p-3 border border-border-card">
-                  <a href="#" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider rounded-lg transition-colors border border-primary/20 w-full sm:w-auto">
-                    <HiOutlineCursorArrowRays className="text-base shrink-0" /> Apply Now
-                  </a>
-                </td>
               </tr>
               <tr>
                 <td class="p-3 border border-border-card text-text-muted font-medium">Online Application Last Date</td>
                 <td class="p-3 border border-border-card text-rose-500 font-bold whitespace-nowrap">
                   <span class="flex items-center gap-1.5"><HiOutlineCalendarDays className="text-rose-500 text-lg shrink-0" /> DD Month YYYY</span>
                 </td>
-                <td class="p-3 border border-border-card">
-                  <a href="#" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary text-white hover:bg-primary/90 text-xs font-bold uppercase tracking-wider rounded-lg transition-colors shadow-sm shadow-primary/30 w-full sm:w-auto">
-                    <HiOutlineArrowTopRightOnSquare className="text-base shrink-0" /> Apply Online
-                  </a>
-                </td>
               </tr>
               <tr>
                 <td class="p-3 border border-border-card text-text-muted font-medium">Official Notification (PDF)</td>
-                <td class="p-3 border border-border-card text-text-main font-bold text-center">-</td>
                 <td class="p-3 border border-border-card">
                   <a href="#" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-amber-500/10 hover:bg-amber-500/20 text-amber-600 dark:text-amber-400 text-xs font-bold uppercase tracking-wider rounded-lg transition-colors border border-amber-500/30 w-full sm:w-auto">
                     <HiOutlineDocumentText className="text-base shrink-0" /> Download PDF
                   </a>
                 </td>
               </tr>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">Online Application Link</td>
+                <td class="p-3 border border-border-card">
+                  <a href="#" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider rounded-lg transition-colors border border-primary/20 w-full sm:w-auto">
+                    <HiOutlineCursorArrowRays className="text-base shrink-0" /> Apply Now
+                  </a>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
+
+        <!-- FAQ Section -->
+        <h2 id="en-faq">Frequently Asked Questions (FAQ)</h2>
+        <div class="space-y-4 my-6">
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+            <h3 class="text-lg font-bold text-text-main mb-2">Q1: Question goes here?</h3>
+            <p class="text-text-muted m-0">A1: Answer goes here.</p>
+          </div>
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+            <h3 class="text-lg font-bold text-text-main mb-2">Q2: Question goes here?</h3>
+            <p class="text-text-muted m-0">A2: Answer goes here.</p>
+          </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="bg-primary/5 border border-primary/20 p-8 rounded-3xl text-center my-8">
+          <h2 class="text-2xl font-black text-text-main mb-4 border-none p-0 mt-0">Join For Latest Updates!</h2>
+          <p class="text-text-muted mb-6">Get the latest job alerts and result updates directly on your phone.</p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="#" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-600 text-white text-sm font-bold uppercase tracking-wider rounded-xl transition-colors shadow-sm">
+              WhatsApp Group
+            </a>
+            <a href="#" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white text-sm font-bold uppercase tracking-wider rounded-xl transition-colors shadow-sm">
+              Telegram Channel
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
   </article>
