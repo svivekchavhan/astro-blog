@@ -1,0 +1,222 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { 
+  HiOutlineCalendarDays, 
+  HiOutlineCursorArrowRays,
+  HiOutlineArrowTopRightOnSquare,
+  HiOutlineDocumentText
+} from "react-icons/hi2";
+
+const title = "YOUR ARTICLE TITLE (MARATHI) - 2026";
+const description = "YOUR ARTICLE DESCRIPTION (MARATHI) GOES HERE. Keep it around 150 characters for SEO.";
+const canonicalURL = "https://techfixsteps.com/your-article-slug";
+const date = "Month DD, YYYY";
+const category = "Latest Job";
+---
+
+<Layout 
+  title={title} 
+  description={description}
+  canonicalURL={canonicalURL}
+  image="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=1200"
+  article={true}
+>
+  <article class="py-8">
+    <!-- Header -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-6">
+        <span
+          class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"
+          >{category}
+        </span>
+        <span class="text-text-muted text-sm">• {date}</span>
+      </div>
+      <h1
+        class="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-text-main mb-6 leading-[1.25]"
+      >
+        {title}
+      </h1>
+      <p
+        class="text-text-muted text-lg leading-relaxed border-l-4 border-primary pl-6 py-2 italic"
+      >
+        {description}
+      </p>
+    </div>
+
+    <!-- Quick Language Navigation Links -->
+    <div class="flex gap-4 mb-8">
+      <a href="#marathi-version" class="text-primary font-bold text-sm hover:underline">↓ मराठी आवृत्ती (Marathi Version)</a>
+      <span class="text-text-muted">|</span>
+      <a href="#english-version" class="text-primary font-bold text-sm hover:underline">↓ English Version</a>
+    </div>
+
+    <!-- ================= MARATHI VERSION ================= -->
+    <div id="marathi-version">
+      <div class="space-y-8 text-text-main leading-relaxed">
+        <p>
+          <strong>Introduction:</strong> येथे लेखाची सुरुवात करा. माहिती मराठीत द्या.
+        </p>
+
+        <h2 id="overview">सविस्तर माहिती</h2>
+        <div class="bg-bg-surface border border-border-card p-6 rounded-2xl">
+          <p class="m-0">
+            येथे नोकरीची किंवा निकालाची सविस्तर माहिती द्या.
+          </p>
+        </div>
+
+        <h2 id="details">पदांचा तपशील आणि रिक्त जागा (Vacancy Table)</h2>
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-primary/10">
+                <th class="p-3 border border-border-card font-bold text-text-main whitespace-nowrap"><span class="flex items-center gap-1.5"><HiOutlineDocumentText className="text-primary" /> पदाचे नाव</span></th>
+                <th class="p-3 border border-border-card font-bold text-text-main">रिक्त जागा</th>
+                <th class="p-3 border border-border-card font-bold text-text-main">शैक्षणिक पात्रता</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted">Post 1</td>
+                <td class="p-3 border border-border-card text-text-muted">XX</td>
+                <td class="p-3 border border-border-card text-text-muted">Qualification 1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="important-dates">महत्त्वाच्या तारखा आणि लिंक्स (Dates & Links Table)</h2>
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-primary/10">
+                <th class="p-3 border border-border-card font-bold text-text-main">तपशील (Event)</th>
+                <th class="p-3 border border-border-card font-bold text-text-main">तारीख (Date)</th>
+                <th class="p-3 border border-border-card font-bold text-text-main">लिंक (Action)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">ऑनलाइन अर्ज सुरू होण्याची तारीख</td>
+                <td class="p-3 border border-border-card text-text-main font-bold whitespace-nowrap">
+                  <span class="flex items-center gap-1.5"><HiOutlineCalendarDays className="text-primary text-lg shrink-0" /> DD Month YYYY</span>
+                </td>
+                <td class="p-3 border border-border-card">
+                  <a href="#" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider rounded-lg transition-colors border border-primary/20 w-full sm:w-auto">
+                    <HiOutlineCursorArrowRays className="text-base shrink-0" /> अर्ज करा (Apply)
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">ऑनलाइन अर्ज करण्याची शेवटची तारीख</td>
+                <td class="p-3 border border-border-card text-rose-500 font-bold whitespace-nowrap">
+                  <span class="flex items-center gap-1.5"><HiOutlineCalendarDays className="text-rose-500 text-lg shrink-0" /> DD Month YYYY</span>
+                </td>
+                <td class="p-3 border border-border-card">
+                  <a href="#" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary text-white hover:bg-primary/90 text-xs font-bold uppercase tracking-wider rounded-lg transition-colors shadow-sm shadow-primary/30 w-full sm:w-auto">
+                    <HiOutlineArrowTopRightOnSquare className="text-base shrink-0" /> Apply Online
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">अधिकृत जाहिरात (Notification PDF)</td>
+                <td class="p-3 border border-border-card text-text-main font-bold text-center">-</td>
+                <td class="p-3 border border-border-card">
+                  <a href="#" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-amber-500/10 hover:bg-amber-500/20 text-amber-600 dark:text-amber-400 text-xs font-bold uppercase tracking-wider rounded-lg transition-colors border border-amber-500/30 w-full sm:w-auto">
+                    <HiOutlineDocumentText className="text-base shrink-0" /> PDF डाउनलोड
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= LANGUAGE SEPARATOR ================= -->
+    <div class="my-16 border-t-2 border-dashed border-border-card flex items-center justify-center relative">
+      <span class="absolute bg-bg-base px-8 py-2 text-base sm:text-lg font-extrabold uppercase tracking-widest text-primary border border-border-card rounded-full shadow-md">
+        English
+      </span>
+    </div>
+
+    <!-- ================= ENGLISH VERSION ================= -->
+    <div id="english-version" class="opacity-95">
+      <div class="mb-8">
+        <h2 class="text-2xl md:text-3xl font-extrabold text-text-main mb-4">
+          ENGLISH TITLE HERE
+        </h2>
+        <p class="text-text-muted leading-relaxed italic">
+          English description and introduction goes here.
+        </p>
+      </div>
+
+      <div class="space-y-8 text-text-main leading-relaxed">
+        <h2 id="en-details">Vacancy Details & Eligibility</h2>
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-primary/10">
+                <th class="p-3 border border-border-card font-bold text-text-main whitespace-nowrap"><span class="flex items-center gap-1.5"><HiOutlineDocumentText className="text-primary" /> Post Name</span></th>
+                <th class="p-3 border border-border-card font-bold text-text-main">Vacancies</th>
+                <th class="p-3 border border-border-card font-bold text-text-main">Qualification</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted">Post 1</td>
+                <td class="p-3 border border-border-card text-text-muted">XX</td>
+                <td class="p-3 border border-border-card text-text-muted">Qualification 1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="en-important-dates">Important Dates & Apply Links</h2>
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-primary/10">
+                <th class="p-3 border border-border-card font-bold text-text-main">Event</th>
+                <th class="p-3 border border-border-card font-bold text-text-main">Date</th>
+                <th class="p-3 border border-border-card font-bold text-text-main">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">Online Application Start Date</td>
+                <td class="p-3 border border-border-card text-text-main font-bold whitespace-nowrap">
+                  <span class="flex items-center gap-1.5"><HiOutlineCalendarDays className="text-primary text-lg shrink-0" /> DD Month YYYY</span>
+                </td>
+                <td class="p-3 border border-border-card">
+                  <a href="#" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider rounded-lg transition-colors border border-primary/20 w-full sm:w-auto">
+                    <HiOutlineCursorArrowRays className="text-base shrink-0" /> Apply Now
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">Online Application Last Date</td>
+                <td class="p-3 border border-border-card text-rose-500 font-bold whitespace-nowrap">
+                  <span class="flex items-center gap-1.5"><HiOutlineCalendarDays className="text-rose-500 text-lg shrink-0" /> DD Month YYYY</span>
+                </td>
+                <td class="p-3 border border-border-card">
+                  <a href="#" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary text-white hover:bg-primary/90 text-xs font-bold uppercase tracking-wider rounded-lg transition-colors shadow-sm shadow-primary/30 w-full sm:w-auto">
+                    <HiOutlineArrowTopRightOnSquare className="text-base shrink-0" /> Apply Online
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">Official Notification (PDF)</td>
+                <td class="p-3 border border-border-card text-text-main font-bold text-center">-</td>
+                <td class="p-3 border border-border-card">
+                  <a href="#" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-amber-500/10 hover:bg-amber-500/20 text-amber-600 dark:text-amber-400 text-xs font-bold uppercase tracking-wider rounded-lg transition-colors border border-amber-500/30 w-full sm:w-auto">
+                    <HiOutlineDocumentText className="text-base shrink-0" /> Download PDF
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>
