@@ -5,6 +5,7 @@ export async function GET() {
   const staticPages = [
     '',
     '/latest-job',
+    '/mega-recruitment',
     '/admit-card',
     '/answer-key',
     '/admission',
@@ -23,6 +24,7 @@ export async function GET() {
   const nonArticleFiles = [
     "index.astro",
     "latest-job.astro",
+    "mega-recruitment.astro",
     "result.astro",
     "admit-card.astro",
     "answer-key.astro",
@@ -33,7 +35,8 @@ export async function GET() {
     "privacy-policy.astro",
     "terms-of-service.astro",
     "disclaimer.astro",
-    "blog.astro"
+    "blog.astro",
+    "404.astro"
   ];
   
   const dynamicPages = Object.keys(postFiles)

@@ -26,6 +26,7 @@ const postFiles = import.meta.glob("../pages/*.astro");
 const nonArticleFiles = [
   "index.astro",
   "latest-job.astro",
+  "mega-recruitment.astro",
   "result.astro",
   "admit-card.astro",
   "answer-key.astro",
@@ -36,7 +37,8 @@ const nonArticleFiles = [
   "privacy-policy.astro",
   "terms-of-service.astro",
   "disclaimer.astro",
-  "blog.astro"
+  "blog.astro",
+  "404.astro",
 ];
 
 const articles = Object.keys(postFiles)
@@ -54,6 +56,7 @@ const articles = Object.keys(postFiles)
 const mainPages = [
   { title: "Home", href: "/" },
   { title: "Latest Job", href: "/latest-job" },
+  { title: "Mega Recruitment", href: "/mega-recruitment" },
   { title: "Result Page", href: "/result" },
   { title: "Admit Card", href: "/admit-card" },
   { title: "Answer Key", href: "/answer-key" },
@@ -208,6 +211,13 @@ const searchData = [...mainPages, ...articles];
         </li>
         <li>
           <a
+            href="/mega-recruitment"
+            class="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-fuchsia-500/5 dark:bg-fuchsia-500/10 border border-solid border-fuchsia-500/25 text-text-main font-bold hover:bg-fuchsia-500/10 hover:border-fuchsia-500 hover:shadow-sm hover:shadow-fuchsia-500/5 transition-all duration-300 text-[0.7rem] uppercase tracking-wider"
+            ><HiOutlineNewspaper className="text-sm shrink-0" /> Mega Recruitment</a
+          >
+        </li>
+        <li>
+          <a
             href="/result"
             class="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-emerald-500/5 dark:bg-emerald-500/10 border border-solid border-emerald-500/25 text-text-main font-bold hover:bg-emerald-500/10 hover:border-emerald-500 hover:shadow-sm hover:shadow-emerald-500/5 transition-all duration-300 text-[0.7rem] uppercase tracking-wider"
             ><HiOutlineQueueList className="text-sm shrink-0" /> Result</a
@@ -263,6 +273,13 @@ const searchData = [...mainPages, ...articles];
     </li>
     <li>
       <a
+        href="/mega-recruitment"
+        class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-fuchsia-500/5 dark:bg-fuchsia-500/10 border border-solid border-fuchsia-500/20 text-text-main font-bold hover:bg-fuchsia-500/10 transition-all duration-300 text-xs uppercase tracking-wider"
+        ><HiOutlineNewspaper className="text-lg shrink-0" /> Mega Recruitment</a
+      >
+    </li>
+    <li>
+      <a
         href="/result"
         class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-emerald-500/5 dark:bg-emerald-500/10 border border-solid border-emerald-500/20 text-text-main font-bold hover:bg-emerald-500/10 transition-all duration-300 text-xs uppercase tracking-wider"
         ><HiOutlineQueueList className="text-lg shrink-0" /> Result</a
@@ -314,7 +331,7 @@ const searchData = [...mainPages, ...articles];
         const regex = new RegExp(`(${query})`, "gi");
         return text.replace(
           regex,
-          '<u class="text-primary no-underline font-bold">$1</u>'
+          '<u class="text-primary no-underline font-bold">$1</u>',
         );
       }
 
@@ -325,7 +342,7 @@ const searchData = [...mainPages, ...articles];
           suggestionsContainer.classList.add(
             "hidden",
             "opacity-0",
-            "translate-y-2"
+            "translate-y-2",
           );
           return;
         }
@@ -346,10 +363,10 @@ const searchData = [...mainPages, ...articles];
               </div>
               <span class="text-sm text-text-main font-medium line-clamp-1">${highlightMatch(
                 post.title,
-                query
+                query,
               )}</span>
             </a>
-          `
+          `,
             )
             .join("");
 
@@ -361,7 +378,7 @@ const searchData = [...mainPages, ...articles];
           suggestionsContainer.classList.add(
             "hidden",
             "opacity-0",
-            "translate-y-2"
+            "translate-y-2",
           );
         }
       });
@@ -375,7 +392,7 @@ const searchData = [...mainPages, ...articles];
           suggestionsContainer.classList.add(
             "hidden",
             "opacity-0",
-            "translate-y-2"
+            "translate-y-2",
           );
         }
       });
@@ -457,7 +474,7 @@ const searchData = [...mainPages, ...articles];
         const height = navbar.getBoundingClientRect().height;
         document.documentElement.style.setProperty(
           "--navbar-height",
-          `${height}px`
+          `${height}px`,
         );
       }
     });

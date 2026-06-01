@@ -4,6 +4,7 @@ import Layout from "../layouts/Layout.astro";
 const pages = [
   { name: "Home", href: "/" },
   { name: "Latest Job", href: "/latest-job" },
+  { name: "Mega Recruitment", href: "/mega-recruitment" },
   { name: "Result", href: "/result" },
   { name: "Admit Card", href: "/admit-card" },
   { name: "Answer Key", href: "/answer-key" },
@@ -23,6 +24,7 @@ const postFiles = import.meta.glob("./*.astro");
 const nonArticleFiles = [
   "index.astro",
   "latest-job.astro",
+  "mega-recruitment.astro",
   "result.astro",
   "admit-card.astro",
   "answer-key.astro",
@@ -34,6 +36,7 @@ const nonArticleFiles = [
   "terms-of-service.astro",
   "disclaimer.astro",
   "blog.astro",
+  "404.astro",
 ];
 
 const articles = Object.keys(postFiles)
