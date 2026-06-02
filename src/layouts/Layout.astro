@@ -11,6 +11,7 @@ interface Props {
 	image?: string;
 	article?: boolean;
 	canonicalURL?: string;
+	hideSidebar?: boolean;
 }
 
 const { 
@@ -18,7 +19,8 @@ const {
 	description = "TechFixSteps - Your trusted source for latest government jobs, sarkari naukri, exam results, admit cards, answer keys, and college admissions in India.", 
 	image = "/blog-placeholder.jpg",
 	article = false,
-	canonicalURL: customCanonicalURL
+	canonicalURL: customCanonicalURL,
+	hideSidebar = false
 } = Astro.props;
 
 const canonicalURL = customCanonicalURL 
@@ -103,35 +105,37 @@ const latestJobs = [
 		<Navbar />
 
 		<div class="max-w-[1200px] mx-auto px-4 sm:px-10 lg:px-14 w-full flex-1 flex flex-col lg:flex-row gap-8 md:gap-12 py-6 sm:py-12">
-			<main class="flex-[3] min-w-0 prose dark:prose-invert prose-headings:text-text-main max-w-none">
+			<main class:list={["min-w-0 prose dark:prose-invert prose-headings:text-text-main max-w-none", hideSidebar ? "w-full flex-1" : "flex-[3]"]}>
 				<slot />
 			</main>
 			
-			<aside class="flex-1 space-y-10 lg:sticky lg:top-[calc(var(--navbar-height,190px)+20px)] h-fit">
-				<div class="bg-bg-surface border border-border-card p-6 rounded-xl">
-					<h4 class="text-[1.1rem] text-text-main border-b-2 border-primary inline-flex items-center gap-2 pb-1.5 mb-4 font-semibold">
-						<span class="text-primary flex items-center shrink-0">
-							<HiOutlineBriefcase className="text-primary text-[1.15rem]" />
-						</span>
-						<span>Latest Jobs</span>
-					</h4>
-					<div class="flex flex-col">
-						{latestJobs.map((job, idx) => (
-							<div class="flex gap-2.5 py-3 border-b border-border-card dark:border-border-card/30 last:border-b-0 last:pb-0 first:pt-0">
-								<span class="text-primary font-bold text-xs select-none mt-0.5 shrink-0">
-									0{idx + 1}.
-								</span>
-								<a 
-									href={job.link} 
-									class="text-text-muted text-[0.9rem] hover:text-primary transition-colors duration-300 block font-medium leading-snug"
-								>
-									{job.title}
-								</a>
-							</div>
-						))}
+			{!hideSidebar && (
+				<aside class="flex-1 space-y-10 lg:sticky lg:top-[calc(var(--navbar-height,190px)+20px)] h-fit">
+					<div class="bg-bg-surface border border-border-card p-6 rounded-xl">
+						<h4 class="text-[1.1rem] text-text-main border-b-2 border-primary inline-flex items-center gap-2 pb-1.5 mb-4 font-semibold">
+							<span class="text-primary flex items-center shrink-0">
+								<HiOutlineBriefcase className="text-primary text-[1.15rem]" />
+							</span>
+							<span>Latest Jobs</span>
+						</h4>
+						<div class="flex flex-col">
+							{latestJobs.map((job, idx) => (
+								<div class="flex gap-2.5 py-3 border-b border-border-card dark:border-border-card/30 last:border-b-0 last:pb-0 first:pt-0">
+									<span class="text-primary font-bold text-xs select-none mt-0.5 shrink-0">
+										0{idx + 1}.
+									</span>
+									<a 
+										href={job.link} 
+										class="text-text-muted text-[0.9rem] hover:text-primary transition-colors duration-300 block font-medium leading-snug"
+									>
+										{job.title}
+									</a>
+								</div>
+							))}
+						</div>
 					</div>
-				</div>
-			</aside>
+				</aside>
+			)}
 		</div>
 
 		<footer class="bg-bg-surface border-t border-border-card pt-12 pb-8 mt-16 transition-colors duration-300">
