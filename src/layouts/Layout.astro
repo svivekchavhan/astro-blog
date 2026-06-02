@@ -131,33 +131,34 @@ const latestJobs = [
 						))}
 					</div>
 				</div>
-
-				<div class="bg-bg-surface border border-border-card p-6 rounded-xl">
-					<h4 class="text-[1.1rem] text-text-main border-b-2 border-primary inline-block pb-1 mb-4 font-semibold">Newsletter</h4>
-					<p class="text-text-muted text-[0.9rem] leading-[1.6] mb-4">Get the latest articles delivered to your inbox.</p>
-					<form class="flex flex-col gap-3">
-						<input type="email" placeholder="Email address" class="p-2.5 bg-bg-base/50 dark:bg-black/20 border border-border-card rounded-md text-text-main font-sans outline-none focus:border-primary transition-colors" />
-						<button type="submit" class="btn-primary">Join</button>
-					</form>
-				</div>
 			</aside>
 		</div>
 
-		<footer class="bg-bg-surface border-t border-border-card pt-16 pb-8 mt-16 transition-colors duration-300">
-			<div class="max-w-[1200px] mx-auto px-6 w-full grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-				<div class="md:col-span-2">
+		<footer class="bg-bg-surface border-t border-border-card pt-12 pb-8 mt-16 transition-colors duration-300">
+			<div class="max-w-[1200px] mx-auto px-6 w-full flex flex-col items-center gap-6 text-center">
+				<div>
 					<a href="/" class="text-2xl font-bold text-text-main"><span class="gradient-text">Astro</span>Blog</a>
-					<p class="text-text-muted mt-4 text-[0.95rem]">Crafting beautiful digital experiences with Astro.</p>
+					<p class="text-text-muted mt-2 text-[0.9rem]">Your trusted source for latest government jobs, exams, admit cards, and results.</p>
 				</div>
-				<div class="flex flex-col gap-4">
-					<h4 class="text-[1.1rem] text-text-main font-semibold">Platform</h4>
-					<a href="/" class="text-text-muted text-[0.9rem] hover:text-text-main transition-colors">Home</a>
-					<a href="/blog" class="text-text-muted text-[0.9rem] hover:text-text-main transition-colors">Blog</a>
-					<a href="/about-us" class="text-text-muted text-[0.9rem] hover:text-text-main transition-colors">About Us</a>
+
+				<div class="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 text-sm text-text-muted font-medium">
+					<a href="/privacy-policy" class="hover:text-primary transition-colors">Privacy Policy</a>
+					<span class="text-border-card dark:text-border-card/50">|</span>
+					<a href="/terms-of-service" class="hover:text-primary transition-colors">Terms of Service</a>
+					<span class="text-border-card dark:text-border-card/50">|</span>
+					<a href="/disclaimer" class="hover:text-primary transition-colors">Disclaimer</a>
+					<span class="text-border-card dark:text-border-card/50">|</span>
+					<a href="/sitemap" class="hover:text-primary transition-colors">Sitemap</a>
+					<span class="text-border-card dark:text-border-card/50">|</span>
+					<a href="/contact-us" class="hover:text-primary transition-colors">Contact Us</a>
 				</div>
-			</div>
-			<div class="max-w-[1200px] mx-auto px-6 w-full border-t border-border-card pt-8 text-center">
-				<p class="text-text-muted text-[0.85rem]">&copy; 2026 AstroBlog. Built with passion.</p>
+
+				<div class="w-full border-t border-border-card pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-text-muted">
+					<p>&copy; 2026 AstroBlog. All rights reserved.</p>
+					<p class="flex items-center gap-1">
+						Made with <span class="text-rose-500 animate-pulse">❤️</span> in India
+					</p>
+				</div>
 			</div>
 		</footer>
 	</body>
