@@ -141,7 +141,32 @@ const latestJobs = [
 		<footer class="bg-bg-surface border-t border-border-card pt-12 pb-8 mt-16 transition-colors duration-300">
 			<div class="max-w-[1200px] mx-auto px-6 w-full flex flex-col items-center gap-6 text-center">
 				<div>
-					<a href="/" class="text-2xl font-bold text-text-main"><span class="gradient-text">Maha</span>Disha</a>
+					<a
+						href="/"
+						class="group inline-flex items-center gap-2.5 no-underline"
+					>
+						<!-- Custom Premium SVG Logo (Compass/Direction Finder representing "Disha") -->
+						<div class="relative flex items-center justify-center w-9.5 h-9.5 rounded-xl bg-gradient-to-tr from-primary to-secondary p-[1px] shadow-sm shadow-primary/20 transition-all duration-300 group-hover:shadow-md group-hover:shadow-secondary/20">
+							<div class="w-full h-full bg-bg-surface rounded-[11px] flex items-center justify-center transition-all duration-300 group-hover:bg-transparent">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-primary group-hover:text-white transition-all duration-300 group-hover:rotate-45">
+									<polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9" />
+									<circle cx="12" cy="12" r="1.5" fill="currentColor" class="text-secondary group-hover:text-white" />
+								</svg>
+							</div>
+							<!-- Outer Glow ring on hover -->
+							<div class="absolute -inset-0.5 bg-gradient-to-tr from-primary to-secondary rounded-xl blur-[2px] opacity-20 group-hover:opacity-50 transition-opacity duration-300 -z-10"></div>
+						</div>
+
+						<!-- Logo Brand Text & Domain Pill -->
+						<div class="flex items-center gap-2 text-left">
+							<span class="text-[1.6rem] font-extrabold font-display tracking-tight leading-none text-text-main">
+								<span class="bg-gradient-to-r from-primary via-secondary to-primary bg-[length:200%_auto] bg-clip-text text-transparent group-hover:bg-right transition-all duration-700">Maha</span><span class="text-text-main transition-colors duration-300 group-hover:text-primary">Disha</span>
+							</span>
+							<span class="px-1.5 py-0.5 text-[0.68rem] font-extrabold tracking-wider text-white uppercase rounded-md bg-gradient-to-r from-secondary to-primary shadow-xs transition-all duration-300 group-hover:from-primary group-hover:to-secondary">
+								in
+							</span>
+						</div>
+					</a>
 					<p class="text-text-muted mt-2 text-[0.9rem]">Your trusted source for latest government jobs, exams, admit cards, and results.</p>
 				</div>
 
