@@ -1,5 +1,5 @@
 export async function GET() {
-  const siteUrl = 'https://techfixsteps.com';
+  const siteUrl = 'https://mahadisha.in';
   
   // Static pages
   const staticPages = [

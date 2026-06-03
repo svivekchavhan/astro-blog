@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://techfixsteps.com/sitemap-index.xml
+Sitemap: https://mahadisha.in/sitemap-index.xml

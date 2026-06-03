@@ -104,4 +104,8 @@
   .gradient-text {
     @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
   }
+
+  .font-display {
+    font-family: 'Outfit', 'Poppins', ui-sans-serif, system-ui, sans-serif;
+  }
 }
