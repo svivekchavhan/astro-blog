@@ -467,6 +467,31 @@ const searchData = [...mainPages, ...articles];
 
     // Live Search Suggestions
     if (searchInput && suggestionsContainer && suggestionsList) {
+      let activeIndex = -1;
+
+      function getSuggestionItems() {
+        return suggestionsList.querySelectorAll("a");
+      }
+
+      function updateActiveItem() {
+        const items = getSuggestionItems();
+        items.forEach((item, idx) => {
+          const iconContainer = item.querySelector("div");
+          if (idx === activeIndex) {
+            item.classList.add("bg-primary/5");
+            if (iconContainer) {
+              iconContainer.classList.add("!bg-primary", "!text-white");
+            }
+            item.scrollIntoView({ block: "nearest" });
+          } else {
+            item.classList.remove("bg-primary/5");
+            if (iconContainer) {
+              iconContainer.classList.remove("!bg-primary", "!text-white");
+            }
+          }
+        });
+      }
+
       function highlightMatch(text, query) {
         if (!query) return text;
         const regex = new RegExp(`(${query})`, "gi");
@@ -478,6 +503,7 @@ const searchData = [...mainPages, ...articles];
 
       searchInput.addEventListener("input", (e) => {
         const query = e.target.value.toLowerCase().trim();
+        activeIndex = -1; // Reset selection index on input change
 
         if (query.length < 2) {
           suggestionsContainer.classList.add(
@@ -516,6 +542,36 @@ const searchData = [...mainPages, ...articles];
             suggestionsContainer.classList.remove("opacity-0", "translate-y-2");
           }, 10);
         } else {
+          suggestionsContainer.classList.add(
+            "hidden",
+            "opacity-0",
+            "translate-y-2",
+          );
+        }
+      });
+
+      // Keyboard navigation
+      searchInput.addEventListener("keydown", (e) => {
+        const isOpen = !suggestionsContainer.classList.contains("hidden");
+        if (!isOpen) return;
+
+        const items = getSuggestionItems();
+        if (items.length === 0) return;
+
+        if (e.key === "ArrowDown") {
+          e.preventDefault();
+          activeIndex = (activeIndex + 1) % items.length;
+          updateActiveItem();
+        } else if (e.key === "ArrowUp") {
+          e.preventDefault();
+          activeIndex = (activeIndex - 1 + items.length) % items.length;
+          updateActiveItem();
+        } else if (e.key === "Enter") {
+          if (activeIndex >= 0 && activeIndex < items.length) {
+            e.preventDefault();
+            items[activeIndex].click();
+          }
+        } else if (e.key === "Escape") {
           suggestionsContainer.classList.add(
             "hidden",
             "opacity-0",
