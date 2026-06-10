@@ -19,7 +19,8 @@ export async function GET() {
     '/sitemap',
     '/mpsc',
     '/calculator',
-    '/age-calculator'
+    '/age-calculator',
+    '/sgpa-cgpa-calculator'
   ];
 
   // Dynamically find all articles in src/pages/
@@ -43,7 +44,8 @@ export async function GET() {
     "mpsc.astro",
     "mpsc-exam-details-information.astro",
     "calculator.astro",
-    "age-calculator.astro"
+    "age-calculator.astro",
+    "sgpa-cgpa-calculator.astro"
   ];
   
   const dynamicPages = Object.keys(postFiles)

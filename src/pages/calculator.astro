@@ -32,36 +32,28 @@ const description =
     </div>
 
     <!-- Calculators Grid -->
-    <div class="max-w-[900px] mx-auto px-2 md:px-0">
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    <div class="max-w-[1100px] mx-auto px-2 md:px-0">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
         <!-- Age Calculator Tool Card -->
-        <a
-          href="/age-calculator"
-          class="group relative bg-bg-surface border border-border-card hover:border-primary rounded-3xl p-6 md:p-8 shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 flex flex-col justify-between min-h-[320px] overflow-hidden no-underline"
+        <a 
+          href="/age-calculator" 
+          class="group relative bg-bg-surface border border-border-card hover:border-primary rounded-3xl p-6 md:p-8 shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 flex flex-col justify-between min-h-[340px] overflow-hidden no-underline"
         >
           <!-- Ambient Glow background effect -->
-          <div
-            class="absolute -right-20 -top-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors duration-500 -z-10"
-          >
-          </div>
-
+          <div class="absolute -right-20 -top-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors duration-500 -z-10"></div>
+          
           <div class="space-y-4">
             <!-- Icon & Badges -->
             <div class="flex justify-between items-start">
-              <div
-                class="p-3.5 bg-primary/10 text-primary rounded-2xl group-hover:bg-primary group-hover:text-white transition-all duration-300"
-              >
+              <div class="p-3.5 bg-primary/10 text-primary rounded-2xl group-hover:bg-primary group-hover:text-white transition-all duration-300">
                 <HiOutlineCalculator className="text-xl" />
               </div>
               <div class="flex items-center gap-1.5 flex-wrap">
-                <span
-                  class="text-[0.6rem] bg-primary/10 text-primary px-2.5 py-0.5 rounded font-bold uppercase tracking-wider border border-primary/20 whitespace-nowrap"
-                >
+                <span class="text-[0.6rem] bg-primary/10 text-primary px-2.5 py-0.5 rounded font-bold uppercase tracking-wider border border-primary/20 whitespace-nowrap">
                   Tool
                 </span>
-                <span
-                  class="text-[0.6rem] bg-emerald-500/10 text-emerald-500 px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wide border border-emerald-500/20 whitespace-nowrap"
-                >
+                <span class="text-[0.6rem] bg-emerald-500/10 text-emerald-500 px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wide border border-emerald-500/20 whitespace-nowrap">
                   Age Calc
                 </span>
               </div>
@@ -69,62 +61,87 @@ const description =
 
             <!-- Title & Description -->
             <div class="space-y-2">
-              <h2
-                class="text-lg md:text-xl text-text-main font-extrabold leading-tight m-0 group-hover:text-primary transition-colors"
-              >
+              <h2 class="text-lg md:text-xl text-text-main font-extrabold leading-tight m-0 group-hover:text-primary transition-colors">
                 Age Calculator (वय मोजा)
               </h2>
               <p class="text-xs text-text-secondary leading-relaxed m-0">
-                एमपीएससी (MPSC), पोलिस भरती, किंवा इतर कोणत्याही शासकीय भरती
-                परीक्षेचा अर्ज भरताना तुमचे अचूक वय (वर्ष, महिने, दिवस)
-                मोजण्यासाठी हे कॅल्क्युलेटर वापरा.
+                एमपीएससी (MPSC), पोलिस भरती, किंवा इतर कोणत्याही शासकीय भरती परीक्षेचा अर्ज भरताना तुमचे अचूक वय (वर्ष, महिने, दिवस) मोजण्यासाठी हे कॅल्क्युलेटर वापरा.
               </p>
             </div>
 
             <!-- Features list -->
-            <div
-              class="flex flex-col gap-2 text-xs text-text-muted font-medium pt-3.5 border-t border-border-card/30"
-            >
-              <span class="flex items-center gap-1.5"
-                ><HiOutlineCalendarDays
-                  className="text-primary text-sm shrink-0"
-                /> Year, Month, Day calculation</span
-              >
-              <span class="flex items-center gap-1.5"
-                ><HiOutlineClock className="text-primary text-sm shrink-0" /> Next
-                Birthday Countdown</span
-              >
+            <div class="flex flex-col gap-2 text-xs text-text-muted font-medium pt-3.5 border-t border-border-card/30">
+              <span class="flex items-center gap-1.5"><HiOutlineCalendarDays className="text-primary text-sm shrink-0" /> Year, Month, Day calculation</span>
+              <span class="flex items-center gap-1.5"><HiOutlineClock className="text-primary text-sm shrink-0" /> Next Birthday Countdown</span>
             </div>
           </div>
 
           <!-- Action link footer -->
-          <div
-            class="mt-6 pt-3.5 border-t border-border-card/30 flex items-center justify-between text-xs text-primary font-bold uppercase tracking-wider"
-          >
+          <div class="mt-6 pt-3.5 border-t border-border-card/30 flex items-center justify-between text-xs text-primary font-bold uppercase tracking-wider">
             <span>Calculate Age</span>
-            <HiOutlineArrowRight
-              className="text-sm transition-transform duration-300 group-hover:translate-x-1"
-            />
+            <HiOutlineArrowRight className="text-sm transition-transform duration-300 group-hover:translate-x-1" />
+          </div>
+        </a>
+
+        <!-- SGPA & CGPA Calculator Tool Card -->
+        <a 
+          href="/sgpa-cgpa-calculator" 
+          class="group relative bg-bg-surface border border-border-card hover:border-primary rounded-3xl p-6 md:p-8 shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 flex flex-col justify-between min-h-[340px] overflow-hidden no-underline"
+        >
+          <!-- Ambient Glow background effect -->
+          <div class="absolute -right-20 -top-20 w-64 h-64 bg-secondary/5 rounded-full blur-3xl group-hover:bg-secondary/10 transition-colors duration-500 -z-10"></div>
+          
+          <div class="space-y-4">
+            <!-- Icon & Badges -->
+            <div class="flex justify-between items-start">
+              <div class="p-3.5 bg-secondary/10 text-secondary rounded-2xl group-hover:bg-secondary group-hover:text-white transition-all duration-300">
+                <HiOutlineAcademicCap className="text-xl" />
+              </div>
+              <div class="flex items-center gap-1.5 flex-wrap">
+                <span class="text-[0.6rem] bg-secondary/10 text-secondary px-2.5 py-0.5 rounded font-bold uppercase tracking-wider border border-secondary/20 whitespace-nowrap">
+                  Grades
+                </span>
+                <span class="text-[0.6rem] bg-emerald-500/10 text-emerald-500 px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wide border border-emerald-500/20 whitespace-nowrap">
+                  UGC / MU / SPPU
+                </span>
+              </div>
+            </div>
+
+            <!-- Title & Description -->
+            <div class="space-y-2">
+              <h2 class="text-lg md:text-xl text-text-main font-extrabold leading-tight m-0 group-hover:text-secondary transition-colors">
+                SGPA & CGPA Calculator
+              </h2>
+              <p class="text-xs text-text-secondary leading-relaxed m-0">
+                तुमचे सेमिस्टर गुण (SGPA/CGPA) मोजा. शासकीय नोकरी अर्ज फॉर्म भरण्यासाठी मुंबई विद्यापीठ (MU), पुणे विद्यापीठ (SPPU) व AICTE च्या अधिकृत सूत्रांनुसार टक्केवारीमध्ये (Percentage) रूपांतर करा.
+              </p>
+            </div>
+
+            <!-- Features list -->
+            <div class="flex flex-col gap-2 text-xs text-text-muted font-medium pt-3.5 border-t border-border-card/30">
+              <span class="flex items-center gap-1.5"><HiOutlineCalculator className="text-secondary text-sm shrink-0" /> Dynamic SGPA & CGPA solver</span>
+              <span class="flex items-center gap-1.5"><HiOutlineArrowTopRightOnSquare className="text-secondary text-sm shrink-0" /> Official University Conversion Formulas</span>
+            </div>
+          </div>
+
+          <!-- Action link footer -->
+          <div class="mt-6 pt-3.5 border-t border-border-card/30 flex items-center justify-between text-xs text-secondary font-bold uppercase tracking-wider">
+            <span>Calculate Grades</span>
+            <HiOutlineArrowRight className="text-sm transition-transform duration-300 group-hover:translate-x-1" />
           </div>
         </a>
 
         <!-- Placeholder Card -->
-        <div
-          class="relative bg-bg-surface/30 border border-dashed border-border-card rounded-3xl p-6 md:p-8 flex flex-col justify-center items-center text-center min-h-[320px]"
-        >
+        <div class="relative bg-bg-surface/30 border border-dashed border-border-card rounded-3xl p-6 md:p-8 flex flex-col justify-center items-center text-center min-h-[340px]">
           <div class="p-3.5 bg-text-muted/10 text-text-muted rounded-2xl mb-4">
-            <HiOutlineAcademicCap className="text-xl" />
+            <HiOutlineClock className="text-xl" />
           </div>
-          <h3 class="text-sm font-bold text-text-main mb-1.5">
-            More Tools Coming Soon
-          </h3>
-          <p
-            class="text-xs text-text-secondary max-w-[260px] leading-relaxed m-0"
-          >
-            We are working on percentage calculators, photo/sign resizers, and
-            fee estimators. Stay tuned!
+          <h3 class="text-sm font-bold text-text-main mb-1.5">More Tools Coming Soon</h3>
+          <p class="text-xs text-text-secondary max-w-[240px] leading-relaxed m-0">
+            We are working on percentage calculators, photo/sign resizers, and fee estimators. Stay tuned!
           </p>
         </div>
+
       </div>
     </div>
   </section>

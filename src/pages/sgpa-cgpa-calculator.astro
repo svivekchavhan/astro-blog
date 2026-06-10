@@ -1,0 +1,733 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { 
+  HiOutlineAcademicCap, 
+  HiOutlineClipboard, 
+  HiOutlineTrash,
+  HiOutlineArrowLeft,
+  HiOutlineInformationCircle,
+  HiOutlinePlus,
+  HiOutlineCalculator,
+  HiOutlineArrowTopRightOnSquare
+} from "react-icons/hi2";
+
+const title = "SGPA & CGPA Calculator with Official Percentage Converter | MahaDisha";
+const description = "Calculate SGPA and CGPA online. Convert CGPA to percentage using official Mumbai University (MU), Pune University (SPPU), AICTE, and UGC formulas for Indian Government job forms.";
+---
+
+<Layout title={title} description={description} hideSidebar={true}>
+  <section class="pt-4 pb-16 not-prose">
+    
+    <!-- Back to Hub link -->
+    <div class="max-w-[800px] mx-auto px-2 md:px-0 mb-6">
+      <a href="/calculator" class="inline-flex items-center gap-1.5 text-xs text-primary hover:text-secondary font-bold uppercase tracking-wider transition-colors no-underline">
+        <HiOutlineArrowLeft className="text-sm" /> Back to Calculators
+      </a>
+    </div>
+
+    <!-- Header Section -->
+    <div class="text-center mb-8">
+      <h1 class="text-3xl md:text-5xl font-extrabold mb-3 tracking-tight text-text-main m-0">
+        SGPA & CGPA Calculator
+      </h1>
+      <p class="text-text-secondary text-sm md:text-base m-0 max-w-[650px] mx-auto leading-relaxed">
+        तुमचे गुण मोजा आणि टक्केवारीमध्ये रूपांतर करा. मुंबई, पुणे विद्यापीठ व AICTE/UGC च्या अधिकृत सरकारी नियमांनुसार टक्केवारी काढण्यासाठी उपयुक्त टूल्स.
+      </p>
+    </div>
+
+    <!-- Main Container with Tabs -->
+    <div class="max-w-[800px] mx-auto px-2 md:px-0">
+      
+      <!-- Tab Headers Grid -->
+      <div class="flex border border-border-card bg-bg-surface/50 rounded-2xl p-1.5 mb-6 overflow-x-auto gap-1">
+        <button 
+          id="tab-btn-converter" 
+          class="tab-btn flex-1 whitespace-nowrap px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider text-primary bg-bg-surface border border-solid border-border-card shadow-xs transition-all duration-300 cursor-pointer"
+        >
+          Percentage Converter
+        </button>
+        <button 
+          id="tab-btn-sgpa" 
+          class="tab-btn flex-1 whitespace-nowrap px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider text-text-muted hover:text-primary transition-all duration-300 cursor-pointer border-none bg-transparent"
+        >
+          SGPA Calculator
+        </button>
+        <button 
+          id="tab-btn-cgpa" 
+          class="tab-btn flex-1 whitespace-nowrap px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider text-text-muted hover:text-primary transition-all duration-300 cursor-pointer border-none bg-transparent"
+        >
+          CGPA Calculator
+        </button>
+      </div>
+
+      <!-- Tab Content Cards -->
+      <div class="bg-bg-surface border border-border-card rounded-3xl p-6 md:p-8 shadow-sm">
+        
+        <!-- ================= TAB 1: CONVERTER ================= -->
+        <div id="tab-panel-converter" class="tab-panel space-y-6">
+          <div class="border-b border-border-card dark:border-border-card/30 pb-4 mb-4">
+            <h2 class="text-lg font-bold text-text-main m-0 flex items-center gap-2">
+              <HiOutlineCalculator className="text-primary text-xl" /> CGPA to Percentage Converter
+            </h2>
+            <p class="text-xs text-text-secondary m-0 mt-1">Convert CGPA to exact percentage matching government job requirements.</p>
+          </div>
+
+          <form id="converter-form" class="space-y-5">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+              
+              <!-- CGPA Value -->
+              <div class="flex flex-col gap-2">
+                <label for="cgpa-input" class="text-xs font-bold text-text-main uppercase tracking-wider">
+                  Enter CGPA / SGPA (10-Point Scale)
+                </label>
+                <input 
+                  type="number" 
+                  step="0.01" 
+                  min="0" 
+                  max="10" 
+                  id="cgpa-input" 
+                  placeholder="e.g. 8.45" 
+                  required
+                  class="bg-bg-base border-2 border-border-card rounded-xl px-4 py-3 text-text-main font-semibold focus:border-primary focus:outline-none transition-colors"
+                />
+              </div>
+
+              <!-- Board/University Formula Selection -->
+              <div class="flex flex-col gap-2">
+                <label for="formula-select" class="text-xs font-bold text-text-main uppercase tracking-wider">
+                  Select University / Formula
+                </label>
+                <select 
+                  id="formula-select" 
+                  class="bg-bg-base border-2 border-border-card rounded-xl px-4 py-3 text-text-main font-semibold focus:border-primary focus:outline-none transition-colors"
+                >
+                  <option value="aicte">AICTE / UGC Standard Formula: (CGPA - 0.75) * 10</option>
+                  <option value="mu">Mumbai University (MU) 10-Point scale</option>
+                  <option value="sppu">Pune University (SPPU): (CGPA - 0.75) * 10</option>
+                  <option value="cbse">CBSE Formula: CGPA * 9.5</option>
+                  <option value="dbatu">DBATU (Technical University): (CGPA - 0.75) * 10</option>
+                  <option value="custom">Custom Scale Factor</option>
+                </select>
+              </div>
+
+            </div>
+
+            <!-- Custom Factor Input (Initially Hidden) -->
+            <div id="custom-factor-div" class="hidden flex-col gap-2">
+              <label for="custom-factor-input" class="text-xs font-bold text-text-main uppercase tracking-wider">
+                Custom Multiplier Factor (e.g. 9.5 or 10)
+              </label>
+              <input 
+                type="number" 
+                step="0.01" 
+                id="custom-factor-input" 
+                value="9.5"
+                class="bg-bg-base border-2 border-border-card rounded-xl px-4 py-3 text-text-main font-semibold focus:border-primary focus:outline-none transition-colors max-w-[200px]"
+              />
+            </div>
+
+            <button 
+              type="submit" 
+              class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-gradient-to-r from-primary to-secondary hover:shadow-[0_0_15px_rgba(56,189,248,0.4)] text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-all shadow-sm cursor-pointer border-none"
+            >
+              Convert to Percentage
+            </button>
+          </form>
+
+          <!-- Result Display -->
+          <div id="converter-result-box" class="hidden space-y-4 pt-6 border-t border-border-card dark:border-border-card/30">
+            <div class="text-center bg-gradient-to-br from-emerald-500/5 to-teal-500/5 border border-emerald-500/20 rounded-2xl p-6">
+              <span class="text-[0.6rem] bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider">Equivalent Percentage</span>
+              <div id="converted-percent" class="text-3xl md:text-4xl font-black text-text-main mt-3">
+                -- %
+              </div>
+              <div id="applied-formula-label" class="text-[0.7rem] text-text-muted mt-2 font-medium">
+                Applied Formula: (CGPA - 0.75) * 10
+              </div>
+            </div>
+
+            <!-- Utility Copy -->
+            <div class="flex justify-end">
+              <button 
+                type="button" 
+                id="btn-copy-converter" 
+                class="inline-flex items-center gap-1.5 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary border border-primary/20 text-xs font-bold uppercase tracking-wider rounded-xl transition-colors cursor-pointer"
+              >
+                <HiOutlineClipboard className="text-base" /> Copy Percentage Result
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= TAB 2: SGPA CALCULATOR ================= -->
+        <div id="tab-panel-sgpa" class="tab-panel hidden space-y-6">
+          <div class="border-b border-border-card dark:border-border-card/30 pb-4 mb-4 flex justify-between items-center">
+            <div>
+              <h2 class="text-lg font-bold text-text-main m-0 flex items-center gap-2">
+                <HiOutlineAcademicCap className="text-secondary text-xl" /> SGPA Calculator
+              </h2>
+              <p class="text-xs text-text-secondary m-0 mt-1">Calculate Semester Grade Point Average (SGPA).</p>
+            </div>
+            <button 
+              type="button" 
+              id="btn-add-subject"
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 hover:bg-primary/20 text-primary text-[0.7rem] font-bold uppercase tracking-wider rounded-lg transition-colors cursor-pointer border-none"
+            >
+              <HiOutlinePlus className="text-sm" /> Add Row
+            </button>
+          </div>
+
+          <!-- Dynamic Subject Rows -->
+          <div id="subjects-container" class="space-y-3">
+            
+            <!-- Default Rows (2 Rows) -->
+            <div class="subject-row grid grid-cols-12 gap-3 items-center">
+              <div class="col-span-6">
+                <input 
+                  type="text" 
+                  placeholder="Subject Name (optional)" 
+                  class="w-full bg-bg-base border border-border-card rounded-lg px-3 py-2 text-xs text-text-main focus:outline-none"
+                />
+              </div>
+              <div class="col-span-3">
+                <select class="grade-point-select w-full bg-bg-base border border-border-card rounded-lg px-3 py-2 text-xs text-text-main focus:outline-none">
+                  <option value="">Grade Point</option>
+                  <option value="10">O (10 Points)</option>
+                  <option value="9">A+ (9 Points)</option>
+                  <option value="8">A (8 Points)</option>
+                  <option value="7">B+ (7 Points)</option>
+                  <option value="6">B (6 Points)</option>
+                  <option value="5">C (5 Points)</option>
+                  <option value="4">P (4 Points)</option>
+                  <option value="0">F (0 Points)</option>
+                </select>
+              </div>
+              <div class="col-span-2">
+                <input 
+                  type="number" 
+                  placeholder="Credits" 
+                  min="1" 
+                  max="10"
+                  class="credit-input w-full bg-bg-base border border-border-card rounded-lg px-3 py-2 text-xs text-text-main focus:outline-none"
+                />
+              </div>
+              <div class="col-span-1 text-center">
+                <button type="button" class="btn-delete-row text-rose-500 hover:text-rose-600 text-sm bg-transparent border-none cursor-pointer">✕</button>
+              </div>
+            </div>
+
+            <div class="subject-row grid grid-cols-12 gap-3 items-center">
+              <div class="col-span-6">
+                <input 
+                  type="text" 
+                  placeholder="Subject Name (optional)" 
+                  class="w-full bg-bg-base border border-border-card rounded-lg px-3 py-2 text-xs text-text-main focus:outline-none"
+                />
+              </div>
+              <div class="col-span-3">
+                <select class="grade-point-select w-full bg-bg-base border border-border-card rounded-lg px-3 py-2 text-xs text-text-main focus:outline-none">
+                  <option value="">Grade Point</option>
+                  <option value="10">O (10 Points)</option>
+                  <option value="9">A+ (9 Points)</option>
+                  <option value="8">A (8 Points)</option>
+                  <option value="7">B+ (7 Points)</option>
+                  <option value="6">B (6 Points)</option>
+                  <option value="5">C (5 Points)</option>
+                  <option value="4">P (4 Points)</option>
+                  <option value="0">F (0 Points)</option>
+                </select>
+              </div>
+              <div class="col-span-2">
+                <input 
+                  type="number" 
+                  placeholder="Credits" 
+                  min="1" 
+                  max="10"
+                  class="credit-input w-full bg-bg-base border border-border-card rounded-lg px-3 py-2 text-xs text-text-main focus:outline-none"
+                />
+              </div>
+              <div class="col-span-1 text-center">
+                <button type="button" class="btn-delete-row text-rose-500 hover:text-rose-600 text-sm bg-transparent border-none cursor-pointer">✕</button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Calculate Button -->
+          <div class="pt-4 flex gap-4">
+            <button 
+              type="button" 
+              id="btn-calculate-sgpa"
+              class="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-secondary hover:shadow-[0_0_15px_rgba(56,189,248,0.4)] text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-all shadow-sm cursor-pointer border-none"
+            >
+              Calculate SGPA
+            </button>
+            <button 
+              type="button" 
+              id="btn-clear-sgpa"
+              class="inline-flex items-center justify-center gap-1.5 px-4 py-3 bg-rose-500/5 hover:bg-rose-500/10 border border-solid border-rose-500/20 text-rose-500 font-bold uppercase tracking-wider text-xs rounded-xl cursor-pointer transition-colors"
+            >
+              Clear
+            </button>
+          </div>
+
+          <!-- Result display -->
+          <div id="sgpa-result-box" class="hidden space-y-4 pt-6 border-t border-border-card dark:border-border-card/30">
+            <div class="text-center bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/20 rounded-2xl p-6">
+              <span class="text-[0.6rem] bg-primary/10 text-primary border border-primary/20 px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider">Semester SGPA</span>
+              <div id="calculated-sgpa" class="text-3xl md:text-4xl font-black text-text-main mt-3">
+                --
+              </div>
+              <p class="text-xs text-text-muted mt-2 font-medium">Use the Percentage tab to convert this SGPA into percentage.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= TAB 3: CGPA CALCULATOR ================= -->
+        <div id="tab-panel-cgpa" class="tab-panel hidden space-y-6">
+          <div class="border-b border-border-card dark:border-border-card/30 pb-4 mb-4 flex justify-between items-center">
+            <div>
+              <h2 class="text-lg font-bold text-text-main m-0 flex items-center gap-2">
+                <HiOutlineAcademicCap className="text-secondary text-xl" /> CGPA Calculator
+              </h2>
+              <p class="text-xs text-text-secondary m-0 mt-1">Calculate Cumulative Grade Point Average (CGPA) from semester details.</p>
+            </div>
+            <button 
+              type="button" 
+              id="btn-add-semester"
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 hover:bg-primary/20 text-primary text-[0.7rem] font-bold uppercase tracking-wider rounded-lg transition-colors cursor-pointer border-none"
+            >
+              <HiOutlinePlus className="text-sm" /> Add Sem
+            </button>
+          </div>
+
+          <!-- Semester Rows -->
+          <div id="semesters-container" class="space-y-3">
+            
+            <!-- Default Semesters (Sem 1 & Sem 2) -->
+            <div class="sem-row grid grid-cols-12 gap-3 items-center">
+              <div class="col-span-6">
+                <span class="text-xs font-bold text-text-main">Semester 1</span>
+              </div>
+              <div class="col-span-3">
+                <input 
+                  type="number" 
+                  step="0.01" 
+                  min="0" 
+                  max="10" 
+                  placeholder="SGPA (e.g. 8.2)" 
+                  class="sgpa-input w-full bg-bg-base border border-border-card rounded-lg px-3 py-2 text-xs text-text-main focus:outline-none"
+                />
+              </div>
+              <div class="col-span-2">
+                <input 
+                  type="number" 
+                  placeholder="Credits" 
+                  min="1" 
+                  max="35"
+                  class="sem-credit-input w-full bg-bg-base border border-border-card rounded-lg px-3 py-2 text-xs text-text-main focus:outline-none"
+                />
+              </div>
+              <div class="col-span-1 text-center">
+                <button type="button" class="btn-delete-sem text-rose-500 hover:text-rose-600 text-sm bg-transparent border-none cursor-pointer">✕</button>
+              </div>
+            </div>
+
+            <div class="sem-row grid grid-cols-12 gap-3 items-center">
+              <div class="col-span-6">
+                <span class="text-xs font-bold text-text-main">Semester 2</span>
+              </div>
+              <div class="col-span-3">
+                <input 
+                  type="number" 
+                  step="0.01" 
+                  min="0" 
+                  max="10" 
+                  placeholder="SGPA (e.g. 8.5)" 
+                  class="sgpa-input w-full bg-bg-base border border-border-card rounded-lg px-3 py-2 text-xs text-text-main focus:outline-none"
+                />
+              </div>
+              <div class="col-span-2">
+                <input 
+                  type="number" 
+                  placeholder="Credits" 
+                  min="1" 
+                  max="35"
+                  class="sem-credit-input w-full bg-bg-base border border-border-card rounded-lg px-3 py-2 text-xs text-text-main focus:outline-none"
+                />
+              </div>
+              <div class="col-span-1 text-center">
+                <button type="button" class="btn-delete-sem text-rose-500 hover:text-rose-600 text-sm bg-transparent border-none cursor-pointer">✕</button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Calculate Button -->
+          <div class="pt-4 flex gap-4">
+            <button 
+              type="button" 
+              id="btn-calculate-cgpa"
+              class="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-secondary hover:shadow-[0_0_15px_rgba(56,189,248,0.4)] text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-all shadow-sm cursor-pointer border-none"
+            >
+              Calculate CGPA
+            </button>
+            <button 
+              type="button" 
+              id="btn-clear-cgpa"
+              class="inline-flex items-center justify-center gap-1.5 px-4 py-3 bg-rose-500/5 hover:bg-rose-500/10 border border-solid border-rose-500/20 text-rose-500 font-bold uppercase tracking-wider text-xs rounded-xl cursor-pointer transition-colors"
+            >
+              Clear
+            </button>
+          </div>
+
+          <!-- Result display -->
+          <div id="cgpa-result-box" class="hidden space-y-4 pt-6 border-t border-border-card dark:border-border-card/30">
+            <div class="text-center bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/20 rounded-2xl p-6">
+              <span class="text-[0.6rem] bg-primary/10 text-primary border border-primary/20 px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider">Cumulative CGPA</span>
+              <div id="calculated-cgpa" class="text-3xl md:text-4xl font-black text-text-main mt-3">
+                --
+              </div>
+              <p class="text-xs text-text-muted mt-2 font-medium">Use the Percentage tab to convert this CGPA into percentage.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  function setupSgpaCgpaCalculator() {
+    // Tab switching elements
+    const btnConverter = document.getElementById("tab-btn-converter");
+    const btnSgpa = document.getElementById("tab-btn-sgpa");
+    const btnCgpa = document.getElementById("tab-btn-cgpa");
+    
+    const panelConverter = document.getElementById("tab-panel-converter");
+    const panelSgpa = document.getElementById("tab-panel-sgpa");
+    const panelCgpa = document.getElementById("tab-panel-cgpa");
+
+    const tabs = [
+      { btn: btnConverter, panel: panelConverter },
+      { btn: btnSgpa, panel: panelSgpa },
+      { btn: btnCgpa, panel: panelCgpa }
+    ];
+
+    function activateTab(targetIndex: number) {
+      tabs.forEach((tab, index) => {
+        if (!tab.btn || !tab.panel) return;
+        if (index === targetIndex) {
+          tab.btn.classList.add("text-primary", "bg-bg-surface", "border", "border-solid", "border-border-card", "shadow-xs");
+          tab.btn.classList.remove("text-text-muted", "hover:text-primary", "bg-transparent", "border-none");
+          tab.panel.classList.remove("hidden");
+        } else {
+          tab.btn.classList.remove("text-primary", "bg-bg-surface", "border", "border-solid", "border-border-card", "shadow-xs");
+          tab.btn.classList.add("text-text-muted", "hover:text-primary", "bg-transparent", "border-none");
+          tab.panel.classList.add("hidden");
+        }
+      });
+    }
+
+    if (btnConverter) btnConverter.addEventListener("click", () => activateTab(0));
+    if (btnSgpa) btnSgpa.addEventListener("click", () => activateTab(1));
+    if (btnCgpa) btnCgpa.addEventListener("click", () => activateTab(2));
+
+    // ================= CONVERTER LOGIC =================
+    const converterForm = document.getElementById("converter-form") as HTMLFormElement | null;
+    const cgpaInput = document.getElementById("cgpa-input") as HTMLInputElement | null;
+    const formulaSelect = document.getElementById("formula-select") as HTMLSelectElement | null;
+    const customFactorDiv = document.getElementById("custom-factor-div");
+    const customFactorInput = document.getElementById("custom-factor-input") as HTMLInputElement | null;
+    const resultBox = document.getElementById("converter-result-box");
+    const percentEl = document.getElementById("converted-percent");
+    const formulaLabelEl = document.getElementById("applied-formula-label");
+    const btnCopyConverter = document.getElementById("btn-copy-converter");
+
+    formulaSelect?.addEventListener("change", () => {
+      if (formulaSelect.value === "custom") {
+        customFactorDiv?.classList.remove("hidden");
+      } else {
+        customFactorDiv?.classList.add("hidden");
+      }
+    });
+
+    converterForm?.addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (!cgpaInput || !formulaSelect || !percentEl || !formulaLabelEl) return;
+
+      const cgpa = parseFloat(cgpaInput.value);
+      if (isNaN(cgpa) || cgpa < 0 || cgpa > 10) return;
+
+      const method = formulaSelect.value;
+      let percentage = 0;
+      let formulaText = "";
+
+      if (method === "aicte" || method === "sppu" || method === "dbatu") {
+        percentage = (cgpa - 0.75) * 10;
+        formulaText = "Applied AICTE/UGC/SPPU/DBATU Official Formula: (CGPA - 0.75) * 10";
+      } else if (method === "mu") {
+        // Mumbai University 10-Point Choice Based
+        if (cgpa < 7.0) {
+          percentage = 7.1 * cgpa + 11;
+          formulaText = "Applied Mumbai University Formula (CGPA < 7.0): 7.1 * CGPA + 11";
+        } else {
+          percentage = 7.25 * cgpa + 11;
+          formulaText = "Applied Mumbai University Formula (CGPA >= 7.0): 7.25 * CGPA + 11";
+        }
+      } else if (method === "cbse") {
+        percentage = cgpa * 9.5;
+        formulaText = "Applied CBSE Standard Formula: CGPA * 9.5";
+      } else if (method === "custom") {
+        const factor = customFactorInput ? parseFloat(customFactorInput.value) : 9.5;
+        percentage = cgpa * factor;
+        formulaText = `Applied Custom Multiplier Formula: CGPA * ${factor}`;
+      }
+
+      // Bound percentage values
+      percentage = Math.max(0, Math.min(100, percentage));
+      percentEl.textContent = `${percentage.toFixed(2)} %`;
+      formulaLabelEl.textContent = formulaText;
+      resultBox?.classList.remove("hidden");
+    });
+
+    // Copy Converter percentage results
+    btnCopyConverter?.addEventListener("click", () => {
+      if (!cgpaInput || !percentEl || !formulaSelect) return;
+      
+      const cgpaVal = cgpaInput.value;
+      const pctVal = percentEl.textContent;
+      const univVal = formulaSelect.options[formulaSelect.selectedIndex].text;
+      
+      const copyText = `CGPA to Percentage Conversion:\n-------------------------------\nCGPA: ${cgpaVal}\nPercentage: ${pctVal}\nFormula Rule: ${univVal}\nCalculated via: mahadisha.in/sgpa-cgpa-calculator`;
+      
+      navigator.clipboard.writeText(copyText).then(() => {
+        const originalText = btnCopyConverter.innerHTML;
+        btnCopyConverter.innerHTML = "✓ Copied!";
+        setTimeout(() => {
+          btnCopyConverter.innerHTML = originalText;
+        }, 2000);
+      });
+    });
+
+    // ================= SGPA CALCULATOR LOGIC =================
+    const subjectsContainer = document.getElementById("subjects-container");
+    const btnAddSubject = document.getElementById("btn-add-subject");
+    const btnCalcSgpa = document.getElementById("btn-calculate-sgpa");
+    const btnClearSgpa = document.getElementById("btn-clear-sgpa");
+    const sgpaResultBox = document.getElementById("sgpa-result-box");
+    const calculatedSgpaEl = document.getElementById("calculated-sgpa");
+
+    // Add row helper
+    btnAddSubject?.addEventListener("click", () => {
+      if (!subjectsContainer) return;
+      const row = document.createElement("div");
+      row.className = "subject-row grid grid-cols-12 gap-3 items-center";
+      row.innerHTML = `
+        <div class="col-span-6">
+          <input 
+            type="text" 
+            placeholder="Subject Name (optional)" 
+            class="w-full bg-bg-base border border-border-card rounded-lg px-3 py-2 text-xs text-text-main focus:outline-none"
+          />
+        </div>
+        <div class="col-span-3">
+          <select class="grade-point-select w-full bg-bg-base border border-border-card rounded-lg px-3 py-2 text-xs text-text-main focus:outline-none">
+            <option value="">Grade Point</option>
+            <option value="10">O (10 Points)</option>
+            <option value="9">A+ (9 Points)</option>
+            <option value="8">A (8 Points)</option>
+            <option value="7">B+ (7 Points)</option>
+            <option value="6">B (6 Points)</option>
+            <option value="5">C (5 Points)</option>
+            <option value="4">P (4 Points)</option>
+            <option value="0">F (0 Points)</option>
+          </select>
+        </div>
+        <div class="col-span-2">
+          <input 
+            type="number" 
+            placeholder="Credits" 
+            min="1" 
+            max="10"
+            class="credit-input w-full bg-bg-base border border-border-card rounded-lg px-3 py-2 text-xs text-text-main focus:outline-none"
+          />
+        </div>
+        <div class="col-span-1 text-center">
+          <button type="button" class="btn-delete-row text-rose-500 hover:text-rose-600 text-sm bg-transparent border-none cursor-pointer">✕</button>
+        </div>
+      `;
+      subjectsContainer.appendChild(row);
+      setupDeleteRowButtons();
+    });
+
+    function setupDeleteRowButtons() {
+      const deleteButtons = document.querySelectorAll(".btn-delete-row");
+      deleteButtons.forEach(btn => {
+        btn.removeEventListener("click", handleDeleteRow);
+        btn.addEventListener("click", handleDeleteRow);
+      });
+    }
+
+    function handleDeleteRow(e: Event) {
+      const btn = e.target as HTMLElement;
+      const row = btn.closest(".subject-row");
+      if (row && subjectsContainer && subjectsContainer.children.length > 1) {
+        row.remove();
+      }
+    }
+
+    setupDeleteRowButtons();
+
+    btnCalcSgpa?.addEventListener("click", () => {
+      const rows = document.querySelectorAll(".subject-row");
+      let totalPoints = 0;
+      let totalCredits = 0;
+      let hasValidInput = false;
+
+      rows.forEach(row => {
+        const gpSelect = row.querySelector(".grade-point-select") as HTMLSelectElement | null;
+        const creditInput = row.querySelector(".credit-input") as HTMLInputElement | null;
+
+        if (gpSelect && creditInput && gpSelect.value !== "" && creditInput.value !== "") {
+          const gp = parseFloat(gpSelect.value);
+          const credit = parseFloat(creditInput.value);
+
+          if (!isNaN(gp) && !isNaN(credit) && credit > 0) {
+            totalPoints += gp * credit;
+            totalCredits += credit;
+            hasValidInput = true;
+          }
+        }
+      });
+
+      if (hasValidInput && totalCredits > 0 && calculatedSgpaEl) {
+        const sgpa = totalPoints / totalCredits;
+        calculatedSgpaEl.textContent = sgpa.toFixed(2);
+        sgpaResultBox?.classList.remove("hidden");
+      }
+    });
+
+    btnClearSgpa?.addEventListener("click", () => {
+      const rows = document.querySelectorAll(".subject-row");
+      rows.forEach(row => {
+        const input = row.querySelector("input[type='text']") as HTMLInputElement | null;
+        const gp = row.querySelector(".grade-point-select") as HTMLSelectElement | null;
+        const credit = row.querySelector(".credit-input") as HTMLInputElement | null;
+        if (input) input.value = "";
+        if (gp) gp.value = "";
+        if (credit) credit.value = "";
+      });
+      sgpaResultBox?.classList.add("hidden");
+    });
+
+    // ================= CGPA CALCULATOR LOGIC =================
+    const semestersContainer = document.getElementById("semesters-container");
+    const btnAddSemester = document.getElementById("btn-add-semester");
+    const btnCalcCgpa = document.getElementById("btn-calculate-cgpa");
+    const btnClearCgpa = document.getElementById("btn-clear-cgpa");
+    const cgpaResultBox = document.getElementById("cgpa-result-box");
+    const calculatedCgpaEl = document.getElementById("calculated-cgpa");
+
+    btnAddSemester?.addEventListener("click", () => {
+      if (!semestersContainer) return;
+      const semNumber = semestersContainer.children.length + 1;
+      const row = document.createElement("div");
+      row.className = "sem-row grid grid-cols-12 gap-3 items-center";
+      row.innerHTML = `
+        <div class="col-span-6">
+          <span class="text-xs font-bold text-text-main">Semester ${semNumber}</span>
+        </div>
+        <div class="col-span-3">
+          <input 
+            type="number" 
+            step="0.01" 
+            min="0" 
+            max="10" 
+            placeholder="SGPA (e.g. 8.5)" 
+            class="sgpa-input w-full bg-bg-base border border-border-card rounded-lg px-3 py-2 text-xs text-text-main focus:outline-none"
+          />
+        </div>
+        <div class="col-span-2">
+          <input 
+            type="number" 
+            placeholder="Credits" 
+            min="1" 
+            max="35"
+            class="sem-credit-input w-full bg-bg-base border border-border-card rounded-lg px-3 py-2 text-xs text-text-main focus:outline-none"
+          />
+        </div>
+        <div class="col-span-1 text-center">
+          <button type="button" class="btn-delete-sem text-rose-500 hover:text-rose-600 text-sm bg-transparent border-none cursor-pointer">✕</button>
+        </div>
+      `;
+      semestersContainer.appendChild(row);
+      setupDeleteSemButtons();
+    });
+
+    function setupDeleteSemButtons() {
+      const deleteButtons = document.querySelectorAll(".btn-delete-sem");
+      deleteButtons.forEach(btn => {
+        btn.removeEventListener("click", handleDeleteSem);
+        btn.addEventListener("click", handleDeleteSem);
+      });
+    }
+
+    function handleDeleteSem(e: Event) {
+      const btn = e.target as HTMLElement;
+      const row = btn.closest(".sem-row");
+      if (row && semestersContainer && semestersContainer.children.length > 1) {
+        row.remove();
+        // Recalculate semester numbers in UI labels
+        const semRows = semestersContainer.querySelectorAll(".sem-row");
+        semRows.forEach((r, index) => {
+          const span = r.querySelector("span");
+          if (span) span.textContent = `Semester ${index + 1}`;
+        });
+      }
+    }
+
+    setupDeleteSemButtons();
+
+    btnCalcCgpa?.addEventListener("click", () => {
+      const rows = document.querySelectorAll(".sem-row");
+      let totalPoints = 0;
+      let totalCredits = 0;
+      let hasValidInput = false;
+
+      rows.forEach(row => {
+        const sgpaInput = row.querySelector(".sgpa-input") as HTMLInputElement | null;
+        const creditInput = row.querySelector(".sem-credit-input") as HTMLInputElement | null;
+
+        if (sgpaInput && creditInput && sgpaInput.value !== "" && creditInput.value !== "") {
+          const sgpa = parseFloat(sgpaInput.value);
+          const credit = parseFloat(creditInput.value);
+
+          if (!isNaN(sgpa) && !isNaN(credit) && credit > 0) {
+            totalPoints += sgpa * credit;
+            totalCredits += credit;
+            hasValidInput = true;
+          }
+        }
+      });
+
+      if (hasValidInput && totalCredits > 0 && calculatedCgpaEl) {
+        const cgpa = totalPoints / totalCredits;
+        calculatedCgpaEl.textContent = cgpa.toFixed(2);
+        cgpaResultBox?.classList.remove("hidden");
+      }
+    });
+
+    btnClearCgpa?.addEventListener("click", () => {
+      const inputs = document.querySelectorAll(".sgpa-input, .sem-credit-input");
+      inputs.forEach(inp => {
+        (inp as HTMLInputElement).value = "";
+      });
+      cgpaResultBox?.classList.add("hidden");
+    });
+  }
+
+  // Setup initial event binding
+  document.addEventListener("astro:page-load", setupSgpaCgpaCalculator);
+</script>
