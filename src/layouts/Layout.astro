@@ -234,8 +234,8 @@ const urgentUpdates = [
               <!-- Ambient Glow background effect -->
               <div class="absolute -right-24 -top-24 w-48 h-48 bg-primary/5 rounded-full blur-3xl -z-10"></div>
               
-              <div class="space-y-4 max-w-lg">
-                <h3 class="text-lg md:text-xl font-extrabold text-text-main m-0 flex items-center gap-2">
+              <div class="space-y-4 max-w-lg text-center md:text-left">
+                <h3 class="text-lg md:text-xl font-extrabold text-text-main m-0 flex items-center justify-center md:justify-start gap-2">
                   <span class="text-primary flex items-center shrink-0">
                     <HiOutlineShare className="text-[1.25rem]" />
                   </span>
@@ -245,7 +245,7 @@ const urgentUpdates = [
                   If you found this information helpful, please share it with your friends and groups on WhatsApp and Telegram.
                 </p>
                 
-                <div class="flex flex-wrap gap-3 !mt-5">
+                <div class="flex flex-wrap justify-center md:justify-start gap-3 !mt-5">
                   <!-- WhatsApp Share -->
                   <a 
                     href={`https://api.whatsapp.com/send?text=${encodeURIComponent(title + " - " + Astro.url.href)}`}
@@ -275,9 +275,9 @@ const urgentUpdates = [
               
               <!-- Page URL QR Code -->
               <div class="flex flex-col items-center text-center gap-1.5 shrink-0 self-center">
-                <div class="w-24 h-24 bg-white p-2 rounded-xl border border-border-card shadow-xs flex items-center justify-center">
+                <div class="w-32 h-32 bg-white p-2.5 rounded-xl border border-border-card shadow-xs flex items-center justify-center">
                   <img 
-                    src={`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(Astro.url.href)}`} 
+                    src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(Astro.url.href)}`} 
                     alt="Article QR Code" 
                     class="w-full h-full"
                     loading="lazy"
