@@ -16,7 +16,8 @@ export async function GET() {
     '/privacy-policy',
     '/terms-of-service',
     '/disclaimer',
-    '/sitemap'
+    '/sitemap',
+    '/mpsc'
   ];
 
   // Dynamically find all articles in src/pages/
@@ -36,7 +37,9 @@ export async function GET() {
     "terms-of-service.astro",
     "disclaimer.astro",
     "blog.astro",
-    "404.astro"
+    "404.astro",
+    "mpsc.astro",
+    "mpsc-exam-details-information.astro"
   ];
   
   const dynamicPages = Object.keys(postFiles)
