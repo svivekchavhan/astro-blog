@@ -1,8 +1,9 @@
 ---
 import Navbar from "../components/Navbar.astro";
 import Marquee from "../components/Marquee.astro";
+import UpdatesSeparator from "../components/UpdatesSeparator.astro";
 import { ClientRouter } from "astro:transitions";
-import { HiOutlineBriefcase, HiOutlineBell } from "react-icons/hi2";
+import { HiOutlineBriefcase, HiOutlineBell, HiOutlineMegaphone } from "react-icons/hi2";
 import "../styles/global.css";
 
 interface Props {
@@ -49,6 +50,24 @@ const latestJobs = [
     link: "/latest-job",
   },
 ];
+
+const urgentUpdates = [
+  {
+    title: "BSNL JTO Recruitment 2026: Online Form Started",
+    link: "/bsnl-bharti-2026",
+    expiry: "2026-06-18T18:00:00Z",
+  },
+  {
+    title: "MPSC State Services 2026 Hall Ticket Download Link",
+    link: "/admit-card",
+    expiry: "2026-06-15T18:00:00Z",
+  },
+  {
+    title: "Agniveer Admit Card 2026 Download Active",
+    link: "/agniveer-admit-card-2026",
+    expiry: "2026-06-08T00:00:00Z",
+  }
+];
 ---
 
 <!doctype html>
@@ -92,6 +111,30 @@ const latestJobs = [
       // Force clean light mode theme default
       document.documentElement.removeAttribute("data-theme");
       localStorage.removeItem("theme");
+
+      // Expiration check for urgent updates new badges
+      function checkUrgentBadges() {
+        const badges = document.querySelectorAll(".urgent-new-badge");
+        badges.forEach(badge => {
+          const expiryStr = badge.getAttribute("data-expiry");
+          if (expiryStr) {
+            const expiryTime = new Date(expiryStr).getTime();
+            if (Date.now() > expiryTime) {
+              badge.style.display = "none";
+            }
+          }
+        });
+      }
+
+      // Run on initial load
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", checkUrgentBadges);
+      } else {
+        checkUrgentBadges();
+      }
+
+      // Run on View Transition navigation
+      document.addEventListener("astro:page-load", checkUrgentBadges);
     </script>
     <script type="application/ld+json">
       {
@@ -122,6 +165,37 @@ const latestJobs = [
       {
         !hideSidebar && (
           <aside class="flex-1 space-y-10 lg:sticky lg:top-[calc(var(--navbar-height,190px)+20px)] h-fit">
+            <!-- Urgent Updates Widget -->
+            <div class="bg-bg-surface border border-rose-500/20 hover:border-rose-500 p-6 rounded-xl relative overflow-hidden transition-all duration-300 shadow-sm">
+
+              <h4 class="text-[1.1rem] text-text-main border-b-2 border-rose-500 inline-flex items-center gap-2 pb-1.5 mb-4 font-semibold">
+                <span class="text-rose-500 flex items-center shrink-0">
+                  <HiOutlineMegaphone className="text-rose-500 text-[1.15rem]" />
+                </span>
+                <span>Important Updates</span>
+              </h4>
+              
+              <div class="flex flex-col">
+                {urgentUpdates.map((update) => (
+                  <div class="group/item flex items-start justify-between gap-3 py-3 border-b border-border-card dark:border-border-card/30 last:border-b-0 last:pb-0 first:pt-0">
+                    <a
+                      href={update.link}
+                      class="text-text-muted text-[0.88rem] hover:text-rose-500 transition-colors duration-300 font-semibold leading-snug no-underline"
+                    >
+                      {update.title}
+                    </a>
+                    
+                    <span 
+                      class="urgent-new-badge shrink-0 text-[0.55rem] bg-rose-500 text-white px-2 py-0.5 rounded font-bold uppercase tracking-wider select-none animate-pulse"
+                      data-expiry={update.expiry}
+                    >
+                      NEW
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             <!-- Latest Jobs Widget -->
             <div class="bg-bg-surface border border-border-card p-6 rounded-xl">
               <h4 class="text-[1.1rem] text-text-main border-b-2 border-primary inline-flex items-center gap-2 pb-1.5 mb-4 font-semibold">
