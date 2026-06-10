@@ -69,7 +69,7 @@ const mainPages = [
   { title: "Privacy Policy", href: "/privacy-policy" },
   { title: "Terms of Service", href: "/terms-of-service" },
   { title: "Disclaimer", href: "/disclaimer" },
-  { title: "MPSC Hub", href: "/mpsc" },
+  { title: "MPSC", href: "/mpsc" },
 ];
 
 const searchData = [...mainPages, ...articles];
@@ -141,23 +141,55 @@ const searchData = [...mainPages, ...articles];
           class="group flex items-center gap-2.5 no-underline shrink-0"
         >
           <!-- Custom Premium SVG Logo (Compass/Direction Finder representing "Disha") -->
-          <div class="relative flex items-center justify-center w-9.5 h-9.5 rounded-xl bg-gradient-to-tr from-primary to-secondary p-[1px] shadow-sm shadow-primary/20 transition-all duration-300 group-hover:shadow-md group-hover:shadow-secondary/20">
-            <div class="w-full h-full bg-bg-surface rounded-[11px] flex items-center justify-center transition-all duration-300 group-hover:bg-transparent">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-primary group-hover:text-white transition-all duration-300 group-hover:rotate-45">
-                <polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9" />
-                <circle cx="12" cy="12" r="1.5" fill="currentColor" class="text-secondary group-hover:text-white" />
+          <div
+            class="relative flex items-center justify-center w-9.5 h-9.5 rounded-xl bg-gradient-to-tr from-primary to-secondary p-[1px] shadow-sm shadow-primary/20 transition-all duration-300 group-hover:shadow-md group-hover:shadow-secondary/20"
+          >
+            <div
+              class="w-full h-full bg-bg-surface rounded-[11px] flex items-center justify-center transition-all duration-300 group-hover:bg-transparent"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-5 h-5 text-primary group-hover:text-white transition-all duration-300 group-hover:rotate-45"
+              >
+                <polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9"
+                ></polygon>
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="1.5"
+                  fill="currentColor"
+                  class="text-secondary group-hover:text-white"></circle>
               </svg>
             </div>
             <!-- Outer Glow ring on hover -->
-            <div class="absolute -inset-0.5 bg-gradient-to-tr from-primary to-secondary rounded-xl blur-[2px] opacity-20 group-hover:opacity-50 transition-opacity duration-300 -z-10"></div>
+            <div
+              class="absolute -inset-0.5 bg-gradient-to-tr from-primary to-secondary rounded-xl blur-[2px] opacity-20 group-hover:opacity-50 transition-opacity duration-300 -z-10"
+            >
+            </div>
           </div>
 
           <!-- Logo Brand Text & Domain Pill -->
           <div class="flex items-center gap-2">
-            <span class="text-[1.6rem] md:text-[1.75rem] lg:text-[1.5rem] font-extrabold font-display tracking-tight leading-none text-text-main">
-              <span class="bg-gradient-to-r from-primary via-secondary to-primary bg-[length:200%_auto] bg-clip-text text-transparent group-hover:bg-right transition-all duration-700">Maha</span><span class="text-text-main transition-colors duration-300 group-hover:text-primary">Disha</span>
+            <span
+              class="text-[1.6rem] md:text-[1.75rem] lg:text-[1.5rem] font-extrabold font-display tracking-tight leading-none text-text-main"
+            >
+              <span
+                class="bg-gradient-to-r from-primary via-secondary to-primary bg-[length:200%_auto] bg-clip-text text-transparent group-hover:bg-right transition-all duration-700"
+                >Maha</span
+              ><span
+                class="text-text-main transition-colors duration-300 group-hover:text-primary"
+                >Disha</span
+              >
             </span>
-            <span class="px-1.5 py-0.5 text-[0.68rem] font-extrabold tracking-wider text-white uppercase rounded-md bg-gradient-to-r from-secondary to-primary shadow-xs transition-all duration-300 group-hover:from-primary group-hover:to-secondary">
+            <span
+              class="px-1.5 py-0.5 text-[0.68rem] font-extrabold tracking-wider text-white uppercase rounded-md bg-gradient-to-r from-secondary to-primary shadow-xs transition-all duration-300 group-hover:from-primary group-hover:to-secondary"
+            >
               in
             </span>
           </div>
@@ -293,12 +325,7 @@ const searchData = [...mainPages, ...articles];
             <a
               href="/mpsc"
               class="block px-4 py-2 text-xs font-semibold text-text-muted hover:text-primary hover:bg-primary/5 transition-colors border-b border-border-card/25 dark:border-border-card/10"
-              >MPSC Hub</a
-            >
-            <a
-              href="/mpsc-exam-details-information"
-              class="block px-4 py-2 text-xs font-semibold text-text-muted hover:text-primary hover:bg-primary/5 transition-colors"
-              >MPSC Exam Details</a
+              >MPSC</a
             >
           </div>
         </li>
@@ -410,7 +437,7 @@ const searchData = [...mainPages, ...articles];
           <a
             href="/mpsc"
             class="block py-2 text-xs font-semibold text-text-muted hover:text-primary transition-colors border-b border-border-card/20 pb-2"
-            >MPSC Hub</a
+            >MPSC</a
           >
           <a
             href="/mpsc-exam-details-information"

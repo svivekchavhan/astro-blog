@@ -1,95 +1,157 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { 
-  HiOutlineCalendarDays, 
-  HiOutlineArrowTopRightOnSquare, 
-  HiOutlineBuildingOffice, 
-  HiOutlineAcademicCap, 
+import {
+  HiOutlineCalendarDays,
+  HiOutlineArrowTopRightOnSquare,
+  HiOutlineBuildingOffice,
+  HiOutlineAcademicCap,
   HiOutlineQueueList,
   HiOutlineIdentification,
   HiOutlineDocumentText,
   HiOutlineChevronRight,
   HiOutlineBookOpen,
-  HiOutlineInformationCircle
+  HiOutlineInformationCircle,
 } from "react-icons/hi2";
 
-const title = "MPSC Exam Portal 2026: Notifications, Hall Tickets, Results & Syllabus | MahaDisha";
-const description = "Access all MPSC (Maharashtra Public Service Commission) exam updates. Find direct links to detailed syllabus, eligibility criteria, admit cards, exam patterns, and results.";
+const title =
+  "MPSC Exam Portal 2026: Notifications, Hall Tickets, Results & Syllabus | MahaDisha";
+const description =
+  "Access all MPSC (Maharashtra Public Service Commission) exam updates. Find direct links to detailed syllabus, eligibility criteria, admit cards, exam patterns, and results.";
 ---
 
-<Layout title={title} description={description} hideSidebar={false}>
+<Layout title={title} description={description} hideSidebar={true}>
   <section class="pt-4 pb-16 not-prose">
     <!-- Header Section -->
     <div class="text-center mb-10">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wider mb-3">
-        <HiOutlineBuildingOffice className="text-sm" /> MPSC Hub
+      <div
+        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wider mb-3"
+      >
+        <HiOutlineBuildingOffice className="text-sm" /> MPSC
       </div>
-      <h1 class="text-3xl md:text-5xl font-extrabold mb-3 tracking-tight text-text-main m-0">
-        MPSC Exam Portal 2026
+      <h1
+        class="text-3xl md:text-5xl font-extrabold mb-3 tracking-tight text-text-main m-0"
+      >
+        MPSC
       </h1>
-      <p class="text-text-secondary text-base md:text-lg m-0 max-w-[650px] mx-auto leading-relaxed">
-        महाराष्ट्र लोकसेवा आयोग (MPSC) परीक्षा केंद्र: सविस्तर माहिती, पात्रता निकष, अभ्यासक्रम, निकाल आणि प्रवेश पत्रे एकाच ठिकाणी.
+      <p
+        class="text-text-secondary text-base md:text-lg m-0 max-w-[650px] mx-auto leading-relaxed"
+      >
+        महाराष्ट्र लोकसेवा आयोग (MPSC) परीक्षा केंद्र: सविस्तर माहिती, पात्रता
+        निकष, अभ्यासक्रम, निकाल आणि प्रवेश पत्रे एकाच ठिकाणी.
       </p>
     </div>
 
     <!-- Main Content Layout -->
     <div class="max-w-[1000px] mx-auto px-2 md:px-0 space-y-6">
-      
       <!-- Featured Card: Detailed Information (Requested Page Link) -->
-      <div class="group relative bg-bg-surface border-2 border-primary/30 hover:border-primary rounded-3xl p-6 md:p-8 shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 overflow-hidden">
+      <div
+        class="group relative bg-bg-surface border-2 border-primary/30 hover:border-primary rounded-3xl p-6 md:p-8 shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 overflow-hidden"
+      >
         <!-- Accent Glow background effect -->
-        <div class="absolute -right-20 -top-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors duration-500 -z-10"></div>
-        <div class="absolute -left-20 -bottom-20 w-64 h-64 bg-secondary/5 rounded-full blur-3xl group-hover:bg-secondary/10 transition-colors duration-500 -z-10"></div>
+        <div
+          class="absolute -right-20 -top-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors duration-500 -z-10"
+        >
+        </div>
+        <div
+          class="absolute -left-20 -bottom-20 w-64 h-64 bg-secondary/5 rounded-full blur-3xl group-hover:bg-secondary/10 transition-colors duration-500 -z-10"
+        >
+        </div>
 
-        <div class="flex flex-col md:flex-row gap-6 md:items-start justify-between">
+        <div
+          class="flex flex-col md:flex-row gap-6 md:items-start justify-between"
+        >
           <!-- Card Details -->
           <div class="flex-1 space-y-4">
             <!-- Badges -->
             <div class="flex items-center gap-2 flex-wrap">
-              <span class="text-[0.65rem] bg-primary/10 text-primary px-2.5 py-0.5 rounded font-bold uppercase tracking-wider border border-primary/20 whitespace-nowrap">
+              <span
+                class="text-[0.65rem] bg-primary/10 text-primary px-2.5 py-0.5 rounded font-bold uppercase tracking-wider border border-primary/20 whitespace-nowrap"
+              >
                 Exam Info
               </span>
-              <span class="text-[0.6rem] bg-emerald-500/10 text-emerald-500 px-2 py-0.5 rounded-full font-bold uppercase tracking-wide border border-emerald-500/20 flex items-center gap-1 whitespace-nowrap">
-                <span class="w-1 h-1 bg-emerald-500 rounded-full animate-pulse inline-block"></span>
+              <span
+                class="text-[0.6rem] bg-emerald-500/10 text-emerald-500 px-2 py-0.5 rounded-full font-bold uppercase tracking-wide border border-emerald-500/20 flex items-center gap-1 whitespace-nowrap"
+              >
+                <span
+                  class="w-1 h-1 bg-emerald-500 rounded-full animate-pulse inline-block"
+                ></span>
                 Syllabus & Pattern
               </span>
             </div>
 
             <!-- Title -->
             <div>
-              <a href="/mpsc-exam-details-information" class="no-underline hover:no-underline block">
-                <h2 class="text-xl md:text-2xl text-text-main font-extrabold leading-tight mb-2 group-hover:text-primary transition-colors cursor-pointer">
-                  MPSC Exam Details 2026: पात्रता, परीक्षा पॅटर्न आणि सविस्तर माहिती
+              <a
+                href="/mpsc-exam-details-information"
+                class="no-underline hover:no-underline block"
+              >
+                <h2
+                  class="text-xl md:text-2xl text-text-main font-extrabold leading-tight mb-2 group-hover:text-primary transition-colors cursor-pointer"
+                >
+                  MPSC Exam Details 2026: पात्रता, परीक्षा पॅटर्न आणि सविस्तर
+                  माहिती
                 </h2>
               </a>
-              <p class="text-sm text-text-secondary leading-relaxed max-w-[800px]">
-                महाराष्ट्र लोकसेवा आयोग (MPSC) परीक्षांची सर्वसमावेशक माहिती. शैक्षणिक पात्रता, वयोमर्यादा, विविध पदे (PSI, STI, ASO, DySP, तहसीलदार), परीक्षा पद्धत, आणि मुख्य परीक्षेच्या नवीन पॅटर्नविषयी सविस्तर मार्गदर्शन.
+              <p
+                class="text-sm text-text-secondary leading-relaxed max-w-[800px]"
+              >
+                महाराष्ट्र लोकसेवा आयोग (MPSC) परीक्षांची सर्वसमावेशक माहिती.
+                शैक्षणिक पात्रता, वयोमर्यादा, विविध पदे (PSI, STI, ASO, DySP,
+                तहसीलदार), परीक्षा पद्धत, आणि मुख्य परीक्षेच्या नवीन पॅटर्नविषयी
+                सविस्तर मार्गदर्शन.
               </p>
             </div>
 
             <!-- Highlight Specs Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-              <div class="bg-bg-base/50 border border-border-card p-3.5 rounded-xl flex items-center gap-2.5">
-                <HiOutlineAcademicCap className="text-primary text-xl shrink-0" />
+              <div
+                class="bg-bg-base/50 border border-border-card p-3.5 rounded-xl flex items-center gap-2.5"
+              >
+                <HiOutlineAcademicCap
+                  className="text-primary text-xl shrink-0"
+                />
                 <div>
-                  <span class="text-[0.55rem] text-text-muted block uppercase font-bold tracking-wider">शैक्षणिक पात्रता</span>
-                  <span class="text-text-main font-semibold text-xs">कोणत्याही शाखेतील पदवी (Graduate)</span>
-                </div>
-              </div>
-              
-              <div class="bg-bg-base/50 border border-border-card p-3.5 rounded-xl flex items-center gap-2.5">
-                <HiOutlineCalendarDays className="text-primary text-xl shrink-0" />
-                <div>
-                  <span class="text-[0.55rem] text-text-muted block uppercase font-bold tracking-wider">किमान वयोमर्यादा</span>
-                  <span class="text-text-main font-semibold text-xs">१८/१९ ते ३८ वर्षे (राखीव: ४३ वर्षे)</span>
+                  <span
+                    class="text-[0.55rem] text-text-muted block uppercase font-bold tracking-wider"
+                    >शैक्षणिक पात्रता</span
+                  >
+                  <span class="text-text-main font-semibold text-xs"
+                    >कोणत्याही शाखेतील पदवी (Graduate)</span
+                  >
                 </div>
               </div>
 
-              <div class="bg-bg-base/50 border border-border-card p-3.5 rounded-xl flex items-center gap-2.5">
-                <HiOutlineDocumentText className="text-primary text-xl shrink-0" />
+              <div
+                class="bg-bg-base/50 border border-border-card p-3.5 rounded-xl flex items-center gap-2.5"
+              >
+                <HiOutlineCalendarDays
+                  className="text-primary text-xl shrink-0"
+                />
                 <div>
-                  <span class="text-[0.55rem] text-text-muted block uppercase font-bold tracking-wider">परीक्षेचे टप्पे</span>
-                  <span class="text-text-main font-semibold text-xs">पूर्व + मुख्य + मुलाखत</span>
+                  <span
+                    class="text-[0.55rem] text-text-muted block uppercase font-bold tracking-wider"
+                    >किमान वयोमर्यादा</span
+                  >
+                  <span class="text-text-main font-semibold text-xs"
+                    >१८/१९ ते ३८ वर्षे (राखीव: ४३ वर्षे)</span
+                  >
+                </div>
+              </div>
+
+              <div
+                class="bg-bg-base/50 border border-border-card p-3.5 rounded-xl flex items-center gap-2.5"
+              >
+                <HiOutlineDocumentText
+                  className="text-primary text-xl shrink-0"
+                />
+                <div>
+                  <span
+                    class="text-[0.55rem] text-text-muted block uppercase font-bold tracking-wider"
+                    >परीक्षेचे टप्पे</span
+                  >
+                  <span class="text-text-main font-semibold text-xs"
+                    >पूर्व + मुख्य + मुलाखत</span
+                  >
                 </div>
               </div>
             </div>
@@ -97,87 +159,125 @@ const description = "Access all MPSC (Maharashtra Public Service Commission) exa
         </div>
 
         <!-- Button Row (Always positioned nicely at the bottom) -->
-        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between border-t border-border-card dark:border-border-card/30 pt-5 mt-6 gap-4">
-          <div class="text-xs text-text-muted flex items-center gap-1.5 font-medium">
-            <HiOutlineInformationCircle className="text-primary text-sm shrink-0" />
+        <div
+          class="flex flex-col sm:flex-row sm:items-center sm:justify-between border-t border-border-card dark:border-border-card/30 pt-5 mt-6 gap-4"
+        >
+          <div
+            class="text-xs text-text-muted flex items-center gap-1.5 font-medium"
+          >
+            <HiOutlineInformationCircle
+              className="text-primary text-sm shrink-0"
+            />
             <span>Includes Marathi & English detailed versions</span>
           </div>
-          
+
           <a
             href="/mpsc-exam-details-information"
             class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-secondary hover:shadow-[0_0_15px_rgba(56,189,248,0.4)] text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-all shadow-sm group-hover:scale-[1.01]"
           >
             <span>सविस्तर माहिती वाचा / Read Details</span>
-            <HiOutlineChevronRight className="text-xs transition-transform duration-300 group-hover:translate-x-0.5" />
+            <HiOutlineChevronRight
+              className="text-xs transition-transform duration-300 group-hover:translate-x-0.5"
+            />
           </a>
         </div>
       </div>
 
       <!-- Quick Resource Grid (Admit Card & Results cards) -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        
         <!-- Resource Card 1: Admit Cards -->
-        <div class="group bg-bg-surface border border-border-card rounded-2xl p-5 md:p-6 shadow-sm hover:border-rose-500/50 transition-all duration-300 flex flex-col justify-between">
+        <div
+          class="group bg-bg-surface border border-border-card rounded-2xl p-5 md:p-6 shadow-sm hover:border-rose-500/50 transition-all duration-300 flex flex-col justify-between"
+        >
           <div class="space-y-3">
             <div class="flex justify-between items-start">
-              <span class="text-[0.65rem] bg-rose-500/10 text-rose-600 dark:text-rose-400 px-2 py-0.5 rounded font-bold uppercase tracking-wider border border-rose-500/20 whitespace-nowrap">
+              <span
+                class="text-[0.65rem] bg-rose-500/10 text-rose-600 dark:text-rose-400 px-2 py-0.5 rounded font-bold uppercase tracking-wider border border-rose-500/20 whitespace-nowrap"
+              >
                 Admit Card
               </span>
-              <span class="text-[0.6rem] bg-amber-500/10 text-amber-600 dark:text-amber-400 px-2 py-0.5 rounded-full font-bold uppercase tracking-wide border border-amber-500/20 flex items-center gap-1 whitespace-nowrap">
-                <span class="w-1 h-1 bg-amber-500 rounded-full animate-pulse"></span> Upcoming
+              <span
+                class="text-[0.6rem] bg-amber-500/10 text-amber-600 dark:text-amber-400 px-2 py-0.5 rounded-full font-bold uppercase tracking-wide border border-amber-500/20 flex items-center gap-1 whitespace-nowrap"
+              >
+                <span class="w-1 h-1 bg-amber-500 rounded-full animate-pulse"
+                ></span> Upcoming
               </span>
             </div>
-            
-            <h3 class="text-base text-text-main font-bold leading-tight group-hover:text-rose-500 transition-colors">
+
+            <h3
+              class="text-base text-text-main font-bold leading-tight group-hover:text-rose-500 transition-colors"
+            >
               MPSC Hall Ticket & Admit Cards
             </h3>
             <p class="text-xs text-text-secondary leading-relaxed">
-              MPSC च्या सर्व स्पर्धा परीक्षांचे अधिकृत प्रवेश पत्र आणि हॉल तिकीट थेट डाउनलोड करण्याची सोय आणि वेळापत्रक.
+              MPSC च्या सर्व स्पर्धा परीक्षांचे अधिकृत प्रवेश पत्र आणि हॉल तिकीट
+              थेट डाउनलोड करण्याची सोय आणि वेळापत्रक.
             </p>
           </div>
-          
-          <div class="border-t border-border-card dark:border-border-card/30 pt-4 mt-5 flex justify-between items-center">
-            <span class="text-[0.65rem] text-text-muted font-semibold">Latest Hall Tickets 2026</span>
-            <a 
-              href="/admit-card" 
+
+          <div
+            class="border-t border-border-card dark:border-border-card/30 pt-4 mt-5 flex justify-between items-center"
+          >
+            <span class="text-[0.65rem] text-text-muted font-semibold"
+              >Latest Hall Tickets 2026</span
+            >
+            <a
+              href="/admit-card"
               class="inline-flex items-center gap-1.5 text-xs text-rose-500 hover:text-rose-600 font-bold uppercase tracking-wider transition-colors"
             >
-              Check Hall Tickets <HiOutlineArrowTopRightOnSquare className="text-xs" />
+              Check Hall Tickets <HiOutlineArrowTopRightOnSquare
+                className="text-xs"
+              />
             </a>
           </div>
         </div>
 
         <!-- Resource Card 2: Results -->
-        <div class="group bg-bg-surface border border-border-card rounded-2xl p-5 md:p-6 shadow-sm hover:border-emerald-500/50 transition-all duration-300 flex flex-col justify-between">
+        <div
+          class="group bg-bg-surface border border-border-card rounded-2xl p-5 md:p-6 shadow-sm hover:border-emerald-500/50 transition-all duration-300 flex flex-col justify-between"
+        >
           <div class="space-y-3">
             <div class="flex justify-between items-start">
-              <span class="text-[0.65rem] bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 px-2 py-0.5 rounded font-bold uppercase tracking-wider border border-emerald-500/20 whitespace-nowrap">
+              <span
+                class="text-[0.65rem] bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 px-2 py-0.5 rounded font-bold uppercase tracking-wider border border-emerald-500/20 whitespace-nowrap"
+              >
                 Result
               </span>
-              <span class="text-[0.6rem] bg-amber-500/10 text-amber-600 dark:text-amber-400 px-2 py-0.5 rounded-full font-bold uppercase tracking-wide border border-amber-500/20 flex items-center gap-1 whitespace-nowrap">
-                <span class="w-1 h-1 bg-amber-500 rounded-full animate-pulse"></span> Updates
+              <span
+                class="text-[0.6rem] bg-amber-500/10 text-amber-600 dark:text-amber-400 px-2 py-0.5 rounded-full font-bold uppercase tracking-wide border border-amber-500/20 flex items-center gap-1 whitespace-nowrap"
+              >
+                <span class="w-1 h-1 bg-amber-500 rounded-full animate-pulse"
+                ></span> Updates
               </span>
             </div>
-            
-            <h3 class="text-base text-text-main font-bold leading-tight group-hover:text-emerald-500 transition-colors">
+
+            <h3
+              class="text-base text-text-main font-bold leading-tight group-hover:text-emerald-500 transition-colors"
+            >
               MPSC Exam Results & Cutoffs
             </h3>
             <p class="text-xs text-text-secondary leading-relaxed">
-              महाराष्ट्र लोकसेवा आयोगाचे परीक्षा निकाल, गुणवत्ता यादी (Merit List) आणि अधिकृत कट-ऑफ (Cutoff Marks).
+              महाराष्ट्र लोकसेवा आयोगाचे परीक्षा निकाल, गुणवत्ता यादी (Merit
+              List) आणि अधिकृत कट-ऑफ (Cutoff Marks).
             </p>
           </div>
-          
-          <div class="border-t border-border-card dark:border-border-card/30 pt-4 mt-5 flex justify-between items-center">
-            <span class="text-[0.65rem] text-text-muted font-semibold">Declared & Expected Results</span>
-            <a 
-              href="/result" 
+
+          <div
+            class="border-t border-border-card dark:border-border-card/30 pt-4 mt-5 flex justify-between items-center"
+          >
+            <span class="text-[0.65rem] text-text-muted font-semibold"
+              >Declared & Expected Results</span
+            >
+            <a
+              href="/result"
               class="inline-flex items-center gap-1.5 text-xs text-emerald-500 hover:text-emerald-600 font-bold uppercase tracking-wider transition-colors"
             >
-              Check Results <HiOutlineArrowTopRightOnSquare className="text-xs" />
+              Check Results <HiOutlineArrowTopRightOnSquare
+                className="text-xs"
+              />
             </a>
           </div>
         </div>
-
       </div>
     </div>
   </section>
