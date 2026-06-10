@@ -17,7 +17,9 @@ export async function GET() {
     '/terms-of-service',
     '/disclaimer',
     '/sitemap',
-    '/mpsc'
+    '/mpsc',
+    '/calculator',
+    '/age-calculator'
   ];
 
   // Dynamically find all articles in src/pages/
@@ -39,7 +41,9 @@ export async function GET() {
     "blog.astro",
     "404.astro",
     "mpsc.astro",
-    "mpsc-exam-details-information.astro"
+    "mpsc-exam-details-information.astro",
+    "calculator.astro",
+    "age-calculator.astro"
   ];
   
   const dynamicPages = Object.keys(postFiles)
