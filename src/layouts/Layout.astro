@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar.astro";
 import Marquee from "../components/Marquee.astro";
 import UpdatesSeparator from "../components/UpdatesSeparator.astro";
 import { ClientRouter } from "astro:transitions";
-import { HiOutlineBriefcase, HiOutlineBell, HiOutlineMegaphone, HiOutlineShare } from "react-icons/hi2";
+import { HiOutlineBriefcase, HiOutlineBell, HiOutlineMegaphone, HiOutlineShare, HiOutlineHome, HiOutlineChevronRight } from "react-icons/hi2";
 import "../styles/global.css";
 
 interface Props {
@@ -68,6 +68,43 @@ const urgentUpdates = [
     expiry: "2026-06-08T00:00:00Z",
   }
 ];
+
+const pathSegments = Astro.url.pathname.split("/").filter(Boolean);
+
+const breadcrumbs = pathSegments.map((segment, index) => {
+  const path = "/" + pathSegments.slice(0, index + 1).join("/");
+  const url = new URL(path, Astro.site || "https://mahadisha.in").href;
+  
+  let name = segment
+    .replace(/[-_]/g, " ")
+    .replace(/\b\w/g, (char) => char.toUpperCase());
+
+  if (index === pathSegments.length - 1 && title) {
+    const cleanTitle = title.split(/[|:-]/)[0].trim();
+    name = cleanTitle || name;
+  }
+
+  return { name, url };
+});
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": Astro.site ? Astro.site.href : "https://mahadisha.in"
+    },
+    ...breadcrumbs.map((crumb, idx) => ({
+      "@type": "ListItem",
+      "position": idx + 2,
+      "name": crumb.name,
+      "item": crumb.url
+    }))
+  ]
+};
 ---
 
 <!doctype html>
@@ -179,6 +216,11 @@ const urgentUpdates = [
         "url": "https://mahadisha.in"
       }
     </script>
+    {
+      pathSegments.length > 0 && (
+        <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+      )
+    }
     <ClientRouter />
   </head>
   <body>
@@ -193,6 +235,30 @@ const urgentUpdates = [
           hideSidebar ? "w-full flex-1" : "flex-[3]",
         ]}
       >
+        {
+          pathSegments.length > 0 && (
+            <nav class="not-prose flex items-center gap-2 text-xs font-semibold text-text-secondary mb-6 border border-border-card bg-bg-surface/50 rounded-xl px-4 py-2.5 backdrop-blur-xs w-fit max-w-full overflow-x-auto whitespace-nowrap" aria-label="Breadcrumb">
+              <a href="/" class="flex items-center gap-1.5 hover:text-primary transition-colors text-text-muted no-underline">
+                <HiOutlineHome className="text-[0.95rem] shrink-0" />
+                <span>Home</span>
+              </a>
+              {breadcrumbs.map((crumb, idx) => (
+                <span class="flex items-center gap-2">
+                  <HiOutlineChevronRight className="text-[0.8rem] text-text-muted/50 shrink-0" />
+                  {idx === breadcrumbs.length - 1 ? (
+                    <span class="text-text-main font-bold truncate max-w-[200px] sm:max-w-[300px]" aria-current="page">
+                      {crumb.name}
+                    </span>
+                  ) : (
+                    <a href={crumb.url} class="hover:text-primary transition-colors text-text-muted truncate max-w-[150px] no-underline">
+                      {crumb.name}
+                    </a>
+                  )}
+                </span>
+              ))}
+            </nav>
+          )
+        }
         <slot />
         <div class={article ? "space-y-8 mt-10 block" : "hidden"}>
           <!-- Important Updates Section -->
