@@ -197,59 +197,32 @@ const upcomingCount = recruitments.filter(r => r.status === "upcoming").length;
     </div>
 
     <!-- Live Filters and Search Bar Container -->
-    <div class="bg-bg-surface border border-border-card rounded-2xl p-4 sm:p-6 mb-8 shadow-sm">
-      <div class="flex flex-col gap-5">
+    <div class="bg-bg-surface border border-border-card rounded-2xl p-4 sm:p-5 mb-8 shadow-sm">
+      <div class="flex flex-col sm:flex-row gap-4">
         
         <!-- Search Input -->
-        <div class="relative flex items-center bg-bg-base/50 dark:bg-black/20 border border-border-card rounded-xl px-4 py-3 focus-within:border-primary transition-all duration-300">
+        <div class="relative flex-1 flex items-center bg-bg-base/50 dark:bg-black/20 border border-border-card rounded-xl px-4 py-3 focus-within:border-primary transition-all duration-300">
           <HiOutlineMagnifyingGlass className="text-text-muted text-lg mr-3 shrink-0" />
           <input 
             type="text" 
-            placeholder="Search recruitment title, department, or vacancy details..." 
+            placeholder="Search recruitment title, sector, department, qualification or details..." 
             id="job-search"
             class="bg-transparent border-none text-text-main font-sans text-sm outline-none w-full placeholder-text-muted/65"
           />
         </div>
 
-        <!-- Filter Buttons Grid -->
-        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 border-t border-border-card dark:border-border-card/30 pt-4">
-          
-          <!-- Category Filter Tabs -->
-          <div>
-            <span class="block text-[0.65rem] text-text-muted uppercase tracking-wider font-extrabold mb-2.5">Filter by Sector</span>
-            <div class="flex flex-wrap gap-2" id="category-tabs">
-              <button data-cat="all" class="cat-tab active px-3.5 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider border cursor-pointer transition-all duration-300">
-                All Sectors
-              </button>
-              <button data-cat="maharashtra" class="cat-tab px-3.5 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider border border-border-card text-text-muted bg-transparent hover:bg-primary/5 hover:border-primary/50 cursor-pointer transition-all duration-300">
-                Maharashtra Gov
-              </button>
-              <button data-cat="central" class="cat-tab px-3.5 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider border border-border-card text-text-muted bg-transparent hover:bg-primary/5 hover:border-primary/50 cursor-pointer transition-all duration-300">
-                Central Gov
-              </button>
-              <button data-cat="railways" class="cat-tab px-3.5 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider border border-border-card text-text-muted bg-transparent hover:bg-primary/5 hover:border-primary/50 cursor-pointer transition-all duration-300">
-                Railways
-              </button>
-              <button data-cat="banking-ssc" class="cat-tab px-3.5 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider border border-border-card text-text-muted bg-transparent hover:bg-primary/5 hover:border-primary/50 cursor-pointer transition-all duration-300">
-                Banking & SSC
-              </button>
-            </div>
-          </div>
-
-          <!-- Qualification Filter Dropdown -->
-          <div class="min-w-[180px]">
-            <select 
-              id="qual-select"
-              class="w-full p-2 bg-bg-base/60 dark:bg-black/30 border border-border-card rounded-lg text-xs font-bold text-text-main uppercase tracking-wider outline-none focus:border-primary cursor-pointer transition-colors"
-            >
-              <option value="all">All Qualifications</option>
-              <option value="10th Pass">10th Pass</option>
-              <option value="12th Pass">12th Pass</option>
-              <option value="ITI / Diploma">ITI / Diploma</option>
-              <option value="Graduate">Graduate</option>
-            </select>
-          </div>
-
+        <!-- Qualification Filter Dropdown -->
+        <div class="min-w-[180px] sm:w-[220px] shrink-0">
+          <select 
+            id="qual-select"
+            class="w-full py-3 px-3.5 bg-bg-base/60 dark:bg-black/30 border border-border-card rounded-xl text-xs font-bold text-text-main uppercase tracking-wider outline-none focus:border-primary cursor-pointer transition-colors"
+          >
+            <option value="all">All Qualifications</option>
+            <option value="10th Pass">10th Pass</option>
+            <option value="12th Pass">12th Pass</option>
+            <option value="ITI / Diploma">ITI / Diploma</option>
+            <option value="Graduate">Graduate</option>
+          </select>
         </div>
 
       </div>
@@ -485,12 +458,10 @@ const upcomingCount = recruitments.filter(r => r.status === "upcoming").length;
   // Setup interactive client logic
   function initMegaRecruitment() {
     const searchInput = document.getElementById("job-search") as HTMLInputElement;
-    const catTabs = document.querySelectorAll(".cat-tab");
     const qualSelect = document.getElementById("qual-select") as HTMLSelectElement;
     const jobCards = document.querySelectorAll(".job-card") as NodeListOf<HTMLDivElement>;
     const noJobsFound = document.getElementById("no-jobs-found");
 
-    let activeCategory = "all";
     let activeQual = "all";
     let searchQuery = "";
 
@@ -504,20 +475,27 @@ const upcomingCount = recruitments.filter(r => r.status === "upcoming").length;
         const title = card.dataset.title || "";
         const org = card.dataset.org || "";
         
-        // Category check
-        const matchesCategory = (activeCategory === "all" || cat === activeCategory);
+        // Category search helper mapping (supports bilingual search matching)
+        const categorySearchText = (
+          cat === "maharashtra" ? "maharashtra gov government state state-gov राज्य शासन पोलीस" : 
+          cat === "central" ? "central gov government केंद्र शासन टपाल पोस्ट" : 
+          cat === "railways" ? "railway railways rrb alp रेल्वे लोको पायलट" : 
+          cat === "banking-ssc" ? "banking bank ssc staff selection commission लिपिक बँक" : 
+          cat
+        ).toLowerCase();
         
         // Qualification check
         const matchesQual = (activeQual === "all" || qual === activeQual);
         
-        // Search text check
+        // Search text check (evaluating title, department, qualification, and sector names)
         const matchesSearch = (
           title.includes(searchQuery) || 
           org.includes(searchQuery) ||
-          qual.toLowerCase().includes(searchQuery)
+          qual.toLowerCase().includes(searchQuery) ||
+          categorySearchText.includes(searchQuery)
         );
 
-        if (matchesCategory && matchesQual && matchesSearch) {
+        if (matchesQual && matchesSearch) {
           card.classList.remove("hidden");
           matchCount++;
         } else {
@@ -541,21 +519,6 @@ const upcomingCount = recruitments.filter(r => r.status === "upcoming").length;
         filterJobs();
       });
     }
-
-    // Bind Category tabs
-    catTabs.forEach(tab => {
-      tab.addEventListener("click", () => {
-        catTabs.forEach(t => {
-          t.classList.remove("active");
-          t.classList.add("text-text-muted", "bg-transparent", "border-border-card");
-        });
-        tab.classList.add("active");
-        tab.classList.remove("text-text-muted", "bg-transparent", "border-border-card");
-        
-        activeCategory = tab.getAttribute("data-cat") || "all";
-        filterJobs();
-      });
-    });
 
     // Bind Qualification select
     if (qualSelect) {

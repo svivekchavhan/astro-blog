@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import BlogCard from "../components/BlogCard.astro";
+import { HiOutlineArrowTopRightOnSquare } from "react-icons/hi2";
 
 const title = "भारतीय पोस्ट ऑफिस GDS निकाल 2026: गुणवत्ता यादी आणि कट-ऑफ मार्क्स डाउनलोड करा";
 const description = "भारतीय टपाल विभागाने (India Post) ग्रामीण डाक सेवक (GDS) भरती 2026 चा निकाल आणि गुणवत्ता यादी जाहीर केली आहे. आपला निकाल आणि कट-ऑफ मार्क्स येथे पहा.";
@@ -108,6 +109,13 @@ const category = "Result";
               >निकालानंतरची प्रक्रिया (कागदपत्र पडताळणी)</a
             >
           </li>
+          <li>
+            <a
+              href="#important-links"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >महत्त्वाच्या लिंक्स (Important Links)</a
+            >
+          </li>
         </ul>
       </div>
 
@@ -116,6 +124,49 @@ const category = "Result";
         <p>
           भारतीय टपाल विभागाने (India Post) देशातील विविध मंडळांमधील ग्रामीण डाक सेवक (GDS), शाखा पोस्टमास्तर (BPM) आणि सहाय्यक शाखा पोस्टमास्तर (ABPM) पदांसाठी भरती परीक्षेचा निकाल आणि गुणवत्ता यादी जाहीर केली आहे. ही भरती पूर्णपणे १० वीच्या गुणांवर आधारित असल्यामुळे उमेदवारांना लेखी परीक्षा देण्याची आवश्यकता नव्हती.
         </p>
+
+        <!-- Overview Table (Marathi) -->
+        <div class="overflow-x-auto my-6 border border-border-card rounded-2xl bg-bg-surface p-4">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-primary/10">
+                <th colspan="2" class="p-3 text-center font-bold text-text-main text-base border border-border-card">
+                  भारतीय पोस्ट ऑफिस GDS निकाल 2026 संक्षिप्त माहिती
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-border-card font-bold text-text-main w-[40%] bg-primary/5">विभाग (Department)</td>
+                <td class="p-3 border border-border-card text-text-muted">भारतीय टपाल विभाग (India Post)</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-bold text-text-main bg-primary/5">पदाचे नाव (Post Name)</td>
+                <td class="p-3 border border-border-card text-text-muted">ग्रामीण डाक सेवक (GDS), BPM, ABPM</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-bold text-text-main bg-primary/5">एकूण पदे (Total Vacancies)</td>
+                <td class="p-3 border border-border-card text-text-muted">४०,२२० पदे</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-bold text-text-main bg-primary/5">निकाल स्थिती (Status)</td>
+                <td class="p-3 border border-border-card text-emerald-500 font-bold">जाहीर (Declared)</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-bold text-text-main bg-primary/5">निकालाची तारीख (Result Date)</td>
+                <td class="p-3 border border-border-card text-text-muted">२५ मे २०२६</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-bold text-text-main bg-primary/5">अधिकृत वेबसाईट (Official Link)</td>
+                <td class="p-3 border border-border-card">
+                  <a href="https://indiapostgdsonline.gov.in" target="_blank" rel="noopener noreferrer" class="text-primary font-bold hover:underline inline-flex items-center gap-1">
+                    indiapostgdsonline.gov.in <HiOutlineArrowTopRightOnSquare className="text-xs shrink-0" />
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
         <h2 id="gds-overview">GDS निकाल 2026 सविस्तर माहिती</h2>
         <div class="bg-bg-surface border border-border-card p-6 rounded-2xl">
@@ -175,6 +226,37 @@ const category = "Result";
           <li>वैद्यकीय प्रमाणपत्र (Medical Certificate)</li>
           <li>आधार कार्ड किंवा पॅन कार्ड</li>
         </ul>
+
+        <!-- Important Links Table (Marathi) -->
+        <h2 id="important-links" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">महत्त्वाच्या लिंक्स (Important Links)</h2>
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-primary/10">
+                <th class="p-3 border border-border-card font-bold text-text-main">तपशील (Link Description)</th>
+                <th class="p-3 border border-border-card font-bold text-text-main">लिंक (Download / Action)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">पोस्ट ऑफिस GDS निकाल २०२६ (Merit List)</td>
+                <td class="p-3 border border-border-card">
+                  <a href="https://indiapostgdsonline.gov.in" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider rounded-lg transition-colors border border-primary/20 w-full sm:w-auto no-underline">
+                    <HiOutlineArrowTopRightOnSquare className="text-base shrink-0" /> निकाल पहा (Check Result)
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">अधिकृत संकेतस्थळ (Official Website)</td>
+                <td class="p-3 border border-border-card">
+                  <a href="https://indiapostgdsonline.gov.in" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-bold uppercase tracking-wider rounded-lg transition-colors border border-emerald-500/20 w-full sm:w-auto no-underline">
+                    <HiOutlineArrowTopRightOnSquare className="text-base shrink-0" /> वेबसाइटला भेट द्या
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
 
@@ -257,6 +339,13 @@ const category = "Result";
               >Next Stage: Document Verification</a
             >
           </li>
+          <li>
+            <a
+              href="#en-important-links"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >Important Links</a
+            >
+          </li>
         </ul>
       </div>
 
@@ -265,6 +354,49 @@ const category = "Result";
         <p>
           The India Post has announced the results for Gramin Dak Sevak (GDS) recruitment 2026. The selection has been conducted on the basis of 10th-grade (SSC) board marks without any written examination. Shortlisted candidates are selected to serve as GDS, BPM, or ABPM across different pin circles.
         </p>
+
+        <!-- Overview Table (English) -->
+        <div class="overflow-x-auto my-6 border border-border-card rounded-2xl bg-bg-surface p-4">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-primary/10">
+                <th colspan="2" class="p-3 text-center font-bold text-text-main text-base border border-border-card">
+                  India Post GDS Result 2026 Overview
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-border-card font-bold text-text-main w-[40%] bg-primary/5">Department</td>
+                <td class="p-3 border border-border-card text-text-muted">Department of Posts (India Post)</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-bold text-text-main bg-primary/5">Post Names</td>
+                <td class="p-3 border border-border-card text-text-muted">Gramin Dak Sevak (GDS), BPM, ABPM</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-bold text-text-main bg-primary/5">Total Vacancies</td>
+                <td class="p-3 border border-border-card text-text-muted">40,220</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-bold text-text-main bg-primary/5">Result Status</td>
+                <td class="p-3 border border-border-card text-emerald-500 font-bold">Declared</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-bold text-text-main bg-primary/5">Result Date</td>
+                <td class="p-3 border border-border-card text-text-muted">25 May 2026</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-bold text-text-main bg-primary/5">Official GDS Link</td>
+                <td class="p-3 border border-border-card">
+                  <a href="https://indiapostgdsonline.gov.in" target="_blank" rel="noopener noreferrer" class="text-primary font-bold hover:underline inline-flex items-center gap-1">
+                    indiapostgdsonline.gov.in <HiOutlineArrowTopRightOnSquare className="text-xs shrink-0" />
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
         <h2 id="en-gds-overview">GDS Recruitment 2026 Overview</h2>
         <div class="bg-bg-surface border border-border-card p-6 rounded-2xl">
@@ -324,6 +456,37 @@ const category = "Result";
           <li>Medical Fitness Certificate from a Government Medical Officer</li>
           <li>Government Identity Proof (Aadhaar Card, PAN Card, etc.)</li>
         </ul>
+
+        <!-- Important Links Table (English) -->
+        <h2 id="en-important-links" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">Important Links</h2>
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-primary/10">
+                <th class="p-3 border border-border-card font-bold text-text-main">Link Description</th>
+                <th class="p-3 border border-border-card font-bold text-text-main">Action Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">Download GDS Result 2026 (State-wise)</td>
+                <td class="p-3 border border-border-card">
+                  <a href="https://indiapostgdsonline.gov.in" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider rounded-lg transition-colors border border-primary/20 w-full sm:w-auto no-underline">
+                    <HiOutlineArrowTopRightOnSquare className="text-base shrink-0" /> Check Result Now
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">Official India Post GDS Portal</td>
+                <td class="p-3 border border-border-card">
+                  <a href="https://indiapostgdsonline.gov.in" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-bold uppercase tracking-wider rounded-lg transition-colors border border-emerald-500/20 w-full sm:w-auto no-underline">
+                    <HiOutlineArrowTopRightOnSquare className="text-base shrink-0" /> Visit Portal
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </article>
