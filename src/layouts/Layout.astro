@@ -190,21 +190,114 @@ const breadcrumbSchema = {
         });
       }
 
+      // Handle page load skeleton loading effect for articles
+      function handleArticleSkeleton() {
+        const skeleton = document.querySelector(".article-skeleton");
+        const actualContent = document.querySelector(".article-actual-content");
+        if (skeleton && actualContent) {
+          skeleton.style.display = "block";
+          actualContent.classList.add("opacity-0", "pointer-events-none");
+          actualContent.classList.remove("opacity-100");
+          
+          setTimeout(() => {
+            skeleton.style.display = "none";
+            actualContent.classList.remove("opacity-0", "pointer-events-none");
+            actualContent.classList.add("opacity-100");
+          }, 350);
+        }
+      }
+
+      // Handle page load skeleton loading effect for job/result/article grids and lists
+      function handleListSkeletons() {
+        const containers = document.querySelectorAll("#jobs-grid, #results-grid, #jobs-list, #recruitments-container, #blog-list");
+        containers.forEach(container => {
+          const realCards = Array.from(container.children).filter(child => {
+            return child.tagName !== "SCRIPT" && !child.id?.includes("no-") && !child.textContent?.includes("No active") && !child.textContent?.includes("No recruitments");
+          });
+          if (realCards.length === 0) return;
+
+          // Create skeleton container
+          const skeletonWrapper = document.createElement("div");
+          skeletonWrapper.className = "skeleton-list-wrapper space-y-4 w-full";
+
+          for (let i = 0; i < Math.min(realCards.length, 3); i++) {
+            const cardSk = document.createElement("div");
+            cardSk.className = "not-prose animate-pulse bg-bg-surface border border-border-card rounded-2xl p-5 flex flex-col md:flex-row md:items-center justify-between gap-4 w-full";
+            cardSk.innerHTML = `
+              <div class="flex-1 space-y-3">
+                <div class="flex gap-2">
+                  <div class="h-5 bg-primary/10 rounded-full w-20"></div>
+                  <div class="h-5 bg-emerald-500/10 rounded-full w-16"></div>
+                </div>
+                <div class="h-6 bg-text-main/10 rounded-xl w-3/4"></div>
+                <div class="flex gap-4">
+                  <div class="h-4 bg-text-muted/10 rounded-full w-24"></div>
+                  <div class="h-4 bg-text-muted/10 rounded-full w-32"></div>
+                </div>
+                <div class="flex gap-3 pt-2">
+                  <div class="h-6 bg-primary/5 border border-primary/10 rounded-lg w-28"></div>
+                  <div class="h-6 bg-rose-500/5 border border-rose-500/10 rounded-lg w-36"></div>
+                </div>
+              </div>
+              <div class="h-10 bg-text-main/10 rounded-xl w-full md:w-[180px] shrink-0"></div>
+            `;
+            skeletonWrapper.appendChild(cardSk);
+          }
+
+          // Hide real cards initially and strip entrance animations/delays
+          realCards.forEach(card => {
+            card.dataset.origDisplay = window.getComputedStyle(card).display;
+            card.style.display = "none";
+            
+            // Remove entrance transitions/animations completely
+            card.style.animation = "none";
+            card.style.animationDelay = "0s";
+            card.style.opacity = "1";
+            card.style.transform = "none";
+            card.style.transition = "none";
+            card.classList.remove("opacity-0");
+            const animateClass = Array.from(card.classList).find(c => c.startsWith("animate-"));
+            if (animateClass) card.classList.remove(animateClass);
+          });
+
+          // Insert skeletons at the beginning of the container
+          container.insertBefore(skeletonWrapper, container.firstChild);
+
+          // After delay, remove skeletons and restore original display instantly
+          setTimeout(() => {
+            skeletonWrapper.remove();
+            realCards.forEach(card => {
+              card.style.display = card.dataset.origDisplay || "flex";
+              card.style.opacity = "1";
+              card.style.transform = "none";
+              card.style.animation = "none";
+              card.style.transition = ""; // Restore hover transitions
+            });
+          }, 350);
+        });
+      }
+
       // Run on initial load
       if (document.readyState === "loading") {
         document.addEventListener("DOMContentLoaded", () => {
           checkUrgentBadges();
           setupQrReveal();
+          handleArticleSkeleton();
+          handleListSkeletons();
         });
       } else {
         checkUrgentBadges();
         setupQrReveal();
+        handleArticleSkeleton();
+        handleListSkeletons();
       }
 
       // Run on View Transition navigation
       document.addEventListener("astro:page-load", () => {
         checkUrgentBadges();
         setupQrReveal();
+        handleArticleSkeleton();
+        handleListSkeletons();
       });
     </script>
     <script type="application/ld+json">
@@ -262,7 +355,67 @@ const breadcrumbSchema = {
             </nav>
           )
         }
-        <slot />
+        {
+          article ? (
+            <div class="article-content-wrapper relative">
+              {/* Skeleton Loader */}
+              <div class="article-skeleton not-prose space-y-8 animate-pulse py-8">
+                {/* Badge and date */}
+                <div class="flex items-center gap-3">
+                  <div class="h-6 bg-primary/10 rounded-full w-20"></div>
+                  <div class="h-4 bg-text-muted/10 rounded-full w-24"></div>
+                </div>
+                {/* Title */}
+                <div class="space-y-3">
+                  <div class="h-8 md:h-10 bg-text-main/10 rounded-2xl w-11/12"></div>
+                  <div class="h-8 md:h-10 bg-text-main/10 rounded-2xl w-3/4"></div>
+                </div>
+                {/* Description */}
+                <div class="border-l-4 border-primary/20 pl-6 py-2">
+                  <div class="h-5 bg-text-muted/10 rounded-lg w-full"></div>
+                  <div class="h-5 bg-text-muted/10 rounded-lg w-5/6 mt-2"></div>
+                </div>
+                {/* Language Nav */}
+                <div class="flex gap-4">
+                  <div class="h-4 bg-primary/10 rounded-full w-32"></div>
+                  <div class="h-4 bg-text-muted/10 rounded-full w-4"></div>
+                  <div class="h-4 bg-primary/10 rounded-full w-32"></div>
+                </div>
+                {/* Table of contents card */}
+                <div class="bg-bg-surface/50 border border-border-card/50 rounded-3xl p-8 space-y-4">
+                  <div class="h-6 bg-text-main/10 rounded-lg w-1/3"></div>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="h-4 bg-text-muted/10 rounded-full w-3/4"></div>
+                    <div class="h-4 bg-text-muted/10 rounded-full w-2/3"></div>
+                    <div class="h-4 bg-text-muted/10 rounded-full w-5/6"></div>
+                    <div class="h-4 bg-text-muted/10 rounded-full w-1/2"></div>
+                  </div>
+                </div>
+                {/* Dummy table or block */}
+                <div class="border border-border-card/50 rounded-2xl p-6 bg-bg-surface/30 space-y-4">
+                  <div class="h-8 bg-primary/10 rounded-lg w-full"></div>
+                  <div class="space-y-3">
+                    <div class="flex justify-between">
+                      <div class="h-4 bg-text-main/10 rounded-full w-1/3"></div>
+                      <div class="h-4 bg-text-muted/10 rounded-full w-1/2"></div>
+                    </div>
+                    <div class="flex justify-between">
+                      <div class="h-4 bg-text-main/10 rounded-full w-1/4"></div>
+                      <div class="h-4 bg-text-muted/10 rounded-full w-2/3"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Actual Content (hidden initially, transitions to full opacity) */}
+              <div class="article-actual-content opacity-0 transition-opacity duration-300 ease-out pointer-events-none">
+                <slot />
+              </div>
+            </div>
+          ) : (
+            <slot />
+          )
+        }
         {
           article && (
             <p class="text-xs md:text-sm text-text-secondary italic border-l-4 border-primary/50 pl-4 my-6 select-none leading-relaxed">
