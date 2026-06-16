@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mahadisha.in/sitemap-index.xml
+Sitemap: https://mahasandhi.in/sitemap-index.xml

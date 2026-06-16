@@ -11,7 +11,7 @@ import {
   HiOutlineArrowTopRightOnSquare
 } from "react-icons/hi2";
 
-const title = "SGPA & CGPA Calculator with Official Percentage Converter | MahaDisha";
+const title = "SGPA & CGPA Calculator with Official Percentage Converter | MahaSandhi";
 const description = "Calculate SGPA and CGPA online. Convert CGPA to percentage using official Mumbai University (MU), Pune University (SPPU), AICTE, and UGC formulas for Indian Government job forms.";
 ---
 
@@ -511,7 +511,7 @@ const description = "Calculate SGPA and CGPA online. Convert CGPA to percentage 
       const pctVal = percentEl.textContent;
       const univVal = formulaSelect.options[formulaSelect.selectedIndex].text;
       
-      const copyText = `CGPA to Percentage Conversion:\n-------------------------------\nCGPA: ${cgpaVal}\nPercentage: ${pctVal}\nFormula Rule: ${univVal}\nCalculated via: mahadisha.in/sgpa-cgpa-calculator`;
+      const copyText = `CGPA to Percentage Conversion:\n-------------------------------\nCGPA: ${cgpaVal}\nPercentage: ${pctVal}\nFormula Rule: ${univVal}\nCalculated via: mahasandhi.in/sgpa-cgpa-calculator`;
       
       navigator.clipboard.writeText(copyText).then(() => {
         const originalText = btnCopyConverter.innerHTML;

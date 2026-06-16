@@ -1,5 +1,5 @@
 export async function GET() {
-  const siteUrl = 'https://mahadisha.in';
+  const siteUrl = 'https://mahasandhi.in';
   
   // Static pages
   const staticPages = [

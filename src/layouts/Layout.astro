@@ -17,7 +17,7 @@ interface Props {
 
 const {
   title,
-  description = "MahaDisha - Your trusted source for latest government jobs, sarkari naukri, exam results, admit cards, answer keys, and college admissions in India.",
+  description = "MahaSandhi - Your trusted source for latest government jobs, sarkari naukri, exam results, admit cards, answer keys, and college admissions in India.",
   image = "/blog-placeholder.jpg",
   article = false,
   canonicalURL: customCanonicalURL,
@@ -25,8 +25,8 @@ const {
 } = Astro.props;
 
 const canonicalURL = customCanonicalURL
-  ? new URL(customCanonicalURL, Astro.site || "https://mahadisha.in")
-  : new URL(Astro.url.pathname, Astro.site || "https://mahadisha.in");
+  ? new URL(customCanonicalURL, Astro.site || "https://mahasandhi.in")
+  : new URL(Astro.url.pathname, Astro.site || "https://mahasandhi.in");
 
 const latestJobs = [
   {
@@ -73,7 +73,7 @@ const pathSegments = Astro.url.pathname.split("/").filter(Boolean);
 
 const breadcrumbs = pathSegments.map((segment, index) => {
   const path = "/" + pathSegments.slice(0, index + 1).join("/");
-  const url = new URL(path, Astro.site || "https://mahadisha.in").href;
+  const url = new URL(path, Astro.site || "https://mahasandhi.in").href;
   
   let name = segment
     .replace(/[-_]/g, " ")
@@ -95,7 +95,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": Astro.site ? Astro.site.href : "https://mahadisha.in"
+      "item": Astro.site ? Astro.site.href : "https://mahasandhi.in"
     },
     ...breadcrumbs.map((crumb, idx) => ({
       "@type": "ListItem",
@@ -211,9 +211,9 @@ const breadcrumbSchema = {
       {
         "@context": "https://schema.org",
         "@type": "Blog",
-        "name": "MahaDisha",
+        "name": "MahaSandhi",
         "description": "A premium portal for latest jobs and exam details.",
-        "url": "https://mahadisha.in"
+        "url": "https://mahasandhi.in"
       }
     </script>
     {
@@ -547,7 +547,7 @@ const breadcrumbSchema = {
             href="/"
             class="group inline-flex items-center gap-2.5 no-underline"
           >
-            <!-- Custom Premium SVG Logo (Compass/Direction Finder representing "Disha") -->
+            <!-- Custom Premium SVG Logo (Compass/Direction Finder representing "Sandhi") -->
             <div
               class="relative flex items-center justify-center w-9.5 h-9.5 rounded-xl bg-gradient-to-tr from-primary to-secondary p-[1px] shadow-sm shadow-primary/20 transition-all duration-300 group-hover:shadow-md group-hover:shadow-secondary/20"
             >
@@ -591,7 +591,7 @@ const breadcrumbSchema = {
                   >Maha</span
                 ><span
                   class="text-text-main transition-colors duration-300 group-hover:text-primary"
-                  >Disha</span
+                  >Sandhi</span
                 >
               </span>
               <span
@@ -635,7 +635,7 @@ const breadcrumbSchema = {
         <div
           class="w-full border-t border-border-card pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-text-muted"
         >
-          <p>&copy; 2026 MahaDisha. All rights reserved.</p>
+          <p>&copy; 2026 MahaSandhi. All rights reserved.</p>
           <p class="flex items-center gap-1">
             Made with <span class="text-rose-500 animate-pulse">❤️</span> in India
           </p>
