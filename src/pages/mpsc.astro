@@ -22,9 +22,9 @@ const description =
     <div class="max-w-[1100px] mx-auto px-2 md:px-0">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         
-        <!-- Card 1: MPSC Exam Details -->
+        <!-- Card 1: MPSC Gazetted Exam Details -->
         <a 
-          href="/mpsc-exam-details-information" 
+          href="/mpsc-gazetted-exam-details" 
           class="group relative bg-bg-surface border border-border-card hover:border-primary rounded-3xl p-6 md:p-8 shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 flex flex-col justify-between min-h-[340px] overflow-hidden no-underline"
         >
           <!-- Ambient Glow background effect -->
@@ -38,10 +38,10 @@ const description =
               </div>
               <div class="flex items-center gap-1.5 flex-wrap">
                 <span class="text-[0.6rem] bg-primary/10 text-primary px-2.5 py-0.5 rounded font-bold uppercase tracking-wider border border-primary/20 whitespace-nowrap">
-                  Exam Info
+                  Gazetted (Class 1 & 2)
                 </span>
                 <span class="text-[0.6rem] bg-emerald-500/10 text-emerald-500 px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wide border border-emerald-500/20 whitespace-nowrap">
-                  Syllabus
+                  State Services
                 </span>
               </div>
             </div>
@@ -49,23 +49,121 @@ const description =
             <!-- Title & Description -->
             <div class="space-y-2">
               <h2 class="text-lg md:text-xl text-text-main font-extrabold leading-tight m-0 group-hover:text-primary transition-colors">
-                MPSC Exam Details 2026
+                MPSC Gazetted Exam Details
               </h2>
               <p class="text-xs text-text-secondary leading-relaxed m-0">
-                शैक्षणिक पात्रता, वयोमर्यादा, विविध पदे (PSI, STI, ASO, DySP, तहसीलदार), परीक्षा पद्धत, आणि मुख्य परीक्षेच्या नवीन पॅटर्नविषयी सविस्तर मार्गदर्शन.
+                एमपीएससी राजपत्रित नागरी सेवा (State Services) परीक्षा: पदे (Deputy Collector, DySP, तहसीलदार), पात्रता, नवीन वर्णनात्मक परीक्षा पद्धत व अभ्यासक्रम.
               </p>
             </div>
 
             <!-- Features list -->
             <div class="flex flex-col gap-2 text-xs text-text-muted font-medium pt-3.5 border-t border-border-card/30">
-              <span class="flex items-center gap-1.5"><HiOutlineAcademicCap className="text-primary text-sm shrink-0" /> कोणत्याही शाखेतील पदवी (Graduate)</span>
-              <span class="flex items-center gap-1.5"><HiOutlineCalendarDays className="text-primary text-sm shrink-0" /> किमान वयोमर्यादा १८/१९ ते ३८ वर्षे</span>
-              <span class="flex items-center gap-1.5"><HiOutlineDocumentText className="text-primary text-sm shrink-0" /> पूर्व + मुख्य + मुलाखत टप्पे</span>
+              <span class="flex items-center gap-1.5"><HiOutlineAcademicCap className="text-primary text-sm shrink-0" /> पदवीधर उमेदवार पात्र (Any Graduate)</span>
+              <span class="flex items-center gap-1.5"><HiOutlineCalendarDays className="text-primary text-sm shrink-0" /> नवीन वर्णनात्मक मुख्य परीक्षा पॅटर्न</span>
+              <span class="flex items-center gap-1.5"><HiOutlineDocumentText className="text-primary text-sm shrink-0" /> पूर्व परीक्षा + मुख्य परीक्षा + मुलाखत</span>
             </div>
           </div>
 
           <!-- Action link footer -->
           <div class="mt-6 pt-3.5 border-t border-border-card/30 flex items-center justify-between text-xs text-primary font-bold uppercase tracking-wider">
+            <span>Read Details</span>
+            <HiOutlineArrowRight className="text-sm transition-transform duration-300 group-hover:translate-x-1" />
+          </div>
+        </a>
+
+        <!-- Card 1b: MPSC Group B Exam Details -->
+        <a 
+          href="/mpsc-group-b-exam-details" 
+          class="group relative bg-bg-surface border border-border-card hover:border-emerald-500 rounded-3xl p-6 md:p-8 shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/5 flex flex-col justify-between min-h-[340px] overflow-hidden no-underline"
+        >
+          <!-- Ambient Glow background effect -->
+          <div class="absolute -right-20 -top-20 w-64 h-64 bg-emerald-500/5 rounded-full blur-3xl group-hover:bg-emerald-500/10 transition-colors duration-500 -z-10"></div>
+          
+          <div class="space-y-4">
+            <!-- Icon & Badges -->
+            <div class="flex justify-between items-start">
+              <div class="p-3.5 bg-emerald-500/10 text-emerald-500 rounded-2xl group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300">
+                <HiOutlineAcademicCap className="text-xl" />
+              </div>
+              <div class="flex items-center gap-1.5 flex-wrap">
+                <span class="text-[0.6rem] bg-emerald-500/10 text-emerald-500 px-2.5 py-0.5 rounded font-bold uppercase tracking-wider border border-emerald-500/20 whitespace-nowrap">
+                  Non-Gazetted Group B
+                </span>
+                <span class="text-[0.6rem] bg-emerald-500/10 text-emerald-500 px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wide border border-emerald-500/20 whitespace-nowrap">
+                  Combined Exam
+                </span>
+              </div>
+            </div>
+
+            <!-- Title & Description -->
+            <div class="space-y-2">
+              <h2 class="text-lg md:text-xl text-text-main font-extrabold leading-tight m-0 group-hover:text-emerald-500 transition-colors">
+                MPSC Group B Exam Details
+              </h2>
+              <p class="text-xs text-text-secondary leading-relaxed m-0">
+                एमपीएससी संयुक्त गट ब (Non-Gazetted Class 2) परीक्षा: पदे (PSI, STI, ASO, दुय्यम निबंधक), वयोमर्यादा, परीक्षा स्वरूप, आणि शारीरिक चाचणी निकष.
+              </p>
+            </div>
+
+            <!-- Features list -->
+            <div class="flex flex-col gap-2 text-xs text-text-muted font-medium pt-3.5 border-t border-border-card/30">
+              <span class="flex items-center gap-1.5"><HiOutlineAcademicCap className="text-emerald-500 text-sm shrink-0" /> PSI, STI, ASO व दुय्यम निबंधक पदे</span>
+              <span class="flex items-center gap-1.5"><HiOutlineCalendarDays className="text-emerald-500 text-sm shrink-0" /> संयुक्त पूर्व परीक्षा + मुख्य परीक्षा (MCQ)</span>
+              <span class="flex items-center gap-1.5"><HiOutlineDocumentText className="text-emerald-500 text-sm shrink-0" /> PSI साठी शारीरिक चाचणी (Physical Test)</span>
+            </div>
+          </div>
+
+          <!-- Action link footer -->
+          <div class="mt-6 pt-3.5 border-t border-border-card/30 flex items-center justify-between text-xs text-emerald-500 font-bold uppercase tracking-wider">
+            <span>Read Details</span>
+            <HiOutlineArrowRight className="text-sm transition-transform duration-300 group-hover:translate-x-1" />
+          </div>
+        </a>
+
+        <!-- Card 1c: MPSC Group C Exam Details -->
+        <a 
+          href="/mpsc-group-c-exam-details" 
+          class="group relative bg-bg-surface border border-border-card hover:border-amber-500 rounded-3xl p-6 md:p-8 shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/5 flex flex-col justify-between min-h-[340px] overflow-hidden no-underline"
+        >
+          <!-- Ambient Glow background effect -->
+          <div class="absolute -right-20 -top-20 w-64 h-64 bg-amber-500/5 rounded-full blur-3xl group-hover:bg-amber-500/10 transition-colors duration-500 -z-10"></div>
+          
+          <div class="space-y-4">
+            <!-- Icon & Badges -->
+            <div class="flex justify-between items-start">
+              <div class="p-3.5 bg-amber-500/10 text-amber-600 rounded-2xl group-hover:bg-amber-500 group-hover:text-white transition-all duration-300">
+                <HiOutlineAcademicCap className="text-xl" />
+              </div>
+              <div class="flex items-center gap-1.5 flex-wrap">
+                <span class="text-[0.6rem] bg-amber-500/10 text-amber-600 px-2.5 py-0.5 rounded font-bold uppercase tracking-wider border border-amber-500/20 whitespace-nowrap">
+                  Non-Gazetted Group C
+                </span>
+                <span class="text-[0.6rem] bg-emerald-500/10 text-emerald-500 px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wide border border-emerald-500/20 whitespace-nowrap">
+                  Combined Exam
+                </span>
+              </div>
+            </div>
+
+            <!-- Title & Description -->
+            <div class="space-y-2">
+              <h2 class="text-lg md:text-xl text-text-main font-extrabold leading-tight m-0 group-hover:text-amber-500 transition-colors">
+                MPSC Group C Exam Details
+              </h2>
+              <p class="text-xs text-text-secondary leading-relaxed m-0">
+                एमपीएससी संयुक्त गट क (Non-Gazetted Class 3) परीक्षा: पदे (Tax Assistant, लिपिक-टंकलेखक, Excise SI), पात्रता, टायपिंग प्रमाणपत्र व परीक्षा पद्धत.
+              </p>
+            </div>
+
+            <!-- Features list -->
+            <div class="flex flex-col gap-2 text-xs text-text-muted font-medium pt-3.5 border-t border-border-card/30">
+              <span class="flex items-center gap-1.5"><HiOutlineAcademicCap className="text-amber-500 text-sm shrink-0" /> लिपिक-टंकलेखक व कर सहाय्यक पदे</span>
+              <span class="flex items-center gap-1.5"><HiOutlineCalendarDays className="text-amber-500 text-sm shrink-0" /> संयुक्त पूर्व परीक्षा + मुख्य परीक्षा (MCQ)</span>
+              <span class="flex items-center gap-1.5"><HiOutlineDocumentText className="text-amber-500 text-sm shrink-0" /> टायपिंग कौशल्य चाचणी (Typing Skill Test)</span>
+            </div>
+          </div>
+
+          <!-- Action link footer -->
+          <div class="mt-6 pt-3.5 border-t border-border-card/30 flex items-center justify-between text-xs text-amber-600 font-bold uppercase tracking-wider">
             <span>Read Details</span>
             <HiOutlineArrowRight className="text-sm transition-transform duration-300 group-hover:translate-x-1" />
           </div>

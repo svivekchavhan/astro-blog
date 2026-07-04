@@ -1,0 +1,389 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { 
+  HiOutlineCalendarDays, 
+  HiOutlineCursorArrowRays,
+  HiOutlineArrowTopRightOnSquare,
+  HiOutlineDocumentText,
+  HiOutlineBuildingOffice,
+  HiOutlineAcademicCap,
+  HiOutlineArrowDownTray,
+  HiOutlineQueueList,
+  HiOutlineIdentification
+} from "react-icons/hi2";
+
+const title = "MPSC Group B Exam Details 2026: संयुक्त गट ब (PSI, STI, ASO) परीक्षा पात्रता, पॅटर्न आणि माहिती";
+const description = "MPSC Non-Gazetted Group B Exam (संयुक्त गट ब - PSI, STI, ASO, Sub Registrar) detailed guide. Check eligibility criteria, selection pattern (Prelims, MCQ Mains, PSI Physical), posts, and official links.";
+const canonicalURL = "https://mahasandhi.in/mpsc-group-b-exam-details";
+const date = "June 04, 2026";
+const category = "Exam Info";
+---
+
+<Layout 
+  title={title} 
+  description={description}
+  canonicalURL={canonicalURL}
+  image="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1200"
+  article={true}
+  hideSidebar={true}
+>
+  <article class="py-8">
+    <!-- Header -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-6">
+        <span
+          class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-primary/20"
+          >{category}
+        </span>
+        <span class="text-text-muted text-sm">• {date}</span>
+      </div>
+      <h1
+        class="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-text-main mb-6 leading-[1.25]"
+      >
+        {title}
+      </h1>
+      <p
+        class="text-text-muted text-lg leading-relaxed border-l-4 border-primary pl-6 py-2 italic"
+      >
+        {description}
+      </p>
+    </div>
+
+    <!-- Premium Quick Resource Cards Grid -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-12 not-prose">
+      <!-- Result Card -->
+      <a 
+        href="/result" 
+        class="group p-5 bg-gradient-to-br from-emerald-500/5 to-teal-500/5 hover:from-emerald-500/10 hover:to-teal-500/10 border border-emerald-500/20 hover:border-emerald-500/50 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-emerald-500/10 flex flex-col justify-between min-h-[140px]"
+      >
+        <div class="flex justify-between items-start">
+          <div class="p-3 bg-emerald-500/10 text-emerald-500 rounded-xl group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300">
+            <HiOutlineQueueList className="text-xl" />
+          </div>
+          <HiOutlineArrowTopRightOnSquare className="text-emerald-500/40 group-hover:text-emerald-500 transition-colors duration-300" />
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-text-main group-hover:text-emerald-500 transition-colors mb-1">MPSC Result</h4>
+          <span class="text-[0.7rem] text-text-muted">निकालाची गुणवत्ता यादी तपासा</span>
+        </div>
+      </a>
+
+      <!-- Admit Card Card -->
+      <a 
+        href="/admit-card" 
+        class="group p-5 bg-gradient-to-br from-rose-500/5 to-pink-500/5 hover:from-rose-500/10 hover:to-pink-500/10 border border-rose-500/20 hover:border-rose-500/50 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-rose-500/10 flex flex-col justify-between min-h-[140px]"
+      >
+        <div class="flex justify-between items-start">
+          <div class="p-3 bg-rose-500/10 text-rose-500 rounded-xl group-hover:bg-rose-500 group-hover:text-white transition-all duration-300">
+            <HiOutlineIdentification className="text-xl" />
+          </div>
+          <HiOutlineArrowTopRightOnSquare className="text-rose-500/40 group-hover:text-rose-500 transition-colors duration-300" />
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-text-main group-hover:text-rose-500 transition-colors mb-1">Admit Card</h4>
+          <span class="text-[0.7rem] text-text-muted">प्रवेश पत्र आणि हॉल तिकीट</span>
+        </div>
+      </a>
+
+      <!-- Syllabus Card -->
+      <a 
+        href="#links-table-mr" 
+        class="group p-5 bg-gradient-to-br from-amber-500/5 to-orange-500/5 hover:from-amber-500/10 hover:to-orange-500/10 border border-amber-500/20 hover:border-amber-500/50 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-amber-500/10 flex flex-col justify-between min-h-[140px]"
+      >
+        <div class="flex justify-between items-start">
+          <div class="p-3 bg-amber-500/10 text-amber-500 rounded-xl group-hover:bg-amber-500 group-hover:text-white transition-all duration-300">
+            <HiOutlineAcademicCap className="text-xl" />
+          </div>
+          <HiOutlineArrowTopRightOnSquare className="text-amber-500/40 group-hover:text-amber-500 transition-colors duration-300" />
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-text-main group-hover:text-amber-500 transition-colors mb-1">Syllabus</h4>
+          <span class="text-[0.7rem] text-text-muted">गट ब अभ्यासक्रम PDF</span>
+        </div>
+      </a>
+
+      <!-- PYQ Card -->
+      <a 
+        href="/mpsc-polity-preamble" 
+        class="group p-5 bg-gradient-to-br from-blue-500/5 to-indigo-500/5 hover:from-blue-500/10 hover:to-indigo-500/10 border border-blue-500/20 hover:border-blue-500/50 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-blue-500/10 flex flex-col justify-between min-h-[140px]"
+      >
+        <div class="flex justify-between items-start">
+          <div class="p-3 bg-blue-500/10 text-blue-500 rounded-xl group-hover:bg-blue-500 group-hover:text-white transition-all duration-300">
+            <HiOutlineDocumentText className="text-xl" />
+          </div>
+          <HiOutlineArrowTopRightOnSquare className="text-blue-500/40 group-hover:text-blue-500 transition-colors duration-300" />
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-text-main group-hover:text-blue-500 transition-colors mb-1">Polity Study (उद्देशिका)</h4>
+          <span class="text-[0.7rem] text-text-muted">परीक्षा सराव व नोट्स</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Quick Language Navigation Links -->
+    <div class="flex gap-4 mb-8">
+      <a href="#marathi-version" class="text-primary font-bold text-sm hover:underline">↓ मराठी आवृत्ती (Marathi Version)</a>
+      <span class="text-text-muted">|</span>
+      <a href="#english-version" class="text-primary font-bold text-sm hover:underline">↓ English Version</a>
+    </div>
+
+    <!-- ================= MARATHI VERSION ================= -->
+    <div id="marathi-version">
+      <!-- Table of Contents (Marathi) -->
+      <div class="bg-bg-surface border border-border-card rounded-3xl p-8 mb-12">
+        <h2
+          class="text-xl font-bold text-text-main mb-4 flex items-center gap-2 m-0 border-none animate-[none]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="text-primary"
+            ><line x1="8" y1="6" x2="21" y2="6"></line><line
+              x1="8"
+              y1="12"
+              x2="21"
+              y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line
+              x1="3"
+              y1="6"
+              x2="3.01"
+              y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line
+              x1="3"
+              y1="18"
+              x2="3.01"
+              y2="18"></line>
+          </svg>
+          या लेखातील मुख्य मुद्दे (मराठी)
+        </h2>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 list-none p-0 m-0 mt-2">
+          <li>
+            <a
+              href="#overview-mr"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >MPSC संयुक्त गट ब काय आहे? (Overview)</a
+            >
+          </li>
+          <li>
+            <a
+              href="#posts-mr"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >प्रमुख पदे (PSI, STI, ASO, Sub Registrar)</a
+            >
+          </li>
+          <li>
+            <a
+              href="#eligibility-mr"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >पात्रता आणि शारीरिक निकष (Eligibility & Physical)</a
+            >
+          </li>
+          <li>
+            <a
+              href="#exam-pattern-mr"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >परीक्षा पद्धत व गुणदान टप्पे (Exam Pattern)</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!-- Content (Marathi) -->
+      <div class="space-y-8 text-text-main leading-relaxed">
+        <h2 id="overview-mr">MPSC संयुक्त गट ब परीक्षा काय आहे?</h2>
+        <p>
+          <strong>MPSC अराजपत्रित गट ब संयुक्त परीक्षा (MPSC Non-Gazetted Group B Combined Exam)</strong> ही महाराष्ट्रातील अत्यंत लोकप्रिय स्पर्धा परीक्षा आहे. पूर्वी या परीक्षा प्रत्येक पदासाठी वेगवेगळ्या घेतल्या जात असत, परंतु आता या सर्व पदांसाठी एकच <strong>संयुक्त पूर्व परीक्षा (Combined Prelims)</strong> आयोजित केली जाते.
+        </p>
+
+        <!-- Key Information Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
+          <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
+            <HiOutlineBuildingOffice className="text-primary text-2xl shrink-0 mt-0.5" />
+            <div>
+              <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">परीक्षा मंडळ (Board)</span>
+              <span class="text-text-main font-semibold text-sm">एम.पी.एस.सी. (MPSC)</span>
+            </div>
+          </div>
+          <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
+            <HiOutlineAcademicCap className="text-primary text-2xl shrink-0 mt-0.5" />
+            <div>
+              <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">पात्रता निकष</span>
+              <span class="text-text-main font-semibold text-sm">कोणत्याही शाखेतील पदवी (Graduate)</span>
+            </div>
+          </div>
+          <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
+            <HiOutlineCalendarDays className="text-primary text-2xl shrink-0 mt-0.5" />
+            <div>
+              <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">नोकरी प्रकार</span>
+              <span class="text-emerald-500 font-bold text-sm">अराजपत्रित वर्ग-२ (Group B Non-Gazetted)</span>
+            </div>
+          </div>
+        </div>
+
+        <h2 id="posts-mr">गट ब (Group B) अंतर्गत येणारी प्रमुख पदे</h2>
+        <p>या संयुक्त परीक्षेच्या गुणांच्या आधारे खालील ४ प्रमुख संवर्गात नियुक्ती केली जाते:</p>
+        <table class="w-full text-left border-collapse my-6">
+          <thead>
+            <tr class="bg-primary/10">
+              <th class="p-3 border border-border-card font-bold text-text-main">पद (Post Name)</th>
+              <th class="p-3 border border-border-card font-bold text-text-main">विभाग व नोकरीचे स्वरूप (Department & Scope)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="p-3 border border-border-card font-semibold">पोलीस उपनिरीक्षक (PSI - Police Sub-Inspector)</td>
+              <td class="p-3 border border-border-card">गृह विभाग (Home Dept). गुन्हे अन्वेषण आणि कायदा सुव्यवस्था राखणे. यात शारीरिक चाचणी आवश्यक आहे.</td>
+            </tr>
+            <tr>
+              <td class="p-3 border border-border-card font-semibold">राज्यकर निरीक्षक (STI - State Tax Inspector)</td>
+              <td class="p-3 border border-border-card">वित्त विभाग (Finance Dept). जीएसटी आणि कर वसुली संदर्भातील प्रशासकीय कामे.</td>
+            </tr>
+            <tr>
+              <td class="p-3 border border-border-card font-semibold">सहाय्यक कक्ष अधिकारी (ASO - Assistant Section Officer)</td>
+              <td class="p-3 border border-border-card">मंत्रालय विभाग (Mantralaya, Mumbai). मंत्रालयात विविध फाईल्स व प्रशासकीय कारभाराचे व्यवस्थापन.</td>
+            </tr>
+            <tr>
+              <td class="p-3 border border-border-card font-semibold">दुय्यम निबंधक / मुद्रांक निरीक्षक (Sub Registrar)</td>
+              <td class="p-3 border border-border-card">महसूल व नोंदणी विभाग. जमीन आणि मालमत्ता खरेदी-विक्री दस्तांची नोंदणी करणे.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="eligibility-mr">शैक्षणिक पात्रता आणि वयोमर्यादा</h2>
+        <ul class="list-disc pl-5 space-y-2">
+          <li><strong>शैक्षणिक पात्रता:</strong> उमेदवार पदवीधर (Graduate) असावा. टायपिंग किंवा विशेष शैक्षणिक प्रमाणपत्राची गरज नसते.</li>
+          <li><strong>वयोमर्यादा (सामान्य प्रवर्ग):</strong>
+            <ul class="list-disc pl-5 space-y-1">
+              <li>STI, ASO, Sub Registrar साठी: १९ ते ३८ वर्षे (मागासवर्गीय: ४३ वर्षे).</li>
+              <li>PSI (पोलीस उपनिरीक्षक) साठी: १९ ते ३१ वर्षे (मागासवर्गीय: ३४ वर्षे).</li>
+            </ul>
+          </li>
+          <li><strong>शारीरिक पात्रता (फक्त PSI पदासाठी):</strong>
+            <ul class="list-disc pl-5 space-y-1">
+              <li>पुरुष: उंची किमान १६५ सेंमी, छाती न फुगवता ७९ सेंमी (५ सेंमी फुगवणे आवश्यक).</li>
+              <li>महिला: उंची किमान १५७ सेंमी.</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h2 id="exam-pattern-mr">परीक्षा पद्धत आणि टप्पे</h2>
+        <p>MPSC संयुक्त गट ब परीक्षा खालील टप्प्यांत आयोजित केली जाते:</p>
+        <div class="space-y-4 pl-2 border-l-2 border-primary/30 my-6">
+          <div>
+            <h4 class="text-text-main font-bold m-0">१. संयुक्त पूर्व परीक्षा (Prelims) - १०० गुण (MCQ)</h4>
+            <p class="text-sm text-text-muted m-0">एकूण १०० बहुपर्यायी प्रश्न असतात. यामध्ये इतिहास, भूगोल, अर्थशास्त्र, राज्यशास्त्र, सामान्य विज्ञान, चालू घडामोडी आणि अंकगणित व बुद्धीमत्ता हे विषय असतात. परीक्षेचा वेळ फक्त १ तास असतो आणि १/४ (०.२५) निगेटिव्ह मार्किंग असते.</p>
+          </div>
+          <div>
+            <h4 class="text-text-main font-bold m-0">२. स्वतंत्र मुख्य परीक्षा (Mains) - ४०० गुण (MCQ)</h4>
+            <p class="text-sm text-text-muted m-0">पूर्व परीक्षेत पात्र उमेदवार मुख्य परीक्षेचे २ पेपर्स देतात:
+              <br>- **पेपर १:** मराठी व इंग्रजी व्याकरण (२०० गुण).
+              <br>- **पेपर २:** सामान्य अध्ययन व बुद्धिमापन चाचणी (२०० गुण).
+            </p>
+          </div>
+          <div>
+            <h4 class="text-text-main font-bold m-0">३. शारीरिक चाचणी व मुलाखत (फक्त PSI पदासाठी)</h4>
+            <p class="text-sm text-text-muted m-0">PSI पदासाठी शारीरिक चाचणी (Physical Test - १०० गुणांची असून ती फक्त पात्र होण्यासाठी म्हणजेच Qualifying ७० गुण मिळवणे आवश्यक आहे) आणि ४० गुणांची मुलाखत घेतली जाते. इतर तिन्ही पदांसाठी (STI, ASO, Sub Registrar) थेट मुख्य परीक्षेच्या गुणांवरून निवड होते.</p>
+          </div>
+        </div>
+
+        <!-- MPSC Links Table (Marathi) -->
+        <h2 id="links-table-mr" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">अधिकृत ऑनलाईन मार्गदर्शक लिंक्स</h2>
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-primary/10">
+                <th class="p-3 border border-border-card font-bold text-text-main">तपशील (Resource Name)</th>
+                <th class="p-3 border border-border-card font-bold text-text-main">डायरेक्ट लिंक (Action)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">एमपीएससी संयुक्त गट ब ऑनलाईन अर्ज लिंक</td>
+                <td class="p-3 border border-border-card">
+                  <a href="https://mpsconline.gov.in" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-xs font-bold uppercase tracking-wider rounded-lg transition-all shadow-sm w-full sm:w-auto">
+                    <HiOutlineCursorArrowRays className="text-base shrink-0 animate-pulse" /> अर्ज करा (Apply Link)
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">संयुक्त गट ब परीक्षा अभ्यासक्रम पीडीएफ डाउनलोड</td>
+                <td class="p-3 border border-border-card">
+                  <a href="https://mpsc.gov.in" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-amber-500/10 hover:bg-amber-500/20 text-amber-600 dark:text-amber-400 text-xs font-bold uppercase tracking-wider rounded-lg transition-colors border border-amber-500/30 w-full sm:w-auto">
+                    <HiOutlineArrowDownTray className="text-base shrink-0" /> अभ्यासक्रम डाउनलोड (Syllabus)
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- FAQ Section (Marathi) -->
+        <h2 class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">वारंवार विचारले जाणारे प्रश्न (FAQs)</h2>
+        <div class="space-y-4 mt-3 mb-8">
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+            <h3 class="text-lg font-bold text-text-main mb-2">प्रश्न १: PSI पदासाठी शारीरिक चाचणीचे गुण अंतिम गुणवत्ता यादीत जोडले जातात का?</h3>
+            <p class="text-text-muted m-0">उत्तर १: नाही. बदललेल्या नियमांनुसार शारीरिक चाचणी (Physical Test) आता केवळ पात्रतेसाठी (Qualifying) ठेवण्यात आली आहे, ज्यात उमेदवाराने १०० पैकी किमान ७० गुण मिळवणे आवश्यक आहे. अंतिम निवड ही मुख्य परीक्षेतील गुण आणि मुलाखतीतील गुणांवर आधारित असते.</p>
+          </div>
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+            <h3 class="text-lg font-bold text-text-main mb-2">प्रश्न २: MPSC संयुक्त गट ब परीक्षेमध्ये नकारात्मक गुणदान (Negative Marking) पद्धत काय आहे?</h3>
+            <p class="text-text-muted m-0">उत्तर २: पूर्व आणि मुख्य दोन्ही परीक्षांमध्ये प्रत्येक चुकीच्या उत्तरासाठी १/४ म्हणजेच ०.२५ इतके गुण वजा केले जातात.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= LANGUAGE SEPARATOR ================= -->
+    <div class="my-16 border-t-2 border-dashed border-border-card flex items-center justify-center relative">
+      <span class="absolute bg-bg-base px-8 py-2 text-base sm:text-lg font-extrabold uppercase tracking-widest text-primary border border-border-card rounded-full shadow-md">
+        English
+      </span>
+    </div>
+
+    <!-- ================= ENGLISH VERSION ================= -->
+    <div id="english-version" class="opacity-95">
+      <div class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-extrabold text-text-main mb-4">
+          MPSC Group B Non-Gazetted Services: PSI, STI, ASO Guide
+        </h2>
+        <p class="text-text-muted leading-relaxed italic">
+          Complete eligibility, exam pattern, and vacancy posts outline for MPSC Non-Gazetted Class 2 officers recruitment.
+        </p>
+      </div>
+
+      <div class="space-y-8 text-text-main leading-relaxed">
+        <h2>Group B Combined Selection Pattern</h2>
+        <p>The recruitment process features objective selection stages:</p>
+        <ul class="list-decimal pl-5 space-y-2">
+          <li><strong>Combined Prelims:</strong> 100 questions of 100 marks. Covers history, geography, science, civics, math/reasoning, and current affairs. Time limit is 1 hour.</li>
+          <li><strong>Mains Exam:</strong> 2 papers totaling 400 marks. MCQ based. Covers Language Grammar (Marathi & English) and General Studies.</li>
+          <li><strong>Physical Test & Interview (PSI only):</strong> Physical test of 100 marks (qualifying at 70 marks) and Interview of 40 marks.</li>
+        </ul>
+
+        <h2>Physical Standards for PSI</h2>
+        <ul class="list-disc pl-5 space-y-2">
+          <li><strong>Male Candidates:</strong> Height minimum 165 cm, chest unexpanded 79 cm (expansion minimum 5 cm).</li>
+          <li><strong>Female Candidates:</strong> Height minimum 157 cm.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="bg-primary/5 border border-primary/20 p-8 rounded-3xl text-center my-8 not-prose">
+      <h2 class="text-2xl font-black text-text-main mb-4 border-none p-0 mt-0">Join Our Communities for Fast Updates!</h2>
+      <p class="text-text-muted mb-6">Stay ahead with direct notifications of MPSC exams, schedules, and answer keys on your phone.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-600 text-white text-sm font-bold uppercase tracking-wider rounded-xl transition-colors shadow-sm no-underline">
+          WhatsApp Group
+        </a>
+        <a href="#" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white text-sm font-bold uppercase tracking-wider rounded-xl transition-colors shadow-sm no-underline">
+          Telegram Channel
+        </a>
+      </div>
+    </div>
+  </article>
+</Layout>

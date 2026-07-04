@@ -1,0 +1,391 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { 
+  HiOutlineCalendarDays, 
+  HiOutlineCursorArrowRays,
+  HiOutlineArrowTopRightOnSquare,
+  HiOutlineDocumentText,
+  HiOutlineBuildingOffice,
+  HiOutlineAcademicCap,
+  HiOutlineArrowDownTray,
+  HiOutlineQueueList,
+  HiOutlineIdentification
+} from "react-icons/hi2";
+
+const title = "MPSC Gazetted Exam Details 2026: महाराष्ट्र राजपत्रित नागरी सेवा परीक्षा पात्रता, पॅटर्न आणि सविस्तर माहिती";
+const description = "MPSC Gazetted Exam (State Services / राज्यसेवा) detailed guide. Check eligibility criteria, selection pattern (Prelims, Descriptive Mains, Interview), vacancy posts list, and official links here.";
+const canonicalURL = "https://mahasandhi.in/mpsc-gazetted-exam-details";
+const date = "June 04, 2026";
+const category = "Exam Info";
+---
+
+<Layout 
+  title={title} 
+  description={description}
+  canonicalURL={canonicalURL}
+  image="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1200"
+  article={true}
+  hideSidebar={true}
+>
+  <article class="py-8">
+    <!-- Header -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-6">
+        <span
+          class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-primary/20"
+          >{category}
+        </span>
+        <span class="text-text-muted text-sm">• {date}</span>
+      </div>
+      <h1
+        class="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-text-main mb-6 leading-[1.25]"
+      >
+        {title}
+      </h1>
+      <p
+        class="text-text-muted text-lg leading-relaxed border-l-4 border-primary pl-6 py-2 italic"
+      >
+        {description}
+      </p>
+    </div>
+
+    <!-- Premium Quick Resource Cards Grid -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-12 not-prose">
+      <!-- Result Card -->
+      <a 
+        href="/result" 
+        class="group p-5 bg-gradient-to-br from-emerald-500/5 to-teal-500/5 hover:from-emerald-500/10 hover:to-teal-500/10 border border-emerald-500/20 hover:border-emerald-500/50 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-emerald-500/10 flex flex-col justify-between min-h-[140px]"
+      >
+        <div class="flex justify-between items-start">
+          <div class="p-3 bg-emerald-500/10 text-emerald-500 rounded-xl group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300">
+            <HiOutlineQueueList className="text-xl" />
+          </div>
+          <HiOutlineArrowTopRightOnSquare className="text-emerald-500/40 group-hover:text-emerald-500 transition-colors duration-300" />
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-text-main group-hover:text-emerald-500 transition-colors mb-1">MPSC Result</h4>
+          <span class="text-[0.7rem] text-text-muted">निकालाची गुणवत्ता यादी तपासा</span>
+        </div>
+      </a>
+
+      <!-- Admit Card Card -->
+      <a 
+        href="/admit-card" 
+        class="group p-5 bg-gradient-to-br from-rose-500/5 to-pink-500/5 hover:from-rose-500/10 hover:to-pink-500/10 border border-rose-500/20 hover:border-rose-500/50 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-rose-500/10 flex flex-col justify-between min-h-[140px]"
+      >
+        <div class="flex justify-between items-start">
+          <div class="p-3 bg-rose-500/10 text-rose-500 rounded-xl group-hover:bg-rose-500 group-hover:text-white transition-all duration-300">
+            <HiOutlineIdentification className="text-xl" />
+          </div>
+          <HiOutlineArrowTopRightOnSquare className="text-rose-500/40 group-hover:text-rose-500 transition-colors duration-300" />
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-text-main group-hover:text-rose-500 transition-colors mb-1">Admit Card</h4>
+          <span class="text-[0.7rem] text-text-muted">प्रवेश पत्र आणि हॉल तिकीट</span>
+        </div>
+      </a>
+
+      <!-- Syllabus Card -->
+      <a 
+        href="#links-table-mr" 
+        class="group p-5 bg-gradient-to-br from-amber-500/5 to-orange-500/5 hover:from-amber-500/10 hover:to-orange-500/10 border border-amber-500/20 hover:border-amber-500/50 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-amber-500/10 flex flex-col justify-between min-h-[140px]"
+      >
+        <div class="flex justify-between items-start">
+          <div class="p-3 bg-amber-500/10 text-amber-500 rounded-xl group-hover:bg-amber-500 group-hover:text-white transition-all duration-300">
+            <HiOutlineAcademicCap className="text-xl" />
+          </div>
+          <HiOutlineArrowTopRightOnSquare className="text-amber-500/40 group-hover:text-amber-500 transition-colors duration-300" />
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-text-main group-hover:text-amber-500 transition-colors mb-1">Syllabus</h4>
+          <span class="text-[0.7rem] text-text-muted">राजपत्रित सेवा अभ्यासक्रम PDF</span>
+        </div>
+      </a>
+
+      <!-- PYQ Card -->
+      <a 
+        href="/mpsc-polity-preamble" 
+        class="group p-5 bg-gradient-to-br from-blue-500/5 to-indigo-500/5 hover:from-blue-500/10 hover:to-indigo-500/10 border border-blue-500/20 hover:border-blue-500/50 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-blue-500/10 flex flex-col justify-between min-h-[140px]"
+      >
+        <div class="flex justify-between items-start">
+          <div class="p-3 bg-blue-500/10 text-blue-500 rounded-xl group-hover:bg-blue-500 group-hover:text-white transition-all duration-300">
+            <HiOutlineDocumentText className="text-xl" />
+          </div>
+          <HiOutlineArrowTopRightOnSquare className="text-blue-500/40 group-hover:text-blue-500 transition-colors duration-300" />
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-text-main group-hover:text-blue-500 transition-colors mb-1">Polity Study (उद्देशिका)</h4>
+          <span class="text-[0.7rem] text-text-muted">परीक्षा सराव व नोट्स</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Quick Language Navigation Links -->
+    <div class="flex gap-4 mb-8">
+      <a href="#marathi-version" class="text-primary font-bold text-sm hover:underline">↓ मराठी आवृत्ती (Marathi Version)</a>
+      <span class="text-text-muted">|</span>
+      <a href="#english-version" class="text-primary font-bold text-sm hover:underline">↓ English Version</a>
+    </div>
+
+    <!-- ================= MARATHI VERSION ================= -->
+    <div id="marathi-version">
+      <!-- Table of Contents (Marathi) -->
+      <div class="bg-bg-surface border border-border-card rounded-3xl p-8 mb-12">
+        <h2
+          class="text-xl font-bold text-text-main mb-4 flex items-center gap-2 m-0 border-none animate-[none]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="text-primary"
+            ><line x1="8" y1="6" x2="21" y2="6"></line><line
+              x1="8"
+              y1="12"
+              x2="21"
+              y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line
+              x1="3"
+              y1="6"
+              x2="3.01"
+              y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line
+              x1="3"
+              y1="18"
+              x2="3.01"
+              y2="18"></line>
+          </svg>
+          या लेखातील मुख्य मुद्दे (मराठी)
+        </h2>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 list-none p-0 m-0 mt-2">
+          <li>
+            <a
+              href="#overview-mr"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >MPSC राजपत्रित सेवा काय आहे? (Overview)</a
+            >
+          </li>
+          <li>
+            <a
+              href="#posts-mr"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >विविध पदे (Class A & B Vacancies)</a
+            >
+          </li>
+          <li>
+            <a
+              href="#eligibility-mr"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >पात्रता आणि वयोमर्यादा (Eligibility)</a
+            >
+          </li>
+          <li>
+            <a
+              href="#exam-pattern-mr"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >नवीन परीक्षा पद्धत व टप्पे (Descriptive Stages)</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!-- Content (Marathi) -->
+      <div class="space-y-8 text-text-main leading-relaxed">
+        <h2 id="overview-mr">MPSC राजपत्रित नागरी सेवा परीक्षा काय आहे?</h2>
+        <p>
+          <strong>MPSC राजपत्रित नागरी सेवा (MPSC Gazetted Civil Services - State Services / राज्यसेवा)</strong> ही महाराष्ट्र शासनातील वर्ग-१ (Class A) आणि वर्ग-२ (Class B) चे सर्वोच्च प्रशासकीय अधिकारी निवडणारी परीक्षा आहे. या परीक्षेतून उपजिल्हाधिकारी, पोलीस उपअधीक्षक (DySP), आणि तहसीलदार यांसारख्या उच्च मानाच्या पदांवर नियुक्ती केली जाते.
+        </p>
+
+        <!-- Key Information Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
+          <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
+            <HiOutlineBuildingOffice className="text-primary text-2xl shrink-0 mt-0.5" />
+            <div>
+              <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">परीक्षा मंडळ (Board)</span>
+              <span class="text-text-main font-semibold text-sm">एम.पी.एस.सी. (MPSC)</span>
+            </div>
+          </div>
+          <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
+            <HiOutlineAcademicCap className="text-primary text-2xl shrink-0 mt-0.5" />
+            <div>
+              <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">शैक्षणिक पात्रता</span>
+              <span class="text-text-main font-semibold text-sm">कोणत्याही शाखेतील पदवी (Graduate)</span>
+            </div>
+          </div>
+          <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
+            <HiOutlineCalendarDays className="text-primary text-2xl shrink-0 mt-0.5" />
+            <div>
+              <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">नोकरीचे ठिकाण</span>
+              <span class="text-emerald-500 font-bold text-sm">महाराष्ट्र शासन प्रशासन</span>
+            </div>
+          </div>
+        </div>
+
+        <h2 id="posts-mr">राजपत्रित सेवेअंतर्गत येणारी प्रमुख पदे</h2>
+        <p>या परीक्षेतील उत्तीर्ण गुणवत्ता यादीनुसार खालील पदांवर थेट क्लास-१ आणि क्लास-२ म्हणून निवड होते:</p>
+        <table class="w-full text-left border-collapse my-6">
+          <thead>
+            <tr class="bg-primary/10">
+              <th class="p-3 border border-border-card font-bold text-text-main">गट (Class)</th>
+              <th class="p-3 border border-border-card font-bold text-text-main">प्रमुख पदे (Vacancy Posts)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="p-3 border border-border-card font-semibold">गट अ (Class A / Class 1)</td>
+              <td class="p-3 border border-border-card">उपजिल्हाधिकारी (Deputy Collector), पोलीस उपअधीक्षक / सहाय्यक आयुक्त (DySP/ACP), सहाय्यक राज्यकर आयुक्त, मुख्य कार्यकारी अधिकारी (BDO - CEO), तहसीलदार, जिल्हा उपनिबंधक.</td>
+            </tr>
+            <tr>
+              <td class="p-3 border border-border-card font-semibold">गट ब (Class B / Class 2)</td>
+              <td class="p-3 border border-border-card">नायब तहसीलदार, गट विकास अधिकारी (BDO - Class 2), सहाय्यक निबंधक (सहकारी संस्था), मंत्रालय विभाग अधिकारी, उपअधीक्षक (भूमी अभिलेख).</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="eligibility-mr">पात्रता निकष आणि वयोमर्यादा</h2>
+        <ul class="list-disc pl-5 space-y-2">
+          <li><strong>शैक्षणिक पात्रता:</strong> उमेदवार मान्यताप्राप्त विद्यापीठातून कोणत्याही शाखेतील पदवीधर (Graduation) असावा. पदवीच्या अंतिम वर्षाला (Final Year) असणारे विद्यार्थी पूर्व परीक्षेला बसू शकतात.</li>
+          <li><strong>वयोमर्यादा (खुला प्रवर्ग):</strong> किमान वय १९ वर्षे आणि कमाल वय ३८ वर्षे. मागासवर्गीय उमेदवारांसाठी कमाल वयात ५ वर्षांची सूट म्हणजेच ४३ वर्षांपर्यंत पात्रता राहील.</li>
+          <li><strong>शारीरिक पात्रता (केवळ DySP पदासाठी):</strong> पुरुषांसाठी किमान उंची १६५ सेंमी आणि छाती न फुगवता ८४ सेंमी (फुगवून ५ सेंमी वाढवणे आवश्यक). महिलांसाठी किमान उंची १५७ सेंमी आवश्यक आहे.</li>
+        </ul>
+
+        <h2 id="exam-pattern-mr">सुधारित परीक्षा पद्धत आणि टप्पे</h2>
+        <p>MPSC राजपत्रित नागरी सेवा परीक्षा एकूण तीन टप्प्यांत घेतली जाते:</p>
+        <div class="space-y-4 pl-2 border-l-2 border-primary/30 my-6">
+          <div>
+            <h4 class="text-text-main font-bold m-0">१. पूर्व परीक्षा (Prelims Exam) - ४०० गुण (MCQ)</h4>
+            <p class="text-sm text-text-muted m-0">यात प्रत्येकी २०० गुणांचे दोन पेपर असतात: सामान्य अध्ययन (GS Paper 1) आणि नागरी सेवा कल चाचणी (CSAT Paper 2). CSAT पेपर केवळ ३३% गुणांसह पात्र (Qualifying) करणे अनिवार्य आहे.</p>
+          </div>
+          <div>
+            <h4 class="text-text-main font-bold m-0">२. मुख्य परीक्षा (Mains Exam) - १७५० गुण (Descriptive / लेखी)</h4>
+            <p class="text-sm text-text-muted m-0">नवीन यूपीएससी (UPSC) धर्तीवरील पॅटर्ननुसार एकूण ९ पेपर असतील. यामध्ये ७ गुणांकन पेपर (GS 1, GS 2, GS 3, GS 4, निबंध, आणि दोन वैकल्पिक विषय) आणि २ पात्रता भाषा पेपर असतात.</p>
+          </div>
+          <div>
+            <h4 class="text-text-main font-bold m-0">३. मुलाखत (Interview) - २७५ गुण</h4>
+            <p class="text-sm text-text-muted m-0">मुख्य परीक्षेत उत्तीर्ण उमेदवारांचे व्यक्तिमत्त्व मोजण्यासाठी आणि प्रशासकीय कौशल्याची पडताळणी करण्यासाठी मुलाखत घेतली जाते.</p>
+          </div>
+        </div>
+
+        <!-- MPSC Links Table (Marathi) -->
+        <h2 id="links-table-mr" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">अधिकृत ऑनलाईन मार्गदर्शक लिंक्स</h2>
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-primary/10">
+                <th class="p-3 border border-border-card font-bold text-text-main">तपशील (Resource Name)</th>
+                <th class="p-3 border border-border-card font-bold text-text-main">डायरेक्ट लिंक (Action)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">एमपीएससी ऑनलाईन अर्ज प्रणाली</td>
+                <td class="p-3 border border-border-card">
+                  <a href="https://mpsconline.gov.in" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-xs font-bold uppercase tracking-wider rounded-lg transition-all shadow-sm w-full sm:w-auto">
+                    <HiOutlineCursorArrowRays className="text-base shrink-0 animate-pulse" /> ऑनलाईन अर्ज (Apply Link)
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">नवीन राजपत्रित सेवा अभ्यासक्रम पीडीएफ</td>
+                <td class="p-3 border border-border-card">
+                  <a href="https://mpsc.gov.in" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-amber-500/10 hover:bg-amber-500/20 text-amber-600 dark:text-amber-400 text-xs font-bold uppercase tracking-wider rounded-lg transition-colors border border-amber-500/30 w-full sm:w-auto">
+                    <HiOutlineArrowDownTray className="text-base shrink-0" /> अभ्यासक्रम पीडीएफ डाउनलोड
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- FAQ Section (Marathi) -->
+        <h2 class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">वारंवार विचारले जाणारे प्रश्न (FAQs)</h2>
+        <div class="space-y-4 mt-3 mb-8">
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+            <h3 class="text-lg font-bold text-text-main mb-2">प्रश्न १: MPSC राजपत्रित परीक्षेतील CSAT पेपर फक्त क्वालिफाईंग आहे का?</h3>
+            <p class="text-text-muted m-0">उत्तर १: होय, नागरी सेवा कल चाचणी (CSAT) मध्ये पात्र ठरण्यासाठी किमान ३३% (६६ गुण) मिळवणे आवश्यक आहे, तर गुणवत्ता यादी सामान्य अध्ययन (GS Paper 1) वर आधारित असते.</p>
+          </div>
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+            <h3 class="text-lg font-bold text-text-main mb-2">प्रश्न २: मुख्य परीक्षेसाठी नवीन वैकल्पिक विषय (Optional Subject) पद्धत कशी आहे?</h3>
+            <p class="text-text-muted m-0">उत्तर २: सुधारित लेखी पॅटर्नमध्ये उमेदवाराला आयोगाने दिलेल्या २६ विषयांच्या यादीतून एका वैकल्पिक विषयाची निवड करावी लागते, ज्याचे एकूण ५०० गुणांचे दोन पेपर्स असतात.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= LANGUAGE SEPARATOR ================= -->
+    <div class="my-16 border-t-2 border-dashed border-border-card flex items-center justify-center relative">
+      <span class="absolute bg-bg-base px-8 py-2 text-base sm:text-lg font-extrabold uppercase tracking-widest text-primary border border-border-card rounded-full shadow-md">
+        English
+      </span>
+    </div>
+
+    <!-- ================= ENGLISH VERSION ================= -->
+    <div id="english-version" class="opacity-95">
+      <div class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-extrabold text-text-main mb-4">
+          MPSC Gazetted Civil Services: Pattern, Eligibility & Posts
+        </h2>
+        <p class="text-text-muted leading-relaxed italic">
+          Access complete guidelines regarding Maharashtra State Services (Rajyaseva) exams for Class 1 and Class 2 officer recruitment.
+        </p>
+      </div>
+
+      <div class="space-y-8 text-text-main leading-relaxed">
+        <h2>Gazetted Services Exam Stages</h2>
+        <p>The selection process is partitioned into three stages:</p>
+        <ul class="list-decimal pl-5 space-y-2">
+          <li><strong>Preliminary Exam:</strong> Two papers of 200 marks each. Paper 2 (CSAT) is qualifying in nature with a minimum of 33% required.</li>
+          <li><strong>Mains Exam:</strong> Descriptive in nature, totaling 1750 marks. Includes 9 written papers (7 merit-ranking papers and 2 language qualifying papers).</li>
+          <li><strong>Interview:</strong> Personality test of 275 marks conducted by the commission panel.</li>
+        </ul>
+
+        <h2>Eligibility Highlights</h2>
+        <ul class="list-disc pl-5 space-y-2">
+          <li><strong>Education:</strong> Bachelor's degree in any stream. Final-year students are eligible for Prelims.</li>
+          <li><strong>Age:</strong> General category candidates must be between 19 and 38 years old. Relaxation is offered to reserved categories up to 43 years.</li>
+        </ul>
+
+        <!-- MPSC Links Table (English) -->
+        <h2 class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">Important Application Resources</h2>
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-primary/10">
+                <th class="p-3 border border-border-card font-bold text-text-main">Resource</th>
+                <th class="p-3 border border-border-card font-bold text-text-main">Link / Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">MPSC Apply Portal</td>
+                <td class="p-3 border border-border-card">
+                  <a href="https://mpsconline.gov.in" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-xs font-bold uppercase tracking-wider rounded-lg transition-all shadow-sm w-full sm:w-auto">
+                    <HiOutlineCursorArrowRays className="text-base shrink-0" /> Portal Login
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="bg-primary/5 border border-primary/20 p-8 rounded-3xl text-center my-8 not-prose">
+      <h2 class="text-2xl font-black text-text-main mb-4 border-none p-0 mt-0">ताज्या अपडेट्ससाठी जॉईन करा!</h2>
+      <p class="text-text-muted mb-6">MPSC जाहिराती, निकाल आणि हॉल तिकीटच्या ताज्या घडामोडी थेट तुमच्या मोबाईलवर मिळवण्यासाठी आमच्या व्हॉट्सॲप आणि टेलिग्राम ग्रुपमध्ये सामील व्हा.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-600 text-white text-sm font-bold uppercase tracking-wider rounded-xl transition-colors shadow-sm no-underline">
+          WhatsApp Group
+        </a>
+        <a href="#" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white text-sm font-bold uppercase tracking-wider rounded-xl transition-colors shadow-sm no-underline">
+          Telegram Channel
+        </a>
+      </div>
+    </div>
+  </article>
+</Layout>

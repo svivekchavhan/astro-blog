@@ -1,0 +1,389 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { 
+  HiOutlineCalendarDays, 
+  HiOutlineCursorArrowRays,
+  HiOutlineArrowTopRightOnSquare,
+  HiOutlineDocumentText,
+  HiOutlineBuildingOffice,
+  HiOutlineAcademicCap,
+  HiOutlineArrowDownTray,
+  HiOutlineQueueList,
+  HiOutlineIdentification
+} from "react-icons/hi2";
+
+const title = "MPSC Group C Exam Details 2026: संयुक्त गट क (Clerk, Tax Assistant) परीक्षा पात्रता, टायपिंग आणि सविस्तर माहिती";
+const description = "MPSC Non-Gazetted Group C Exam (संयुक्त गट क - Clerk Typist, Tax Assistant, Excise SI) detailed guide. Check eligibility criteria, typing certificate requirements, selection pattern (Prelims, MCQ Mains, Typing Test), and official links.";
+const canonicalURL = "https://mahasandhi.in/mpsc-group-c-exam-details";
+const date = "June 04, 2026";
+const category = "Exam Info";
+---
+
+<Layout 
+  title={title} 
+  description={description}
+  canonicalURL={canonicalURL}
+  image="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1200"
+  article={true}
+  hideSidebar={true}
+>
+  <article class="py-8">
+    <!-- Header -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-6">
+        <span
+          class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-primary/20"
+          >{category}
+        </span>
+        <span class="text-text-muted text-sm">• {date}</span>
+      </div>
+      <h1
+        class="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-text-main mb-6 leading-[1.25]"
+      >
+        {title}
+      </h1>
+      <p
+        class="text-text-muted text-lg leading-relaxed border-l-4 border-primary pl-6 py-2 italic"
+      >
+        {description}
+      </p>
+    </div>
+
+    <!-- Premium Quick Resource Cards Grid -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-12 not-prose">
+      <!-- Result Card -->
+      <a 
+        href="/result" 
+        class="group p-5 bg-gradient-to-br from-emerald-500/5 to-teal-500/5 hover:from-emerald-500/10 hover:to-teal-500/10 border border-emerald-500/20 hover:border-emerald-500/50 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-emerald-500/10 flex flex-col justify-between min-h-[140px]"
+      >
+        <div class="flex justify-between items-start">
+          <div class="p-3 bg-emerald-500/10 text-emerald-500 rounded-xl group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300">
+            <HiOutlineQueueList className="text-xl" />
+          </div>
+          <HiOutlineArrowTopRightOnSquare className="text-emerald-500/40 group-hover:text-emerald-500 transition-colors duration-300" />
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-text-main group-hover:text-emerald-500 transition-colors mb-1">MPSC Result</h4>
+          <span class="text-[0.7rem] text-text-muted">निकालाची गुणवत्ता यादी तपासा</span>
+        </div>
+      </a>
+
+      <!-- Admit Card Card -->
+      <a 
+        href="/admit-card" 
+        class="group p-5 bg-gradient-to-br from-rose-500/5 to-pink-500/5 hover:from-rose-500/10 hover:to-pink-500/10 border border-rose-500/20 hover:border-rose-500/50 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-rose-500/10 flex flex-col justify-between min-h-[140px]"
+      >
+        <div class="flex justify-between items-start">
+          <div class="p-3 bg-rose-500/10 text-rose-500 rounded-xl group-hover:bg-rose-500 group-hover:text-white transition-all duration-300">
+            <HiOutlineIdentification className="text-xl" />
+          </div>
+          <HiOutlineArrowTopRightOnSquare className="text-rose-500/40 group-hover:text-rose-500 transition-colors duration-300" />
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-text-main group-hover:text-rose-500 transition-colors mb-1">Admit Card</h4>
+          <span class="text-[0.7rem] text-text-muted">प्रवेश पत्र आणि हॉल तिकीट</span>
+        </div>
+      </a>
+
+      <!-- Syllabus Card -->
+      <a 
+        href="#links-table-mr" 
+        class="group p-5 bg-gradient-to-br from-amber-500/5 to-orange-500/5 hover:from-amber-500/10 hover:to-orange-500/10 border border-amber-500/20 hover:border-amber-500/50 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-amber-500/10 flex flex-col justify-between min-h-[140px]"
+      >
+        <div class="flex justify-between items-start">
+          <div class="p-3 bg-amber-500/10 text-amber-500 rounded-xl group-hover:bg-amber-500 group-hover:text-white transition-all duration-300">
+            <HiOutlineAcademicCap className="text-xl" />
+          </div>
+          <HiOutlineArrowTopRightOnSquare className="text-amber-500/40 group-hover:text-amber-500 transition-colors duration-300" />
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-text-main group-hover:text-amber-500 transition-colors mb-1">Syllabus</h4>
+          <span class="text-[0.7rem] text-text-muted">गट क अभ्यासक्रम PDF</span>
+        </div>
+      </a>
+
+      <!-- PYQ Card -->
+      <a 
+        href="/mpsc-polity-preamble" 
+        class="group p-5 bg-gradient-to-br from-blue-500/5 to-indigo-500/5 hover:from-blue-500/10 hover:to-indigo-500/10 border border-blue-500/20 hover:border-blue-500/50 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-blue-500/10 flex flex-col justify-between min-h-[140px]"
+      >
+        <div class="flex justify-between items-start">
+          <div class="p-3 bg-blue-500/10 text-blue-500 rounded-xl group-hover:bg-blue-500 group-hover:text-white transition-all duration-300">
+            <HiOutlineDocumentText className="text-xl" />
+          </div>
+          <HiOutlineArrowTopRightOnSquare className="text-blue-500/40 group-hover:text-blue-500 transition-colors duration-300" />
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-text-main group-hover:text-blue-500 transition-colors mb-1">Polity Study (उद्देशिका)</h4>
+          <span class="text-[0.7rem] text-text-muted">परीक्षा सराव व नोट्स</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Quick Language Navigation Links -->
+    <div class="flex gap-4 mb-8">
+      <a href="#marathi-version" class="text-primary font-bold text-sm hover:underline">↓ मराठी आवृत्ती (Marathi Version)</a>
+      <span class="text-text-muted">|</span>
+      <a href="#english-version" class="text-primary font-bold text-sm hover:underline">↓ English Version</a>
+    </div>
+
+    <!-- ================= MARATHI VERSION ================= -->
+    <div id="marathi-version">
+      <!-- Table of Contents (Marathi) -->
+      <div class="bg-bg-surface border border-border-card rounded-3xl p-8 mb-12">
+        <h2
+          class="text-xl font-bold text-text-main mb-4 flex items-center gap-2 m-0 border-none animate-[none]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="text-primary"
+            ><line x1="8" y1="6" x2="21" y2="6"></line><line
+              x1="8"
+              y1="12"
+              x2="21"
+              y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line
+              x1="3"
+              y1="6"
+              x2="3.01"
+              y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line
+              x1="3"
+              y1="18"
+              x2="3.01"
+              y2="18"></line>
+          </svg>
+          या लेखातील मुख्य मुद्दे (मराठी)
+        </h2>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 list-none p-0 m-0 mt-2">
+          <li>
+            <a
+              href="#overview-mr"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >MPSC संयुक्त गट क काय आहे? (Overview)</a
+            >
+          </li>
+          <li>
+            <a
+              href="#posts-mr"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >विविध पदे (Tax Assistant, Clerk Typist, Excise SI)</a
+            >
+          </li>
+          <li>
+            <a
+              href="#eligibility-mr"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >शैक्षणिक पात्रता व टायपिंग निकष (Eligibility & Typing)</a
+            >
+          </li>
+          <li>
+            <a
+              href="#exam-pattern-mr"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >परीक्षा पद्धत व कौशल्य चाचणी (Exam & Skill Test)</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!-- Content (Marathi) -->
+      <div class="space-y-8 text-text-main leading-relaxed">
+        <h2 id="overview-mr">MPSC संयुक्त गट क परीक्षा काय आहे?</h2>
+        <p>
+          <strong>MPSC अराजपत्रित गट क संयुक्त परीक्षा (MPSC Non-Gazetted Group C Combined Exam)</strong> ही महाराष्ट्र शासनाच्या विविध खात्यांतर्गत येणारी वर्ग-३ (Class 3) ची पदे भरण्यासाठी घेतली जाणारी परीक्षा आहे. या परीक्षेची <strong>पूर्व परीक्षा ही गट ब च्या पूर्व परीक्षेसोबत संयुक्त रित्या (Combined)</strong> घेतली जाते.
+        </p>
+
+        <!-- Key Information Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
+          <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
+            <HiOutlineBuildingOffice className="text-primary text-2xl shrink-0 mt-0.5" />
+            <div>
+              <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">परीक्षा मंडळ (Board)</span>
+              <span class="text-text-main font-semibold text-sm">एम.पी.एस.सी. (MPSC)</span>
+            </div>
+          </div>
+          <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
+            <HiOutlineAcademicCap className="text-primary text-2xl shrink-0 mt-0.5" />
+            <div>
+              <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">पात्रता</span>
+              <span class="text-text-main font-semibold text-sm">पदवी + टायपिंग प्रमाणपत्र (आवश्यकतेनुसार)</span>
+            </div>
+          </div>
+          <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
+            <HiOutlineCalendarDays className="text-primary text-2xl shrink-0 mt-0.5" />
+            <div>
+              <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">नोकरीचे ठिकाण</span>
+              <span class="text-emerald-500 font-bold text-sm">संपूर्ण महाराष्ट्र शासन विभाग</span>
+            </div>
+          </div>
+        </div>
+
+        <h2 id="posts-mr">गट क (Group C) अंतर्गत येणारी प्रमुख पदे</h2>
+        <p>या संयुक्त परीक्षेमधून खालील प्रमुख वर्ग-३ पदांवर निवड केली जाते:</p>
+        <table class="w-full text-left border-collapse my-6">
+          <thead>
+            <tr class="bg-primary/10">
+              <th class="p-3 border border-border-card font-bold text-text-main">पद (Post Name)</th>
+              <th class="p-3 border border-border-card font-bold text-text-main">विभाग व कौशल्य आवश्यकता (Requirements)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="p-3 border border-border-card font-semibold">लिपिक-टंकलेखक (Clerk-Typist)</td>
+              <td class="p-3 border border-border-card">सर्व प्रशासकीय विभाग. यात मराठी ३० श.प्र.मि. आणि/किंवा इंग्रजी ४० श.प्र.मि. टायपिंग आवश्यक आहे.</td>
+            </tr>
+            <tr>
+              <td class="p-3 border border-border-card font-semibold">कर सहाय्यक (Tax Assistant)</td>
+              <td class="p-3 border border-border-card">वित्त विभाग (Sales Tax). यात मराठी ३० श.प्र.मि. आणि इंग्रजी ४० श.प्र.मि. टायपिंग अनिवार्य आहे.</td>
+            </tr>
+            <tr>
+              <td class="p-3 border border-border-card font-semibold">दुय्यम निरीक्षक (Excise Sub-Inspector)</td>
+              <td class="p-3 border border-border-card">राज्य उत्पादन शुल्क विभाग. दारूबंदी व अवैध व्यवसाय नियंत्रण. यात विशिष्ट शारीरिक उंची आवश्यक असते.</td>
+            </tr>
+            <tr>
+              <td class="p-3 border border-border-card font-semibold">उद्योग निरीक्षक (Industry Inspector)</td>
+              <td class="p-3 border border-border-card">उद्योग व कामगार विभाग. औद्योगिक परवाने व तपासणी.</td>
+            </tr>
+            <tr>
+              <td class="p-3 border border-border-card font-semibold">तांत्रिक सहाय्यक (Technical Assistant)</td>
+              <td class="p-3 border border-border-card">विमा संचालनालय. विमा दाव्यांचे व प्रशासकीय फायलींचे संकलन.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="eligibility-mr">शैक्षणिक पात्रता आणि टायपिंग प्रमाणपत्र निकष</h2>
+        <ul class="list-disc pl-5 space-y-2">
+          <li><strong>शैक्षणिक पात्रता:</strong> उमेदवार पदवीधर (Graduate) असावा. उद्योग निरीक्षक पदासाठी इंजिनिअरिंग पदवी किंवा सायन्स पदवी आवश्यक असते.</li>
+          <li><strong>टायपिंग प्रमाणपत्र (GCC-TBC किंवा समकक्ष):</strong>
+            <ul class="list-disc pl-5 space-y-1">
+              <li>**लिपिक-टंकलेखक (Clerk Typist):** मराठी ३० श.प्र.मि. (WPM) किंवा इंग्रजी ४० श.प्र.मि. प्रमाणपत्र.</li>
+              <li>**कर सहाय्यक (Tax Assistant):** मराठी ३० श.प्र.मि. **आणि** इंग्रजी ४० श.प्र.मि. अशी दोन्ही प्रमाणपत्रे आवश्यक.</li>
+            </ul>
+          </li>
+          <li><strong>वयोमर्यादा (सामान्य प्रवर्ग):</strong> किमान वय १९ वर्षे आणि कमाल वय ३८ वर्षे (राखीव प्रवर्गासाठी कमाल ४३ वर्षे).</li>
+          <li><strong>शारीरिक पात्रता (केवळ दुय्यम निरीक्षक - राज्य उत्पादन शुल्क):</strong> पुरुषांसाठी किमान उंची १६५ सेंमी आणि महिलांसाठी किमान उंची १५५ सेंमी आवश्यक आहे.</li>
+        </ul>
+
+        <h2 id="exam-pattern-mr">परीक्षा पद्धत आणि टप्पे</h2>
+        <p>MPSC संयुक्त गट क परीक्षेची निवड पद्धत खालीलप्रमाणे असते:</p>
+        <div class="space-y-4 pl-2 border-l-2 border-primary/30 my-6">
+          <div>
+            <h4 class="text-text-main font-bold m-0">१. संयुक्त पूर्व परीक्षा (Prelims) - १०० गुण (MCQ)</h4>
+            <p class="text-sm text-text-muted m-0">गट ब आणि गट क साठी संयुक्त पूर्व परीक्षा घेतली जाते. यामध्ये १०० प्रश्नांसाठी १०० गुण आणि ६० मिनिटांचा वेळ दिला जातो. १/४ निगेटिव्ह मार्किंग असते.</p>
+          </div>
+          <div>
+            <h4 class="text-text-main font-bold m-0">२. स्वतंत्र मुख्य परीक्षा (Mains) - ४०० गुण (MCQ)</h4>
+            <p class="text-sm text-text-muted m-0">पूर्व परीक्षेत उत्तीर्ण उमेदवार मुख्य परीक्षेचे २ पेपर्स देतात:
+              <br>- **पेपर १:** मराठी व इंग्रजी व्याकरण (२०० गुण).
+              <br>- **पेपर २:** सामान्य अध्ययन व बुद्धिमापन चाचणी (२०० गुण).
+            </p>
+          </div>
+          <div>
+            <h4 class="text-text-main font-bold m-0">३. टायपिंग कौशल्य चाचणी (Typing Skill Test) - पात्रता चाचणी</h4>
+            <p class="text-sm text-text-muted m-0">लिपिक-टंकलेखक आणि कर सहाय्यक या पदांसाठी संगणकावर टायपिंग कौशल्य चाचणी (Typing Skill Test) घेतली जाते. ही परीक्षा केवळ **पात्रता (Qualifying)** प्रकारची असते.</p>
+          </div>
+        </div>
+
+        <!-- MPSC Links Table (Marathi) -->
+        <h2 id="links-table-mr" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">अधिकृत ऑनलाईन मार्गदर्शक लिंक्स</h2>
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-primary/10">
+                <th class="p-3 border border-border-card font-bold text-text-main">तपशील (Resource Name)</th>
+                <th class="p-3 border border-border-card font-bold text-text-main">डायरेक्ट लिंक (Action)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">एमपीएससी संयुक्त गट क ऑनलाईन अर्ज लिंक</td>
+                <td class="p-3 border border-border-card">
+                  <a href="https://mpsconline.gov.in" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-xs font-bold uppercase tracking-wider rounded-lg transition-all shadow-sm w-full sm:w-auto">
+                    <HiOutlineCursorArrowRays className="text-base shrink-0 animate-pulse" /> अर्ज करा (Apply Link)
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">संयुक्त गट क परीक्षा अभ्यासक्रम पीडीएफ डाउनलोड</td>
+                <td class="p-3 border border-border-card">
+                  <a href="https://mpsc.gov.in" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-amber-500/10 hover:bg-amber-500/20 text-amber-600 dark:text-amber-400 text-xs font-bold uppercase tracking-wider rounded-lg transition-colors border border-amber-500/30 w-full sm:w-auto">
+                    <HiOutlineArrowDownTray className="text-base shrink-0" /> अभ्यासक्रम डाउनलोड (Syllabus)
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- FAQ Section (Marathi) -->
+        <h2 class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">वारंवार विचारले जाणारे प्रश्न (FAQs)</h2>
+        <div class="space-y-4 mt-3 mb-8">
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+            <h3 class="text-lg font-bold text-text-main mb-2">प्रश्न १: लिपिक टंकलेखक पदासाठी टायपिंग परीक्षा उत्तीर्ण करणे बंधनकारक आहे का?</h3>
+            <p class="text-text-muted m-0">उत्तर १: होय, लिपिक-टंकलेखक पदाच्या पूर्व आणि मुख्य परीक्षेत पात्र ठरल्यानंतर आयोगाद्वारे आयोजित केली जाणारी टायपिंग कौशल्य चाचणी (Typing Skill Test) उत्तीर्ण करणे बंधनकारक आहे.</p>
+          </div>
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+            <h3 class="text-lg font-bold text-text-main mb-2">प्रश्न २: टायपिंग प्रमाणपत्र कधी सादर करावे लागते?</h3>
+            <p class="text-text-muted m-0">उत्तर २: मुख्य परीक्षेचा फॉर्म भरतेवेळी उमेदवाराकडे वैध टायपिंग प्रमाणपत्र असणे अनिवार्य असते.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= LANGUAGE SEPARATOR ================= -->
+    <div class="my-16 border-t-2 border-dashed border-border-card flex items-center justify-center relative">
+      <span class="absolute bg-bg-base px-8 py-2 text-base sm:text-lg font-extrabold uppercase tracking-widest text-primary border border-border-card rounded-full shadow-md">
+        English
+      </span>
+    </div>
+
+    <!-- ================= ENGLISH VERSION ================= -->
+    <div id="english-version" class="opacity-95">
+      <div class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-extrabold text-text-main mb-4">
+          MPSC Group C Non-Gazetted Services: Clerk & Tax Assistant Guide
+        </h2>
+        <p class="text-text-muted leading-relaxed italic">
+          Complete details regarding qualifications, typing speed requirements, selection patterns, and important links for Group C civil posts.
+        </p>
+      </div>
+
+      <div class="space-y-8 text-text-main leading-relaxed">
+        <h2>Group C Selection Process & Typing Requirements</h2>
+        <p>The recruitment process features objective selection stages followed by a skill test:</p>
+        <ul class="list-decimal pl-5 space-y-2">
+          <li><strong>Combined Prelims:</strong> 100 questions of 100 marks. Covers history, geography, science, math, reasoning, and current affairs. Shared with Group B.</li>
+          <li><strong>Mains Exam:</strong> 2 papers totaling 400 marks. MCQ based. Covers Grammar (Marathi & English) and General Studies.</li>
+          <li><strong>Typing Skill Test:</strong> Desktop-based qualifying typing test for Clerk and Tax Assistant posts.</li>
+        </ul>
+
+        <h2>Typing Certificate Criteria</h2>
+        <ul class="list-disc pl-5 space-y-2">
+          <li><strong>Clerk Typist:</strong> Marathi 30 WPM or English 40 WPM GCC-TBC certificate.</li>
+          <li><strong>Tax Assistant:</strong> Marathi 30 WPM **and** English 40 WPM GCC-TBC certificates.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="bg-primary/5 border border-primary/20 p-8 rounded-3xl text-center my-8 not-prose">
+      <h2 class="text-2xl font-black text-text-main mb-4 border-none p-0 mt-0">Join Our Communities for Fast Updates!</h2>
+      <p class="text-text-muted mb-6">Stay ahead with direct notifications of MPSC exams, schedules, and answer keys on your phone.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-600 text-white text-sm font-bold uppercase tracking-wider rounded-xl transition-colors shadow-sm no-underline">
+          WhatsApp Group
+        </a>
+        <a href="#" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white text-sm font-bold uppercase tracking-wider rounded-xl transition-colors shadow-sm no-underline">
+          Telegram Channel
+        </a>
+      </div>
+    </div>
+  </article>
+</Layout>
