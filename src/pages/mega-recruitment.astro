@@ -21,138 +21,11 @@ const description = "Find all active and upcoming government mega recruitments i
 const canonicalURL = "https://mahasandhi.in/mega-recruitment";
 
 // Realistic mega recruitment campaigns for 2026
-const recruitments = [
-  {
-    id: "maha-police-2026",
-    title: "Maharashtra Police Bharti 2026",
-    organisation: "Maharashtra Police Department",
-    category: "maharashtra",
-    vacancies: "18,331 Posts",
-    qualification: "12th Pass",
-    status: "apply-now",
-    lastDate: "June 30, 2026",
-    ageLimit: "18 to 28 years (Reserved category candidates get 5 years relaxation)",
-    appFee: "General/Open: ₹450 | Reserved Categories: ₹350",
-    salary: "₹21,700 - ₹69,100 (Level 3 Pay Matrix + Allowances)",
-    syllabus: "Written Exam (100 Marks: Maths, Reasoning, Marathi Grammar, GK) followed by Physical Test (50 Marks).",
-    applyLink: "https://policerecruitment2026.mahait.org",
-    notifLink: "https://policerecruitment2026.mahait.org",
-    summaryMr: "महाराष्ट्र पोलीस दलात १८,३३१ पोलीस शिपाई, चालक आणि राज्य राखीव पोलीस बल (SRPF) पदांसाठी मेगा भरती जाहीर झाली आहे. अर्ज भरण्याची अंतिम तारीख ३० जून २०२६ आहे. शारीरिक चाचणी व लेखी परीक्षेच्या आधारे उमेदवारांची निवड केली जाईल.",
-    summaryEn: "Maharashtra Police has launched a mega recruitment campaign for 18,331 Police Constable, Driver, and State Reserve Police Force (SRPF) positions. Registration deadline is June 30, 2026. Recruitment will be based on a physical efficiency test and written exam."
-  },
-  {
-    id: "rrb-alp-tech-2026",
-    title: "RRB Assistant Loco Pilot (ALP) & Technician Recruitment",
-    organisation: "Railway Recruitment Board (RRB)",
-    category: "railways",
-    vacancies: "38,750 Posts",
-    qualification: "ITI / Diploma",
-    status: "apply-now",
-    lastDate: "June 15, 2026",
-    ageLimit: "18 to 33 years (Age relaxation applicable for OBC, SC, ST, and Ex-Servicemen)",
-    appFee: "General/OBC: ₹500 (Refundable after CBT-1) | SC/ST/Ex-Servicemen/Female: ₹250",
-    salary: "₹19,900 - ₹29,200 (Level 2 & 5 Initial Pay + Allowances)",
-    syllabus: "Computer Based Test (CBT 1 & CBT 2) covering Maths, Reasoning, General Science, and Technical Trade Subject.",
-    applyLink: "https://www.rrbapply.gov.in",
-    notifLink: "https://www.rrbapply.gov.in",
-    summaryMr: "भारतीय रेल्वेद्वारे सहाय्यक लोको पायलट (ALP) आणि तंत्रज्ञ (Technician) पदांसाठी एकूण ३८,७५० जागांची घोषणा केली आहे. आयटीआय किंवा इंजिनिअरिंग डिप्लोमाधारक उमेदवार ऑनलाइन अर्ज करण्यास पात्र आहेत.",
-    summaryEn: "Ministry of Railways has announced a massive hiring of 38,750 Assistant Loco Pilots and Technicians. Candidates with ITI, Act Apprenticeship, or Engineering Diploma/Degree can register via the official RRB recruitment portal."
-  },
-  {
-    id: "ssc-gd-2026",
-    title: "SSC GD Constable Mega Recruitment 2026",
-    organisation: "Staff Selection Commission (SSC)",
-    category: "banking-ssc",
-    vacancies: "46,617 Posts",
-    qualification: "10th Pass",
-    status: "upcoming",
-    lastDate: "August 10, 2026",
-    ageLimit: "18 to 23 years (Relaxation rules apply for reserved categories)",
-    appFee: "General/OBC/EWS: ₹100 | SC/ST/Female/Ex-Servicemen: Exempted",
-    salary: "₹21,700 - ₹69,100 (Pay Level-3)",
-    syllabus: "Computer-Based Examination (80 Questions, 160 Marks) on Reasoning, GK, Mathematics, and English/Hindi.",
-    applyLink: "https://ssc.gov.in",
-    notifLink: "https://ssc.gov.in",
-    summaryMr: "कर्मचारी निवड आयोगामार्फत (SSC) विविध केंद्रीय सशस्त्र पोलीस दलात (BSF, CISF, CRPF, SSB, ITBP, AR) ४६,६१७ जागांसाठी मेगा भरती लवकरच सुरू होणार आहे. १० वी उत्तीर्ण उमेदवारांसाठी ही सुवर्णसंधी आहे.",
-    summaryEn: "Staff Selection Commission will recruit 46,617 Constables (General Duty) in CAPFs, SSF, and Rifleman in Assam Rifles. The recruitment consists of a computer-based test, physical standard test, and medical examination."
-  },
-  {
-    id: "india-post-gds-2026",
-    title: "India Post Gramin Dak Sevak (GDS) Recruitment",
-    organisation: "Department of Posts (India Post)",
-    category: "central",
-    vacancies: "40,220 Posts",
-    qualification: "10th Pass",
-    status: "closed",
-    lastDate: "May 15, 2026",
-    ageLimit: "18 to 40 years (Upper age limit relaxable by 3 years for OBC and 5 years for SC/ST)",
-    appFee: "UR/OBC/EWS Male Candidates: ₹100 | SC/ST/Female: Exempted",
-    salary: "₹12,000 - ₹29,380 per month (BPM / ABPM / Dak Sevak)",
-    syllabus: "No written exam. Selection will be purely based on the merit list generated from Class 10 (SSC) board marks.",
-    applyLink: "https://indiapostgdsonline.gov.in",
-    notifLink: "https://indiapostgdsonline.gov.in",
-    summaryMr: "भारतीय टपाल विभागात ४०,२२० ग्रामीण डाक सेवक (GDS), शाखा पोस्टमास्तर (BPM) आणि सहाय्यक शाखा पोस्टमास्तर (ABPM) पदांसाठी भरती पूर्ण झाली आहे. १० वीच्या गुणांच्या आधारे गुणवत्ता यादी प्रसिद्ध केली गेली आहे.",
-    summaryEn: "India Post GDS selection has completed for 40,220 vacancies across multiple circles. Candidates have been shortlisted based on secondary school percentage, and circle-wise merit lists are currently available."
-  },
-  {
-    id: "mpsc-state-service-2026",
-    title: "MPSC State Services Gazetted Examination 2026",
-    organisation: "Maharashtra Public Service Commission (MPSC)",
-    category: "maharashtra",
-    vacancies: "820 Posts",
-    qualification: "Graduate",
-    status: "apply-now",
-    lastDate: "June 25, 2026",
-    ageLimit: "19 to 38 years (Reserved Category: 43 years, Ex-Servicemen: 43 years)",
-    appFee: "Open/General: ₹394 | Reserved Categories: ₹294",
-    salary: "₹56,100 - ₹1,77,500 (Class-A & Class-B Gazetted scale plus DA and HRA)",
-    syllabus: "Preliminary Exam (2 Papers: GS & CSAT) followed by descriptive Written Mains Exam and Interview.",
-    applyLink: "https://mpsconline.gov.in",
-    notifLink: "https://mpsc.gov.in",
-    summaryMr: "महाराष्ट्र लोकसेवा आयोगातर्फे उप जिल्हाधिकारी, पोलीस उपअधीक्षक (DySP), सहाय्यक राज्यकर आयुक्त आणि इतर महत्त्वाच्या वर्ग-१ आणि वर्ग-२ च्या ८२० पदांसाठी परीक्षा जाहीर झाली आहे. अर्ज करण्याची अंतिम तारीख २५ जून २०२६ आहे.",
-    summaryEn: "MPSC has released advertisement for 820 Class-A and Class-B administrative vacancies under the Maharashtra Civil Services. Competitive selection will involve state preliminary, mains, and interview rounds."
-  },
-  {
-    id: "ibps-clerk-2026",
-    title: "IBPS CRP Clerk-XVI Mega Recruitment",
-    organisation: "Institute of Banking Personnel Selection (IBPS)",
-    category: "banking-ssc",
-    vacancies: "11,500 Posts",
-    qualification: "Graduate",
-    status: "upcoming",
-    lastDate: "July 28, 2026",
-    ageLimit: "20 to 28 years (Upper age relaxation for OBC/SC/ST/PwD candidates)",
-    appFee: "General/OBC/EWS: ₹850 | SC/ST/PwD Candidates: ₹175",
-    salary: "₹29,000 - ₹47,000 per month (Depends on posting location)",
-    syllabus: "Preliminary Online Exam (English, Numerical Ability, Reasoning) followed by Mains Online Examination.",
-    applyLink: "https://www.ibps.in",
-    notifLink: "https://www.ibps.in",
-    summaryMr: "देशातील सार्वजनिक क्षेत्रातील राष्ट्रीयीकृत बँकांमध्ये ११,५०० क्लर्क (लिपिक) पदांच्या मेगा भरतीचे नोटीफिकेशन लवकरच जारी केले जाईल. पदवीधर युवक-युवती या भरतीसाठी अर्ज करू शकतात.",
-    summaryEn: "IBPS Clerk 2026 notification for 11,500 vacancies in participating nationalized banks is expected soon. The online registration will open next month for university graduates."
-  },
-  {
-    id: "zp-bharti-2026",
-    title: "Maharashtra Zilla Parishad (ZP) Bharti 2026",
-    organisation: "Rural Development Department, Maharashtra",
-    category: "maharashtra",
-    vacancies: "19,460 Posts",
-    qualification: "12th Pass",
-    status: "upcoming",
-    lastDate: "August 20, 2026",
-    ageLimit: "18 to 38 years (Reserved: 43 years)",
-    appFee: "Open Category: ₹1000 | Reserved Categories: ₹900",
-    salary: "₹19,900 - ₹1,12,400 (Varies based on Clerk, Gramsevak, or Health Worker positions)",
-    syllabus: "Online CBT exam conducted by IBPS, covering Marathi, English, General Knowledge, Reasoning, and Technical topics.",
-    applyLink: "https://rdd.maharashtra.gov.in",
-    notifLink: "https://rdd.maharashtra.gov.in",
-    summaryMr: "महाराष्ट्रातील ३४ जिल्हा परिषदांमध्ये आरोग्य सेवक, ग्रामसेवक, औषध निर्माण अधिकारी आणि लिपिक अशा विविध वर्ग-३ च्या १९,४६० जागांसाठी भरती प्रक्रिया लवकरच सुरू होत आहे.",
-    summaryEn: "Maharashtra Rural Development Dept is set to open registrations for 19,460 posts across 34 ZPs. Key posts include Gramsevak, Junior Assistant, Health Supervisor, and Pharmacist."
-  }
-];
+const recruitments = [];
 
-const totalVacancies = "2,15,000+";
-const activeCount = recruitments.filter(r => r.status === "apply-now").length;
-const upcomingCount = recruitments.filter(r => r.status === "upcoming").length;
+const totalVacancies = "0";
+const activeCount = 0;
+const upcomingCount = 0;
 ---
 
 <Layout 
@@ -186,241 +59,203 @@ const upcomingCount = recruitments.filter(r => r.status === "upcoming").length;
           </div>
           <div class="text-center border-x border-border-card dark:border-border-card/30">
             <span class="block text-2xl md:text-3xl font-extrabold text-emerald-500 tracking-tight">{activeCount}</span>
-            <span class="block text-[0.65rem] md:text-xs text-text-muted uppercase font-semibold tracking-wider mt-1">Active Now</span>
-          </div>
-          <div class="text-center">
-            <span class="block text-2xl md:text-3xl font-extrabold text-amber-500 tracking-tight">{upcomingCount}</span>
-            <span class="block text-[0.65rem] md:text-xs text-text-muted uppercase font-semibold tracking-wider mt-1">Upcoming</span>
-          </div>
+                {recruitments.length === 0 ? (
+        <div class="text-center py-16 bg-bg-surface border border-border-card rounded-2xl w-full">
+          <p class="text-text-muted text-sm m-0">No active mega recruitments currently available. Please check back later.</p>
         </div>
-      </div>
-    </div>
-
-    <!-- Live Filters and Search Bar Container -->
-    <div class="bg-bg-surface border border-border-card rounded-2xl p-4 sm:p-5 mb-8 shadow-sm">
-      <div class="flex flex-col sm:flex-row gap-4">
-        
-        <!-- Search Input -->
-        <div class="relative flex-1 flex items-center bg-bg-base/50 dark:bg-black/20 border border-border-card rounded-xl px-4 py-3 focus-within:border-primary transition-all duration-300">
-          <HiOutlineMagnifyingGlass className="text-text-muted text-lg mr-3 shrink-0" />
-          <input 
-            type="text" 
-            placeholder="Search recruitment title, sector, department, qualification or details..." 
-            id="job-search"
-            class="bg-transparent border-none text-text-main font-sans text-sm outline-none w-full placeholder-text-muted/65"
-          />
-        </div>
-
-        <!-- Qualification Filter Dropdown -->
-        <div class="min-w-[180px] sm:w-[220px] shrink-0">
-          <select 
-            id="qual-select"
-            class="w-full py-3 px-3.5 bg-bg-base/60 dark:bg-black/30 border border-border-card rounded-xl text-xs font-bold text-text-main uppercase tracking-wider outline-none focus:border-primary cursor-pointer transition-colors"
+      ) : (
+        recruitments.map((job) => (
+          <div 
+            data-id={job.id}
+            data-category={job.category}
+            data-qualification={job.qualification}
+            data-title={job.title.toLowerCase()}
+            data-org={job.organisation.toLowerCase()}
+            class="job-card bg-bg-surface border border-border-card rounded-2xl overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-md"
           >
-            <option value="all">All Qualifications</option>
-            <option value="10th Pass">10th Pass</option>
-            <option value="12th Pass">12th Pass</option>
-            <option value="ITI / Diploma">ITI / Diploma</option>
-            <option value="Graduate">Graduate</option>
-          </select>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Active Recruitment Cards List -->
-    <div class="space-y-4" id="recruitments-container">
-      {recruitments.map((job) => (
-        <div 
-          data-id={job.id}
-          data-category={job.category}
-          data-qualification={job.qualification}
-          data-title={job.title.toLowerCase()}
-          data-org={job.organisation.toLowerCase()}
-          class="job-card bg-bg-surface border border-border-card rounded-2xl overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-md"
-        >
-          <!-- Top Row Summary Card -->
-          <div class="p-5 flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer select-none card-header-click">
-            <div class="flex-1 min-w-0">
-              <div class="flex items-center gap-2 mb-2.5 flex-wrap">
-                <span class="text-[0.6rem] bg-primary/10 text-primary px-2 py-0.5 rounded font-bold uppercase tracking-wider border border-primary/20 whitespace-nowrap">
-                  {job.category === "maharashtra" ? "Maharashtra Gov" : job.category === "central" ? "Central Gov" : job.category}
-                </span>
-
-                {job.status === "apply-now" && (
-                  <span class="text-[0.55rem] bg-emerald-500/10 text-emerald-500 px-2 py-0.5 rounded-full font-bold uppercase tracking-wide border border-emerald-500/20 flex items-center gap-1 whitespace-nowrap">
-                    <span class="w-1.5 h-1.5 bg-emerald-500 rounded-full shadow-[0_0_6px] shadow-emerald-500 animate-pulse inline-block"></span>
-                    Apply Active
+            <!-- Top Row Summary Card -->
+            <div class="p-5 flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer select-none card-header-click">
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 mb-2.5 flex-wrap">
+                  <span class="text-[0.6rem] bg-primary/10 text-primary px-2 py-0.5 rounded font-bold uppercase tracking-wider border border-primary/20 whitespace-nowrap">
+                    {job.category === "maharashtra" ? "Maharashtra Gov" : job.category === "central" ? "Central Gov" : job.category}
                   </span>
-                )}
 
-                {job.status === "upcoming" && (
-                  <span class="text-[0.55rem] bg-amber-500/10 text-amber-500 px-2 py-0.5 rounded-full font-bold uppercase tracking-wide border border-amber-500/20 flex items-center gap-1 whitespace-nowrap">
-                    <span class="w-1.5 h-1.5 bg-amber-500 rounded-full shadow-[0_0_6px] shadow-amber-500 animate-pulse inline-block"></span>
-                    Upcoming
-                  </span>
-                )}
-
-                {job.status === "closed" && (
-                  <span class="text-[0.55rem] bg-rose-500/10 text-rose-500 px-2 py-0.5 rounded-full font-bold uppercase tracking-wide border border-rose-500/20 flex items-center gap-1 whitespace-nowrap">
-                    <span class="w-1.5 h-1.5 bg-rose-500 rounded-full inline-block"></span>
-                    Closed
-                  </span>
-                )}
-              </div>
-
-              <h3 class="text-lg md:text-xl text-text-main font-bold leading-tight mb-2 m-0 group-hover:text-primary transition-colors">
-                {job.title}
-              </h3>
-              
-              <div class="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs text-text-muted">
-                <span class="flex items-center gap-1"><HiOutlineBuildingOffice className="text-primary/70 shrink-0 text-sm" /> {job.organisation}</span>
-                <span class="flex items-center gap-1"><HiOutlineAcademicCap className="text-primary/70 shrink-0 text-sm" /> {job.qualification}</span>
-              </div>
-            </div>
-
-            <!-- Total posts & Last date Summary badges -->
-            <div class="flex items-center flex-wrap md:flex-nowrap gap-3 shrink-0">
-              <div class="bg-primary/5 border border-primary/20 rounded-xl px-3.5 py-2 text-center min-w-[95px] md:min-w-[110px]">
-                <span class="block text-[0.55rem] text-text-muted uppercase tracking-wider font-semibold">Vacancies</span>
-                <span class="block text-xs md:text-sm font-black text-primary mt-0.5">{job.vacancies}</span>
-              </div>
-              
-              <div class="bg-rose-500/5 dark:bg-rose-500/10 border border-rose-500/25 rounded-xl px-3.5 py-2 text-center min-w-[100px] md:min-w-[115px]">
-                <span class="block text-[0.55rem] text-rose-600 dark:text-rose-400 uppercase tracking-wider font-semibold">Last Date</span>
-                <span class="block text-xs md:text-sm font-black text-rose-600 dark:text-rose-400 mt-0.5">{job.lastDate}</span>
-              </div>
-
-              <!-- Collapsible Chevron Button -->
-              <button 
-                type="button"
-                aria-label="Toggle Details" 
-                class="w-9 h-9 flex items-center justify-center border border-border-card rounded-full text-text-muted hover:text-primary hover:border-primary transition-colors cursor-pointer toggle-chevron-btn shrink-0"
-              >
-                <HiOutlineChevronDown className="text-lg transition-transform duration-300" />
-              </button>
-            </div>
-          </div>
-
-          <!-- Slide Open Details Drawer -->
-          <div class="job-details-drawer max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out border-t border-border-card/0">
-            <div class="p-5 sm:p-6 bg-bg-base/30 dark:bg-black/10">
-              
-              <!-- Quick Info Grid -->
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-                <div class="bg-bg-surface border border-border-card rounded-xl p-4 flex gap-3.5">
-                  <div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
-                    <HiOutlineUser className="text-xl" />
-                  </div>
-                  <div>
-                    <span class="block text-[0.65rem] text-text-muted uppercase tracking-wider font-bold mb-0.5">Age Limit</span>
-                    <p class="text-xs text-text-main m-0 leading-relaxed font-semibold">{job.ageLimit}</p>
-                  </div>
-                </div>
-
-                <div class="bg-bg-surface border border-border-card rounded-xl p-4 flex gap-3.5">
-                  <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-500 flex items-center justify-center shrink-0">
-                    <HiOutlineBanknotes className="text-xl" />
-                  </div>
-                  <div>
-                    <span class="block text-[0.65rem] text-text-muted uppercase tracking-wider font-bold mb-0.5">Pay Scale / Salary</span>
-                    <p class="text-xs text-text-main m-0 leading-relaxed font-semibold">{job.salary}</p>
-                  </div>
-                </div>
-
-                <div class="bg-bg-surface border border-border-card rounded-xl p-4 flex gap-3.5">
-                  <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-500 flex items-center justify-center shrink-0">
-                    <HiOutlineCreditCard className="text-xl" />
-                  </div>
-                  <div>
-                    <span class="block text-[0.65rem] text-text-muted uppercase tracking-wider font-bold mb-0.5">Application Fee</span>
-                    <p class="text-xs text-text-main m-0 leading-relaxed font-semibold">{job.appFee}</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Syllabus, Pattern & Bilingual Details Grid -->
-              <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-                <!-- Left Column: Syllabus & Selection -->
-                <div class="bg-bg-surface border border-border-card rounded-xl p-4">
-                  <h4 class="text-xs uppercase tracking-wider font-extrabold text-primary flex items-center gap-1.5 mt-0 mb-3 border-none pb-0">
-                    <HiOutlineDocumentText className="text-base shrink-0" /> Syllabus & Selection Process
-                  </h4>
-                  <p class="text-xs text-text-secondary leading-relaxed m-0">{job.syllabus}</p>
-                </div>
-
-                <!-- Right Column: Bilingual Summaries -->
-                <div class="bg-bg-surface border border-border-card rounded-xl p-4">
-                  <!-- Lang Switch Tab Buttons inside accordion -->
-                  <div class="flex items-center justify-between border-b border-border-card dark:border-border-card/30 pb-2 mb-3">
-                    <span class="text-xs uppercase tracking-wider font-extrabold text-primary flex items-center gap-1.5 border-none pb-0">
-                      📝 Recruitment Summary
-                    </span>
-                    <div class="flex gap-2">
-                      <button data-lang="mr" class="lang-switch active px-2.5 py-0.5 rounded text-[0.65rem] font-bold uppercase tracking-wider cursor-pointer border border-primary/20 transition-all">मराठी</button>
-                      <button data-lang="en" class="lang-switch px-2.5 py-0.5 rounded text-[0.65rem] font-bold uppercase tracking-wider cursor-pointer border border-border-card text-text-muted hover:border-primary/50 transition-all">English</button>
-                    </div>
-                  </div>
-
-                  <!-- Summary Content -->
-                  <div class="summary-text-box">
-                    <p class="mr-text text-xs text-text-secondary leading-relaxed m-0 font-medium">{job.summaryMr}</p>
-                    <p class="en-text text-xs text-text-secondary leading-relaxed m-0 font-medium hidden">{job.summaryEn}</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- CTA Links Footer -->
-              <div class="flex flex-col sm:flex-row sm:items-center justify-between border-t border-border-card/30 dark:border-border-card/10 pt-4 gap-3">
-                <span class="text-xs text-text-muted font-semibold italic">Double check qualifications on the official website before applying.</span>
-                <div class="flex gap-3 shrink-0">
-                  <a 
-                    href={job.notifLink} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    class="px-4 py-2 border border-border-card hover:border-primary text-text-main hover:text-primary rounded-xl text-xs font-bold uppercase tracking-wider transition-colors duration-200 no-underline"
-                  >
-                    View Notification
-                  </a>
-                  
                   {job.status === "apply-now" && (
-                    <a 
-                      href={job.applyLink} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      class="px-4 py-2 bg-gradient-to-r from-primary to-secondary text-white rounded-xl text-xs font-bold uppercase tracking-wider transition-all hover:shadow-md hover:shadow-primary/20 flex items-center gap-1.5 no-underline"
-                    >
-                      Apply Online <HiOutlineArrowTopRightOnSquare className="text-sm shrink-0" />
-                    </a>
+                    <span class="text-[0.55rem] bg-emerald-500/10 text-emerald-500 px-2 py-0.5 rounded-full font-bold uppercase tracking-wide border border-emerald-500/20 flex items-center gap-1 whitespace-nowrap">
+                      <span class="w-1.5 h-1.5 bg-emerald-500 rounded-full shadow-[0_0_6px] shadow-emerald-500 animate-pulse inline-block"></span>
+                      Apply Active
+                    </span>
                   )}
 
                   {job.status === "upcoming" && (
-                    <button 
-                      type="button" 
-                      disabled 
-                      class="px-4 py-2 bg-amber-500/10 border border-amber-500/35 text-amber-600 dark:text-amber-400 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 cursor-not-allowed"
-                    >
-                      <HiOutlineBell className="text-sm shrink-0 animate-bounce" /> Announcement Soon
-                    </button>
+                    <span class="text-[0.55rem] bg-amber-500/10 text-amber-500 px-2 py-0.5 rounded-full font-bold uppercase tracking-wide border border-amber-500/20 flex items-center gap-1 whitespace-nowrap">
+                      <span class="w-1.5 h-1.5 bg-amber-500 rounded-full shadow-[0_0_6px] shadow-emerald-500 animate-pulse inline-block"></span>
+                      Upcoming
+                    </span>
                   )}
 
                   {job.status === "closed" && (
-                    <button 
-                      type="button" 
-                      disabled 
-                      class="px-4 py-2 bg-rose-500/5 border border-rose-500/20 text-rose-500/50 dark:text-rose-400/50 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 cursor-not-allowed"
-                    >
-                      <HiOutlineXCircle className="text-sm shrink-0" /> Closed
-                    </button>
+                    <span class="text-[0.55rem] bg-rose-500/10 text-rose-500 px-2 py-0.5 rounded-full font-bold uppercase tracking-wide border border-rose-500/20 flex items-center gap-1 whitespace-nowrap">
+                      <span class="w-1.5 h-1.5 bg-rose-500 rounded-full inline-block"></span>
+                      Closed
+                    </span>
                   )}
+                </div>
+
+                <h3 class="text-lg md:text-xl text-text-main font-bold leading-tight mb-2 m-0 group-hover:text-primary transition-colors">
+                  {job.title}
+                </h3>
+                
+                <div class="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs text-text-muted">
+                  <span class="flex items-center gap-1"><HiOutlineBuildingOffice className="text-primary/70 shrink-0 text-sm" /> {job.organisation}</span>
+                  <span class="flex items-center gap-1"><HiOutlineAcademicCap className="text-primary/70 shrink-0 text-sm" /> {job.qualification}</span>
                 </div>
               </div>
 
-            </div>
-          </div>
+              <!-- Total posts & Last date Summary badges -->
+              <div class="flex items-center flex-wrap md:flex-nowrap gap-3 shrink-0">
+                <div class="bg-primary/5 border border-primary/20 rounded-xl px-3.5 py-2 text-center min-w-[95px] md:min-w-[110px]">
+                  <span class="block text-[0.55rem] text-text-muted uppercase tracking-wider font-semibold">Vacancies</span>
+                  <span class="block text-xs md:text-sm font-black text-primary mt-0.5">{job.vacancies}</span>
+                </div>
+                
+                <div class="bg-rose-500/5 dark:bg-rose-500/10 border border-rose-500/25 rounded-xl px-3.5 py-2 text-center min-w-[100px] md:min-w-[115px]">
+                  <span class="block text-[0.55rem] text-rose-600 dark:text-rose-400 uppercase tracking-wider font-semibold">Last Date</span>
+                  <span class="block text-xs md:text-sm font-black text-rose-600 dark:text-rose-400 mt-0.5">{job.lastDate}</span>
+                </div>
 
-        </div>
-      ))}
+                <!-- Collapsible Chevron Button -->
+                <button 
+                  type="button"
+                  aria-label="Toggle Details" 
+                  class="w-9 h-9 flex items-center justify-center border border-border-card rounded-full text-text-muted hover:text-primary hover:border-primary transition-colors cursor-pointer toggle-chevron-btn shrink-0"
+                >
+                  <HiOutlineChevronDown className="text-lg transition-transform duration-300" />
+                </button>
+              </div>
+            </div>
+
+            <!-- Slide Open Details Drawer -->
+            <div class="job-details-drawer max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out border-t border-border-card/0">
+              <div class="p-5 sm:p-6 bg-bg-base/30 dark:bg-black/10">
+                
+                <!-- Quick Info Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+                  <div class="bg-bg-surface border border-border-card rounded-xl p-4 flex gap-3.5">
+                    <div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                      <HiOutlineUser className="text-xl" />
+                    </div>
+                    <div>
+                      <span class="block text-[0.65rem] text-text-muted uppercase tracking-wider font-bold mb-0.5">Age Limit</span>
+                      <p class="text-xs text-text-main m-0 leading-relaxed font-semibold">{job.ageLimit}</p>
+                    </div>
+                  </div>
+
+                  <div class="bg-bg-surface border border-border-card rounded-xl p-4 flex gap-3.5">
+                    <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-500 flex items-center justify-center shrink-0">
+                      <HiOutlineBanknotes className="text-xl" />
+                    </div>
+                    <div>
+                      <span class="block text-[0.65rem] text-text-muted uppercase tracking-wider font-bold mb-0.5">Pay Scale / Salary</span>
+                      <p class="text-xs text-text-main m-0 leading-relaxed font-semibold">{job.salary}</p>
+                    </div>
+                  </div>
+
+                  <div class="bg-bg-surface border border-border-card rounded-xl p-4 flex gap-3.5">
+                    <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-500 flex items-center justify-center shrink-0">
+                      <HiOutlineCreditCard className="text-xl" />
+                    </div>
+                    <div>
+                      <span class="block text-[0.65rem] text-text-muted uppercase tracking-wider font-bold mb-0.5">Application Fee</span>
+                      <p class="text-xs text-text-main m-0 leading-relaxed font-semibold">{job.appFee}</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Syllabus, Pattern & Bilingual Details Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+                  <!-- Left Column: Syllabus & Selection -->
+                  <div class="bg-bg-surface border border-border-card rounded-xl p-4">
+                    <h4 class="text-xs uppercase tracking-wider font-extrabold text-primary flex items-center gap-1.5 mt-0 mb-3 border-none pb-0">
+                      <HiOutlineDocumentText className="text-base shrink-0" /> Syllabus & Selection Process
+                    </h4>
+                    <p class="text-xs text-text-secondary leading-relaxed m-0">{job.syllabus}</p>
+                  </div>
+
+                  <!-- Right Column: Bilingual Summaries -->
+                  <div class="bg-bg-surface border border-border-card rounded-xl p-4">
+                    <!-- Lang Switch Tab Buttons inside accordion -->
+                    <div class="flex items-center justify-between border-b border-border-card dark:border-border-card/30 pb-2 mb-3">
+                      <span class="text-xs uppercase tracking-wider font-extrabold text-primary flex items-center gap-1.5 border-none pb-0">
+                        📝 Recruitment Summary
+                      </span>
+                      <div class="flex gap-2">
+                        <button data-lang="mr" class="lang-switch active px-2.5 py-0.5 rounded text-[0.65rem] font-bold uppercase tracking-wider cursor-pointer border border-primary/20 transition-all">मराठी</button>
+                        <button data-lang="en" class="lang-switch px-2.5 py-0.5 rounded text-[0.65rem] font-bold uppercase tracking-wider cursor-pointer border border-border-card text-text-muted hover:border-primary/50 transition-all">English</button>
+                      </div>
+                    </div>
+
+                    <!-- Summary Content -->
+                    <div class="summary-text-box">
+                      <p class="mr-text text-xs text-text-secondary leading-relaxed m-0 font-medium">{job.summaryMr}</p>
+                      <p class="en-text text-xs text-text-secondary leading-relaxed m-0 font-medium hidden">{job.summaryEn}</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- CTA Links Footer -->
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between border-t border-border-card/30 dark:border-border-card/10 pt-4 gap-3">
+                  <span class="text-xs text-text-muted font-semibold italic">Double check qualifications on the official website before applying.</span>
+                  <div class="flex gap-3 shrink-0">
+                    <a 
+                      href={job.notifLink} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      class="px-4 py-2 border border-border-card hover:border-primary text-text-main hover:text-primary rounded-xl text-xs font-bold uppercase tracking-wider transition-colors duration-200 no-underline"
+                    >
+                      View Notification
+                    </a>
+                    
+                    {job.status === "apply-now" && (
+                      <a 
+                        href={job.applyLink} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        class="px-4 py-2 bg-gradient-to-r from-primary to-secondary text-white rounded-xl text-xs font-bold uppercase tracking-wider transition-all hover:shadow-md hover:shadow-primary/20 flex items-center gap-1.5 no-underline"
+                      >
+                        Apply Online <HiOutlineArrowTopRightOnSquare className="text-sm shrink-0" />
+                      </a>
+                    )}
+
+                    {job.status === "upcoming" && (
+                      <button 
+                        type="button" 
+                        disabled 
+                        class="px-4 py-2 bg-amber-500/10 border border-amber-500/35 text-amber-600 dark:text-amber-400 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 cursor-not-allowed"
+                      >
+                        <HiOutlineBell className="text-sm shrink-0 animate-bounce" /> Announcement Soon
+                      </button>
+                    )}
+
+                    {job.status === "closed" && (
+                      <button 
+                        type="button" 
+                        disabled 
+                        class="px-4 py-2 bg-rose-500/5 border border-rose-500/20 text-rose-500/50 dark:text-rose-400/50 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 cursor-not-allowed"
+                      >
+                        <HiOutlineXCircle className="text-sm shrink-0" /> Closed
+                      </button>
+                    )}
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        ))
+      )}
 
       <!-- No Results Card -->
       <div id="no-jobs-found" class="text-center py-16 bg-bg-surface border border-border-card rounded-2xl hidden">
@@ -457,9 +292,11 @@ const upcomingCount = recruitments.filter(r => r.status === "upcoming").length;
 <script>
   // Setup interactive client logic
   function initMegaRecruitment() {
+    const jobCards = document.querySelectorAll(".job-card") as NodeListOf<HTMLDivElement>;
+    if (jobCards.length === 0) return;
+    
     const searchInput = document.getElementById("job-search") as HTMLInputElement;
     const qualSelect = document.getElementById("qual-select") as HTMLSelectElement;
-    const jobCards = document.querySelectorAll(".job-card") as NodeListOf<HTMLDivElement>;
     const noJobsFound = document.getElementById("no-jobs-found");
 
     let activeQual = "all";

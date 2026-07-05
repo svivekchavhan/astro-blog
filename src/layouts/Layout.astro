@@ -53,23 +53,7 @@ const latestJobs = [
   },
 ];
 
-const urgentUpdates = [
-  {
-    title: "BSNL JTO Recruitment 2026: Online Form Started",
-    link: "/bsnl-bharti-2026",
-    expiry: "2026-06-18T18:00:00Z",
-  },
-  {
-    title: "MPSC State Services 2026 Hall Ticket Download Link",
-    link: "/admit-card",
-    expiry: "2026-06-15T18:00:00Z",
-  },
-  {
-    title: "Agniveer Admit Card 2026 Download Active",
-    link: "/agniveer-admit-card-2026",
-    expiry: "2026-06-08T00:00:00Z",
-  }
-];
+const urgentUpdates = [];
 
 const pathSegments = Astro.url.pathname.split("/").filter(Boolean);
 
@@ -435,38 +419,42 @@ const breadcrumbSchema = {
           )
         }
         <div class={article ? "space-y-8 mt-10 block" : "hidden"}>
-          <!-- Important Updates Section -->
-          <div class="space-y-4 not-prose">
-            <UpdatesSeparator />
-            <div class="bg-bg-surface border border-border-card p-6 rounded-3xl flex flex-col gap-4 shadow-xs">
-              {urgentUpdates.map((update) => (
-                <div class="flex items-center justify-between gap-4 py-1.5 last:border-b-0 border-b border-border-card/20 last:pb-0 first:pt-0">
-                  <a
-                    href={update.link}
-                    class="flex items-center gap-2.5 text-text-muted hover:text-rose-500 transition-colors font-semibold text-sm md:text-[0.95rem] no-underline group/link"
-                  >
-                    <svg 
-                      class="w-4.5 h-4.5 text-rose-500 transform group-hover/link:translate-x-1 transition-transform shrink-0" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      stroke-width="2.5" 
-                      viewBox="0 0 24 24" 
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                    </svg>
-                    <span>{update.title}</span>
-                  </a>
-                  <span 
-                    class="urgent-new-badge shrink-0 text-[0.55rem] bg-rose-500 text-white px-2 py-0.5 rounded font-bold uppercase tracking-wider select-none animate-pulse"
-                    data-expiry={update.expiry}
-                  >
-                    NEW
-                  </span>
+          {
+            urgentUpdates.length > 0 && (
+              <!-- Important Updates Section -->
+              <div class="space-y-4 not-prose mb-6">
+                <UpdatesSeparator />
+                <div class="bg-bg-surface border border-border-card p-6 rounded-3xl flex flex-col gap-4 shadow-xs">
+                  {urgentUpdates.map((update) => (
+                    <div class="flex items-center justify-between gap-4 py-1.5 last:border-b-0 border-b border-border-card/20 last:pb-0 first:pt-0">
+                      <a
+                        href={update.link}
+                        class="flex items-center gap-2.5 text-text-muted hover:text-rose-500 transition-colors font-semibold text-sm md:text-[0.95rem] no-underline group/link"
+                      >
+                        <svg 
+                          class="w-4.5 h-4.5 text-rose-500 transform group-hover/link:translate-x-1 transition-transform shrink-0" 
+                          fill="none" 
+                          stroke="currentColor" 
+                          stroke-width="2.5" 
+                          viewBox="0 0 24 24" 
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                        </svg>
+                        <span>{update.title}</span>
+                      </a>
+                      <span 
+                        class="urgent-new-badge shrink-0 text-[0.55rem] bg-rose-500 text-white px-2 py-0.5 rounded font-bold uppercase tracking-wider select-none animate-pulse"
+                        data-expiry={update.expiry}
+                      >
+                        NEW
+                      </span>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-          </div>
+              </div>
+            )
+          }
 
           <!-- Share Card Section -->
           <div class="mt-6 pt-6 border-t border-border-card dark:border-border-card/30 not-prose animate-[fadeInUp_0.5s_ease_forwards]">
