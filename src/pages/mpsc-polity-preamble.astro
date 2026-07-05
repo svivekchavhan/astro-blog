@@ -13,6 +13,11 @@ const canonicalURL = "https://mahasandhi.in/mpsc-polity-preamble";
   description={description}
   canonicalURL={canonicalURL}
   hideSidebar={true}
+  customBreadcrumbs={[
+    { name: "MPSC", url: "/mpsc" },
+    { name: "MPSC Polity", url: "/mpsc-polity" },
+    { name: "Preamble" }
+  ]}
 >
   <section class="pt-4 pb-16 not-prose">
     <div class="max-w-[1100px] mx-auto px-2 md:px-0">
@@ -943,19 +948,14 @@ const canonicalURL = "https://mahasandhi.in/mpsc-polity-preamble";
 
   /* Preamble Card Style */
   .preamble-reader-card {
-    border: 2px solid var(--border-color);
+    border: 1px solid var(--color-border-card);
     border-radius: 16px;
-    background-color: #fffdf9;
+    background-color: var(--color-bg-surface);
     padding: 35px;
     margin: 30px 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
     position: relative;
     transition: all 0.3s;
-  }
-
-  :global([data-theme="dark"]) .preamble-reader-card {
-    background-color: rgba(255, 255, 255, 0.01);
-    border-color: var(--border-color);
   }
 
   .preamble-reader-card::before {
@@ -971,13 +971,13 @@ const canonicalURL = "https://mahasandhi.in/mpsc-polity-preamble";
     font-size: 18px;
     text-align: center;
     line-height: 2.3;
-    color: var(--text-dark);
+    color: var(--color-text-main);
   }
 
   /* Interactive Words styling */
   .interactive-word {
-    color: var(--primary-light);
-    border-bottom: 2px dashed var(--primary-light);
+    color: var(--color-primary);
+    border-bottom: 2px dashed var(--color-primary);
     cursor: pointer;
     padding: 0 4px;
     font-weight: bold;
@@ -986,15 +986,15 @@ const canonicalURL = "https://mahasandhi.in/mpsc-polity-preamble";
   }
 
   .interactive-word:hover {
-    background-color: rgba(43, 108, 176, 0.1);
-    color: var(--primary);
+    background-color: rgba(14, 165, 233, 0.1);
+    color: var(--color-secondary);
     transform: scale(1.04);
   }
 
   /* Word Explanation Box style */
   .word-detail-box {
-    background-color: #ebf8ff;
-    border: 1px solid #bee3f8;
+    background-color: rgba(14, 165, 233, 0.08);
+    border: 1px solid rgba(14, 165, 233, 0.2);
     border-radius: 12px;
     padding: 22px;
     margin-top: 25px;
@@ -1003,8 +1003,8 @@ const canonicalURL = "https://mahasandhi.in/mpsc-polity-preamble";
   }
 
   :global([data-theme="dark"]) .word-detail-box {
-    background-color: rgba(129, 140, 248, 0.05);
-    border-color: rgba(129, 140, 248, 0.2);
+    background-color: rgba(56, 189, 248, 0.05);
+    border-color: rgba(56, 189, 248, 0.2);
   }
 
   @keyframes slideDown {
@@ -1020,7 +1020,7 @@ const canonicalURL = "https://mahasandhi.in/mpsc-polity-preamble";
 
   .word-detail-box h4 {
     margin-top: 0;
-    color: var(--primary);
+    color: var(--color-primary);
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 10px;
@@ -1029,7 +1029,7 @@ const canonicalURL = "https://mahasandhi.in/mpsc-polity-preamble";
   .word-detail-box p {
     margin-bottom: 0;
     font-size: 14.5px;
-    color: var(--text-dark);
+    color: var(--color-text-secondary);
   }
 
   /* Revision note card */
