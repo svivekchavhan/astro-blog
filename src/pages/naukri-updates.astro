@@ -10,6 +10,24 @@ import {
 
 const naukriUpdates = [
   {
+    titleEn: "Maharashtra Arogya Bharti 2026: Recruitment Announced for 7,195 Posts",
+    titleHi: "महाराष्ट्र आरोग्य भर्ती 2026: 7,195 रिक्त पदों पर भर्ती प्रक्रिया की घोषणा",
+    date: "July 12, 2026",
+    badge: "New",
+    badgeType: "new",
+    link: "/arogya-bharti-2026",
+    description: "Maharashtra Public Health Department announces 7,195 vacancies for Group C (5,307 posts) and Group D (1,888 posts). Testing is recommended via MPSC or TCS."
+  },
+  {
+    titleEn: "MH SET 2026 Application Date Extended & Exam Postponed",
+    titleHi: "महाराष्ट्र सेट परीक्षा (MH-SET) 2026 आवेदन तिथि बढ़ी और परीक्षा स्थगित",
+    date: "July 12, 2026",
+    badge: "Latest",
+    badgeType: "important",
+    link: "/maharashtra-set-exam-2026",
+    description: "The online registration with a late fee has been extended from July 13 to July 23, 2026. The exam is tentatively rescheduled to September 6, 2026."
+  },
+  {
     titleEn: "MPSC WRD Mechanical Recruitment Rules 2026 Notification Released",
     titleHi: "एमपीएससी जल संसाधन विभाग (WRD) मैकेनिकल भर्ती नियम 2026 जारी",
     date: "July 10, 2026",
@@ -18,24 +36,7 @@ const naukriUpdates = [
     link: "/mpsc-wrd-recruitment-rules-2026-mechanical",
     description: "Check the latest recruitment rules, age criteria, and qualification standards for WRD Mechanical Engineering positions."
   },
-  {
-    titleEn: "HPCL Recruitment 2026 Online Application Last Date Extended",
-    titleHi: "एचपीसीएल (HPCL) भर्ती 2026 ऑनलाइन आवेदन की अंतिम तिथि बढ़ी",
-    date: "July 08, 2026",
-    badge: "Extended",
-    badgeType: "extended",
-    link: "/hpcl-recruitment-2026",
-    description: "The last date to apply online for HPCL Junior Executive and Senior Officer vacancies has been extended to July 20, 2026."
-  },
-  {
-    titleEn: "Delhi Higher Judicial Service Exam 2026 Preliminary Date Declared",
-    titleHi: "दिल्ली उच्चतर न्यायिक सेवा परीक्षा 2026 प्रारंभिक परीक्षा तिथि घोषित",
-    date: "July 05, 2026",
-    badge: "Important",
-    badgeType: "important",
-    link: "/delhi-higher-judicial-service-exam-2026",
-    description: "The preliminary objective type exam for 27 DHJS vacancies will be conducted on July 26, 2026."
-  }
+ 
 ];
 ---
 
@@ -93,28 +94,37 @@ const naukriUpdates = [
                   </span>
                 </div>
 
-                <a href={update.link} class="no-underline hover:no-underline block">
-                  <h3 class="text-base text-text-main font-bold leading-tight mb-2.5 m-0 group-hover:text-primary transition-colors flex flex-col gap-1">
-                    <span class="text-primary/95 font-black text-sm">{update.titleHi}</span>
+                {update.link ? (
+                  <a href={update.link} class="no-underline hover:no-underline block">
+                    <h3 class="text-base text-text-main font-bold leading-tight mb-2.5 m-0 group-hover:text-primary transition-colors flex flex-col gap-1">
+                      <span class="text-primary/95 font-black text-sm">{update.titleHi}</span>
+                      <span class="text-xs text-text-secondary/90 font-semibold">{update.titleEn}</span>
+                    </h3>
+                  </a>
+                ) : (
+                  <h3 class="text-base text-text-main font-bold leading-tight mb-2.5 m-0 flex flex-col gap-1 select-none">
+                    <span class="text-text-main font-black text-sm">{update.titleHi}</span>
                     <span class="text-xs text-text-secondary/90 font-semibold">{update.titleEn}</span>
                   </h3>
-                </a>
+                )}
 
                 <p class="text-text-secondary text-xs leading-relaxed m-0 pr-0 sm:pr-8">
                   {update.description}
                 </p>
               </div>
 
-              <!-- Right Actions Button -->
-              <div class="shrink-0 flex items-center self-end sm:self-start">
-                <a
-                  href={update.link}
-                  class="btn-primary !rounded-xl !py-2.5 flex items-center justify-center gap-2 group/btn text-[0.65rem] font-bold uppercase tracking-wider px-5 no-underline whitespace-nowrap"
-                >
-                  <span>View Details</span>
-                  <HiOutlineArrowTopRightOnSquare className="text-xs transition-transform duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 shrink-0" />
-                </a>
-              </div>
+              <!-- Right Actions Button (Only render if link is present) -->
+              {update.link && (
+                <div class="shrink-0 flex items-center self-end sm:self-start">
+                  <a
+                    href={update.link}
+                    class="btn-primary !rounded-xl !py-2.5 flex items-center justify-center gap-2 group/btn text-[0.65rem] font-bold uppercase tracking-wider px-5 no-underline whitespace-nowrap"
+                  >
+                    <span>View Details</span>
+                    <HiOutlineArrowTopRightOnSquare className="text-xs transition-transform duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 shrink-0" />
+                  </a>
+                </div>
+              )}
             </div>
           ))
         )}
