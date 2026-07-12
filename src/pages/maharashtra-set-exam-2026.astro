@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { translateMarathi } from "../utils/wordLibrary";
 import { 
   HiOutlineCalendarDays, 
   HiOutlineArrowTopRightOnSquare, 
@@ -191,7 +192,7 @@ const updates = [
 
     <!-- ================= MARATHI INFO ================= -->
     <div id="marathi-version" class="space-y-6 text-text-main leading-relaxed pt-6">
-      <h2 class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">महत्त्वाच्या तारखा (Important Dates)</h2>
+      <h2 class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">{translateMarathi("महत्त्वाच्या तारखा (Important Dates)")}</h2>
       <div class="overflow-x-auto mt-3 mb-8">
         <table class="w-full text-left border-collapse text-xs sm:text-sm">
           <thead>

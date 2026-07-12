@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { translateMarathi } from "../utils/wordLibrary";
 import { 
   HiOutlineCalendarDays, 
   HiOutlineCursorArrowRays,
@@ -185,7 +186,7 @@ const category = "Latest Job";
         </div>
 
         <!-- Important Dates & Links Table -->
-        <h2 id="important-dates" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">महत्त्वाच्या तारखा आणि लिंक्स (Important Dates & Links)</h2>
+        <h2 id="important-dates" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">{translateMarathi("महत्त्वाच्या तारखा आणि लिंक्स (Important Dates & Links)")}</h2>
         <div class="overflow-x-auto mt-3 mb-8">
           <table class="w-full text-left border-collapse">
             <thead>
