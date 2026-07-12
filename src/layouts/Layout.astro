@@ -33,23 +33,23 @@ const canonicalURL = customCanonicalURL
 const latestJobs = [
   {
     title: "UPSC Civil Services Examination 2026",
-    link: "/latest-job",
+    link: "/current-recruitment",
   },
   {
     title: "SSC CGL Recruitment 2026",
-    link: "/latest-job",
+    link: "/current-recruitment",
   },
   {
     title: "SBI Probationary Officers (PO) 2026",
-    link: "/latest-job",
+    link: "/current-recruitment",
   },
   {
     title: "RRB Assistant Loco Pilot (ALP) Vacancies",
-    link: "/latest-job",
+    link: "/current-recruitment",
   },
   {
     title: "MPSC State Services Examination 2026",
-    link: "/latest-job",
+    link: "/current-recruitment",
   },
 ];
 
@@ -106,7 +106,7 @@ const breadcrumbSchema = {
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
@@ -316,14 +316,14 @@ const breadcrumbSchema = {
 
     <div
       class:list={[
-        "max-w-[1200px] mx-auto px-4 sm:px-10 lg:px-14 w-full flex-1 flex flex-col lg:flex-row gap-8 md:gap-12",
+        "max-w-[1200px] mx-auto px-4 sm:px-10 lg:px-14 w-full flex-1 flex flex-col lg:flex-row gap-8 lg:gap-12",
         pathSegments.length > 0 ? "py-4 sm:py-6" : "py-6 sm:py-12",
       ]}
     >
       <main
         class:list={[
-          "min-w-0 prose dark:prose-invert prose-headings:text-text-main max-w-none",
-          hideSidebar ? "w-full flex-1" : "flex-[3]",
+          "min-w-0 prose dark:prose-invert prose-headings:text-text-main max-w-none w-full",
+          hideSidebar ? "flex-1" : "lg:flex-[3]",
         ]}
       >
         {
@@ -521,7 +521,7 @@ const breadcrumbSchema = {
 
       {
         !hideSidebar && (
-          <aside class="flex-1 space-y-10 lg:sticky lg:top-[calc(var(--navbar-height,190px)+20px)] h-fit">
+          <aside class="w-full lg:flex-1 space-y-10 lg:sticky lg:top-[calc(var(--navbar-height,190px)+20px)] h-fit">
             <!-- Urgent Updates Widget -->
             <div class="bg-bg-surface border border-rose-500/20 hover:border-rose-500 p-6 rounded-xl relative overflow-hidden transition-all duration-300 shadow-sm">
 

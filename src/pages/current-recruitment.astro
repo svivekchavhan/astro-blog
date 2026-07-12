@@ -1,0 +1,192 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { 
+  HiOutlineCalendarDays, 
+  HiOutlineArrowTopRightOnSquare, 
+  HiOutlineBell, 
+  HiOutlineXCircle, 
+  HiOutlineBuildingOffice, 
+  HiOutlineAcademicCap, 
+  HiOutlineBriefcase 
+} from "react-icons/hi2";
+
+const latestJobs = [
+  {
+    category: "Central Govt",
+    status: "apply-now",
+    title: "HPCL Bharti 2026: हिंदुस्तान पेट्रोलियम मध्ये 116 जागांसाठी भरती",
+    link: "/hpcl-recruitment-2026",
+    organisation: "HPCL",
+    qualification: "Diploma/Degree in Engg/MBA/Post Graduate",
+    vacancies: "116",
+    lastDate: "20 July 2026"
+  },
+  {
+    category: "Central Govt",
+    status: "apply-now",
+    title: "Delhi Higher Judicial Service Exam 2026: दिल्ली उच्च न्यायालयात २७ जागांसाठी भरती",
+    link: "/delhi-higher-judicial-service-exam-2026",
+    organisation: "High Court of Delhi",
+    qualification: "Advocate (7 Yrs Exp) / Judicial Officer",
+    vacancies: "27",
+    lastDate: "15 July 2026"
+  },
+  {
+    category: "Central Govt",
+    status: "apply-now",
+    title: "BSNL Bharti 2026: भारत संचार निगम लिमिटेड मध्ये 100 जागांसाठी भरती",
+    link: "/bsnl-bharti-2026",
+    organisation: "BSNL",
+    qualification: "Diploma/B.E./B.Tech/Graduate",
+    vacancies: "100",
+    lastDate: "30 June 2026"
+  }
+];
+---
+
+<Layout title="Current Recruitment 2026 - Sarkari Naukri Recruitment Notifications | MahaSandhi" description="Find current recruitment and government job openings 2026. Browse UPSC, SSC CGL, SBI PO, RRB, MPSC, IBPS, DRDO recruitment notifications with vacancies, eligibility, last date, and official apply links at mahasandhi.in.">
+  <section class="pt-4 pb-16 not-prose">
+    <!-- Header Section -->
+    <div class="text-center mb-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wider mb-2">
+        <HiOutlineBriefcase className="text-sm" /> Live Openings
+      </div>
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-2 tracking-tight text-text-main m-0">
+        Current Recruitment
+      </h1>
+      <p class="text-text-secondary text-[1.1rem] m-0 max-w-[600px] mx-auto">
+        Stay updated with active vacancies, eligibility requirements, application dates, and direct recruitment portals.
+      </p>
+    </div>
+
+    <!-- Latest Jobs List -->
+    <div class="max-w-[1000px] mx-auto px-2 md:px-0">
+      <div id="jobs-grid" class="flex flex-col gap-3 md:gap-4 transition-all duration-300">
+        {latestJobs.length === 0 ? (
+          <div class="text-center py-16 bg-bg-surface border border-border-card rounded-2xl">
+            <p class="text-text-muted text-sm m-0">No active job announcements at the moment. Please check back later!</p>
+          </div>
+        ) : (
+          latestJobs.map((job, index) => (
+            <div
+              class="group job-card-item flex flex-col md:flex-row md:items-center justify-between p-3.5 md:p-5 bg-bg-surface border border-border-card rounded-2xl transition-all duration-300 hover:border-primary opacity-0 animate-[fadeInUp_0.6s_ease_forwards] gap-3 md:gap-4"
+              style={`animation-delay: ${index * 0.08}s`}
+            >
+              <!-- Left: Info Block -->
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 mb-2 flex-wrap">
+                  <span class="text-[0.65rem] bg-primary/10 text-primary px-2 py-0.5 rounded font-bold uppercase tracking-wider border border-primary/20 whitespace-nowrap">
+                    {job.category}
+                  </span>
+
+                  {job.status === "apply-now" && (
+                    <span class="text-[0.6rem] bg-emerald-500/10 text-emerald-500 px-2 py-0.5 rounded-full font-bold uppercase tracking-wide border border-emerald-500/20 flex items-center gap-1 whitespace-nowrap">
+                      <span class="w-1 h-1 bg-emerald-500 rounded-full shadow-[0_0_6px] shadow-emerald-500 animate-pulse inline-block"></span>
+                      Apply Now
+                    </span>
+                  )}
+
+                  {job.status === "upcoming" && (
+                    <span class="text-[0.6rem] bg-amber-500/10 text-amber-500 px-2 py-0.5 rounded-full font-bold uppercase tracking-wide border border-amber-500/20 flex items-center gap-1 whitespace-nowrap">
+                      <span class="w-1.5 h-1.5 bg-amber-500 rounded-full shadow-[0_0_6px] shadow-emerald-500 animate-pulse inline-block"></span>
+                      Upcoming
+                    </span>
+                  )}
+
+                  {job.status === "closed" && (
+                    <span class="text-[0.6rem] bg-rose-500/10 text-rose-500 px-2 py-0.5 rounded-full font-bold uppercase tracking-wide border border-rose-500/20 flex items-center gap-1 whitespace-nowrap">
+                      <span class="w-1 h-1 bg-rose-500 rounded-full inline-block"></span>
+                      Closed
+                    </span>
+                  )}
+                </div>
+
+                <a href={job.link} class="no-underline hover:no-underline block">
+                  <h3 class="text-base text-text-main font-bold leading-tight mb-1.5 truncate group-hover:text-primary transition-colors">{job.title}</h3>
+                </a>
+                
+                <div class="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs text-text-muted mb-3">
+                  <div class="flex items-center gap-1.5 min-w-0">
+                    <HiOutlineBuildingOffice className="shrink-0 text-xs text-primary/70" />
+                    <span class="truncate">{job.organisation}</span>
+                  </div>
+                  <div class="flex items-center gap-1.5 shrink-0">
+                    <HiOutlineAcademicCap className="text-xs text-primary/70" />
+                    <span>{job.qualification}</span>
+                  </div>
+                </div>
+
+                <!-- Bottom Meta Row: Last Date & Total Posts -->
+                <div class="flex flex-wrap items-center gap-3">
+                  <span class="text-[0.65rem] font-bold bg-primary/5 text-primary border border-solid border-primary/20 px-2.5 py-1 rounded-lg uppercase tracking-wide">
+                    Total Posts: <strong class="text-primary font-extrabold">{job.vacancies}</strong>
+                  </span>
+                  <span class="text-border-card dark:text-border-card/30 hidden sm:inline">|</span>
+                  <span class="flex items-center gap-1 text-[0.65rem] font-bold bg-rose-500/5 dark:bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-solid border-rose-500/20 px-2.5 py-1 rounded-lg uppercase tracking-wide">
+                  <HiOutlineCalendarDays className="text-rose-500 text-xs shrink-0" /> Last Date: 
+                  {job.extendedDate ? (
+                    <strong class="flex items-center gap-1.5 font-bold">
+                      <span class="line-through text-text-muted/70 font-medium">{job.lastDate}</span>
+                      <span class="text-rose-600 dark:text-rose-400 font-extrabold">{job.extendedDate}</span>
+                    </strong>
+                  ) : (
+                    <strong class={`font-extrabold ${job.status === "closed" ? "line-through text-text-muted/70" : ""}`}>{job.lastDate}</strong>
+                  )}
+                </span>
+                </div>
+              </div>
+
+              <!-- Right: CTA Buttons -->
+              <div class="shrink-0 w-full md:w-auto md:min-w-[180px]">
+                {job.status === "apply-now" && (
+                  <a
+                    href={job.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="w-full md:w-auto btn-primary !rounded-xl !py-2.5 flex items-center justify-center gap-2 group/btn text-[0.65rem] font-bold uppercase tracking-wider px-5"
+                  >
+                    <span>Apply Online</span>
+                    <HiOutlineArrowTopRightOnSquare className="text-xs transition-transform duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 shrink-0" />
+                  </a>
+                )}
+
+                {job.status === "upcoming" && (
+                  <a
+                    href={job.link}
+                    class="w-full md:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-amber-500/10 hover:bg-amber-500/20 border border-solid border-amber-500/30 text-amber-600 dark:text-amber-400 font-bold uppercase tracking-wider text-[0.65rem] rounded-xl text-center no-underline transition-colors"
+                  >
+                    <HiOutlineBell className="text-xs text-amber-500 shrink-0 animate-bounce" />
+                    <span>Read Details</span>
+                  </a>
+                )}
+
+                {job.status === "closed" && (
+                  <button
+                    type="button"
+                    disabled
+                    class="w-full md:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-rose-500/5 border border-solid border-rose-500/15 text-rose-500/60 dark:text-rose-400/60 font-bold uppercase tracking-wider text-[0.65rem] rounded-xl cursor-not-allowed text-center"
+                  >
+                    <HiOutlineXCircle className="text-xs shrink-0" />
+                    <span>Apply Closed</span>
+                  </button>
+                )}
+              </div>
+            </div>
+          ))
+        )}</div>
+    </div>
+  </section>
+</Layout>
+
+<style is:global>
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

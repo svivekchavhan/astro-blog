@@ -3,7 +3,8 @@ import Layout from "../layouts/Layout.astro";
 
 const pages = [
   { name: "Home", href: "/" },
-  { name: "Latest Job", href: "/latest-job" },
+  { name: "Current Recruitment", href: "/current-recruitment" },
+  { name: "Bank Recruitment", href: "/bank-recruitment" },
   { name: "Mega Recruitment", href: "/mega-recruitment" },
   { name: "Result", href: "/result" },
   { name: "Admit Card", href: "/admit-card" },
@@ -27,7 +28,8 @@ const legalPages = [
 const postFiles = import.meta.glob("./*.astro");
 const nonArticleFiles = [
   "index.astro",
-  "latest-job.astro",
+  "current-recruitment.astro",
+  "bank-recruitment.astro",
   "mega-recruitment.astro",
   "result.astro",
   "admit-card.astro",

@@ -10,54 +10,54 @@ import {
   HiOutlineBriefcase 
 } from "react-icons/hi2";
 
-const latestJobs = [
+const bankJobs = [
   {
-    category: "Central Govt",
-    status: "apply-now",
-    title: "Delhi Higher Judicial Service Exam 2026: दिल्ली उच्च न्यायालयात २७ जागांसाठी भरती",
-    link: "/articles/delhi-higher-judicial-service-exam-2026",
-    organisation: "High Court of Delhi",
-    qualification: "Advocate (7 Yrs Exp) / Judicial Officer",
-    vacancies: "27",
-    lastDate: "15 July 2026"
+    category: "Banking",
+    status: "upcoming",
+    title: "SBI PO Recruitment 2026: Apply Online for 2000+ Probationary Officer Posts",
+    link: "/sbi-po-recruitment-2026",
+    organisation: "State Bank of India (SBI)",
+    qualification: "Any Graduate",
+    vacancies: "2,000+ (Expected)",
+    lastDate: "TBA"
   },
   {
-    category: "Central Govt",
-    status: "apply-now",
-    title: "BSNL Bharti 2026: भारत संचार निगम लिमिटेड मध्ये 100 जागांसाठी भरती",
-    link: "/bsnl-bharti-2026",
-    organisation: "BSNL",
-    qualification: "Diploma/B.E./B.Tech/Graduate",
-    vacancies: "100",
-    lastDate: "30 June 2026"
+    category: "Banking",
+    status: "upcoming",
+    title: "IBPS Clerk Examination 2026: Notification for 6000+ Clerical Vacancies",
+    link: "/ibps-clerk-recruitment-2026",
+    organisation: "Institute of Banking Personnel Selection (IBPS)",
+    qualification: "Graduate Degree",
+    vacancies: "6,000+ (Expected)",
+    lastDate: "TBA"
   }
 ];
 ---
 
-<Layout title="Latest Government Jobs 2026 - Sarkari Naukri Recruitment Notifications | MahaSandhi" description="Find latest government job openings 2026. Browse UPSC, SSC CGL, SBI PO, RRB, MPSC, IBPS, DRDO recruitment notifications with vacancies, eligibility, last date, and official apply links at mahasandhi.in.">
+<Layout title="Bank Recruitment 2026 - Latest Bank Jobs & Exam Notifications | MahaSandhi" description="Explore the latest bank recruitment notifications 2026. Find active job openings in SBI, IBPS, RBI, HDFC, ICICI, and other public & private sector banks with qualifications, vacancies, and direct apply links at mahasandhi.in.">
   <section class="pt-4 pb-16 not-prose">
     <!-- Header Section -->
     <div class="text-center mb-10">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wider mb-2">
-        <HiOutlineBriefcase className="text-sm" /> Live Openings
+        <HiOutlineBriefcase className="text-sm" /> Bank Careers
       </div>
       <h1 class="text-4xl md:text-5xl font-extrabold mb-2 tracking-tight text-text-main m-0">
-        Latest Jobs
+        Bank Recruitment
       </h1>
       <p class="text-text-secondary text-[1.1rem] m-0 max-w-[600px] mx-auto">
-        Stay updated with active vacancies, eligibility requirements, application dates, and direct recruitment portals.
+        Find job notifications, exam schedules, eligibility criteria, and direct application links for major public & private banks in India.
       </p>
     </div>
 
-    <!-- Latest Jobs List -->
+    <!-- Bank Jobs List -->
     <div class="max-w-[1000px] mx-auto px-2 md:px-0">
       <div id="jobs-grid" class="flex flex-col gap-3 md:gap-4 transition-all duration-300">
-        {latestJobs.length === 0 ? (
+        {bankJobs.length === 0 ? (
           <div class="text-center py-16 bg-bg-surface border border-border-card rounded-2xl">
-            <p class="text-text-muted text-sm m-0">No active job announcements at the moment. Please check back later!</p>
+            <p class="text-text-muted text-sm m-0">No active bank job announcements at the moment. Please check back later!</p>
           </div>
         ) : (
-          latestJobs.map((job, index) => (
+          bankJobs.map((job, index) => (
             <div
               class="group job-card-item flex flex-col md:flex-row md:items-center justify-between p-3.5 md:p-5 bg-bg-surface border border-border-card rounded-2xl transition-all duration-300 hover:border-primary opacity-0 animate-[fadeInUp_0.6s_ease_forwards] gap-3 md:gap-4"
               style={`animation-delay: ${index * 0.08}s`}
@@ -78,7 +78,7 @@ const latestJobs = [
 
                   {job.status === "upcoming" && (
                     <span class="text-[0.6rem] bg-amber-500/10 text-amber-500 px-2 py-0.5 rounded-full font-bold uppercase tracking-wide border border-amber-500/20 flex items-center gap-1 whitespace-nowrap">
-                      <span class="w-1 h-1 bg-amber-500 rounded-full shadow-[0_0_6px] shadow-amber-500 animate-pulse inline-block"></span>
+                      <span class="w-1.5 h-1.5 bg-amber-500 rounded-full shadow-[0_0_6px] shadow-emerald-500 animate-pulse inline-block"></span>
                       Upcoming
                     </span>
                   )}
@@ -114,14 +114,7 @@ const latestJobs = [
                   <span class="text-border-card dark:text-border-card/30 hidden sm:inline">|</span>
                   <span class="flex items-center gap-1 text-[0.65rem] font-bold bg-rose-500/5 dark:bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-solid border-rose-500/20 px-2.5 py-1 rounded-lg uppercase tracking-wide">
                   <HiOutlineCalendarDays className="text-rose-500 text-xs shrink-0" /> Last Date: 
-                  {job.extendedDate ? (
-                    <strong class="flex items-center gap-1.5 font-bold">
-                      <span class="line-through text-text-muted/70 font-medium">{job.lastDate}</span>
-                      <span class="text-rose-600 dark:text-rose-400 font-extrabold">{job.extendedDate}</span>
-                    </strong>
-                  ) : (
-                    <strong class={`font-extrabold ${job.status === "closed" ? "line-through text-text-muted/70" : ""}`}>{job.lastDate}</strong>
-                  )}
+                  <strong>{job.lastDate}</strong>
                 </span>
                 </div>
               </div>
@@ -131,8 +124,6 @@ const latestJobs = [
                 {job.status === "apply-now" && (
                   <a
                     href={job.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     class="w-full md:w-auto btn-primary !rounded-xl !py-2.5 flex items-center justify-center gap-2 group/btn text-[0.65rem] font-bold uppercase tracking-wider px-5"
                   >
                     <span>Apply Online</span>

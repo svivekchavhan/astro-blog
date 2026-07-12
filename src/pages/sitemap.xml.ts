@@ -4,7 +4,8 @@ export async function GET() {
   // Static pages
   const staticPages = [
     '',
-    '/latest-job',
+    '/current-recruitment',
+    '/bank-recruitment',
     '/mega-recruitment',
     '/admit-card',
     '/answer-key',
@@ -27,7 +28,8 @@ export async function GET() {
   const postFiles = import.meta.glob('/src/pages/*.astro');
   const nonArticleFiles = [
     "index.astro",
-    "latest-job.astro",
+    "current-recruitment.astro",
+    "bank-recruitment.astro",
     "mega-recruitment.astro",
     "result.astro",
     "admit-card.astro",
@@ -67,7 +69,7 @@ export async function GET() {
     <loc>${siteUrl}${page}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>${page === '' ? '1.0' : (page === '/latest-job' || page === '/admit-card' || page === '/answer-key' || page === '/admission') ? '0.9' : dynamicPages.includes(page) ? '0.8' : '0.5'}</priority>
+    <priority>${page === '' ? '1.0' : (page === '/current-recruitment' || page === '/admit-card' || page === '/answer-key' || page === '/admission') ? '0.9' : dynamicPages.includes(page) ? '0.8' : '0.5'}</priority>
   </url>`).join('')}
 </urlset>`;
 

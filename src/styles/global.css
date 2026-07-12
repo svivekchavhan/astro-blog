@@ -91,6 +91,82 @@
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
   }
+
+  /* Prevent tables from squishing and breaking layouts on small screens */
+  .prose .overflow-x-auto {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    margin-top: 1rem !important;
+    margin-bottom: 2rem !important;
+    border-radius: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-primary) transparent;
+  }
+
+  .prose .overflow-x-auto::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .prose .overflow-x-auto::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .prose .overflow-x-auto::-webkit-scrollbar-thumb {
+    background-color: color-mix(in srgb, var(--color-primary) 30%, transparent);
+    border-radius: 9999px;
+  }
+
+  .prose .overflow-x-auto:hover::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary);
+  }
+
+  @media (max-width: 768px) {
+    .prose table {
+      min-width: 600px !important;
+      width: 100% !important;
+      table-layout: auto !important;
+    }
+
+    .prose table th,
+    .prose table td {
+      padding: 0.5rem 0.4rem !important;
+      font-size: 0.8rem !important;
+      line-height: 1.4 !important;
+    }
+  }
+
+  /* Make Quick Language Navigation Links wrap and look like modern tabs/pills on mobile */
+  @media (max-width: 640px) {
+    .flex.gap-4.mb-8 {
+      flex-wrap: wrap !important;
+      gap: 0.5rem !important;
+    }
+
+    .flex.gap-4.mb-8 > span.text-text-muted {
+      display: none !important;
+    }
+
+    .flex.gap-4.mb-8 a {
+      display: inline-block !important;
+      background-color: var(--color-bg-surface) !important;
+      border: 1px solid var(--color-border-card) !important;
+      padding: 0.5rem 1rem !important;
+      border-radius: 9999px !important;
+      font-size: 0.8rem !important;
+      font-weight: 700 !important;
+      text-decoration: none !important;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) !important;
+      transition: all 0.2s ease !important;
+    }
+
+    .flex.gap-4.mb-8 a:hover {
+      border-color: var(--color-primary) !important;
+      background-color: color-mix(in srgb, var(--color-primary) 5%, var(--color-bg-surface)) !important;
+    }
+  }
 }
 
 @layer components {
