@@ -1,0 +1,137 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { 
+  HiOutlineCalendarDays, 
+  HiOutlineArrowTopRightOnSquare, 
+  HiOutlineBell,
+  HiOutlineMegaphone,
+  HiOutlineInformationCircle
+} from "react-icons/hi2";
+
+const naukriUpdates = [
+  {
+    titleEn: "MPSC WRD Mechanical Recruitment Rules 2026 Notification Released",
+    titleHi: "एमपीएससी जल संसाधन विभाग (WRD) मैकेनिकल भर्ती नियम 2026 जारी",
+    date: "July 10, 2026",
+    badge: "New",
+    badgeType: "new",
+    link: "/mpsc-wrd-recruitment-rules-2026-mechanical",
+    description: "Check the latest recruitment rules, age criteria, and qualification standards for WRD Mechanical Engineering positions."
+  },
+  {
+    titleEn: "HPCL Recruitment 2026 Online Application Last Date Extended",
+    titleHi: "एचपीसीएल (HPCL) भर्ती 2026 ऑनलाइन आवेदन की अंतिम तिथि बढ़ी",
+    date: "July 08, 2026",
+    badge: "Extended",
+    badgeType: "extended",
+    link: "/hpcl-recruitment-2026",
+    description: "The last date to apply online for HPCL Junior Executive and Senior Officer vacancies has been extended to July 20, 2026."
+  },
+  {
+    titleEn: "Delhi Higher Judicial Service Exam 2026 Preliminary Date Declared",
+    titleHi: "दिल्ली उच्चतर न्यायिक सेवा परीक्षा 2026 प्रारंभिक परीक्षा तिथि घोषित",
+    date: "July 05, 2026",
+    badge: "Important",
+    badgeType: "important",
+    link: "/delhi-higher-judicial-service-exam-2026",
+    description: "The preliminary objective type exam for 27 DHJS vacancies will be conducted on July 26, 2026."
+  }
+];
+---
+
+<Layout title="Naukri Updates & Exam Alerts 2026 - Government Job Notifications | MahaSandhi" description="Get real-time updates and notifications on government jobs. Check application extensions, exam dates, eligibility adjustments, and latest news for UPSC, SSC, Bank, MPSC, and Railway recruitments at mahasandhi.in.">
+  <section class="pt-4 pb-16 not-prose">
+    
+    <!-- Header Section -->
+    <div class="text-center mb-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wider mb-2">
+        <HiOutlineMegaphone className="text-sm shrink-0" /> Real-time Alerts
+      </div>
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-2 tracking-tight text-text-main m-0">
+        Naukri Updates
+      </h1>
+      <p class="text-text-secondary text-[1.1rem] m-0 max-w-[600px] mx-auto">
+        Stay updated with active alerts, date extensions, modifications, and latest announcements regarding central and state government jobs.
+      </p>
+    </div>
+
+    <!-- Updates List -->
+    <div class="max-w-[800px] mx-auto px-4 sm:px-6 md:px-0">
+      <div id="updates-list" class="flex flex-col gap-4">
+        {naukriUpdates.length === 0 ? (
+          <div class="text-center py-16 bg-bg-surface border border-border-card rounded-2xl">
+            <p class="text-text-muted text-sm m-0">No updates or alerts posted recently. Please check back later!</p>
+          </div>
+        ) : (
+          naukriUpdates.map((update, index) => (
+            <div
+              class="group relative flex flex-col sm:flex-row sm:items-start justify-between p-5 bg-bg-surface border border-border-card rounded-2xl transition-all duration-300 hover:border-primary opacity-0 animate-[fadeInUp_0.6s_ease_forwards] gap-4"
+              style={`animation-delay: ${index * 0.08}s`}
+            >
+              <!-- Left Content Details -->
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2.5 mb-2.5 flex-wrap">
+                  {update.badgeType === "new" && (
+                    <span class="text-[0.6rem] bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 px-2 py-0.5 rounded font-bold uppercase tracking-wider border border-emerald-500/20 whitespace-nowrap">
+                      {update.badge}
+                    </span>
+                  )}
+                  {update.badgeType === "extended" && (
+                    <span class="text-[0.6rem] bg-amber-500/10 text-amber-600 dark:text-amber-400 px-2 py-0.5 rounded font-bold uppercase tracking-wider border border-amber-500/20 whitespace-nowrap">
+                      {update.badge}
+                    </span>
+                  )}
+                  {update.badgeType === "important" && (
+                    <span class="text-[0.6rem] bg-rose-500/10 text-rose-600 dark:text-rose-400 px-2 py-0.5 rounded font-bold uppercase tracking-wider border border-rose-500/20 whitespace-nowrap">
+                      {update.badge}
+                    </span>
+                  )}
+
+                  <span class="flex items-center gap-1 text-xs text-text-muted">
+                    <HiOutlineCalendarDays className="text-primary/70 text-sm shrink-0" />
+                    {update.date}
+                  </span>
+                </div>
+
+                <a href={update.link} class="no-underline hover:no-underline block">
+                  <h3 class="text-base text-text-main font-bold leading-tight mb-2.5 m-0 group-hover:text-primary transition-colors flex flex-col gap-1">
+                    <span class="text-primary/95 font-black text-sm">{update.titleHi}</span>
+                    <span class="text-xs text-text-secondary/90 font-semibold">{update.titleEn}</span>
+                  </h3>
+                </a>
+
+                <p class="text-text-secondary text-xs leading-relaxed m-0 pr-0 sm:pr-8">
+                  {update.description}
+                </p>
+              </div>
+
+              <!-- Right Actions Button -->
+              <div class="shrink-0 flex items-center self-end sm:self-start">
+                <a
+                  href={update.link}
+                  class="btn-primary !rounded-xl !py-2.5 flex items-center justify-center gap-2 group/btn text-[0.65rem] font-bold uppercase tracking-wider px-5 no-underline whitespace-nowrap"
+                >
+                  <span>View Details</span>
+                  <HiOutlineArrowTopRightOnSquare className="text-xs transition-transform duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 shrink-0" />
+                </a>
+              </div>
+            </div>
+          ))
+        )}
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style is:global>
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
