@@ -1,0 +1,119 @@
+---
+import { HiOutlineBell, HiOutlineCalendarDays, HiOutlineArrowTopRightOnSquare, HiOutlineExclamationTriangle, HiOutlineCheckCircle } from "react-icons/hi2";
+
+interface Props {
+  type?: "update" | "alert" | "success" | "important";
+  badgeText?: string;
+  title: string;
+  message?: string;
+  lastUpdated?: string;
+  links?: {
+    text: string;
+    href: string;
+    isPrimary?: boolean;
+    download?: boolean;
+  }[];
+}
+
+const {
+  type = "update",
+  badgeText = "UPDATE",
+  title,
+  message,
+  lastUpdated,
+  links = []
+} = Astro.props;
+
+// Determine colors based on type
+let themeClasses = {
+  container: "bg-blue-500/5 border-blue-500/20 hover:border-blue-500/40 shadow-blue-500/5",
+  badge: "bg-blue-500/10 text-blue-500 border-blue-500/20",
+  iconBg: "bg-blue-500/10 text-blue-500",
+  linkPrimary: "bg-blue-500 hover:bg-blue-600 text-white shadow-blue-500/20",
+  linkSecondary: "bg-blue-500/10 hover:bg-blue-500/20 text-blue-600 dark:text-blue-400 border-blue-500/20"
+};
+
+if (type === "alert") {
+  themeClasses = {
+    container: "bg-rose-500/5 border-rose-500/20 hover:border-rose-500/40 shadow-rose-500/5",
+    badge: "bg-rose-500/10 text-rose-500 border-rose-500/20",
+    iconBg: "bg-rose-500/10 text-rose-500",
+    linkPrimary: "bg-rose-500 hover:bg-rose-600 text-white shadow-rose-500/20",
+    linkSecondary: "bg-rose-500/10 hover:bg-rose-500/20 text-rose-600 dark:text-rose-400 border-rose-500/20"
+  };
+} else if (type === "success") {
+  themeClasses = {
+    container: "bg-emerald-500/5 border-emerald-500/20 hover:border-emerald-500/40 shadow-emerald-500/5",
+    badge: "bg-emerald-500/10 text-emerald-500 border-emerald-500/20",
+    iconBg: "bg-emerald-500/10 text-emerald-500",
+    linkPrimary: "bg-emerald-500 hover:bg-emerald-600 text-white shadow-emerald-500/20",
+    linkSecondary: "bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border-emerald-500/20"
+  };
+} else if (type === "important") {
+  themeClasses = {
+    container: "bg-amber-500/5 border-amber-500/20 hover:border-amber-500/40 shadow-amber-500/5",
+    badge: "bg-amber-500/10 text-amber-500 border-amber-500/20",
+    iconBg: "bg-amber-500/10 text-amber-500",
+    linkPrimary: "bg-amber-500 hover:bg-amber-600 text-white shadow-amber-500/20",
+    linkSecondary: "bg-amber-500/10 hover:bg-amber-500/20 text-amber-600 dark:text-amber-400 border-amber-500/20"
+  };
+}
+---
+
+<div class={`not-prose flex flex-col md:flex-row md:items-center justify-between p-5 sm:p-6 border rounded-3xl transition-all duration-300 shadow-sm gap-4 ${themeClasses.container}`}>
+  <!-- Left Side: Icon, Badge, Title and Message -->
+  <div class="flex items-start gap-4 flex-1">
+    <!-- Icon Container -->
+    <div class={`flex items-center justify-center p-3 rounded-2xl shrink-0 ${themeClasses.iconBg}`}>
+      {type === "update" && <HiOutlineBell className="text-xl animate-bounce" />}
+      {type === "alert" && <HiOutlineExclamationTriangle className="text-xl animate-pulse" />}
+      {type === "important" && <HiOutlineCalendarDays className="text-xl animate-pulse" />}
+      {type === "success" && <HiOutlineCheckCircle className="text-xl" />}
+    </div>
+
+    <!-- Details -->
+    <div class="space-y-2 flex-1 min-w-0">
+      <!-- Row containing Badge & Last Updated -->
+      <div class="flex items-center gap-2 flex-wrap text-[0.65rem] sm:text-xs">
+        <span class={`px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider border select-none ${themeClasses.badge}`}>
+          {badgeText}
+        </span>
+        {lastUpdated && (
+          <span class="text-text-muted select-none flex items-center gap-1 font-medium">
+            • Updated: {lastUpdated}
+          </span>
+        )}
+      </div>
+
+      <!-- Title -->
+      <h3 class="text-base sm:text-lg text-text-main font-bold leading-snug m-0">
+        {title}
+      </h3>
+
+      <!-- Message -->
+      {message && (
+        <p class="text-xs sm:text-sm text-text-muted leading-relaxed m-0 max-w-[700px]">
+          {message}
+        </p>
+      )}
+    </div>
+  </div>
+
+  <!-- Right Side: Links & Call to Actions -->
+  {links && links.length > 0 && (
+    <div class="flex flex-wrap items-center gap-3 shrink-0 w-full sm:w-auto">
+      {links.map((link) => (
+        <a
+          href={link.href}
+          target={link.download ? undefined : "_blank"}
+          rel={link.download ? undefined : "noopener noreferrer"}
+          download={link.download || undefined}
+          class={`flex items-center justify-center gap-2 px-5 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl transition-all shadow-xs text-center select-none ${link.isPrimary ? `btn-primary ${themeClasses.linkPrimary}` : `border border-solid ${themeClasses.linkSecondary}`}`}
+        >
+          <span>{link.text}</span>
+          {!link.download && <HiOutlineArrowTopRightOnSquare className="text-xs shrink-0 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />}
+        </a>
+      ))}
+    </div>
+  )}
+</div>

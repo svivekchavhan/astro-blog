@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import EventUpdateCard from "../components/EventUpdateCard.astro";
 
 const title = "MHT CET Counselling 2026: Registration & Document Verification Guide";
 const description = "Complete guide to MHT CET 2026 engineering counselling. Learn about E-Scrutiny vs Physical Scrutiny, required documents, Caste Validity, and important dates.";
@@ -31,10 +32,25 @@ const category = "Admission";
         {title}
       </h1>
       <p
-        class="text-text-muted text-lg leading-relaxed border-l-4 border-primary pl-6 py-2 italic"
+        class="text-text-muted text-lg leading-relaxed border-l-4 border-primary pl-6 py-2 italic mb-8"
       >
         {description}
       </p>
+
+      <!-- Dynamic Event Update Card (Horizontal) -->
+      <div class="mt-8">
+        <EventUpdateCard
+          type="important"
+          badgeText="Registration Deadline"
+          title="MHT CET 2026 Registration Last Date: 12th July"
+          message="The online registration window closes on 12th July 2026. Document verification (Physical or E-Scrutiny) must be completed by 13th July 2026 (5:00 PM). Ensure you have matched your Aadhaar details."
+          lastUpdated="July 16, 2026"
+          links={[
+            { text: "Register Online", href: "https://cetcell.mahacet.org/", isPrimary: true },
+            { text: "FC Centers List", href: "#", isPrimary: false }
+          ]}
+        />
+      </div>
     </div>
 
     <!-- Quick Language Navigation Links -->
