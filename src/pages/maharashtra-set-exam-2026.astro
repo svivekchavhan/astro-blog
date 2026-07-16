@@ -86,161 +86,325 @@ const updates = [
 
     <!-- Quick Navigation Links -->
     <div class="flex flex-wrap gap-4 mb-8">
-      <a href="#updates-timeline" class="text-primary font-bold text-sm hover:underline">↓ Live Updates Feed</a>
+      <a href="#marathi-version" class="text-primary font-bold text-sm hover:underline">↓ मराठी आवृत्ती (Marathi Version)</a>
       <span class="text-text-muted">|</span>
-      <a href="#marathi-version" class="text-primary font-bold text-sm hover:underline">↓ मराठी माहिती (Marathi Info)</a>
-      <span class="text-text-muted">|</span>
-      <a href="#english-version" class="text-primary font-bold text-sm hover:underline">↓ English Info</a>
+      <a href="#english-version" class="text-primary font-bold text-sm hover:underline">↓ English Version</a>
     </div>
 
-    <!-- ================= LIVE UPDATES TIMELINE ================= -->
-    <div id="updates-timeline" class="bg-bg-surface border border-border-card rounded-3xl p-6 sm:p-8 mb-12 shadow-sm">
-      <h2 class="text-xl md:text-2xl font-black text-rose-500 flex items-center gap-2 mb-6 border-none p-0 mt-0">
-        <HiOutlineMegaphone className="text-2xl shrink-0" /> Live SET Exam Updates Feed
-      </h2>
-      <p class="text-text-muted text-xs mb-8">
-        New updates will be posted below, separated by dividers. The latest announcements are always displayed at the top.
-      </p>
-
-      <div class="relative pl-6 border-l-2 border-border-card/50 dark:border-border-card/20 space-y-12">
-        {updates.map((update, index) => (
-          <div class="relative">
-            <!-- Timeline Dot Indicator -->
-            <span class={`absolute -left-[31px] top-1.5 w-4 h-4 rounded-full border-4 border-bg-surface ${
-              index === 0 ? "bg-rose-500 ring-4 ring-rose-500/20" : "bg-text-muted/40"
-            }`}></span>
-
-            <!-- Update Item Container -->
-            <div class="space-y-4">
-              <div class="flex items-center gap-3 flex-wrap">
-                <span class={`text-[0.6rem] font-extrabold uppercase tracking-widest px-2.5 py-0.5 rounded border ${
-                  update.badgeType === "rose" 
-                    ? "bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/20" 
-                    : "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20"
-                }`}>
-                  {update.badge}
-                </span>
-                <span class="flex items-center gap-1 text-xs text-text-muted font-bold">
-                  <HiOutlineCalendarDays className="text-primary/70 text-sm shrink-0" />
-                  {update.date}
-                </span>
-              </div>
-
-              <!-- Stacked Bilingual Details -->
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
-                <!-- Marathi Block -->
-                <div class="space-y-2 border-r-0 md:border-r border-border-card/30 pr-0 md:pr-6">
-                  <h3 class="text-sm font-extrabold text-text-main m-0">{update.titleMr}</h3>
-                  <ul class="list-none pl-0 m-0 space-y-1.5 text-xs text-text-secondary">
-                    {update.bulletsMr.map((bullet) => (
-                      <li class="flex items-start gap-2">
-                        <span class="text-rose-500 shrink-0">👉</span>
-                        <span>{bullet}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <!-- English Block -->
-                <div class="space-y-2">
-                  <h3 class="text-sm font-bold text-text-main m-0">{update.titleEn}</h3>
-                  <ul class="list-none pl-0 m-0 space-y-1.5 text-xs text-text-muted">
-                    {update.bulletsEn.map((bullet) => (
-                      <li class="flex items-start gap-2">
-                        <span class="text-primary shrink-0">👉</span>
-                        <span>{bullet}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <!-- Divider between updates (except the last one) -->
-            {index < updates.length - 1 && (
-              <div class="absolute left-[-24px] bottom-[-28px] right-0 border-t border-dashed border-border-card/35 dark:border-border-card/15"></div>
-            )}
-          </div>
-        ))}
-      </div>
-    </div>
-
-    <!-- ================= EXAM OVERVIEW ================= -->
-    <h2 class="text-xl md:text-2xl font-black text-primary mb-4 border-l-4 border-primary pl-3">MH-SET Exam Overview</h2>
-    <div class="overflow-x-auto mb-8">
-      <table class="w-full text-left border-collapse text-xs sm:text-sm">
-        <tbody>
-          <tr>
-            <td class="p-3 border border-border-card font-bold bg-primary/5 text-text-main w-[220px]">Exam Name</td>
-            <td class="p-3 border border-border-card text-text-muted">Maharashtra State Eligibility Test (MH-SET 2026)</td>
-          </tr>
-          <tr>
-            <td class="p-3 border border-border-card font-bold bg-primary/5 text-text-main">Conducting University</td>
-            <td class="p-3 border border-border-card text-text-muted">Savitribai Phule Pune University (SPPU)</td>
-          </tr>
-          <tr>
-            <td class="p-3 border border-border-card font-bold bg-primary/5 text-text-main">Eligible Posts</td>
-            <td class="p-3 border border-border-card text-text-muted">Assistant Professor (सहाय्यक प्राध्यापक)</td>
-          </tr>
-          <tr>
-            <td class="p-3 border border-border-card font-bold bg-primary/5 text-text-main">State Jurisdiction</td>
-            <td class="p-3 border border-border-card text-text-muted">Maharashtra & Goa State Universities</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- ================= MARATHI INFO ================= -->
-    <div id="marathi-version" class="space-y-6 text-text-main leading-relaxed pt-6">
-      <h2 class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">{translateMarathi("महत्त्वाच्या तारखा (Important Dates)")}</h2>
-      <div class="overflow-x-auto mt-3 mb-8">
-        <table class="w-full text-left border-collapse text-xs sm:text-sm">
-          <thead>
-            <tr class="bg-primary/10">
-              <th class="p-3 border border-border-card font-bold text-text-main">तपशील (Event)</th>
-              <th class="p-3 border border-border-card font-bold text-text-main">सुधारित तारीख (Revised Schedule)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="p-3 border border-border-card text-text-muted font-medium">विलंब शुल्कासह ऑनलाइन अर्ज कालावधी</td>
-              <td class="p-3 border border-border-card text-rose-500 font-bold">१३ जुलै २०२६ ते २३ जुलै २०२६</td>
-            </tr>
-            <tr>
-              <td class="p-3 border border-border-card text-text-muted font-medium">संभाव्य लेखी परीक्षा तारीख</td>
-              <td class="p-3 border border-border-card text-amber-500 font-bold">०६ सप्टेंबर २०२६ (रविवार)</td>
-            </tr>
-            <tr>
-              <td class="p-3 border border-border-card text-text-muted font-medium">अधिकृत परीक्षा माहितीपत्रक PDF</td>
-              <td class="p-3 border border-border-card">
-                <a href="https://setexam.unipune.ac.in" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-amber-500/10 text-amber-600 dark:text-amber-400 font-bold uppercase rounded border border-amber-500/25 hover:bg-amber-500/20 text-xs">
-                  <HiOutlineDocumentText /> जाहिरात पहा
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td class="p-3 border border-border-card text-text-muted font-medium">ऑनलाइन अर्ज करा (Apply Portal)</td>
-              <td class="p-3 border border-border-card">
-                <a href="https://setexam.unipune.ac.in" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 text-primary font-bold uppercase rounded border border-primary/25 hover:bg-primary/20 text-xs">
-                  अर्जाचा अधिकृत पोर्टल <HiOutlineArrowTopRightOnSquare />
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- ================= ENGLISH INFO ================= -->
-    <div id="english-version" class="space-y-6 text-text-main leading-relaxed pt-6 opacity-95">
-      <h2 class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">MH-SET Exam Eligibility</h2>
-      <div class="bg-bg-surface border border-border-card p-5 rounded-2xl text-xs sm:text-sm space-y-3">
-        <p class="m-0 font-bold text-text-main">Candidates must satisfy the following educational qualifications to qualify for MH SET:</p>
-        <ul class="list-disc pl-5 m-0 space-y-1.5 text-text-muted">
-          <li><strong>Master's Degree:</strong> Candidates must hold a Master's Degree (M.A., M.Sc., M.Com., MBA, etc.) from a UGC-recognized university with at least <strong>55% marks</strong> (50% marks for OBC/SC/ST/PwD/Transgender candidates).</li>
-          <li><strong>Final Year Candidates:</strong> Candidates who are appearing for the final year Master's Degree examination or awaiting results can also apply provisionally.</li>
-          <li><strong>Age Limit:</strong> There is <strong>no upper age limit</strong> to appear for the Maharashtra SET exam.</li>
+    <!-- ================= MARATHI VERSION ================= -->
+    <div id="marathi-version">
+      <!-- Table of Contents (Marathi) -->
+      <div class="bg-bg-surface border border-border-card rounded-3xl p-8 mb-12">
+        <h2 class="text-xl font-bold text-text-main mb-4 flex items-center gap-2 m-0 border-none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+          या लेखातील मुख्य मुद्दे (मराठी)
+        </h2>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 list-none p-0 m-0 mt-2">
+          <li>
+            <a href="#updates-timeline-mr" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">१. थेट अपडेट्स फीड (Set Live Feed)</a>
+          </li>
+          <li>
+            <a href="#exam-overview-mr" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">२. सेट परीक्षा {translateMarathi("विहंगावलोकन")}</a>
+          </li>
+          <li>
+            <a href="#important-dates-mr" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">३. महत्त्वाच्या तारखा आणि वेळापत्रक</a>
+          </li>
+          <li>
+            <a href="#eligibility-mr" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">४. सेट परीक्षा पात्रता निकष (Eligibility)</a>
+          </li>
         </ul>
+      </div>
+
+      <!-- Content (Marathi) -->
+      <div class="space-y-8 text-text-main leading-relaxed">
+        <!-- ================= LIVE UPDATES TIMELINE (Marathi) ================= -->
+        <div id="updates-timeline-mr" class="bg-bg-surface border border-border-card rounded-3xl p-6 sm:p-8 shadow-sm">
+          <h2 class="text-xl md:text-2xl font-black text-rose-500 flex items-center gap-2 mb-6 border-none p-0 mt-0">
+            <HiOutlineMegaphone className="text-2xl shrink-0" /> सेट परीक्षा थेट अपडेट्स फीड
+          </h2>
+          <p class="text-text-muted text-xs mb-8">
+            खाली दिलेल्या टाइमलाइनमध्ये सेट परीक्षेचे सर्व ताजे अपडेट्स दिले आहेत. नवीन अपडेट्स नेहमी सर्वात वर दिसतील.
+          </p>
+
+          <div class="relative pl-6 border-l-2 border-border-card/50 dark:border-border-card/20 space-y-12">
+            {updates.map((update, index) => (
+              <div class="relative">
+                <span class={`absolute -left-[31px] top-1.5 w-4 h-4 rounded-full border-4 border-bg-surface ${
+                  index === 0 ? "bg-rose-500 ring-4 ring-rose-500/20" : "bg-text-muted/40"
+                }`}></span>
+
+                <div class="space-y-4">
+                  <div class="flex items-center gap-3 flex-wrap">
+                    <span class={`text-[0.6rem] font-extrabold uppercase tracking-widest px-2.5 py-0.5 rounded border ${
+                      update.badgeType === "rose" 
+                        ? "bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/20" 
+                        : "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20"
+                    }`}>
+                      {update.badge === "Latest Update" ? "नवीन अपडेट" : "अधिकृत जाहिरात"}
+                    </span>
+                    <span class="flex items-center gap-1 text-xs text-text-muted font-bold">
+                      <HiOutlineCalendarDays className="text-primary/70 text-sm shrink-0" />
+                      {update.date}
+                    </span>
+                  </div>
+
+                  <div class="space-y-2">
+                    <h3 class="text-base font-extrabold text-text-main m-0">{update.titleMr}</h3>
+                    <ul class="list-none pl-0 m-0 space-y-1.5 text-xs sm:text-sm text-text-secondary">
+                      {update.bulletsMr.map((bullet) => (
+                        <li class="flex items-start gap-2">
+                          <span class="text-rose-500 shrink-0">👉</span>
+                          <span>{bullet}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                {index < updates.length - 1 && (
+                  <div class="absolute left-[-24px] bottom-[-28px] right-0 border-t border-dashed border-border-card/35 dark:border-border-card/15"></div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- ================= EXAM OVERVIEW (Marathi) ================= -->
+        <h2 id="exam-overview-mr" class="text-xl md:text-2xl font-black text-primary mb-4 border-l-4 border-primary pl-3">सेट परीक्षा {translateMarathi("विहंगावलोकन")}</h2>
+        <div class="overflow-x-auto mb-8">
+          <table class="w-full text-left border-collapse text-xs sm:text-sm">
+            <tbody>
+              <tr>
+                <td class="p-3 border border-border-card font-bold bg-primary/5 text-text-main w-[220px]">परीक्षेचे नाव</td>
+                <td class="p-3 border border-border-card text-text-muted">महाराष्ट्र राज्य पात्रता परीक्षा (MH-SET २०२६)</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-bold bg-primary/5 text-text-main">आयोजक विद्यापीठ</td>
+                <td class="p-3 border border-border-card text-text-muted">सावित्रीबाई फुले पुणे विद्यापीठ (SPPU)</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-bold bg-primary/5 text-text-main">पात्र पद</td>
+                <td class="p-3 border border-border-card text-text-muted">सहाय्यक प्राध्यापक (Assistant Professor)</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-bold bg-primary/5 text-text-main">कार्यक्षेत्र</td>
+                <td class="p-3 border border-border-card text-text-muted">महाराष्ट्र आणि गोवा राज्यातील विद्यापीठे / महाविद्यालये</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- ================= IMPORTANT DATES (Marathi) ================= -->
+        <h2 id="important-dates-mr" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">महत्त्वाच्या तारखा आणि वेळापत्रक</h2>
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse text-xs sm:text-sm">
+            <thead>
+              <tr class="bg-primary/10">
+                <th class="p-3 border border-border-card font-bold text-text-main">तपशील (Event)</th>
+                <th class="p-3 border border-border-card font-bold text-text-main">सुधारित तारीख (Revised Schedule)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">विलंब शुल्कासह ऑनलाइन अर्ज कालावधी</td>
+                <td class="p-3 border border-border-card text-rose-500 font-bold">१३ जुलै २०२६ ते २३ जुलै २०२६</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">संभाव्य लेखी परीक्षा तारीख</td>
+                <td class="p-3 border border-border-card text-amber-500 font-bold">०६ सप्टेंबर २०२६ (रविवार)</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">अधिकृत परीक्षा माहितीपत्रक PDF</td>
+                <td class="p-3 border border-border-card">
+                  <a href="https://setexam.unipune.ac.in" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-amber-500/10 text-amber-600 dark:text-amber-400 font-bold uppercase rounded border border-amber-500/25 hover:bg-amber-500/20 text-xs">
+                    <HiOutlineDocumentText /> जाहिरात पहा
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">ऑनलाइन अर्ज करा (Apply Portal)</td>
+                <td class="p-3 border border-border-card">
+                  <a href="https://setexam.unipune.ac.in" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 text-primary font-bold uppercase rounded border border-primary/25 hover:bg-primary/20 text-xs">
+                    अर्जाचा अधिकृत पोर्टल <HiOutlineArrowTopRightOnSquare />
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- ================= ELIGIBILITY (Marathi) ================= -->
+        <h2 id="eligibility-mr" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">सेट परीक्षा पात्रता निकष</h2>
+        <div class="bg-bg-surface border border-border-card p-5 rounded-2xl text-xs sm:text-sm space-y-3 mb-12">
+          <p class="m-0 font-bold text-text-main">सेट परीक्षेसाठी पात्र ठरण्यासाठी उमेदवारांनी खालील शैक्षणिक पात्रता पूर्ण करणे आवश्यक आहे:</p>
+          <ul class="list-disc pl-5 m-0 space-y-1.5 text-text-muted">
+            <li><strong>पदव्युत्तर पदवी:</strong> उमेदवाराकडे UGC-मान्यताप्राप्त विद्यापीठाची पदव्युत्तर पदवी (M.A., M.Sc., M.Com., MBA, इ.) किमान <strong>५५% गुणांसह</strong> असणे आवश्यक आहे (OBC/SC/ST/PwD/Transgender उमेदवारांसाठी <strong>५०% गुण</strong>).</li>
+            <li><strong>अंतिम वर्षातील उमेदवार:</strong> जे उमेदवार अंतिम वर्षाच्या परीक्षेला बसत आहेत किंवा निकालाची वाट पाहत आहेत ते तात्पुरते अर्ज करू शकतात.</li>
+            <li><strong>वयोमर्यादा:</strong> महाराष्ट्र सेट परीक्षेसाठी कोणतीही <strong>कमाल वयोमर्यादा नाही</strong>.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= LANGUAGE SEPARATOR ================= -->
+    <div class="my-16 border-t-2 border-dashed border-border-card flex items-center justify-center relative">
+      <span class="absolute bg-bg-base px-8 py-2 text-base sm:text-lg font-extrabold uppercase tracking-widest text-primary border border-border-card rounded-full shadow-md">
+        English
+      </span>
+    </div>
+
+    <!-- ================= ENGLISH VERSION ================= -->
+    <div id="english-version" class="opacity-95">
+      <!-- Table of Contents (English) -->
+      <div class="bg-bg-surface border border-border-card rounded-3xl p-8 mb-12">
+        <h2 class="text-xl font-bold text-text-main mb-4 flex items-center gap-2 m-0 border-none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+          Key Topics in this Article (English)
+        </h2>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 list-none p-0 m-0 mt-2">
+          <li>
+            <a href="#updates-timeline-en" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">1. Live Updates Feed (MH SET Live Feed)</a>
+          </li>
+          <li>
+            <a href="#exam-overview-en" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">2. MH-SET Exam Overview</a>
+          </li>
+          <li>
+            <a href="#important-dates-en" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">3. Important Dates & Schedule</a>
+          </li>
+          <li>
+            <a href="#eligibility-en" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">4. MH-SET Exam Eligibility Criteria</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Content (English) -->
+      <div class="space-y-8 text-text-main leading-relaxed">
+        <!-- ================= LIVE UPDATES TIMELINE (English) ================= -->
+        <div id="updates-timeline-en" class="bg-bg-surface border border-border-card rounded-3xl p-6 sm:p-8 mb-12 shadow-sm">
+          <h2 class="text-xl md:text-2xl font-black text-rose-500 flex items-center gap-2 mb-6 border-none p-0 mt-0">
+            <HiOutlineMegaphone className="text-2xl shrink-0" /> Live SET Exam Updates Feed
+          </h2>
+          <p class="text-text-muted text-xs mb-8">
+            New updates will be posted below, separated by dividers. The latest announcements are always displayed at the top.
+          </p>
+
+          <div class="relative pl-6 border-l-2 border-border-card/50 dark:border-border-card/20 space-y-12">
+            {updates.map((update, index) => (
+              <div class="relative">
+                <span class={`absolute -left-[31px] top-1.5 w-4 h-4 rounded-full border-4 border-bg-surface ${
+                  index === 0 ? "bg-rose-500 ring-4 ring-rose-500/20" : "bg-text-muted/40"
+                }`}></span>
+
+                <div class="space-y-4">
+                  <div class="flex items-center gap-3 flex-wrap">
+                    <span class={`text-[0.6rem] font-extrabold uppercase tracking-widest px-2.5 py-0.5 rounded border ${
+                      update.badgeType === "rose" 
+                        ? "bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/20" 
+                        : "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20"
+                    }`}>
+                      {update.badge}
+                    </span>
+                    <span class="flex items-center gap-1 text-xs text-text-muted font-bold">
+                      <HiOutlineCalendarDays className="text-primary/70 text-sm shrink-0" />
+                      {update.date}
+                    </span>
+                  </div>
+
+                  <div class="space-y-2">
+                    <h3 class="text-base font-bold text-text-main m-0">{update.titleEn}</h3>
+                    <ul class="list-none pl-0 m-0 space-y-1.5 text-xs sm:text-sm text-text-muted">
+                      {update.bulletsEn.map((bullet) => (
+                        <li class="flex items-start gap-2">
+                          <span class="text-primary shrink-0">👉</span>
+                          <span>{bullet}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                {index < updates.length - 1 && (
+                  <div class="absolute left-[-24px] bottom-[-28px] right-0 border-t border-dashed border-border-card/35 dark:border-border-card/15"></div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- ================= EXAM OVERVIEW (English) ================= -->
+        <h2 id="exam-overview-en" class="text-xl md:text-2xl font-black text-primary mb-4 border-l-4 border-primary pl-3">MH-SET Exam Overview</h2>
+        <div class="overflow-x-auto mb-8">
+          <table class="w-full text-left border-collapse text-xs sm:text-sm">
+            <tbody>
+              <tr>
+                <td class="p-3 border border-border-card font-bold bg-primary/5 text-text-main w-[220px]">Exam Name</td>
+                <td class="p-3 border border-border-card text-text-muted">Maharashtra State Eligibility Test (MH-SET 2026)</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-bold bg-primary/5 text-text-main">Conducting University</td>
+                <td class="p-3 border border-border-card text-text-muted">Savitribai Phule Pune University (SPPU)</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-bold bg-primary/5 text-text-main">Eligible Posts</td>
+                <td class="p-3 border border-border-card text-text-muted">Assistant Professor (सहाय्यक प्राध्यापक)</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-bold bg-primary/5 text-text-main">State Jurisdiction</td>
+                <td class="p-3 border border-border-card text-text-muted">Maharashtra & Goa State Universities</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- ================= IMPORTANT DATES (English) ================= -->
+        <h2 id="important-dates-en" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">Important Schedule & Dates</h2>
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse text-xs sm:text-sm">
+            <thead>
+              <tr class="bg-primary/10">
+                <th class="p-3 border border-border-card font-bold text-text-main">Event</th>
+                <th class="p-3 border border-border-card font-bold text-text-main">Revised Schedule</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">Online Application Period (with Late Fees)</td>
+                <td class="p-3 border border-border-card text-rose-500 font-bold">13 July 2026 to 23 July 2026</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">Tentative Written Examination Date</td>
+                <td class="p-3 border border-border-card text-amber-500 font-bold">06 September 2026 (Sunday)</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">Official Exam Notification PDF</td>
+                <td class="p-3 border border-border-card">
+                  <a href="https://setexam.unipune.ac.in" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-amber-500/10 text-amber-600 dark:text-amber-400 font-bold uppercase rounded border border-amber-500/25 hover:bg-amber-500/20 text-xs">
+                    <HiOutlineDocumentText /> View Notification
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium">Apply Online (Official Portal)</td>
+                <td class="p-3 border border-border-card">
+                  <a href="https://setexam.unipune.ac.in" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 text-primary font-bold uppercase rounded border border-primary/25 hover:bg-primary/20 text-xs">
+                    Apply Online Portal <HiOutlineArrowTopRightOnSquare />
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- ================= ELIGIBILITY (English) ================= -->
+        <h2 id="eligibility-en" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">MH-SET Exam Eligibility</h2>
+        <div class="bg-bg-surface border border-border-card p-5 rounded-2xl text-xs sm:text-sm space-y-3">
+          <p class="m-0 font-bold text-text-main">Candidates must satisfy the following educational qualifications to qualify for MH SET:</p>
+          <ul class="list-disc pl-5 m-0 space-y-1.5 text-text-muted">
+            <li><strong>Master's Degree:</strong> Candidates must hold a Master's Degree (M.A., M.Sc., M.Com., MBA, etc.) from a UGC-recognized university with at least <strong>55% marks</strong> (50% marks for OBC/SC/ST/PwD/Transgender candidates).</li>
+            <li><strong>Final Year Candidates:</strong> Candidates who are appearing for the final year Master's Degree examination or awaiting results can also apply provisionally.</li>
+            <li><strong>Age Limit:</strong> There is <strong>no upper age limit</strong> to appear for the Maharashtra SET exam.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </article>

@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import EventUpdateCard from "../components/EventUpdateCard.astro";
+import { OFFICIAL_LINKS } from "../constants/links";
 
 const title =
   "MHT CET Counselling 2026: Registration & Document Verification Guide";
@@ -345,7 +346,7 @@ const category = "Admission";
             links={[
               {
                 text: "लॉगिन करा (Login Now)",
-                href: "https://cetcell.mahacet.org/",
+                href: OFFICIAL_LINKS.cetCell,
                 isPrimary: true,
               },
             ]}
@@ -758,7 +759,7 @@ const category = "Admission";
             links={[
               {
                 text: "Counselling Login",
-                href: "https://cetcell.mahacet.org/",
+                href: OFFICIAL_LINKS.cetCell,
                 isPrimary: true,
               },
             ]}
