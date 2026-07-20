@@ -26,7 +26,7 @@ export async function GET() {
   ];
 
   // Dynamically find all articles in src/pages/
-  const postFiles = import.meta.glob('/src/pages/*.astro');
+  const postFiles = import.meta.glob('/src/pages/**/*.astro');
   const nonArticleFiles = [
     "index.astro",
     "current-recruitment.astro",
@@ -49,16 +49,18 @@ export async function GET() {
     "mpsc-exam-details-information.astro",
     "calculator.astro",
     "age-calculator.astro",
-    "sgpa-cgpa-calculator.astro"
+    "sgpa-cgpa-calculator.astro",
+    "admit-card-article-template.astro",
+    "article-template.astro"
   ];
   
   const dynamicPages = Object.keys(postFiles)
     .filter((file) => {
       const filename = file.split('/').pop() || "";
-      return !nonArticleFiles.includes(filename);
+      return !nonArticleFiles.includes(filename) && filename !== "index.astro";
     })
     .map(file => {
-      const slug = file.split('/').pop()?.replace('.astro', '');
+      const slug = file.replace('/src/pages/', '').replace('.astro', '');
       return `/${slug}`;
     });
 
