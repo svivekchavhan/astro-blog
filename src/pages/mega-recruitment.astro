@@ -78,9 +78,12 @@ const recruitments = [
   
 ];
 
-// Show all recruitments on the mega recruitment page
-// Filter recruitments: Only show active campaigns (status: apply-now)
-const filteredRecruitments = recruitments.filter(job => job.status === "apply-now");
+// Filter recruitments: Only show active campaigns (status: apply-now) with >= 1000 vacancies
+const filteredRecruitments = recruitments.filter(job => {
+  if (job.status !== "apply-now") return false;
+  const count = parseInt(job.vacancies.replace(/[^0-9]/g, ''), 10) || 0;
+  return count >= 1000;
+});
 
 const totalVacanciesSum = filteredRecruitments.reduce((sum, job) => sum + (parseInt(job.vacancies.replace(/[^0-9]/g, ''), 10) || 0), 0);
 const totalVacancies = totalVacanciesSum.toLocaleString("en-IN") + "+";
