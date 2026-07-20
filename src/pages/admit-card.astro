@@ -87,25 +87,21 @@ const admitCards = [
                 <a href={card.link} class="no-underline hover:no-underline block">
                   <h3 class="text-base text-text-main font-bold leading-tight mb-1 group-hover:text-primary transition-colors">{card.title}</h3>
                 </a>
-                <div class="flex items-center gap-1.5 text-xs text-text-muted">
-                  <HiOutlineBuildingOffice className="shrink-0 text-xs" />
-                  <span class="truncate">{card.organisation}</span>
-                </div>
-              </div>
+                <div class="flex flex-wrap items-center justify-between gap-2.5">
+                  <div class="flex items-center gap-1.5 text-xs text-text-muted">
+                    <HiOutlineBuildingOffice className="shrink-0 text-xs" />
+                    <span class="truncate">{card.organisation}</span>
+                  </div>
 
-              <!-- Middle: Dates (Release & Exam) -->
-              <div class="flex flex-row gap-6 md:gap-8 shrink-0 py-2 md:py-0 border-y md:border-y-0 border-border-card dark:border-border-card/20 my-1 md:my-0">
-                <div>
-                  <span class="block text-[0.6rem] text-text-muted uppercase tracking-wider mb-0.5">Release Date</span>
-                  <span class="flex items-center gap-1 text-xs font-bold text-text-main">
-                    <HiOutlineCalendarDays className="text-primary text-xs shrink-0" /> {card.releaseDate}
-                  </span>
-                </div>
-                <div>
-                  <span class="block text-[0.6rem] text-text-muted uppercase tracking-wider mb-0.5">Exam Date</span>
-                  <span class="flex items-center gap-1 text-xs font-bold text-text-main">
-                    <HiOutlineCalendarDays className="text-primary text-xs shrink-0" /> {card.examDate}
-                  </span>
+                  <!-- Date Pills below the title -->
+                  <div class="flex flex-wrap items-center gap-2">
+                    <span class="flex items-center gap-1 text-[0.65rem] font-bold bg-primary/5 text-primary border border-solid border-primary/20 px-2.5 py-1 rounded-lg uppercase tracking-wider shadow-sm">
+                      <HiOutlineCalendarDays className="text-primary text-xs shrink-0" /> Release: {card.releaseDate}
+                    </span>
+                    <span class="flex items-center gap-1 text-[0.65rem] font-bold bg-rose-500/5 dark:bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-solid border-rose-500/20 px-2.5 py-1 rounded-lg uppercase tracking-wider shadow-sm">
+                      <HiOutlineCalendarDays className="text-rose-500 text-xs shrink-0" /> Exam: {card.examDate}
+                    </span>
+                  </div>
                 </div>
               </div>
 
