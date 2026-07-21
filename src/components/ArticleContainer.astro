@@ -1,0 +1,75 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalURL?: string;
+  date: string;
+  category: string;
+  image?: string;
+  customBreadcrumbs?: { name: string; url?: string }[];
+}
+
+const {
+  title,
+  description,
+  canonicalURL,
+  date,
+  category,
+  image,
+  customBreadcrumbs,
+} = Astro.props;
+---
+
+<Layout 
+  title={title} 
+  description={description}
+  canonicalURL={canonicalURL}
+  image={image}
+  article={true}
+  customBreadcrumbs={customBreadcrumbs}
+>
+  <article class="py-8">
+    <!-- Header -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-primary/20">
+          {category}
+        </span>
+        <span class="text-text-muted text-sm">• {date}</span>
+      </div>
+      <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-text-main mb-6 leading-[1.25]">
+        {title}
+      </h1>
+      <p class="text-text-muted text-lg leading-relaxed border-l-4 border-primary pl-6 py-2 italic">
+        {description}
+      </p>
+    </div>
+
+    <!-- Quick Language Navigation Links -->
+    <div class="flex gap-4 mb-8">
+      <a href="#marathi-version" class="text-primary font-bold text-sm hover:underline">↓ मराठी आवृत्ती (Marathi Version)</a>
+      <span class="text-text-muted">|</span>
+      <a href="#english-version" class="text-primary font-bold text-sm hover:underline">↓ English Version</a>
+    </div>
+
+    <!-- ================= MARATHI VERSION ================= -->
+    <div id="marathi-version">
+      <slot />
+    </div>
+
+    <!-- ================= LANGUAGE SEPARATOR & ENGLISH VERSION ================= -->
+    {Astro.slots.has('english') && (
+      <div class="my-16 border-t-2 border-dashed border-border-card flex items-center justify-center relative">
+        <span class="absolute bg-bg-base px-8 py-2 text-base sm:text-lg font-extrabold uppercase tracking-widest text-primary border border-border-card rounded-full shadow-md">
+          English Version
+        </span>
+      </div>
+      
+      <div id="english-version" class="opacity-95">
+        <slot name="english" />
+      </div>
+    )}
+  </article>
+</Layout>
