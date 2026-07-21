@@ -1,5 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { articlesRegistry } from "../constants/articles";
+import { HiOutlineCalendarDays } from "react-icons/hi2";
 
 interface Props {
   title: string;
@@ -20,6 +22,40 @@ const {
   image,
   customBreadcrumbs,
 } = Astro.props;
+
+// Determine current pathname
+const currentPath = canonicalURL 
+  ? new URL(canonicalURL).pathname 
+  : Astro.url.pathname;
+
+// Calculate relevance score and find top 3 related articles
+const relatedArticles = articlesRegistry
+  .filter(art => {
+    // Remove trailing slashes to accurately match paths
+    const cleanArtSlug = art.slug.replace(/\/$/, "");
+    const cleanCurrentPath = currentPath.replace(/\/$/, "");
+    return cleanArtSlug !== cleanCurrentPath;
+  })
+  .map(art => {
+    let score = 0;
+    // Boost score if category matches
+    if (art.category.toLowerCase() === category.toLowerCase()) {
+      score += 5;
+    }
+    // Boost score if both are admit-cards or jobs
+    const isArtAdmit = art.slug.includes("/admit-card/");
+    const isCurrAdmit = currentPath.includes("/admit-card/");
+    if (isArtAdmit === isCurrAdmit) {
+      score += 3;
+    }
+    return { ...art, score };
+  })
+  // Sort by relevance score descending, then by date descending
+  .sort((a, b) => {
+    if (b.score !== a.score) return b.score - a.score;
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
+  })
+  .slice(0, 6);
 ---
 
 <Layout 
@@ -69,6 +105,62 @@ const {
       
       <div id="english-version" class="opacity-95">
         <slot name="english" />
+      </div>
+    )}
+
+    <!-- ================= DYNAMIC RELATED ARTICLES SECTION ================= -->
+    {relatedArticles.length > 0 && (
+      <div class="mt-20 pt-10 border-t border-border-card dark:border-border-card/30 not-prose">
+        <div class="flex items-center gap-2 mb-8">
+          <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+          <h3 class="text-xl md:text-2xl font-black text-text-main m-0 uppercase tracking-tight">
+            संबंधित महत्वाचे लेख / Related Articles
+          </h3>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {relatedArticles.map(art => (
+            <a 
+              href={art.slug} 
+              class="group flex flex-col bg-bg-surface border border-border-card hover:border-primary rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-md no-underline"
+            >
+              <!-- Card Image -->
+              <div class="relative aspect-video w-full overflow-hidden bg-black/10">
+                <img 
+                  src={art.image} 
+                  alt={art.titleEn} 
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div class="absolute top-3 left-3">
+                  <span class="bg-primary/95 backdrop-blur-xs text-white px-2 py-0.5 rounded text-[0.6rem] font-bold uppercase tracking-wider">
+                    {art.category}
+                  </span>
+                </div>
+              </div>
+
+              <!-- Card Content -->
+              <div class="p-4 flex-1 flex flex-col justify-between">
+                <div class="space-y-2">
+                  <!-- Title Marathi -->
+                  <h4 class="text-sm font-extrabold text-text-main line-clamp-2 leading-snug group-hover:text-primary transition-colors m-0">
+                    {art.titleMr}
+                  </h4>
+                  <!-- Title English -->
+                  <p class="text-[0.7rem] text-text-muted line-clamp-1 m-0 font-medium">
+                    {art.titleEn}
+                  </p>
+                </div>
+                
+                <!-- Card Footer Date -->
+                <div class="flex items-center gap-1.5 text-[0.65rem] text-text-muted/80 font-bold pt-3 mt-3 border-t border-border-card/50">
+                  <HiOutlineCalendarDays className="text-primary text-xs shrink-0" />
+                  <span>{art.date}</span>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
       </div>
     )}
   </article>
