@@ -10,6 +10,15 @@ export interface NaukriUpdate {
 
 export const naukriUpdates: NaukriUpdate[] = [
   {
+    titleEn: "MH SET 2026 Exam Rescheduled: Date Postponed to 27 September",
+    titleHi: "महाराष्ट्र सेट परीक्षा (MH-SET) २०२६ पुढे ढकलली, नवीन तारीख जाहीर",
+    date: "July 20, 2026",
+    badge: "Rescheduled",
+    badgeType: "important",
+    link: "/admit-card/maharashtra-set-exam-date-postponed",
+    description: "The Savitribai Phule Pune University has postponed the MH-SET 2026 exam to September 27, 2026 due to a clash with the CTET exam. Read official notice."
+  },
+  {
     titleEn: "Maharashtra Arogya Bharti 2026: Recruitment Announced for 7,195 Posts",
     titleHi: "महाराष्ट्र आरोग्य विभाग भरती २०२६: ७,१९५ रिक्त जागांची मेगा भरती जाहीर",
     date: "July 12, 2026",
