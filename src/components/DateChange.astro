@@ -1,0 +1,30 @@
+---
+interface Props {
+  oldDate: string;
+  newDate: string;
+}
+
+const { oldDate, newDate } = Astro.props;
+---
+
+<span class="inline-flex flex-wrap items-center gap-1.5">
+  <!-- Old Date (dark red, strikethrough) -->
+  <span class="text-rose-600 dark:text-rose-400/75 line-through font-medium whitespace-nowrap">
+    {oldDate}
+  </span>
+  <!-- Transition Arrow Indicator -->
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    fill="none" 
+    viewBox="0 0 24 24" 
+    stroke-width="3" 
+    stroke="currentColor" 
+    class="w-3.5 h-3.5 text-emerald-500 shrink-0 select-none"
+  >
+    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+  </svg>
+  <!-- New Date (bold emerald green) -->
+  <span class="text-emerald-600 dark:text-emerald-400 font-extrabold">
+    {newDate}
+  </span>
+</span>

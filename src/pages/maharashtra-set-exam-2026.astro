@@ -1,5 +1,6 @@
 ---
 import ArticleContainer from "../components/ArticleContainer.astro";
+import DateChange from "../components/DateChange.astro";
 import { translateMarathi } from "../utils/wordLibrary";
 import { 
   HiOutlineCalendarDays, 
@@ -178,21 +179,17 @@ const updates = [
           </tr>
         </thead>
         <tbody>
-          <tr class="bg-rose-500/5 dark:bg-rose-500/10 text-rose-600 dark:text-rose-400">
-            <td class="p-3 border border-border-card font-semibold">जुनी अर्ज शेवटची तारीख (Previous Last Date)</td>
-            <td class="p-3 border border-border-card line-through font-semibold">०५ जुलै २०२६</td>
+          <tr>
+            <td class="p-3 border border-border-card text-text-muted font-medium">अर्ज करण्याची शेवटची तारीख (Application Last Date)</td>
+            <td class="p-3 border border-border-card">
+              <DateChange oldDate="०५ जुलै २०२६" newDate="२३ जुलै २०२६" />
+            </td>
           </tr>
-          <tr class="bg-emerald-500/5 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
-            <td class="p-3 border border-border-card font-extrabold">नवीन सुधारित शेवटची तारीख (New Last Date - Late Fee)</td>
-            <td class="p-3 border border-border-card font-black">२३ जुलै २०२६</td>
-          </tr>
-          <tr class="bg-rose-500/5 dark:bg-rose-500/10 text-rose-600 dark:text-rose-400">
-            <td class="p-3 border border-border-card font-semibold">जुनी परीक्षा तारीख (Previous Exam Date)</td>
-            <td class="p-3 border border-border-card line-through font-semibold">२६ जुलै २०२६</td>
-          </tr>
-          <tr class="bg-emerald-500/5 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
-            <td class="p-3 border border-border-card font-extrabold">नवीन सुधारित परीक्षा तारीख (New Exam Date)</td>
-            <td class="p-3 border border-border-card font-black">०६ सप्टेंबर २०२६ (रविवार)</td>
+          <tr>
+            <td class="p-3 border border-border-card text-text-muted font-medium">परीक्षा तारीख (Exam Date)</td>
+            <td class="p-3 border border-border-card">
+              <DateChange oldDate="२६ जुलै २०२६" newDate="०६ सप्टेंबर २०२६ (संभाव्य)" />
+            </td>
           </tr>
           <tr>
             <td class="p-3 border border-border-card text-text-muted font-medium">अधिकृत परीक्षा माहितीपत्रक PDF</td>
@@ -340,21 +337,17 @@ const updates = [
             </tr>
           </thead>
           <tbody>
-            <tr class="bg-rose-500/5 dark:bg-rose-500/10 text-rose-600 dark:text-rose-400">
-              <td class="p-3 border border-border-card font-semibold">Previous Application Last Date</td>
-              <td class="p-3 border border-border-card line-through font-semibold">July 05, 2026</td>
+            <tr>
+              <td class="p-3 border border-border-card text-text-muted font-medium">Online Application Last Date</td>
+              <td class="p-3 border border-border-card">
+                <DateChange oldDate="July 05, 2026" newDate="July 23, 2026 (with Late Fee)" />
+              </td>
             </tr>
-            <tr class="bg-emerald-500/5 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
-              <td class="p-3 border border-border-card font-extrabold">New Extended Last Date (with Late Fee)</td>
-              <td class="p-3 border border-border-card font-black">July 23, 2026</td>
-            </tr>
-            <tr class="bg-rose-500/5 dark:bg-rose-500/10 text-rose-600 dark:text-rose-400">
-              <td class="p-3 border border-border-card font-semibold">Previous Exam Date</td>
-              <td class="p-3 border border-border-card line-through font-semibold">July 26, 2026</td>
-            </tr>
-            <tr class="bg-emerald-500/5 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
-              <td class="p-3 border border-border-card font-extrabold">New Rescheduled Exam Date</td>
-              <td class="p-3 border border-border-card font-black">September 06, 2026 (Sunday)</td>
+            <tr>
+              <td class="p-3 border border-border-card text-text-muted font-medium">Written Examination Date</td>
+              <td class="p-3 border border-border-card">
+                <DateChange oldDate="July 26, 2026" newDate="September 06, 2026 (Sunday)" />
+              </td>
             </tr>
             <tr>
               <td class="p-3 border border-border-card text-text-muted font-medium">Official Exam Notification PDF</td>

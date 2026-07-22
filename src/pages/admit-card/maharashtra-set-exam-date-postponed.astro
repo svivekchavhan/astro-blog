@@ -1,5 +1,6 @@
 ---
 import ArticleContainer from "../../components/ArticleContainer.astro";
+import DateChange from "../../components/DateChange.astro";
 import { 
   HiOutlineCalendarDays, 
   HiOutlineArrowTopRightOnSquare, 
@@ -128,13 +129,11 @@ const category = "Exam Date Update";
             <td class="p-3 border border-border-card text-text-muted font-medium">जाहीर प्रकटन तारीख (Notification Date)</td>
             <td class="p-3 border border-border-card text-text-main">२० जुलै २०२६</td>
           </tr>
-          <tr class="bg-rose-500/5 dark:bg-rose-500/10 text-rose-600 dark:text-rose-400">
-            <td class="p-3 border border-border-card font-semibold">जुनी परीक्षा तारीख (Previous Exam Date)</td>
-            <td class="p-3 border border-border-card line-through font-semibold">०६ सप्टेंबर २०२६</td>
-          </tr>
-          <tr class="bg-emerald-500/5 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
-            <td class="p-3 border border-border-card font-extrabold">नवीन सुधारित परीक्षा तारीख (New Exam Date)</td>
-            <td class="p-3 border border-border-card font-black">२७ सप्टेंबर २०२६ (रविवार)</td>
+          <tr>
+            <td class="p-3 border border-border-card text-text-muted font-medium">परीक्षा तारीख (Exam Date)</td>
+            <td class="p-3 border border-border-card">
+              <DateChange oldDate="०६ सप्टेंबर २०२६" newDate="२७ सप्टेंबर २०२६ (रविवार)" />
+            </td>
           </tr>
           <tr>
             <td class="p-3 border border-border-card text-text-muted font-medium">प्रवेश पत्र (Admit Card Release)</td>
@@ -278,13 +277,11 @@ const category = "Exam Date Update";
               <td class="p-3 border border-border-card text-text-muted font-medium">Postponement Notice Date</td>
               <td class="p-3 border border-border-card text-text-main">July 20, 2026</td>
             </tr>
-            <tr class="bg-rose-500/5 dark:bg-rose-500/10 text-rose-600 dark:text-rose-400">
-              <td class="p-3 border border-border-card font-semibold">Old Tentative Exam Date</td>
-              <td class="p-3 border border-border-card line-through font-semibold">September 06, 2026</td>
-            </tr>
-            <tr class="bg-emerald-500/5 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
-              <td class="p-3 border border-border-card font-extrabold">New Rescheduled Exam Date</td>
-              <td class="p-3 border border-border-card font-black">September 27, 2026 (Sunday)</td>
+            <tr>
+              <td class="p-3 border border-border-card text-text-muted font-medium">Written Examination Date</td>
+              <td class="p-3 border border-border-card">
+                <DateChange oldDate="September 06, 2026" newDate="September 27, 2026 (Sunday)" />
+              </td>
             </tr>
             <tr>
               <td class="p-3 border border-border-card text-text-muted font-medium">Admit Card Release Date</td>
