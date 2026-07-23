@@ -1,0 +1,408 @@
+---
+import Layout from "../layouts/Layout.astro";
+import {
+  HiOutlineCalendarDays,
+  HiOutlineUser,
+  HiOutlineClipboard,
+  HiOutlineTrash,
+  HiOutlineArrowLeft,
+  HiOutlineInformationCircle,
+  HiOutlineClock,
+  HiOutlineAcademicCap,
+  HiOutlineCheckCircle,
+} from "react-icons/hi2";
+
+const title = "MPSC Age Calculator in Marathi: वयोमर्यादा व वय मोजण्याचे अचूक साधन | MahaSandhi";
+const description = "MPSC परीक्षा, पोलीस भरती आणि सर्व शासकीय नोकऱ्यांसाठी वयाची अचूक गणना (Years, Months, Days). MPSC वयोमर्यादा सूट, कट-ऑफ तारीख वयोमर्यादा कॅल्क्युलेटर.";
+const canonicalURL = "https://mahasandhi.in/mpsc-age-calculator-marathi";
+---
+
+<Layout title={title} description={description} canonicalURL={canonicalURL} hideSidebar={true}>
+  <section class="pt-4 pb-16 not-prose">
+    <!-- Back to Hub link -->
+    <div class="max-w-[750px] mx-auto px-2 md:px-0 mb-6">
+      <a
+        href="/calculator"
+        class="inline-flex items-center gap-1.5 text-xs text-primary hover:text-secondary font-bold uppercase tracking-wider transition-colors no-underline"
+      >
+        <HiOutlineArrowLeft className="text-sm" /> Back to Calculators & Tools
+      </a>
+    </div>
+
+    <!-- Header Section -->
+    <div class="text-center mb-8 max-w-[750px] mx-auto px-2">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wider mb-3">
+        <HiOutlineAcademicCap className="text-base shrink-0" /> MPSC Student Special Tool
+      </div>
+      <h1 class="text-3xl md:text-5xl font-extrabold mb-3 tracking-tight text-text-main m-0">
+        MPSC <span class="gradient-text">Age Calculator (मराठी)</span>
+      </h1>
+      <p class="text-text-muted text-sm sm:text-base leading-relaxed max-w-xl mx-auto m-0">
+        MPSC, पोलीस भरती, तलाठी व सर्व स्पर्धा परीक्षांच्या फॉर्मसाठी जाहिरातीत दिलेल्या कट-ऑफ तारखेनुसार अचूक वय (वर्षे, महिने, दिवस) मोजा.
+      </p>
+    </div>
+
+    <!-- Main Calculator Container -->
+    <div class="max-w-[750px] mx-auto px-2 md:px-0">
+      <div class="bg-bg-surface border border-border-card rounded-3xl p-6 md:p-8 shadow-sm">
+        
+        <!-- Quick Cutoff Preset Buttons for MPSC Students -->
+        <div class="mb-6 p-4 bg-primary/5 border border-primary/20 rounded-2xl">
+          <span class="text-xs font-bold text-text-main block uppercase tracking-wider mb-2">
+            ⚡ Quick Selection (कट-ऑफ तारीख निवडा):
+          </span>
+          <div class="flex flex-wrap gap-2">
+            <button 
+              type="button" 
+              class="preset-date-btn px-3 py-1.5 bg-bg-surface border border-border-card rounded-xl text-xs font-bold text-text-main hover:border-primary transition-all cursor-pointer"
+              data-date="today"
+            >
+              आजची तारीख (Today)
+            </button>
+            <button 
+              type="button" 
+              class="preset-date-btn px-3 py-1.5 bg-bg-surface border border-border-card rounded-xl text-xs font-bold text-text-main hover:border-primary transition-all cursor-pointer"
+              data-date="2026-07-01"
+            >
+              1 जुलै 2026 (MPSC Std)
+            </button>
+            <button 
+              type="button" 
+              class="preset-date-btn px-3 py-1.5 bg-bg-surface border border-border-card rounded-xl text-xs font-bold text-text-main hover:border-primary transition-all cursor-pointer"
+              data-date="2026-11-01"
+            >
+              1 नोव्हेंबर 2026
+            </button>
+            <button 
+              type="button" 
+              class="preset-date-btn px-3 py-1.5 bg-bg-surface border border-border-card rounded-xl text-xs font-bold text-text-main hover:border-primary transition-all cursor-pointer"
+              data-date="2026-01-01"
+            >
+              1 जानेवारी 2026
+            </button>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <form id="age-calc-form" class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <!-- Date of Birth Input -->
+            <div class="flex flex-col gap-2">
+              <label for="dob" class="text-sm font-bold text-text-main flex items-center gap-1.5">
+                <HiOutlineUser className="text-primary text-base" /> जन्म तारीख (Date of Birth)
+              </label>
+              <input
+                type="date"
+                id="dob"
+                name="dob"
+                required
+                class="w-full bg-bg-base border-2 border-border-card rounded-2xl px-4 py-3 text-text-main font-semibold focus:border-primary focus:outline-none transition-all duration-300 shadow-sm"
+              />
+            </div>
+
+            <!-- Age at Date Input -->
+            <div class="flex flex-col gap-2">
+              <label for="ageAt" class="text-sm font-bold text-text-main flex items-center gap-1.5">
+                <HiOutlineCalendarDays className="text-primary text-base" /> जाहिरातीतील तारीख (Cut-off Date)
+              </label>
+              <input
+                type="date"
+                id="ageAt"
+                name="ageAt"
+                required
+                class="w-full bg-bg-base border-2 border-border-card rounded-2xl px-4 py-3 text-text-main font-semibold focus:border-primary focus:outline-none transition-all duration-300 shadow-sm"
+              />
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="flex gap-4 pt-2">
+            <button
+              type="submit"
+              class="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-gradient-to-r from-primary to-secondary hover:shadow-[0_0_15px_rgba(56,189,248,0.4)] text-white text-sm font-bold uppercase tracking-wider rounded-xl transition-all shadow-sm cursor-pointer border-none"
+            >
+              वय मोजा (Calculate Age)
+            </button>
+            <button
+              type="button"
+              id="btn-reset"
+              class="inline-flex items-center justify-center gap-1.5 px-4 py-3.5 bg-rose-500/5 hover:bg-rose-500/10 border border-solid border-rose-500/20 text-rose-500 font-bold uppercase tracking-wider text-xs rounded-xl cursor-pointer transition-colors"
+              title="Reset Form"
+            >
+              <HiOutlineTrash className="text-base" />
+            </button>
+          </div>
+        </form>
+
+        <!-- Error Alert -->
+        <div
+          id="error-alert"
+          class="hidden mt-6 p-4 bg-rose-500/10 border border-rose-500/20 rounded-2xl flex items-start gap-3 text-rose-500 text-sm"
+        >
+          <HiOutlineInformationCircle className="text-lg shrink-0 mt-0.5" />
+          <div>
+            <strong class="font-bold">त्रुटी (Error):</strong> जन्म तारीख ही जाहिरातीतील कट-ऑफ तारखेपेक्षा आधीची असणे आवश्यक आहे.
+          </div>
+        </div>
+
+        <!-- Results Section (Initially Hidden) -->
+        <div
+          id="results-section"
+          class="hidden mt-8 space-y-6 pt-6 border-t border-border-card dark:border-border-card/30 animate-[fadeInUp_0.5s_ease_forwards]"
+        >
+          <!-- Main Result Box -->
+          <div class="text-center bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/20 rounded-2xl p-6 relative overflow-hidden">
+            <span class="text-[0.65rem] bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded-full font-extrabold uppercase tracking-wider">
+              तुमचे अचूक वय (Your Exact Age)
+            </span>
+            <div id="main-result-mr" class="text-2xl md:text-3xl font-black text-text-main mt-3 leading-tight">
+              <!-- Marathi result -->
+            </div>
+            <div id="main-result" class="text-sm md:text-base text-text-muted mt-2 font-medium">
+              <!-- English result -->
+            </div>
+          </div>
+
+          <!-- Secondary Details Grid -->
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="bg-bg-base border border-border-card p-4 rounded-2xl text-center">
+              <span class="text-[0.6rem] text-text-muted block uppercase font-bold tracking-wider mb-1">एकूण महिने (Months)</span>
+              <span id="stat-months" class="text-xl font-extrabold text-text-main">--</span>
+            </div>
+
+            <div class="bg-bg-base border border-border-card p-4 rounded-2xl text-center">
+              <span class="text-[0.6rem] text-text-muted block uppercase font-bold tracking-wider mb-1">एकूण हप्ते (Weeks)</span>
+              <span id="stat-weeks" class="text-xl font-extrabold text-text-main">--</span>
+            </div>
+
+            <div class="bg-bg-base border border-border-card p-4 rounded-2xl text-center">
+              <span class="text-[0.6rem] text-text-muted block uppercase font-bold tracking-wider mb-1">एकूण दिवस (Days)</span>
+              <span id="stat-days" class="text-xl font-extrabold text-text-main">--</span>
+            </div>
+
+            <div class="bg-bg-base border border-border-card p-4 rounded-2xl text-center col-span-2 md:col-span-3 flex flex-col md:flex-row items-center justify-center gap-2 py-3.5">
+              <HiOutlineClock className="text-primary text-lg" />
+              <span class="text-xs text-text-muted font-semibold">पुढील वाढदिवस (Next Birthday):</span>
+              <span id="stat-next-birthday" class="text-xs font-bold text-text-main">--</span>
+            </div>
+          </div>
+
+          <!-- Copy Button -->
+          <div class="flex justify-end pt-2">
+            <button
+              type="button"
+              id="btn-copy"
+              class="inline-flex items-center gap-1.5 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary border border-primary/20 text-xs font-bold uppercase tracking-wider rounded-xl transition-colors cursor-pointer"
+            >
+              <HiOutlineClipboard className="text-base" /> कॉपी करा (Copy Result)
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- MPSC Upper Age Limit Rules Guide Box for Students -->
+      <div class="mt-10 bg-bg-surface border border-border-card rounded-3xl p-6 md:p-8">
+        <h2 class="text-lg md:text-xl font-bold text-text-main mb-4 flex items-center gap-2">
+          🏛️ MPSC परीक्षा वयोमर्यादा नियम आणि सवलत (Age Limits)
+        </h2>
+        <div class="overflow-x-auto mb-4">
+          <table class="w-full text-xs sm:text-sm border-collapse">
+            <thead>
+              <tr class="bg-primary/10 text-primary font-bold text-left border-b border-border-card">
+                <th class="p-3">प्रवर्ग (Category)</th>
+                <th class="p-3">किमान वय (Min Age)</th>
+                <th class="p-3">कमाल वय (Max Age)</th>
+                <th class="p-3">वयोमर्यादा सूट</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-border-card text-text-muted font-medium">
+              <tr>
+                <td class="p-3 font-bold text-text-main">अमागास (Open / General)</td>
+                <td class="p-3">19 / 21 वर्षे</td>
+                <td class="p-3">38 वर्षे</td>
+                <td class="p-3">नियम लागू</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-bold text-text-main">मागासवर्गीय (OBC / SC / ST / EWS)</td>
+                <td class="p-3">19 / 21 वर्षे</td>
+                <td class="p-3">43 वर्षे</td>
+                <td class="p-3">+5 वर्षे सूट</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-bold text-text-main">प्राविण्यप्राप्त खेळाडू (Sportsman)</td>
+                <td class="p-3">19 / 21 वर्षे</td>
+                <td class="p-3">43 वर्षे</td>
+                <td class="p-3">+5 वर्षे सूट</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-bold text-text-main">दिव्यांग उमेदवार (PwD)</td>
+                <td class="p-3">19 / 21 वर्षे</td>
+                <td class="p-3">45 वर्षे</td>
+                <td class="p-3">+7 वर्षे सूट</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-bold text-text-main">माजी सैनिक (Ex-Servicemen)</td>
+                <td class="p-3">19 वर्षे</td>
+                <td class="p-3">सेवा कालावधी + 3 वर्षे</td>
+                <td class="p-3">निकाली नियम</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-xs text-text-muted">
+          * टीप: प्रत्येक जाहिरातीतील पदनिहाय वयोमर्यादेचा नियम वेगळा असू शकतो. कृपया MPSC च्या अधिकृत जाहिरातीतील कट-ऑफ तारीख तपासून घ्या.
+        </p>
+      </div>
+
+    </div>
+  </section>
+</Layout>
+
+<script>
+  function setupMpscAgeCalculator() {
+    const form = document.getElementById("age-calc-form") as HTMLFormElement | null;
+    const dobInput = document.getElementById("dob") as HTMLInputElement | null;
+    const ageAtInput = document.getElementById("ageAt") as HTMLInputElement | null;
+    const resetButton = document.getElementById("btn-reset") as HTMLButtonElement | null;
+    const copyButton = document.getElementById("btn-copy") as HTMLButtonElement | null;
+    const presetBtns = document.querySelectorAll(".preset-date-btn") as NodeListOf<HTMLButtonElement>;
+
+    const errorAlert = document.getElementById("error-alert");
+    const resultsSection = document.getElementById("results-section");
+
+    const mainResultEl = document.getElementById("main-result");
+    const mainResultMrEl = document.getElementById("main-result-mr");
+    const statMonthsEl = document.getElementById("stat-months");
+    const statWeeksEl = document.getElementById("stat-weeks");
+    const statDaysEl = document.getElementById("stat-days");
+    const statNextBdayEl = document.getElementById("stat-next-birthday");
+
+    if (!form || !dobInput || !ageAtInput) return;
+
+    const today = new Date().toISOString().split("T")[0];
+    if (!ageAtInput.value) {
+      ageAtInput.value = today;
+    }
+
+    // Cutoff Preset buttons handler
+    presetBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const val = btn.dataset.date;
+        if (val === "today") {
+          ageAtInput.value = today;
+        } else if (val) {
+          ageAtInput.value = val;
+        }
+      });
+    });
+
+    // Reset handler
+    resetButton?.addEventListener("click", () => {
+      form.reset();
+      ageAtInput.value = today;
+      resultsSection?.classList.add("hidden");
+      errorAlert?.classList.add("hidden");
+    });
+
+    // Form Submit logic
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const dobVal = dobInput.value;
+      const ageAtVal = ageAtInput.value;
+
+      if (!dobVal || !ageAtVal) return;
+
+      const dob = new Date(dobVal);
+      const ageAt = new Date(ageAtVal);
+
+      if (dob >= ageAt) {
+        errorAlert?.classList.remove("hidden");
+        resultsSection?.classList.add("hidden");
+        return;
+      }
+
+      errorAlert?.classList.add("hidden");
+
+      let years = ageAt.getFullYear() - dob.getFullYear();
+      let months = ageAt.getMonth() - dob.getMonth();
+      let days = ageAt.getDate() - dob.getDate();
+
+      if (days < 0) {
+        const prevMonth = new Date(ageAt.getFullYear(), ageAt.getMonth(), 0);
+        days += prevMonth.getDate();
+        months--;
+      }
+
+      if (months < 0) {
+        months += 12;
+        years--;
+      }
+
+      const resultMr = `${years} वर्षे, ${months} महिने, ${days} दिवस`;
+      const resultEn = `${years} Years, ${months} Months, ${days} Days`;
+
+      const diffMs = ageAt.getTime() - dob.getTime();
+      const totalDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+      const totalWeeks = Math.floor(totalDays / 7);
+      const totalMonths = years * 12 + months;
+
+      const nextBdayYear =
+        ageAt.getMonth() > dob.getMonth() ||
+        (ageAt.getMonth() === dob.getMonth() && ageAt.getDate() >= dob.getDate())
+          ? ageAt.getFullYear() + 1
+          : ageAt.getFullYear();
+
+      const nextBday = new Date(nextBdayYear, dob.getMonth(), dob.getDate());
+      let nextDiffMs = nextBday.getTime() - ageAt.getTime();
+      const nextTotalDays = Math.ceil(nextDiffMs / (1000 * 60 * 60 * 24));
+
+      let nextMonths = nextBday.getMonth() - ageAt.getMonth();
+      let nextDays = nextBday.getDate() - ageAt.getDate();
+
+      if (nextDays < 0) {
+        const prevMonth = new Date(nextBday.getFullYear(), nextBday.getMonth(), 0);
+        nextDays += prevMonth.getDate();
+        nextMonths--;
+      }
+      if (nextMonths < 0) {
+        nextMonths += 12;
+      }
+
+      let nextBdayString = "";
+      if (nextTotalDays === 365 || nextTotalDays === 0) {
+        nextBdayString = "आज आपला वाढदिवस आहे! (Happy Birthday! 🎂)";
+      } else {
+        nextBdayString = `${nextMonths} महिने आणि ${nextDays} दिवस शिल्लक`;
+      }
+
+      if (mainResultEl) mainResultEl.textContent = resultEn;
+      if (mainResultMrEl) mainResultMrEl.textContent = resultMr;
+      if (statMonthsEl) statMonthsEl.textContent = totalMonths.toLocaleString();
+      if (statWeeksEl) statWeeksEl.textContent = totalWeeks.toLocaleString();
+      if (statDaysEl) statDaysEl.textContent = totalDays.toLocaleString();
+      if (statNextBdayEl) statNextBdayEl.textContent = nextBdayString;
+
+      resultsSection?.classList.remove("hidden");
+    });
+
+    // Copy Results
+    copyButton?.addEventListener("click", () => {
+      if (!mainResultEl || !mainResultMrEl || !statMonthsEl || !statWeeksEl || !statDaysEl || !statNextBdayEl) return;
+
+      const textToCopy = `MPSC Age Calculation Results (MahaSandhi):\n------------------------------------\nवय (Age): ${mainResultMrEl.textContent} (${mainResultEl.textContent})\nएकूण महिने: ${statMonthsEl.textContent}\nएकूण हप्ते: ${statWeeksEl.textContent}\nएकूण दिवस: ${statDaysEl.textContent}\nपुढील वाढदिवस: ${statNextBdayEl.textContent}\nCalculated via: mahasandhi.in/mpsc-age-calculator-marathi`;
+
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        const originalText = copyButton.innerHTML;
+        copyButton.innerHTML = "✓ Copied!";
+        setTimeout(() => {
+          copyButton.innerHTML = originalText;
+        }, 2000);
+      });
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", setupMpscAgeCalculator);
+  document.addEventListener("astro:page-load", setupMpscAgeCalculator);
+</script>

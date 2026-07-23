@@ -22,7 +22,7 @@ export async function GET() {
     '/sitemap',
     '/mpsc',
     '/calculator',
-    '/age-calculator',
+    '/mpsc-age-calculator-marathi',
     '/sgpa-cgpa-calculator'
   ];
 
