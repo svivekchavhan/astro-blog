@@ -1,5 +1,10 @@
+import { MAHARASHTRA_DISTRICTS } from '../constants/districts';
+
 export async function GET() {
   const siteUrl = 'https://mahasandhi.in';
+  
+  // District pages
+  const districtPages = MAHARASHTRA_DISTRICTS.map(d => `/district/${d.slug}`);
   
   // Static pages
   const staticPages = [
@@ -66,7 +71,7 @@ export async function GET() {
       return `/${slug}`;
     });
 
-  const allPages = [...staticPages, ...dynamicPages];
+  const allPages = [...staticPages, ...districtPages, ...dynamicPages];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

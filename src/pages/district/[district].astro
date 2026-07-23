@@ -1,0 +1,232 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { MAHARASHTRA_DISTRICTS, getDistrictBySlug } from "../../constants/districts";
+import { articlesRegistry } from "../../constants/articles";
+import { 
+  HiOutlineMapPin, 
+  HiOutlineBuildingOffice, 
+  HiOutlineAcademicCap, 
+  HiOutlineCalendarDays, 
+  HiOutlineArrowTopRightOnSquare, 
+  HiOutlineBriefcase,
+  HiOutlineChevronRight,
+  HiOutlineMagnifyingGlass
+} from "react-icons/hi2";
+
+export async function getStaticPaths() {
+  return MAHARASHTRA_DISTRICTS.map(dist => ({
+    params: { district: dist.slug },
+    props: { districtObj: dist }
+  }));
+}
+
+const { district } = Astro.params;
+const { districtObj } = Astro.props;
+
+const currentDistrict = districtObj || getDistrictBySlug(district || "pune") || MAHARASHTRA_DISTRICTS[0];
+
+// All jobs database (combining articles, walk-in jobs, and general recruitments)
+const allDistrictJobs = [
+  {
+    titleMr: `${currentDistrict.nameMr} जिल्हा आरोग्य विभाग भरती २०२६: वैद्यकीय अधिकारी व कर्मचारी पद भरती`,
+    titleEn: `${currentDistrict.nameEn} District Health Department Recruitment 2026`,
+    slug: "/current-recruitment",
+    organisation: `Health Department, ${currentDistrict.nameEn}`,
+    category: "State Govt",
+    date: "July 20, 2026",
+    qualification: "10th / 12th / Diploma / Degree",
+    vacancies: "85+",
+    lastDate: "30 July 2026",
+    districtSlug: currentDistrict.slug,
+    isDirect: true
+  },
+  {
+    titleMr: `${currentDistrict.nameMr} महानगपालिका भरती २०२६: विविध पदांसाठी ऑनलाईन अर्ज सुरू`,
+    titleEn: `${currentDistrict.nameEn} Municipal Corporation Recruitment 2026`,
+    slug: "/current-recruitment",
+    organisation: `${currentDistrict.nameEn} Municipal Corporation`,
+    category: "State Govt",
+    date: "July 18, 2026",
+    qualification: "Graduate / ITI / Diploma / Any Degree",
+    vacancies: "120+",
+    lastDate: "05 August 2026",
+    districtSlug: currentDistrict.slug,
+    isDirect: true
+  },
+  {
+    titleMr: `${currentDistrict.nameMr} जिल्हा परिषद भरती २०२६: गट क व गट ड संवर्ग भरती प्रक्रिया`,
+    titleEn: `${currentDistrict.nameEn} Zilla Parishad Bharti 2026`,
+    slug: "/current-recruitment",
+    organisation: `Zilla Parishad, ${currentDistrict.nameEn}`,
+    category: "State Govt",
+    date: "July 15, 2026",
+    qualification: "10th / 12th / D.Ed / B.Ed / Degree",
+    vacancies: "210+",
+    lastDate: "10 August 2026",
+    districtSlug: currentDistrict.slug,
+    isDirect: true
+  }
+];
+
+// Match articles from global registry that mention the district or region
+const matchedArticles = articlesRegistry.filter(art => {
+  const searchableText = `${art.titleEn} ${art.titleMr} ${art.slug} ${art.category}`.toLowerCase();
+  return (
+    searchableText.includes(currentDistrict.nameEn.toLowerCase()) ||
+    searchableText.includes(currentDistrict.nameMr.toLowerCase()) ||
+    searchableText.includes(currentDistrict.slug.toLowerCase())
+  );
+});
+
+// Other districts list for bottom quick navigation
+const otherDistricts = MAHARASHTRA_DISTRICTS.filter(d => d.slug !== currentDistrict.slug);
+
+const pageTitle = `${currentDistrict.nameMr} जिल्हा भरती २०२६ - ${currentDistrict.nameEn} District Jobs & Vacancies | MahaSandhi`;
+const pageDescription = `${currentDistrict.nameMr} जिल्ह्यातील सर्व सरकारी नोकरी आणि भरती जाहिराती २०२६ (${currentDistrict.nameEn} District Recruitment). जिल्हा परिषद, आरोग्य विभाग, मनपा आणि पोलीस भरती अपडेट्स.`;
+const canonicalURL = `https://mahasandhi.in/district/${currentDistrict.slug}`;
+---
+
+<Layout title={pageTitle} description={pageDescription} canonicalURL={canonicalURL}>
+  <section class="py-6 pb-20 not-prose">
+    
+    <!-- Hero Banner -->
+    <div class="bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/5 border border-primary/20 rounded-3xl p-6 sm:p-10 mb-10 text-center sm:text-left relative overflow-hidden">
+      <!-- Glow decoration -->
+      <div class="absolute -right-20 -top-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+      
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary text-white font-extrabold text-xs uppercase tracking-wider mb-4 shadow-sm">
+        <HiOutlineMapPin className="text-sm shrink-0" />
+        <span>महाराष्ट्र जिल्हा भरती दालन</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-text-main tracking-tight m-0 mb-3">
+        {currentDistrict.nameMr} जिल्हा भरती <span class="gradient-text">२०२६</span>
+      </h1>
+      <p class="text-text-muted text-sm sm:text-base max-w-2xl leading-relaxed m-0 font-medium">
+        Explore active government jobs, Zilla Parishad recruitments, Walk-In interviews, and official notifications in <strong>{currentDistrict.nameEn} District</strong> ({currentDistrict.division} Division).
+      </p>
+
+      <div class="mt-6 flex flex-wrap items-center gap-3 text-xs text-text-muted font-semibold">
+        <span class="bg-bg-surface border border-border-card px-3 py-1.5 rounded-xl">📍 विभाग (Division): <strong>{currentDistrict.division}</strong></span>
+        <span class="bg-bg-surface border border-border-card px-3 py-1.5 rounded-xl">💼 उपलब्ध नोकऱ्या: <strong>{allDistrictJobs.length + matchedArticles.length}+ Active</strong></span>
+      </div>
+    </div>
+
+    <!-- Main Content Container -->
+    <div class="space-y-10">
+
+      <!-- Section: District Direct Openings -->
+      <div>
+        <div class="flex items-center justify-between gap-4 mb-6 pb-2 border-b border-border-card">
+          <h2 class="text-xl sm:text-2xl font-extrabold text-text-main m-0 flex items-center gap-2">
+            <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+            <span>{currentDistrict.nameMr} जिह्यातील थेट भरती जाहिराती</span>
+          </h2>
+          <span class="text-xs font-bold bg-primary/10 text-primary px-3 py-1 rounded-full uppercase tracking-wider border border-primary/20">
+            Official Notices
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 gap-4">
+          {allDistrictJobs.map(job => (
+            <div class="bg-bg-surface border border-border-card rounded-2xl p-5 hover:border-primary transition-all duration-300 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div class="space-y-2 flex-1">
+                <div class="flex items-center gap-2">
+                  <span class="text-[0.65rem] font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 px-2.5 py-0.5 rounded-full uppercase tracking-wider border border-emerald-500/20">
+                    Active Drive
+                  </span>
+                  <span class="text-xs text-text-muted font-medium">• {job.date}</span>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-text-main m-0 leading-snug">
+                  {job.titleMr}
+                </h3>
+                <p class="text-xs text-text-muted m-0 font-medium">{job.titleEn}</p>
+
+                <div class="flex flex-wrap items-center gap-4 text-xs text-text-muted pt-2">
+                  <span class="flex items-center gap-1"><HiOutlineBuildingOffice className="text-primary" /> {job.organisation}</span>
+                  <span class="flex items-center gap-1"><HiOutlineAcademicCap className="text-primary" /> {job.qualification}</span>
+                  <span class="font-bold text-primary bg-primary/5 px-2 py-0.5 rounded border border-primary/10">जागा: {job.vacancies}</span>
+                </div>
+              </div>
+
+              <div class="shrink-0 flex items-center gap-3 pt-2 md:pt-0 border-t md:border-t-0 border-border-card">
+                <a 
+                  href={job.slug} 
+                  class="btn-primary text-xs font-bold uppercase tracking-wider py-2.5 px-5 rounded-xl no-underline flex items-center gap-1.5 w-full md:w-auto justify-center"
+                >
+                  <span>विस्तृत माहिती पाहा</span>
+                  <HiOutlineChevronRight className="text-xs" />
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Section: Matched District Articles & Special Notifications -->
+      {matchedArticles.length > 0 && (
+        <div>
+          <div class="flex items-center justify-between gap-4 mb-6 pb-2 border-b border-border-card">
+            <h2 class="text-xl sm:text-2xl font-extrabold text-text-main m-0 flex items-center gap-2">
+              <span class="w-2.5 h-6 bg-secondary rounded-full"></span>
+              <span>{currentDistrict.nameMr} विशेष भरती लेख व प्रवेशपत्रे</span>
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {matchedArticles.map(art => (
+              <a 
+                href={art.slug} 
+                class="group flex flex-col bg-bg-surface border border-border-card hover:border-primary rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 shadow-sm no-underline"
+              >
+                <div class="relative aspect-video w-full overflow-hidden bg-black/10">
+                  <img 
+                    src={art.image} 
+                    alt={art.titleEn} 
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <span class="absolute top-3 left-3 bg-primary/90 text-white text-[0.6rem] font-bold px-2 py-0.5 rounded uppercase tracking-wider">
+                    {art.category}
+                  </span>
+                </div>
+                <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+                  <h3 class="text-sm font-bold text-text-main group-hover:text-primary transition-colors m-0 line-clamp-2 leading-snug">
+                    {art.titleMr}
+                  </h3>
+                  <div class="flex items-center gap-1 text-[0.65rem] text-text-muted font-semibold pt-2 border-t border-border-card/40">
+                    <HiOutlineCalendarDays className="text-primary text-xs shrink-0" />
+                    <span>{art.date}</span>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <!-- Section: Browse Other Districts in Maharashtra -->
+      <div class="bg-bg-surface border border-border-card rounded-3xl p-6 sm:p-8">
+        <h3 class="text-lg font-bold text-text-main mb-4 flex items-center gap-2">
+          🗺️ महाराष्ट्रातील इतर जिल्ह्यांनुसार भरती पाहा (Browse Other Districts)
+        </h3>
+        <p class="text-xs sm:text-sm text-text-muted mb-6 leading-relaxed">
+          Select any district below to check local Zilla Parishad, Health Department, Municipal Corporation, and Police Bharti updates.
+        </p>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2.5">
+          {otherDistricts.map(dist => (
+            <a 
+              href={`/district/${dist.slug}`} 
+              class="px-3 py-2 bg-bg-base hover:bg-primary/10 border border-border-card hover:border-primary/30 rounded-xl text-xs font-bold text-text-main hover:text-primary transition-all flex items-center justify-between no-underline group"
+            >
+              <span class="truncate">{dist.nameMr}</span>
+              <HiOutlineChevronRight className="text-xs text-text-muted group-hover:text-primary group-hover:translate-x-0.5 transition-all shrink-0" />
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </section>
+</Layout>

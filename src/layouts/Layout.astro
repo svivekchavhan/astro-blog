@@ -14,10 +14,12 @@ import {
   HiOutlineDocumentText,
   HiOutlineExclamationTriangle,
   HiOutlineMap,
-  HiOutlineEnvelope
+  HiOutlineEnvelope,
+  HiOutlineMapPin
 } from "react-icons/hi2";
 import { OFFICIAL_LINKS } from "../constants/links";
 import { naukriUpdates } from "../constants/naukriUpdates";
+import { MAHARASHTRA_DISTRICTS } from "../constants/districts";
 import "../styles/global.css";
 
 interface Props {
@@ -587,6 +589,37 @@ const breadcrumbSchema = {
                       <HiOutlineChevronRight className="text-xs transform group-hover/all:translate-x-0.5 transition-transform" />
                     </a>
                   </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- District Wise Jobs Widget -->
+            <div class="flex flex-col">
+              <div class="bg-emerald-600 text-white px-5 py-3 rounded-t-2xl font-bold flex items-center gap-2 border border-emerald-600 border-b-0 shadow-xs mt-0">
+                <HiOutlineMapPin className="text-white text-[1.1rem] shrink-0" />
+                <span class="text-xs font-extrabold uppercase tracking-wider">जिल्ह्यानुसार भरती (District Jobs)</span>
+              </div>
+              
+              <div class="bg-bg-surface border border-emerald-500/20 border-t-0 p-4 rounded-b-2xl transition-all duration-300 shadow-sm mt-0 relative overflow-hidden">
+                <div class="flex flex-wrap gap-1.5 mb-3">
+                  {MAHARASHTRA_DISTRICTS.slice(0, 12).map((dist) => (
+                    <a
+                      href={`/district/${dist.slug}`}
+                      class="px-2.5 py-1 bg-bg-base hover:bg-emerald-500/10 border border-border-card hover:border-emerald-500/30 text-text-main hover:text-emerald-600 dark:hover:text-emerald-400 rounded-lg text-[0.7rem] font-bold transition-all no-underline inline-flex items-center gap-1"
+                    >
+                      <span>{dist.nameMr}</span>
+                    </a>
+                  ))}
+                </div>
+
+                <div class="pt-2 border-t border-border-card/30 flex justify-center">
+                  <a
+                    href="/sitemap"
+                    class="inline-flex items-center gap-1 text-[0.7rem] font-bold text-emerald-600 dark:text-emerald-400 hover:underline uppercase tracking-wider no-underline transition-colors group/dist"
+                  >
+                    <span>सर्व 36 जिल्हे पाहा (View All)</span>
+                    <HiOutlineChevronRight className="text-xs transform group-hover/dist:translate-x-0.5 transition-transform" />
+                  </a>
                 </div>
               </div>
             </div>
