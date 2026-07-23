@@ -540,12 +540,47 @@ const breadcrumbSchema = {
       {
         !hideSidebar && (
           <aside class="w-full lg:flex-1 space-y-6 lg:sticky lg:top-[calc(var(--navbar-height,190px)+16px)] h-fit">
-            <!-- Sidebar Menu Widget -->
+            <!-- Important Updates Widget (Placed at Top) -->
+            <div class="flex flex-col">
+              <!-- Heading Container for Important Updates -->
+              <div class="bg-rose-500 text-white px-5 py-3 rounded-t-2xl font-bold flex items-center gap-2 border border-rose-500 border-b-0 shadow-xs mt-0">
+                <HiOutlineMegaphone className="text-white text-[1.1rem] shrink-0" />
+                <span class="text-xs font-extrabold uppercase tracking-wider">Important Updates (महत्वाचे अपडेट्स)</span>
+              </div>
+              
+              <!-- Content Container for Important Updates -->
+              <div class="bg-bg-surface border border-rose-500/20 hover:border-rose-500 border-t-0 p-5 rounded-b-2xl transition-all duration-300 shadow-sm mt-0 relative overflow-hidden">
+                <div class="flex flex-col">
+                  {urgentUpdates.map((update) => (
+                    <div class="py-2.5 border-b border-border-card dark:border-border-card/30 last:border-b-0 last:pb-0 first:pt-0">
+                      <a
+                        href={update.link}
+                        class="flex items-center justify-between w-full gap-3 text-text-muted hover:text-rose-500 transition-colors duration-300 text-xs font-semibold leading-snug no-underline group/link"
+                      >
+                        <span class="flex items-start gap-2">
+                          <HiOutlineChevronRight className="text-rose-500 text-[0.85rem] shrink-0 mt-0.5 transform group-hover/link:translate-x-1 transition-transform" />
+                          <span>{update.title}</span>
+                        </span>
+                        
+                        <span 
+                          class="urgent-new-badge shrink-0 text-[0.5rem] bg-rose-500 text-white px-1.5 py-0.5 rounded font-bold uppercase tracking-wider select-none animate-pulse"
+                          data-expiry={update.expiry}
+                        >
+                          NEW
+                        </span>
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <!-- Latest Naukri Updates Widget -->
             <div class="flex flex-col">
               <!-- Heading Container for Latest Naukri Updates -->
               <div class="bg-primary text-white px-5 py-3 rounded-t-2xl font-bold flex items-center gap-2 border border-primary border-b-0 shadow-xs mt-0">
                 <HiOutlineBell className="text-white text-[1.1rem] shrink-0" />
-                <span class="text-xs font-extrabold uppercase tracking-wider">Latest Naukri Updates</span>
+                <span class="text-xs font-extrabold uppercase tracking-wider">Latest Naukri Updates (नवीन नोकरी अपडेट्स)</span>
               </div>
               
               <!-- Content Container for Latest Naukri Updates -->
@@ -597,7 +632,7 @@ const breadcrumbSchema = {
             <div class="flex flex-col">
               <div class="bg-emerald-600 text-white px-5 py-3 rounded-t-2xl font-bold flex items-center gap-2 border border-emerald-600 border-b-0 shadow-xs mt-0">
                 <HiOutlineMapPin className="text-white text-[1.1rem] shrink-0" />
-                <span class="text-xs font-extrabold uppercase tracking-wider">जिल्ह्यानुसार भरती (District Jobs)</span>
+                <span class="text-xs font-extrabold uppercase tracking-wider">District Jobs (जिल्ह्यानुसार भरती)</span>
               </div>
               
               <div class="bg-bg-surface border border-emerald-500/20 border-t-0 p-4 rounded-b-2xl transition-all duration-300 shadow-sm mt-0 relative overflow-hidden">
@@ -620,41 +655,6 @@ const breadcrumbSchema = {
                     <span>सर्व 36 जिल्हे पाहा (View All)</span>
                     <HiOutlineChevronRight className="text-xs transform group-hover/dist:translate-x-0.5 transition-transform" />
                   </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Important Updates Widget -->
-            <div class="flex flex-col">
-              <!-- Heading Container for Important Updates -->
-              <div class="bg-rose-500 text-white px-5 py-3 rounded-t-2xl font-bold flex items-center gap-2 border border-rose-500 border-b-0 shadow-xs mt-0">
-                <HiOutlineMegaphone className="text-white text-[1.1rem] shrink-0" />
-                <span class="text-xs font-extrabold uppercase tracking-wider">Important Updates</span>
-              </div>
-              
-              <!-- Content Container for Important Updates -->
-              <div class="bg-bg-surface border border-rose-500/20 hover:border-rose-500 border-t-0 p-5 rounded-b-2xl transition-all duration-300 shadow-sm mt-0 relative overflow-hidden">
-                <div class="flex flex-col">
-                  {urgentUpdates.map((update) => (
-                    <div class="py-2.5 border-b border-border-card dark:border-border-card/30 last:border-b-0 last:pb-0 first:pt-0">
-                      <a
-                        href={update.link}
-                        class="flex items-center justify-between w-full gap-3 text-text-muted hover:text-rose-500 transition-colors duration-300 text-xs font-semibold leading-snug no-underline group/link"
-                      >
-                        <span class="flex items-start gap-2">
-                          <HiOutlineChevronRight className="text-rose-500 text-[0.85rem] shrink-0 mt-0.5 transform group-hover/link:translate-x-1 transition-transform" />
-                          <span>{update.title}</span>
-                        </span>
-                        
-                        <span 
-                          class="urgent-new-badge shrink-0 text-[0.5rem] bg-rose-500 text-white px-1.5 py-0.5 rounded font-bold uppercase tracking-wider select-none animate-pulse"
-                          data-expiry={update.expiry}
-                        >
-                          NEW
-                        </span>
-                      </a>
-                    </div>
-                  ))}
                 </div>
               </div>
             </div>
