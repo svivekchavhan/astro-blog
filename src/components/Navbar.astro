@@ -21,71 +21,64 @@ import {
   HiOutlineCalculator,
   HiOutlineUserGroup,
 } from "react-icons/hi2";
+import { articlesRegistry } from "../constants/articles";
+import { MAHARASHTRA_DISTRICTS } from "../constants/districts";
+import { naukriUpdates } from "../constants/naukriUpdates";
 import Marquee from "./Marquee.astro";
 
-// Fetch posts for search suggestions
-const postFiles = import.meta.glob("../pages/*.astro");
-const nonArticleFiles = [
-  "index.astro",
-  "current-recruitment.astro",
-  "walk-in-jobs.astro",
-  "bank-recruitment.astro",
-  "naukri-updates.astro",
-  "mega-recruitment.astro",
-  "result.astro",
-  "admit-card.astro",
-  "answer-key.astro",
-  "admission.astro",
-  "about-us.astro",
-  "contact-us.astro",
-  "sitemap.astro",
-  "privacy-policy.astro",
-  "terms-of-service.astro",
-  "disclaimer.astro",
-  "blog.astro",
-  "404.astro",
-  "mpsc.astro",
-  "mpsc-exam-details-information.astro",
-  "mpsc-age-calculator-marathi.astro",
-  "sgpa-cgpa-calculator.astro",
-];
-
-const articles = Object.keys(postFiles)
-  .filter((file) => {
-    const filename = file.split("/").pop() || "";
-    return !nonArticleFiles.includes(filename);
-  })
-  .map((file) => {
-    const slug = file.split("/").pop()?.replace(".astro", "");
-    const name = slug?.replace(/-/g, " ");
-    const href = `/${slug}`;
-    return { title: name, href, slug };
-  });
-
+// 1. Core Pages & Tools
 const mainPages = [
-  { title: "Home", href: "/" },
-  { title: "Current Recruitment", href: "/current-recruitment" },
-  { title: "Walk-In Jobs", href: "/walk-in-jobs" },
-  { title: "Bank Recruitment", href: "/bank-recruitment" },
-  { title: "Naukri Updates", href: "/naukri-updates" },
-  { title: "Mega Recruitment", href: "/mega-recruitment" },
-  { title: "Result Page", href: "/result" },
-  { title: "Admit Card", href: "/admit-card" },
-  { title: "Answer Key", href: "/answer-key" },
-  { title: "Admission", href: "/admission" },
-  { title: "About Us", href: "/about-us" },
-  { title: "Contact Us", href: "/contact-us" },
-  { title: "Sitemap", href: "/sitemap" },
-  { title: "Privacy Policy", href: "/privacy-policy" },
-  { title: "Terms of Service", href: "/terms-of-service" },
-  { title: "Disclaimer", href: "/disclaimer" },
-  { title: "MPSC", href: "/mpsc" },
-  { title: "Calculators & Tools", href: "/calculator" },
-  { title: "MPSC Age Calculator (Marathi)", href: "/mpsc-age-calculator-marathi" },
-  { title: "SGPA & CGPA Calculator", href: "/sgpa-cgpa-calculator" },
+  { title: "Home - Sarkari Naukri Updates", href: "/", category: "Page", keywords: "home sarkari naukri mahasandhi" },
+  { title: "Current Recruitment 2026 (नवीन भरती जाहिराती)", href: "/current-recruitment", category: "Jobs", keywords: "recruitment jobs vacancies naukri bharti" },
+  { title: "10th Pass Govt Jobs 2026 (१०वी पास सरकारी नोकऱ्या)", href: "/10th-pass-government-jobs-maharashtra", category: "Jobs", keywords: "10th pass ssc police bharti railway navy jobs" },
+  { title: "Walk-In Jobs & Interviews 2026 (वॉक-इन मुलाखत)", href: "/walk-in-jobs", category: "Walk-In", keywords: "walkin interview direct recruitment" },
+  { title: "Bank Recruitment 2026 (बँक भरती)", href: "/bank-recruitment", category: "Jobs", keywords: "bank ibps sbi po clerk" },
+  { title: "Naukri Updates & Alerts (नोकरी अपडेट्स)", href: "/naukri-updates", category: "Updates", keywords: "naukri alerts news" },
+  { title: "Mega Recruitment 2026 (मेगा भरती)", href: "/mega-recruitment", category: "Jobs", keywords: "mega bharti govt jobs" },
+  { title: "Result Page 2026 (निकाल)", href: "/result", category: "Result", keywords: "result cutoff merit list" },
+  { title: "Admit Card Download (प्रवेश पत्र / हॉलतिकीट)", href: "/admit-card", category: "Admit Card", keywords: "admit card hall ticket call letter" },
+  { title: "Answer Key 2026 (उत्तरतालिका)", href: "/answer-key", category: "Answer Key", keywords: "answer key response sheet" },
+  { title: "Admission 2026 (प्रवेश प्रक्रिया)", href: "/admission", category: "Admission", keywords: "admission mht cet iti counselling" },
+  { title: "MPSC Study Material & Exam Details (एमपीएससी)", href: "/mpsc", category: "MPSC", keywords: "mpsc polity syllabus prelims mains" },
+  { title: "MPSC Age Calculator (मराठी वय कॅल्क्युलेटर)", href: "/mpsc-age-calculator-marathi", category: "Calculator", keywords: "age calculator vaya ganak mpsc" },
+  { title: "SGPA & CGPA Percentage Calculator (टक्केवारी कॅल्क्युलेटर)", href: "/sgpa-cgpa-calculator", category: "Calculator", keywords: "sgpa cgpa percentage conversion marksheet" },
+  { title: "Calculators & Tools Hub", href: "/calculator", category: "Tool", keywords: "calculators tools" },
+  { title: "About Us", href: "/about-us", category: "Page", keywords: "about mission team" },
+  { title: "Contact Us", href: "/contact-us", category: "Page", keywords: "contact email feedback support" },
+  { title: "Sitemap Index", href: "/sitemap", category: "Page", keywords: "sitemap index pages" }
 ];
 
-const searchData = [...mainPages, ...articles];
+// 2. All Registered Articles (Marathi + English)
+const articleSearchItems = articlesRegistry.map(art => ({
+  title: `${art.titleMr} (${art.titleEn})`,
+  href: art.slug,
+  category: art.category || "Article",
+  keywords: `${art.titleMr} ${art.titleEn} ${art.category}`.toLowerCase()
+}));
+
+// 3. All 35+ District Pages (Marathi + English)
+const districtSearchItems = MAHARASHTRA_DISTRICTS.map(dist => ({
+  title: `${dist.nameMr} जिल्हा भरती (${dist.nameEn} District Jobs)`,
+  href: `/district/${dist.slug}`,
+  category: "District",
+  keywords: `${dist.nameMr} ${dist.nameEn} district bharti jobs ${dist.division}`.toLowerCase()
+}));
+
+// 4. Daily Naukri Updates
+const naukriUpdateSearchItems = naukriUpdates.map(u => ({
+  title: `${u.titleHi} (${u.titleEn})`,
+  href: u.link,
+  category: "Alert",
+  keywords: `${u.titleHi} ${u.titleEn}`.toLowerCase()
+}));
+
+// Combined Search Index
+const searchData = [
+  ...mainPages,
+  ...articleSearchItems,
+  ...districtSearchItems,
+  ...naukriUpdateSearchItems
+];
 ---
 
 <!-- Sticky Header Wrapper -->
@@ -588,23 +581,30 @@ const searchData = [...mainPages, ...articles];
         }
 
         const filtered = searchData
-          .filter((post) => post.title.toLowerCase().includes(query))
-          .slice(0, 5);
+          .filter((post) => {
+            const titleMatch = post.title.toLowerCase().includes(query);
+            const kwMatch = post.keywords ? post.keywords.toLowerCase().includes(query) : false;
+            return titleMatch || kwMatch;
+          })
+          .slice(0, 8);
 
         if (filtered.length > 0) {
           suggestionsList.innerHTML = filtered
             .map(
               (post) => `
-            <a href="${
-              post.href
-            }" class="flex items-center gap-3 px-4 py-3 hover:bg-primary/5 rounded-xl transition-colors group">
-              <div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+            <a href="${post.href}" class="flex items-center justify-between gap-3 px-3.5 py-2.5 hover:bg-primary/5 rounded-xl transition-colors group no-underline border-b border-border-card/20 last:border-b-0">
+              <div class="flex items-center gap-2.5 min-w-0">
+                <div class="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all shrink-0 text-xs">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                </div>
+                <span class="text-xs md:text-sm text-text-main font-medium truncate">${highlightMatch(
+                  post.title,
+                  query,
+                )}</span>
               </div>
-              <span class="text-sm text-text-main font-medium line-clamp-1">${highlightMatch(
-                post.title,
-                query,
-              )}</span>
+              <span class="text-[0.55rem] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider shrink-0 bg-primary/10 text-primary border border-primary/20">
+                ${post.category || 'Page'}
+              </span>
             </a>
           `,
             )

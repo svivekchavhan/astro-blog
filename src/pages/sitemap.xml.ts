@@ -10,6 +10,7 @@ export async function GET() {
   const staticPages = [
     '',
     '/current-recruitment',
+    '/10th-pass-government-jobs-maharashtra',
     '/walk-in-jobs',
     '/bank-recruitment',
     '/naukri-updates',

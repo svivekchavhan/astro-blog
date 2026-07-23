@@ -1,0 +1,66 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { 
+  HiOutlineAcademicCap, 
+  HiOutlineBriefcase, 
+  HiOutlineArrowLeft,
+  HiOutlineClock
+} from "react-icons/hi2";
+
+const title = "10th Pass Government Jobs in Maharashtra 2026 (१०वी पास सरकारी नोकऱ्या) | MahaSandhi";
+const description = "Find latest 10th pass government job notifications 2026 in Maharashtra. Check SSC, Police Bharti, Zilla Parishad, Army, Railway 10th pass vacancies at mahasandhi.in.";
+const canonicalURL = "https://mahasandhi.in/10th-pass-government-jobs-maharashtra";
+---
+
+<Layout title={title} description={description} canonicalURL={canonicalURL} hideSidebar={true}>
+  <section class="py-6 pb-20 not-prose">
+    
+    <!-- Back to Recruitment Hub -->
+    <div class="max-w-4xl mx-auto px-2 md:px-0 mb-6">
+      <a
+        href="/current-recruitment"
+        class="inline-flex items-center gap-1.5 text-xs text-primary hover:text-secondary font-bold uppercase tracking-wider transition-colors no-underline"
+      >
+        <HiOutlineArrowLeft className="text-sm" /> Back to Current Recruitment
+      </a>
+    </div>
+
+    <!-- Header Section -->
+    <div class="text-center mb-10 max-w-3xl mx-auto">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-extrabold uppercase tracking-wider mb-4 shadow-xs">
+        <HiOutlineAcademicCap className="text-sm shrink-0" />
+        <span>10th Pass Qualification (१०वी पास भरती)</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-text-main mb-3 m-0">
+        10th Pass <span class="gradient-text">Govt Jobs in Maharashtra</span>
+      </h1>
+      <p class="text-text-muted text-sm sm:text-base leading-relaxed m-0 max-w-2xl mx-auto font-medium">
+        १०वी उत्तीर्ण उमेदवारांसाठी महाराष्ट्रातील नवीन सरकारी नोकरी जाहिराती, जिल्हा परिषद, पोलीस भरती, आणि रेल्वे भरती अपडेट्स.
+      </p>
+    </div>
+
+    <!-- Placeholder Content Area for Future Jobs -->
+    <div class="max-w-4xl mx-auto space-y-6">
+      <div class="bg-bg-surface border border-dashed border-border-card rounded-3xl p-8 sm:p-12 text-center flex flex-col items-center justify-center min-h-[300px] shadow-sm">
+        <div class="w-14 h-14 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-4">
+          <HiOutlineClock className="text-2xl" />
+        </div>
+        <h2 class="text-xl font-bold text-text-main mb-2">
+          १० वी पास नवीन नोकरी जाहिराती लवकरच अपडेट केल्या जातील
+        </h2>
+        <p class="text-xs sm:text-sm text-text-muted max-w-md leading-relaxed m-0">
+          New 10th Pass Government Job notifications for Maharashtra will be posted here shortly. Please check back soon or browse current recruitment notices.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3 justify-center">
+          <a href="/current-recruitment" class="btn-primary text-xs font-bold uppercase tracking-wider py-2.5 px-5 rounded-xl no-underline">
+            Browse Live Recruitments
+          </a>
+          <a href="/walk-in-jobs" class="inline-flex items-center gap-1.5 px-5 py-2.5 bg-bg-base border border-border-card text-text-main hover:border-primary text-xs font-bold uppercase tracking-wider rounded-xl no-underline transition-colors">
+            Walk-In Jobs
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</Layout>
