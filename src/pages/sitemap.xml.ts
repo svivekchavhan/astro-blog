@@ -5,6 +5,7 @@ export async function GET() {
   const staticPages = [
     '',
     '/current-recruitment',
+    '/walk-in-jobs',
     '/bank-recruitment',
     '/naukri-updates',
     '/mega-recruitment',
@@ -30,6 +31,7 @@ export async function GET() {
   const nonArticleFiles = [
     "index.astro",
     "current-recruitment.astro",
+    "walk-in-jobs.astro",
     "bank-recruitment.astro",
     "naukri-updates.astro",
     "mega-recruitment.astro",

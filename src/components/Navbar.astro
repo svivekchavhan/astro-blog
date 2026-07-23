@@ -19,6 +19,7 @@ import {
   HiOutlineKey,
   HiOutlineAcademicCap,
   HiOutlineCalculator,
+  HiOutlineUserGroup,
 } from "react-icons/hi2";
 import Marquee from "./Marquee.astro";
 
@@ -27,6 +28,7 @@ const postFiles = import.meta.glob("../pages/*.astro");
 const nonArticleFiles = [
   "index.astro",
   "current-recruitment.astro",
+  "walk-in-jobs.astro",
   "bank-recruitment.astro",
   "naukri-updates.astro",
   "mega-recruitment.astro",
@@ -64,6 +66,7 @@ const articles = Object.keys(postFiles)
 const mainPages = [
   { title: "Home", href: "/" },
   { title: "Current Recruitment", href: "/current-recruitment" },
+  { title: "Walk-In Jobs", href: "/walk-in-jobs" },
   { title: "Bank Recruitment", href: "/bank-recruitment" },
   { title: "Naukri Updates", href: "/naukri-updates" },
   { title: "Mega Recruitment", href: "/mega-recruitment" },
@@ -327,6 +330,15 @@ const searchData = [...mainPages, ...articles];
           <div
             class="absolute right-0 mt-2 w-56 bg-bg-surface border border-border-card rounded-2xl shadow-xl py-2 opacity-0 invisible translate-y-2 group-hover/dropdown:opacity-100 group-hover/dropdown:visible group-hover/dropdown:translate-y-0 transition-all duration-300 z-50 backdrop-blur-xl flex flex-col"
           >
+            <a
+              href="/walk-in-jobs"
+              class="flex items-center gap-2 mx-2 my-1 px-3.5 py-2.5 rounded-xl bg-emerald-500/5 dark:bg-emerald-500/10 border border-solid border-emerald-500/25 text-text-main font-bold hover:bg-emerald-500/10 hover:border-emerald-500 hover:shadow-xs hover:shadow-emerald-500/5 transition-all duration-300 text-[0.68rem] uppercase tracking-wider group no-underline"
+            >
+              <HiOutlineUserGroup
+                className="text-sm shrink-0 text-emerald-500 group-hover:scale-110 transition-transform"
+              />
+              <span>Walk-In Jobs</span>
+            </a>
             <a
               href="/bank-recruitment"
               class="flex items-center gap-2 mx-2 my-1 px-3.5 py-2.5 rounded-xl bg-blue-500/5 dark:bg-blue-500/10 border border-solid border-blue-500/25 text-text-main font-bold hover:bg-blue-500/10 hover:border-blue-500 hover:shadow-xs hover:shadow-blue-500/5 transition-all duration-300 text-[0.68rem] uppercase tracking-wider group no-underline"

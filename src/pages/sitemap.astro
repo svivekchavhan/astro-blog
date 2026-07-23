@@ -4,6 +4,7 @@ import Layout from "../layouts/Layout.astro";
 const pages = [
   { name: "Home", href: "/" },
   { name: "Current Recruitment", href: "/current-recruitment" },
+  { name: "Walk-In Jobs", href: "/walk-in-jobs" },
   { name: "Bank Recruitment", href: "/bank-recruitment" },
   { name: "Naukri Updates", href: "/naukri-updates" },
   { name: "Mega Recruitment", href: "/mega-recruitment" },
@@ -30,6 +31,7 @@ const postFiles = import.meta.glob("./**/*.astro");
 const nonArticleFiles = [
   "index.astro",
   "current-recruitment.astro",
+  "walk-in-jobs.astro",
   "bank-recruitment.astro",
   "naukri-updates.astro",
   "mega-recruitment.astro",
