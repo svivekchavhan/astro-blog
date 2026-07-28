@@ -1,0 +1,202 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { MAHARASHTRA_DISTRICTS } from "../../constants/districts";
+import { 
+  HiOutlineMapPin, 
+  HiOutlineBuildingOffice, 
+  HiOutlineAcademicCap, 
+  HiOutlineChevronRight,
+  HiOutlineMagnifyingGlass,
+  HiOutlineSparkles,
+  HiOutlineBriefcase
+} from "react-icons/hi2";
+
+const title = "Maharashtra All 36 District Jobs 2026 - सर्व ३६ जिल्ह्यानुसार सरकारी नोकरी भरती | MahaSandhi";
+const description = "Find government job recruitments in all 36 districts of Maharashtra. Browse Zilla Parishad, Municipal Corporation, Health Department, and Police Bharti vacancies for Pune, Mumbai, Thane, Nagpur, Nashik, Sambhajinagar, and more at mahasandhi.in.";
+const canonicalURL = "https://mahasandhi.in/district";
+
+// Group districts by administrative division
+const divisions = Array.from(new Set(MAHARASHTRA_DISTRICTS.map(d => d.division)));
+---
+
+<Layout title={title} description={description} canonicalURL={canonicalURL}>
+  <section class="py-6 pb-20 not-prose">
+    
+    <!-- Hero Header -->
+    <div class="bg-gradient-to-r from-emerald-500/10 via-teal-500/10 to-primary/5 border border-emerald-500/20 rounded-3xl p-6 sm:p-10 mb-10 text-center relative overflow-hidden shadow-xs">
+      <div class="absolute -right-20 -top-20 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl -z-10"></div>
+      <div class="absolute -left-20 -bottom-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-600 text-white font-extrabold text-xs uppercase tracking-wider mb-4 shadow-xs">
+        <HiOutlineMapPin className="text-sm shrink-0" />
+        <span>सर्व ३६ जिल्हे (All 36 Districts)</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-text-main tracking-tight m-0 mb-3">
+        महाराष्ट्रातील <span class="gradient-text">सर्व ३६ जिल्ह्यानुसार भरती</span> २०२६
+      </h1>
+      <p class="text-text-muted text-sm sm:text-base max-w-2xl mx-auto leading-relaxed m-0 font-medium">
+        जिल्हा परिषद, आरोग्य विभाग, महानगरपालिका व पोलीस भरतीच्या नवनवीन जाहिराती पाहण्यासाठी खालीलपैकी आपला जिल्हा निवडा.
+      </p>
+
+      <!-- Metric Pills -->
+      <div class="mt-6 flex flex-wrap justify-center items-center gap-3 text-xs text-text-muted font-semibold">
+        <span class="bg-bg-surface/80 border border-border-card px-3.5 py-1.5 rounded-xl">📍 एकूण जिल्हे: <strong class="text-emerald-600 dark:text-emerald-400">36 Districts</strong></span>
+        <span class="bg-bg-surface/80 border border-border-card px-3.5 py-1.5 rounded-xl">🏢 प्रशासकीय विभाग: <strong class="text-primary">6 Divisions</strong></span>
+        <span class="bg-bg-surface/80 border border-border-card px-3.5 py-1.5 rounded-xl">⚡ दैनंदिन अपडेट्स: <strong class="text-rose-500">Live 2026</strong></span>
+      </div>
+    </div>
+
+    <!-- Search & Filter Bar Container -->
+    <div class="bg-bg-surface border border-border-card rounded-2xl p-4 sm:p-5 mb-8 shadow-xs space-y-4">
+      <!-- Search Input -->
+      <div class="relative flex items-center bg-bg-base/60 dark:bg-black/20 border border-border-card rounded-xl px-4 py-3 focus-within:border-emerald-500 transition-all duration-300">
+        <HiOutlineMagnifyingGlass className="text-text-muted text-lg mr-3 shrink-0" />
+        <input 
+          type="text" 
+          id="district-search"
+          placeholder="जिल्ह्याचे नाव शोधा (e.g. Pune, पुणे, Nagpur, नाशिक, ठाणे)..." 
+          class="bg-transparent border-none text-text-main font-sans text-sm outline-none w-full placeholder-text-muted/65"
+        />
+      </div>
+
+      <!-- Division Filter Chips -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar text-xs font-bold" id="division-filters">
+        <button 
+          data-division="all"
+          class="div-filter-btn active px-3.5 py-1.5 rounded-xl border border-emerald-500 bg-emerald-500 text-white shadow-xs cursor-pointer transition-all whitespace-nowrap"
+        >
+          सर्व विभाग (All Divisions)
+        </button>
+        {divisions.map(div => (
+          <button 
+            data-division={div}
+            class="div-filter-btn px-3.5 py-1.5 rounded-xl border border-border-card bg-bg-base hover:border-emerald-500/40 text-text-muted hover:text-emerald-600 dark:hover:text-emerald-400 cursor-pointer transition-all whitespace-nowrap"
+          >
+            {div} विभाग
+          </button>
+        ))}
+      </div>
+    </div>
+
+    <!-- District Cards Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="district-cards-grid">
+      {MAHARASHTRA_DISTRICTS.map(dist => (
+        <a 
+          href={`/district/${dist.slug}`}
+          data-name-mr={dist.nameMr.toLowerCase()}
+          data-name-en={dist.nameEn.toLowerCase()}
+          data-division={dist.division}
+          class="district-card group bg-bg-surface border border-border-card hover:border-emerald-500 rounded-2xl p-5 transition-all duration-300 hover:-translate-y-0.5 shadow-xs hover:shadow-emerald-500/10 flex items-center justify-between no-underline"
+        >
+          <div class="space-y-1.5 flex-1 min-w-0 pr-3">
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="text-[0.6rem] font-bold uppercase tracking-wider bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 px-2 py-0.5 rounded-md">
+                {dist.division}
+              </span>
+              {dist.popular && (
+                <span class="text-[0.55rem] font-extrabold uppercase tracking-widest bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20 px-1.5 py-0.5 rounded flex items-center gap-1">
+                  <HiOutlineSparkles className="text-[0.65rem]" /> Popular
+                </span>
+              )}
+            </div>
+
+            <h3 class="text-lg font-black text-text-main group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors m-0 truncate">
+              {dist.nameMr} <span class="text-xs font-normal text-text-muted">({dist.nameEn})</span>
+            </h3>
+
+            <p class="text-[0.75rem] text-text-muted m-0 flex items-center gap-1.5 font-medium">
+              <HiOutlineBriefcase className="text-emerald-500 text-xs shrink-0" />
+              <span>जिल्हा परिषद, मनपा व आरोग्य भरती</span>
+            </p>
+          </div>
+
+          <div class="w-9 h-9 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 group-hover:bg-emerald-500 group-hover:text-white flex items-center justify-center transition-all duration-300 shrink-0">
+            <HiOutlineChevronRight className="text-base group-hover:translate-x-0.5 transition-transform" />
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <!-- No Districts Found Message -->
+    <div id="no-districts-found" class="text-center py-16 bg-bg-surface border border-border-card rounded-2xl hidden mt-6">
+      <p class="text-text-muted text-sm m-0">तुम्ही शोधलेला जिल्हा सापडला नाही. कृपया स्पेलिंग तपासा.</p>
+    </div>
+
+  </section>
+</Layout>
+
+<script>
+  function initDistrictSearch() {
+    const searchInput = document.getElementById("district-search") as HTMLInputElement;
+    const filterBtns = document.querySelectorAll(".div-filter-btn") as NodeListOf<HTMLButtonElement>;
+    const cards = document.querySelectorAll(".district-card") as NodeListOf<HTMLAnchorElement>;
+    const noResults = document.getElementById("no-districts-found");
+
+    let currentDivision = "all";
+    let searchQuery = "";
+
+    function filterDistricts() {
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const nameMr = card.dataset.nameMr || "";
+        const nameEn = card.dataset.nameEn || "";
+        const div = card.dataset.division || "";
+
+        const matchesDivision = (currentDivision === "all" || div === currentDivision);
+        const matchesSearch = (
+          nameMr.includes(searchQuery) || 
+          nameEn.includes(searchQuery) ||
+          div.toLowerCase().includes(searchQuery)
+        );
+
+        if (matchesDivision && matchesSearch) {
+          card.classList.remove("hidden");
+          visibleCount++;
+        } else {
+          card.classList.add("hidden");
+        }
+      });
+
+      if (noResults) {
+        if (visibleCount === 0) {
+          noResults.classList.remove("hidden");
+        } else {
+          noResults.classList.add("hidden");
+        }
+      }
+    }
+
+    if (searchInput) {
+      searchInput.addEventListener("input", (e) => {
+        searchQuery = (e.target as HTMLInputElement).value.toLowerCase().trim();
+        filterDistricts();
+      });
+    }
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        filterBtns.forEach(b => {
+          b.classList.remove("active", "bg-emerald-500", "text-white", "border-emerald-500");
+          b.classList.add("bg-bg-base", "text-text-muted", "border-border-card");
+        });
+        btn.classList.add("active", "bg-emerald-500", "text-white", "border-emerald-500");
+        btn.classList.remove("bg-bg-base", "text-text-muted", "border-border-card");
+
+        currentDivision = btn.dataset.division || "all";
+        filterDistricts();
+      });
+    });
+  }
+
+  document.addEventListener("astro:page-load", initDistrictSearch);
+</script>
+
+<style>
+  .div-filter-btn.active {
+    background-color: #10b981 !important;
+    border-color: #10b981 !important;
+    color: #ffffff !important;
+  }
+</style>
