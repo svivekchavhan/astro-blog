@@ -1,0 +1,419 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { 
+  HiOutlineCalendarDays, 
+  HiOutlineCursorArrowRays,
+  HiOutlineArrowTopRightOnSquare,
+  HiOutlineDocumentText,
+  HiOutlineBuildingOffice,
+  HiOutlineAcademicCap,
+  HiOutlineArrowDownTray,
+  HiOutlineQueueList,
+  HiOutlineIdentification,
+  HiOutlineUserGroup,
+  HiOutlineBellAlert,
+  HiOutlineCheckBadge,
+  HiOutlineMegaphone
+} from "react-icons/hi2";
+
+const title = "MPSC गट-क सेवा संयुक्त पूर्व परीक्षा २०२६: ३,०८८ जागांसाठी शुद्धिपत्रक प्रसिद्ध, अर्ज मुदतवाढ व पदसंख्या वाढ!";
+const description = "महाराष्ट्र लोकसेवा आयोग (MPSC) गट-क सेवा संयुक्त पूर्व परीक्षा २०२६ चे नवीन शुद्धिपत्रक (Corrigendum) जाहीर. एकूण ३,०८८ पदे (तलाठी १५३९, लिपिक टंकलेखक १२१४ व इतर). ऑनलाईन अर्ज करण्याची मुदत ३१ जुलै २०२६ पर्यंत वाढवली असून परीक्षा २५ ऑक्टोबर २०२६ रोजी होणार आहे.";
+const canonicalURL = "https://mahasandhi.in/mpsc/mpsc-group-c-bharti-2026";
+const date = "July 22, 2026";
+const category = "MPSC Bharti";
+---
+
+<Layout 
+  title={title} 
+  description={description}
+  canonicalURL={canonicalURL}
+  image="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1200"
+  article={true}
+  hideSidebar={true}
+>
+  <article class="py-8">
+    <!-- Header -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-6 flex-wrap">
+        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-primary/20 flex items-center gap-1.5">
+          <HiOutlineMegaphone className="text-sm" /> {category}
+        </span>
+        <span class="bg-rose-500/10 text-rose-600 dark:text-rose-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-rose-500/20">
+          शुद्धिपत्रक (Corrigendum)
+        </span>
+        <span class="text-text-muted text-sm">• {date}</span>
+      </div>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-text-main mb-6 leading-[1.25]">
+        {title}
+      </h1>
+      <p class="text-text-muted text-lg leading-relaxed border-l-4 border-primary pl-6 py-2 italic">
+        {description}
+      </p>
+    </div>
+
+    <!-- Quick Highlights Banner -->
+    <div class="bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/20 rounded-3xl p-6 md:p-8 mb-12 shadow-sm">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+        <div class="p-3 bg-bg-surface/80 backdrop-blur-sm rounded-2xl border border-border-card">
+          <span class="text-xs text-text-muted block uppercase font-bold tracking-wider mb-1">एकूण पदे (Total Vacancies)</span>
+          <span class="text-2xl md:text-3xl font-black text-primary">3,088</span>
+        </div>
+        <div class="p-3 bg-bg-surface/80 backdrop-blur-sm rounded-2xl border border-border-card">
+          <span class="text-xs text-text-muted block uppercase font-bold tracking-wider mb-1">नवीन अंतिम तारीख (Last Date)</span>
+          <span class="text-lg md:text-xl font-extrabold text-rose-600 dark:text-rose-400">31 जुलै 2026</span>
+        </div>
+        <div class="p-3 bg-bg-surface/80 backdrop-blur-sm rounded-2xl border border-border-card">
+          <span class="text-xs text-text-muted block uppercase font-bold tracking-wider mb-1">परीक्षा तारीख (Exam Date)</span>
+          <span class="text-lg md:text-xl font-extrabold text-emerald-600 dark:text-emerald-400">25 ऑक्टोबर 2026</span>
+        </div>
+        <div class="p-3 bg-bg-surface/80 backdrop-blur-sm rounded-2xl border border-border-card">
+          <span class="text-xs text-text-muted block uppercase font-bold tracking-wider mb-1">परीक्षेचे स्वरूप (Exam Mode)</span>
+          <span class="text-lg md:text-xl font-bold text-text-main">Offline (OMR)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Resource Links Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 not-prose">
+      <a 
+        href="https://mpsconline.gov.in" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="group p-5 bg-gradient-to-br from-emerald-500/5 to-teal-500/5 hover:from-emerald-500/10 hover:to-teal-500/10 border border-emerald-500/20 hover:border-emerald-500/50 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-emerald-500/10 flex flex-col justify-between min-h-[130px]"
+      >
+        <div class="flex justify-between items-start">
+          <div class="p-3 bg-emerald-500/10 text-emerald-500 rounded-xl group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300">
+            <HiOutlineCursorArrowRays className="text-xl" />
+          </div>
+          <HiOutlineArrowTopRightOnSquare className="text-emerald-500/40 group-hover:text-emerald-500 transition-colors duration-300" />
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-text-main group-hover:text-emerald-500 transition-colors mb-0.5">ऑनलाईन अर्ज (Apply Online)</h4>
+          <span class="text-[0.7rem] text-text-muted">mpsconline.gov.in वर अर्ज करा</span>
+        </div>
+      </a>
+
+      <a 
+        href="https://mpsc.gov.in" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="group p-5 bg-gradient-to-br from-primary/5 to-primary-light/5 hover:from-primary/10 hover:to-primary-light/10 border border-primary/20 hover:border-primary/50 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-primary/10 flex flex-col justify-between min-h-[130px]"
+      >
+        <div class="flex justify-between items-start">
+          <div class="p-3 bg-primary/10 text-primary rounded-xl group-hover:bg-primary group-hover:text-white transition-all duration-300">
+            <HiOutlineDocumentText className="text-xl" />
+          </div>
+          <HiOutlineArrowTopRightOnSquare className="text-primary/40 group-hover:text-primary transition-colors duration-300" />
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-text-main group-hover:text-primary transition-colors mb-0.5">शुद्धिपत्रक PDF (Notice PDF)</h4>
+          <span class="text-[0.7rem] text-text-muted">अधिकृत जाहिरात व शुद्धिपत्रक</span>
+        </div>
+      </a>
+
+      <a 
+        href="/mpsc/mpsc-group-c-exam-details" 
+        class="group p-5 bg-gradient-to-br from-amber-500/5 to-orange-500/5 hover:from-amber-500/10 hover:to-orange-500/10 border border-amber-500/20 hover:border-amber-500/50 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-amber-500/10 flex flex-col justify-between min-h-[130px]"
+      >
+        <div class="flex justify-between items-start">
+          <div class="p-3 bg-amber-500/10 text-amber-500 rounded-xl group-hover:bg-amber-500 group-hover:text-white transition-all duration-300">
+            <HiOutlineAcademicCap className="text-xl" />
+          </div>
+          <HiOutlineArrowTopRightOnSquare className="text-amber-500/40 group-hover:text-amber-500 transition-colors duration-300" />
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-text-main group-hover:text-amber-500 transition-colors mb-0.5">गट क अभ्यासक्रम (Syllabus)</h4>
+          <span class="text-[0.7rem] text-text-muted">परीक्षा पद्धत व टायपिंग निकष</span>
+        </div>
+      </a>
+
+      <a 
+        href="/result" 
+        class="group p-5 bg-gradient-to-br from-rose-500/5 to-pink-500/5 hover:from-rose-500/10 hover:to-pink-500/10 border border-rose-500/20 hover:border-rose-500/50 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-rose-500/10 flex flex-col justify-between min-h-[130px]"
+      >
+        <div class="flex justify-between items-start">
+          <div class="p-3 bg-rose-500/10 text-rose-500 rounded-xl group-hover:bg-rose-500 group-hover:text-white transition-all duration-300">
+            <HiOutlineQueueList className="text-xl" />
+          </div>
+          <HiOutlineArrowTopRightOnSquare className="text-rose-500/40 group-hover:text-rose-500 transition-colors duration-300" />
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-text-main group-hover:text-rose-500 transition-colors mb-0.5">निकाल व अपडेट्स (Results)</h4>
+          <span class="text-[0.7rem] text-text-muted">MPSC निकाल व गुणवत्ता यादी</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Quick Language Navigation Links -->
+    <div class="flex gap-4 mb-8">
+      <a href="#marathi-version" class="text-primary font-bold text-sm hover:underline">↓ मराठी आवृत्ती (Marathi Version)</a>
+      <span class="text-text-muted">|</span>
+      <a href="#english-version" class="text-primary font-bold text-sm hover:underline">↓ English Version</a>
+    </div>
+
+    <!-- ================= MARATHI VERSION ================= -->
+    <div id="marathi-version">
+      <!-- Table of Contents -->
+      <div class="bg-bg-surface border border-border-card rounded-3xl p-6 md:p-8 mb-12">
+        <h2 class="text-xl font-bold text-text-main mb-4 flex items-center gap-2 m-0 border-none">
+          <HiOutlineDocumentText className="text-primary" />
+          या लेखातील मुख्य मुद्दे (Table of Contents)
+        </h2>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 list-none p-0 m-0 mt-2">
+          <li><a href="#overview-mr" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">१. MPSC गट-क शुद्धिपत्रक २०२६ महत्त्वाचे अपडेट्स</a></li>
+          <li><a href="#vacancies-mr" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">२. विभागनिहाय व पदनिहाय ३,०८८ जागांचा सविस्तर तक्ता</a></li>
+          <li><a href="#dates-mr" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">३. महत्त्वाच्या तारखा (Important Dates & Deadline Extension)</a></li>
+          <li><a href="#eligibility-mr" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">४. शैक्षणिक पात्रता, वयोमर्यादा व टायपिंग निकष</a></li>
+          <li><a href="#links-mr" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">५. अधिकृत लिंक्स व अर्ज प्रक्रिया</a></li>
+        </ul>
+      </div>
+
+      <!-- Main Article Content (Marathi) -->
+      <div class="space-y-8 text-text-main leading-relaxed">
+        <h2 id="overview-mr">MPSC गट-क सेवा संयुक्त पूर्व परीक्षा २०२६: नवीन शुद्धिपत्रक व मुदतवाढ</h2>
+        <p>
+          <strong>महाराष्ट्र लोकसेवा आयोग (MPSC)</strong> मार्फत दिनांक <strong>२२ जुलै २०२६</strong> रोजी <strong>शुद्धिपत्रक (क्रमांक: सीएमए-०४२६/प्र.क्र.४२/२०२६/जाहिरात)</strong> प्रसिद्ध करण्यात आले आहे. या शुद्धिपत्रकानुसार, <strong>महाराष्ट्र गट-क सेवा संयुक्त पूर्व परीक्षा - २०२६ (जाहिरात क्रमांक: ०१७/२०२६, दिनांक २५ जून २०२६)</strong> अंतर्गत विविध शासकीय विभागांकडून प्राप्त झालेल्या नवीन मागणीपत्रांचा समावेश करण्यात आला आहे.
+        </p>
+        <p>
+          या नवीन मागणीपत्रानुसार एकूण पदसंख्येत वाढ झाली असून, आता एकूण <strong>३,०८८ रिक्त पदांसाठी</strong> ही भरती प्रक्रिया पार पडणार आहे. तसेच, अर्जदार उमेदवारांना ऑनलाईन अर्ज करण्यासाठी मुदतवाढ देण्यात आली असून <strong>३१ जुलै २०२६</strong> ही अर्ज सादर करण्याची अंतिम तारीख निश्चित करण्यात आली आहे.
+        </p>
+
+        <!-- Departmental Vacancy Table (Marathi) -->
+        <h2 id="vacancies-mr" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">
+          विभागनिहाय व पदनिहाय ३,०८८ रिक्त पदांचा सविस्तर तक्ता
+        </h2>
+        <p>शुद्धिपत्रकामध्ये समाविष्ट करण्यात आलेल्या सर्व ९ विभागांमधील पदांची माहिती खालीलप्रमाणे आहे:</p>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-left border-collapse border border-border-card rounded-2xl overflow-hidden shadow-sm">
+            <thead>
+              <tr class="bg-primary/10 text-text-main">
+                <th class="p-3.5 border border-border-card font-extrabold text-sm">अ.क्र.</th>
+                <th class="p-3.5 border border-border-card font-extrabold text-sm">विभाग (Department)</th>
+                <th class="p-3.5 border border-border-card font-extrabold text-sm">पदनाम (Post Name)</th>
+                <th class="p-3.5 border border-border-card font-extrabold text-sm text-center">एकूण पदे</th>
+                <th class="p-3.5 border border-border-card font-extrabold text-sm">आवश्यक पात्रता (Eligibility)</th>
+                <th class="p-3.5 border border-border-card font-extrabold text-sm">वयोमर्यादा गणण्याचा दिनांक</th>
+              </tr>
+            </thead>
+            <tbody class="text-sm">
+              <tr class="hover:bg-bg-surface/50">
+                <td class="p-3.5 border border-border-card font-bold text-center">१</td>
+                <td class="p-3.5 border border-border-card font-semibold">महसूल व वन विभाग</td>
+                <td class="p-3.5 border border-border-card font-bold text-primary">ग्राम महसूल अधिकारी (तलाठी), गट-क</td>
+                <td class="p-3.5 border border-border-card font-black text-center text-primary text-base">१,५३९</td>
+                <td class="p-3.5 border border-border-card">कोणत्याही शाखेतील पदवी (Degree)</td>
+                <td class="p-3.5 border border-border-card text-xs">अर्ज स्वीकारण्याच्या अंतिम दिनांकास (०५ ऑगस्ट २०२६ / ३१ जुलै २०२६)</td>
+              </tr>
+              <tr class="hover:bg-bg-surface/50">
+                <td class="p-3.5 border border-border-card font-bold text-center">२</td>
+                <td class="p-3.5 border border-border-card font-semibold">राज्य ग्राहक तक्रार निवारण आयोग, मुंबई</td>
+                <td class="p-3.5 border border-border-card font-semibold">वरिष्ठ अभिलेखापाल / वरिष्ठ लिपिक / अभिलेखापाल, गट-क</td>
+                <td class="p-3.5 border border-border-card font-bold text-center">११</td>
+                <td class="p-3.5 border border-border-card">कोणत्याही शाखेतील पदवी</td>
+                <td class="p-3.5 border border-border-card text-xs">०१ ऑक्टोबर २०२६ (शासकीय सेवेतील उमेदवारांसाठी कमाल वयोमर्यादा ५ वर्षांपर्यंत शिथिल)</td>
+              </tr>
+              <tr class="hover:bg-bg-surface/50">
+                <td class="p-3.5 border border-border-card font-bold text-center">३</td>
+                <td class="p-3.5 border border-border-card font-semibold">राज्य ग्राहक तक्रार निवारण आयोग, मुंबई</td>
+                <td class="p-3.5 border border-border-card font-semibold">सहायक अधीक्षक, गट-क</td>
+                <td class="p-3.5 border border-border-card font-bold text-center">११</td>
+                <td class="p-3.5 border border-border-card">कोणत्याही शाखेतील पदवी</td>
+                <td class="p-3.5 border border-border-card text-xs">०१ ऑक्टोबर २०२६</td>
+              </tr>
+              <tr class="hover:bg-bg-surface/50">
+                <td class="p-3.5 border border-border-card font-bold text-center">४</td>
+                <td class="p-3.5 border border-border-card font-semibold">कृषि व प. दु. म. विभाग</td>
+                <td class="p-3.5 border border-border-card font-semibold">सहाय्यक मत्स्यव्यवसाय विकास अधिकारी (तांत्रिक), गट-क</td>
+                <td class="p-3.5 border border-border-card font-bold text-center">२५४</td>
+                <td class="p-3.5 border border-border-card font-medium text-emerald-600 dark:text-emerald-400">मत्स्यविज्ञान विषयातील किमान द्वितीय श्रेणीतील पदवी (B.F.Sc.)</td>
+                <td class="p-3.5 border border-border-card text-xs">०१ ऑक्टोबर २०२६</td>
+              </tr>
+              <tr class="hover:bg-bg-surface/50">
+                <td class="p-3.5 border border-border-card font-bold text-center">५</td>
+                <td class="p-3.5 border border-border-card font-semibold">नियंत्रक शिधावाटप व संचालक नागरी पुरवठा कार्यालय</td>
+                <td class="p-3.5 border border-border-card font-semibold">लिपिक-टंकलेखक (विविध नियुक्ती प्राधिकारी)</td>
+                <td class="p-3.5 border border-border-card font-bold text-center">२३०</td>
+                <td class="p-3.5 border border-border-card" rowspan="5">
+                  (१) कोणत्याही शाखेतील पदवी <br/>
+                  (२) जाहिरातीमधील लिपिक-टंकलेखक पदाकरिता नमूद नियमानुसार टंकलेखन अर्हता आवश्यक (मराठी ३० व/किंवा इंग्रजी ४० श.प्र.मि.)
+                </td>
+                <td class="p-3.5 border border-border-card text-xs" rowspan="5">०१ ऑक्टोबर २०२६</td>
+              </tr>
+              <tr class="hover:bg-bg-surface/50">
+                <td class="p-3.5 border border-border-card font-bold text-center">६</td>
+                <td class="p-3.5 border border-border-card font-semibold">अन्न नागरी पुरवठा व ग्राहक संरक्षण विभाग</td>
+                <td class="p-3.5 border border-border-card font-semibold">लिपिक-टंकलेखक</td>
+                <td class="p-3.5 border border-border-card font-bold text-center">१५५</td>
+              </tr>
+              <tr class="hover:bg-bg-surface/50">
+                <td class="p-3.5 border border-border-card font-bold text-center">७</td>
+                <td class="p-3.5 border border-border-card font-semibold">आदिवासी विकास विभाग</td>
+                <td class="p-3.5 border border-border-card font-semibold">लिपिक-टंकलेखक</td>
+                <td class="p-3.5 border border-border-card font-bold text-center">६९</td>
+              </tr>
+              <tr class="hover:bg-bg-surface/50">
+                <td class="p-3.5 border border-border-card font-bold text-center">८</td>
+                <td class="p-3.5 border border-border-card font-semibold">महसूल व वन विभाग</td>
+                <td class="p-3.5 border border-border-card font-semibold">लिपिक-टंकलेखक</td>
+                <td class="p-3.5 border border-border-card font-bold text-center text-primary">४८०</td>
+              </tr>
+              <tr class="hover:bg-bg-surface/50">
+                <td class="p-3.5 border border-border-card font-bold text-center">९</td>
+                <td class="p-3.5 border border-border-card font-semibold">महसूल व वन विभाग (नोंदणी व मुद्रांक विभाग)</td>
+                <td class="p-3.5 border border-border-card font-semibold">लिपिक-टंकलेखक नोंदणी व मुद्रांक विभाग</td>
+                <td class="p-3.5 border border-border-card font-bold text-center">३३९</td>
+              </tr>
+              <tr class="bg-primary/10 font-extrabold">
+                <td class="p-4 border border-border-card text-center text-base" colspan="3">एकूण (Grand Total)</td>
+                <td class="p-4 border border-border-card text-center text-primary text-xl font-black">३,०८८</td>
+                <td class="p-4 border border-border-card text-xs text-text-muted" colspan="2">विविध ९ विभागांतील पदसंख्या</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Key Dates Section -->
+        <h2 id="dates-mr" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">
+          महत्त्वाच्या तारखा आणि मुदतवाढ (Important Dates & Schedule)
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+          <div class="p-5 bg-bg-surface border border-border-card rounded-2xl flex items-start gap-4">
+            <div class="p-3 bg-rose-500/10 text-rose-500 rounded-xl shrink-0">
+              <HiOutlineCalendarDays className="text-2xl" />
+            </div>
+            <div>
+              <span class="text-xs text-text-muted font-bold uppercase tracking-wider block">ऑनलाईन अर्ज करण्याची नवीन शेवटची तारीख</span>
+              <span class="text-lg font-black text-rose-600 dark:text-rose-400">३१ जुलै, २०२६</span>
+              <p class="text-xs text-text-muted mt-1 m-0">पूर्वीच्या शुद्धिपत्रकानुसार अर्ज भरण्यास मुदतवाढ देण्यात आली आहे.</p>
+            </div>
+          </div>
+
+          <div class="p-5 bg-bg-surface border border-border-card rounded-2xl flex items-start gap-4">
+            <div class="p-3 bg-emerald-500/10 text-emerald-500 rounded-xl shrink-0">
+              <HiOutlineCalendarDays className="text-2xl" />
+            </div>
+            <div>
+              <span class="text-xs text-text-muted font-bold uppercase tracking-wider block">संयुक्त पूर्व परीक्षा तारीख (Prelims Exam Date)</span>
+              <span class="text-lg font-black text-emerald-600 dark:text-emerald-400">२५ ऑक्टोबर, २०२६</span>
+              <p class="text-xs text-text-muted mt-1 m-0">प्रचलित पद्धतीने (Offline - OMR आधारित) परीक्षा घेण्यात येईल.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Official Links Table -->
+        <h2 id="links-mr" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">
+          अधिकृत लिंक्स (Official Direct Links)
+        </h2>
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-primary/10">
+                <th class="p-3.5 border border-border-card font-bold text-text-main">तपशील (Resource)</th>
+                <th class="p-3.5 border border-border-card font-bold text-text-main">डायरेक्ट लिंक (Action)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3.5 border border-border-card font-semibold text-text-main">MPSC ऑनलाईन अर्ज पोर्टल (Apply Online)</td>
+                <td class="p-3.5 border border-border-card">
+                  <a href="https://mpsconline.gov.in" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-all shadow-sm">
+                    <HiOutlineCursorArrowRays className="text-base shrink-0" /> mpsconline.gov.in वर अर्ज करा
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3.5 border border-border-card font-semibold text-text-main">MPSC अधिकृत वेबसाईट (Official Website)</td>
+                <td class="p-3.5 border border-border-card">
+                  <a href="https://mpsc.gov.in" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-primary/10 hover:bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider rounded-xl transition-all border border-primary/30">
+                    <HiOutlineArrowTopRightOnSquare className="text-base shrink-0" /> mpsc.gov.in ला भेट द्या
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= LANGUAGE SEPARATOR ================= -->
+    <div class="my-16 border-t-2 border-dashed border-border-card flex items-center justify-center relative">
+      <span class="absolute bg-bg-base px-8 py-2 text-base sm:text-lg font-extrabold uppercase tracking-widest text-primary border border-border-card rounded-full shadow-md">
+        English Version
+      </span>
+    </div>
+
+    <!-- ================= ENGLISH VERSION ================= -->
+    <div id="english-version" class="opacity-95 space-y-8 text-text-main leading-relaxed">
+      <div class="mb-8">
+        <h2 class="text-2xl md:text-3xl font-extrabold text-text-main mb-3">
+          MPSC Group C Combined Prelims Exam 2026: Corrigendum & Vacancy Hike (3,088 Posts)
+        </h2>
+        <p class="text-text-muted leading-relaxed italic">
+          Maharashtra Public Service Commission (MPSC) has released an official Corrigendum (Shuddhipatrak) regarding Advertisement No. 017/2026 for Maharashtra Group C Services Combined Preliminary Examination 2026.
+        </p>
+      </div>
+
+      <div class="bg-bg-surface border border-border-card rounded-2xl p-6">
+        <h3 class="text-lg font-bold text-text-main mb-4">Key Highlights of MPSC Group C Corrigendum 2026</h3>
+        <ul class="list-disc pl-5 space-y-2 text-sm text-text-secondary">
+          <li><strong>Total Vacancies Updated:</strong> 3,088 Vacancies across 9 government departments.</li>
+          <li><strong>Gram Mahasul Adhikari (Talathi), Group-C:</strong> 1,539 Vacancies in Revenue & Forest Dept.</li>
+          <li><strong>Clerk-Typist Vacancies:</strong> 1,213 total posts across various departments (Revenue, Food & Civil Supplies, Tribal Dept, Rationing).</li>
+          <li><strong>Assistant Fisheries Development Officer:</strong> 254 Vacancies (Requires B.F.Sc. degree).</li>
+          <li><strong>Extended Online Application Last Date:</strong> July 31, 2026.</li>
+          <li><strong>Exam Date:</strong> October 25, 2026 (Offline OMR-based pattern).</li>
+        </ul>
+      </div>
+
+      <h2>How to Apply Online for MPSC Group C Bharti 2026</h2>
+      <ol class="list-decimal pl-5 space-y-2 text-sm text-text-secondary">
+        <li>Visit the official MPSC Online application portal at <a href="https://mpsconline.gov.in" target="_blank" rel="noopener noreferrer" class="text-primary font-bold hover:underline">mpsconline.gov.in</a>.</li>
+        <li>Register or log in using your User ID and Password.</li>
+        <li>Complete your profile details, including educational qualifications, photo, and signature.</li>
+        <li>Select <strong>Maharashtra Group C Services Combined Preliminary Examination 2026 (Advt 017/2026)</strong>.</li>
+        <li>Pay the prescribed application fee before <strong>31st July 2026</strong>.</li>
+        <li>Download and print your application form for future reference.</li>
+      </ol>
+    </div>
+
+    <!-- Related Articles -->
+    <div class="my-12 border-t border-border-card pt-8 not-prose">
+      <h3 class="text-xl font-bold text-text-main mb-6">📚 संबंधित इतर लेख (Related Articles)</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <a href="/mpsc/mpsc-group-c-exam-details" class="p-4 bg-bg-surface border border-border-card hover:border-primary rounded-2xl flex items-center gap-3 transition-colors duration-300 no-underline group">
+          <div class="p-2.5 bg-primary/10 text-primary rounded-xl group-hover:bg-primary group-hover:text-white transition-all duration-300">
+            <HiOutlineAcademicCap className="text-lg" />
+          </div>
+          <div>
+            <span class="text-[0.65rem] text-text-muted block font-semibold uppercase tracking-wider">MPSC Group C Details</span>
+            <span class="text-sm font-bold text-text-main group-hover:text-primary transition-colors">MPSC संयुक्त गट क परीक्षा सविस्तर माहिती व टायपिंग निकष</span>
+          </div>
+        </a>
+        <a href="/mpsc/mpsc-group-b-exam-details" class="p-4 bg-bg-surface border border-border-card hover:border-primary rounded-2xl flex items-center gap-3 transition-colors duration-300 no-underline group">
+          <div class="p-2.5 bg-primary/10 text-primary rounded-xl group-hover:bg-primary group-hover:text-white transition-all duration-300">
+            <HiOutlineDocumentText className="text-lg" />
+          </div>
+          <div>
+            <span class="text-[0.65rem] text-text-muted block font-semibold uppercase tracking-wider">MPSC Group B Details</span>
+            <span class="text-sm font-bold text-text-main group-hover:text-primary transition-colors">MPSC संयुक्त गट ब (PSI, STI, ASO) संपूर्ण माहिती</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="bg-primary/5 border border-primary/20 p-8 rounded-3xl text-center my-8 not-prose">
+      <h2 class="text-2xl font-black text-text-main mb-4 border-none p-0 mt-0">MPSC नवनवीन भरती अपडेट्स WhatsApp वर मिळवा!</h2>
+      <p class="text-text-muted mb-6">MPSC, तलाठी भरती, हॉलतिकीट आणि निकालाबाबत त्वरित माहिती मिळवण्यासाठी आमच्या ग्रूपमध्ये सहभागी व्हा.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-600 text-white text-sm font-bold uppercase tracking-wider rounded-xl transition-colors shadow-sm no-underline">
+          WhatsApp Group जॉईन करा
+        </a>
+        <a href="#" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white text-sm font-bold uppercase tracking-wider rounded-xl transition-colors shadow-sm no-underline">
+          Telegram Channel जॉईन करा
+        </a>
+      </div>
+    </div>
+  </article>
+</Layout>

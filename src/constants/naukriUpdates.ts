@@ -10,6 +10,15 @@ export interface NaukriUpdate {
 
 export const naukriUpdates: NaukriUpdate[] = [
   {
+    titleEn: "MPSC Group C Bharti 2026: Corrigendum Released for 3,088 Vacancies & Deadline Extended to 31 July",
+    titleHi: "MPSC गट-क संयुक्त परीक्षा २०२६: ३,०८८ जागांसाठी शुद्धिपत्रक प्रसिद्ध, ऑनलाईन अर्ज मुदतवाढ",
+    date: "July 22, 2026",
+    badge: "New",
+    badgeType: "new",
+    link: "/mpsc/mpsc-group-c-bharti-2026",
+    description: "MPSC has released a Corrigendum notice updating total vacancies to 3,088 across 9 departments (including 1,539 Talathi & 1,213 Clerk-Typist posts). Last date to apply extended to 31 July 2026."
+  },
+  {
     titleEn: "MH SET 2026 Exam Rescheduled: Date Postponed to 27 September",
     titleHi: "महाराष्ट्र सेट परीक्षा (MH-SET) २०२६ पुढे ढकलली, नवीन तारीख जाहीर",
     date: "July 20, 2026",

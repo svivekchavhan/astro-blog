@@ -8,6 +8,15 @@
   },
   "naukriUpdates": [
     {
+      "id": "nu-0",
+      "titleHi": "MPSC गट-क परीक्षा २०२६: ३,०८८ जागांसाठी शुद्धिपत्रक व मुदतवाढ जाहीर",
+      "titleEn": "MPSC Group C Bharti 2026: 3,088 Vacancies & Deadline Extended to 31 July",
+      "link": "/mpsc/mpsc-group-c-bharti-2026",
+      "badge": "NEW",
+      "badgeType": "new",
+      "date": "2026-07-22"
+    },
+    {
       "id": "nu-1",
       "titleHi": "महाराष्ट्र आरोग्य विभाग भरती २०२६: ७,१९५ पदांसाठी भरती जाहीर",
       "titleEn": "Arogya Bharti 2026: 7,195 Posts Announced",
@@ -46,6 +55,12 @@
   ],
   "urgentUpdates": [
     {
+      "id": "uu-0",
+      "title": "MPSC Group C Bharti 2026: 3,088 Vacancies & Application Deadline Extended to 31 July",
+      "link": "/mpsc/mpsc-group-c-bharti-2026",
+      "expiry": "2026-08-01T00:00:00Z"
+    },
+    {
       "id": "uu-1",
       "title": "MH SET 2026 Exam Date Postponed - Check Revised Schedule",
       "link": "/admit-card/maharashtra-set-exam-date-postponed",
@@ -65,6 +80,18 @@
     }
   ],
   "latestJobs": [
+    {
+      "id": "job-0",
+      "category": "State Govt",
+      "status": "apply-now",
+      "title": "MPSC गट-क संयुक्त पूर्व परीक्षा २०२६: ३,०८८ जागांसाठी शुद्धिपत्रक प्रसिद्ध व मुदतवाढ",
+      "titleEn": "MPSC Group C Services Combined Prelims 2026 (3,088 Vacancies)",
+      "link": "/mpsc/mpsc-group-c-bharti-2026",
+      "organisation": "MPSC (Maharashtra Public Service Commission)",
+      "qualification": "Graduate / Degree in any discipline / B.F.Sc.",
+      "vacancies": "3,088",
+      "lastDate": "31 July 2026"
+    },
     {
       "id": "job-1",
       "category": "State Govt",
@@ -135,6 +162,15 @@
     }
   ],
   "articles": [
+    {
+      "id": "art-0",
+      "titleEn": "MPSC Group C Combined Exam 2026: Corrigendum Released for 3,088 Vacancies & Application Extended",
+      "titleMr": "MPSC गट-क सेवा संयुक्त पूर्व परीक्षा २०२६: ३,०८८ जागांसाठी शुद्धिपत्रक प्रसिद्ध, अर्ज मुदतवाढ!",
+      "slug": "/mpsc/mpsc-group-c-bharti-2026",
+      "category": "MPSC Bharti",
+      "date": "July 22, 2026",
+      "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1200"
+    },
     {
       "id": "art-1",
       "titleEn": "MH SET Exam Date Postponed 2026: Rescheduled to 27th September",
