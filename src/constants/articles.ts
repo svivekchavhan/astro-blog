@@ -11,7 +11,7 @@ export const articlesRegistry: ArticleMeta[] = [
   {
     titleEn: "MPSC Group C Combined Exam 2026: Corrigendum Released for 3,088 Vacancies & Application Extended",
     titleMr: "MPSC गट-क सेवा संयुक्त पूर्व परीक्षा २०२६: ३,०८८ जागांसाठी शुद्धिपत्रक प्रसिद्ध, अर्ज मुदतवाढ!",
-    slug: "/mpsc/mpsc-group-c-bharti-2026",
+    slug: "/mpsc-group-c-bharti-2026",
     category: "MPSC Bharti",
     date: "July 22, 2026",
     image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1200"

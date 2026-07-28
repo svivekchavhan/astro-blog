@@ -15,7 +15,7 @@ export const naukriUpdates: NaukriUpdate[] = [
     date: "July 22, 2026",
     badge: "New",
     badgeType: "new",
-    link: "/mpsc/mpsc-group-c-bharti-2026",
+    link: "/mpsc-group-c-bharti-2026",
     description: "MPSC has released a Corrigendum notice updating total vacancies to 3,088 across 9 departments (including 1,539 Talathi & 1,213 Clerk-Typist posts). Last date to apply extended to 31 July 2026."
   },
   {
