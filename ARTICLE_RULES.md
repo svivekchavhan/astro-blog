@@ -45,3 +45,13 @@ Whenever a new recruitment article is created, it must be registered in the foll
 ## 📌 Rule 5: Sidebar Display Standard
 
 - All standard article pages must display the right-hand sidebar by omitting `hideSidebar` or setting `hideSidebar={false}` on the `<Layout>` component.
+
+---
+
+## 📌 Rule 6: District-Specific Article Auto-Association Rule
+
+- **Criteria**: If an article or recruitment post mentions a specific district or city (e.g., Pune / पुणे, Mumbai / मुंबई, Thane / ठाणे, Nagpur / नागपूर, Chhatrapati Sambhajinagar / छत्रपती संभाजीनगर, etc.) in its title (`titleEn` or `titleMr`), slug, category, or metadata, it **MUST automatically be matched and displayed** under that district's page (`/district/[district-slug]`).
+- **Mechanism**: The dynamic district route (`src/pages/district/[district].astro`) automatically filters `articlesRegistry` against `currentDistrict.nameEn`, `currentDistrict.nameMr`, and `currentDistrict.slug`.
+- **Example**:
+  - An article with title *"NMMC Navi Mumbai Hall Ticket Download 2026"* automatically appears under **Navi Mumbai** (`/district/navi-mumbai`).
+  - An article with title *"Pune Mahanagarpalika Bharti 2026"* automatically appears under **Pune** (`/district/pune`).
