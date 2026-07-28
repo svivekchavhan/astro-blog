@@ -17,6 +17,15 @@ const canonicalURL = "https://mahasandhi.in/district";
 
 // Group districts by administrative division
 const divisions = Array.from(new Set(MAHARASHTRA_DISTRICTS.map(d => d.division)));
+
+const DIVISION_NAMES_MR: Record<string, string> = {
+  "Pune": "पुणे (Pune) विभाग",
+  "Konkan": "कोकण (Konkan) विभाग",
+  "Nagpur": "नागपूर (Nagpur) विभाग",
+  "Chhatrapati Sambhajinagar": "छत्रपती संभाजीनगर विभाग",
+  "Nashik": "नाशिक (Nashik) विभाग",
+  "Amravati": "अमरावती (Amravati) विभाग"
+};
 ---
 
 <Layout title={title} description={description} canonicalURL={canonicalURL}>
@@ -48,7 +57,7 @@ const divisions = Array.from(new Set(MAHARASHTRA_DISTRICTS.map(d => d.division))
     </div>
 
     <!-- Search & Filter Bar Container -->
-    <div class="bg-bg-surface border border-border-card rounded-2xl p-4 sm:p-5 mb-8 shadow-xs space-y-4">
+    <div class="bg-bg-surface border border-border-card rounded-2xl p-4 sm:p-6 mb-8 shadow-xs space-y-4">
       <!-- Search Input -->
       <div class="relative flex items-center bg-bg-base/60 dark:bg-black/20 border border-border-card rounded-xl px-4 py-3 focus-within:border-emerald-500 transition-all duration-300">
         <HiOutlineMagnifyingGlass className="text-text-muted text-lg mr-3 shrink-0" />
@@ -60,20 +69,20 @@ const divisions = Array.from(new Set(MAHARASHTRA_DISTRICTS.map(d => d.division))
         />
       </div>
 
-      <!-- Division Filter Chips -->
-      <div class="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar text-xs font-bold" id="division-filters">
+      <!-- Division Filter Chips with guaranteed spacing and wrapping -->
+      <div class="flex flex-wrap items-center gap-3 pt-2 pb-1 text-xs font-bold" id="division-filters">
         <button 
           data-division="all"
-          class="div-filter-btn active px-3.5 py-1.5 rounded-xl border border-emerald-500 bg-emerald-500 text-white shadow-xs cursor-pointer transition-all whitespace-nowrap"
+          class="div-filter-btn active px-4 py-2.5 rounded-xl border border-emerald-500 bg-emerald-500 text-white shadow-xs cursor-pointer transition-all whitespace-nowrap inline-flex items-center shrink-0 mr-3 mb-2"
         >
           सर्व विभाग (All Divisions)
         </button>
         {divisions.map(div => (
           <button 
             data-division={div}
-            class="div-filter-btn px-3.5 py-1.5 rounded-xl border border-border-card bg-bg-base hover:border-emerald-500/40 text-text-muted hover:text-emerald-600 dark:hover:text-emerald-400 cursor-pointer transition-all whitespace-nowrap"
+            class="div-filter-btn px-4 py-2.5 rounded-xl border border-border-card bg-bg-base hover:border-emerald-500/50 text-text-muted hover:text-emerald-600 dark:hover:text-emerald-400 cursor-pointer transition-all whitespace-nowrap inline-flex items-center shrink-0 shadow-xs mr-3 mb-2"
           >
-            {div} विभाग
+            {DIVISION_NAMES_MR[div] || `${div} विभाग`}
           </button>
         ))}
       </div>
@@ -194,6 +203,10 @@ const divisions = Array.from(new Set(MAHARASHTRA_DISTRICTS.map(d => d.division))
 </script>
 
 <style>
+  .div-filter-btn {
+    margin-right: 0.75rem !important;
+    margin-bottom: 0.5rem !important;
+  }
   .div-filter-btn.active {
     background-color: #10b981 !important;
     border-color: #10b981 !important;
