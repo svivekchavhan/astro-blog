@@ -10,6 +10,15 @@ export interface NaukriUpdate {
 
 export const naukriUpdates: NaukriUpdate[] = [
   {
+    titleEn: "Latur DCC Bank Result 2026: Phase 1 Selection List Released for 263 Posts",
+    titleHi: "लातूर जिल्हा मध्यवर्ती बँक निकाल २०२६: ३७५ पदांपैकी २६३ उमेदवारांची Phase 1 निवड यादी प्रसिद्ध",
+    date: "July 28, 2026",
+    badge: "Result",
+    badgeType: "important",
+    link: "/latur-dcc-bank-result-2026",
+    description: "Latur DCC Bank has declared the Phase 1 result & selection list for Clerk, Multipurpose Support Staff, and Driver posts. Selected candidates must report on 14 August 2026."
+  },
+  {
     titleEn: "MPSC Group C Bharti 2026: Corrigendum Released for 3,088 Vacancies & Deadline Extended to 31 July",
     titleHi: "MPSC गट-क संयुक्त परीक्षा २०२६: ३,०८८ जागांसाठी शुद्धिपत्रक प्रसिद्ध, ऑनलाईन अर्ज मुदतवाढ",
     date: "July 22, 2026",

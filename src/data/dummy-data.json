@@ -8,6 +8,15 @@
   },
   "naukriUpdates": [
     {
+      "id": "nu-latur-dccb",
+      "titleHi": "लातूर जिल्हा मध्यवर्ती बँक निकाल २०२६: २६३ उमेदवारांची Phase 1 निवड यादी प्रसिद्ध",
+      "titleEn": "Latur DCC Bank Result 2026: Phase 1 Selection List Released for 263 Posts",
+      "link": "/latur-dcc-bank-result-2026",
+      "badge": "RESULT",
+      "badgeType": "important",
+      "date": "2026-07-28"
+    },
+    {
       "id": "nu-0",
       "titleHi": "MPSC गट-क परीक्षा २०२६: ३,०८८ जागांसाठी शुद्धिपत्रक व मुदतवाढ जाहीर",
       "titleEn": "MPSC Group C Bharti 2026: 3,088 Vacancies & Deadline Extended to 31 July",
@@ -80,6 +89,18 @@
     }
   ],
   "latestJobs": [
+    {
+      "id": "job-latur-dccb",
+      "category": "Bank Job",
+      "status": "apply-now",
+      "title": "लातूर जिल्हा मध्यवर्ती बँक निकाल २०२६: ३७५ पदांपैकी २६३ उमेदवारांची Phase 1 निवड यादी प्रसिद्ध",
+      "titleEn": "Latur DCC Bank Result 2026 Phase 1 Selection List (263 Selected)",
+      "link": "/latur-dcc-bank-result-2026",
+      "organisation": "Latur District Central Cooperative Bank Ltd. (Latur DCCB)",
+      "qualification": "Graduate / 10th / 12th / Driver",
+      "vacancies": "375 (263 Selected)",
+      "lastDate": "Joining: 14 Aug 2026"
+    },
     {
       "id": "job-0",
       "category": "State Govt",

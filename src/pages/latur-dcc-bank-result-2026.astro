@@ -1,0 +1,366 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { 
+  HiOutlineCalendarDays, 
+  HiOutlineCursorArrowRays,
+  HiOutlineArrowTopRightOnSquare,
+  HiOutlineDocumentText,
+  HiOutlineBuildingOffice,
+  HiOutlineAcademicCap,
+  HiOutlineQueueList,
+  HiOutlineIdentification,
+  HiOutlineUserGroup,
+  HiOutlineCheckBadge,
+  HiOutlineMegaphone,
+  HiOutlineMapPin,
+  HiOutlinePhone,
+  HiOutlineEnvelope
+} from "react-icons/hi2";
+
+const title = "लातूर जिल्हा मध्यवर्ती सहकारी बँक निकाल २०२६: ३७५ पदांपैकी २६३ उमेदवारांची प्रथम टप्पा निवड यादी (Phase 1 Merit List) जाहीर!";
+const description = "दि लातूर जिल्हा मध्यवर्ती सहकारी बँक लि., लातूर (Latur DCC Bank) भरती निकाल प्रसिद्ध. लिपिक १७५, सेवक ८१ व ड्रायव्हर ७ अशा एकूण २६३ उमेदवारांची Phase 1 निवड यादी laturdccb.com वर जाहीर. पात्र उमेदवारांना १४ ऑगस्ट २०२६ रोजी रुजू होण्याचे आदेश.";
+const canonicalURL = "https://mahasandhi.in/latur-dcc-bank-result-2026";
+const date = "July 28, 2026";
+const category = "Result";
+---
+
+<Layout 
+  title={title} 
+  description={description}
+  canonicalURL={canonicalURL}
+  image="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200"
+  article={true}
+>
+  <article class="py-8">
+    <!-- Header -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-6 flex-wrap">
+        <span class="bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-emerald-500/20 flex items-center gap-1.5">
+          <HiOutlineCheckBadge className="text-sm" /> {category} (निकाल)
+        </span>
+        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-primary/20 flex items-center gap-1.5">
+          <HiOutlineMapPin className="text-sm" /> लातूर जिल्हा (Latur District)
+        </span>
+        <span class="text-text-muted text-sm">• {date}</span>
+      </div>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-text-main mb-6 leading-[1.25]">
+        {title}
+      </h1>
+      <p class="text-text-muted text-lg leading-relaxed border-l-4 border-emerald-500 pl-6 py-2 italic">
+        {description}
+      </p>
+    </div>
+
+    <!-- Quick Highlights Banner -->
+    <div class="bg-gradient-to-br from-emerald-500/10 via-teal-500/5 to-transparent border border-emerald-500/20 rounded-3xl p-6 md:p-8 mb-12 shadow-xs">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+        <div class="p-3 bg-bg-surface/80 backdrop-blur-xs rounded-2xl border border-border-card">
+          <span class="text-xs text-text-muted block uppercase font-bold tracking-wider mb-1">एकूण पदे (Total Vacancies)</span>
+          <span class="text-2xl md:text-3xl font-black text-primary">375 Posts</span>
+        </div>
+        <div class="p-3 bg-bg-surface/80 backdrop-blur-xs rounded-2xl border border-border-card">
+          <span class="text-xs text-text-muted block uppercase font-bold tracking-wider mb-1">Phase 1 निवड (Selected)</span>
+          <span class="text-2xl md:text-3xl font-black text-emerald-600 dark:text-emerald-400">263</span>
+        </div>
+        <div class="p-3 bg-bg-surface/80 backdrop-blur-xs rounded-2xl border border-border-card">
+          <span class="text-xs text-text-muted block uppercase font-bold tracking-wider mb-1">रुजू होण्याचा दिनांक (Joining)</span>
+          <span class="text-lg md:text-xl font-extrabold text-rose-600 dark:text-rose-400">14 ऑगस्ट 2026</span>
+        </div>
+        <div class="p-3 bg-bg-surface/80 backdrop-blur-xs rounded-2xl border border-border-card">
+          <span class="text-xs text-text-muted block uppercase font-bold tracking-wider mb-1">रुजू होण्याची वेळ (Joining Time)</span>
+          <span class="text-lg md:text-xl font-bold text-text-main">सकाळी 11:00 वाजता</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Direct Action Banner -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12 not-prose">
+      <a 
+        href="https://laturdccb.com" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="group p-5 bg-gradient-to-br from-emerald-600 to-teal-700 text-white rounded-2xl transition-all duration-300 shadow-md hover:shadow-emerald-500/20 flex items-center justify-between no-underline"
+      >
+        <div>
+          <span class="text-[0.65rem] uppercase font-extrabold tracking-wider bg-white/20 px-2.5 py-0.5 rounded text-white block w-fit mb-1">अधिकृत संकेतस्थळ</span>
+          <h3 class="text-base font-extrabold text-white m-0 flex items-center gap-1.5">
+            Latur DCCB निकाल यादी पाहा <HiOutlineArrowTopRightOnSquare className="text-lg" />
+          </h3>
+          <p class="text-xs text-white/80 m-0 mt-0.5">laturdccb.com वर निकाल व यादी उपलब्ध</p>
+        </div>
+        <div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
+          <HiOutlineCursorArrowRays className="text-2xl" />
+        </div>
+      </a>
+
+      <div class="p-5 bg-bg-surface border border-border-card rounded-2xl flex items-center gap-4">
+        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+          <HiOutlineBuildingOffice className="text-2xl" />
+        </div>
+        <div>
+          <span class="text-xs text-text-muted font-bold uppercase tracking-wider block">रुजू होण्याचे ठिकाण (Joining Venue)</span>
+          <h4 class="text-sm font-bold text-text-main m-0">लातूर जिल्हा मध्यवर्ती सहकारी बँक लि., मुख्य कार्यालय</h4>
+          <p class="text-xs text-text-muted m-0">टिळक नगर, मेन रोड, लातूर</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Language Navigation Links -->
+    <div class="flex gap-4 mb-8">
+      <a href="#marathi-version" class="text-primary font-bold text-sm hover:underline">↓ मराठी आवृत्ती (Marathi Version)</a>
+      <span class="text-text-muted">|</span>
+      <a href="#english-version" class="text-primary font-bold text-sm hover:underline">↓ English Version</a>
+    </div>
+
+    <!-- ================= MARATHI VERSION ================= -->
+    <div id="marathi-version">
+      <!-- Table of Contents -->
+      <div class="bg-bg-surface border border-border-card rounded-3xl p-6 md:p-8 mb-12">
+        <h2 class="text-xl font-bold text-text-main mb-4 flex items-center gap-2 m-0 border-none">
+          <HiOutlineDocumentText className="text-primary" />
+          या लेखातील मुख्य मुद्दे (Table of Contents)
+        </h2>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 list-none p-0 m-0 mt-2">
+          <li><a href="#overview-mr" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">१. लातूर DCC बँक निकाल २०२६ महत्त्वाचे अपडेट्स</a></li>
+          <li><a href="#vacancies-mr" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">२. पदनिहाय मूळ व Phase 1 निवड यादी तक्ता</a></li>
+          <li><a href="#joining-mr" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">३. रुजू होण्याची तारीख व महत्त्वाची वेळ</a></li>
+          <li><a href="#contact-mr" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">४. बँकेचा पत्ता व संपर्क माहिती</a></li>
+        </ul>
+      </div>
+
+      <!-- Main Article Content (Marathi) -->
+      <div class="space-y-8 text-text-main leading-relaxed">
+        <h2 id="overview-mr">दि लातूर जिल्हा मध्यवर्ती सहकारी बँक लि., लातूर भरती निकाल जाहीर सूचना</h2>
+        <p>
+          <strong>दि लातूर जिल्हा मध्यवर्ती सहकारी बँक लि., लातूर (Latur District Central Cooperative Bank Ltd.)</strong> यांच्या आस्थापनेवरील सरळसेवा नोकर भरती अंतर्गत लिपिक, सेवक (Multipurpose Support Staff) आणि वाहन चालक (Driver) या पदांसाठी आयोजित ऑनलाईन परीक्षेचा निकाल व गुणानुक्रमे पात्र उमेदवारांची निवड यादी अधिकृत संकेतस्थळावर प्रसिद्ध करण्यात आली आहे.
+        </p>
+        <p>
+          मा. संचालक मंडळ सभा दिनांक <strong>२० जुलै २०२६</strong> रोजीच्या निर्णयानुसार, बँकेने पहिल्या टप्प्यात (Phase 1) <strong>७०% प्रमाणात एकूण २६३ रिक्त पदांची</strong> निवड यादी जाहीर केली आहे. ऑनलाईन परीक्षेतील गुण, शैक्षणिक अर्हतेतील गुण व तोंडी परीक्षेतील (Oral Interview) गुण यांचा एकत्रित गुणाक्रम विचारात घेऊन पात्र उमेदवारांची यादी तयार करण्यात आली आहे.
+        </p>
+
+        <!-- Vacancy Breakdown Table (Marathi) -->
+        <h2 id="vacancies-mr" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">
+          पदनिहाय मूळ जागा व प्रथम टप्पा (Phase 1 - 70%) निवड यादी तक्ता
+        </h2>
+        <p>बँकेच्या सूचनेनुसार मूळ पदसंख्या आणि प्रथम टप्प्यात निवड झालेल्या उमेदवारांचा तपशील खालीलप्रमाणे आहे:</p>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-left border-collapse border border-border-card rounded-2xl overflow-hidden shadow-sm">
+            <thead>
+              <tr class="bg-primary/10 text-text-main">
+                <th class="p-3.5 border border-border-card font-extrabold text-sm">अ.क्र.</th>
+                <th class="p-3.5 border border-border-card font-extrabold text-sm">पदनाम (Post Name)</th>
+                <th class="p-3.5 border border-border-card font-extrabold text-sm text-center">मूळ पदे (Original Posts)</th>
+                <th class="p-3.5 border border-border-card font-extrabold text-sm text-center">प्रथम टप्पा (Phase 1 - 70%) निवड</th>
+                <th class="p-3.5 border border-border-card font-extrabold text-sm">निवडीचे स्वरूप</th>
+              </tr>
+            </thead>
+            <tbody class="text-sm">
+              <tr class="hover:bg-bg-surface/50">
+                <td class="p-3.5 border border-border-card font-bold text-center">१</td>
+                <td class="p-3.5 border border-border-card font-bold text-primary">लिपिक (Clerk)</td>
+                <td class="p-3.5 border border-border-card text-center font-bold">२५०</td>
+                <td class="p-3.5 border border-border-card font-black text-center text-emerald-600 dark:text-emerald-400 text-base">१७५</td>
+                <td class="p-3.5 border border-border-card">ऑनलाईन परीक्षा + शैक्षणिक गुण + मुलाखत गुण गुणाक्रम</td>
+              </tr>
+              <tr class="hover:bg-bg-surface/50">
+                <td class="p-3.5 border border-border-card font-bold text-center">२</td>
+                <td class="p-3.5 border border-border-card font-semibold">Subgrade / सेवक (Multipurpose Support Staff)</td>
+                <td class="p-3.5 border border-border-card text-center font-bold">११५</td>
+                <td class="p-3.5 border border-border-card font-black text-center text-emerald-600 dark:text-emerald-400 text-base">८१</td>
+                <td class="p-3.5 border border-border-card">ऑनलाईन परीक्षा + शैक्षणिक गुण + मुलाखत गुण गुणाक्रम</td>
+              </tr>
+              <tr class="hover:bg-bg-surface/50">
+                <td class="p-3.5 border border-border-card font-bold text-center">३</td>
+                <td class="p-3.5 border border-border-card font-semibold">वाहन चालक (Driver)</td>
+                <td class="p-3.5 border border-border-card text-center font-bold">१०</td>
+                <td class="p-3.5 border border-border-card font-black text-center text-emerald-600 dark:text-emerald-400 text-base">७</td>
+                <td class="p-3.5 border border-border-card">ऑनलाईन परीक्षा + ड्रायव्हिंग टेस्ट व मुलाखत</td>
+              </tr>
+              <tr class="bg-primary/10 font-extrabold">
+                <td class="p-4 border border-border-card text-center text-base" colspan="2">एकूण (Grand Total)</td>
+                <td class="p-4 border border-border-card text-center text-primary text-xl font-black">३७५</td>
+                <td class="p-4 border border-border-card text-center text-emerald-600 dark:text-emerald-400 text-xl font-black">२६३</td>
+                <td class="p-4 border border-border-card text-xs text-text-muted">Phase 1 मध्ये ७०% उमेदवारांची नियुक्ती</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Joining Details Section -->
+        <h2 id="joining-mr" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">
+          रुजू होण्याबाबत सूचना व महत्त्वाचा दिनांक
+        </h2>
+        <div class="bg-gradient-to-br from-rose-500/10 via-rose-500/5 to-transparent border border-rose-500/20 rounded-2xl p-6 my-6">
+          <ul class="space-y-3 text-sm text-text-main m-0 list-none p-0">
+            <li class="flex items-start gap-3">
+              <span class="w-2 h-2 rounded-full bg-rose-500 mt-2 shrink-0"></span>
+              <span><strong>रुजू होण्याचा दिनांक:</strong> पात्र ठरलेल्या सर्व उमेदवारांना दिनांक <strong>१४ ऑगस्ट २०२६</strong> रोजी सकाळी <strong>११:०० वाजता</strong> बँकेच्या मुख्य कार्यालयात रुजू करून घेतले जाईल.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-2 h-2 rounded-full bg-rose-500 mt-2 shrink-0"></span>
+              <span><strong>ई-मेल द्वारे माहिती:</strong> रुजू होण्याचा दिनांक, वेळ व आवश्यक कागदपत्रांची यादी उमेदवारांच्या नोंदणीकृत ई-मेल आय.डी. वर <strong>TCS (टी.सी.एस.) कंपनीतर्फे</strong> स्वतंत्रपणे पाठवण्यात येत आहे.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-2 h-2 rounded-full bg-rose-500 mt-2 shrink-0"></span>
+              <span><strong>मूळ कागदपत्रे पडताळणी:</strong> रुजू होताना सर्व पात्र उमेदवारांनी आपले मूळ शैक्षणिक कागदपत्रे, ओळखपत्र व अनुभव प्रमाणपत्रे सोबत आणणे अनिवार्य आहे.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Bank Contact Info -->
+        <h2 id="contact-mr" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">
+          बँकेचा मुख्य पत्ता व संपर्काचा तपशील
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+          <div class="p-5 bg-bg-surface border border-border-card rounded-2xl space-y-2">
+            <h4 class="text-sm font-bold text-primary flex items-center gap-2 m-0">
+              <HiOutlineBuildingOffice className="text-base" /> मुख्य कार्यालय पत्ता
+            </h4>
+            <p class="text-xs text-text-muted m-0 leading-relaxed">
+              दि लातूर जिल्हा मध्यवर्ती सहकारी बँक लि., लातूर<br/>
+              मुख्य कार्यालय, टिळक नगर, मेन रोड, लातूर - ४१३५१२.
+            </p>
+          </div>
+
+          <div class="p-5 bg-bg-surface border border-border-card rounded-2xl space-y-2">
+            <h4 class="text-sm font-bold text-primary flex items-center gap-2 m-0">
+              <HiOutlinePhone className="text-base" /> फोन व ई-मेल माहिती
+            </h4>
+            <p class="text-xs text-text-muted m-0 leading-relaxed">
+              फोन नं: (०२३८२) २४५९३०, २४३९३१, २४३९४३, २५६९१९<br/>
+              ई-मेल: admin@laturdccb.com | वेबसाईट: laturdccb.com
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= LANGUAGE SEPARATOR ================= -->
+    <div class="my-16 border-t-2 border-dashed border-border-card flex items-center justify-center relative">
+      <span class="absolute bg-bg-base px-8 py-2 text-base sm:text-lg font-extrabold uppercase tracking-widest text-primary border border-border-card rounded-full shadow-md">
+        English Version
+      </span>
+    </div>
+
+    <!-- ================= ENGLISH VERSION ================= -->
+    <div id="english-version" class="opacity-95 space-y-8 text-text-main leading-relaxed">
+      <!-- English Header / Title -->
+      <div class="mb-8">
+        <h2 class="text-2xl md:text-3xl font-extrabold text-text-main mb-3">
+          Latur District Central Cooperative Bank Result 2026: Phase 1 Merit List Released for 263 Posts
+        </h2>
+        <p class="text-text-muted leading-relaxed italic">
+          The Latur District Central Cooperative Bank Ltd., Latur (Latur DCCB) has officially published the Phase 1 selection merit list for 263 candidates out of 375 direct recruitment vacancies across Clerk, Multipurpose Support Staff, and Driver posts.
+        </p>
+      </div>
+
+      <!-- English Table of Contents -->
+      <div class="bg-bg-surface border border-border-card rounded-3xl p-6 md:p-8 mb-12">
+        <h2 class="text-xl font-bold text-text-main mb-4 flex items-center gap-2 m-0 border-none">
+          <HiOutlineDocumentText className="text-primary" />
+          Table of Contents (English)
+        </h2>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 list-none p-0 m-0 mt-2">
+          <li><a href="#overview-en" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">1. Latur DCCB Result Overview & Notice</a></li>
+          <li><a href="#vacancies-en" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">2. Phase 1 (70%) Selection Breakdown Table</a></li>
+          <li><a href="#joining-en" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">3. Joining Date, Time & Verification Rules</a></li>
+          <li><a href="#contact-en" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">4. Bank Headquarters & Contact Info</a></li>
+        </ul>
+      </div>
+
+      <!-- English Content -->
+      <div class="space-y-8 text-text-main leading-relaxed">
+        <h2 id="overview-en">Latur DCC Bank Recruitment 2026: Official Result Declaration</h2>
+        <p>
+          <strong>The Latur District Central Cooperative Bank Ltd., Latur</strong> (Established 17 August 1964) released an official notification regarding the merit selection of candidates for direct recruitment.
+        </p>
+        <p>
+          In accordance with the decision taken in the Board of Directors meeting on <strong>20 July 2026</strong>, the bank has released the Phase 1 selection list covering <strong>70% of total vacancies (263 selected candidates out of 375 total posts)</strong>. The merit list is prepared based on online examination marks, academic qualifications, and oral interview scores.
+        </p>
+
+        <!-- Breakdown Table (English) -->
+        <h2 id="vacancies-en" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">
+          Post-wise Original Vacancies vs Phase 1 Selected Candidates Table
+        </h2>
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-left border-collapse border border-border-card rounded-2xl overflow-hidden shadow-sm">
+            <thead>
+              <tr class="bg-primary/10 text-text-main">
+                <th class="p-3.5 border border-border-card font-extrabold text-sm">Sr. No.</th>
+                <th class="p-3.5 border border-border-card font-extrabold text-sm">Post Name</th>
+                <th class="p-3.5 border border-border-card font-extrabold text-sm text-center">Original Posts</th>
+                <th class="p-3.5 border border-border-card font-extrabold text-sm text-center">Phase 1 (70%) Selected</th>
+                <th class="p-3.5 border border-border-card font-extrabold text-sm">Selection Mode</th>
+              </tr>
+            </thead>
+            <tbody class="text-sm">
+              <tr class="hover:bg-bg-surface/50">
+                <td class="p-3.5 border border-border-card font-bold text-center">1</td>
+                <td class="p-3.5 border border-border-card font-bold text-primary">Clerk (Lipik)</td>
+                <td class="p-3.5 border border-border-card text-center font-bold">250</td>
+                <td class="p-3.5 border border-border-card font-black text-center text-emerald-600 dark:text-emerald-400 text-base">175</td>
+                <td class="p-3.5 border border-border-card">Online Exam + Academic Marks + Interview Score</td>
+              </tr>
+              <tr class="hover:bg-bg-surface/50">
+                <td class="p-3.5 border border-border-card font-bold text-center">2</td>
+                <td class="p-3.5 border border-border-card font-semibold">Subgrade / Sevak (Multipurpose Support Staff)</td>
+                <td class="p-3.5 border border-border-card text-center font-bold">115</td>
+                <td class="p-3.5 border border-border-card font-black text-center text-emerald-600 dark:text-emerald-400 text-base">81</td>
+                <td class="p-3.5 border border-border-card">Online Exam + Academic Marks + Interview Score</td>
+              </tr>
+              <tr class="hover:bg-bg-surface/50">
+                <td class="p-3.5 border border-border-card font-bold text-center">3</td>
+                <td class="p-3.5 border border-border-card font-semibold">Driver (Vahan Chalak)</td>
+                <td class="p-3.5 border border-border-card text-center font-bold">10</td>
+                <td class="p-3.5 border border-border-card font-black text-center text-emerald-600 dark:text-emerald-400 text-base">7</td>
+                <td class="p-3.5 border border-border-card">Online Exam + Driving Test & Interview</td>
+              </tr>
+              <tr class="bg-primary/10 font-extrabold">
+                <td class="p-4 border border-border-card text-center text-base" colspan="2">Grand Total</td>
+                <td class="p-4 border border-border-card text-center text-primary text-xl font-black">375</td>
+                <td class="p-4 border border-border-card text-center text-emerald-600 dark:text-emerald-400 text-xl font-black">263</td>
+                <td class="p-4 border border-border-card text-xs text-text-muted">70% candidates allotted in Phase 1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Joining Schedule (English) -->
+        <h2 id="joining-en" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">
+          Joining Date & Reporting Details
+        </h2>
+        <ul class="list-disc pl-5 space-y-2">
+          <li><strong>Reporting Date & Time:</strong> 14 August 2026 at 11:00 AM.</li>
+          <li><strong>Reporting Venue:</strong> Latur District Central Cooperative Bank Ltd., Head Office, Tilak Nagar, Main Road, Latur.</li>
+          <li><strong>Individual Call Letters:</strong> Intimation letters regarding joining date and guidelines are being issued directly via TCS on candidates' registered email addresses.</li>
+        </ul>
+
+        <!-- Direct Portal Table -->
+        <h2 id="contact-en" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">
+          Official Website & Contact Direct Links
+        </h2>
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-primary/10">
+                <th class="p-3.5 border border-border-card font-bold text-text-main">Resource</th>
+                <th class="p-3.5 border border-border-card font-bold text-text-main">Direct Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3.5 border border-border-card font-semibold text-text-main">Latur DCC Bank Official Website</td>
+                <td class="p-3.5 border border-border-card">
+                  <a href="https://laturdccb.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-all shadow-xs">
+                    <HiOutlineCursorArrowRays className="text-base shrink-0" /> Visit laturdccb.com
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

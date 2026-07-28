@@ -9,6 +9,14 @@ export interface ArticleMeta {
 
 export const articlesRegistry: ArticleMeta[] = [
   {
+    titleEn: "Latur DCC Bank Result 2026: Phase 1 Selection List Released for 263 Posts",
+    titleMr: "लातूर जिल्हा मध्यवर्ती सहकारी बँक निकाल २०२६: ३७५ पदांपैकी २६३ उमेदवारांची Phase 1 निवड यादी प्रसिद्ध!",
+    slug: "/latur-dcc-bank-result-2026",
+    category: "Result",
+    date: "July 28, 2026",
+    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200"
+  },
+  {
     titleEn: "MPSC Group C Combined Exam 2026: Corrigendum Released for 3,088 Vacancies & Application Extended",
     titleMr: "MPSC गट-क सेवा संयुक्त पूर्व परीक्षा २०२६: ३,०८८ जागांसाठी शुद्धिपत्रक प्रसिद्ध, अर्ज मुदतवाढ!",
     slug: "/mpsc-group-c-bharti-2026",
