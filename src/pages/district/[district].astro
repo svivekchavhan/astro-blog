@@ -85,39 +85,55 @@ const canonicalURL = `https://mahasandhi.in/district/${currentDistrict.slug}`;
         </div>
 
         {matchedArticles.length > 0 ? (
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {matchedArticles.map(art => (
-              <a 
-                href={art.slug} 
-                class="group flex flex-col bg-bg-surface border border-border-card hover:border-primary rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 shadow-xs no-underline"
-              >
-                <div class="relative aspect-video w-full overflow-hidden bg-black/10">
-                  <img 
-                    src={art.image} 
-                    alt={art.titleEn} 
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                  <span class="absolute top-3 left-3 bg-primary/90 text-white text-[0.6rem] font-bold px-2 py-0.5 rounded uppercase tracking-wider">
-                    {art.category}
-                  </span>
-                </div>
-                <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
-                  <h3 class="text-base font-bold text-text-main group-hover:text-primary transition-colors m-0 leading-snug">
-                    {art.titleMr}
-                  </h3>
-                  <div class="flex items-center justify-between gap-2 text-[0.7rem] text-text-muted font-semibold pt-3 border-t border-border-card/40">
-                    <span class="flex items-center gap-1">
-                      <HiOutlineCalendarDays className="text-primary text-xs shrink-0" />
-                      <span>{art.date}</span>
-                    </span>
-                    <span class="text-primary font-bold flex items-center gap-1 group-hover:underline">
-                      पाहा <HiOutlineChevronRight className="text-xs" />
-                    </span>
-                  </div>
-                </div>
-              </a>
-            ))}
+          <div class="overflow-x-auto border border-border-card rounded-2xl shadow-xs">
+            <table class="w-full text-left border-collapse bg-bg-surface">
+              <thead>
+                <tr class="bg-primary/10 text-text-main border-b border-border-card">
+                  <th class="p-4 font-extrabold text-xs uppercase tracking-wider">जाहिरात / निकाल शीर्षक (Recruitment & Result Notice)</th>
+                  <th class="p-4 font-extrabold text-xs uppercase tracking-wider text-right shrink-0 min-w-[160px]">सविस्तर माहिती (Action)</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-border-card/60 text-sm">
+                {matchedArticles.map(art => (
+                  <tr class="hover:bg-bg-base/60 transition-colors">
+                    <td class="p-4 space-y-1.5">
+                      <div class="flex items-center gap-2 flex-wrap mb-1">
+                        <span class="bg-primary/10 text-primary text-[0.65rem] font-bold px-2.5 py-0.5 rounded-md border border-primary/20 uppercase tracking-wider">
+                          {art.category}
+                        </span>
+                        {art.postName && (
+                          <span class="text-[0.7rem] font-extrabold text-emerald-600 dark:text-emerald-400">
+                            📌 पदनाम: {art.postName}
+                          </span>
+                        )}
+                      </div>
+
+                      <h3 class="text-base sm:text-lg font-bold text-text-main m-0 leading-snug">
+                        <a href={art.slug} class="hover:text-primary transition-colors no-underline">
+                          {art.titleMr}
+                        </a>
+                      </h3>
+
+                      {art.descriptionMr && (
+                        <p class="text-xs text-text-muted m-0 leading-relaxed">
+                          {art.descriptionMr}
+                        </p>
+                      )}
+                    </td>
+
+                    <td class="p-4 text-right whitespace-nowrap">
+                      <a 
+                        href={art.slug}
+                        class="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-all shadow-xs no-underline"
+                      >
+                        <span>सविस्तर माहिती पाहा</span>
+                        <HiOutlineChevronRight className="text-xs shrink-0" />
+                      </a>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         ) : (
           <div class="text-center py-12 px-6 bg-bg-surface border border-border-card rounded-2xl">
