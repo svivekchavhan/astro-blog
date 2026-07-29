@@ -13,6 +13,18 @@ export interface ArticleMeta {
 
 export const articlesRegistry: ArticleMeta[] = [
   {
+    titleEn: "MAHAGENCO Recruitment 2026: Apply Online for 07 Chief Engineer Posts (Advt No. 07/2026)",
+    titleMr: "महानिर्मिती भरती २०२६: मुख्य अभियंता (तांत्रिक व स्थापत्य) ७ जागांसाठी जाहिरात प्रसिद्ध",
+    slug: "/mahagenco-recruitment-2026",
+    category: "Latest Job",
+    date: "July 29, 2026",
+    image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=1200",
+    postName: "मुख्य अभियंता (तांत्रिक व स्थापत्य)",
+    descriptionMr: "महाराष्ट्र राज्य विद्युत निर्मिती कंपनी मर्यादित (महानिर्मिती) मध्ये मुख्य अभियंता पदांच्या ०७ जागांवर भरती जाहिरात (क्र. ०७/२०२६) प्रसिद्ध.",
+    vacancies: "07",
+    lastDate: "20 Aug 2026"
+  },
+  {
     titleEn: "Latur DCC Bank Result 2026: Phase 1 Selection List Released for 263 Posts",
     titleMr: "लातूर जिल्हा मध्यवर्ती सहकारी बँक निकाल २०२६: ३७५ पदांपैकी २६३ उमेदवारांची Phase 1 निवड यादी प्रसिद्ध!",
     slug: "/latur-dcc-bank-result-2026",

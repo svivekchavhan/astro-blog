@@ -8,6 +8,15 @@
   },
   "naukriUpdates": [
     {
+      "id": "nu-mahagenco",
+      "titleHi": "महानिर्मिती भरती २०२६: मुख्य अभियंता (तांत्रिक व स्थापत्य) ७ जागांसाठी जाहिरात प्रसिद्ध",
+      "titleEn": "MAHAGENCO Bharti 2026: Apply Online for 07 Chief Engineer Posts (Advt No. 07/2026)",
+      "link": "/mahagenco-recruitment-2026",
+      "badge": "NEW",
+      "badgeType": "new",
+      "date": "2026-07-29"
+    },
+    {
       "id": "nu-latur-dccb",
       "titleHi": "लातूर जिल्हा मध्यवर्ती बँक निकाल २०२६: २६३ उमेदवारांची Phase 1 निवड यादी प्रसिद्ध",
       "titleEn": "Latur DCC Bank Result 2026: Phase 1 Selection List Released for 263 Posts",
@@ -64,6 +73,12 @@
   ],
   "urgentUpdates": [
     {
+      "id": "uu-mahagenco",
+      "title": "MAHAGENCO Recruitment 2026: 07 Chief Engineer Vacancies Announced (Advt No. 07/2026)",
+      "link": "/mahagenco-recruitment-2026",
+      "expiry": "2026-08-20T00:00:00Z"
+    },
+    {
       "id": "uu-0",
       "title": "MPSC Group C Bharti 2026: 3,088 Vacancies & Application Deadline Extended to 31 July",
       "link": "/mpsc-group-c-bharti-2026",
@@ -89,6 +104,18 @@
     }
   ],
   "latestJobs": [
+    {
+      "id": "job-mahagenco",
+      "category": "State Govt",
+      "status": "apply-now",
+      "title": "महानिर्मिती भरती २०२६: मुख्य अभियंता (तांत्रिक व स्थापत्य) ७ जागांसाठी जाहिरात प्रसिद्ध",
+      "titleEn": "MAHAGENCO Chief Engineer Recruitment 2026 (07 Vacancies)",
+      "link": "/mahagenco-recruitment-2026",
+      "organisation": "MAHAGENCO (Maharashtra State Power Generation Co. Ltd)",
+      "qualification": "B.E. / B.Tech (Electrical / Mechanical / Electronics / Instrumentation / Civil) + 15 Yrs Exp",
+      "vacancies": "07",
+      "lastDate": "20 Aug 2026"
+    },
     {
       "id": "job-latur-dccb",
       "category": "Bank Job",
@@ -183,6 +210,15 @@
     }
   ],
   "articles": [
+    {
+      "id": "art-mahagenco",
+      "titleEn": "MAHAGENCO Recruitment 2026: Apply Online for 07 Chief Engineer Posts (Advt No. 07/2026)",
+      "titleMr": "महानिर्मिती भरती २०२६: मुख्य अभियंता (तांत्रिक व स्थापत्य) ७ जागांसाठी जाहिरात प्रसिद्ध",
+      "slug": "/mahagenco-recruitment-2026",
+      "category": "Latest Job",
+      "date": "July 29, 2026",
+      "image": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=1200"
+    },
     {
       "id": "art-0",
       "titleEn": "MPSC Group C Combined Exam 2026: Corrigendum Released for 3,088 Vacancies & Application Extended",
