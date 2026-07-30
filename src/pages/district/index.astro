@@ -3,8 +3,6 @@ import Layout from "../../layouts/Layout.astro";
 import { MAHARASHTRA_DISTRICTS } from "../../constants/districts";
 import { 
   HiOutlineMapPin, 
-  HiOutlineBuildingOffice, 
-  HiOutlineAcademicCap, 
   HiOutlineChevronRight,
   HiOutlineMagnifyingGlass,
   HiOutlineSparkles,
@@ -62,10 +60,14 @@ const DIVISION_NAMES_MR: Record<string, string> = {
       <div class="relative flex items-center bg-bg-base/60 dark:bg-black/20 border border-border-card rounded-xl px-4 py-3 focus-within:border-emerald-500 transition-all duration-300">
         <HiOutlineMagnifyingGlass className="text-text-muted text-lg mr-3 shrink-0" />
         <input 
-          type="text" 
+          type="search" 
           id="district-search"
           placeholder="जिल्ह्याचे नाव शोधा (e.g. Pune, पुणे, Nagpur, नाशिक, ठाणे)..." 
           class="bg-transparent border-none text-text-main font-sans text-sm outline-none w-full placeholder-text-muted/65"
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="off"
+          spellcheck="false"
         />
       </div>
 
@@ -152,22 +154,27 @@ const DIVISION_NAMES_MR: Record<string, string> = {
     const cards = document.querySelectorAll(".district-card") as NodeListOf<HTMLAnchorElement>;
     const noResults = document.getElementById("no-districts-found");
 
+    if (!searchInput) return;
+    if (searchInput.dataset.initialized === "true") return;
+    searchInput.dataset.initialized = "true";
+
     let currentDivision = "all";
     let searchQuery = "";
 
     function filterDistricts() {
       let visibleCount = 0;
+      const normalizedQuery = searchQuery.normalize("NFC");
 
       cards.forEach(card => {
-        const nameMr = card.dataset.nameMr || "";
-        const nameEn = card.dataset.nameEn || "";
-        const div = card.dataset.division || "";
+        const nameMr = (card.dataset.nameMr || "").normalize("NFC");
+        const nameEn = (card.dataset.nameEn || "").normalize("NFC");
+        const div = (card.dataset.division || "").normalize("NFC");
 
         const matchesDivision = (currentDivision === "all" || div === currentDivision);
-        const matchesSearch = (
-          nameMr.includes(searchQuery) || 
-          nameEn.includes(searchQuery) ||
-          div.toLowerCase().includes(searchQuery)
+        const matchesSearch = !normalizedQuery || (
+          nameMr.includes(normalizedQuery) || 
+          nameEn.includes(normalizedQuery) ||
+          div.toLowerCase().includes(normalizedQuery)
         );
 
         if (matchesDivision && matchesSearch) {
@@ -187,12 +194,15 @@ const DIVISION_NAMES_MR: Record<string, string> = {
       }
     }
 
-    if (searchInput) {
-      searchInput.addEventListener("input", (e) => {
-        searchQuery = (e.target as HTMLInputElement).value.toLowerCase().trim();
-        filterDistricts();
-      });
-    }
+    const handleInput = (e: Event) => {
+      searchQuery = (e.target as HTMLInputElement).value.toLowerCase().trim();
+      filterDistricts();
+    };
+
+    searchInput.addEventListener("input", handleInput);
+    searchInput.addEventListener("keyup", handleInput);
+    searchInput.addEventListener("change", handleInput);
+    searchInput.addEventListener("search", handleInput);
 
     filterBtns.forEach(btn => {
       btn.addEventListener("click", () => {
@@ -209,6 +219,11 @@ const DIVISION_NAMES_MR: Record<string, string> = {
     });
   }
 
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initDistrictSearch);
+  } else {
+    initDistrictSearch();
+  }
   document.addEventListener("astro:page-load", initDistrictSearch);
 </script>
 
