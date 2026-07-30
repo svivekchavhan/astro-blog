@@ -69,22 +69,32 @@ const DIVISION_NAMES_MR: Record<string, string> = {
         />
       </div>
 
-      <!-- Division Filter Chips with guaranteed spacing and wrapping -->
-      <div class="flex flex-wrap items-center gap-3 pt-2 pb-1 text-xs font-bold" id="division-filters">
-        <button 
-          data-division="all"
-          class="div-filter-btn active px-4 py-2.5 rounded-xl border border-emerald-500 bg-emerald-500 text-white shadow-xs cursor-pointer transition-all whitespace-nowrap inline-flex items-center shrink-0 mr-3 mb-2"
+      <!-- Division Filter Chips (Responsive Grid Pattern on mobile, flex wrap on desktop) -->
+      <div class="space-y-2 pt-1">
+        <label class="block text-[0.7rem] font-bold text-text-muted uppercase tracking-wider px-0.5">
+          विभागानुसार निवडा (Filter by Division):
+        </label>
+        <div 
+          class="grid grid-cols-2 sm:grid-cols-3 md:flex md:flex-wrap items-stretch md:items-center gap-2 sm:gap-2.5" 
+          id="division-filters"
         >
-          सर्व विभाग (All Divisions)
-        </button>
-        {divisions.map(div => (
           <button 
-            data-division={div}
-            class="div-filter-btn px-4 py-2.5 rounded-xl border border-border-card bg-bg-base hover:border-emerald-500/50 text-text-muted hover:text-emerald-600 dark:hover:text-emerald-400 cursor-pointer transition-all whitespace-nowrap inline-flex items-center shrink-0 shadow-xs mr-3 mb-2"
+            type="button"
+            data-division="all"
+            class="div-filter-btn active col-span-2 sm:col-span-1 px-3 py-2.5 sm:px-4 sm:py-2.5 rounded-xl border border-emerald-500 bg-emerald-500 text-white font-bold text-[0.75rem] sm:text-xs shadow-xs cursor-pointer transition-all duration-200 inline-flex items-center justify-center text-center w-full md:w-auto"
           >
-            {DIVISION_NAMES_MR[div] || `${div} विभाग`}
+            सर्व विभाग (All Divisions)
           </button>
-        ))}
+          {divisions.map(div => (
+            <button 
+              type="button"
+              data-division={div}
+              class="div-filter-btn px-2.5 py-2.5 sm:px-4 sm:py-2.5 rounded-xl border border-border-card bg-bg-base hover:border-emerald-500/50 text-text-muted hover:text-emerald-600 dark:hover:text-emerald-400 font-bold text-[0.72rem] sm:text-xs shadow-xs cursor-pointer transition-all duration-200 inline-flex items-center justify-center text-center leading-tight w-full md:w-auto min-h-[40px] sm:min-h-0"
+            >
+              {DIVISION_NAMES_MR[div] || `${div} विभाग`}
+            </button>
+          ))}
+        </div>
       </div>
     </div>
 
@@ -203,10 +213,15 @@ const DIVISION_NAMES_MR: Record<string, string> = {
 </script>
 
 <style>
-  .div-filter-btn {
-    margin-right: 0.75rem !important;
-    margin-bottom: 0.5rem !important;
+  /* Hide scrollbar for clean horizontal swipe on mobile screens */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
   }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
   .div-filter-btn.active {
     background-color: #10b981 !important;
     border-color: #10b981 !important;
