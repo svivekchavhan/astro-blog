@@ -10,6 +10,15 @@ export interface NaukriUpdate {
 
 export const naukriUpdates: NaukriUpdate[] = [
   {
+    titleEn: "Latur DCC Bank Bharti 2026: Revised Waiting List Released as per GR dated 15.06.2018",
+    titleHi: "लातूर जिल्हा मध्यवर्ती बँक भरती २०२६: संवर्गनिहाय २०% सुधारीत प्रतीक्षा यादी (Revised Waiting List) प्रसिद्ध",
+    date: "August 03, 2026",
+    badge: "Revised List",
+    badgeType: "important",
+    link: "/latur-dcc-bank-revised-waiting-list-2026",
+    description: "Latur DCC Bank has officially published the revised waiting list (20% category merit quota) for Lipik, Sevak, and Driver posts valid for 365 days as per GR directives."
+  },
+  {
     titleEn: "Latur DCC Bank Result 2026: Phase 1 Selection List Released for 263 Posts",
     titleHi: "लातूर जिल्हा मध्यवर्ती बँक निकाल २०२६: ३७५ पदांपैकी २६३ उमेदवारांची Phase 1 निवड यादी प्रसिद्ध",
     date: "July 28, 2026",

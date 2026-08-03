@@ -1,0 +1,413 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { 
+  HiOutlineCalendarDays, 
+  HiOutlineCursorArrowRays,
+  HiOutlineArrowTopRightOnSquare,
+  HiOutlineDocumentText,
+  HiOutlineBuildingOffice,
+  HiOutlineQueueList,
+  HiOutlineCheckBadge,
+  HiOutlineMegaphone,
+  HiOutlineMapPin,
+  HiOutlinePhone,
+  HiOutlineQuestionMarkCircle,
+  HiOutlineExclamationCircle,
+  HiOutlineShieldCheck
+} from "react-icons/hi2";
+
+const title = "लातूर जिल्हा मध्यवर्ती बँक भरती २०२६: ३७५ पदांची सुधारीत प्रतीक्षा यादी (Revised Waiting List) प्रसिद्ध!";
+const description = "दि लातूर जिल्हा मध्यवर्ती सहकारी बँक लि., लातूर (Latur DCCB) सरळसेवा भरती लिपीक, सेवक व ड्रायव्हर पदांसाठी शासन निर्णय १५.०६.२०१८ नुसार संवर्गनिहाय २०% गुणवत्तेनुसार सुधारीत प्रतीक्षा यादी laturdccb.com वर प्रसिद्ध.";
+const canonicalURL = "https://mahasandhi.in/latur-dcc-bank-revised-waiting-list-2026";
+const date = "August 03, 2026";
+const category = "Result Update";
+---
+
+<Layout 
+  title={title} 
+  description={description}
+  canonicalURL={canonicalURL}
+  image="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200"
+  article={true}
+>
+  <article class="py-8">
+    <!-- Header -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-6 flex-wrap">
+        <span class="bg-rose-500/10 text-rose-600 dark:text-rose-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-rose-500/20 flex items-center gap-1.5">
+          <HiOutlineCheckBadge className="text-sm" /> {category} (निकाल अपडेट)
+        </span>
+        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-primary/20 flex items-center gap-1.5">
+          <HiOutlineMapPin className="text-sm" /> लातूर जिल्हा (Latur District)
+        </span>
+        <span class="text-text-muted text-sm">• {date}</span>
+      </div>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-text-main mb-6 leading-[1.25]">
+        {title}
+      </h1>
+      <p class="text-text-muted text-lg leading-relaxed border-l-4 border-rose-500 pl-6 py-2 italic">
+        {description}
+      </p>
+    </div>
+
+    <!-- Quick Highlights Banner -->
+    <div class="bg-gradient-to-br from-rose-500/10 via-amber-500/5 to-transparent border border-rose-500/20 rounded-3xl p-6 md:p-8 mb-12 shadow-xs">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+        <div class="p-3 bg-bg-surface/80 backdrop-blur-xs rounded-2xl border border-border-card">
+          <span class="text-xs text-text-muted block uppercase font-bold tracking-wider mb-1">एकूण पदे (Total Vacancies)</span>
+          <span class="text-2xl md:text-3xl font-black text-primary">375 Posts</span>
+        </div>
+        <div class="p-3 bg-bg-surface/80 backdrop-blur-xs rounded-2xl border border-border-card">
+          <span class="text-xs text-text-muted block uppercase font-bold tracking-wider mb-1">Phase 1 निवड (70% Allotment)</span>
+          <span class="text-2xl md:text-3xl font-black text-emerald-600 dark:text-emerald-400">263 Candidates</span>
+        </div>
+        <div class="p-3 bg-bg-surface/80 backdrop-blur-xs rounded-2xl border border-border-card">
+          <span class="text-xs text-text-muted block uppercase font-bold tracking-wider mb-1">प्रतीक्षा यादी (Waiting List)</span>
+          <span class="text-lg md:text-xl font-extrabold text-rose-600 dark:text-rose-400">निवड यादीच्या 20%</span>
+        </div>
+        <div class="p-3 bg-bg-surface/80 backdrop-blur-xs rounded-2xl border border-border-card">
+          <span class="text-xs text-text-muted block uppercase font-bold tracking-wider mb-1">यादी कालावधी (Validity Period)</span>
+          <span class="text-lg md:text-xl font-bold text-text-main">365 दिवस (1 वर्ष)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Direct Action Banner -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12 not-prose">
+      <a 
+        href="https://laturdccb.com" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="group p-5 bg-gradient-to-br from-rose-600 to-amber-600 text-white rounded-2xl transition-all duration-300 shadow-md hover:shadow-rose-500/20 flex items-center justify-between no-underline"
+      >
+        <div>
+          <span class="text-[0.65rem] uppercase font-extrabold tracking-wider bg-white/20 px-2.5 py-0.5 rounded text-white block w-fit mb-1">अधिकृत संकेतस्थळ</span>
+          <h3 class="text-base font-extrabold text-white m-0 flex items-center gap-1.5">
+            सुधारीत प्रतीक्षा यादी पाहा <HiOutlineArrowTopRightOnSquare className="text-lg" />
+          </h3>
+          <p class="text-xs text-white/80 m-0 mt-0.5">laturdccb.com वर सुधारीत यादी उपलब्ध</p>
+        </div>
+        <div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
+          <HiOutlineCursorArrowRays className="text-2xl" />
+        </div>
+      </a>
+
+      <div class="p-5 bg-bg-surface border border-border-card rounded-2xl flex items-center gap-4">
+        <div class="w-12 h-12 rounded-xl bg-rose-500/10 text-rose-500 flex items-center justify-center shrink-0">
+          <HiOutlineMegaphone className="text-2xl" />
+        </div>
+        <div>
+          <span class="text-xs text-text-muted font-bold uppercase tracking-wider block">महत्त्वाचा संदर्भ (Government Resolution)</span>
+          <h4 class="text-sm font-bold text-text-main m-0">महाराष्ट्र शासन निर्णय दि. १५.०६.२०१८</h4>
+          <p class="text-xs text-text-muted m-0">निवड यादीच्या २०% प्रतीक्षा यादी नियम</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Official Notice Display Box (Verbatim Notice Text) -->
+    <div class="bg-gradient-to-br from-amber-500/10 via-amber-500/5 to-transparent border border-amber-500/30 rounded-3xl p-6 md:p-8 mb-12 shadow-sm">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="p-2 bg-amber-500 text-white rounded-xl">
+          <HiOutlineDocumentText className="text-xl" />
+        </span>
+        <div>
+          <h3 class="text-lg font-black text-text-main m-0 uppercase tracking-wide">
+            -: जाहीर सूचना / Notification :-
+          </h3>
+          <span class="text-xs text-text-muted font-semibold">दि लातूर जिल्हा मध्यवर्ती सहकारी बँक लि., लातूर</span>
+        </div>
+      </div>
+      <div class="bg-bg-surface/90 border border-border-card p-5 md:p-6 rounded-2xl font-serif leading-relaxed text-text-main text-sm sm:text-base space-y-4">
+        <p class="m-0 italic border-l-4 border-amber-500 pl-4 py-1 text-text-main">
+          "दि. लातूर जिल्हा मध्यवर्ती सहकारी बँक लि., लातूर बँकेच्या आस्थापनेवरील सरळसेवा नोकर भरती लिपीक, Subgrade / सेवक (Multipurpose Support Staff) व वाहन चालक / Driver मा. संचालक मंडळ सभा दि.२०.०७.२०२६ रोजीचे सभेतील निर्णयानुसार तुर्तास प्रथम फेज मध्ये सर्व श्रेणीत गुणवत्तेनुसार ७०% जिल्हा प्रमाणातील एकूण २६३ रिक्त पदांचा निकाल दि. २८.०७.२०२६ रोजी प्रसिद्ध करण्यात आलेला होता. श्रेणीनिहाय प्रतीक्षा यादी पण प्रसिद्ध करण्यात आलेली होती."
+        </p>
+        <p class="m-0 italic border-l-4 border-rose-500 pl-4 py-1 text-text-main">
+          "शासन निर्णय दि.१५.०६.२०१८ अनुसार रिक्त पदांच्या भरती साठी प्रत्येक संवर्गाच्या निवड यादीच्या २०% गुणवत्तेनुसारच पात्र उमेदवारांची प्रतीक्षा यादी प्रसिद्ध करणे व हि यादी नियुक्तीच्या प्रथम आदेशापासून ३६५ दिवसांपर्यंत अंमलात राहील याप्रमाणे निर्देश असल्याने दि. २८.०७.२०२६ रोजी गुणवत्तेनुसार प्रत्येक संवर्गाच्या निवड यादीची सुधारीत प्रतीक्षा यादी प्रसिद्ध करण्यात येत आहे."
+        </p>
+      </div>
+    </div>
+
+    <!-- Quick Language Navigation Links -->
+    <div class="flex gap-4 mb-8">
+      <a href="#marathi-version" class="text-primary font-bold text-sm hover:underline">↓ मराठी माहिती (Marathi Version)</a>
+      <span class="text-text-muted">|</span>
+      <a href="#english-version" class="text-primary font-bold text-sm hover:underline">↓ English Version</a>
+    </div>
+
+    <!-- ================= MARATHI VERSION ================= -->
+    <div id="marathi-version">
+      <!-- Table of Contents -->
+      <div class="bg-bg-surface border border-border-card rounded-3xl p-6 md:p-8 mb-12">
+        <h2 class="text-xl font-bold text-text-main mb-4 flex items-center gap-2 m-0 border-none">
+          <HiOutlineQueueList className="text-primary" />
+          या लेखातील मुख्य मुद्दे (Table of Contents)
+        </h2>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 list-none p-0 m-0 mt-2">
+          <li><a href="#notice-overview-mr" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">१. सुधारीत प्रतीक्षा यादी जाहीर सूचना व पार्श्वभूमी</a></li>
+          <li><a href="#gr-rules-mr" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">२. शासन निर्णय १५.०६.२०१८ मधील २०% प्रतीक्षा नियम</a></li>
+          <li><a href="#post-breakdown-mr" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">३. पदनिहाय निवड व सुधारीत प्रतीक्षा यादी तक्ता</a></li>
+          <li><a href="#validity-mr" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">४. प्रतीक्षा यादीची वैधता (३६५ दिवस) व नियम</a></li>
+          <li><a href="#contact-mr" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">५. बँक पत्ता व संपर्क तपशील</a></li>
+        </ul>
+      </div>
+
+      <!-- Main Article Content (Marathi) -->
+      <div class="space-y-8 text-text-main leading-relaxed">
+        <h2 id="notice-overview-mr" class="text-xl md:text-2xl font-black text-primary mb-2 border-l-4 border-primary pl-3">
+          १. लातूर जिल्हा मध्यवर्ती सहकारी बँक भरती: सुधारीत प्रतीक्षा यादी जाहीर सूचना
+        </h2>
+        <p>
+          <strong>दि लातूर जिल्हा मध्यवर्ती सहकारी बँक लि., लातूर (Latur District Central Cooperative Bank Ltd.)</strong> यांच्या आस्थापनेवरील सरळसेवा नोकर भरती अंतर्गत लिपिक (Clerk), सेवक (Multipurpose Support Staff) आणि वाहन चालक (Driver) या तीनही संवर्गातील पदांसाठी आयोजित ऑनलाईन परीक्षेचा Phase 1 निकाल <strong>२८ जुलै २०२६</strong> रोजी प्रसिद्ध करण्यात आला होता.
+        </p>
+        <p>
+          बँकेच्या मा. संचालक मंडळाच्या <strong>२० जुलै २०२६</strong> रोजी झालेल्या सभेतील निर्णयानुसार पहिल्या टप्प्यात ७०% जिल्हा प्रमाणातील एकूण <strong>२६३ रिक्त पदांची</strong> गुणवत्तेनुसार निवड यादी व प्रतीक्षा यादी जाहीर करण्यात आली होती.
+        </p>
+
+        <h2 id="gr-rules-mr" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">
+          २. शासन निर्णय १५ जून २०१८ अनुसार सुधारीत प्रतीक्षा यादी लागू करण्याचे कारण
+        </h2>
+        <p>
+          महाराष्ट्र शासनाच्या <strong>सामान्य प्रशासन विभागाच्या शासन निर्णय दि. १५.०६.२०१८</strong> मधील मार्गदर्शक तत्त्वांचे पालन करणे बँकेसाठी बंधनकारक आहे. सदर नियमानुसार:
+        </p>
+        <div class="bg-bg-surface border border-border-card rounded-2xl p-6 my-4 space-y-3 text-sm">
+          <div class="flex items-start gap-3">
+            <span class="w-2 h-2 rounded-full bg-rose-500 mt-2 shrink-0"></span>
+            <span><strong>२०% गुणवत्ता कोटा:</strong> सरळसेवा रिक्त पदांच्या भरतीसाठी प्रत्येक संवर्गाच्या मूळ निवड यादीच्या **२०% गुणवत्तेनुसारच** पात्र उमेदवारांची प्रतीक्षा यादी तयार करून प्रसिद्ध करणे आवश्यक आहे.</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="w-2 h-2 rounded-full bg-rose-500 mt-2 shrink-0"></span>
+            <span><strong>३६५ दिवसांची वैधता:</strong> ही सुधारीत प्रतीक्षा यादी प्रथम नियुक्ती आदेशाच्या दिनांकापासून **३६५ दिवसांपर्यंत (१ वर्षापर्यंत)** अंमलात राहील.</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="w-2 h-2 rounded-full bg-rose-500 mt-2 shrink-0"></span>
+            <span><strong>रिक्त जागा भरती:</strong> पहिल्या टप्प्यातील उमेदवारांपैकी कोणी रुजू न झाल्यास किंवा १ वर्षाच्या आत जागा रिक्त झाल्यास प्रतीक्षा यादीतील उमेदवारांना गुणानुक्रमे संधी दिली जाईल.</span>
+          </div>
+        </div>
+
+        <!-- Post Breakdown Table (Marathi) -->
+        <h2 id="post-breakdown-mr" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">
+          ३. पदनिहाय मूळ पदे, प्रथम टप्पा निवड व सुधारीत प्रतीक्षा यादी तक्ता
+        </h2>
+        <p>बँकेच्या तीनही संवर्गातील मूळ पदसंख्या, Phase 1 निवड व २०% सुधारीत प्रतीक्षा यादीचे प्रमाण खालील तक्त्यात दिले आहे:</p>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-left border-collapse border border-border-card rounded-2xl overflow-hidden shadow-sm">
+            <thead>
+              <tr class="bg-primary/10 text-text-main">
+                <th class="p-3.5 border border-border-card font-extrabold text-sm">अ.क्र.</th>
+                <th class="p-3.5 border border-border-card font-extrabold text-sm">पदनाम (Post Name)</th>
+                <th class="p-3.5 border border-border-card font-extrabold text-sm text-center">एकूण रिक्त पदे</th>
+                <th class="p-3.5 border border-border-card font-extrabold text-sm text-center">Phase 1 (70%) निवड</th>
+                <th class="p-3.5 border border-border-card font-extrabold text-sm text-center">प्रतीक्षा यादी प्रमाण</th>
+              </tr>
+            </thead>
+            <tbody class="text-sm">
+              <tr class="hover:bg-bg-surface/50">
+                <td class="p-3.5 border border-border-card font-bold text-center">१</td>
+                <td class="p-3.5 border border-border-card font-bold text-primary">लिपिक (Clerk)</td>
+                <td class="p-3.5 border border-border-card text-center font-bold">२५०</td>
+                <td class="p-3.5 border border-border-card font-black text-center text-emerald-600 dark:text-emerald-400 text-base">१७५</td>
+                <td class="p-3.5 border border-border-card text-center font-bold text-rose-600 dark:text-rose-400">निवड यादीच्या २०%</td>
+              </tr>
+              <tr class="hover:bg-bg-surface/50">
+                <td class="p-3.5 border border-border-card font-bold text-center">२</td>
+                <td class="p-3.5 border border-border-card font-semibold">Subgrade / सेवक (Multipurpose Staff)</td>
+                <td class="p-3.5 border border-border-card text-center font-bold">११५</td>
+                <td class="p-3.5 border border-border-card font-black text-center text-emerald-600 dark:text-emerald-400 text-base">८१</td>
+                <td class="p-3.5 border border-border-card text-center font-bold text-rose-600 dark:text-rose-400">निवड यादीच्या २०%</td>
+              </tr>
+              <tr class="hover:bg-bg-surface/50">
+                <td class="p-3.5 border border-border-card font-bold text-center">३</td>
+                <td class="p-3.5 border border-border-card font-semibold">वाहन चालक (Driver)</td>
+                <td class="p-3.5 border border-border-card text-center font-bold">१०</td>
+                <td class="p-3.5 border border-border-card font-black text-center text-emerald-600 dark:text-emerald-400 text-base">७</td>
+                <td class="p-3.5 border border-border-card text-center font-bold text-rose-600 dark:text-rose-400">निवड यादीच्या २०%</td>
+              </tr>
+              <tr class="bg-primary/10 font-extrabold">
+                <td class="p-4 border border-border-card text-center text-base" colspan="2">एकूण (Grand Total)</td>
+                <td class="p-4 border border-border-card text-center text-primary text-xl font-black">३७५</td>
+                <td class="p-4 border border-border-card text-center text-emerald-600 dark:text-emerald-400 text-xl font-black">२६३</td>
+                <td class="p-4 border border-border-card text-center text-rose-600 dark:text-rose-400 font-extrabold">सुधारीत यादी लागू</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Validity Details Section -->
+        <h2 id="validity-mr" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">
+          ४. प्रतीक्षा यादीतील उमेदवारांसाठी महत्त्वाच्या सूचना व वैधता नियम
+        </h2>
+        <div class="bg-gradient-to-br from-emerald-500/10 via-teal-500/5 to-transparent border border-emerald-500/20 rounded-2xl p-6 my-6">
+          <ul class="space-y-3 text-sm text-text-main m-0 list-none p-0">
+            <li class="flex items-start gap-3">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 mt-2 shrink-0"></span>
+              <span><strong>अधिकृत संकेतस्थळ तपासणे:</strong> पात्र उमेदवारांनी बँकेच्या अधिकृत संकेतस्थळ <strong>laturdccb.com</strong> वर प्रसिद्ध झालेली सुधारीत प्रतीक्षा यादी डाऊनलोड करून आपले नाव तपासावे.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 mt-2 shrink-0"></span>
+              <span><strong>नियुक्ती प्रक्रिया:</strong> Phase 1 मध्ये निवड झालेल्या उमेदवारांची रुजू प्रक्रिया पूर्ण झाल्यानंतर रिक्त राहिलेल्या पदांवर प्रतीक्षा यादीतील उमेदवारांना त्यांच्या गुणवत्तेनुसार बोलावण्यात येईल.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 mt-2 shrink-0"></span>
+              <span><strong>कागदपत्रे तयार ठेवणे:</strong> प्रतीक्षा यादीतील उमेदवारांनी आपले सर्व मूळ शैक्षणिक कागदपत्रे, संगणक अर्हता, अनुभव दाखला, आधार कार्ड व पॅन कार्ड तयार ठेवावे.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Bank Contact Info -->
+        <h2 id="contact-mr" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">
+          ५. बँकेचा पत्ता व संपर्क माहिती
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+          <div class="p-5 bg-bg-surface border border-border-card rounded-2xl space-y-2">
+            <h4 class="text-sm font-bold text-primary flex items-center gap-2 m-0">
+              <HiOutlineBuildingOffice className="text-base" /> मुख्य कार्यालय पत्ता
+            </h4>
+            <p class="text-xs text-text-muted m-0 leading-relaxed">
+              दि लातूर जिल्हा मध्यवर्ती सहकारी बँक लि., लातूर<br/>
+              मुख्य कार्यालय, टिळक नगर, मेन रोड, लातूर - ४१३५१२.
+            </p>
+          </div>
+
+          <div class="p-5 bg-bg-surface border border-border-card rounded-2xl space-y-2">
+            <h4 class="text-sm font-bold text-primary flex items-center gap-2 m-0">
+              <HiOutlinePhone className="text-base" /> संपर्काचा तपशील
+            </h4>
+            <p class="text-xs text-text-muted m-0 leading-relaxed">
+              फोन नं: (०२३८२) २४५९३०, २४३९३१, २४३९४३, २५६९१९<br/>
+              ई-मेल: admin@laturdccb.com | वेबसाईट: laturdccb.com
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= LANGUAGE SEPARATOR ================= -->
+    <div class="my-16 border-t-2 border-dashed border-border-card flex items-center justify-center relative">
+      <span class="absolute bg-bg-base px-8 py-2 text-base sm:text-lg font-extrabold uppercase tracking-widest text-primary border border-border-card rounded-full shadow-md">
+        English Version
+      </span>
+    </div>
+
+    <!-- ================= ENGLISH VERSION ================= -->
+    <div id="english-version" class="opacity-95 space-y-8 text-text-main leading-relaxed">
+      <!-- English Header / Title -->
+      <div class="mb-8">
+        <h2 class="text-2xl md:text-3xl font-extrabold text-text-main mb-3">
+          Latur DCC Bank Recruitment 2026: Official Notice for Revised Waiting List Publication
+        </h2>
+        <p class="text-text-muted leading-relaxed italic">
+          The Latur District Central Cooperative Bank Ltd., Latur has issued an official notification regarding the release of the Revised Waiting List for Clerk, Sevak (Multipurpose Support Staff), and Driver posts as per Govt Resolution dated 15.06.2018.
+        </p>
+      </div>
+
+      <!-- English Table of Contents -->
+      <div class="bg-bg-surface border border-border-card rounded-3xl p-6 md:p-8 mb-12">
+        <h2 class="text-xl font-bold text-text-main mb-4 flex items-center gap-2 m-0 border-none">
+          <HiOutlineQueueList className="text-primary" />
+          Table of Contents (English)
+        </h2>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 list-none p-0 m-0 mt-2">
+          <li><a href="#overview-en" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">1. Official Notice & Background</a></li>
+          <li><a href="#gr-rules-en" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">2. Government Resolution (GR 15.06.2018) Rules</a></li>
+          <li><a href="#table-en" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">3. Post-wise Selected vs Waiting List Breakdown</a></li>
+          <li><a href="#links-en" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">4. Official Links & Portal Details</a></li>
+        </ul>
+      </div>
+
+      <!-- English Content -->
+      <div class="space-y-8 text-text-main leading-relaxed">
+        <h2 id="overview-en" class="text-xl md:text-2xl font-black text-primary mb-2 border-l-4 border-primary pl-3">
+          1. Official Notification & Background Summary
+        </h2>
+        <p>
+          The Board of Directors of <strong>Latur District Central Cooperative Bank Ltd., Latur (Latur DCCB)</strong> in its meeting on <strong>20 July 2026</strong> approved the Phase 1 merit selection list covering 70% of total vacancies (263 selected candidates out of 375 total posts). The Phase 1 results were published on <strong>28 July 2026</strong>.
+        </p>
+
+        <h2 id="gr-rules-en" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">
+          2. Mandatory Compliance with GR dated 15.06.2018
+        </h2>
+        <p>
+          As per the directives mandated by Maharashtra Government Resolution (GR) dated <strong>15 June 2018</strong>:
+        </p>
+        <ul class="list-disc pl-5 space-y-2 text-sm text-text-main">
+          <li><strong>20% Category Quota:</strong> A merit waiting list containing eligible candidates equal to exactly <strong>20% of the selection list</strong> for each post category must be published.</li>
+          <li><strong>365-Day Validity Period:</strong> The waiting list shall remain active and legally enforceable for <strong>365 days (1 full year)</strong> from the date of issuance of the first appointment orders.</li>
+          <li><strong>Revised Waiting List Issuance:</strong> In accordance with these regulations, the bank has published the Revised Waiting List corresponding to the 28.07.2026 results.</li>
+        </ul>
+
+        <!-- Breakdown Table (English) -->
+        <h2 id="table-en" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">
+          3. Post-wise Original Posts, Phase 1 Selection & Waiting List Ratio
+        </h2>
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-left border-collapse border border-border-card rounded-2xl overflow-hidden shadow-sm">
+            <thead>
+              <tr class="bg-primary/10 text-text-main">
+                <th class="p-3.5 border border-border-card font-extrabold text-sm">Sr. No.</th>
+                <th class="p-3.5 border border-border-card font-extrabold text-sm">Post Designation</th>
+                <th class="p-3.5 border border-border-card font-extrabold text-sm text-center">Total Vacancies</th>
+                <th class="p-3.5 border border-border-card font-extrabold text-sm text-center">Phase 1 Selected (70%)</th>
+                <th class="p-3.5 border border-border-card font-extrabold text-sm text-center">Waiting List Quota</th>
+              </tr>
+            </thead>
+            <tbody class="text-sm">
+              <tr class="hover:bg-bg-surface/50">
+                <td class="p-3.5 border border-border-card font-bold text-center">1</td>
+                <td class="p-3.5 border border-border-card font-bold text-primary">Clerk (Lipik)</td>
+                <td class="p-3.5 border border-border-card text-center font-bold">250</td>
+                <td class="p-3.5 border border-border-card font-black text-center text-emerald-600 dark:text-emerald-400 text-base">175</td>
+                <td class="p-3.5 border border-border-card text-center font-bold text-rose-600 dark:text-rose-400">20% of Selection List</td>
+              </tr>
+              <tr class="hover:bg-bg-surface/50">
+                <td class="p-3.5 border border-border-card font-bold text-center">2</td>
+                <td class="p-3.5 border border-border-card font-semibold">Subgrade / Sevak (Support Staff)</td>
+                <td class="p-3.5 border border-border-card text-center font-bold">115</td>
+                <td class="p-3.5 border border-border-card font-black text-center text-emerald-600 dark:text-emerald-400 text-base">81</td>
+                <td class="p-3.5 border border-border-card text-center font-bold text-rose-600 dark:text-rose-400">20% of Selection List</td>
+              </tr>
+              <tr class="hover:bg-bg-surface/50">
+                <td class="p-3.5 border border-border-card font-bold text-center">3</td>
+                <td class="p-3.5 border border-border-card font-semibold">Driver (Vahan Chalak)</td>
+                <td class="p-3.5 border border-border-card text-center font-bold">10</td>
+                <td class="p-3.5 border border-border-card font-black text-center text-emerald-600 dark:text-emerald-400 text-base">7</td>
+                <td class="p-3.5 border border-border-card text-center font-bold text-rose-600 dark:text-rose-400">20% of Selection List</td>
+              </tr>
+              <tr class="bg-primary/10 font-extrabold">
+                <td class="p-4 border border-border-card text-center text-base" colspan="2">Grand Total</td>
+                <td class="p-4 border border-border-card text-center text-primary text-xl font-black">375</td>
+                <td class="p-4 border border-border-card text-center text-emerald-600 dark:text-emerald-400 text-xl font-black">263</td>
+                <td class="p-4 border border-border-card text-center text-rose-600 dark:text-rose-400 font-extrabold">Revised List Active</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Direct Portal Table -->
+        <h2 id="links-en" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">
+          4. Official Portal & Direct Links
+        </h2>
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-primary/10">
+                <th class="p-3.5 border border-border-card font-bold text-text-main">Official Portal</th>
+                <th class="p-3.5 border border-border-card font-bold text-text-main">Direct Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3.5 border border-border-card font-semibold text-text-main">Latur DCC Bank Official Website</td>
+                <td class="p-3.5 border border-border-card">
+                  <a href="https://laturdccb.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-rose-600 hover:bg-rose-700 text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-all shadow-xs">
+                    <HiOutlineCursorArrowRays className="text-base shrink-0" /> Visit laturdccb.com
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

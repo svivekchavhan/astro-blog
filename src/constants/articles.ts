@@ -13,6 +13,18 @@ export interface ArticleMeta {
 
 export const articlesRegistry: ArticleMeta[] = [
   {
+    titleEn: "Latur DCC Bank Bharti 2026: Revised Waiting List Released for Lipik, Sevak & Driver Posts",
+    titleMr: "लातूर जिल्हा मध्यवर्ती बँक भरती २०२६: ३७५ पदांची सुधारीत प्रतीक्षा यादी (Revised Waiting List) प्रसिद्ध!",
+    slug: "/latur-dcc-bank-revised-waiting-list-2026",
+    category: "Result Update",
+    date: "August 03, 2026",
+    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200",
+    postName: "लिपिक, सेवक व वाहन चालक",
+    descriptionMr: "दि लातूर जिल्हा मध्यवर्ती सहकारी बँक लि., लातूर (Latur DCCB) कडून शासन निर्णय १५.०६.२०१८ नुसार २०% सुधारीत प्रतीक्षा यादी अधिकृत वेबसाईटवर प्रसिद्ध.",
+    vacancies: "375 (20% Waiting List)",
+    lastDate: "Valid for 365 Days"
+  },
+  {
     titleEn: "MAHAGENCO Recruitment 2026: Apply Online for 07 Chief Engineer Posts (Advt No. 07/2026)",
     titleMr: "महानिर्मिती भरती २०२६: मुख्य अभियंता (तांत्रिक व स्थापत्य) ७ जागांसाठी जाहिरात प्रसिद्ध",
     slug: "/mahagenco-recruitment-2026",
