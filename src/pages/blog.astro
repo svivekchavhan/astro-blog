@@ -24,7 +24,7 @@ const posts = [
       <div id="blog-list" class="flex flex-col">
         {
           posts.map((post, index) => (
-            <div class="opacity-0 animate-[fadeInUp_0.6s_ease_forwards]" style={`animation-delay: ${index * 0.08}s`}>
+            <div>
               <BlogListItem {...post} number={index + 1} />
             </div>
           ))
