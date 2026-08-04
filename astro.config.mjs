@@ -29,7 +29,7 @@ export default defineConfig({
       external: ['cloudflare:workers']
     },
     optimizeDeps: {
-      include: ['react-icons/hi2', 'react', 'react-dom'],
+      include: ['react', 'react-dom'],
       exclude: ['cloudflare:workers']
     }
   }
