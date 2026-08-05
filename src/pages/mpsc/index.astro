@@ -35,15 +35,25 @@ const description =
       <MpscUpdatesBox />
 
       <!-- Section 1: MPSC Exam Details -->
-      <div class="mb-6 pb-3 border-b border-border-card/40 flex items-center justify-between gap-4">
+      <div
+        class="mb-6 pb-3 border-b border-border-card/40 flex items-center justify-between gap-4"
+      >
         <div class="flex items-center gap-3">
           <span class="w-2.5 h-7 bg-primary rounded-full shrink-0"></span>
           <div>
-            <h2 class="text-xl sm:text-2xl font-black text-text-main m-0 flex items-center gap-2">
-              <span>एमपीएससी परीक्षा माहिती (<span class="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">MPSC Exam Details</span>)</span>
+            <h2
+              class="text-xl sm:text-2xl font-black text-text-main m-0 flex items-center gap-2"
+            >
+              <span
+                >एमपीएससी परीक्षा माहिती (<span
+                  class="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent"
+                  >MPSC Exam Details</span
+                >)</span
+              >
             </h2>
             <p class="text-xs text-text-muted m-0 mt-0.5 font-medium">
-              एमपीएससी राजपत्रित नागरी सेवा, संयुक्त गट ब व संयुक्त गट क परीक्षा पद्धती, पदे व पात्रता
+              एमपीएससी राजपत्रित नागरी सेवा, संयुक्त गट ब व संयुक्त गट क परीक्षा
+              पद्धती, पदे व पात्रता
             </p>
           </div>
         </div>
@@ -89,7 +99,8 @@ const description =
               <h2
                 class="text-lg md:text-xl text-text-main font-extrabold leading-tight m-0 group-hover:text-primary transition-colors"
               >
-                MPSC Gazetted Exam Details: एमपीएससी राजपत्रित नागरी सेवा परीक्षा माहिती
+                MPSC Gazetted Exam Details: एमपीएससी राजपत्रित नागरी सेवा
+                परीक्षा माहिती
               </h2>
               <p class="text-xs text-text-secondary leading-relaxed m-0">
                 एमपीएससी राजपत्रित नागरी सेवा (State Services) परीक्षा: पदे
@@ -293,15 +304,25 @@ const description =
       </div>
 
       <!-- Section 2: MPSC Study Material (Separate Section below) -->
-      <div class="mb-6 pt-2 pb-3 border-b border-border-card/40 flex items-center justify-between gap-4">
+      <div
+        class="mb-6 pt-2 pb-3 border-b border-border-card/40 flex items-center justify-between gap-4"
+      >
         <div class="flex items-center gap-3">
           <span class="w-2.5 h-7 bg-emerald-500 rounded-full shrink-0"></span>
           <div>
-            <h2 class="text-xl sm:text-2xl font-black text-text-main m-0 flex items-center gap-2">
-              <span>एमपीएससी अभ्यास साहित्य (<span class="bg-gradient-to-r from-emerald-600 via-teal-500 to-emerald-600 bg-clip-text text-transparent">MPSC Study Material</span>)</span>
+            <h2
+              class="text-xl sm:text-2xl font-black text-text-main m-0 flex items-center gap-2"
+            >
+              <span
+                >एमपीएससी अभ्यास साहित्य (<span
+                  class="bg-gradient-to-r from-emerald-600 via-teal-500 to-emerald-600 bg-clip-text text-transparent"
+                  >MPSC Study Material</span
+                >)</span
+              >
             </h2>
             <p class="text-xs text-text-muted m-0 mt-0.5 font-medium">
-              राज्यशास्त्र, भारतीय संविधान, उद्देशिका व परीक्षाभिमुख विषयांच्या नोट्स व सराव प्रश्न
+              राज्यशास्त्र, भारतीय संविधान, उद्देशिका व परीक्षाभिमुख विषयांच्या
+              नोट्स व सराव प्रश्न
             </p>
           </div>
         </div>
@@ -383,84 +404,6 @@ const description =
             class="mt-6 pt-3.5 border-t border-border-card/30 flex items-center justify-between text-xs text-emerald-500 font-bold uppercase tracking-wider"
           >
             <span>Start Learning</span>
-            <HiOutlineArrowRight
-              className="text-sm transition-transform duration-300 group-hover:translate-x-1"
-            />
-          </div>
-        </a>
-
-        <!-- Card 2: MPSC Polity Preamble Notes -->
-        <a
-          href="/mpsc/mpsc-polity-preamble"
-          class="group relative bg-bg-surface border border-border-card hover:border-primary rounded-3xl p-6 md:p-8 shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 flex flex-col justify-between min-h-[340px] overflow-hidden no-underline"
-        >
-          <!-- Ambient Glow background effect -->
-          <div
-            class="absolute -right-20 -top-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors duration-500 -z-10"
-          >
-          </div>
-
-          <div class="space-y-4">
-            <!-- Icon & Badges -->
-            <div class="flex justify-between items-start gap-3.5">
-              <div
-                class="p-3.5 bg-primary/10 text-primary rounded-2xl group-hover:bg-primary group-hover:text-white transition-all duration-300 shrink-0"
-              >
-                <HiOutlineDocumentText className="text-xl" />
-              </div>
-              <div class="flex items-center justify-end gap-1.5 flex-wrap">
-                <span
-                  class="text-[0.6rem] bg-primary/10 text-primary px-2.5 py-0.5 rounded font-bold uppercase tracking-wider border border-primary/20 whitespace-nowrap"
-                >
-                  Notes & PYQs
-                </span>
-                <span
-                  class="text-[0.6rem] bg-emerald-500/10 text-emerald-500 px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wide border border-emerald-500/20 whitespace-nowrap"
-                >
-                  Preamble
-                </span>
-              </div>
-            </div>
-
-            <!-- Title & Description -->
-            <div class="space-y-2">
-              <h2
-                class="text-lg md:text-xl text-text-main font-extrabold leading-tight m-0 group-hover:text-primary transition-colors"
-              >
-                भारतीय संविधानाची उद्देशिका (Preamble): MPSC राज्यशास्त्र नोट्स
-              </h2>
-              <p class="text-xs text-text-secondary leading-relaxed m-0">
-                संविधानाची उद्देशिका (सर्व्हेभौम, समाजवादी, धर्मनिरपेक्ष, लोकशाही, गणराज्य), मुख्य घटक, महत्त्वाचे खटले व मागील वर्षांचे प्रश्न (PYQs).
-              </p>
-            </div>
-
-            <!-- Features list -->
-            <div
-              class="flex flex-col gap-2 text-xs text-text-muted font-medium pt-3.5 border-t border-border-card/30"
-            >
-              <span class="flex items-center gap-1.5"
-                ><HiOutlineDocumentText
-                  className="text-primary text-sm shrink-0"
-                /> उद्देशिकेतील महत्त्वाचे शब्द व अर्थ</span
-              >
-              <span class="flex items-center gap-1.5"
-                ><HiOutlineQueueList
-                  className="text-primary text-sm shrink-0"
-                /> केशवानंद भारती व बेरुबारी खटला</span
-              >
-              <span class="flex items-center gap-1.5"
-                ><HiOutlineCalendarDays
-                  className="text-primary text-sm shrink-0"
-                /> ४२ वी घटनादुरुस्ती १९७६ सविस्तर नोट्स</span
-              >
-            </div>
-          </div>
-
-          <!-- Action link footer -->
-          <div
-            class="mt-6 pt-3.5 border-t border-border-card/30 flex items-center justify-between text-xs text-primary font-bold uppercase tracking-wider"
-          >
-            <span>Read Notes</span>
             <HiOutlineArrowRight
               className="text-sm transition-transform duration-300 group-hover:translate-x-1"
             />

@@ -13,11 +13,12 @@ import {
   HiOutlineUserGroup,
   HiOutlineBellAlert,
   HiOutlineCheckBadge,
-  HiOutlineMegaphone
+  HiOutlineMegaphone,
+  HiOutlineClock
 } from "react-icons/hi2";
 
-const title = "MPSC गट-क सेवा संयुक्त पूर्व परीक्षा २०२६: ३,०८८ जागांसाठी शुद्धिपत्रक प्रसिद्ध, अर्ज मुदतवाढ व पदसंख्या वाढ!";
-const description = "महाराष्ट्र लोकसेवा आयोग (MPSC) गट-क सेवा संयुक्त पूर्व परीक्षा २०२६ चे नवीन शुद्धिपत्रक (Corrigendum) जाहीर. एकूण ३,०८८ पदे (तलाठी १५३९, लिपिक टंकलेखक १२१४ व इतर). ऑनलाईन अर्ज करण्याची मुदत ३१ जुलै २०२६ पर्यंत वाढवली असून परीक्षा २५ ऑक्टोबर २०२६ रोजी होणार आहे.";
+const title = "MPSC गट-क सेवा संयुक्त पूर्व परीक्षा २०२६: ५,७०७ जागांसाठी शुद्धिपत्रक प्रसिद्ध, अर्ज मुदतवाढ व पदसंख्या वाढ!";
+const description = "महाराष्ट्र लोकसेवा आयोग (MPSC) गट-क सेवा संयुक्त पूर्व परीक्षा २०२६ चे नवीन शुद्धिपत्रक (Corrigendum) जाहीर. एकूण ५,७०७ पदे (२,६१९ + ३,०८८ = ५,७०७ पदे). ऑनलाईन अर्ज करण्याची मुदत ३१ जुलै २०२६ पर्यंत वाढवली असून परीक्षा २५ ऑक्टोबर २०२६ रोजी होणार आहे.";
 const canonicalURL = "https://mahasandhi.in/mpsc-group-c-bharti-2026";
 const date = "July 22, 2026";
 const category = "MPSC Bharti";
@@ -55,7 +56,8 @@ const category = "MPSC Bharti";
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
         <div class="p-3 bg-bg-surface/80 backdrop-blur-sm rounded-2xl border border-border-card">
           <span class="text-xs text-text-muted block uppercase font-bold tracking-wider mb-1">एकूण पदे (Total Vacancies)</span>
-          <span class="text-2xl md:text-3xl font-black text-primary">3,088</span>
+          <span class="text-2xl md:text-3xl font-black text-primary">5,707</span>
+          <span class="text-[0.65rem] text-text-muted font-semibold block mt-0.5">(2619 + 3088 = 5707)</span>
         </div>
         <div class="p-3 bg-bg-surface/80 backdrop-blur-sm rounded-2xl border border-border-card">
           <span class="text-xs text-text-muted block uppercase font-bold tracking-wider mb-1">नवीन अंतिम तारीख (Last Date)</span>
@@ -160,10 +162,11 @@ const category = "MPSC Bharti";
         </h2>
         <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 list-none p-0 m-0 mt-2">
           <li><a href="#overview-mr" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">१. MPSC गट-क शुद्धिपत्रक २०२६ महत्त्वाचे अपडेट्स</a></li>
-          <li><a href="#vacancies-mr" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">२. विभागनिहाय व पदनिहाय ३,०८८ जागांचा सविस्तर तक्ता</a></li>
-          <li><a href="#dates-mr" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">३. महत्त्वाच्या तारखा (Important Dates & Deadline Extension)</a></li>
-          <li><a href="#eligibility-mr" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">४. शैक्षणिक पात्रता, वयोमर्यादा व टायपिंग निकष</a></li>
-          <li><a href="#links-mr" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">५. अधिकृत लिंक्स व अर्ज प्रक्रिया</a></li>
+          <li><a href="#vacancies-mr" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">२. विभागनिहाय व पदनिहाय ५,७०७ जागांचा सविस्तर तक्ता</a></li>
+          <li><a href="#eligibility-mr" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">३. पदनिहाय शैक्षणिक पात्रता (Educational Qualification)</a></li>
+          <li><a href="#age-limit-mr" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">४. वयाची अट व सवलत (Age Limit Criteria)</a></li>
+          <li><a href="#dates-mr" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">५. महत्त्वाच्या तारखा (Important Dates & Deadline Extension)</a></li>
+          <li><a href="#links-mr" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">६. अधिकृत लिंक्स व अर्ज प्रक्रिया</a></li>
         </ul>
       </div>
 
@@ -171,105 +174,245 @@ const category = "MPSC Bharti";
       <div class="space-y-8 text-text-main leading-relaxed">
         <h2 id="overview-mr">MPSC गट-क सेवा संयुक्त पूर्व परीक्षा २०२६: नवीन शुद्धिपत्रक व मुदतवाढ</h2>
         <p>
-          <strong>महाराष्ट्र लोकसेवा आयोग (MPSC)</strong> मार्फत दिनांक <strong>२२ जुलै २०२६</strong> रोजी <strong>शुद्धिपत्रक (क्रमांक: सीएमए-०४२६/प्र.क्र.४२/२०२६/जाहिरात)</strong> प्रसिद्ध करण्यात आले आहे. या शुद्धिपत्रकानुसार, <strong>महाराष्ट्र गट-क सेवा संयुक्त पूर्व परीक्षा - २०२६ (जाहिरात क्रमांक: ०१७/२०२६, दिनांक २५ जून २०२६)</strong> अंतर्गत विविध शासकीय विभागांकडून प्राप्त झालेल्या नवीन मागणीपत्रांचा समावेश करण्यात आला आहे.
+          <strong>महाराष्ट्र लोकसेवा आयोग (MPSC)</strong> मार्फत <strong>महाराष्ट्र गट-क सेवा संयुक्त पूर्व परीक्षा - २०२६ (जाहिरात क्रमांक: ०१७/२०२६)</strong> अंतर्गत नवीन शुद्धिपत्रक प्रसिद्ध करण्यात आले आहे. या शुद्धिपत्रकानुसार विविध शासकीय विभागांकडून प्राप्त झालेल्या अतिरिक्त मागणीपत्रांचा समावेश करण्यात आला असून, एकूण पदसंख्या वाढवून <strong>५,७०७ पदे (२६१९ + ३०८८ = ५७०७ पदे)</strong> करण्यात आली आहे.
         </p>
         <p>
-          या नवीन मागणीपत्रानुसार एकूण पदसंख्येत वाढ झाली असून, आता एकूण <strong>३,०८८ रिक्त पदांसाठी</strong> ही भरती प्रक्रिया पार पडणार आहे. तसेच, अर्जदार उमेदवारांना ऑनलाईन अर्ज करण्यासाठी मुदतवाढ देण्यात आली असून <strong>३१ जुलै २०२६</strong> ही अर्ज सादर करण्याची अंतिम तारीख निश्चित करण्यात आली आहे.
+          ऑनलाईन अर्ज करण्यासाठी उमेदवारांना मुदतवाढ देण्यात आली असून <strong>३१ जुलै २०२६</strong> पर्यंत सुधारित ऑनलाईन अर्ज करता येतील. संयुक्त पूर्व परीक्षा <strong>२५ ऑक्टोबर २०२६</strong> रोजी आयोजित केली जाणार आहे.
         </p>
 
         <!-- Departmental Vacancy Table (Marathi) -->
         <h2 id="vacancies-mr" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">
-          विभागनिहाय व पदनिहाय ३,०८८ रिक्त पदांचा सविस्तर तक्ता
+          विभागनिहाय व पदनिहाय ५,७०७ रिक्त पदांचा सविस्तर तक्ता
         </h2>
-        <p>शुद्धिपत्रकामध्ये समाविष्ट करण्यात आलेल्या सर्व ९ विभागांमधील पदांची माहिती खालीलप्रमाणे आहे:</p>
+        <p>गट-क भरती २०२६ अंतर्गत समाविष्ट सर्व ११ पदप्रकार व विभागांची माहिती खालीलप्रमाणे आहे:</p>
 
         <div class="overflow-x-auto my-6">
           <table class="w-full text-left border-collapse border border-border-card rounded-2xl overflow-hidden shadow-sm">
             <thead>
               <tr class="bg-primary/10 text-text-main">
-                <th class="p-3.5 border border-border-card font-extrabold text-sm">अ.क्र.</th>
-                <th class="p-3.5 border border-border-card font-extrabold text-sm">विभाग (Department)</th>
+                <th class="p-3.5 border border-border-card font-extrabold text-sm text-center">पद क्र.</th>
                 <th class="p-3.5 border border-border-card font-extrabold text-sm">पदनाम (Post Name)</th>
+                <th class="p-3.5 border border-border-card font-extrabold text-sm">विभाग (Department)</th>
                 <th class="p-3.5 border border-border-card font-extrabold text-sm text-center">एकूण पदे</th>
-                <th class="p-3.5 border border-border-card font-extrabold text-sm">आवश्यक पात्रता (Eligibility)</th>
-                <th class="p-3.5 border border-border-card font-extrabold text-sm">वयोमर्यादा गणण्याचा दिनांक</th>
               </tr>
             </thead>
             <tbody class="text-sm">
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card font-bold text-center">१</td>
-                <td class="p-3.5 border border-border-card font-semibold">महसूल व वन विभाग</td>
-                <td class="p-3.5 border border-border-card font-bold text-primary">ग्राम महसूल अधिकारी (तलाठी), गट-क</td>
-                <td class="p-3.5 border border-border-card font-black text-center text-primary text-base">१,५३९</td>
-                <td class="p-3.5 border border-border-card">कोणत्याही शाखेतील पदवी (Degree)</td>
-                <td class="p-3.5 border border-border-card text-xs">अर्ज स्वीकारण्याच्या अंतिम दिनांकास (०५ ऑगस्ट २०२६ / ३१ जुलै २०२६)</td>
+                <td class="p-3.5 border border-border-card font-bold text-center">1</td>
+                <td class="p-3.5 border border-border-card font-bold text-text-main">उद्योग निरीक्षक</td>
+                <td class="p-3.5 border border-border-card font-semibold text-text-muted">उद्योग ऊर्जा व कामगार विभाग</td>
+                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary">09</td>
               </tr>
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card font-bold text-center">२</td>
-                <td class="p-3.5 border border-border-card font-semibold">राज्य ग्राहक तक्रार निवारण आयोग, मुंबई</td>
-                <td class="p-3.5 border border-border-card font-semibold">वरिष्ठ अभिलेखापाल / वरिष्ठ लिपिक / अभिलेखापाल, गट-क</td>
-                <td class="p-3.5 border border-border-card font-bold text-center">११</td>
-                <td class="p-3.5 border border-border-card">कोणत्याही शाखेतील पदवी</td>
-                <td class="p-3.5 border border-border-card text-xs">०१ ऑक्टोबर २०२६ (शासकीय सेवेतील उमेदवारांसाठी कमाल वयोमर्यादा ५ वर्षांपर्यंत शिथिल)</td>
+                <td class="p-3.5 border border-border-card font-bold text-center">2</td>
+                <td class="p-3.5 border border-border-card font-bold text-text-main">तांत्रिक सहायक</td>
+                <td class="p-3.5 border border-border-card font-semibold text-text-muted">वित्त विभाग</td>
+                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary">03</td>
               </tr>
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card font-bold text-center">३</td>
-                <td class="p-3.5 border border-border-card font-semibold">राज्य ग्राहक तक्रार निवारण आयोग, मुंबई</td>
-                <td class="p-3.5 border border-border-card font-semibold">सहायक अधीक्षक, गट-क</td>
-                <td class="p-3.5 border border-border-card font-bold text-center">११</td>
-                <td class="p-3.5 border border-border-card">कोणत्याही शाखेतील पदवी</td>
-                <td class="p-3.5 border border-border-card text-xs">०१ ऑक्टोबर २०२६</td>
+                <td class="p-3.5 border border-border-card font-bold text-center">3</td>
+                <td class="p-3.5 border border-border-card font-bold text-text-main">कर सहायक</td>
+                <td class="p-3.5 border border-border-card font-semibold text-text-muted">वित्त विभाग</td>
+                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary">282</td>
               </tr>
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card font-bold text-center">४</td>
-                <td class="p-3.5 border border-border-card font-semibold">कृषि व प. दु. म. विभाग</td>
-                <td class="p-3.5 border border-border-card font-semibold">सहाय्यक मत्स्यव्यवसाय विकास अधिकारी (तांत्रिक), गट-क</td>
-                <td class="p-3.5 border border-border-card font-bold text-center">२५४</td>
-                <td class="p-3.5 border border-border-card font-medium text-emerald-600 dark:text-emerald-400">मत्स्यविज्ञान विषयातील किमान द्वितीय श्रेणीतील पदवी (B.F.Sc.)</td>
-                <td class="p-3.5 border border-border-card text-xs">०१ ऑक्टोबर २०२६</td>
+                <td class="p-3.5 border border-border-card font-bold text-center">4</td>
+                <td class="p-3.5 border border-border-card font-bold text-text-main">सहायक मोटार वाहन निरीक्षक, गट-क (AMVI)</td>
+                <td class="p-3.5 border border-border-card font-semibold text-text-muted">गृह विभाग</td>
+                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary">461</td>
               </tr>
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card font-bold text-center">५</td>
-                <td class="p-3.5 border border-border-card font-semibold">नियंत्रक शिधावाटप व संचालक नागरी पुरवठा कार्यालय</td>
-                <td class="p-3.5 border border-border-card font-semibold">लिपिक-टंकलेखक (विविध नियुक्ती प्राधिकारी)</td>
-                <td class="p-3.5 border border-border-card font-bold text-center">२३०</td>
-                <td class="p-3.5 border border-border-card" rowspan="5">
-                  (१) कोणत्याही शाखेतील पदवी <br/>
-                  (२) जाहिरातीमधील लिपिक-टंकलेखक पदाकरिता नमूद नियमानुसार टंकलेखन अर्हता आवश्यक (मराठी ३० व/किंवा इंग्रजी ४० श.प्र.मि.)
-                </td>
-                <td class="p-3.5 border border-border-card text-xs" rowspan="5">०१ ऑक्टोबर २०२६</td>
+                <td class="p-3.5 border border-border-card font-bold text-center">5</td>
+                <td class="p-3.5 border border-border-card font-bold text-text-main">लिपिक-टंकलेखक</td>
+                <td class="p-3.5 border border-border-card font-semibold text-text-muted">मंत्रालयीन प्रशासकीय विभाग तसेच राज्य शासनाची महाराष्ट्रातील विविध कार्यालये</td>
+                <td class="p-3.5 border border-border-card font-black text-center text-primary text-base">1,864</td>
               </tr>
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card font-bold text-center">६</td>
-                <td class="p-3.5 border border-border-card font-semibold">अन्न नागरी पुरवठा व ग्राहक संरक्षण विभाग</td>
-                <td class="p-3.5 border border-border-card font-semibold">लिपिक-टंकलेखक</td>
-                <td class="p-3.5 border border-border-card font-bold text-center">१५५</td>
+                <td class="p-3.5 border border-border-card font-bold text-center">6</td>
+                <td class="p-3.5 border border-border-card font-bold text-primary">ग्राम महसूल अधिकारी (तलाठी), गट-क (विविध नियुक्ती प्राधिकारी)</td>
+                <td class="p-3.5 border border-border-card font-semibold text-text-muted">महसूल व वन विभाग</td>
+                <td class="p-3.5 border border-border-card font-black text-center text-primary text-base">1,539</td>
               </tr>
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card font-bold text-center">७</td>
-                <td class="p-3.5 border border-border-card font-semibold">आदिवासी विकास विभाग</td>
-                <td class="p-3.5 border border-border-card font-semibold">लिपिक-टंकलेखक</td>
-                <td class="p-3.5 border border-border-card font-bold text-center">६९</td>
+                <td class="p-3.5 border border-border-card font-bold text-center">7</td>
+                <td class="p-3.5 border border-border-card font-bold text-text-main">वरिष्ठ अभिलेखापाल / वरिष्ठ लिपिक / अभिलेखापाल, गट-क</td>
+                <td class="p-3.5 border border-border-card font-semibold text-text-muted">राज्य ग्राहक तक्रार निवारण आयोग, मुंबई</td>
+                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary">11</td>
               </tr>
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card font-bold text-center">८</td>
-                <td class="p-3.5 border border-border-card font-semibold">महसूल व वन विभाग</td>
-                <td class="p-3.5 border border-border-card font-semibold">लिपिक-टंकलेखक</td>
-                <td class="p-3.5 border border-border-card font-bold text-center text-primary">४८०</td>
+                <td class="p-3.5 border border-border-card font-bold text-center">8</td>
+                <td class="p-3.5 border border-border-card font-bold text-text-main">सहायक अधीक्षक, गट-क</td>
+                <td class="p-3.5 border border-border-card font-semibold text-text-muted">राज्य ग्राहक तक्रार निवारण आयोग, मुंबई</td>
+                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary">11</td>
               </tr>
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card font-bold text-center">९</td>
-                <td class="p-3.5 border border-border-card font-semibold">महसूल व वन विभाग (नोंदणी व मुद्रांक विभाग)</td>
-                <td class="p-3.5 border border-border-card font-semibold">लिपिक-टंकलेखक नोंदणी व मुद्रांक विभाग</td>
-                <td class="p-3.5 border border-border-card font-bold text-center">३३९</td>
+                <td class="p-3.5 border border-border-card font-bold text-center">9</td>
+                <td class="p-3.5 border border-border-card font-bold text-text-main">सहाय्यक मत्स्यव्यवसाय विकास अधिकारी (तांत्रिक), गट-क</td>
+                <td class="p-3.5 border border-border-card font-semibold text-text-muted">कृषी व प. दु. म. विभाग</td>
+                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary">254</td>
+              </tr>
+              <tr class="hover:bg-bg-surface/50">
+                <td class="p-3.5 border border-border-card font-bold text-center" rowspan="4">10</td>
+                <td class="p-3.5 border border-border-card font-bold text-text-main" rowspan="4">लिपिक-टंकलेखक (विविध नियुक्ती प्राधिकारी)</td>
+                <td class="p-3.5 border border-border-card text-xs">नियंत्रक शिधावाटप व संचालक नागरी पुरवठा कार्यालय (230 पदे)</td>
+                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary" rowspan="4">944 <br/><span class="text-[0.65rem] text-text-muted font-normal">(230+155+69+490)</span></td>
+              </tr>
+              <tr class="hover:bg-bg-surface/50">
+                <td class="p-3.5 border border-border-card text-xs">अन्न नागरी पुरवठा व ग्राहक संरक्षण विभाग (155 पदे)</td>
+              </tr>
+              <tr class="hover:bg-bg-surface/50">
+                <td class="p-3.5 border border-border-card text-xs">आदिवासी विकास विभाग (69 पदे)</td>
+              </tr>
+              <tr class="hover:bg-bg-surface/50">
+                <td class="p-3.5 border border-border-card text-xs">महसूल व वन विभाग (490 पदे)</td>
+              </tr>
+              <tr class="hover:bg-bg-surface/50">
+                <td class="p-3.5 border border-border-card font-bold text-center">11</td>
+                <td class="p-3.5 border border-border-card font-bold text-text-main">लिपिक-टंकलेखक नोंदणी व मुद्रांक विभाग</td>
+                <td class="p-3.5 border border-border-card font-semibold text-text-muted">महसूल व वन विभाग</td>
+                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary">339</td>
               </tr>
               <tr class="bg-primary/10 font-extrabold">
-                <td class="p-4 border border-border-card text-center text-base" colspan="3">एकूण (Grand Total)</td>
-                <td class="p-4 border border-border-card text-center text-primary text-xl font-black">३,०८८</td>
-                <td class="p-4 border border-border-card text-xs text-text-muted" colspan="2">विविध ९ विभागांतील पदसंख्या</td>
+                <td class="p-4 border border-border-card text-center text-base" colspan="3">एकूण पदे (Grand Total)</td>
+                <td class="p-4 border border-border-card text-center text-primary text-2xl font-black">5,707 <br/><span class="text-xs font-bold text-text-muted">(2619 + 3088 = 5707)</span></td>
               </tr>
             </tbody>
           </table>
+        </div>
+
+        <!-- Educational Eligibility Section -->
+        <h2 id="eligibility-mr" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">
+          पदनिहाय शैक्षणिक पात्रता (Educational Qualification)
+        </h2>
+        <div class="bg-bg-surface border border-border-card rounded-2xl p-5 md:p-6 space-y-3.5">
+          <div class="flex items-start gap-2.5 pb-2.5 border-b border-border-card/60">
+            <span class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-md shrink-0">पद क्र. 1</span>
+            <div>
+              <strong class="text-text-main block text-sm">उद्योग निरीक्षक:</strong>
+              <span class="text-xs text-text-muted">इंजिनिअरिंग पदवी किंवा तंत्रज्ञानातील डिप्लोमा किंवा विज्ञान शाखेतील पदवी.</span>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-2.5 pb-2.5 border-b border-border-card/60">
+            <span class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-md shrink-0">पद क्र. 2</span>
+            <div>
+              <strong class="text-text-main block text-sm">तांत्रिक सहायक:</strong>
+              <span class="text-xs text-text-muted">कोणत्याही शाखेतील पदवीधर (Degree).</span>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-2.5 pb-2.5 border-b border-border-card/60">
+            <span class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-md shrink-0">पद क्र. 3</span>
+            <div>
+              <strong class="text-text-main block text-sm">कर सहायक:</strong>
+              <span class="text-xs text-text-muted">(i) पदवीधर (ii) मराठी टंकलेखन ३० श.प्र.मि. व इंग्रजी टंकलेखन ४० श.प्र.मि. (GCC-TBC).</span>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-2.5 pb-2.5 border-b border-border-card/60">
+            <span class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-md shrink-0">पद क्र. 4</span>
+            <div>
+              <strong class="text-text-main block text-sm">सहायक मोटार वाहन निरीक्षक (AMVI):</strong>
+              <span class="text-xs text-text-muted">१०वी उत्तीर्ण + ऑटोमोबाईल / मेकॅनिकल इंजिनिअरिंग डिप्लोमा किंवा पदवी किंवा समतुल्य किंवा B.Tech (मेकॅट्रॉनिक्स/मेकॅनिकल आणि स्मार्ट मॅन्युफॅक्चरिंग किंवा मेटलर्जीमधील पदवी किंवा B.E (इंडस्ट्रियल & प्रॉडक्शन / प्रॉडक्शन सँडविच) किंवा मॅन्युफॅक्चरिंग ऑटोमेशन डिप्लोमा किंवा टूल & डाय मेकिंगमधील ०४ वर्षांचा डिप्लोमा.</span>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-2.5 pb-2.5 border-b border-border-card/60">
+            <span class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-md shrink-0">पद क्र. 5</span>
+            <div>
+              <strong class="text-text-main block text-sm">लिपिक-टंकलेखक (मंत्रालयीन व विविध कार्यालये):</strong>
+              <span class="text-xs text-text-muted">(i) पदवीधर (ii) मराठी टंकलेखन ३० श.प्र.मि. किंवा इंग्रजी टंकलेखन ४० श.प्र.मि.</span>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-2.5 pb-2.5 border-b border-border-card/60">
+            <span class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-md shrink-0">पद क्र. 6</span>
+            <div>
+              <strong class="text-text-main block text-sm">ग्राम महसूल अधिकारी (तलाठी), गट-क:</strong>
+              <span class="text-xs text-text-muted">कोणत्याही शाखेतील पदवी (Graduate in any discipline).</span>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-2.5 pb-2.5 border-b border-border-card/60">
+            <span class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-md shrink-0">पद क्र. 7</span>
+            <div>
+              <strong class="text-text-main block text-sm">वरिष्ठ अभिलेखापाल / वरिष्ठ लिपिक / अभिलेखापाल:</strong>
+              <span class="text-xs text-text-muted">कोणत्याही शाखेतील पदवी.</span>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-2.5 pb-2.5 border-b border-border-card/60">
+            <span class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-md shrink-0">पद क्र. 8</span>
+            <div>
+              <strong class="text-text-main block text-sm">सहायक अधीक्षक, गट-क:</strong>
+              <span class="text-xs text-text-muted">कोणत्याही शाखेतील पदवी.</span>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-2.5 pb-2.5 border-b border-border-card/60">
+            <span class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-md shrink-0">पद क्र. 9</span>
+            <div>
+              <strong class="text-text-main block text-sm">सहाय्यक मत्स्यव्यवसाय विकास अधिकारी (तांत्रिक):</strong>
+              <span class="text-xs text-text-muted font-semibold text-emerald-600 dark:text-emerald-400">मत्स्यविज्ञान विषयातील किमान द्वितीय श्रेणीतील पदवी (B.F.Sc.).</span>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-2.5 pb-2.5 border-b border-border-card/60">
+            <span class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-md shrink-0">पद क्र. 10</span>
+            <div>
+              <strong class="text-text-main block text-sm">लिपिक-टंकलेखक (विविध विभाग):</strong>
+              <span class="text-xs text-text-muted">(i) पदवीधर (ii) मराठी टंकलेखन ३० श.प्र.मि. किंवा इंग्रजी टंकलेखन ४० श.प्र.मि.</span>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-2.5">
+            <span class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-md shrink-0">पद क्र. 11</span>
+            <div>
+              <strong class="text-text-main block text-sm">लिपिक-टंकलेखक (नोंदणी व मुद्रांक विभाग):</strong>
+              <span class="text-xs text-text-muted">(i) पदवीधर (ii) मराठी टंकलेखन ३० श.प्र.मि. किंवा इंग्रजी टंकलेखन ४० श.प्र.मि.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Age Limit Section -->
+        <h2 id="age-limit-mr" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">
+          वयाची अट व सवलत (Age Limit Criteria)
+        </h2>
+        <div class="bg-bg-surface border border-border-card rounded-2xl p-5 md:p-6 space-y-4">
+          <p class="text-xs sm:text-sm text-text-muted mb-3 m-0">
+            <strong>वयोमर्यादा गणण्याचा दिनांक:</strong> <span class="text-primary font-bold">०१ ऑक्टोबर २०२६</span> रोजी [मागासवर्गीय / आ.दु.घ (EWS) / अनाथ उमेदवारांसाठी: <strong>०५ वर्षे सूट</strong>]
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs">
+            <div class="p-3 bg-bg-base rounded-xl border border-border-card">
+              <strong class="block text-text-main mb-1">पद क्र. १ (उद्योग निरीक्षक):</strong>
+              <span class="text-primary font-bold text-sm">१९ ते ३८ वर्षे</span>
+            </div>
+            <div class="p-3 bg-bg-base rounded-xl border border-border-card">
+              <strong class="block text-text-main mb-1">पद क्र. २ (तांत्रिक सहायक):</strong>
+              <span class="text-primary font-bold text-sm">१९ ते ३८ वर्षे</span>
+            </div>
+            <div class="p-3 bg-bg-base rounded-xl border border-border-card">
+              <strong class="block text-text-main mb-1">पद क्र. ३ (कर सहायक):</strong>
+              <span class="text-primary font-bold text-sm">१८ ते ३८ वर्षे</span>
+            </div>
+            <div class="p-3 bg-bg-base rounded-xl border border-border-card">
+              <strong class="block text-text-main mb-1">पद क्र. ४ (AMVI):</strong>
+              <span class="text-primary font-bold text-sm">१९ ते ३८ वर्षे</span>
+            </div>
+            <div class="p-3 bg-bg-base rounded-xl border border-border-card">
+              <strong class="block text-text-main mb-1">पद क्र. ५ (लिपिक-टंकलेखक):</strong>
+              <span class="text-primary font-bold text-sm">१९ ते ३८ वर्षे</span>
+            </div>
+            <div class="p-3 bg-bg-base rounded-xl border border-border-card">
+              <strong class="block text-text-main mb-1">पद क्र. ६ (तलाठी):</strong>
+              <span class="text-primary font-bold text-sm">१८ ते ३८ वर्षे</span>
+            </div>
+            <div class="p-3 bg-bg-base rounded-xl border border-border-card sm:col-span-2 md:col-span-3">
+              <strong class="block text-text-main mb-1">पद क्र. ७ ते ११:</strong>
+              <span class="text-text-muted font-medium">जाहिरातीत स्वतंत्रपणे नमूद नाही / MPSC नियमानुसार</span>
+            </div>
+          </div>
         </div>
 
         <!-- Key Dates Section -->
@@ -284,7 +427,7 @@ const category = "MPSC Bharti";
             <div>
               <span class="text-xs text-text-muted font-bold uppercase tracking-wider block">ऑनलाईन अर्ज करण्याची नवीन शेवटची तारीख</span>
               <span class="text-lg font-black text-rose-600 dark:text-rose-400">३१ जुलै, २०२६</span>
-              <p class="text-xs text-text-muted mt-1 m-0">पूर्वीच्या शुद्धिपत्रकानुसार अर्ज भरण्यास मुदतवाढ देण्यात आली आहे.</p>
+              <p class="text-xs text-text-muted mt-1 m-0">शुद्धिपत्रकानुसार अर्ज भरण्यास सुधारित मुदतवाढ.</p>
             </div>
           </div>
 
@@ -347,10 +490,10 @@ const category = "MPSC Bharti";
       <!-- English Header / Title -->
       <div class="mb-8">
         <h2 class="text-2xl md:text-3xl font-extrabold text-text-main mb-3">
-          MPSC Group C Services Combined Prelims Exam 2026: Corrigendum Released for 3,088 Vacancies & Deadline Extended
+          MPSC Group C Services Combined Prelims Exam 2026: Corrigendum Released for 5,707 Vacancies & Deadline Extended
         </h2>
         <p class="text-text-muted leading-relaxed italic">
-          Maharashtra Public Service Commission (MPSC) has issued an official Corrigendum notice (Notice No: CMA-0426/CR-42/2026/Advt dated 22 July 2026) regarding Maharashtra Group C Services Combined Preliminary Examination 2026 (Advt No. 017/2026).
+          Maharashtra Public Service Commission (MPSC) has released an updated Corrigendum notification regarding Maharashtra Group C Services Combined Preliminary Examination 2026 (Advt No. 017/2026), expanding total vacancies to 5,707 posts (2,619 + 3,088).
         </p>
       </div>
 
@@ -362,10 +505,11 @@ const category = "MPSC Bharti";
         </h2>
         <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 list-none p-0 m-0 mt-2">
           <li><a href="#overview-en" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">1. MPSC Group C Corrigendum Overview</a></li>
-          <li><a href="#vacancies-en" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">2. Department-wise 3,088 Vacancy Breakdown Table</a></li>
-          <li><a href="#dates-en" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">3. Key Dates & Application Deadline Extension</a></li>
-          <li><a href="#eligibility-en" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">4. Educational Qualification & Typing Criteria</a></li>
-          <li><a href="#links-en" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">5. Official Apply Online Direct Links</a></li>
+          <li><a href="#vacancies-en" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">2. Department-wise 5,707 Vacancy Breakdown Table</a></li>
+          <li><a href="#eligibility-en" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">3. Post-wise Educational Qualifications</a></li>
+          <li><a href="#age-en" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">4. Age Limit & Relaxation Criteria</a></li>
+          <li><a href="#dates-en" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">5. Key Dates & Application Schedule</a></li>
+          <li><a href="#links-en" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">6. Official Apply Online Links</a></li>
         </ul>
       </div>
 
@@ -373,106 +517,141 @@ const category = "MPSC Bharti";
       <div class="space-y-8 text-text-main leading-relaxed">
         <h2 id="overview-en">MPSC Group C Combined Exam 2026: Notice Details & Vacancy Hike</h2>
         <p>
-          The <strong>Maharashtra Public Service Commission (MPSC)</strong> published a fresh <strong>Corrigendum Notice</strong> on <strong>22 July 2026</strong> for the <strong>Group C Services Combined Preliminary Examination 2026</strong> (original notification Advt No. 017/2026 dated 25 June 2026).
+          The <strong>Maharashtra Public Service Commission (MPSC)</strong> has published an updated <strong>Corrigendum Notice</strong> for the <strong>Group C Services Combined Preliminary Examination 2026</strong> (Advt No. 017/2026).
         </p>
         <p>
-          Following additional requisitions submitted by multiple Maharashtra State Government departments, the overall post count has been increased to <strong>3,088 vacancies</strong>. Additionally, the deadline for online application submission has been extended to <strong>31 July 2026</strong>, while the preliminary examination will take place on <strong>25 October 2026</strong>.
+          Following additional requisitions submitted by Maharashtra State Government departments, the overall post count has been increased to <strong>5,707 vacancies</strong> (2,619 + 3,088). Online application submission deadline has been extended to <strong>31 July 2026</strong>, while the preliminary examination will take place on <strong>25 October 2026</strong>.
         </p>
 
         <!-- Departmental Vacancy Table (English) -->
         <h2 id="vacancies-en" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">
-          Department-wise & Post-wise 3,088 Vacancies Breakdown Table
+          Department-wise & Post-wise 5,707 Vacancies Breakdown Table
         </h2>
-        <p>Below is the official post breakdown across 9 state government departments:</p>
 
         <div class="overflow-x-auto my-6">
           <table class="w-full text-left border-collapse border border-border-card rounded-2xl overflow-hidden shadow-sm">
             <thead>
               <tr class="bg-primary/10 text-text-main">
-                <th class="p-3.5 border border-border-card font-extrabold text-sm">Sr. No.</th>
-                <th class="p-3.5 border border-border-card font-extrabold text-sm">Department Name</th>
+                <th class="p-3.5 border border-border-card font-extrabold text-sm text-center">Post No.</th>
                 <th class="p-3.5 border border-border-card font-extrabold text-sm">Post Name</th>
+                <th class="p-3.5 border border-border-card font-extrabold text-sm">Department Name</th>
                 <th class="p-3.5 border border-border-card font-extrabold text-sm text-center">Total Posts</th>
-                <th class="p-3.5 border border-border-card font-extrabold text-sm">Educational Qualification</th>
-                <th class="p-3.5 border border-border-card font-extrabold text-sm">Age Calculation Date</th>
               </tr>
             </thead>
             <tbody class="text-sm">
               <tr class="hover:bg-bg-surface/50">
                 <td class="p-3.5 border border-border-card font-bold text-center">1</td>
-                <td class="p-3.5 border border-border-card font-semibold">Revenue & Forest Department</td>
-                <td class="p-3.5 border border-border-card font-bold text-primary">Gram Mahasul Adhikari (Talathi), Group-C</td>
-                <td class="p-3.5 border border-border-card font-black text-center text-primary text-base">1,539</td>
-                <td class="p-3.5 border border-border-card">Bachelor's Degree in any discipline from a recognized University</td>
-                <td class="p-3.5 border border-border-card text-xs">As on last date of application (05 August 2026 / 31 July 2026)</td>
+                <td class="p-3.5 border border-border-card font-bold text-text-main">Industry Inspector</td>
+                <td class="p-3.5 border border-border-card font-semibold text-text-muted">Industry, Energy & Labour Department</td>
+                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary">09</td>
               </tr>
               <tr class="hover:bg-bg-surface/50">
                 <td class="p-3.5 border border-border-card font-bold text-center">2</td>
-                <td class="p-3.5 border border-border-card font-semibold">State Consumer Disputes Redressal Commission, Mumbai</td>
-                <td class="p-3.5 border border-border-card font-semibold">Senior Archivist / Senior Clerk / Archivist, Group-C</td>
-                <td class="p-3.5 border border-border-card font-bold text-center">11</td>
-                <td class="p-3.5 border border-border-card">Degree in any discipline</td>
-                <td class="p-3.5 border border-border-card text-xs">01 October 2026 (Max age relaxed up to 5 years for serving government employees)</td>
+                <td class="p-3.5 border border-border-card font-bold text-text-main">Technical Assistant</td>
+                <td class="p-3.5 border border-border-card font-semibold text-text-muted">Finance Department</td>
+                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary">03</td>
               </tr>
               <tr class="hover:bg-bg-surface/50">
                 <td class="p-3.5 border border-border-card font-bold text-center">3</td>
-                <td class="p-3.5 border border-border-card font-semibold">State Consumer Disputes Redressal Commission, Mumbai</td>
-                <td class="p-3.5 border border-border-card font-semibold">Assistant Superintendent, Group-C</td>
-                <td class="p-3.5 border border-border-card font-bold text-center">11</td>
-                <td class="p-3.5 border border-border-card">Degree in any discipline</td>
-                <td class="p-3.5 border border-border-card text-xs">01 October 2026</td>
+                <td class="p-3.5 border border-border-card font-bold text-text-main">Tax Assistant</td>
+                <td class="p-3.5 border border-border-card font-semibold text-text-muted">Finance Department</td>
+                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary">282</td>
               </tr>
               <tr class="hover:bg-bg-surface/50">
                 <td class="p-3.5 border border-border-card font-bold text-center">4</td>
-                <td class="p-3.5 border border-border-card font-semibold">Agriculture, Animal Husbandry & Fisheries Department</td>
-                <td class="p-3.5 border border-border-card font-semibold">Assistant Fisheries Development Officer (Technical), Group-C</td>
-                <td class="p-3.5 border border-border-card font-bold text-center">254</td>
-                <td class="p-3.5 border border-border-card font-medium text-emerald-600 dark:text-emerald-400">Degree in Fisheries Science (B.F.Sc.) with minimum second class</td>
-                <td class="p-3.5 border border-border-card text-xs">01 October 2026</td>
+                <td class="p-3.5 border border-border-card font-bold text-text-main">Assistant Motor Vehicle Inspector (AMVI), Group-C</td>
+                <td class="p-3.5 border border-border-card font-semibold text-text-muted">Home Department</td>
+                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary">461</td>
               </tr>
               <tr class="hover:bg-bg-surface/50">
                 <td class="p-3.5 border border-border-card font-bold text-center">5</td>
-                <td class="p-3.5 border border-border-card font-semibold">Controller of Rationing & Director of Civil Supplies Office</td>
-                <td class="p-3.5 border border-border-card font-semibold">Clerk-Typist (Various Appointing Authorities)</td>
-                <td class="p-3.5 border border-border-card font-bold text-center">230</td>
-                <td class="p-3.5 border border-border-card" rowspan="5">
-                  (1) Bachelor's Degree in any discipline <br/>
-                  (2) Valid Typing Speed Certificate as per rules (Marathi 30 WPM and/or English 40 WPM GCC-TBC)
-                </td>
-                <td class="p-3.5 border border-border-card text-xs" rowspan="5">01 October 2026</td>
+                <td class="p-3.5 border border-border-card font-bold text-text-main">Clerk-Typist</td>
+                <td class="p-3.5 border border-border-card font-semibold text-text-muted">Mantralaya Administrative Depts & State Govt Offices</td>
+                <td class="p-3.5 border border-border-card font-black text-center text-primary text-base">1,864</td>
               </tr>
               <tr class="hover:bg-bg-surface/50">
                 <td class="p-3.5 border border-border-card font-bold text-center">6</td>
-                <td class="p-3.5 border border-border-card font-semibold">Food, Civil Supplies & Consumer Protection Dept</td>
-                <td class="p-3.5 border border-border-card font-semibold">Clerk-Typist</td>
-                <td class="p-3.5 border border-border-card font-bold text-center">155</td>
+                <td class="p-3.5 border border-border-card font-bold text-primary">Gram Mahasul Adhikari (Talathi), Group-C</td>
+                <td class="p-3.5 border border-border-card font-semibold text-text-muted">Revenue & Forest Department</td>
+                <td class="p-3.5 border border-border-card font-black text-center text-primary text-base">1,539</td>
               </tr>
               <tr class="hover:bg-bg-surface/50">
                 <td class="p-3.5 border border-border-card font-bold text-center">7</td>
-                <td class="p-3.5 border border-border-card font-semibold">Tribal Development Department</td>
-                <td class="p-3.5 border border-border-card font-semibold">Clerk-Typist</td>
-                <td class="p-3.5 border border-border-card font-bold text-center">69</td>
+                <td class="p-3.5 border border-border-card font-bold text-text-main">Senior Archivist / Senior Clerk / Archivist, Group-C</td>
+                <td class="p-3.5 border border-border-card font-semibold text-text-muted">State Consumer Disputes Redressal Commission, Mumbai</td>
+                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary">11</td>
               </tr>
               <tr class="hover:bg-bg-surface/50">
                 <td class="p-3.5 border border-border-card font-bold text-center">8</td>
-                <td class="p-3.5 border border-border-card font-semibold">Revenue & Forest Department</td>
-                <td class="p-3.5 border border-border-card font-semibold">Clerk-Typist</td>
-                <td class="p-3.5 border border-border-card font-bold text-center text-primary">480</td>
+                <td class="p-3.5 border border-border-card font-bold text-text-main">Assistant Superintendent, Group-C</td>
+                <td class="p-3.5 border border-border-card font-semibold text-text-muted">State Consumer Disputes Redressal Commission, Mumbai</td>
+                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary">11</td>
               </tr>
               <tr class="hover:bg-bg-surface/50">
                 <td class="p-3.5 border border-border-card font-bold text-center">9</td>
-                <td class="p-3.5 border border-border-card font-semibold">Revenue & Forest Dept (Registration & Stamps Dept)</td>
-                <td class="p-3.5 border border-border-card font-semibold">Clerk-Typist (Registration & Stamps)</td>
-                <td class="p-3.5 border border-border-card font-bold text-center">339</td>
+                <td class="p-3.5 border border-border-card font-bold text-text-main">Assistant Fisheries Development Officer (Technical)</td>
+                <td class="p-3.5 border border-border-card font-semibold text-text-muted">Agriculture, Animal Husbandry & Fisheries Dept</td>
+                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary">254</td>
+              </tr>
+              <tr class="hover:bg-bg-surface/50">
+                <td class="p-3.5 border border-border-card font-bold text-center" rowspan="4">10</td>
+                <td class="p-3.5 border border-border-card font-bold text-text-main" rowspan="4">Clerk-Typist (Various Authorities)</td>
+                <td class="p-3.5 border border-border-card text-xs">Rationing Controller & Director Civil Supplies (230)</td>
+                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary" rowspan="4">944 <br/><span class="text-[0.65rem] text-text-muted font-normal">(230+155+69+490)</span></td>
+              </tr>
+              <tr class="hover:bg-bg-surface/50">
+                <td class="p-3.5 border border-border-card text-xs">Food, Civil Supplies & Consumer Protection Dept (155)</td>
+              </tr>
+              <tr class="hover:bg-bg-surface/50">
+                <td class="p-3.5 border border-border-card text-xs">Tribal Development Department (69)</td>
+              </tr>
+              <tr class="hover:bg-bg-surface/50">
+                <td class="p-3.5 border border-border-card text-xs">Revenue & Forest Department (490)</td>
+              </tr>
+              <tr class="hover:bg-bg-surface/50">
+                <td class="p-3.5 border border-border-card font-bold text-center">11</td>
+                <td class="p-3.5 border border-border-card font-bold text-text-main">Clerk-Typist (Registration & Stamps)</td>
+                <td class="p-3.5 border border-border-card font-semibold text-text-muted">Revenue & Forest Department</td>
+                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary">339</td>
               </tr>
               <tr class="bg-primary/10 font-extrabold">
                 <td class="p-4 border border-border-card text-center text-base" colspan="3">Grand Total</td>
-                <td class="p-4 border border-border-card text-center text-primary text-xl font-black">3,088</td>
-                <td class="p-4 border border-border-card text-xs text-text-muted" colspan="2">Vacancies across 9 government departments</td>
+                <td class="p-4 border border-border-card text-center text-primary text-2xl font-black">5,707 <br/><span class="text-xs font-bold text-text-muted">(2619 + 3088 = 5707)</span></td>
               </tr>
             </tbody>
           </table>
         </div>
+
+        <!-- Educational Qualifications Section (English) -->
+        <h2 id="eligibility-en" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">
+          Post-wise Educational Qualifications
+        </h2>
+        <ul class="list-disc pl-5 space-y-2 text-sm text-text-main">
+          <li><strong>Post 1 (Industry Inspector):</strong> Engineering Degree OR Tech Diploma OR B.Sc. degree.</li>
+          <li><strong>Post 2 (Technical Assistant):</strong> Bachelor's Degree in any discipline.</li>
+          <li><strong>Post 3 (Tax Assistant):</strong> (i) Bachelor's Degree (ii) Marathi Typing 30 WPM & English Typing 40 WPM (GCC-TBC).</li>
+          <li><strong>Post 4 (Assistant Motor Vehicle Inspector - AMVI):</strong> 10th Pass + Diploma/Degree in Automobile/Mechanical Engineering or B.Tech (Mechatronics/Mechanical & Smart Mfg/Metallurgy) or B.E (Industrial & Production / Production Sandwich) or 4-year Tool & Die Diploma.</li>
+          <li><strong>Post 5 (Clerk-Typist - Mantralaya & Govt Offices):</strong> (i) Bachelor's Degree (ii) Marathi Typing 30 WPM OR English Typing 40 WPM.</li>
+          <li><strong>Post 6 (Gram Mahasul Adhikari / Talathi):</strong> Bachelor's Degree in any discipline from a recognized university.</li>
+          <li><strong>Post 7 (Senior Archivist / Sr. Clerk / Archivist):</strong> Degree in any discipline.</li>
+          <li><strong>Post 8 (Assistant Superintendent):</strong> Degree in any discipline.</li>
+          <li><strong>Post 9 (Assistant Fisheries Development Officer):</strong> Bachelor's Degree in Fisheries Science (B.F.Sc.) with minimum 2nd class.</li>
+          <li><strong>Post 10 (Clerk-Typist - Various Depts):</strong> (i) Bachelor's Degree (ii) Marathi Typing 30 WPM OR English Typing 40 WPM.</li>
+          <li><strong>Post 11 (Clerk-Typist - Registration & Stamps):</strong> (i) Bachelor's Degree (ii) Marathi Typing 30 WPM OR English Typing 40 WPM.</li>
+        </ul>
+
+        <!-- Age Criteria Section (English) -->
+        <h2 id="age-en" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">
+          Age Limit & Relaxation Criteria
+        </h2>
+        <p class="text-sm text-text-muted">
+          Age calculated as on <strong>01 October 2026</strong> [Age relaxation of <strong>5 years</strong> for Reserved categories / EWS / Orphan candidates].
+        </p>
+        <ul class="list-disc pl-5 space-y-1 text-sm text-text-main">
+          <li><strong>Posts 1, 2, 4, 5:</strong> 19 to 38 years</li>
+          <li><strong>Posts 3, 6 (Talathi):</strong> 18 to 38 years</li>
+          <li><strong>Posts 7 to 11:</strong> As per MPSC rules / As applicable</li>
+        </ul>
 
         <!-- Key Dates Section (English) -->
         <h2 id="dates-en" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">
@@ -486,7 +665,7 @@ const category = "MPSC Bharti";
             <div>
               <span class="text-xs text-text-muted font-bold uppercase tracking-wider block">Extended Online Application Last Date</span>
               <span class="text-lg font-black text-rose-600 dark:text-rose-400">31 July 2026</span>
-              <p class="text-xs text-text-muted mt-1 m-0">Application window extended as per the latest corrigendum notice.</p>
+              <p class="text-xs text-text-muted mt-1 m-0">Application window extended as per corrigendum notice.</p>
             </div>
           </div>
 
@@ -501,17 +680,6 @@ const category = "MPSC Bharti";
             </div>
           </div>
         </div>
-
-        <!-- Educational Qualification & Typing Speed Requirements -->
-        <h2 id="eligibility-en" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">
-          Educational Qualification & Typing Criteria
-        </h2>
-        <ul class="list-disc pl-5 space-y-2">
-          <li><strong>Talathi (Gram Mahasul Adhikari):</strong> Graduate degree in any discipline. Typing certificate is not strictly required.</li>
-          <li><strong>Clerk-Typist:</strong> Graduate degree + GCC-TBC certificate in Marathi 30 WPM or English 40 WPM.</li>
-          <li><strong>Assistant Fisheries Development Officer:</strong> B.F.Sc. (Bachelor of Fisheries Science) with minimum 2nd class.</li>
-          <li><strong>Age Criteria:</strong> 19 to 38 years for Open category (Up to 43 years for reserved categories). Age calculated as on 01 October 2026.</li>
-        </ul>
 
         <!-- Official Links Table (English) -->
         <h2 id="links-en" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">
@@ -554,8 +722,8 @@ const category = "MPSC Bharti";
             <p class="text-text-muted m-0">A1: As per the latest Corrigendum, the online application deadline has been extended to <strong>31 July 2026</strong>.</p>
           </div>
           <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
-            <h3 class="text-lg font-bold text-text-main mb-2">Q2: How many total vacancies are announced in the MPSC Group C Corrigendum?</h3>
-            <p class="text-text-muted m-0">A2: A total of <strong>3,088 vacancies</strong> have been announced across 9 departments (including 1,539 Talathi and 1,213 Clerk-Typist posts).</p>
+            <h3 class="text-lg font-bold text-text-main mb-2">Q2: How many total vacancies are announced in MPSC Group C 2026?</h3>
+            <p class="text-text-muted m-0">A2: A total of <strong>5,707 vacancies</strong> (2,619 + 3,088) have been announced across 11 post categories in Maharashtra state government departments.</p>
           </div>
         </div>
       </div>

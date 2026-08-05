@@ -49,15 +49,15 @@ export const articlesRegistry: ArticleMeta[] = [
     lastDate: "14 Aug 2026"
   },
   {
-    titleEn: "MPSC Group C Combined Exam 2026: Corrigendum Released for 3,088 Vacancies & Application Extended",
-    titleMr: "MPSC गट-क सेवा संयुक्त पूर्व परीक्षा २०२६: ३,०८८ जागांसाठी शुद्धिपत्रक प्रसिद्ध, अर्ज मुदतवाढ!",
+    titleEn: "MPSC Group C Combined Exam 2026: Corrigendum Released for 5,707 Vacancies & Application Extended",
+    titleMr: "MPSC गट-क सेवा संयुक्त पूर्व परीक्षा २०२६: ५,७०७ जागांसाठी शुद्धिपत्रक प्रसिद्ध, अर्ज मुदतवाढ!",
     slug: "/mpsc-group-c-bharti-2026",
     category: "MPSC Bharti",
     date: "July 22, 2026",
     image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1200",
     postName: "तलाठी, लिपिक टंकलेखक व मत्स्यव्यवसाय अधिकारी",
-    descriptionMr: "महाराष्ट्र लोकसेवा आयोग (MPSC) गट-क पूर्व परीक्षेचे शुद्धिपत्रक प्रसिद्ध झाले असून ३,०८८ पदांसाठी मुदतवाढ दिली आहे.",
-    vacancies: "3,088",
+    descriptionMr: "महाराष्ट्र लोकसेवा आयोग (MPSC) गट-क पूर्व परीक्षेचे शुद्धिपत्रक प्रसिद्ध झाले असून ५,७०७ पदांसाठी मुदतवाढ दिली आहे.",
+    vacancies: "5,707",
     lastDate: "31 July 2026"
   },
   {
