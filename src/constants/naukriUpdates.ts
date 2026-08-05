@@ -28,13 +28,13 @@ export const naukriUpdates: NaukriUpdate[] = [
     description: "Latur DCC Bank has declared the Phase 1 result & selection list for Clerk, Multipurpose Support Staff, and Driver posts. Selected candidates must report on 14 August 2026."
   },
   {
-    titleEn: "MPSC Group C Bharti 2026: Corrigendum Released for 5,707 Vacancies & Deadline Extended to 31 July",
-    titleHi: "MPSC गट-क संयुक्त परीक्षा २०२६: ५,७०७ जागांसाठी शुद्धिपत्रक प्रसिद्ध, ऑनलाईन अर्ज मुदतवाढ",
+    titleEn: "MPSC Group C Bharti 2026: Corrigendum Released for 5,707 Vacancies & Deadline Extended to 05 August",
+    titleHi: "MPSC गट-क संयुक्त परीक्षा २०२६: ५,७०७ जागांसाठी शुद्धिपत्रक प्रसिद्ध, ऑनलाईन अर्ज मुदतवाढ (०५ ऑगस्ट २०२६)",
     date: "July 22, 2026",
     badge: "New",
     badgeType: "new",
     link: "/mpsc-group-c-bharti-2026",
-    description: "MPSC has released a Corrigendum notice updating total vacancies to 5,707 across 11 departments (including 1,539 Talathi & 3,197 Clerk-Typist posts). Last date to apply extended to 31 July 2026."
+    description: "MPSC has released a Corrigendum notice updating total vacancies to 5,707 across 11 departments (including 1,539 Talathi & 3,197 Clerk-Typist posts). Last date to apply extended to 05 August 2026."
   },
   {
     titleEn: "MH SET 2026 Exam Rescheduled: Date Postponed to 27 September",
