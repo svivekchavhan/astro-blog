@@ -14,7 +14,27 @@ import {
   HiOutlineMagnifyingGlass
 } from "react-icons/hi2";
 
-const walkInJobs = [
+export interface WalkInJob {
+  id: string;
+  title: string;
+  organisation: string;
+  category: string;
+  status: "walk-in-today" | "upcoming" | "walk-in-soon";
+  interviewDate: string;
+  reportingTime: string;
+  venue: string;
+  qualification: string;
+  vacancies: string;
+  documents: string[];
+  link: string;
+  officialPdf: string;
+  isHot?: boolean;
+}
+
+// Walk-in Job listings (Add real entries here)
+const walkInJobs: WalkInJob[] = [
+  /* 
+  Example Job Entry:
   {
     id: "w1",
     title: "AIIMS Nagpur Walk-In Interview 2026: 48 Senior Resident Positions",
@@ -30,87 +50,8 @@ const walkInJobs = [
     link: "/aiims-nagpur-walk-in-2026",
     officialPdf: "https://aiimsnagpur.edu.in",
     isHot: true
-  },
-  {
-    id: "w2",
-    title: "TCS Walk-In Drive Pune 2026: Software Engineers & IT Support Roles",
-    organisation: "Tata Consultancy Services (TCS)",
-    category: "IT & Software",
-    status: "walk-in-soon",
-    interviewDate: "26 July 2026",
-    reportingTime: "09:30 AM to 01:00 PM",
-    venue: "TCS Sahyadri Park, Plot No. 2 & 3, Rajiv Gandhi InfoTech Park, Hinjewadi Phase 3, Pune - 411057",
-    qualification: "B.E. / B.Tech / MCA / M.Sc (CS/IT) with 1 to 4 years experience",
-    vacancies: "150+",
-    documents: ["Updated CV", "Last 3 Months Payslips", "Degree Certificate", "Government ID Proof"],
-    link: "/tcs-walk-in-pune-2026",
-    officialPdf: "https://www.tcs.com",
-    isHot: true
-  },
-  {
-    id: "w3",
-    title: "WALMI Aurangabad Walk-In Recruitment 2026: Assistant Engineer & Research Associate",
-    organisation: "Water and Land Management Institute (WALMI), Chhatrapati Sambhajinagar",
-    category: "Engineering & Technical",
-    status: "upcoming",
-    interviewDate: "30 July 2026",
-    reportingTime: "10:00 AM",
-    venue: "WALMI Campus, Kanchanwadi, Paithan Road, Chhatrapati Sambhajinagar (Aurangabad) - 431005",
-    qualification: "Degree / Diploma in Civil Engineering / Agriculture",
-    vacancies: "18",
-    documents: ["Original Educational Certificates", "Self-Attested Photostat Copies", "Experience Certificates", "Valid Photo ID"],
-    link: "/walmi-walk-in-2026",
-    officialPdf: "https://walmi.org",
-    isHot: false
-  },
-  {
-    id: "w4",
-    title: "Government Medical College (GMC) Nanded: Walk-In for Medical Officers & Specialists",
-    organisation: "Government Medical College & Hospital, Nanded",
-    category: "Medical & Healthcare",
-    status: "walk-in-today",
-    interviewDate: "23 July 2026 (Today)",
-    reportingTime: "11:00 AM to 02:00 PM",
-    venue: "Dean Office, Government Medical College Campus, Vazirabad, Nanded, Maharashtra - 431601",
-    qualification: "MBBS / BAMS / MD with valid Registration",
-    vacancies: "32",
-    documents: ["MBBS Degree & Attempt Certificate", "Council Registration", "Age Proof Certificate", "Cast Certificate (if applicable)"],
-    link: "/gmc-nanded-walk-in-2026",
-    officialPdf: "https://gmcnanded.org",
-    isHot: true
-  },
-  {
-    id: "w5",
-    title: "Savitribai Phule Pune University (SPPU): Walk-In Interview for Assistant Professors",
-    organisation: "SPPU Department of Environmental Sciences",
-    category: "Teaching & Faculty",
-    status: "upcoming",
-    interviewDate: "02 August 2026",
-    reportingTime: "10:30 AM",
-    venue: "Department of Environmental Sciences, SPPU Campus, Ganeshkhind, Pune - 411007",
-    qualification: "Master's Degree with minimum 55% + NET / SET / Ph.D.",
-    vacancies: "12",
-    documents: ["Application Form (Format on University Site)", "NET/SET Passing Certificate", "Publication Copies", "2 Sets of Photostats"],
-    link: "/sppu-faculty-walk-in-2026",
-    officialPdf: "https://unipune.ac.in",
-    isHot: false
-  },
-  {
-    id: "w6",
-    title: "Bank of Baroda Financial Services: Walk-In Drive for Collection Officers & Executives",
-    organisation: "BOB Financial Solutions Limited",
-    category: "Banking & Finance",
-    status: "upcoming",
-    interviewDate: "05 August 2026",
-    reportingTime: "09:30 AM to 03:00 PM",
-    venue: "BOB Financial Office, 3rd Floor, BKC, Bandra East, Mumbai - 400051",
-    qualification: "Any Graduate (B.Com/BBA/B.Sc/B.A.) with good communication skills",
-    vacancies: "65",
-    documents: ["Resume", "Graduation Marksheets", "Aadhaar & PAN Card", "2 Passport Photos"],
-    link: "/bob-financial-walk-in-2026",
-    officialPdf: "https://www.bobfinancial.com",
-    isHot: false
   }
+  */
 ];
 ---
 
@@ -192,133 +133,148 @@ const walkInJobs = [
 
     <!-- Walk-In Listings Container -->
     <div class="max-w-4xl mx-auto space-y-6" id="walkin-container">
-      {walkInJobs.map((job) => (
-        <article 
-          class="walkin-card bg-bg-surface border border-border-card rounded-2xl p-5 md:p-6 transition-all duration-300 hover:border-primary/60 hover:shadow-md relative overflow-hidden"
-          data-category={job.category}
-          data-search={`${job.title} ${job.organisation} ${job.venue} ${job.qualification}`.toLowerCase()}
-        >
-          <!-- Status Badge & Category Header -->
-          <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
-            <div class="flex items-center gap-2">
-              <span class="text-[0.65rem] font-bold bg-primary/10 text-primary border border-primary/20 px-2.5 py-0.5 rounded-md uppercase tracking-wider">
-                {job.category}
+      {walkInJobs.length > 0 ? (
+        walkInJobs.map((job) => (
+          <article 
+            class="walkin-card bg-bg-surface border border-border-card rounded-2xl p-5 md:p-6 transition-all duration-300 hover:border-primary/60 hover:shadow-md relative overflow-hidden"
+            data-category={job.category}
+            data-search={`${job.title} ${job.organisation} ${job.venue} ${job.qualification}`.toLowerCase()}
+          >
+            <!-- Status Badge & Category Header -->
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+              <div class="flex items-center gap-2">
+                <span class="text-[0.65rem] font-bold bg-primary/10 text-primary border border-primary/20 px-2.5 py-0.5 rounded-md uppercase tracking-wider">
+                  {job.category}
+                </span>
+                
+                {job.isHot && (
+                  <span class="text-[0.65rem] font-bold bg-rose-500/10 text-rose-500 border border-rose-500/20 px-2.5 py-0.5 rounded-md uppercase tracking-wider animate-pulse flex items-center gap-1">
+                    🔥 Urgent Drive
+                  </span>
+                )}
+              </div>
+
+              <div>
+                {job.status === "walk-in-today" && (
+                  <span class="text-[0.65rem] font-extrabold bg-emerald-500 text-white px-3 py-1 rounded-full uppercase tracking-wider shadow-xs flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 bg-white rounded-full animate-ping"></span>
+                    Walk-In Today
+                  </span>
+                )}
+
+                {job.status === "upcoming" && (
+                  <span class="text-[0.65rem] font-extrabold bg-amber-500/15 text-amber-600 dark:text-amber-400 border border-amber-500/30 px-3 py-1 rounded-full uppercase tracking-wider">
+                    Upcoming Walk-In
+                  </span>
+                )}
+
+                {job.status === "walk-in-soon" && (
+                  <span class="text-[0.65rem] font-extrabold bg-indigo-500/15 text-indigo-600 dark:text-indigo-400 border border-indigo-500/30 px-3 py-1 rounded-full uppercase tracking-wider">
+                    Drive This Week
+                  </span>
+                )}
+              </div>
+            </div>
+
+            <!-- Job Title & Organisation -->
+            <h2 class="text-lg md:text-xl font-bold text-text-main mb-2 leading-snug">
+              {job.title}
+            </h2>
+
+            <div class="flex items-center gap-2 text-xs text-text-muted mb-4 font-medium">
+              <HiOutlineBuildingOffice className="text-primary text-sm shrink-0" />
+              <span>{job.organisation}</span>
+            </div>
+
+            <!-- Interview Details Highlight Box -->
+            <div class="bg-black/5 dark:bg-white/5 border border-border-card rounded-xl p-4 mb-4 grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm">
+              <div class="flex items-start gap-2.5">
+                <HiOutlineCalendarDays className="text-emerald-500 text-lg shrink-0 mt-0.5" />
+                <div>
+                  <span class="text-text-muted font-medium block text-[0.7rem] uppercase tracking-wider">Interview Date</span>
+                  <strong class="text-text-main text-sm font-bold">{job.interviewDate}</strong>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-2.5">
+                <HiOutlineClock className="text-amber-500 text-lg shrink-0 mt-0.5" />
+                <div>
+                  <span class="text-text-muted font-medium block text-[0.7rem] uppercase tracking-wider">Reporting Time</span>
+                  <strong class="text-text-main text-sm font-bold">{job.reportingTime}</strong>
+                </div>
+              </div>
+
+              <div class="md:col-span-2 flex items-start gap-2.5 pt-2 border-t border-border-card/50">
+                <HiOutlineMapPin className="text-rose-500 text-lg shrink-0 mt-0.5" />
+                <div>
+                  <span class="text-text-muted font-medium block text-[0.7rem] uppercase tracking-wider">Venue Address</span>
+                  <p class="text-text-main text-xs font-semibold m-0 leading-relaxed">{job.venue}</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Qualification & Vacancies Meta -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs mb-4">
+              <div class="flex items-center gap-2 text-text-muted">
+                <HiOutlineAcademicCap className="text-primary shrink-0 text-sm" />
+                <span><strong>Qualification:</strong> {job.qualification}</span>
+              </div>
+              <div class="flex items-center gap-2 text-text-muted">
+                <HiOutlineBriefcase className="text-primary shrink-0 text-sm" />
+                <span><strong>Vacancies:</strong> <strong class="text-primary font-bold">{job.vacancies} Posts</strong></span>
+              </div>
+            </div>
+
+            <!-- Required Documents Checklist -->
+            <div class="mb-5 bg-bg-base p-3.5 rounded-xl border border-border-card">
+              <span class="text-[0.7rem] font-extrabold uppercase tracking-wider text-text-main flex items-center gap-1.5 mb-2">
+                <HiOutlineDocumentCheck className="text-primary text-sm" /> Required Documents Checklist for Interview:
               </span>
-              
-              {job.isHot && (
-                <span class="text-[0.65rem] font-bold bg-rose-500/10 text-rose-500 border border-rose-500/20 px-2.5 py-0.5 rounded-md uppercase tracking-wider animate-pulse flex items-center gap-1">
-                  🔥 Urgent Drive
-                </span>
-              )}
-            </div>
-
-            <div>
-              {job.status === "walk-in-today" && (
-                <span class="text-[0.65rem] font-extrabold bg-emerald-500 text-white px-3 py-1 rounded-full uppercase tracking-wider shadow-xs flex items-center gap-1.5">
-                  <span class="w-1.5 h-1.5 bg-white rounded-full animate-ping"></span>
-                  Walk-In Today
-                </span>
-              )}
-
-              {job.status === "upcoming" && (
-                <span class="text-[0.65rem] font-extrabold bg-amber-500/15 text-amber-600 dark:text-amber-400 border border-amber-500/30 px-3 py-1 rounded-full uppercase tracking-wider">
-                  Upcoming Walk-In
-                </span>
-              )}
-
-              {job.status === "walk-in-soon" && (
-                <span class="text-[0.65rem] font-extrabold bg-indigo-500/15 text-indigo-600 dark:text-indigo-400 border border-indigo-500/30 px-3 py-1 rounded-full uppercase tracking-wider">
-                  Drive This Week
-                </span>
-              )}
-            </div>
-          </div>
-
-          <!-- Job Title & Organisation -->
-          <h2 class="text-lg md:text-xl font-bold text-text-main mb-2 leading-snug">
-            {job.title}
-          </h2>
-
-          <div class="flex items-center gap-2 text-xs text-text-muted mb-4 font-medium">
-            <HiOutlineBuildingOffice className="text-primary text-sm shrink-0" />
-            <span>{job.organisation}</span>
-          </div>
-
-          <!-- Interview Details Highlight Box -->
-          <div class="bg-black/5 dark:bg-white/5 border border-border-card rounded-xl p-4 mb-4 grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm">
-            <div class="flex items-start gap-2.5">
-              <HiOutlineCalendarDays className="text-emerald-500 text-lg shrink-0 mt-0.5" />
-              <div>
-                <span class="text-text-muted font-medium block text-[0.7rem] uppercase tracking-wider">Interview Date</span>
-                <strong class="text-text-main text-sm font-bold">{job.interviewDate}</strong>
+              <div class="flex flex-wrap gap-2">
+                {job.documents.map(doc => (
+                  <span class="text-[0.65rem] bg-bg-surface border border-border-card text-text-muted px-2.5 py-1 rounded-lg font-medium flex items-center gap-1">
+                    <HiOutlineCheckCircle className="text-emerald-500 text-xs shrink-0" />
+                    {doc}
+                  </span>
+                ))}
               </div>
             </div>
 
-            <div class="flex items-start gap-2.5">
-              <HiOutlineClock className="text-amber-500 text-lg shrink-0 mt-0.5" />
-              <div>
-                <span class="text-text-muted font-medium block text-[0.7rem] uppercase tracking-wider">Reporting Time</span>
-                <strong class="text-text-main text-sm font-bold">{job.reportingTime}</strong>
-              </div>
-            </div>
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-border-card">
+              <a 
+                href={job.officialPdf} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:underline no-underline"
+              >
+                <span>Download Official Notification PDF</span>
+                <HiOutlineArrowTopRightOnSquare className="text-xs" />
+              </a>
 
-            <div class="md:col-span-2 flex items-start gap-2.5 pt-2 border-t border-border-card/50">
-              <HiOutlineMapPin className="text-rose-500 text-lg shrink-0 mt-0.5" />
-              <div>
-                <span class="text-text-muted font-medium block text-[0.7rem] uppercase tracking-wider">Venue Address</span>
-                <p class="text-text-main text-xs font-semibold m-0 leading-relaxed">{job.venue}</p>
-              </div>
+              <a 
+                href="/contact-us" 
+                class="btn-primary text-xs font-bold uppercase tracking-wider py-2 px-4 rounded-xl no-underline"
+              >
+                Inquire / Contact Host
+              </a>
             </div>
+          </article>
+        ))
+      ) : (
+        <div class="text-center py-16 bg-bg-surface border border-border-card rounded-2xl p-8">
+          <div class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-4">
+            <HiOutlineUserGroup className="text-3xl" />
           </div>
-
-          <!-- Qualification & Vacancies Meta -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs mb-4">
-            <div class="flex items-center gap-2 text-text-muted">
-              <HiOutlineAcademicCap className="text-primary shrink-0 text-sm" />
-              <span><strong>Qualification:</strong> {job.qualification}</span>
-            </div>
-            <div class="flex items-center gap-2 text-text-muted">
-              <HiOutlineBriefcase className="text-primary shrink-0 text-sm" />
-              <span><strong>Vacancies:</strong> <strong class="text-primary font-bold">{job.vacancies} Posts</strong></span>
-            </div>
-          </div>
-
-          <!-- Required Documents Checklist -->
-          <div class="mb-5 bg-bg-base p-3.5 rounded-xl border border-border-card">
-            <span class="text-[0.7rem] font-extrabold uppercase tracking-wider text-text-main flex items-center gap-1.5 mb-2">
-              <HiOutlineDocumentCheck className="text-primary text-sm" /> Required Documents Checklist for Interview:
-            </span>
-            <div class="flex flex-wrap gap-2">
-              {job.documents.map(doc => (
-                <span class="text-[0.65rem] bg-bg-surface border border-border-card text-text-muted px-2.5 py-1 rounded-lg font-medium flex items-center gap-1">
-                  <HiOutlineCheckCircle className="text-emerald-500 text-xs shrink-0" />
-                  {doc}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          <!-- Action Buttons -->
-          <div class="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-border-card">
-            <a 
-              href={job.officialPdf} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:underline no-underline"
-            >
-              <span>Download Official Notification PDF</span>
-              <HiOutlineArrowTopRightOnSquare className="text-xs" />
-            </a>
-
-            <a 
-              href="/contact-us" 
-              class="btn-primary text-xs font-bold uppercase tracking-wider py-2 px-4 rounded-xl no-underline"
-            >
-              Inquire / Contact Host
-            </a>
-          </div>
-        </article>
-      ))}
+          <h3 class="text-xl font-bold text-text-main mb-2">No Active Walk-In Interviews Currently</h3>
+          <p class="text-text-muted text-sm max-w-md mx-auto mb-6 leading-relaxed">
+            There are currently no active walk-in job drives listed. New interview announcements and venue details will be added here soon.
+          </p>
+          <a href="/mega-recruitment" class="btn-primary inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider py-2.5 px-5 rounded-xl no-underline">
+            Explore Recruitment Drives
+          </a>
+        </div>
+      )}
     </div>
 
     <!-- Walk-In Preparation Guidelines Box -->
