@@ -6,6 +6,7 @@ export interface NaukriUpdate {
   badgeType: "new" | "extended" | "important" | string;
   link: string;
   description: string;
+  show?: boolean; // Set to false to hide item from widgets & page, true/omitted to show
 }
 
 export const naukriUpdates: NaukriUpdate[] = [

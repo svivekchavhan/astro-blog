@@ -20,6 +20,9 @@ import {
 import { OFFICIAL_LINKS } from "../constants/links";
 import { naukriUpdates } from "../constants/naukriUpdates";
 import { MAHARASHTRA_DISTRICTS } from "../constants/districts";
+import { isWithin7Days } from "../utils/dateUtils";
+import ImportantUpdatesWidget from "../components/ImportantUpdatesWidget.astro";
+import NaukriUpdatesWidget from "../components/NaukriUpdatesWidget.astro";
 import "../styles/global.css";
 
 interface Props {
@@ -71,18 +74,21 @@ const latestJobs = [
 
 const urgentUpdates = [
   {
-    title: "लातूर जिल्हा मध्यवर्ती बँक भरती २०२६: सुधारीत प्रतीक्षा यादी (Revised Waiting List) प्रसिद्ध",
-    link: "/latur-dcc-bank-revised-waiting-list-2026",
+    title: "MPSC गट-क सेवा संयुक्त पूर्व परीक्षा २०२६: ५,७०७ जागांसाठी शुद्धिपत्रक प्रसिद्ध, अर्ज मुदतवाढ",
+    link: "/mpsc-group-c-bharti-2026",
+    date: "August 05, 2026",
     expiry: "2026-08-30T00:00:00.000Z"
   },
   {
     title: "MH SET 2026 Exam Date Postponed - Check Revised Schedule",
     link: "/admit-card/maharashtra-set-exam-date-postponed",
+    date: "July 20, 2026",
     expiry: "2026-09-27T00:00:00.000Z"
   },
   {
     title: "MHT CET Online Engineering Admission Started 2026 - Register Now",
     link: "/admission/mht-cet-counselling-registration-documents-2026",
+    date: "July 05, 2026",
     expiry: "2026-08-15T00:00:00.000Z"
   }
 ];
@@ -409,92 +415,10 @@ const breadcrumbSchema = {
         !hideSidebar && (
           <aside class="w-full lg:flex-1 space-y-6 lg:sticky lg:top-[calc(var(--navbar-height,190px)+16px)] h-fit">
             <!-- Important Updates Widget (Placed at Top) -->
-            <div class="flex flex-col">
-              <!-- Heading Container for Important Updates -->
-              <div class="bg-rose-500 text-white px-5 py-3 rounded-t-2xl font-bold flex items-center gap-2 border border-rose-500 border-b-0 shadow-xs mt-0">
-                <HiOutlineMegaphone className="text-white text-[1.1rem] shrink-0" />
-                <span class="text-xs font-extrabold uppercase tracking-wider">Important Updates (महत्वाचे अपडेट्स)</span>
-              </div>
-              
-              <!-- Content Container for Important Updates -->
-              <div class="bg-bg-surface border border-rose-500/20 hover:border-rose-500 border-t-0 p-5 rounded-b-2xl transition-all duration-300 shadow-sm mt-0 relative overflow-hidden">
-                <div class="flex flex-col">
-                  {urgentUpdates.map((update) => (
-                    <div class="py-2.5 border-b border-border-card dark:border-border-card/30 last:border-b-0 last:pb-0 first:pt-0">
-                      <a
-                        href={update.link}
-                        class="flex items-center justify-between w-full gap-3 text-text-muted hover:text-rose-500 transition-colors duration-300 text-xs font-semibold leading-snug no-underline group/link"
-                      >
-                        <span class="flex items-start gap-2">
-                          <HiOutlineChevronRight className="text-rose-500 text-[0.85rem] shrink-0 mt-0.5 transform group-hover/link:translate-x-1 transition-transform" />
-                          <span>{update.title}</span>
-                        </span>
-                        
-                        <span 
-                          class="urgent-new-badge shrink-0 text-[0.5rem] bg-rose-500 text-white px-1.5 py-0.5 rounded font-bold uppercase tracking-wider select-none animate-pulse"
-                          data-expiry={update.expiry}
-                        >
-                          NEW
-                        </span>
-                      </a>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <ImportantUpdatesWidget />
 
             <!-- Latest Naukri Updates Widget -->
-            <div class="flex flex-col">
-              <!-- Heading Container for Latest Naukri Updates -->
-              <div class="bg-primary text-white px-5 py-3 rounded-t-2xl font-bold flex items-center gap-2 border border-primary border-b-0 shadow-xs mt-0">
-                <HiOutlineBell className="text-white text-[1.1rem] shrink-0" />
-                <span class="text-xs font-extrabold uppercase tracking-wider">Latest Naukri Updates (नवीन नोकरी अपडेट्स)</span>
-              </div>
-              
-              <!-- Content Container for Latest Naukri Updates -->
-              <div class="bg-bg-surface border border-border-card border-t-0 p-5 rounded-b-2xl transition-all duration-300 shadow-sm mt-0 relative overflow-hidden">
-                <div class="absolute -right-24 -top-24 w-48 h-48 bg-primary/5 rounded-full blur-3xl -z-10"></div>
-                <div class="flex flex-col">
-                  {naukriUpdates.slice(0, 3).map((update) => (
-                    <div class="py-3 border-b border-border-card dark:border-border-card/30 last:border-b-0 last:pb-0 first:pt-0">
-                      <a
-                        href={update.link}
-                        class="flex flex-col gap-1 text-text-muted hover:text-primary transition-colors duration-300 no-underline group/link"
-                      >
-                        <div class="flex items-start justify-between gap-2.5">
-                          <span class="flex items-start gap-1.5 text-[0.75rem] font-bold text-text-main group-hover/link:text-primary transition-colors">
-                            <HiOutlineChevronRight className="text-primary text-[0.85rem] shrink-0 mt-0.5 transform group-hover/link:translate-x-0.5 transition-transform" />
-                            <span class="leading-snug">{update.titleHi}</span>
-                          </span>
-                          {update.badge && (
-                            <span class={`shrink-0 text-[0.5rem] px-1.5 py-0.5 rounded font-extrabold uppercase tracking-widest ${
-                              update.badgeType === "new" 
-                                ? "bg-emerald-500 text-white" 
-                                : update.badgeType === "important" 
-                                ? "bg-rose-500 text-white" 
-                                : "bg-amber-500 text-white"
-                            }`}>
-                              {update.badge}
-                            </span>
-                          )}
-                        </div>
-                        <span class="text-[0.65rem] text-text-muted/80 pl-5 font-semibold line-clamp-1">{update.titleEn}</span>
-                      </a>
-                    </div>
-                  ))}
-
-                  <div class="pt-3 border-t border-border-card/30 dark:border-border-card/10 mt-3 flex justify-center">
-                    <a
-                      href="/naukri-updates"
-                      class="inline-flex items-center gap-1 text-[0.7rem] font-bold text-primary hover:text-secondary uppercase tracking-wider no-underline transition-colors group/all"
-                    >
-                      <span>View All Updates</span>
-                      <HiOutlineChevronRight className="text-xs transform group-hover/all:translate-x-0.5 transition-transform" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <NaukriUpdatesWidget limit={3} />
 
             <!-- District Wise Jobs Widget -->
             <div class="flex flex-col">

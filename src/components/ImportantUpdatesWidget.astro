@@ -1,0 +1,135 @@
+---
+import { HiOutlineMegaphone, HiOutlineChevronRight, HiOutlineChevronLeft } from "react-icons/hi2";
+import { importantUpdates, type ImportantUpdate } from "../constants/importantUpdates";
+import { isWithin7Days } from "../utils/dateUtils";
+
+interface Props {
+  pageSize?: number;
+}
+
+const { pageSize = 5 } = Astro.props;
+
+// Filter out items where show === false
+const activeUpdates = importantUpdates.filter(update => update.show !== false);
+const totalItems = activeUpdates.length;
+const totalPages = Math.ceil(totalItems / pageSize);
+---
+
+<div class="flex flex-col important-updates-widget">
+  <!-- Heading Container for Important Updates -->
+  <div class="bg-rose-500 text-white px-5 py-3 rounded-t-2xl font-bold flex items-center gap-2 border border-rose-500 border-b-0 shadow-xs mt-0">
+    <HiOutlineMegaphone className="text-white text-[1.1rem] shrink-0" />
+    <span class="text-xs font-extrabold uppercase tracking-wider">Important Updates (महत्वाचे अपडेट्स)</span>
+  </div>
+  
+  <!-- Content Container for Important Updates -->
+  <div class="bg-bg-surface border border-rose-500/20 hover:border-rose-500 border-t-0 p-5 rounded-b-2xl transition-all duration-300 shadow-sm mt-0 relative overflow-hidden">
+    <div class="flex flex-col">
+      {activeUpdates.length === 0 ? (
+        <p class="text-xs text-text-muted text-center py-2 m-0">No active updates.</p>
+      ) : (
+        activeUpdates.map((update, index) => {
+          const pageIndex = Math.floor(index / pageSize);
+          return (
+            <div 
+              class={`update-item py-2.5 border-b border-border-card dark:border-border-card/30 last:border-b-0 last:pb-0 first:pt-0 ${pageIndex !== 0 ? 'hidden' : ''}`}
+              data-page={pageIndex}
+            >
+              <a
+                href={update.link}
+                class="flex items-center justify-between w-full gap-3 text-text-muted hover:text-rose-500 transition-colors duration-300 text-xs font-semibold leading-snug no-underline group/link"
+              >
+                <span class="flex items-start gap-2">
+                  <HiOutlineChevronRight className="text-rose-500 text-[0.85rem] shrink-0 mt-0.5 transform group-hover/link:translate-x-1 transition-transform" />
+                  <span>{update.title}</span>
+                </span>
+                
+                {isWithin7Days(update.date) && (
+                  <span 
+                    class="urgent-new-badge shrink-0 text-[0.5rem] bg-rose-500 text-white px-1.5 py-0.5 rounded font-bold uppercase tracking-wider select-none animate-pulse"
+                    data-expiry={update.expiry}
+                  >
+                    NEW
+                  </span>
+                )}
+              </a>
+            </div>
+          );
+        })
+      )}
+    </div>
+
+    <!-- Pagination Controls (Shown if totalItems > pageSize) -->
+    {totalPages > 1 && (
+      <div class="pt-3 border-t border-border-card/30 dark:border-border-card/10 mt-3 flex items-center justify-between gap-2 text-xs select-none">
+        <button 
+          type="button" 
+          class="prev-btn px-2.5 py-1 bg-rose-500/10 hover:bg-rose-500/20 text-rose-600 dark:text-rose-400 border border-rose-500/20 rounded-lg font-bold disabled:opacity-40 disabled:cursor-not-allowed transition-all flex items-center gap-1 cursor-pointer"
+          disabled
+        >
+          <HiOutlineChevronLeft className="text-xs" />
+          <span>Prev</span>
+        </button>
+
+        <span class="page-indicator text-[0.7rem] font-bold text-text-muted">
+          Page <strong class="current-page text-rose-500 font-extrabold">1</strong> of <strong>{totalPages}</strong>
+        </span>
+
+        <button 
+          type="button" 
+          class="next-btn px-2.5 py-1 bg-rose-500/10 hover:bg-rose-500/20 text-rose-600 dark:text-rose-400 border border-rose-500/20 rounded-lg font-bold disabled:opacity-40 disabled:cursor-not-allowed transition-all flex items-center gap-1 cursor-pointer"
+        >
+          <span>Next</span>
+          <HiOutlineChevronRight className="text-xs" />
+        </button>
+      </div>
+    )}
+  </div>
+</div>
+
+<script>
+  function initWidgetPagination() {
+    const widgets = document.querySelectorAll('.important-updates-widget');
+    widgets.forEach(widget => {
+      const items = widget.querySelectorAll<HTMLElement>('.update-item');
+      const prevBtn = widget.querySelector<HTMLButtonElement>('.prev-btn');
+      const nextBtn = widget.querySelector<HTMLButtonElement>('.next-btn');
+      const currentPageEl = widget.querySelector<HTMLElement>('.current-page');
+
+      if (!items.length || !prevBtn || !nextBtn) return;
+
+      let currentPage = 0;
+      const totalPages = Math.ceil(items.length / 5);
+
+      function updatePage(page: number) {
+        currentPage = page;
+        items.forEach(item => {
+          const itemPage = parseInt(item.dataset.page || '0', 10);
+          if (itemPage === currentPage) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+
+        if (currentPageEl) {
+          currentPageEl.textContent = (currentPage + 1).toString();
+        }
+
+        prevBtn.disabled = currentPage === 0;
+        nextBtn.disabled = currentPage >= totalPages - 1;
+      }
+
+      prevBtn.addEventListener('click', () => {
+        if (currentPage > 0) updatePage(currentPage - 1);
+      });
+
+      nextBtn.addEventListener('click', () => {
+        if (currentPage < totalPages - 1) updatePage(currentPage + 1);
+      });
+    });
+  }
+
+  // Initialize on page loads (supports Astro client-side navigation)
+  document.addEventListener('astro:page-load', initWidgetPagination);
+</script>
