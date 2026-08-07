@@ -58,7 +58,7 @@ export const articlesRegistry: ArticleMeta[] = [
     postName: "तलाठी, लिपिक टंकलेखक व मत्स्यव्यवसाय अधिकारी",
     descriptionMr: "महाराष्ट्र लोकसेवा आयोग (MPSC) गट-क पूर्व परीक्षेचे शुद्धिपत्रक प्रसिद्ध झाले असून ५,७०७ पदांसाठी मुदतवाढ दिली आहे.",
     vacancies: "5,707",
-    lastDate: "05 August 2026"
+    lastDate: "10 August 2026"
   },
   {
     titleEn: "MH SET Exam Date Postponed 2026: Rescheduled to 27th September",
