@@ -11,6 +11,15 @@ export interface NaukriUpdate {
 
 export const naukriUpdates: NaukriUpdate[] = [
   {
+    titleEn: "Solapur Mahanagarpalika Bharti 2026: Govt Approves 130 Posts Fill-up via TCS / IBPS",
+    titleHi: "सोलापूर महानगरपालिका भरती २०२६: १३० जागांच्या पदभरतीस शासन मान्यता जाहीर (नगर विकास विभाग)",
+    date: "August 06, 2026",
+    badge: "Govt Order",
+    badgeType: "new",
+    link: "/solapur-mahanagarpalika-bharti-2026",
+    description: "Urban Development Department of Maharashtra approves recruitment for 130 Group-C vacancies in Solapur Municipal Corporation (including 41 Clerk Typists & 30 JE Civil posts) via TCS/IBPS."
+  },
+  {
     titleEn: "Latur DCC Bank Bharti 2026: Revised Waiting List Released as per GR dated 15.06.2018",
     titleHi: "लातूर जिल्हा मध्यवर्ती बँक भरती २०२६: संवर्गनिहाय २०% सुधारीत प्रतीक्षा यादी (Revised Waiting List) प्रसिद्ध",
     date: "August 03, 2026",

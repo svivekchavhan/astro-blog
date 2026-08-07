@@ -1,0 +1,85 @@
+---
+import { HiOutlineMegaphone, HiOutlineChevronRight, HiOutlineSparkles } from "react-icons/hi2";
+import { isWithin7Days } from "../utils/dateUtils";
+
+export interface MobileUrgentPost {
+  id: string;
+  title: string;
+  link: string;
+  date: string;
+  expiry?: string;
+  show?: boolean; // Set to false to hide item from mobile board
+}
+
+// Separate post array created directly inside MobileUrgentBoard
+const mobileUrgentPosts: MobileUrgentPost[] = [
+  {
+    id: "solapur-mahanagarpalika-bharti-2026",
+    title: "सोलापूर महानगरपालिका भरती २०२६: १३० जागांच्या पदभरतीस शासन मान्यता जाहीर (शासन निर्णय)",
+    link: "/solapur-mahanagarpalika-bharti-2026",
+    date: "August 06, 2026",
+    expiry: "2026-09-15T00:00:00.000Z",
+    show: true,
+  },
+  {
+    id: "mpsc-group-c-last-date-extended-2026",
+    title: "MPSC गट-क संयुक्त पूर्व परीक्षा २०२६: तलाठी भरती अर्ज मुदतवाढ : १० ऑगस्ट २०२६ पर्यंत",
+    link: "/mpsc-group-c-last-date-extended-2026",
+    date: "August 05, 2026",
+    expiry: "2026-08-30T00:00:00.000Z",
+    show: true,
+  },
+  
+];
+
+// Filter active updates (where show !== false)
+const activeUpdates = mobileUrgentPosts.filter(update => update.show !== false);
+---
+
+{activeUpdates.length > 0 && (
+  <div class="block md:hidden w-full px-3 py-2 bg-gradient-to-r from-rose-500/10 via-amber-500/10 to-rose-500/10 border-b border-rose-500/30 mobile-urgent-board transition-all duration-300">
+    <div class="max-w-[1200px] mx-auto">
+      <!-- Board Header Badge -->
+      <div class="flex items-center justify-between gap-2 mb-1.5">
+        <div class="flex items-center gap-1.5">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-500 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-rose-600"></span>
+          </span>
+          <span class="bg-rose-500 text-white text-[0.6rem] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-full flex items-center gap-1 shadow-xs">
+            <HiOutlineMegaphone className="text-xs animate-bounce" /> Urgent Update (महत्वाचे अपडेट)
+          </span>
+        </div>
+        <span class="text-[0.6rem] font-bold text-rose-600 dark:text-rose-400 flex items-center gap-0.5">
+          <HiOutlineSparkles className="text-xs animate-pulse" /> Live
+        </span>
+      </div>
+
+      <!-- Urgent Item List / Card -->
+      <div class="flex flex-col gap-1.5">
+        {activeUpdates.slice(0, 2).map((update) => (
+          <a
+            href={update.link}
+            class="group flex items-center justify-between gap-2 p-2 bg-bg-surface/90 hover:bg-bg-surface border border-rose-500/25 rounded-xl no-underline shadow-xs transition-all active:scale-[0.99]"
+          >
+            <div class="flex items-start gap-2 min-w-0">
+              <HiOutlineChevronRight className="text-rose-500 text-sm shrink-0 mt-0.5 group-hover:translate-x-0.5 transition-transform" />
+              <span class="text-xs font-extrabold text-text-main group-hover:text-rose-600 dark:group-hover:text-rose-400 line-clamp-2 leading-snug">
+                {update.title}
+              </span>
+            </div>
+            
+            {isWithin7Days(update.date) && (
+              <span 
+                class="urgent-new-badge shrink-0 text-[0.5rem] bg-rose-500 text-white px-1.5 py-0.5 rounded font-black uppercase tracking-wider select-none animate-pulse"
+                data-expiry={update.expiry}
+              >
+                NEW
+              </span>
+            )}
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+)}

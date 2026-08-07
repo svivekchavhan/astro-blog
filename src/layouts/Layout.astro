@@ -23,6 +23,7 @@ import { MAHARASHTRA_DISTRICTS } from "../constants/districts";
 import { isWithin7Days } from "../utils/dateUtils";
 import ImportantUpdatesWidget from "../components/ImportantUpdatesWidget.astro";
 import NaukriUpdatesWidget from "../components/NaukriUpdatesWidget.astro";
+import MobileUrgentBoard from "../components/MobileUrgentBoard.astro";
 import "../styles/global.css";
 
 interface Props {
@@ -265,6 +266,7 @@ const breadcrumbSchema = {
   </head>
   <body>
     <Navbar />
+    <MobileUrgentBoard />
 
     <div
       class:list={[

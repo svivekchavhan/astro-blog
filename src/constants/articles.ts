@@ -13,6 +13,18 @@ export interface ArticleMeta {
 
 export const articlesRegistry: ArticleMeta[] = [
   {
+    titleEn: "Solapur Mahanagarpalika Bharti 2026: UD Department Approves 130 Vacancies Fill-up via TCS / IBPS",
+    titleMr: "सोलापूर महानगरपालिका भरती २०२६: १३० जागांच्या पदभरतीस शासन मान्यता जाहीर (शासन निर्णय)",
+    slug: "/solapur-mahanagarpalika-bharti-2026",
+    category: "State Govt",
+    date: "August 06, 2026",
+    image: "https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&q=80&w=1200",
+    postName: "कनिष्ठ अभियंता, लिपिक टंकलेखक, फायमॅन व इतर",
+    descriptionMr: "नगर विकास विभागाने सोलापूर महानगरपालिकेतील १३० रिक्त पदांच्या ऑनलाईन भरतीस अधिकृत शासन मान्यता दिली आहे.",
+    vacancies: "130",
+    lastDate: "Notification Soon"
+  },
+  {
     titleEn: "Latur DCC Bank Bharti 2026: Revised Waiting List Released for Lipik, Sevak & Driver Posts",
     titleMr: "लातूर जिल्हा मध्यवर्ती बँक भरती २०२६: ३७५ पदांची सुधारीत प्रतीक्षा यादी (Revised Waiting List) प्रसिद्ध!",
     slug: "/latur-dcc-bank-revised-waiting-list-2026",
