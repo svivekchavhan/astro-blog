@@ -11,6 +11,15 @@ export interface NaukriUpdate {
 
 export const naukriUpdates: NaukriUpdate[] = [
   {
+    titleEn: "PDCC Bank Peon Bharti 2026: Apply Online for 289 Posts (12th Pass Eligible)",
+    titleHi: "पुणे जिल्हा मध्यवर्ती सहकारी बँक भरती २०२६: शिपाई २८९ पदांची सरळसेवा भरती जाहीर (अर्ज मुदत १० ऑगस्ट)",
+    date: "August 06, 2026",
+    badge: "New",
+    badgeType: "new",
+    link: "/pdcc-bank-peon-bharti-2026",
+    description: "Pune District Central Cooperative Bank Ltd (PDCC Bank) invites online applications for 289 Peon vacancies. 12th pass eligible, 70 marks offline exam. Apply by 10 August 2026."
+  },
+  {
     titleEn: "Solapur Mahanagarpalika Bharti 2026: Govt Approves 130 Posts Fill-up via TCS / IBPS",
     titleHi: "सोलापूर महानगरपालिका भरती २०२६: १३० जागांच्या पदभरतीस शासन मान्यता जाहीर (नगर विकास विभाग)",
     date: "August 06, 2026",

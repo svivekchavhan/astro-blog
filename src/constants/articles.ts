@@ -13,6 +13,18 @@ export interface ArticleMeta {
 
 export const articlesRegistry: ArticleMeta[] = [
   {
+    titleEn: "PDCC Bank Peon Bharti 2026: Apply Online for 289 Vacancies (12th Pass Eligible)",
+    titleMr: "पुणे जिल्हा मध्यवर्ती सहकारी बँक भरती २०२६: शिपाई २८९ पदांची सरळसेवा भरती जाहिरात प्रसिद्ध",
+    slug: "/pdcc-bank-peon-bharti-2026",
+    category: "Bank Job",
+    date: "August 06, 2026",
+    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200",
+    postName: "शिपाई (Peon)",
+    descriptionMr: "पुणे जिल्हा मध्यवर्ती सहकारी बँक लि. (PDCC Bank) द्वारे शिपाई पदांच्या २८९ जागांसाठी सरळसेवा भरती जाहीर.",
+    vacancies: "289",
+    lastDate: "10 Aug 2026"
+  },
+  {
     titleEn: "Solapur Mahanagarpalika Bharti 2026: UD Department Approves 130 Vacancies Fill-up via TCS / IBPS",
     titleMr: "सोलापूर महानगरपालिका भरती २०२६: १३० जागांच्या पदभरतीस शासन मान्यता जाहीर (शासन निर्णय)",
     slug: "/solapur-mahanagarpalika-bharti-2026",
