@@ -1,0 +1,338 @@
+---
+import Layout from "../layouts/Layout.astro";
+import {
+  HiOutlineCalendarDays,
+  HiOutlineCursorArrowRays,
+  HiOutlineArrowTopRightOnSquare,
+  HiOutlineDocumentText,
+  HiOutlineBuildingOffice,
+  HiOutlineQueueList,
+  HiOutlineCheckBadge,
+  HiOutlineMegaphone,
+  HiOutlineMapPin,
+  HiOutlineQuestionMarkCircle,
+  HiOutlineExclamationTriangle,
+  HiOutlineShieldCheck,
+  HiOutlineUserGroup,
+  HiOutlineArrowLeft,
+  HiOutlineCheckCircle,
+} from "react-icons/hi2";
+
+const title =
+  "MPSC गट-क संयुक्त परीक्षा २०२६: पेसा (PESA) रहिवासी व माजी सैनिक आरक्षणाबाबत महत्त्वाचे परिपत्रक जाहीर!";
+const description =
+  "महाराष्ट्र लोकसेवा आयोग (MPSC) द्वारे गट-क संयुक्त पूर्व परीक्षा २०२६ अंतर्गत चंद्रपूर पेसा (PESA) क्षेत्रातील स्थानिक रहिवासी पर्याय व माजी सैनिक/दिव्यांग माजी सैनिक कुटुंबीय आरक्षणाबाबत सुधारित परिपत्रक प्रसिद्ध. My Account मधील पर्याय नोंद व २५ ऑक्टोबर २०२६ पूर्वीचे प्रमाणपत्र अटी पाहा.";
+const canonicalURL = "https://mahasandhi.in/mpsc-group-c-pesa-update-2026";
+const date = "August 07, 2026";
+const category = "PESA & Reservation Update";
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonicalURL={canonicalURL}
+  article={true}
+  customBreadcrumbs={[
+    { name: "MPSC Exam Hub", url: "/mpsc" },
+    { name: "MPSC Combine Group C 2026", url: "/mpsc-combine-group-c-2026" },
+    { name: "PESA & Reservation Notice" },
+  ]}
+>
+  <article class="py-8">
+    <!-- Back Button -->
+    <div class="mb-6 not-prose">
+      <a
+        href="/mpsc-combine-group-c-2026"
+        class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold uppercase tracking-wider text-text-muted hover:text-primary bg-bg-surface border border-border-card rounded-xl transition-all duration-300 no-underline"
+      >
+        <HiOutlineArrowLeft className="text-sm" /> back to combine group c hub /
+        मागे जा
+      </a>
+    </div>
+
+    <!-- Header -->
+    <div class="mb-10">
+      <div class="flex items-center gap-3 mb-4 flex-wrap">
+        <span
+          class="bg-rose-500/10 text-rose-600 dark:text-rose-400 px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider border border-rose-500/20 flex items-center gap-1.5 shadow-xs"
+        >
+          <HiOutlineMegaphone className="text-sm animate-pulse" />
+          {category} (नवीन परिपत्रक)
+        </span>
+        <span
+          class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider border border-primary/20 flex items-center gap-1.5"
+        >
+          <HiOutlineBuildingOffice className="text-sm" /> MPSC जाहिरात क्र. ०१७/२०२६
+        </span>
+        <span class="text-text-muted text-sm font-semibold">• {date}</span>
+      </div>
+      <h1
+        class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-text-main mb-5 leading-tight"
+      >
+        {title}
+      </h1>
+      <p
+        class="text-text-muted text-base md:text-lg leading-relaxed border-l-4 border-rose-500 pl-4 sm:pl-6 py-2 italic font-medium"
+      >
+        {description}
+      </p>
+    </div>
+
+    <!-- Quick Action Banner -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 not-prose">
+      <a
+        href="https://mpsconline.gov.in"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group p-5 bg-gradient-to-br from-rose-600 to-violet-600 text-white rounded-2xl transition-all duration-300 shadow-md hover:shadow-rose-500/20 flex items-center justify-between no-underline"
+      >
+        <div>
+          <span
+            class="text-[0.65rem] uppercase font-extrabold tracking-wider bg-white/20 px-2.5 py-0.5 rounded text-white block w-fit mb-1"
+            >My Account पर्याय UPDATE करा</span
+          >
+          <h3
+            class="text-base font-extrabold text-white m-0 flex items-center gap-1.5"
+          >
+            MPSC ऑनलाईन पोर्टल वर जा <HiOutlineArrowTopRightOnSquare
+              className="text-lg"
+            />
+          </h3>
+          <p class="text-xs text-white/90 m-0 mt-1">
+            mpsconline.gov.in -> My Account द्वारे PESA पर्याय नोंदवा
+          </p>
+        </div>
+        <div
+          class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform"
+        >
+          <HiOutlineCursorArrowRays className="text-2xl" />
+        </div>
+      </a>
+
+      <a
+        href="https://mpsc.gov.in"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="p-5 bg-bg-surface border border-border-card hover:border-primary/50 rounded-2xl flex items-center justify-between transition-all duration-300 no-underline group shadow-xs"
+      >
+        <div class="flex items-center gap-4">
+          <div
+            class="w-12 h-12 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"
+          >
+            <HiOutlineDocumentText className="text-2xl" />
+          </div>
+          <div>
+            <span
+              class="text-xs text-text-muted font-bold uppercase tracking-wider block"
+              >अधिकृत परिपत्रक</span
+            >
+            <h4
+              class="text-sm font-bold text-text-main m-0 group-hover:text-primary transition-colors flex items-center gap-1"
+            >
+              MPSC PESA अधिकृत शुद्धिपत्रक पाहा <HiOutlineArrowTopRightOnSquare
+                className="text-xs"
+              />
+            </h4>
+            <p class="text-xs text-text-muted m-0 mt-0.5">
+              mpsc.gov.in वर अधिकृत जाहिरात प्रसिद्ध
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Official Notice Content Container -->
+    <div
+      class="bg-bg-surface border border-border-card rounded-3xl p-6 md:p-8 shadow-xs space-y-8 text-text-main leading-relaxed"
+    >
+      <div class="border-b border-border-card/60 pb-4">
+        <h2
+          class="text-xl md:text-2xl font-black text-rose-600 dark:text-rose-400 m-0 flex items-center gap-2"
+        >
+          <HiOutlineShieldCheck className="text-2xl shrink-0" />
+          MPSC पेसा (PESA) व माजी सैनिक आरक्षण परिपत्रक - महत्त्वाचे १० मुद्दे
+        </h2>
+      </div>
+
+      <!-- Section 1: PESA Chandrapur Details -->
+      <div class="space-y-4">
+        <h3
+          class="text-lg font-black text-primary border-l-4 border-primary pl-3 m-0"
+        >
+          १. अनुसूचित क्षेत्र (PESA - चंद्रपूर जिल्हा) रहिवासी नोंदणी
+        </h3>
+        <p class="text-sm md:text-base leading-relaxed m-0 text-text-secondary">
+          महाराष्ट्र गट-क संयुक्त परीक्षा २०२६ मधील पेसा (PESA) क्षेत्रातील
+          पदांकरीता अर्ज करू इच्छिणाऱ्या व यापूर्वी अर्ज सादर केलेल्या
+          उमेदवारांसाठी आयोगाने खालील सूचना जारी केल्या आहेत:
+        </p>
+
+        <div
+          class="bg-gradient-to-br from-violet-500/10 via-primary/5 to-rose-500/10 border border-violet-500/20 p-5 rounded-2xl space-y-3"
+        >
+          <div class="flex items-start gap-3">
+            <HiOutlineCheckCircle
+              className="text-lg text-violet-600 dark:text-violet-400 shrink-0 mt-0.5"
+            />
+            <div class="text-xs sm:text-sm font-medium leading-relaxed">
+              <strong>रहिवासी पडताळणी:</strong> उमेदवारांची अंतिम निवड झाल्यानंतर
+              त्यांना नियुक्ती देण्यापूर्वी त्यांनी अनुसूचित क्षेत्रातील स्थानिक
+              रहिवासी असल्याबाबत सादर केलेल्या महसुली पुराव्याची शासनामार्फत पडताळणी
+              केली जाईल. पडताळणीनंतरच PESA नियुक्ती दिली जाईल.
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <HiOutlineCheckCircle
+              className="text-lg text-violet-600 dark:text-violet-400 shrink-0 mt-0.5"
+            />
+            <div class="text-xs sm:text-sm font-medium leading-relaxed">
+              <strong>ऑनलाइन प्रणालीतील अनिवार्य प्रश्न:</strong> पेसा क्षेत्रासाठी
+              आरक्षित पदांकरीता उमेदवारांना खालील प्रश्नाचे उत्तर देणे अनिवार्य
+              राहील:
+              <div
+                class="mt-2 p-3 bg-bg-surface border border-rose-500/30 rounded-xl text-rose-600 dark:text-rose-400 font-black text-sm text-center"
+              >
+                "आपण पेसा क्षेत्रातील (चंद्रपूर) रहिवासी आहात का ? - होय / नाही"
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <HiOutlineCheckCircle
+              className="text-lg text-violet-600 dark:text-violet-400 shrink-0 mt-0.5"
+            />
+            <div class="text-xs sm:text-sm font-medium leading-relaxed">
+              <strong>My Account द्वारे अपडेट:</strong> यापूर्वी अर्ज सादर केलेल्या
+              उमेदवारांनी ऑनलाइन अर्ज प्रणालीतील <strong
+                 class="text-rose-600 dark:text-rose-400"
+                >'My Account'</strong
+              > या सदराखाली परीक्षेच्या नावांसमोर संबंधित प्रश्नावर क्लिक करून माहिती
+              नमूद करावी. नव्याने अर्ज करण्याची आवश्यकता नाही.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2: Ex-Servicemen 15% Reservation Details -->
+      <div class="space-y-4">
+        <h3
+          class="text-lg font-black text-primary border-l-4 border-primary pl-3 m-0"
+        >
+          २. माजी सैनिक व दिव्यांग माजी सैनिक कुटुंबीय १५% आरक्षण नियम
+        </h3>
+        <p class="text-sm md:text-base leading-relaxed m-0 text-text-secondary">
+          सामान्य प्रशासन विभाग शासन निर्णय दि. ०२ सप्टेंबर १९८३ नुसार माजी
+          सैनिकांसाठी आरक्षित १५% पदांवर भरती करताना खालीलप्रमाणे नियमावली लागू
+          राहील:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div
+            class="p-4 bg-bg-surface/80 border border-border-card rounded-2xl space-y-2"
+          >
+            <h4 class="font-bold text-rose-600 dark:text-rose-400 text-sm m-0">
+              सैनिकी सेवेमुळे दिव्यांगत्व आले असल्यास
+            </h4>
+            <p class="text-text-muted leading-relaxed m-0">
+              युद्ध काळात किंवा युद्ध नसताना सैन्यातील सेवेमुळे दिव्यांगत्व
+              आलेल्या माजी सैनिकांना १५% राखीव पदांपैकी उपलब्ध पदांवर प्राधान्य
+              क्रमाने नियुक्ती देण्यात येईल.
+            </p>
+          </div>
+
+          <div
+            class="p-4 bg-bg-surface/80 border border-border-card rounded-2xl space-y-2"
+          >
+            <h4 class="font-bold text-rose-600 dark:text-rose-400 text-sm m-0">
+              दिवंगत / अयोग्य माजी सैनिकांच्या कुटुंबातील सदस्य
+            </h4>
+            <p class="text-text-muted leading-relaxed m-0">
+              सैनिकी सेवेत मृत झालेल्या किंवा दिव्यांगत्व येऊन नोकरीसाठी अयोग्य
+              झालेल्या माजी सैनिकांच्या कुटुंबातील **फक्त एका व्यक्तीस**
+              पसंतीक्रमाने वर्ग ३ मधील १५% आरक्षित पदांवर नियुक्ती दिली जाईल
+              (उमेदवाराने तलाठी पदासाठी आवश्यक अर्हता धारण केलेली असावी).
+            </p>
+          </div>
+        </div>
+
+        <!-- System Mandatory Questions -->
+        <div
+          class="bg-amber-500/10 border border-amber-500/30 p-5 rounded-2xl space-y-3"
+        >
+          <div class="font-bold text-amber-700 dark:text-amber-300 text-sm">
+            अर्ज भरताना विचारले जाणारे २ अनिवार्य प्रश्न:
+          </div>
+          <ol
+            class="list-alpha pl-5 space-y-2 text-xs sm:text-sm font-semibold text-text-main m-0"
+          >
+            <li>
+              युद्ध काळात किंवा युद्ध नसताना सैन्यातील सेवेमुळे दिव्यांगत्व प्राप्त
+              झाले आहे का ? - <strong>होय / नाही</strong>
+            </li>
+            <li>
+              युद्ध काळात किंवा युद्ध नसताना सैनिकी सेवेत मृत झालेल्या किंवा
+              दिव्यांगत्व येऊन नोकरीसाठी अयोग्य झालेल्या माजी सैनिकांच्या
+              कुटुंबातील सदस्य आहात का ? - <strong>होय / नाही</strong>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Section 3: Certificate Expiration & Verification Rule -->
+      <div class="space-y-4">
+        <h3
+          class="text-lg font-black text-rose-600 dark:text-rose-400 border-l-4 border-rose-500 pl-3 m-0"
+        >
+          ३. प्रमाणपत्र सादर करण्याची मुदत (२५ ऑक्टोबर २०२६ पूर्वी)
+        </h3>
+
+        <div
+          class="p-5 bg-rose-500/10 border border-rose-500/30 rounded-2xl space-y-3"
+        >
+          <div
+            class="flex items-start gap-3 text-rose-700 dark:text-rose-300 text-xs sm:text-sm font-semibold"
+          >
+            <HiOutlineExclamationTriangle
+              className="text-xl shrink-0 mt-0.5 text-rose-500"
+            />
+            <div class="leading-relaxed">
+              <strong>जिल्हा सैनिक कल्याण कार्यालय प्रमाणपत्र अट:</strong> वरील प्रश्नांचे
+              उत्तर 'होय' असल्यास उमेदवाराने प्रस्तुत परीक्षेच्या दिनांकापूर्वी म्हणजेच
+              <strong class="text-rose-600 dark:text-rose-400 text-sm font-black"
+                >दिनांक २५ ऑक्टोबर, २०२६ पूर्वी</strong
+              >
+              जिल्हा सैनिक कल्याण कार्यालयामार्फत (District Soldier Welfare Office)
+              सक्षम प्राधिकार्‍यांनी प्रदान केलेले प्रमाणपत्र सादर करणे अनिवार्य राहील.
+            </div>
+          </div>
+          <p class="text-xs text-text-muted m-0 leading-relaxed pl-8">
+            * टीप: नियुक्तीपूर्वी सक्षम प्राधिकार्‍यांकडून कागदपत्रांची तपासणी
+            केली जाईल. त्यावेळी वैध कागदपत्रे सादर न करू शकल्यास उमेदवार
+            नियुक्तीस अपात्र ठरेल.
+          </p>
+        </div>
+      </div>
+
+      <!-- Footer Action Links -->
+      <div class="pt-4 border-t border-border-card flex flex-wrap gap-4">
+        <a
+          href="https://mpsconline.gov.in"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-rose-600 hover:bg-rose-700 text-white font-black uppercase tracking-wider text-xs rounded-xl shadow-xs transition-colors no-underline"
+        >
+          <HiOutlineCursorArrowRays className="text-base shrink-0" /> MPSC My Account
+          लॉगिन करा
+        </a>
+        <a
+          href="/mpsc-combine-group-c-2026"
+          class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary/10 hover:bg-primary/20 text-primary font-black uppercase tracking-wider text-xs rounded-xl transition-colors no-underline"
+        >
+          <HiOutlineArrowLeft className="text-base shrink-0" /> MPSC Combine Group
+          C Main Hub
+        </a>
+      </div>
+    </div>
+  </article>
+</Layout>
