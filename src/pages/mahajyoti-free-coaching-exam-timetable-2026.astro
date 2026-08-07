@@ -1,0 +1,423 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { translateMarathi } from "../utils/wordLibrary";
+import {
+  HiOutlineCalendarDays,
+  HiOutlineCursorArrowRays,
+  HiOutlineDocumentText,
+  HiOutlineBuildingOffice,
+  HiOutlineAcademicCap,
+  HiOutlineBriefcase,
+  HiOutlineCheckCircle,
+  HiOutlineClock,
+  HiOutlineMegaphone
+} from "react-icons/hi2";
+
+const title = "महाज्योति मोफत स्पर्धा परीक्षा प्रशिक्षण २०२६: सुधारित चाळणी परीक्षा वेळापत्रक जाहीर (Mahajyoti Revised Exam Timetable)";
+const description = "Mahajyoti Free Coaching Exam Revised Timetable 2026: महात्मा जोतिबा फुले संशोधन व प्रशिक्षण संस्था (महाज्योति), नागपूर द्वारे सन २०२६-२७ या आर्थिक वर्षात राबविण्यात येणाऱ्या MPSC, Banking, SSC, Police Bharti, MH-SET, MBA CET चाळणी परीक्षांचे सुधारित वेळापत्रक जाहीर. परीक्षा ०८ ते १० ऑगस्ट २०२६ दरम्यान होणार.";
+const canonicalURL = "https://mahasandhi.in/mahajyoti-free-coaching-exam-timetable-2026";
+const date = "August 04, 2026";
+const category = "Exam Alert";
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonicalURL={canonicalURL}
+  article={true}
+  customBreadcrumbs={[
+    { name: "Naukri Updates", url: "/naukri-updates" },
+    { name: "Mahajyoti Exam Timetable 2026" },
+  ]}
+>
+  <article class="py-8">
+    <!-- Header -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-6">
+        <span
+          class="bg-rose-500/10 text-rose-600 dark:text-rose-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-rose-500/20"
+          >{category}
+        </span>
+        <span class="text-text-muted text-sm">• {date}</span>
+      </div>
+      <h1
+        class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-text-main mb-6 leading-[1.25]"
+      >
+        {title}
+      </h1>
+      <p
+        class="text-text-muted text-lg leading-relaxed border-l-4 border-primary pl-6 py-2 italic"
+      >
+        {description}
+      </p>
+    </div>
+
+    <!-- Quick Language Navigation Links -->
+    <div class="flex gap-4 mb-8">
+      <a
+        href="#marathi-version"
+        class="text-primary font-bold text-sm hover:underline"
+        >↓ मराठी आवृत्ती (Marathi Version)</a
+      >
+      <span class="text-text-muted">|</span>
+      <a
+        href="#english-version"
+        class="text-primary font-bold text-sm hover:underline"
+        >↓ English Version</a
+      >
+    </div>
+
+    <!-- ================= MARATHI VERSION ================= -->
+    <div id="marathi-version">
+      <div class="space-y-6 text-text-main leading-relaxed">
+        <h2 id="main-keyword-mr" class="text-2xl font-bold mt-2">
+          महात्मा जोतिबा फुले संशोधन व प्रशिक्षण संस्था (महाज्योति), नागपूर - स्पर्धा परीक्षा चाळणी परीक्षा सुधारित वेळापत्रक २०२६
+        </h2>
+
+        <!-- Introduction -->
+        <div class="mb-6">
+          <p>
+            <strong>Mahajyoti Free Coaching Exam Timetable 2026:</strong> इतर मागास बहुजन कल्याण विभाग, महाराष्ट्र राज्य अंतर्गत कार्यरत <strong>महात्मा जोतिबा फुले संशोधन व प्रशिक्षण संस्था (महाज्योति), नागपूर</strong> द्वारे सन २०२६-२७ या आर्थिक वर्षात विविध स्पर्धा परीक्षापूर्व प्रशिक्षणाकरिता विद्यार्थ्यांची निवड करण्यासाठी <strong>०८ ते १० ऑगस्ट २०२६</strong> रोजी नियोजित चाळणी परीक्षांचे <strong>सुधारित वेळापत्रक (Revised Timetable)</strong> परिपत्रकाद्वारे जाहीर करण्यात आले आहे.
+          </p>
+          <p>
+            यामध्ये IBPS Banking/LIC/AAO, SSC-CGL, रेल्वे भरती, मिलिटरी/पोलीस भरती, शिक्षक अभियोग्यता व बुद्धिमत्ता चाचणी (TAIT), MBA CAT/CMAT-CET, UGC NET/CSIR/MH-SET आणि GRE/TOEFL/IELTS & Foreign Language प्रशिक्षणासाठी चाळणी परीक्षांचा समावेश आहे.
+          </p>
+          <hr class="border-border-card my-6" />
+        </div>
+
+        <!-- Key Information Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
+          <div
+            class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3"
+          >
+            <HiOutlineBuildingOffice
+              className="text-primary text-2xl shrink-0 mt-0.5"
+            />
+            <div>
+              <span
+                class="text-xs text-text-muted block uppercase font-bold tracking-wider"
+                >संस्थेचे नाव</span
+              >
+              <span class="text-text-main font-semibold text-sm"
+                >महाज्योति (Mahajyoti), नागपूर</span
+              >
+            </div>
+          </div>
+          <div
+            class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3"
+          >
+            <HiOutlineCalendarDays
+              className="text-rose-500 text-2xl shrink-0 mt-0.5"
+            />
+            <div>
+              <span
+                class="text-xs text-text-muted block uppercase font-bold tracking-wider"
+                >परीक्षेची तारीख</span
+              >
+              <span class="text-rose-600 dark:text-rose-400 font-extrabold text-sm"
+                >०८, ०९ व १० ऑगस्ट २०२६</span
+              >
+            </div>
+          </div>
+          <div
+            class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3"
+          >
+            <HiOutlineAcademicCap
+              className="text-emerald-500 text-2xl shrink-0 mt-0.5"
+            />
+            <div>
+              <span
+                class="text-xs text-text-muted block uppercase font-bold tracking-wider"
+                >प्रशिक्षण प्रकार</span
+              >
+              <span class="text-text-main font-semibold text-sm"
+                >मोफत स्पर्धा परीक्षा पूर्व प्रशिक्षण (२०२६-२७)</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Revised Timetable Table -->
+        <h2
+          id="timetable-details"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          चाळणी परीक्षांचे सुधारित वेळापत्रक (Revised Examination Schedule 08 to 10 Aug 2026)
+        </h2>
+        
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="bg-primary/10">
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main text-center w-16"
+                  >अ.क्र.</th
+                >
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >प्रशिक्षणाचे नाव (Course / Exam Name)</th
+                >
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main text-center"
+                  >दिनांक (Exam Date)</th
+                >
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >वेळ (Exam Time Slot)</th
+                >
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-border-card/30">
+              <tr>
+                <td class="p-3 border border-border-card text-center font-bold">१</td>
+                <td class="p-3 border border-border-card font-semibold text-text-main">
+                  शिक्षक अभियोग्यता व बुद्धिमत्ता चाचणी (TAIT)
+                </td>
+                <td class="p-3 border border-border-card text-center font-bold text-primary whitespace-nowrap">
+                  दि. ०८/०८/२०२६
+                </td>
+                <td class="p-3 border border-border-card font-medium text-text-main">
+                  सकाळी १०:०० ते १२:००
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card text-center font-bold">२</td>
+                <td class="p-3 border border-border-card font-semibold text-text-main">
+                  UGC-NET / CSIR / MH-SET
+                </td>
+                <td class="p-3 border border-border-card text-center font-bold text-primary whitespace-nowrap">
+                  दि. ०८/०८/२०२६
+                </td>
+                <td class="p-3 border border-border-card font-medium text-text-main">
+                  दुपारी ०१:०० ते ०३:००
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card text-center font-bold">३</td>
+                <td class="p-3 border border-border-card font-semibold text-text-main">
+                  GRE / TOEFL / IELTS & Foreign Language
+                </td>
+                <td class="p-3 border border-border-card text-center font-bold text-primary whitespace-nowrap">
+                  दि. ०८/०८/२०२६
+                </td>
+                <td class="p-3 border border-border-card font-medium text-text-main">
+                  दुपारी ०४:०० ते ०५:००
+                </td>
+              </tr>
+              <tr class="bg-amber-500/5">
+                <td class="p-3 border border-border-card text-center font-bold">४</td>
+                <td class="p-3 border border-border-card font-semibold text-text-main">
+                  SSC-CGL, IBPS-PO / Banking / LIC / AAO, रेल्वे भरती
+                </td>
+                <td class="p-3 border border-border-card text-center font-bold text-primary whitespace-nowrap">
+                  दि. ०९/०८/२०२६
+                </td>
+                <td class="p-3 border border-border-card font-medium text-text-main">
+                  • सकाळी ०९:०० ते ११:००<br />
+                  • दुपारी १२:०० ते ०२:००
+                </td>
+              </tr>
+              <tr class="bg-amber-500/5">
+                <td class="p-3 border border-border-card text-center font-bold">५</td>
+                <td class="p-3 border border-border-card font-semibold text-text-main">
+                  MBA-CAT / CMAT-CET
+                </td>
+                <td class="p-3 border border-border-card text-center font-bold text-primary whitespace-nowrap">
+                  दि. ०९/०८/२०२६
+                </td>
+                <td class="p-3 border border-border-card font-medium text-text-main">
+                  दुपारी ०३:०० ते ०५:००
+                </td>
+              </tr>
+              <tr class="bg-emerald-500/5">
+                <td class="p-3 border border-border-card text-center font-bold">६</td>
+                <td class="p-3 border border-border-card font-semibold text-text-main">
+                  मिलिटरी / पोलीस भरती (Military & Police Bharti)
+                </td>
+                <td class="p-3 border border-border-card text-center font-bold text-emerald-600 dark:text-emerald-400 whitespace-nowrap">
+                  दि. १०/०८/२०२६
+                </td>
+                <td class="p-3 border border-border-card font-medium text-text-main">
+                  • सकाळी १०:०० ते ११:००<br />
+                  • दुपारी १२:०० ते ०१:००<br />
+                  • दुपारी ०२:०० ते ०३:००<br />
+                  • दुपारी ०४:०० ते ०५:००
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Official Note & Guidelines -->
+        <div class="bg-bg-surface border border-border-card p-5 rounded-2xl text-sm mb-6 space-y-2">
+          <p class="m-0 text-text-main font-bold flex items-center gap-2">
+            <HiOutlineMegaphone className="text-rose-500 text-lg shrink-0" />
+            <strong>महत्त्वाची नोंद (Official Note):</strong>
+          </p>
+          <p class="m-0 text-text-muted text-xs leading-relaxed">
+            सदर चाळणी परीक्षांसाठी आवश्यक असलेल्या सर्व सूचनांकरिता दि. २४/०७/२०२६ रोजी प्रसिद्ध करण्यात आलेल्या वेळापत्रकाचे व परिपत्रकाचे अवलोकन करण्यात यावे. सर्व संबंधित विद्यार्थ्यांनी याची नोंद घ्यावी. (व्यवस्थापकीय संचालक, महाज्योति नागपूर)
+          </p>
+        </div>
+
+        <!-- Important Links Table -->
+        <h2
+          id="important-dates"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          {
+            translateMarathi(
+              "महत्त्वाच्या लिंक्स (Important Circular & Official Links)",
+            )
+          }
+        </h2>
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-primary/10">
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >तपशील (Event)</th
+                >
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >दुवा / Action</th
+                >
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >महाज्योति सुधारित वेळापत्रक परिपत्रक (Official Circular Notice)</td
+                >
+                <td class="p-3 border border-border-card">
+                  <a
+                    href="https://mahajyoti.org.in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-rose-500/10 hover:bg-rose-500/20 text-rose-600 dark:text-rose-400 text-xs font-bold uppercase tracking-wider rounded-lg transition-colors border border-rose-500/30 w-full sm:w-auto"
+                  >
+                    <HiOutlineDocumentText className="text-base shrink-0" /> अधिकृत परिपत्रक (PDF/Notice)
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >महाज्योति अधिकृत संकेतस्थळ (Official Website)</td
+                >
+                <td class="p-3 border border-border-card">
+                  <a
+                    href="https://mahajyoti.org.in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider rounded-lg transition-colors border border-primary/20 w-full sm:w-auto"
+                  >
+                    <HiOutlineCursorArrowRays className="text-base shrink-0" /> www.mahajyoti.org.in
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- FAQ Section -->
+        <h2
+          id="faq"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          वारंवार विचारले जाणारे प्रश्न (FAQ)
+        </h2>
+        <div class="space-y-4 mt-3 mb-8">
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+            <h3 class="text-base font-bold text-text-main mb-2">
+              प्रश्न १: महाज्योति चाळणी परीक्षा कोणत्या तारखांना होणार आहे?
+            </h3>
+            <p class="text-text-muted text-xs m-0">
+              उत्तर: सुधारित वेळापत्रकानुसार चाळणी परीक्षा दि. ०८ ऑगस्ट, ०९ ऑगस्ट आणि १० ऑगस्ट २०२६ या तीन दिवशी विविध सत्रांमध्ये आयोजित करण्यात आल्या आहेत.
+            </p>
+          </div>
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+            <h3 class="text-base font-bold text-text-main mb-2">
+              प्रश्न २: पोलीस भरती व मिलिटरी भरती चाळणी परीक्षा कधी आहे?
+            </h3>
+            <p class="text-text-muted text-xs m-0">
+              उत्तर: मिलिटरी व पोलीस भरती चाळणी परीक्षा १० ऑगस्ट २०२६ रोजी सकाळी १०:०० ते ११:००, १२:०० ते ०१:००, ०२:०० ते ०३:०० आणि ०४:०० ते ०५:०० अशा चार विविध सत्रांमध्ये होईल.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ================= LANGUAGE SEPARATOR ================= -->
+    <div
+      class="my-16 border-t-2 border-dashed border-border-card flex items-center justify-center relative"
+    >
+      <span
+        class="absolute bg-bg-base px-8 py-2 text-base sm:text-lg font-extrabold uppercase tracking-widest text-primary border border-border-card rounded-full shadow-md"
+      >
+        English Version
+      </span>
+    </div>
+
+    <!-- ================= ENGLISH VERSION ================= -->
+    <div id="english-version" class="opacity-95">
+      <div class="space-y-6 text-text-main leading-relaxed">
+        <h2 id="main-keyword-en" class="text-2xl font-bold mt-2">
+          Mahajyoti Free Coaching Entrance Exam Revised Timetable 2026
+        </h2>
+
+        <div class="mb-6">
+          <p>
+            <strong>Mahajyoti Revised Timetable 2026:</strong> Mahatma Jyotiba Phule Research and Training Institute (Mahajyoti), Nagpur has released an official circular regarding the revised screening test timetable for free pre-examination coaching (FY 2026-27). The screening examinations for Banking, SSC, Police Bharti, TAIT, SET/NET, and CAT will take place between <strong>08th August and 10th August 2026</strong>.
+          </p>
+        </div>
+
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="bg-primary/10">
+                <th class="p-3 border border-border-card font-bold">Course / Coaching Name</th>
+                <th class="p-3 border border-border-card font-bold">Exam Date</th>
+                <th class="p-3 border border-border-card font-bold">Time Slot</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-border-card font-semibold">Teacher Aptitude & Intelligence Test (TAIT)</td>
+                <td class="p-3 border border-border-card">08 Aug 2026</td>
+                <td class="p-3 border border-border-card">10:00 AM to 12:00 PM</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-semibold">UGC-NET / CSIR / MH-SET</td>
+                <td class="p-3 border border-border-card">08 Aug 2026</td>
+                <td class="p-3 border border-border-card">01:00 PM to 03:00 PM</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-semibold">GRE / TOEFL / IELTS & Foreign Language</td>
+                <td class="p-3 border border-border-card">08 Aug 2026</td>
+                <td class="p-3 border border-border-card">04:00 PM to 05:00 PM</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-semibold">SSC-CGL, IBPS-PO / Banking / LIC / Railway</td>
+                <td class="p-3 border border-border-card">09 Aug 2026</td>
+                <td class="p-3 border border-border-card">09:00 AM - 11:00 AM & 12:00 PM - 02:00 PM</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-semibold">MBA-CAT / CMAT-CET</td>
+                <td class="p-3 border border-border-card">09 Aug 2026</td>
+                <td class="p-3 border border-border-card">03:00 PM to 05:00 PM</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-semibold">Military & Police Bharti</td>
+                <td class="p-3 border border-border-card">10 Aug 2026</td>
+                <td class="p-3 border border-border-card">10 AM-11 AM, 12 PM-01 PM, 02 PM-03 PM, 04 PM-05 PM</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

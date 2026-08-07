@@ -28,48 +28,139 @@ import Marquee from "./Marquee.astro";
 
 // 1. Core Pages & Tools
 const mainPages = [
-  { title: "Home - Sarkari Naukri Updates", href: "/", category: "Page", keywords: "home sarkari naukri mahasandhi" },
-  { title: "Current Recruitment 2026 (नवीन भरती जाहिराती)", href: "/current-recruitment", category: "Jobs", keywords: "recruitment jobs vacancies naukri bharti" },
-  { title: "10th Pass Govt Jobs 2026 (१०वी पास सरकारी नोकऱ्या)", href: "/10th-pass-government-jobs-maharashtra", category: "Jobs", keywords: "10th pass ssc police bharti railway navy jobs" },
-  { title: "Walk-In Jobs & Interviews 2026 (वॉक-इन मुलाखत)", href: "/walk-in-jobs", category: "Walk-In", keywords: "walkin interview direct recruitment" },
-  { title: "Bank Recruitment 2026 (बँक भरती)", href: "/bank-recruitment", category: "Jobs", keywords: "bank ibps sbi po clerk" },
-  { title: "Naukri Updates & Alerts (नोकरी अपडेट्स)", href: "/naukri-updates", category: "Updates", keywords: "naukri alerts news" },
-  { title: "Mega Recruitment 2026 (मेगा भरती)", href: "/mega-recruitment", category: "Jobs", keywords: "mega bharti govt jobs" },
-  { title: "Result Page 2026 (निकाल)", href: "/result", category: "Result", keywords: "result cutoff merit list" },
-  { title: "Admit Card Download (प्रवेश पत्र / हॉलतिकीट)", href: "/admit-card", category: "Admit Card", keywords: "admit card hall ticket call letter" },
-  { title: "Answer Key 2026 (उत्तरतालिका)", href: "/answer-key", category: "Answer Key", keywords: "answer key response sheet" },
-  { title: "Admission 2026 (प्रवेश प्रक्रिया)", href: "/admission", category: "Admission", keywords: "admission mht cet iti counselling" },
-  { title: "MPSC Study Material & Exam Details (एमपीएससी)", href: "/mpsc", category: "MPSC", keywords: "mpsc polity syllabus prelims mains" },
-  { title: "MPSC Age Calculator (मराठी वय कॅल्क्युलेटर)", href: "/mpsc-age-calculator-marathi", category: "Calculator", keywords: "age calculator vaya ganak mpsc" },
-  { title: "SGPA & CGPA Percentage Calculator (टक्केवारी कॅल्क्युलेटर)", href: "/sgpa-cgpa-calculator", category: "Calculator", keywords: "sgpa cgpa percentage conversion marksheet" },
-  { title: "Calculators & Tools Hub", href: "/calculator", category: "Tool", keywords: "calculators tools" },
-  { title: "About Us", href: "/about-us", category: "Page", keywords: "about mission team" },
-  { title: "Contact Us", href: "/contact-us", category: "Page", keywords: "contact email feedback support" },
-  { title: "Sitemap Index", href: "/sitemap", category: "Page", keywords: "sitemap index pages" }
+  {
+    title: "Home - Sarkari Naukri Updates",
+    href: "/",
+    category: "Page",
+    keywords: "home sarkari naukri mahasandhi",
+  },
+  {
+    title: "Current Recruitment 2026 (नवीन भरती जाहिराती)",
+    href: "/current-recruitment",
+    category: "Jobs",
+    keywords: "recruitment jobs vacancies naukri bharti",
+  },
+  {
+    title: "10th Pass Govt Jobs 2026 (१०वी पास सरकारी नोकऱ्या)",
+    href: "/10th-pass-government-jobs-maharashtra",
+    category: "Jobs",
+    keywords: "10th pass ssc police bharti railway navy jobs",
+  },
+  {
+    title: "Walk-In Jobs & Interviews 2026 (वॉक-इन मुलाखत)",
+    href: "/walk-in-jobs",
+    category: "Walk-In",
+    keywords: "walkin interview direct recruitment",
+  },
+  {
+    title: "Bank Recruitment 2026 (बँक भरती)",
+    href: "/bank-recruitment",
+    category: "Jobs",
+    keywords: "bank ibps sbi po clerk",
+  },
+  {
+    title: "Naukri Updates & Alerts (नोकरी अपडेट्स)",
+    href: "/naukri-updates",
+    category: "Updates",
+    keywords: "naukri alerts news",
+  },
+  {
+    title: "Mega Recruitment 2026 (मेगा भरती)",
+    href: "/mega-recruitment",
+    category: "Jobs",
+    keywords: "mega bharti govt jobs",
+  },
+  {
+    title: "Result Page 2026 (निकाल)",
+    href: "/result",
+    category: "Result",
+    keywords: "result cutoff merit list",
+  },
+  {
+    title: "Admit Card Download (प्रवेश पत्र / हॉलतिकीट)",
+    href: "/admit-card",
+    category: "Admit Card",
+    keywords: "admit card hall ticket call letter",
+  },
+  {
+    title: "Answer Key 2026 (उत्तरतालिका)",
+    href: "/answer-key",
+    category: "Answer Key",
+    keywords: "answer key response sheet",
+  },
+  {
+    title: "Admission 2026 (प्रवेश प्रक्रिया)",
+    href: "/admission",
+    category: "Admission",
+    keywords: "admission mht cet iti counselling",
+  },
+  {
+    title: "MPSC Study Material & Exam Details (एमपीएससी)",
+    href: "/mpsc",
+    category: "MPSC",
+    keywords: "mpsc polity syllabus prelims mains",
+  },
+  {
+    title: "MPSC Age Calculator (मराठी वय कॅल्क्युलेटर)",
+    href: "/mpsc-age-calculator-marathi",
+    category: "Calculator",
+    keywords: "age calculator vaya ganak mpsc",
+  },
+  {
+    title: "SGPA & CGPA Percentage Calculator (टक्केवारी कॅल्क्युलेटर)",
+    href: "/sgpa-cgpa-calculator",
+    category: "Calculator",
+    keywords: "sgpa cgpa percentage conversion marksheet",
+  },
+  {
+    title: "Calculators & Tools Hub",
+    href: "/calculator",
+    category: "Tool",
+    keywords: "calculators tools",
+  },
+  {
+    title: "About Us",
+    href: "/about-us",
+    category: "Page",
+    keywords: "about mission team",
+  },
+  {
+    title: "Contact Us",
+    href: "/contact-us",
+    category: "Page",
+    keywords: "contact email feedback support",
+  },
+  {
+    title: "Sitemap Index",
+    href: "/sitemap",
+    category: "Page",
+    keywords: "sitemap index pages",
+  },
 ];
 
 // 2. All Registered Articles (Marathi + English)
-const articleSearchItems = articlesRegistry.map(art => ({
+const articleSearchItems = articlesRegistry.map((art) => ({
   title: `${art.titleMr} (${art.titleEn})`,
   href: art.slug,
   category: art.category || "Article",
-  keywords: `${art.titleMr} ${art.titleEn} ${art.category}`.toLowerCase()
+  keywords: `${art.titleMr} ${art.titleEn} ${art.category}`.toLowerCase(),
 }));
 
 // 3. All 35+ District Pages (Marathi + English)
-const districtSearchItems = MAHARASHTRA_DISTRICTS.map(dist => ({
+const districtSearchItems = MAHARASHTRA_DISTRICTS.map((dist) => ({
   title: `${dist.nameMr} जिल्हा भरती (${dist.nameEn} District Jobs)`,
   href: `/district/${dist.slug}`,
   category: "District",
-  keywords: `${dist.nameMr} ${dist.nameEn} district bharti jobs ${dist.division}`.toLowerCase()
+  keywords:
+    `${dist.nameMr} ${dist.nameEn} district bharti jobs ${dist.division}`.toLowerCase(),
 }));
 
 // 4. Daily Naukri Updates
-const naukriUpdateSearchItems = naukriUpdates.map(u => ({
+const naukriUpdateSearchItems = naukriUpdates.map((u) => ({
   title: `${u.titleHi} (${u.titleEn})`,
   href: u.link,
   category: "Alert",
-  keywords: `${u.titleHi} ${u.titleEn}`.toLowerCase()
+  keywords: `${u.titleHi} ${u.titleEn}`.toLowerCase(),
 }));
 
 // Combined Search Index
@@ -77,7 +168,7 @@ const searchData = [
   ...mainPages,
   ...articleSearchItems,
   ...districtSearchItems,
-  ...naukriUpdateSearchItems
+  ...naukriUpdateSearchItems,
 ];
 ---
 
@@ -366,154 +457,143 @@ const searchData = [
 </div>
 
 <div
-  class="fixed top-0 right-0 w-[80%] max-w-[300px] h-screen bg-bg-base pt-[6rem] px-8 pb-8 z-[1000] border-l border-border-card flex flex-col transition-transform duration-400 ease-[cubic-bezier(0.4,0,0.2,1)] translate-x-full shadow-[-10px_0_30px_rgba(0,0,0,0.5)]"
+  class="fixed top-0 right-0 w-[85%] max-w-[320px] h-screen bg-bg-base z-[1000] border-l border-border-card flex flex-col transition-transform duration-400 ease-[cubic-bezier(0.4,0,0.2,1)] translate-x-full shadow-[-10px_0_30px_rgba(0,0,0,0.5)]"
   id="mobile-menu"
 >
-  <ul class="flex flex-col gap-3 list-none p-0 m-0">
-    <li>
-      <a
-        href="/"
-        class="flex items-center justify-center w-full py-3.5 rounded-2xl bg-amber-500/5 dark:bg-amber-500/10 border border-solid border-amber-500/20 text-amber-600 dark:text-amber-400 hover:bg-amber-500/10 transition-all duration-300 shadow-sm"
-        title="Home"
-        aria-label="Home"
+  <!-- Mobile Menu Top Header (Centered Site Name with Larger Font) -->
+  <div
+    class="p-5 border-b border-border-card/40 flex items-center justify-center text-center shrink-0 bg-bg-surface/80 backdrop-blur-md"
+  >
+    <a href="/" class="flex items-center justify-center gap-1.5 no-underline">
+      <span
+        class="text-2xl sm:text-3xl font-black font-display tracking-tight text-text-main"
       >
-        <HiOutlineHome className="text-xl shrink-0" />
-      </a>
-    </li>
-    <li>
-      <a
-        href="/current-recruitment"
-        class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-blue-500/5 dark:bg-blue-500/10 border border-solid border-blue-500/20 text-text-main font-bold hover:bg-blue-500/10 transition-all duration-300 text-xs uppercase tracking-wider"
-        ><HiOutlineBriefcase className="text-lg shrink-0" /> Current Recruitment</a
+        <span
+          class="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent"
+          >महा</span
+        >संधी
+      </span>
+      <span
+        class="px-1.5 py-0.5 text-[0.65rem] font-black text-white uppercase rounded-md bg-gradient-to-r from-secondary to-primary shadow-xs"
       >
-    </li>
-    <li>
-      <a
-        href="/mega-recruitment"
-        class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-fuchsia-500/5 dark:bg-fuchsia-500/10 border border-solid border-fuchsia-500/20 text-text-main font-bold hover:bg-fuchsia-500/10 transition-all duration-300 text-xs uppercase tracking-wider"
-        ><HiOutlineNewspaper className="text-lg shrink-0" /> Mega Recruitment</a
-      >
-    </li>
-    <li>
-      <a
-        href="/result"
-        class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-emerald-500/5 dark:bg-emerald-500/10 border border-solid border-emerald-500/20 text-text-main font-bold hover:bg-emerald-500/10 transition-all duration-300 text-xs uppercase tracking-wider"
-        ><HiOutlineQueueList className="text-lg shrink-0" /> Result</a
-      >
-    </li>
-    <li>
-      <a
-        href="/admit-card"
-        class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-rose-500/5 dark:bg-rose-500/10 border border-solid border-rose-500/20 text-text-main font-bold hover:bg-rose-500/10 transition-all duration-300 text-xs uppercase tracking-wider"
-        ><HiOutlineIdentification className="text-lg shrink-0" /> Admit Card</a
-      >
-    </li>
-    <li>
-      <a
-        href="/answer-key"
-        class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-violet-500/5 dark:bg-violet-500/10 border border-solid border-violet-500/20 text-text-main font-bold hover:bg-violet-500/10 transition-all duration-300 text-xs uppercase tracking-wider"
-        ><HiOutlineKey className="text-lg shrink-0" /> Answer Key</a
-      >
-    </li>
-    <li>
-      <a
-        href="/admission"
-        class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-cyan-500/5 dark:bg-cyan-500/10 border border-solid border-cyan-500/20 text-text-main font-bold hover:bg-cyan-500/10 transition-all duration-300 text-xs uppercase tracking-wider"
-        ><HiOutlineAcademicCap className="text-lg shrink-0" /> Admission</a
-      >
-    </li>
-    <li>
-      <details
-        class="group/mobile-dropdown bg-slate-500/5 dark:bg-slate-500/10 border border-solid border-slate-500/20 rounded-2xl"
-      >
-        <summary
-          class="flex items-center justify-between px-4 py-3 text-text-main font-bold text-xs uppercase tracking-wider cursor-pointer list-none [&::-webkit-details-marker]:hidden"
+        in
+      </span>
+    </a>
+  </div>
+
+  <!-- Scrollable Navigation Items -->
+  <div class="flex-1 overflow-y-auto p-4 space-y-2.5">
+    <ul class="flex flex-col gap-2 list-none p-0 m-0">
+      <li>
+        <a
+          href="/"
+          class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-amber-500/5 dark:bg-amber-500/10 border border-solid border-amber-500/20 text-amber-600 dark:text-amber-400 hover:bg-amber-500/10 transition-all duration-300 text-xs font-bold uppercase tracking-wider no-underline"
         >
-          <span class="flex items-center gap-3">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="text-lg shrink-0"
-              ><circle cx="12" cy="12" r="1"></circle><circle
-                cx="12"
-                cy="5"
-                r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg
-            >
-            Others
-          </span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="14"
-            height="14"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="3"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="transition-transform duration-300 group-open/mobile-dropdown:rotate-180"
-            ><path d="m6 9 6 6 6-6"></path></svg
-          >
-        </summary>
-        <div
-          class="px-4 pb-3 pt-1 flex flex-col gap-1 border-t border-border-card/30 mt-1"
+          <HiOutlineHome className="text-lg shrink-0" />
+          <span>मुख्य पृष्ठ (Home)</span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="/current-recruitment"
+          class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-blue-500/5 dark:bg-blue-500/10 border border-solid border-blue-500/20 text-text-main font-bold hover:bg-blue-500/10 transition-all duration-300 text-xs uppercase tracking-wider no-underline"
         >
-          <a
-            href="/bank-recruitment"
-            class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-blue-500/5 dark:bg-blue-500/10 border border-solid border-blue-500/20 text-text-main font-bold hover:bg-blue-500/10 transition-all duration-300 text-xs uppercase tracking-wider group no-underline"
-          >
-            <HiOutlineBriefcase
-              className="text-lg shrink-0 text-blue-500 group-hover:scale-110 transition-transform"
-            />
-            <span>Bank Recruitment</span>
-          </a>
-          <a
-            href="/mpsc"
-            class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-violet-500/5 dark:bg-violet-500/10 border border-solid border-violet-500/20 text-text-main font-bold hover:bg-violet-500/10 transition-all duration-300 text-xs uppercase tracking-wider group no-underline"
-          >
-            <HiOutlineAcademicCap
-              className="text-lg shrink-0 text-violet-500 group-hover:scale-110 transition-transform"
-            />
-            <span>MPSC</span>
-          </a>
-          <a
-            href="/mpsc-exam-details-information"
-            class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-indigo-500/5 dark:bg-indigo-500/10 border border-solid border-indigo-500/20 text-text-main font-bold hover:bg-indigo-500/10 transition-all duration-300 text-xs uppercase tracking-wider group no-underline"
-          >
-            <HiOutlineDocumentText
-              className="text-lg shrink-0 text-indigo-500 group-hover:scale-110 transition-transform"
-            />
-            <span>MPSC Exam Details</span>
-          </a>
-          <a
-            href="/calculator"
-            class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-emerald-500/5 dark:bg-emerald-500/10 border border-solid border-emerald-500/20 text-text-main font-bold hover:bg-emerald-500/10 transition-all duration-300 text-xs uppercase tracking-wider group no-underline"
-          >
-            <HiOutlineCalculator
-              className="text-lg shrink-0 text-emerald-500 group-hover:scale-110 transition-transform"
-            />
-            <span>Calculators & Tools</span>
-          </a>
-          <a
-            href="/mpsc-age-calculator-marathi"
-            class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-amber-500/5 dark:bg-amber-500/10 border border-solid border-amber-500/20 text-text-main font-bold hover:bg-amber-500/10 transition-all duration-300 text-xs uppercase tracking-wider group no-underline"
-          >
-            <HiOutlineClock
-              className="text-lg shrink-0 text-amber-500 group-hover:scale-110 transition-transform"
-            />
-            <span>MPSC Age Calculator (Marathi)</span>
-          </a>
-        </div>
-      </details>
-    </li>
-  </ul>
+          <HiOutlineBriefcase className="text-lg shrink-0 text-blue-500" />
+          <span>Current Recruitment</span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="/mega-recruitment"
+          class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-fuchsia-500/5 dark:bg-fuchsia-500/10 border border-solid border-fuchsia-500/20 text-text-main font-bold hover:bg-fuchsia-500/10 transition-all duration-300 text-xs uppercase tracking-wider no-underline"
+        >
+          <HiOutlineNewspaper className="text-lg shrink-0 text-fuchsia-500" />
+          <span>Mega Recruitment</span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="/mpsc"
+          class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-violet-500/5 dark:bg-violet-500/10 border border-solid border-violet-500/20 text-text-main font-bold hover:bg-violet-500/10 transition-all duration-300 text-xs uppercase tracking-wider no-underline"
+        >
+          <HiOutlineAcademicCap className="text-lg shrink-0 text-violet-500" />
+          <span>MPSC Exam </span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="/mpsc/mpsc-current-affairs"
+          class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-emerald-500/5 dark:bg-emerald-500/10 border border-solid border-emerald-500/20 text-text-main font-bold hover:bg-emerald-500/10 transition-all duration-300 text-xs uppercase tracking-wider no-underline"
+        >
+          <HiOutlineDocumentText
+            className="text-lg shrink-0 text-emerald-500"
+          />
+          <span>MPSC Current Affairs</span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="/result"
+          class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-emerald-500/5 dark:bg-emerald-500/10 border border-solid border-emerald-500/20 text-text-main font-bold hover:bg-emerald-500/10 transition-all duration-300 text-xs uppercase tracking-wider no-underline"
+        >
+          <HiOutlineQueueList className="text-lg shrink-0 text-emerald-500" />
+          <span>Result</span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="/admit-card"
+          class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-rose-500/5 dark:bg-rose-500/10 border border-solid border-rose-500/20 text-text-main font-bold hover:bg-rose-500/10 transition-all duration-300 text-xs uppercase tracking-wider no-underline"
+        >
+          <HiOutlineIdentification className="text-lg shrink-0 text-rose-500" />
+          <span>Admit Card</span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="/answer-key"
+          class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-indigo-500/5 dark:bg-indigo-500/10 border border-solid border-indigo-500/20 text-text-main font-bold hover:bg-indigo-500/10 transition-all duration-300 text-xs uppercase tracking-wider no-underline"
+        >
+          <HiOutlineKey className="text-lg shrink-0 text-indigo-500" />
+          <span>Answer Key</span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="/admission"
+          class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-cyan-500/5 dark:bg-cyan-500/10 border border-solid border-cyan-500/20 text-text-main font-bold hover:bg-cyan-500/10 transition-all duration-300 text-xs uppercase tracking-wider no-underline"
+        >
+          <HiOutlineAcademicCap className="text-lg shrink-0 text-cyan-500" />
+          <span>Admission</span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="/bank-recruitment"
+          class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-sky-500/5 dark:bg-sky-500/10 border border-solid border-sky-500/20 text-text-main font-bold hover:bg-sky-500/10 transition-all duration-300 text-xs uppercase tracking-wider no-underline"
+        >
+          <HiOutlineBriefcase className="text-lg shrink-0 text-sky-500" />
+          <span>Bank Recruitment</span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="/calculator"
+          class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-amber-500/5 dark:bg-amber-500/10 border border-solid border-amber-500/20 text-text-main font-bold hover:bg-amber-500/10 transition-all duration-300 text-xs uppercase tracking-wider no-underline"
+        >
+          <HiOutlineCalculator className="text-lg shrink-0 text-amber-500" />
+          <span>Calculators & Tools</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Mobile Menu Footer Section -->
+  <div
+    class="p-4 border-t border-border-card/40 text-[0.7rem] text-text-muted text-center shrink-0 bg-bg-surface/50"
+  >
+    <p class="m-0 font-medium">© 2026 MahaSandhi.in - All Rights Reserved</p>
+  </div>
 </div>
 
 <div
@@ -583,7 +663,9 @@ const searchData = [
         const filtered = searchData
           .filter((post) => {
             const titleMatch = post.title.toLowerCase().includes(query);
-            const kwMatch = post.keywords ? post.keywords.toLowerCase().includes(query) : false;
+            const kwMatch = post.keywords
+              ? post.keywords.toLowerCase().includes(query)
+              : false;
             return titleMatch || kwMatch;
           })
           .slice(0, 8);
@@ -603,7 +685,7 @@ const searchData = [
                 )}</span>
               </div>
               <span class="text-[0.55rem] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider shrink-0 bg-primary/10 text-primary border border-primary/20">
-                ${post.category || 'Page'}
+                ${post.category || "Page"}
               </span>
             </a>
           `,
@@ -668,11 +750,8 @@ const searchData = [
       });
     }
 
-    function toggleMenu() {
-      const isActive = menuToggle?.classList.contains("active");
-
-      if (isActive) {
-        // Close menu
+    function closeMenu() {
+      if (menuToggle?.classList.contains("active")) {
         menuToggle.classList.remove("active");
         mobileMenu?.classList.add("translate-x-full");
         mobileMenu?.classList.remove("translate-x-0");
@@ -686,6 +765,14 @@ const searchData = [
           spans[1].style.opacity = "1";
           spans[2].style.transform = "none";
         }
+      }
+    }
+
+    function toggleMenu() {
+      const isActive = menuToggle?.classList.contains("active");
+
+      if (isActive) {
+        closeMenu();
       } else {
         // Open menu
         menuToggle?.classList.add("active");
@@ -704,10 +791,21 @@ const searchData = [
       }
     }
 
+    // Always ensure menu is reset to closed state
+    closeMenu();
+
     if (menuToggle && !menuToggle.hasAttribute("data-initialized")) {
       menuToggle.addEventListener("click", toggleMenu);
       mobileOverlay?.addEventListener("click", toggleMenu);
       menuToggle.setAttribute("data-initialized", "true");
+
+      // Auto-close menu when any page link inside mobile menu is clicked
+      if (mobileMenu) {
+        const mobileLinks = mobileMenu.querySelectorAll("a");
+        mobileLinks.forEach((link) => {
+          link.addEventListener("click", closeMenu);
+        });
+      }
     }
   }
 
