@@ -3,78 +3,65 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Contact Us - Get in Touch for Queries & Feedback | MahaSandhi" description="Contact MahaSandhi team for queries, feedback, or collaboration about government jobs, exam updates, and recruitment notifications. Reach us at mahasandhi.in.">
-  <section class="py-8 pb-24">
-    <div class="text-center mb-16">
-      <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight text-text-main m-0">Get in <span class="gradient-text">Touch</span></h1>
-      <p class="text-text-secondary text-[1.1rem] max-w-[700px] mx-auto m-0 leading-relaxed">Have a question or want to collaborate? We'd love to hear from you. Send us a message and we'll get back to you as soon as possible.</p>
+  <section class="py-8 pb-24 max-w-2xl mx-auto">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight text-text-main m-0">Contact <span class="gradient-text">Us</span></h1>
+      <p class="text-text-secondary text-[1.05rem] max-w-[600px] mx-auto m-0 leading-relaxed">Have a question or feedback regarding job updates? Send us a message and we'll respond as soon as possible.</p>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-12 items-start">
-      <div class="bg-black/5 dark:bg-white/5 border border-border-card rounded-3xl p-6 md:p-10 transition-colors duration-300">
-        <form id="contact-form" class="flex flex-col gap-6">
-          <!-- Honeypot (hidden) -->
-          <div class="hidden" aria-hidden="true">
-            <label for="honeypot">Leave this field empty</label>
-            <input type="text" id="honeypot" name="honeypot" tabindex="-1" autocomplete="off" />
-          </div>
-
-          <div class="flex flex-col gap-2">
-            <label for="name" class="text-[0.9rem] font-medium text-text-main">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="John Doe" required class="bg-black/5 dark:bg-white/5 border border-border-card rounded-xl px-4 py-3 text-text-main font-sans outline-none focus:border-primary focus:bg-white/10 transition-colors" />
-            <span id="name-error" class="text-xs text-rose-500 mt-1 hidden"></span>
-          </div>
-
-          <div class="flex flex-col gap-2">
-            <label for="email" class="text-[0.9rem] font-medium text-text-main">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="john@example.com" required class="bg-black/5 dark:bg-white/5 border border-border-card rounded-xl px-4 py-3 text-text-main font-sans outline-none focus:border-primary focus:bg-white/10 transition-colors" />
-            <span id="email-error" class="text-xs text-rose-500 mt-1 hidden"></span>
-          </div>
-
-          <div class="flex flex-col gap-2">
-            <label for="subject" class="text-[0.9rem] font-medium text-text-main">Subject</label>
-            <select id="subject" name="subject" class="bg-black/5 dark:bg-white/5 border border-border-card rounded-xl px-4 py-3 text-text-main font-sans outline-none focus:border-primary focus:bg-white/10 transition-colors [&>option]:bg-bg-base">
-              <option value="general">General Inquiry</option>
-              <option value="collaboration">Collaboration</option>
-              <option value="feedback">Feedback</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-
-          <div class="flex flex-col gap-2">
-            <label for="message" class="text-[0.9rem] font-medium text-text-main">Your Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="How can we help you?" required class="bg-black/5 dark:bg-white/5 border border-border-card rounded-xl px-4 py-3 text-text-main font-sans outline-none focus:border-primary focus:bg-white/10 transition-colors resize-y"></textarea>
-            <span id="message-error" class="text-xs text-rose-500 mt-1 hidden"></span>
-          </div>
-
-          <!-- Robot Protection / Math Captcha -->
-          <div class="flex flex-col gap-2 bg-black/10 dark:bg-white/5 p-4 rounded-xl border border-border-card">
-            <label for="captcha" class="text-[0.9rem] font-medium text-text-main flex items-center gap-2">
-              🛡️ Safety Check: <span id="captcha-label" class="font-bold text-primary">Prove you are human</span>
-            </label>
-            <input type="number" id="captcha" name="captcha" placeholder="Enter your answer" required class="bg-black/5 dark:bg-white/5 border border-border-card rounded-xl px-4 py-3 text-text-main font-sans outline-none focus:border-primary focus:bg-white/10 transition-colors" />
-            <span id="captcha-error" class="text-xs text-rose-500 mt-1 hidden"></span>
-          </div>
-
-          <!-- Global Form Status Message -->
-          <div id="form-status" class="hidden p-4 rounded-xl text-sm font-semibold"></div>
-
-          <button type="submit" id="submit-btn" class="mt-4 py-4 px-8 bg-gradient-to-r from-primary to-secondary text-white border-none rounded-xl font-bold text-base cursor-pointer flex items-center justify-center gap-3 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/20 disabled:opacity-50 disabled:pointer-events-none">
-            <span id="btn-text">Send Message</span>
-            <svg id="btn-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-          </button>
-        </form>
-      </div>
-
-      <div class="flex flex-col gap-8">
-        <div class="bg-black/5 dark:bg-white/5 border border-border-card rounded-3xl p-8 transition-colors duration-300">
-          <h3 class="text-xl font-bold text-text-main mb-6">Follow Us</h3>
-          <div class="flex flex-wrap gap-4">
-            <a href="#" class="bg-black/10 dark:bg-white/5 px-4 py-2 rounded-lg no-underline text-text-main text-[0.9rem] transition-colors hover:bg-primary hover:text-white">Twitter</a>
-            <a href="#" class="bg-black/10 dark:bg-white/5 px-4 py-2 rounded-lg no-underline text-text-main text-[0.9rem] transition-colors hover:bg-primary hover:text-white">LinkedIn</a>
-            <a href="#" class="bg-black/10 dark:bg-white/5 px-4 py-2 rounded-lg no-underline text-text-main text-[0.9rem] transition-colors hover:bg-primary hover:text-white">GitHub</a>
-          </div>
+    <div class="bg-black/5 dark:bg-white/5 border border-border-card rounded-3xl p-6 md:p-10 transition-colors duration-300 shadow-xs">
+      <form id="contact-form" class="flex flex-col gap-6">
+        <!-- Honeypot (hidden) -->
+        <div class="hidden" aria-hidden="true">
+          <label for="honeypot">Leave this field empty</label>
+          <input type="text" id="honeypot" name="honeypot" tabindex="-1" autocomplete="off" />
         </div>
-      </div>
+
+        <div class="flex flex-col gap-2">
+          <label for="name" class="text-[0.9rem] font-medium text-text-main">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required class="bg-black/5 dark:bg-white/5 border border-border-card rounded-xl px-4 py-3 text-text-main font-sans outline-none focus:border-primary focus:bg-white/10 transition-colors" />
+          <span id="name-error" class="text-xs text-rose-500 mt-1 hidden"></span>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <label for="email" class="text-[0.9rem] font-medium text-text-main">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="name@example.com" required class="bg-black/5 dark:bg-white/5 border border-border-card rounded-xl px-4 py-3 text-text-main font-sans outline-none focus:border-primary focus:bg-white/10 transition-colors" />
+          <span id="email-error" class="text-xs text-rose-500 mt-1 hidden"></span>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <label for="subject" class="text-[0.9rem] font-medium text-text-main">Subject</label>
+          <select id="subject" name="subject" class="bg-black/5 dark:bg-white/5 border border-border-card rounded-xl px-4 py-3 text-text-main font-sans outline-none focus:border-primary focus:bg-white/10 transition-colors [&>option]:bg-bg-base">
+            <option value="general">General Inquiry</option>
+            <option value="collaboration">Collaboration</option>
+            <option value="feedback">Feedback</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <label for="message" class="text-[0.9rem] font-medium text-text-main">Your Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="How can we help you?" required class="bg-black/5 dark:bg-white/5 border border-border-card rounded-xl px-4 py-3 text-text-main font-sans outline-none focus:border-primary focus:bg-white/10 transition-colors resize-y"></textarea>
+          <span id="message-error" class="text-xs text-rose-500 mt-1 hidden"></span>
+        </div>
+
+        <!-- Robot Protection / Math Captcha -->
+        <div class="flex flex-col gap-2 bg-black/10 dark:bg-white/5 p-4 rounded-xl border border-border-card">
+          <label for="captcha" class="text-[0.9rem] font-medium text-text-main flex items-center gap-2">
+            🛡️ Safety Check: <span id="captcha-label" class="font-bold text-primary">Prove you are human</span>
+          </label>
+          <input type="number" id="captcha" name="captcha" placeholder="Enter your answer" required class="bg-black/5 dark:bg-white/5 border border-border-card rounded-xl px-4 py-3 text-text-main font-sans outline-none focus:border-primary focus:bg-white/10 transition-colors" />
+          <span id="captcha-error" class="text-xs text-rose-500 mt-1 hidden"></span>
+        </div>
+
+        <!-- Global Form Status Message -->
+        <div id="form-status" class="hidden p-4 rounded-xl text-sm font-semibold"></div>
+
+        <button type="submit" id="submit-btn" class="mt-2 py-4 px-8 bg-gradient-to-r from-primary to-secondary text-white border-none rounded-xl font-bold text-base cursor-pointer flex items-center justify-center gap-3 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/20 disabled:opacity-50 disabled:pointer-events-none">
+          <span id="btn-text">Send Message</span>
+          <svg id="btn-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+        </button>
+      </form>
     </div>
   </section>
 </Layout>
@@ -146,7 +133,7 @@ import Layout from "../layouts/Layout.astro";
 
       let hasErrors = false;
 
-      // 1. Honeypot check (immediate silent drop/success representation to confuse bots)
+      // 1. Honeypot check
       if (honeypotInput.value !== "") {
         console.warn("Honeypot triggered - bot submission blocked.");
         if (formStatus) {
