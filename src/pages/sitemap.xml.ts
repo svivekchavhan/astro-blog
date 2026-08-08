@@ -65,7 +65,7 @@ export async function GET() {
   const dynamicPages = Object.keys(postFiles)
     .filter((file) => {
       const filename = file.split('/').pop() || "";
-      return !nonArticleFiles.includes(filename) && filename !== "index.astro";
+      return !nonArticleFiles.includes(filename) && filename !== "index.astro" && !filename.includes("[");
     })
     .map(file => {
       const slug = file.replace('/src/pages/', '').replace('.astro', '');

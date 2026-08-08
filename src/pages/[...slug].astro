@@ -1,4 +1,6 @@
 ---
+export const prerender = false;
+
 import Layout from "../layouts/Layout.astro";
 import {
   HiOutlineHome,
@@ -7,6 +9,9 @@ import {
   HiOutlineAcademicCap,
   HiOutlineDocumentMagnifyingGlass,
 } from "react-icons/hi2";
+
+Astro.response.status = 404;
+Astro.response.statusText = "Not Found";
 
 const title = "404 - Page or Article Not Found | MahaSandhi";
 const description =
