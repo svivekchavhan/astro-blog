@@ -130,6 +130,17 @@ export const articlesRegistry: ArticleMeta[] = [
     lastDate: "Exam: July 2026"
   },
   {
+    titleEn: "MHT CET Counselling Registration 2026: Complete Document List & Registration Steps",
+    titleMr: "MHT CET प्रवेश प्रक्रिया २०२६: ऑनलाईन नोंदणी आणि कागदपत्रांची संपूर्ण यादी",
+    slug: "/admission/mht-cet-counselling-registration-documents-2026",
+    category: "Admission",
+    date: "July 05, 2026",
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=1200",
+    postName: "इंजिनिअरिंग व फार्मसी प्रवेश प्रक्रिया",
+    descriptionMr: "MHT CET समुपदेशन व कॅप राउंड प्रवेश नोंदणीसाठी आवश्यक असणाऱ्या कागदपत्रांची सविस्तर माहिती.",
+    lastDate: "Active Now"
+  },
+  {
     titleEn: "BSNL Bharti 2026: Recruitment for 100 Posts Announced",
     titleMr: "BSNL भरती २०२६: भारत संचार निगम लिमिटेड मध्ये १०० रिक्त जागांसाठी भरती",
     slug: "/bsnl-bharti-2026",
@@ -151,5 +162,49 @@ export const articlesRegistry: ArticleMeta[] = [
     postName: "अग्निवीर (सामान्य भरती परीक्षा)",
     descriptionMr: "भारतीय लष्कर अग्निवीर CEE परीक्षेचे हॉलतिकीट जारी करण्यात आले आहे.",
     lastDate: "Exam: June 2026"
+  },
+  {
+    titleEn: "Maharashtra ITI Admission 2026: Online Form, Trade List & Schedule",
+    titleMr: "महाराष्ट्र आयटीआय प्रवेश २०२६: ऑनलाईन अर्ज, ट्रेड यादी व प्रवेश वेळापत्रक",
+    slug: "/admission/iti-admission-2026-maharashtra",
+    category: "Admission",
+    date: "May 20, 2026",
+    image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=1200",
+    postName: "आयटीआय प्रथम वर्ष प्रवेश (ITI Trade Admission)",
+    descriptionMr: "महाराष्ट्र राज्य व्यवसाय शिक्षण व प्रशिक्षण संचालनालयातर्फे आयटीआय प्रवेश प्रक्रिया सुरू झाली आहे.",
+    lastDate: "20 June 2026"
+  },
+  {
+    titleEn: "10th Pass Government Jobs Maharashtra 2026: Latest Vacancies List",
+    titleMr: "१० वी पास सरकारी नोकऱ्या महाराष्ट्र २०२६: विविध विभागातील नवीन जाहिराती",
+    slug: "/10th-pass-government-jobs-maharashtra",
+    category: "Special Guide",
+    date: "May 15, 2026",
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=1200",
+    postName: "शिपाई, ड्रायव्हर, सुरक्षा रक्षक व इतर",
+    descriptionMr: "१० वी उत्तीर्ण उमेदवारांसाठी महाराष्ट्रातील सर्व सरकारी नोकऱ्यांची आणि पदभरतीची एकत्रित माहिती.",
+    lastDate: "Updated Daily"
+  },
+  {
+    titleEn: "MPSC WRD Mechanical Recruitment Rules 2026: Eligibility & Syllabus Update",
+    titleMr: "MPSC जलसंपदा विभाग (यांत्रिकी) भरती नियम २०२६: नवीन सेवाप्रवेश नियम जाहीर",
+    slug: "/mpsc/mpsc-wrd-recruitment-rules-2026-mechanical",
+    category: "MPSC Rules",
+    date: "May 10, 2026",
+    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1200",
+    postName: "सहाय्यक कार्यकारी अभियंता (यांत्रिकी)",
+    descriptionMr: "जलसंपदा विभागातील यांत्रिकी अभियंत्यांच्या पदभरती नियमावलीमध्ये सुधारणा करण्यात आली आहे.",
+    lastDate: "Gazette Notice"
+  },
+  {
+    titleEn: "MPSC Indian Polity Preamble Chapter: Exam Study Notes & MCQs",
+    titleMr: "MPSC राज्यशास्त्र: भारतीय संविधानाची प्रास्ताविका (Preamble) संपूर्ण अभ्यास नोट्स",
+    slug: "/mpsc/mpsc-polity-preamble",
+    category: "Study Material",
+    date: "April 28, 2026",
+    image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&q=80&w=1200",
+    postName: "MPSC स्पर्धा परीक्षा राज्यशास्त्र नोट्स",
+    descriptionMr: "MPSC पूर्व व मुख्य परीक्षेसाठी भारतीय संविधानाच्या उद्देशपत्रिकेचा सखोल अभ्यास व महत्त्वाचे प्रश्नोत्तर.",
+    lastDate: "Free Notes"
   }
 ];

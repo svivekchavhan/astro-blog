@@ -1,35 +1,83 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import BlogListItem from "../components/BlogListItem.astro";
+import { articlesRegistry } from "../constants/articles";
 
-const posts = [
-  { title: "लातूर जिल्हा मध्यवर्ती बँक भरती २०२६: ३७५ पदांची सुधारीत प्रतीक्षा यादी (Revised Waiting List) प्रसिद्ध", href: "/latur-dcc-bank-revised-waiting-list-2026", date: "August 03, 2026" },
-  { title: "महानिर्मिती भरती २०२६: मुख्य अभियंता (तांत्रिक व स्थापत्य) ७ जागांसाठी जाहिरात प्रसिद्ध", href: "/mahagenco-recruitment-2026", date: "July 29, 2026" },
-  { title: "लातूर जिल्हा मध्यवर्ती सहकारी बँक निकाल २०२६: ३७५ पदांपैकी २६३ उमेदवारांची Phase 1 निवड यादी प्रसिद्ध", href: "/latur-dcc-bank-result-2026", date: "July 28, 2026" },
-  { title: "MPSC गट-क संयुक्त परीक्षा २०२६: ५,७०७ जागांसाठी शुद्धिपत्रक व अर्ज मुदतवाढ जाहीर", href: "/mpsc-group-c-bharti-2026", date: "July 22, 2026" },
-  { title: "MHT CET Counselling 2026: Registration & Document Verification Guide", href: "/admission/mht-cet-counselling-registration-documents-2026", date: "July 05, 2026" },
-  { title: "Maharashtra ITI Admission 2026: Application Form, Dates, Merit List & Process", href: "/admission/iti-admission-2026-maharashtra", date: "May 20, 2026" },
-  { title: "Post Office GDS Result 2026: State-wise Merit List & Cutoff Marks", href: "/result/post-office-gds-result-2026", date: "May 25, 2026" }
-];
+const posts = articlesRegistry.map((art) => ({
+  title: art.titleMr || art.titleEn,
+  href: art.slug,
+  date: art.date,
+  category: art.category,
+}));
 ---
 
-<Layout title="Blog Articles & Guides - How-To Tutorials & Tips | MahaSandhi" description="Browse all articles, how-to guides, and tutorials on MahaSandhi. Find step-by-step guides on banking, finance, Aadhar card, Google Gemini AI, mutual funds, and more at mahasandhi.in.">
+<Layout 
+  title="Article Archive - All Job Articles & Guides | MahaSandhi" 
+  description="Browse all articles, job notifications, and exam guides on MahaSandhi. Find step-by-step updates and official information at mahasandhi.in."
+>
   <section class="py-8 pb-24">
-    <div class="mb-12 border-b border-border-card pb-8">
-      <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight text-text-main m-0">Article <span class="gradient-text">Archive</span></h1>
-      <p class="text-text-muted text-lg m-0">Discover our full collection of articles organized by date.</p>
+    <!-- Header -->
+    <div class="mb-8 border-b border-border-card pb-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+      <div>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-2 tracking-tight text-text-main m-0">Article <span class="gradient-text">Archive</span></h1>
+        <p class="text-text-muted text-sm sm:text-base m-0 font-medium">महाराष्ट्रातील सर्व नवीन भरती जाहिराती, निकाल व मार्गदर्शक लेखांची संपूर्ण यादी.</p>
+      </div>
+      <div class="shrink-0 bg-primary/10 text-primary border border-primary/20 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+        एकूण {posts.length} लेख (Total Articles)
+      </div>
     </div>
 
-    <div class="bg-bg-surface border border-border-card rounded-3xl transition-all duration-300 shadow-xl overflow-hidden px-3.5 sm:px-6 md:px-10">
-      <div id="blog-list" class="flex flex-col">
+    <!-- Articles Container -->
+    <div class="bg-bg-surface border border-border-card rounded-3xl transition-all duration-300 shadow-xl overflow-hidden p-2 sm:p-4">
+      <div id="blog-list" class="flex flex-col space-y-1">
         {
           posts.map((post, index) => (
-            <div>
+            <div 
+              class={`article-item transition-all duration-300 ${index >= 10 ? 'article-item-hidden hidden' : ''}`} 
+              data-index={index}
+            >
               <BlogListItem {...post} number={index + 1} />
             </div>
           ))
         }
       </div>
+
+      {posts.length > 10 && (
+        <div class="pt-6 pb-4 text-center border-t border-border-card/40 mt-4" id="load-more-container">
+          <button
+            id="load-more-btn"
+            type="button"
+            class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-secondary hover:shadow-[0_0_15px_rgba(56,189,248,0.4)] text-white text-xs sm:text-sm font-bold uppercase tracking-wider rounded-xl transition-all shadow-md cursor-pointer border-none"
+          >
+            <span>आणखी लेख पाहा (Load More Articles)</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transition-transform duration-300 group-hover:translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+        </div>
+      )}
     </div>
   </section>
 </Layout>
+
+<script>
+  const STEP = 10;
+  const loadMoreBtn = document.getElementById('load-more-btn');
+  const loadMoreContainer = document.getElementById('load-more-container');
+
+  if (loadMoreBtn) {
+    loadMoreBtn.addEventListener('click', () => {
+      const hiddenItems = Array.from(document.querySelectorAll('.article-item-hidden'));
+      const nextItems = hiddenItems.slice(0, STEP);
+
+      nextItems.forEach((item) => {
+        item.classList.remove('hidden', 'article-item-hidden');
+      });
+
+      const remainingHidden = document.querySelectorAll('.article-item-hidden');
+      if (remainingHidden.length === 0 && loadMoreContainer) {
+        loadMoreContainer.style.display = 'none';
+      }
+    });
+  }
+</script>
