@@ -23,7 +23,11 @@ export async function getStaticPaths() {
 const { district } = Astro.params;
 const { districtObj } = Astro.props;
 
-const currentDistrict = districtObj || getDistrictBySlug(district || "pune") || MAHARASHTRA_DISTRICTS[0];
+const currentDistrict = districtObj || (district ? getDistrictBySlug(district) : undefined);
+
+if (!currentDistrict) {
+  return Astro.redirect("/404");
+}
 
 // Match real articles from global registry that mention the district or region
 const matchedArticles = articlesRegistry.filter(art => {

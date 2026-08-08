@@ -1,51 +1,82 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { HiOutlineHome, HiOutlineBriefcase, HiOutlineExclamationTriangle } from "react-icons/hi2";
+import { 
+  HiOutlineHome, 
+  HiOutlineBriefcase, 
+  HiOutlineExclamationTriangle,
+  HiOutlineAcademicCap,
+  HiOutlineDocumentMagnifyingGlass
+} from "react-icons/hi2";
 
-const title = "404 - Page Not Found | MahaSandhi";
-const description = "Oops! The page you are looking for could not be found. Return to MahaSandhi homepage to browse the latest government jobs, results, and admit cards.";
+const title = "404 - Page or Article Not Found | MahaSandhi";
+const description = "४०४ - तुम्ही शोधत असलेले पान किंवा लेख सापडला नाही. The page or article you are looking for could not be found on MahaSandhi.";
 ---
 
 <Layout title={title} description={description}>
-  <section class="min-h-[60vh] py-12 flex items-center justify-center not-prose">
-    <div class="max-w-[500px] w-full text-center px-6">
+  <section class="min-h-[65vh] py-12 sm:py-16 flex items-center justify-center not-prose">
+    <div class="max-w-[600px] w-full text-center px-4 sm:px-6">
       
       <!-- Icon & Error Code -->
-      <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-rose-500/10 text-rose-500 mb-6 animate-bounce">
-        <HiOutlineExclamationTriangle className="text-4xl" />
+      <div class="inline-flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 rounded-3xl bg-rose-500/10 text-rose-500 mb-6 border border-rose-500/20 shadow-sm animate-pulse">
+        <HiOutlineExclamationTriangle className="text-4xl sm:text-5xl" />
       </div>
       
-      <h1 class="text-7xl md:text-8xl font-black tracking-tight text-text-main m-0 leading-none">
+      <div class="inline-block px-3 py-1 bg-rose-500/10 text-rose-600 dark:text-rose-400 font-extrabold text-xs uppercase tracking-wider rounded-full border border-rose-500/20 mb-3">
+        404 ERROR • पान किंवा लेख सापडला नाही
+      </div>
+
+      <h1 class="text-6xl sm:text-7xl md:text-8xl font-black tracking-tight text-text-main m-0 leading-none">
         <span class="gradient-text">404</span>
       </h1>
       
-      <h2 class="text-xl md:text-2xl font-bold text-text-main mt-4 mb-3">
-        Page Not Found
+      <h2 class="text-xl sm:text-2xl font-bold text-text-main mt-4 mb-2">
+        Page or Article Not Found
       </h2>
+
+      <p class="text-text-muted text-xs sm:text-sm font-semibold mb-4 text-primary">
+        ४०४ - तुम्ही शोधत असलेले पान किंवा लेख उपलब्ध नाही.
+      </p>
       
-      <p class="text-text-secondary text-sm md:text-base leading-relaxed m-0 mb-8">
-        The link you followed may be broken, or the page has been moved or deleted. Please use the navigation below to find what you are looking for.
+      <p class="text-text-secondary text-sm md:text-base leading-relaxed m-0 mb-8 max-w-lg mx-auto">
+        The article or page you followed may have been removed, renamed, or is temporarily unavailable. Please check the URL or return to the main pages below.
       </p>
 
-      <!-- Action Buttons -->
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <!-- Action Buttons Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 max-w-md mx-auto">
         <a 
           href="/" 
-          class="w-full sm:w-auto btn-primary flex items-center justify-center gap-2 text-sm px-6 py-3 no-underline font-bold"
+          class="btn-primary flex items-center justify-center gap-2 text-sm py-3 px-5 no-underline font-bold rounded-xl shadow-xs"
         >
           <HiOutlineHome className="text-lg shrink-0" />
-          <span>Back to Home</span>
+          <span>मुख्यपृष्ठ (Home)</span>
         </a>
         
         <a 
           href="/current-recruitment" 
-          class="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3 border border-border-card text-text-main hover:text-primary hover:border-primary rounded-full text-sm font-bold transition-all duration-300 bg-bg-surface/50 no-underline"
+          class="flex items-center justify-center gap-2 py-3 px-5 border border-border-card text-text-main hover:text-primary hover:border-primary rounded-xl text-sm font-bold transition-all duration-300 bg-bg-surface hover:bg-primary/5 no-underline shadow-xs"
         >
-          <HiOutlineBriefcase className="text-lg shrink-0" />
-          <span>View Current Recruitment</span>
+          <HiOutlineBriefcase className="text-lg shrink-0 text-primary" />
+          <span>चालू भरती (Recruitment)</span>
+        </a>
+
+        <a 
+          href="/mpsc" 
+          class="flex items-center justify-center gap-2 py-3 px-5 border border-border-card text-text-main hover:text-primary hover:border-primary rounded-xl text-sm font-bold transition-all duration-300 bg-bg-surface hover:bg-primary/5 no-underline shadow-xs"
+        >
+          <HiOutlineAcademicCap className="text-lg shrink-0 text-primary" />
+          <span>MPSC विभाग</span>
+        </a>
+
+        <a 
+          href="/blog" 
+          class="flex items-center justify-center gap-2 py-3 px-5 border border-border-card text-text-main hover:text-primary hover:border-primary rounded-xl text-sm font-bold transition-all duration-300 bg-bg-surface hover:bg-primary/5 no-underline shadow-xs"
+        >
+          <HiOutlineDocumentMagnifyingGlass className="text-lg shrink-0 text-primary" />
+          <span>सर्व लेख (All Articles)</span>
         </a>
       </div>
 
     </div>
   </section>
 </Layout>
+
