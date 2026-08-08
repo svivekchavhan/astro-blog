@@ -4,7 +4,6 @@ export const prerender = false;
 import Layout from "../layouts/Layout.astro";
 import {
   HiOutlineHome,
-  HiOutlineBriefcase,
   HiOutlineExclamationTriangle,
   HiOutlineAcademicCap,
   HiOutlineDocumentMagnifyingGlass,
@@ -23,17 +22,21 @@ const description =
     class="min-h-[65vh] py-12 sm:py-16 flex items-center justify-center not-prose"
   >
     <div class="max-w-[600px] w-full text-center px-4 sm:px-6">
-      <!-- Icon & Error Code -->
-      <div
-        class="inline-flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 rounded-3xl bg-rose-500/10 text-rose-500 mb-6 border border-rose-500/20 shadow-sm animate-pulse"
-      >
-        <HiOutlineExclamationTriangle className="text-4xl sm:text-5xl" />
-      </div>
+      <!-- Icon & Error Code Flex Column -->
+      <div class="flex flex-col items-center justify-center gap-4 mb-6">
+        <div
+          class="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl bg-rose-500/10 text-rose-500 border border-rose-500/20 shadow-sm animate-pulse flex items-center justify-center"
+        >
+          <HiOutlineExclamationTriangle className="text-4xl sm:text-5xl" />
+        </div>
 
-      <div
-        class="inline-block px-3 py-1 bg-rose-500/10 text-rose-600 dark:text-rose-400 font-extrabold text-xs uppercase tracking-wider rounded-full border border-rose-500/20 mb-3"
-      >
-        404 ERROR • पान किंवा लेख सापडला नाही
+        <div
+          class="inline-flex items-center gap-2 px-4 py-1.5 bg-rose-500/10 text-rose-600 dark:text-rose-400 font-extrabold text-xs uppercase tracking-wider rounded-full border border-rose-500/20"
+        >
+          <span>404 ERROR</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-rose-500/50"></span>
+          <span>पान किंवा लेख सापडला नाही</span>
+        </div>
       </div>
 
       <h1
