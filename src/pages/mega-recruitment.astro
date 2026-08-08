@@ -22,6 +22,24 @@ const canonicalURL = "https://mahasandhi.in/mega-recruitment";
 // Realistic mega recruitment campaigns for 2026 based on the actual article base
 const recruitments = [
   {
+    id: "mumbai-police-constable-final-selection-list-2026",
+    title: "मुंबई पोलीस शिपाई भरती २०२४-२५: ३,५२१ पदांची अंतिम निवड यादी व प्रतीक्षा यादी कट-ऑफसह प्रसिद्ध",
+    organisation: "बृहन्मुंबई पोलीस आयुक्त कार्यालय (Brihanmumbai Police)",
+    category: "maharashtra",
+    vacancies: "3,521 Posts",
+    qualification: "12th Pass",
+    status: "declared",
+    lastDate: "Result Out",
+    ageLimit: "18 to 28 years (Reserved up to 33 years)",
+    appFee: "Open: ₹450 | Reserved: ₹350",
+    salary: "Pay Matrix Level S-6 (Rs 21,700 - 69,100) + Allowances",
+    syllabus: "Physical Test (50 Marks) & Written Examination (100 Marks) Completed.",
+    applyLink: "/mumbai-police-constable-final-selection-list-2026",
+    notifLink: "/mumbai-police-constable-final-selection-list-2026",
+    summaryMr: "बृहन्मुंबई पोलीस आयुक्त कार्यालयाने (भरती कक्ष) ३,५२१ पोलीस शिपाई पदांची अंतिम निवड यादी व प्रतीक्षा यादी कट-ऑफ गुणांसह अधिकृत वेबसाईटवर जाहीर केली आहे.",
+    summaryEn: "Brihanmumbai Police Commissionerate has officially declared the Final Selection List and Waiting List with Cut-Off for 3,521 Police Constable vacancies."
+  },
+  {
     id: "sbi-clerk-recruitment-2026",
     title: "भारतीय स्टेट बँकेत (SBI) लिपिक (Junior Associate) १५३८ जागांसाठी भरती २०२६",
     organisation: "State Bank of India (SBI)",
@@ -63,7 +81,7 @@ const recruitments = [
 
 // Filter recruitments: Only show active campaigns (status: apply-now) with >= 1000 vacancies
 const filteredRecruitments = recruitments.filter(job => {
-  if (job.status !== "apply-now") return false;
+  if (job.status !== "apply-now" && job.status !== "declared") return false;
   const count = parseInt(job.vacancies.replace(/[^0-9]/g, ''), 10) || 0;
   return count >= 1000;
 });
@@ -170,6 +188,13 @@ const activeCount = filteredRecruitments.length;
                     <span class="text-[0.55rem] bg-emerald-500/10 text-emerald-500 px-2 py-0.5 rounded-full font-bold uppercase tracking-wide border border-emerald-500/20 flex items-center gap-1 whitespace-nowrap">
                       <span class="w-1.5 h-1.5 bg-emerald-500 rounded-full shadow-[0_0_6px] shadow-emerald-500 animate-pulse inline-block"></span>
                       Apply Active
+                    </span>
+                  )}
+
+                  {job.status === "declared" && (
+                    <span class="text-[0.55rem] bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 px-2 py-0.5 rounded-full font-bold uppercase tracking-wide border border-emerald-500/20 flex items-center gap-1 whitespace-nowrap">
+                      <span class="w-1.5 h-1.5 bg-emerald-500 rounded-full shadow-[0_0_6px] shadow-emerald-500 animate-pulse inline-block"></span>
+                      Result Declared
                     </span>
                   )}
 

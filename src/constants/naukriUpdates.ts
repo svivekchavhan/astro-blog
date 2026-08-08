@@ -11,6 +11,15 @@ export interface NaukriUpdate {
 
 export const naukriUpdates: NaukriUpdate[] = [
   {
+    titleEn: "Mumbai Police Constable Bharti 2024-25: Final Selection List Out for 3,521 Vacancies",
+    titleHi: "मुंबई पोलीस शिपाई भरती २०२४-२५: ३,५२१ पदांची अंतिम निवड यादी कट-ऑफसह जाहीर",
+    date: "August 07, 2026",
+    badge: "Result Out",
+    badgeType: "important",
+    link: "/mumbai-police-constable-final-selection-list-2026",
+    description: "Brihanmumbai Police Commissionerate has officially published the Final Selection List & Waiting List with Cut-Off for 3,521 Police Constable posts."
+  },
+  {
     titleEn: "SBI Clerk Recruitment 2026: Apply Online for 1,538 Junior Associate Vacancies",
     titleHi: "भारतीय स्टेट बँकेत (SBI) लिपिक १५३८ जागांसाठी भरती २०२६: ऑनलाईन अर्ज सुरू",
     date: "August 08, 2026",

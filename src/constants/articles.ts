@@ -13,6 +13,18 @@ export interface ArticleMeta {
 
 export const articlesRegistry: ArticleMeta[] = [
   {
+    titleEn: "Mumbai Police Constable Bharti 2024-25: Final Selection & Waiting List Released for 3,521 Posts",
+    titleMr: "मुंबई पोलीस शिपाई भरती २०२४-२५: ३,५२१ पदांची अंतिम निवड यादी (Final Selection List) व प्रतीक्षा यादी कट-ऑफसह प्रसिद्ध",
+    slug: "/mumbai-police-constable-final-selection-list-2026",
+    category: "Result",
+    date: "August 07, 2026",
+    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1200",
+    postName: "पोलीस शिपाई (3,521 Posts)",
+    descriptionMr: "बृहन्मुंबई पोलीस आयुक्त कार्यालयाने ३,५२१ पोलीस शिपाई पदांची अंतिम निवड यादी व प्रतीक्षा यादी कट-ऑफसह जाहीर केली आहे.",
+    vacancies: "3,521",
+    lastDate: "Result Out"
+  },
+  {
     titleEn: "SBI Clerk Recruitment 2026: Apply Online for 1,538 Junior Associate Vacancies",
     titleMr: "भारतीय स्टेट बँकेत (SBI) लिपिक १५३८ जागांसाठी भरती २०२६: ऑनलाईन अर्ज करा",
     slug: "/sbi-clerk-recruitment-2026",

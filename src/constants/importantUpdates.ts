@@ -9,6 +9,15 @@ export interface ImportantUpdate {
 
 export const importantUpdates: ImportantUpdate[] = [
   {
+    id: "mumbai-police-final-selection-list-2026",
+    title:
+      "🔥 मुंबई पोलीस शिपाई भरती २०२४-२५: ३,५२१ पदांची अंतिम निवड यादी (Final Selection List) व प्रतीक्षा यादी जाहीर",
+    link: "/mumbai-police-constable-final-selection-list-2026",
+    date: "August 07, 2026",
+    expiry: "2026-09-15T00:00:00.000Z",
+    show: true,
+  },
+  {
     id: "mpsc-group-c-pesa-update-2026",
     title:
       "MPSC गट-क परीक्षा: पेसा (PESA) रहिवासी व माजी सैनिक आरक्षणाबाबत परिपत्रक जारी",
