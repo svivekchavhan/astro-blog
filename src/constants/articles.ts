@@ -13,6 +13,18 @@ export interface ArticleMeta {
 
 export const articlesRegistry: ArticleMeta[] = [
   {
+    titleEn: "SBI Clerk Recruitment 2026: Apply Online for 1,538 Junior Associate Vacancies",
+    titleMr: "भारतीय स्टेट बँकेत (SBI) लिपिक १५३८ जागांसाठी भरती २०२६: ऑनलाईन अर्ज करा",
+    slug: "/sbi-clerk-recruitment-2026",
+    category: "Bank Job",
+    date: "August 08, 2026",
+    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200",
+    postName: "लिपिक (Junior Associate)",
+    descriptionMr: "भारतीय स्टेट बँकेमध्ये (SBI) लिपिक (Junior Associate) पदांच्या १,५३८ जागांसाठी ऑनलाईन भरती जाहीर.",
+    vacancies: "1,538",
+    lastDate: "Apply Active"
+  },
+  {
     titleEn: "PDCC Bank Peon Bharti 2026: Apply Online for 289 Vacancies (12th Pass Eligible)",
     titleMr: "पुणे जिल्हा मध्यवर्ती सहकारी बँक भरती २०२६: शिपाई २८९ पदांची सरळसेवा भरती जाहिरात प्रसिद्ध",
     slug: "/pdcc-bank-peon-bharti-2026",

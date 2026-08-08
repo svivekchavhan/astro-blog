@@ -1,0 +1,763 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { translateMarathi } from "../utils/wordLibrary";
+import {
+  HiOutlineCalendarDays,
+  HiOutlineCursorArrowRays,
+  HiOutlineDocumentText,
+  HiOutlineCurrencyRupee,
+  HiOutlineMapPin,
+  HiOutlineBuildingOffice,
+  HiOutlineAcademicCap,
+  HiOutlineBriefcase,
+  HiOutlineCheckCircle,
+} from "react-icons/hi2";
+
+const title =
+  "भारतीय स्टेट बँकेत (SBI) लिपिक १५३८ जागांसाठी भरती २०२६: ऑनलाईन अर्ज करा";
+const description =
+  "SBI Clerk Recruitment 2026: State Bank of India (SBI) invites online applications for 1,538 Junior Associate (Clerk) posts. Graduation in any discipline eligible. Age limit 20 to 28 years, Prelims exam in Sep 2026. Direct apply link: https://ibpsreg.ibps.in/sbijasrdjl26/";
+const canonicalURL = "https://mahasandhi.in/sbi-clerk-recruitment-2026";
+const date = "August 08, 2026";
+const category = "Bank Job";
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonicalURL={canonicalURL}
+  image="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200"
+  article={true}
+  customBreadcrumbs={[
+    { name: "Current Recruitment", url: "/current-recruitment" },
+    { name: "SBI Clerk Recruitment 2026" },
+  ]}
+>
+  <article class="py-8">
+    <!-- Header -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-6">
+        <span
+          class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"
+          >{category}
+        </span>
+        <span class="text-text-muted text-sm">• {date}</span>
+      </div>
+      <h1
+        class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-text-main mb-6 leading-[1.25]"
+      >
+        {title}
+      </h1>
+      <p
+        class="text-text-muted text-lg leading-relaxed border-l-4 border-primary pl-6 py-2 italic"
+      >
+        {description}
+      </p>
+    </div>
+
+    <!-- Quick Language Navigation Links -->
+    <div class="flex gap-4 mb-8">
+      <a
+        href="#marathi-version"
+        class="text-primary font-bold text-sm hover:underline"
+        >↓ मराठी आवृत्ती (Marathi Version)</a
+      >
+      <span class="text-text-muted">|</span>
+      <a
+        href="#english-version"
+        class="text-primary font-bold text-sm hover:underline"
+        >↓ English Version</a
+      >
+    </div>
+
+    <!-- ================= MARATHI VERSION ================= -->
+    <div id="marathi-version">
+      <div class="space-y-6 text-text-main leading-relaxed">
+        <h2 id="main-keyword-mr" class="text-2xl font-bold mt-2">
+          भारतीय स्टेट बँक (SBI) लिपिक (Junior Associate) पदभरती जाहिरात २०२६
+        </h2>
+
+        <!-- Introduction -->
+        <div class="mb-6">
+          <p>
+            <strong>SBI Clerk Bharti 2026:</strong> भारतीय स्टेट बँकेमध्ये (State
+            Bank of India - SBI) <strong
+              >लिपिक (Junior Associate - Customer Support & Sales)</strong
+            > या पदांच्या एकूण <strong>१,५३८ जागांसाठी</strong> ऑनलाईन भरती जाहीर
+            झाली आहे. कोणत्याही शाखेतील पदवीधर उमेदवार या भरतीसाठी अर्ज करण्यास पात्र
+            आहेत.
+          </p>
+          <p>
+            पात्र उमेदवारांसाठी IBPS पोर्टलमार्फत ऑनलाईन अर्ज स्वीकारले जात
+            आहेत. पूर्व परीक्षा <strong>सप्टेंबर २०२६</strong> आणि मुख्य परीक्षा <strong
+              >ऑक्टोबर/नोव्हेंबर २०२६</strong
+            > मध्ये आयोजित केली जाईल.
+          </p>
+          <hr class="border-border-card my-6" />
+        </div>
+
+        <!-- Key Information Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
+          <div
+            class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3"
+          >
+            <HiOutlineBuildingOffice
+              className="text-primary text-2xl shrink-0 mt-0.5"
+            />
+            <div>
+              <span
+                class="text-xs text-text-muted block uppercase font-bold tracking-wider"
+                >बँकेचे नाव</span
+              >
+              <span class="text-text-main font-semibold text-sm"
+                >भारतीय स्टेट बँक (SBI)</span
+              >
+            </div>
+          </div>
+          <div
+            class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3"
+          >
+            <HiOutlineMapPin
+              className="text-primary text-2xl shrink-0 mt-0.5"
+            />
+            <div>
+              <span
+                class="text-xs text-text-muted block uppercase font-bold tracking-wider"
+                >नोकरीचे ठिकाण</span
+              >
+              <span class="text-text-main font-semibold text-sm"
+                >संपूर्ण भारत (All India)</span
+              >
+            </div>
+          </div>
+          <div
+            class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3"
+          >
+            <HiOutlineCurrencyRupee
+              className="text-primary text-2xl shrink-0 mt-0.5"
+            />
+            <div>
+              <span
+                class="text-xs text-text-muted block uppercase font-bold tracking-wider"
+                >अर्ज शुल्क</span
+              >
+              <span class="text-text-main font-semibold text-sm"
+                >General/OBC/EWS: ₹७५०/- [SC/ST/PWD: फी नाही]</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Vacancy Details Table -->
+        <h2
+          id="details"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          पदसंख्या, पात्रता व वयोमर्यादा तपशील (Vacancy Details & Eligibility)
+        </h2>
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="bg-primary/10">
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >पदाचे नाव (Post Name)</th
+                >
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main text-center"
+                  >एकूण पदे (Vacancies)</th
+                >
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >आवश्यक शैक्षणिक अर्हता (Qualification)</th
+                >
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >वयोमर्यादा (दि. ०१ एप्रिल २०२६ रोजी)</th
+                >
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td
+                  class="p-3 border border-border-card font-bold text-primary text-base"
+                  >लिपिक (Junior Associate - Customer Support & Sales)</td
+                >
+                <td
+                  class="p-3 border border-border-card font-black text-rose-500 text-center text-lg"
+                  >१,५३८</td
+                >
+                <td class="p-3 border border-border-card text-text-muted">
+                  • मान्यताप्राप्त विद्यापीठाची <strong
+                    >कोणत्याही शाखेतील पदवी (Graduation in any discipline)</strong
+                  > उत्तीर्ण.<br />
+                  • पदवीच्या अंतिम वर्षात शिकणारे उमेदवार देखील पात्र अट शिथिलतेसह
+                  अर्ज करू शकतात.
+                </td>
+                <td class="p-3 border border-border-card text-text-muted">
+                  • ०१ एप्रिल २०२६ रोजी वय <strong>२० ते २८ वर्षे</strong>.<br
+                  />
+                  • <strong>वयातील सूट:</strong> SC/ST उमेदवारांना ०५ वर्षे सूट (२०
+                  ते ३३ वर्षे), OBC उमेदवारांना ०३ वर्षे सूट (२० ते ३१ वर्षे). PWD
+                  उमेदवारांना १०-१५ वर्षे सूट.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Examination Dates & Fee Details -->
+        <h2
+          id="fee-dates"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          परीक्षा वेळापत्रक, महत्त्वाच्या तारखा व अर्ज शुल्क (Schedule &
+          Application Fee)
+        </h2>
+        <div
+          class="bg-bg-surface border border-border-card p-5 rounded-2xl text-sm space-y-3 mb-6"
+        >
+          <p class="m-0 text-text-main">
+            💳 <strong>अर्ज शुल्क (Application Fee):</strong>
+          </p>
+          <ul class="list-disc pl-6 space-y-1 text-text-muted">
+            <li>
+              <strong>General / OBC / EWS:</strong> रु. ७५०/- (Non-refundable)
+            </li>
+            <li>
+              <strong>SC / ST / PWD / ExSM:</strong> परीक्षा शुल्क नाही (फी माफ)
+            </li>
+            <li>
+              <strong>ऑनलाईन शुल्क भरण्याची मुदत:</strong> ०७ ऑगस्ट ते २७ ऑगस्ट २०२६
+            </li>
+          </ul>
+        </div>
+
+        <!-- Important Dates & Links Table -->
+        <h2
+          id="important-dates"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          {
+            translateMarathi(
+              "महत्त्वाच्या तारखा आणि लिंक्स (Important Dates & Links)",
+            )
+          }
+        </h2>
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-primary/10">
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >तपशील (Event)</th
+                >
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >तारीख / दुवा (Date / Action)</th
+                >
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >ऑनलाईन अर्ज नोंदणी सुरू (Commencement of Application)</td
+                >
+                <td
+                  class="p-3 border border-border-card text-emerald-600 dark:text-emerald-400 font-bold"
+                  >०७ ऑगस्ट २०२६ (07/08/2026)</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >ऑनलाईन अर्ज करण्याची अंतिम तारीख (Closure of Application)</td
+                >
+                <td
+                  class="p-3 border border-border-card text-rose-500 font-bold whitespace-nowrap"
+                >
+                  <span class="flex items-center gap-1.5"
+                    ><HiOutlineCalendarDays
+                      className="text-rose-500 text-lg shrink-0"
+                    /> २७ ऑगस्ट २०२६ (27/08/2026)</span
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >ऑनलाईन परीक्षा शुल्क भरण्याची मुदत (Online Fee Payment)</td
+                >
+                <td
+                  class="p-3 border border-border-card text-text-main font-bold"
+                  >०७ ते २७ ऑगस्ट २०२६ (07/08/2026 to 27/08/2026)</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >अर्जात दुरुस्ती करण्याची अंतिम तारीख (Closure for Editing)</td
+                >
+                <td
+                  class="p-3 border border-border-card text-text-main font-bold"
+                  >२७ ऑगस्ट २०२६ (27/08/2026)</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >अर्जाची प्रिंट काढण्याची अंतिम तारीख (Last Date for Printing)</td
+                >
+                <td
+                  class="p-3 border border-border-card text-text-main font-bold"
+                  >११ सप्टेंबर २०२६ (11/09/2026)</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >पूर्व परीक्षा (Prelims Exam Date)</td
+                >
+                <td
+                  class="p-3 border border-border-card text-text-main font-bold"
+                  >सप्टेंबर २०२६ (September 2026)</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >मुख्य परीक्षा (Mains Exam Date)</td
+                >
+                <td class="p-3 border border-border-card text-primary font-bold"
+                  >ऑक्टोबर / नोव्हेंबर २०२६ (Oct / Nov 2026)</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >ऑनलाईन अर्ज करण्याची अधिकृत लिंक (Online Application Portal)</td
+                >
+                <td class="p-3 border border-border-card">
+                  <a
+                    href="https://ibpsreg.ibps.in/sbijasrdjl26/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-primary hover:bg-primary/90 text-white text-xs font-bold uppercase tracking-wider rounded-lg transition-colors border-none w-full sm:w-auto shadow-xs"
+                  >
+                    <HiOutlineCursorArrowRays className="text-base shrink-0" /> SBI
+                    Clerk Online Apply Link
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >अधिकृत संकेतस्थळ (Official Website)</td
+                >
+                <td class="p-3 border border-border-card">
+                  <a
+                    href="https://sbi.co.in/web/careers"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-amber-500/10 hover:bg-amber-500/20 text-amber-600 dark:text-amber-400 text-xs font-bold uppercase tracking-wider rounded-lg transition-colors border border-amber-500/30 w-full sm:w-auto"
+                  >
+                    <HiOutlineDocumentText className="text-base shrink-0" /> sbi.co.in/careers
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- FAQ Section -->
+        <h2
+          id="faq"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          वारंवार विचारले जाणारे प्रश्न (FAQ)
+        </h2>
+        <div class="space-y-4 mt-3 mb-8">
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+            <h3 class="text-base font-bold text-text-main mb-2">
+              प्रश्न १: SBI लिपिक भरती २०२६ साठी ऑनलाईन अर्ज करण्याची शेवटची
+              तारीख कोणती आहे?
+            </h3>
+            <p class="text-text-muted text-xs m-0">
+              उत्तर: ऑनलाईन नोंदणी आणि अर्ज सादर करण्याची शेवटची तारीख २७ ऑगस्ट
+              २०२६ आहे.
+            </p>
+          </div>
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+            <h3 class="text-base font-bold text-text-main mb-2">
+              प्रश्न २: SBI क्लर्क अर्ज प्रिंट करण्याची शेवटची तारीख कोणती आहे?
+            </h3>
+            <p class="text-text-muted text-xs m-0">
+              उत्तर: भरलेल्या अर्जाची प्रिंट काढून घेण्याची अंतिम तारीख ११
+              सप्टेंबर २०२६ आहे.
+            </p>
+          </div>
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+            <h3 class="text-base font-bold text-text-main mb-2">
+              प्रश्न ३: पूर्व परीक्षा आणि मुख्य परीक्षा कधी होणार आहे?
+            </h3>
+            <p class="text-text-muted text-xs m-0">
+              उत्तर: पूर्व परीक्षा सप्टेंबर २०२६ मध्ये तर मुख्य परीक्षा
+              ऑक्टोबर/नोव्हेंबर २०२६ मध्ये आयोजित केली जाईल.
+            </p>
+          </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div
+          class="bg-primary/5 border border-primary/20 p-8 rounded-3xl text-center my-8"
+        >
+          <h2
+            class="text-xl font-black text-text-main mb-4 border-none p-0 mt-0"
+          >
+            SBI बँक भरती अपडेट्ससाठी जॉईन करा!
+          </h2>
+          <p class="text-text-muted mb-6 text-sm">
+            स्टेट बँक ऑफ इंडिया व सर्व सरकारी बँकिंग अपडेट्स थेट मोबाईलवर
+            मिळवण्यासाठी सामील व्हा.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a
+              href="https://chat.whatsapp.com"
+              class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-600 text-white text-sm font-bold uppercase tracking-wider rounded-xl transition-colors shadow-sm"
+            >
+              WhatsApp Group
+            </a>
+            <a
+              href="https://t.me"
+              class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white text-sm font-bold uppercase tracking-wider rounded-xl transition-colors shadow-sm"
+            >
+              Telegram Channel
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= LANGUAGE SEPARATOR ================= -->
+    <div
+      class="my-16 border-t-2 border-dashed border-border-card flex items-center justify-center relative"
+    >
+      <span
+        class="absolute bg-bg-base px-8 py-2 text-base sm:text-lg font-extrabold uppercase tracking-widest text-primary border border-border-card rounded-full shadow-md"
+      >
+        English Version
+      </span>
+    </div>
+
+    <!-- ================= ENGLISH VERSION ================= -->
+    <div id="english-version" class="opacity-95">
+      <div class="space-y-6 text-text-main leading-relaxed">
+        <h2 id="main-keyword-en" class="text-2xl font-bold mt-2">
+          State Bank of India (SBI) Junior Associate (Clerk) Recruitment 2026
+        </h2>
+
+        <!-- Introduction -->
+        <div class="mb-6">
+          <p>
+            <strong>SBI Clerk Recruitment 2026:</strong> State Bank of India (SBI)
+            has released the recruitment notification for <strong
+              >1,538 posts of Junior Associate (Customer Support & Sales)</strong
+            >. Graduates in any discipline are eligible to apply for these
+            vacancies.
+          </p>
+          <p>
+            Online applications are open on the official IBPS application portal
+            from <strong>07/08/2026 to 27/08/2026</strong>. The preliminary
+            examination is scheduled for <strong>September 2026</strong> and the main
+            examination in <strong>October / November 2026</strong>.
+          </p>
+          <hr class="border-border-card my-6" />
+        </div>
+
+        <!-- Key Information Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
+          <div
+            class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3"
+          >
+            <HiOutlineDocumentText
+              className="text-primary text-2xl shrink-0 mt-0.5"
+            />
+            <div>
+              <span
+                class="text-xs text-text-muted block uppercase font-bold tracking-wider"
+                >Organization</span
+              >
+              <span class="text-text-main font-semibold text-sm"
+                >State Bank of India (SBI)</span
+              >
+            </div>
+          </div>
+          <div
+            class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3"
+          >
+            <HiOutlineMapPin
+              className="text-primary text-2xl shrink-0 mt-0.5"
+            />
+            <div>
+              <span
+                class="text-xs text-text-muted block uppercase font-bold tracking-wider"
+                >Job Location</span
+              >
+              <span class="text-text-main font-semibold text-sm">All India</span
+              >
+            </div>
+          </div>
+          <div
+            class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3"
+          >
+            <HiOutlineBriefcase
+              className="text-primary text-2xl shrink-0 mt-0.5"
+            />
+            <div>
+              <span
+                class="text-xs text-text-muted block uppercase font-bold tracking-wider"
+                >Total Vacancies</span
+              >
+              <span class="text-text-main font-semibold text-sm"
+                >1,538 Posts</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Vacancy Breakdown Table -->
+        <h2
+          id="en-details"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          Eligibility & Age Limit
+        </h2>
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="bg-primary/10">
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >Post Name</th
+                >
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main text-center"
+                  >Vacancies</th
+                >
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >Qualification</th
+                >
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >Age Limit (As of 01.04.2026)</th
+                >
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-border-card font-bold text-primary"
+                  >Junior Associate (Clerk)</td
+                >
+                <td
+                  class="p-3 border border-border-card font-extrabold text-rose-500 text-center text-lg"
+                  >1,538</td
+                >
+                <td class="p-3 border border-border-card text-text-muted"
+                  >• Graduation in any discipline from a recognized University.</td
+                >
+                <td class="p-3 border border-border-card text-text-muted"
+                  >• <strong>20 to 28 years</strong> as of 01.04.2026.<br />
+                  • SC/ST: +5 Years (20 to 33 yrs), OBC: +3 Years (20 to 31 yrs).</td
+                >
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Fee & Application Link Table -->
+        <h2
+          id="en-important-dates"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          Application Schedule & Important Direct Links
+        </h2>
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-primary/10">
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >Event / Category</th
+                >
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >Details / Direct Action</th
+                >
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >Commencement of Online Registration of Application</td
+                >
+                <td
+                  class="p-3 border border-border-card font-bold text-emerald-600 dark:text-emerald-400"
+                  >07/08/2026</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >Closure of Registration of Application</td
+                >
+                <td
+                  class="p-3 border border-border-card font-bold text-rose-500"
+                  >27/08/2026</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >Closure for Editing Application Details</td
+                >
+                <td
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >27/08/2026</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >Last Date for Printing Application</td
+                >
+                <td
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >11/09/2026</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >Online Fee Payment Window</td
+                >
+                <td
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >07/08/2026 to 27/08/2026</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >Application Fee (OBC / General / EWS)</td
+                >
+                <td
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >₹750/-</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >Application Fee (SC / ST / PWD / ExSM)</td
+                >
+                <td
+                  class="p-3 border border-border-card font-bold text-emerald-600 dark:text-emerald-400"
+                  >No Fee (Exempted)</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >Prelims Exam Schedule</td
+                >
+                <td
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >September 2026</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >Mains Exam Schedule</td
+                >
+                <td class="p-3 border border-border-card font-bold text-primary"
+                  >October / November 2026</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >Direct Online Application Link</td
+                >
+                <td class="p-3 border border-border-card">
+                  <a
+                    href="https://ibpsreg.ibps.in/sbijasrdjl26/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-primary hover:bg-primary/90 text-white text-xs font-bold uppercase tracking-wider rounded-lg transition-colors border-none w-full sm:w-auto shadow-xs"
+                  >
+                    <HiOutlineCursorArrowRays className="text-base shrink-0" /> Apply
+                    Online Now
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- FAQ Section (English) -->
+        <h2
+          id="en-faq"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          Frequently Asked Questions (FAQ)
+        </h2>
+        <div class="space-y-4 mt-3 mb-8">
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+            <h3 class="text-base font-bold text-text-main mb-2">
+              Question 1: What is the last date to apply online for SBI Clerk Recruitment 2026?
+            </h3>
+            <p class="text-text-muted text-xs m-0">
+              Answer: The last date for online registration and application submission is 27th August 2026.
+            </p>
+          </div>
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+            <h3 class="text-base font-bold text-text-main mb-2">
+              Question 2: What is the last date for printing the filled SBI Clerk application form?
+            </h3>
+            <p class="text-text-muted text-xs m-0">
+              Answer: The last date to print your submitted application form is 11th September 2026.
+            </p>
+          </div>
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+            <h3 class="text-base font-bold text-text-main mb-2">
+              Question 3: When will the SBI Clerk Preliminary and Main examinations be conducted?
+            </h3>
+            <p class="text-text-muted text-xs m-0">
+              Answer: The Preliminary exam will be held in September 2026, and the Main exam will be held in October / November 2026.
+            </p>
+          </div>
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+            <h3 class="text-base font-bold text-text-main mb-2">
+              Question 4: What is the educational qualification required for SBI Clerk 2026?
+            </h3>
+            <p class="text-text-muted text-xs m-0">
+              Answer: Candidates must possess a Graduation degree in any discipline from a recognized University.
+            </p>
+          </div>
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+            <h3 class="text-base font-bold text-text-main mb-2">
+              Question 5: What is the age limit for SBI Clerk recruitment?
+            </h3>
+            <p class="text-text-muted text-xs m-0">
+              Answer: Candidates must be between 20 to 28 years of age as of 01.04.2026 (Age relaxation: SC/ST +5 years, OBC +3 years).
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

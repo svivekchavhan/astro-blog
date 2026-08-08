@@ -11,6 +11,15 @@ export interface NaukriUpdate {
 
 export const naukriUpdates: NaukriUpdate[] = [
   {
+    titleEn: "SBI Clerk Recruitment 2026: Apply Online for 1,538 Junior Associate Vacancies",
+    titleHi: "भारतीय स्टेट बँकेत (SBI) लिपिक १५३८ जागांसाठी भरती २०२६: ऑनलाईन अर्ज सुरू",
+    date: "August 08, 2026",
+    badge: "New",
+    badgeType: "new",
+    link: "/sbi-clerk-recruitment-2026",
+    description: "State Bank of India (SBI) invites online applications for 1,538 Junior Associate (Clerk) posts. Any graduate eligible. Prelims exam in Sep 2026."
+  },
+  {
     titleEn: "PDCC Bank Peon Bharti 2026: Apply Online for 289 Posts (12th Pass Eligible)",
     titleHi: "पुणे जिल्हा मध्यवर्ती सहकारी बँक भरती २०२६: शिपाई २८९ पदांची सरळसेवा भरती जाहीर (अर्ज मुदत १० ऑगस्ट)",
     date: "August 06, 2026",
