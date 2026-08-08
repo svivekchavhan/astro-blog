@@ -17,7 +17,7 @@ export const naukriUpdates: NaukriUpdate[] = [
     badge: "New",
     badgeType: "new",
     link: "/sbi-clerk-recruitment-2026",
-    description: "State Bank of India (SBI) invites online applications for 1,538 Junior Associate (Clerk) posts. Any graduate eligible. Prelims exam in Sep 2026."
+    description: "State Bank of India (SBI) invites online applications for 1,538 Junior Associate (Clerk) posts. Any graduate eligible. Apply by 27 August 2026."
   },
   {
     titleEn: "PDCC Bank Peon Bharti 2026: Apply Online for 289 Posts (12th Pass Eligible)",

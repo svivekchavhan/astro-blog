@@ -22,7 +22,7 @@ export const articlesRegistry: ArticleMeta[] = [
     postName: "लिपिक (Junior Associate)",
     descriptionMr: "भारतीय स्टेट बँकेमध्ये (SBI) लिपिक (Junior Associate) पदांच्या १,५३८ जागांसाठी ऑनलाईन भरती जाहीर.",
     vacancies: "1,538",
-    lastDate: "Apply Active"
+    lastDate: "27 Aug 2026"
   },
   {
     titleEn: "PDCC Bank Peon Bharti 2026: Apply Online for 289 Vacancies (12th Pass Eligible)",

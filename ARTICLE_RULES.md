@@ -55,3 +55,14 @@ Whenever a new recruitment article is created, it must be registered in the foll
 - **Example**:
   - An article with title *"NMMC Navi Mumbai Hall Ticket Download 2026"* automatically appears under **Navi Mumbai** (`/district/navi-mumbai`).
   - An article with title *"Pune Mahanagarpalika Bharti 2026"* automatically appears under **Pune** (`/district/pune`).
+
+---
+
+## 📌 Rule 7: Symmetrical Bilingual FAQ & Google SEO Standard
+
+- **Matching Symmetrical Content**: Every recruitment article **MUST include a dedicated FAQ section in both Marathi and English versions** with identical core questions and answers.
+- **Google SEO Optimization**:
+  - **Keyword-Rich Questions**: Structure questions targeting high-volume user search queries (e.g., last date to apply, qualification, age limit, application print date, prelims/mains exam dates).
+  - **Concise & Direct Answers**: Keep answers clear, accurate, and direct without filler text for optimal Google search indexing and featured snippets.
+  - **Structured Heading Hierarchy**: Use standard `<h2 id="faq">` for section titles and `<h3>` tags for each question to help search crawlers easily parse Q&A structures.
+
