@@ -187,13 +187,14 @@ const searchData = [
     class="border-b border-border-card dark:border-border-card/30 py-2 text-[0.7rem] font-medium text-text-muted hidden md:block"
   >
     <div class="max-w-[1200px] mx-auto px-6 flex justify-between items-center">
-      <div class="flex items-center gap-6">
-        <span class="flex items-center gap-1.5"
-          ><HiOutlineCalendarDays className="text-primary text-sm" />
+      <div class="flex items-center gap-2.5 sm:gap-4 md:gap-6">
+        <span class="flex items-center gap-1.5 font-semibold text-text-main"
+          ><HiOutlineCalendarDays className="text-primary text-xs shrink-0" />
           <span id="current-date">May 15, 2026</span>
         </span>
-        <span class="flex items-center gap-1.5"
-          ><HiOutlineClock className="text-primary text-sm" />
+        <span class="text-border-card opacity-60">|</span>
+        <span class="flex items-center gap-1.5 font-bold text-primary"
+          ><HiOutlineClock className="text-primary text-xs shrink-0 animate-pulse" />
           <span id="current-time">17:49:41</span>
         </span>
       </div>
