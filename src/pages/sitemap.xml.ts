@@ -29,7 +29,9 @@ export async function GET() {
     '/mpsc',
     '/calculator',
     '/mpsc-age-calculator-marathi',
-    '/sgpa-cgpa-calculator'
+    '/sgpa-cgpa-calculator',
+    '/maharashtra-10th-ssc-board',
+    '/maharashtra-12th-hsc-board'
   ];
 
   // Dynamically find all articles in src/pages/
@@ -58,6 +60,8 @@ export async function GET() {
     "calculator.astro",
     "age-calculator.astro",
     "sgpa-cgpa-calculator.astro",
+    "maharashtra-10th-ssc-board.astro",
+    "maharashtra-12th-hsc-board.astro",
     "admit-card-article-template.astro",
     "article-template.astro"
   ];

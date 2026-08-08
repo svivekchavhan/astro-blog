@@ -1,0 +1,225 @@
+---
+import Layout from "../layouts/Layout.astro";
+import {
+  HiOutlineAcademicCap,
+  HiOutlineBuildingOffice,
+  HiOutlineCursorArrowRays,
+  HiOutlineDocumentText,
+  HiOutlineMapPin,
+  HiOutlineGlobeAlt,
+  HiOutlineClipboardDocumentCheck,
+  HiOutlineExclamationTriangle,
+} from "react-icons/hi2";
+
+const title =
+  "महाराष्ट्र राज्य बोर्ड १२ वी (HSC) - माहिती व अधिकृत वेबसाईट लिंक्स";
+const description =
+  "महाराष्ट्र राज्य माध्यमिक व उच्च माध्यमिक शिक्षण मंडळ (MSBSHSE) १२ वी (HSC) बोर्डाबाबत माहिती व अधिकृत वेबसाईट (mahahsscboard.in/mr) लिंक्स. महासंधी हे खाजगी माहिती पोर्टल आहे.";
+const canonicalURL = "https://mahasandhi.in/maharashtra-12th-hsc-board";
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonicalURL={canonicalURL}
+  customBreadcrumbs={[
+    { name: "Board Exams", url: "/admission" },
+    { name: "Maharashtra 12th (HSC) Board Info" },
+  ]}
+>
+  <div class="py-6 not-prose">
+    <!-- Disclaimer Callout Box -->
+
+    <!-- Header Banner -->
+    <div
+      class="bg-bg-surface border border-border-card rounded-3xl p-6 sm:p-10 mb-8 shadow-sm relative overflow-hidden"
+    >
+      <div
+        class="absolute -right-16 -top-16 w-48 h-48 bg-primary/10 rounded-full blur-3xl pointer-events-none"
+      >
+      </div>
+
+      <div class="max-w-3xl">
+        <div class="flex items-center gap-3 mb-4 flex-wrap">
+          <span
+            class="bg-sky-500/10 text-sky-600 dark:text-sky-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-sky-500/20 flex items-center gap-1.5"
+          >
+            <HiOutlineAcademicCap className="text-sm shrink-0" /> HSC Board (१२ वी)
+          </span>
+          <span
+            class="text-text-muted text-xs font-bold uppercase tracking-wider"
+            >Informational Portal • माहिती केंद्र</span
+          >
+        </div>
+
+        <h1
+          class="text-2xl sm:text-3xl md:text-4xl font-black text-text-main leading-tight mb-4"
+        >
+          {title}
+        </h1>
+
+        <p class="text-text-secondary text-sm sm:text-base leading-relaxed m-0">
+          महाराष्ट्र राज्य माध्यमिक व उच्च माध्यमिक शिक्षण मंडळ, पुणे (MSBSHSE)
+          द्वारे १२ वी (HSC - कला, विज्ञान, व वाणिज्य) परीक्षा आयोजित केली जाते.
+          या पेजवर उमेदवारांच्या सोयीसाठी मंडळाच्या अधिकृत वेबसाईट आणि निकाल
+          पोर्टलच्या डायरेक्ट लिंक्स उपलब्ध करून दिल्या आहेत.
+        </p>
+      </div>
+    </div>
+
+    <!-- Official External Links Table Card -->
+    <div
+      class="bg-bg-surface border border-border-card rounded-2xl p-6 mb-8 shadow-sm"
+    >
+      <h2
+        class="text-lg md:text-xl font-extrabold text-text-main mb-4 flex items-center gap-2 border-b border-border-card pb-3"
+      >
+        <HiOutlineGlobeAlt className="text-primary text-xl shrink-0" />
+        <span>मंडळाची अधिकृत संकेतस्थळे (Official Board External Links)</span>
+      </h2>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse text-sm">
+          <thead>
+            <tr class="bg-primary/5">
+              <th
+                class="p-3.5 border border-border-card font-bold text-text-main"
+                >विभाग / पोर्टल (Portal Name)</th
+              >
+              <th
+                class="p-3.5 border border-border-card font-bold text-text-main"
+                >अधिकृत शासकीय लिंक (Official Government Link)</th
+              >
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td
+                class="p-3.5 border border-border-card font-bold text-text-main"
+              >
+                महाराष्ट्र राज्य बोर्ड अधिकृत संकेतस्थळ (MSBSHSE Official
+                Website)
+              </td>
+              <td class="p-3.5 border border-border-card">
+                <a
+                  href="https://mahahsscboard.in/mr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary/90 text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-all shadow-xs"
+                >
+                  <HiOutlineCursorArrowRays className="text-base shrink-0" /> mahahsscboard.in/mr
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="p-3.5 border border-border-card font-bold text-text-main"
+              >
+                १२ वी एचएससी निकाल अधिकृत पोर्टल (HSC Result Portal)
+              </td>
+              <td class="p-3.5 border border-border-card">
+                <a
+                  href="https://mahresult.nic.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-all shadow-xs"
+                >
+                  <HiOutlineClipboardDocumentCheck
+                    className="text-base shrink-0"
+                  /> mahresult.nic.in
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Streams & Divisions Grid -->
+    <div
+      class="bg-bg-surface border border-border-card rounded-2xl p-6 mb-8 shadow-sm"
+    >
+      <h2
+        class="text-lg md:text-xl font-extrabold text-text-main mb-4 flex items-center gap-2 border-b border-border-card pb-3"
+      >
+        <HiOutlineAcademicCap className="text-primary text-xl shrink-0" />
+        <span>१२ वी (HSC) शाखा (Streams Covered)</span>
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        {
+          [
+            "विज्ञान शाखा (Science Stream)",
+            "वाणिज्य शाखा (Commerce Stream)",
+            "कला शाखा (Arts Stream)",
+          ].map((stream) => (
+            <div class="bg-bg-base/60 border border-border-card p-4 rounded-xl text-center text-xs font-bold text-text-main">
+              <span>{stream}</span>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- Board Information Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+      <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+        <h3
+          class="text-base font-bold text-text-main mb-2 flex items-center gap-2"
+        >
+          <HiOutlineDocumentText className="text-primary text-lg shrink-0" />
+          <span>१२ वी (HSC) हॉलतिकीट (Hall Ticket)</span>
+        </h3>
+        <p class="text-text-muted text-xs leading-relaxed m-0">
+          कनिष्ठ महाविद्यालयीन लॉगिन (College Login) द्वारे मंडळाच्या अधिकृत
+          वेबसाईट <strong>mahahsscboard.in/mr</strong> वरून हॉलतिकीट उपलब्ध होतात.
+        </p>
+      </div>
+
+      <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+        <h3
+          class="text-base font-bold text-text-main mb-2 flex items-center gap-2"
+        >
+          <HiOutlineClipboardDocumentCheck
+            className="text-emerald-500 text-lg shrink-0"
+          />
+          <span>१२ वी निकाल व पुनर्मूल्यांकन (HSC Result & Verification)</span>
+        </h3>
+        <p class="text-text-muted text-xs leading-relaxed m-0">
+          निकालाच्या घोषणेनंतर गुणपडताळणी, उत्तरपत्रिका छायाप्रत व
+          पुनर्मूल्यांकन अर्ज ऑनलाइन पद्धतीने स्वीकारले जातात.
+        </p>
+      </div>
+    </div>
+
+    <!-- Bottom Disclaimer Box -->
+    <div
+      class="bg-amber-500/10 border border-amber-500/30 rounded-2xl p-4 sm:p-5 text-amber-900 dark:text-amber-200 mt-4"
+    >
+      <div class="flex items-start gap-3">
+        <HiOutlineExclamationTriangle
+          className="text-amber-500 text-xl shrink-0 mt-0.5"
+        />
+        <div class="text-xs sm:text-sm leading-relaxed">
+          <strong
+            class="font-bold text-amber-600 dark:text-amber-400 block mb-1"
+          >
+            अस्वीकरण (Disclaimer):
+          </strong>
+          महासंधी (mahasandhi.in) हे महाराष्ट्र राज्य मंडळाचे (MSBSHSE) अधिकृत संकेतस्थळ
+          <strong>नाही</strong>. ही केवळ माहिती पुरवणारी खाजगी वेबसाईट आहे. १२
+          वी बोर्डाच्या कोणत्याही अर्जासाठी किंवा अधिकृत परिपत्रकासाठी कृपया
+          <a
+            href="https://mahahsscboard.in/mr"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-bold underline text-amber-700 dark:text-amber-300 hover:text-primary transition-colors"
+          >
+            mahahsscboard.in/mr
+          </a>
+          या अधिकृत वेबसाईटचा वापर करावा.
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
