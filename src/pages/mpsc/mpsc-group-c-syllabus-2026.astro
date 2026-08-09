@@ -1,0 +1,496 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { OFFICIAL_LINKS } from "../../constants/links";
+import { 
+  HiOutlineCalendarDays, 
+  HiOutlineArrowTopRightOnSquare,
+  HiOutlineDocumentText,
+  HiOutlineBuildingOffice,
+  HiOutlineAcademicCap,
+  HiOutlineArrowDownTray,
+  HiOutlineQueueList,
+  HiOutlineIdentification,
+  HiOutlineCheckCircle,
+  HiOutlineBookOpen,
+  HiOutlineCalculator
+} from "react-icons/hi2";
+
+const title = "MPSC Group C Syllabus 2026: संयुक्त गट क (Clerk, Tax Assistant) परीक्षा अभ्यासक्रम, स्वरूप व PDF";
+const description = "MPSC Non-Gazetted Group C Exam (संयुक्त गट क - लिपिक टंकलेखक, कर सहाय्यक, दुय्यम निरीक्षक) complete updated syllabus for Prelims & Mains 2026. View & download official syllabus PDF & check subject-wise mark distribution.";
+const canonicalURL = "https://mahasandhi.in/mpsc/mpsc-group-c-syllabus-2026";
+const date = "August 09, 2026";
+const category = "Syllabus";
+const googleDrivePdfUrl = "https://drive.google.com/file/d/10d011p7d53BLnb1LPwnXtDpnD1qWbnRm/view?usp=sharing";
+const googleDriveEmbedUrl = "https://drive.google.com/file/d/10d011p7d53BLnb1LPwnXtDpnD1qWbnRm/preview";
+const mpscSyllabusPortalUrl = OFFICIAL_LINKS.mpscSyllabus;
+---
+
+<Layout 
+  title={title} 
+  description={description}
+  canonicalURL={canonicalURL}
+  image="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1200"
+  article={true}
+  hideSidebar={true}
+>
+  <article class="py-8">
+    <!-- Header -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-6">
+        <span
+          class="bg-amber-500/10 text-amber-600 dark:text-amber-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-amber-500/20"
+          >{category}
+        </span>
+        <span class="text-text-muted text-sm">• {date}</span>
+      </div>
+      <h1
+        class="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-text-main mb-6 leading-[1.25]"
+      >
+        {title}
+      </h1>
+      <p
+        class="text-text-muted text-lg leading-relaxed border-l-4 border-amber-500 pl-6 py-2 italic"
+      >
+        {description}
+      </p>
+    </div>
+
+    <!-- Premium Quick Resource Navigation Cards -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 not-prose">
+      <!-- Direct PDF Download Link Card -->
+      <a 
+        href={googleDrivePdfUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group p-5 bg-gradient-to-br from-amber-500/10 via-orange-500/5 to-amber-500/10 border border-amber-500/30 hover:border-amber-500 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-amber-500/10 flex flex-col justify-between min-h-[140px]"
+      >
+        <div class="flex justify-between items-start">
+          <div class="p-3 bg-amber-500 text-white rounded-xl shadow-xs group-hover:scale-105 transition-transform">
+            <HiOutlineArrowDownTray className="text-xl" />
+          </div>
+          <HiOutlineArrowTopRightOnSquare className="text-amber-500/60 group-hover:text-amber-500 transition-colors duration-300" />
+        </div>
+        <div>
+          <h4 class="text-sm font-extrabold text-text-main group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors mb-1">Official PDF Syllabus</h4>
+          <span class="text-[0.7rem] text-text-muted font-medium">अधिकृत अभ्यासक्रम PDF डाऊनलोड</span>
+        </div>
+      </a>
+
+      <!-- Group C Exam Details Card -->
+      <a 
+        href="/mpsc/mpsc-group-c-exam-details" 
+        class="group p-5 bg-gradient-to-br from-primary/5 to-secondary/5 hover:from-primary/10 hover:to-secondary/10 border border-primary/20 hover:border-primary/50 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-primary/10 flex flex-col justify-between min-h-[140px]"
+      >
+        <div class="flex justify-between items-start">
+          <div class="p-3 bg-primary/10 text-primary rounded-xl group-hover:bg-primary group-hover:text-white transition-all duration-300">
+            <HiOutlineAcademicCap className="text-xl" />
+          </div>
+          <HiOutlineArrowTopRightOnSquare className="text-primary/40 group-hover:text-primary transition-colors duration-300" />
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-text-main group-hover:text-primary transition-colors mb-1">Exam Details</h4>
+          <span class="text-[0.7rem] text-text-muted">पात्रता, टायपिंग व पदसंख्या माहिती</span>
+        </div>
+      </a>
+
+      <!-- Prelims Pattern Card -->
+      <a 
+        href="#prelims-syllabus-mr" 
+        class="group p-5 bg-gradient-to-br from-emerald-500/5 to-teal-500/5 hover:from-emerald-500/10 hover:to-teal-500/10 border border-emerald-500/20 hover:border-emerald-500/50 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-emerald-500/10 flex flex-col justify-between min-h-[140px]"
+      >
+        <div class="flex justify-between items-start">
+          <div class="p-3 bg-emerald-500/10 text-emerald-500 rounded-xl group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300">
+            <HiOutlineDocumentText className="text-xl" />
+          </div>
+          <HiOutlineArrowTopRightOnSquare className="text-emerald-500/40 group-hover:text-emerald-500 transition-colors duration-300" />
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-text-main group-hover:text-emerald-500 transition-colors mb-1">Prelims Pattern</h4>
+          <span class="text-[0.7rem] text-text-muted">संयुक्त पूर्व परीक्षा (१०० गुण)</span>
+        </div>
+      </a>
+
+      <!-- Mains Pattern Card -->
+      <a 
+        href="#mains-syllabus-mr" 
+        class="group p-5 bg-gradient-to-br from-rose-500/5 to-pink-500/5 hover:from-rose-500/10 hover:to-pink-500/10 border border-rose-500/20 hover:border-rose-500/50 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-rose-500/10 flex flex-col justify-between min-h-[140px]"
+      >
+        <div class="flex justify-between items-start">
+          <div class="p-3 bg-rose-500/10 text-rose-500 rounded-xl group-hover:bg-rose-500 group-hover:text-white transition-all duration-300">
+            <HiOutlineQueueList className="text-xl" />
+          </div>
+          <HiOutlineArrowTopRightOnSquare className="text-rose-500/40 group-hover:text-rose-500 transition-colors duration-300" />
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-text-main group-hover:text-rose-500 transition-colors mb-1">Mains Pattern</h4>
+          <span class="text-[0.7rem] text-text-muted">मुख्य परीक्षा (४०० गुण)</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Quick Language Navigation Links -->
+    <div class="flex gap-4 mb-8">
+      <a href="#marathi-version" class="text-primary font-bold text-sm hover:underline">↓ मराठी आवृत्ती (Marathi Version)</a>
+      <span class="text-text-muted">|</span>
+      <a href="#english-version" class="text-primary font-bold text-sm hover:underline">↓ English Version</a>
+    </div>
+
+    <!-- ================= MARATHI VERSION ================= -->
+    <div id="marathi-version">
+      <!-- Content (Marathi) -->
+      <div class="space-y-8 text-text-main leading-relaxed">
+        <h2 id="overview-mr" class="text-xl md:text-2xl font-black text-primary border-l-4 border-primary pl-3">
+          MPSC संयुक्त गट क (Non-Gazetted Group C) परीक्षा स्वरूप विहंगावलोकन
+        </h2>
+        <p>
+          महाराष्ट्र लोकसेवा आयोगाद्वारे (MPSC) घेतल्या जाणाऱ्या <strong>अराजपत्रित गट क संयुक्त परीक्षेमध्ये (Non-Gazetted Group C Services Combined Exam)</strong> लिपिक-टंकलेखक (Clerk-Typist), कर सहाय्यक (Tax Assistant), दुय्यम निरीक्षक (Excise SI), तांत्रिक सहाय्यक (Technical Assistant) आणि उद्योग निरीक्षक (Industry Inspector) या ५ प्रमुख पदांचा समावेश होतो.
+        </p>
+
+        <!-- Interactive Live PDF Viewer Container -->
+        <div class="bg-bg-surface border border-border-card/80 rounded-3xl p-5 sm:p-8 shadow-sm space-y-4 my-8 not-prose">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-border-card/40">
+            <div class="flex items-center gap-3">
+              <div class="p-2.5 bg-amber-500/10 text-amber-600 rounded-2xl shrink-0">
+                <HiOutlineDocumentText className="text-2xl" />
+              </div>
+              <div>
+                <h3 class="text-lg sm:text-xl font-black text-text-main m-0">
+                  MPSC संयुक्त गट क अभ्यासक्रम अधिकृत PDF (Live PDF Viewer)
+                </h3>
+                <p class="text-xs text-text-muted m-0 mt-0.5 font-medium">
+                  खालील व्ह्यूअरमध्ये अधिकृत MPSC अभ्यासक्रम PDF थेट वाचा किंवा पूर्ण स्क्रीनमध्ये उघडा
+                </p>
+              </div>
+            </div>
+
+            <a 
+              href={googleDrivePdfUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-amber-500 hover:bg-amber-600 text-white font-extrabold text-xs uppercase tracking-wider rounded-xl shadow-xs transition-all shrink-0 no-underline"
+            >
+              <HiOutlineArrowDownTray className="text-base" /> PDF उघडा / डाऊनलोड
+            </a>
+          </div>
+
+          <!-- Embedded Iframe PDF Viewer -->
+          <div class="w-full h-[550px] sm:h-[700px] rounded-2xl overflow-hidden border border-border-card bg-bg-base relative shadow-inner">
+            <iframe 
+              src={googleDriveEmbedUrl}
+              class="w-full h-full border-0"
+              allow="autoplay"
+              title="MPSC Group C Syllabus PDF Viewer"
+            ></iframe>
+          </div>
+        </div>
+
+        <!-- Section 1: Prelims Exam Pattern & Syllabus -->
+        <h2 id="prelims-syllabus-mr" class="text-xl md:text-2xl font-black text-primary border-l-4 border-primary pl-3 mt-10">
+          १. संयुक्त पूर्व परीक्षा स्वरूप व सविस्तर अभ्यासक्रम (Prelims Exam - 100 Marks)
+        </h2>
+        <p>
+          एमपीएससी गट ब आणि गट क पदांसाठी <strong><u>एकच संयुक्त पूर्व परीक्षा (Combined Prelims)</u></strong> आयोजित केली जाते. पूर्व परीक्षा केवळ मुख्य परीक्षेच्या पात्रतेसाठी (Qualifying screening test) असते.
+        </p>
+
+        <!-- Prelims Pattern Table -->
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-left border-collapse text-xs sm:text-sm">
+            <thead>
+              <tr class="bg-primary/10">
+                <th class="p-3.5 border border-border-card font-extrabold text-text-main">परीक्षा टप्पा</th>
+                <th class="p-3.5 border border-border-card font-extrabold text-text-main">एकूण प्रश्न</th>
+                <th class="p-3.5 border border-border-card font-extrabold text-text-main">एकूण गुण</th>
+                <th class="p-3.5 border border-border-card font-extrabold text-text-main">कालावधी (Time)</th>
+                <th class="p-3.5 border border-border-card font-extrabold text-text-main">प्रश्न प्रकार व निगेटिव्ह मार्किंग</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3.5 border border-border-card font-bold">संयुक्त पूर्व परीक्षा (Combined Prelims)</td>
+                <td class="p-3.5 border border-border-card font-bold text-primary">१०० प्रश्न</td>
+                <td class="p-3.5 border border-border-card font-bold text-primary">१०० गुण</td>
+                <td class="p-3.5 border border-border-card font-bold">१ तास (६० मिनिटे)</td>
+                <td class="p-3.5 border border-border-card">वस्तुनिष्ठ बहुपर्यायी (MCQ), <strong><u>१/४ (२५%) नकारात्मक गुण</u></strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="text-lg font-bold text-text-main mt-6 mb-3">पूर्व परीक्षा विषयनिहाय अभ्यासक्रम घटक (Subject-wise Prelims Topics):</h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+          <!-- Subject 1 -->
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl space-y-2">
+            <h4 class="text-base font-extrabold text-primary m-0 flex items-center gap-2">
+              <HiOutlineBookOpen className="text-lg" /> १. चालू घडामोडी (Current Affairs)
+            </h4>
+            <p class="text-xs text-text-secondary leading-relaxed m-0">
+              जागतिक, भारतातील तसेच महाराष्ट्रातील महत्त्वाच्या राजकीय, सामाजिक, आर्थिक, क्रीडा, विज्ञान, पुरस्कार आणि आंतरराष्ट्रीय घडामोडी.
+            </p>
+          </div>
+
+          <!-- Subject 2 -->
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl space-y-2">
+            <h4 class="text-base font-extrabold text-primary m-0 flex items-center gap-2">
+              <HiOutlineBookOpen className="text-lg" /> २. नागरिकशास्त्र व राज्यशास्त्र (Civics & Polity)
+            </h4>
+            <p class="text-xs text-text-secondary leading-relaxed m-0">
+              भारताच्या संविधानाचा प्राथमिक अभ्यास, राज्य व्यवस्थापन (प्रशासन), ग्रामव्यवस्थापन (स्थानिक स्वराज्य संस्था - पंचायती राज, नगरपालिका), मूलभूत हक्क व कर्तव्ये.
+            </p>
+          </div>
+
+          <!-- Subject 3 -->
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl space-y-2">
+            <h4 class="text-base font-extrabold text-primary m-0 flex items-center gap-2">
+              <HiOutlineBookOpen className="text-lg" /> ३. इतिहास (History)
+            </h4>
+            <p class="text-xs text-text-secondary leading-relaxed m-0">
+              आधुनिक भारताचा इतिहास विशेषतः <strong><u>महाराष्ट्राचा इतिहास (१८५७ ते १९४७)</u></strong>, समाजसुधारक, ब्रिटिश राजवट, स्वातंत्र्य चळवळ व राष्ट्रीय सभा.
+            </p>
+          </div>
+
+          <!-- Subject 4 -->
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl space-y-2">
+            <h4 class="text-base font-extrabold text-primary m-0 flex items-center gap-2">
+              <HiOutlineBookOpen className="text-lg" /> ४. भूगोल (Geography)
+            </h4>
+            <p class="text-xs text-text-secondary leading-relaxed m-0">
+              <strong><u>महाराष्ट्राच्या भूगोलाच्या विशेष अभ्यासासह:</u></strong> पृथ्वी, जगातील विभाग, हवामान, अक्षांश-रेखांश, महाराष्ट्रातील जमिनीचे प्रकार, पर्जन्यमान, प्रमुख पिके, नद्या, पर्वत, खनिजे व मानवी भूगोल (लोकसंख्या).
+            </p>
+          </div>
+
+          <!-- Subject 5 -->
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl space-y-2">
+            <h4 class="text-base font-extrabold text-primary m-0 flex items-center gap-2">
+              <HiOutlineBookOpen className="text-lg" /> ५. अर्थव्यवस्था (Economics)
+            </h4>
+            <p class="text-xs text-text-secondary leading-relaxed m-0">
+              <strong><u>भारतीय अर्थव्यवस्था:</u></strong> राष्ट्रीय उत्पन्न, शेती, उद्योग, परकीय व्यापार, बँकिंग, लोकसंख्या, दारिद्र्य व बेरोजगारी, मुद्रा आणि राजकोषीय नीति. <strong><u>शासकीय अर्थसंकल्प:</u></strong> लेखा, लेखापरीक्षण व बजेट.
+            </p>
+          </div>
+
+          <!-- Subject 6 -->
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl space-y-2">
+            <h4 class="text-base font-extrabold text-primary m-0 flex items-center gap-2">
+              <HiOutlineBookOpen className="text-lg" /> ६. सामान्य विज्ञान (General Science)
+            </h4>
+            <p class="text-xs text-text-secondary leading-relaxed m-0">
+              भौतिकशास्त्र (Physics), रसायनशास्त्र (Chemistry), वनस्पतीशास्त्र (Botany), प्राणीशास्त्र (Zoology) आणि आरोग्यशास्त्र (Hygiene).
+            </p>
+          </div>
+
+          <!-- Subject 7 -->
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl space-y-2 md:col-span-2">
+            <h4 class="text-base font-extrabold text-primary m-0 flex items-center gap-2">
+              <HiOutlineCalculator className="text-lg" /> ७. बुद्धिमत्ता चाचणी व अंकगणित (Aptitude & Reasoning)
+            </h4>
+            <p class="text-xs text-text-secondary leading-relaxed m-0">
+              <strong><u>बुद्धिमत्ता चाचणी:</u></strong> उमेदवार किती लवकर व अचूकपणे विचार करू शकतो हे अजमावण्यासाठी प्रश्न (कोडी, दिशा, नातेसंबंध, तर्क पद्धती). <strong><u>अंकगणित:</u></strong> बेरीज, वजाबाकी, गुणाकार, भागाकार, दशांश अपूर्णांक, टक्केवारी, गुणोत्तर व प्रमाण, सरासरी, नफा-तोटा व काळ-काम-वेग.
+            </p>
+          </div>
+        </div>
+
+        <!-- Section 2: Mains Exam Pattern & Syllabus -->
+        <h2 id="mains-syllabus-mr" class="text-xl md:text-2xl font-black text-primary border-l-4 border-primary pl-3 mt-10">
+          २. मुख्य परीक्षा स्वरूप व सविस्तर अभ्यासक्रम (Mains Exam - 400 Marks)
+        </h2>
+        <p>
+          गट क मुख्य परीक्षेमध्ये एकूण <strong><u>२ पेपर्स (Paper 1 & Paper 2)</u></strong> असतात. दोन्ही पेपर्स प्रत्येकी २०० गुणांचे असून एकूण <strong><u>४०० गुण</u></strong> असतात.
+        </p>
+
+        <!-- Mains Pattern Table -->
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-left border-collapse text-xs sm:text-sm">
+            <thead>
+              <tr class="bg-primary/10">
+                <th class="p-3.5 border border-border-card font-extrabold text-text-main">पेपर क्र.</th>
+                <th class="p-3.5 border border-border-card font-extrabold text-text-main">विषय (Subject)</th>
+                <th class="p-3.5 border border-border-card font-extrabold text-text-main">प्रश्न संख्या</th>
+                <th class="p-3.5 border border-border-card font-extrabold text-text-main">गुण (Marks)</th>
+                <th class="p-3.5 border border-border-card font-extrabold text-text-main">वेळ (Duration)</th>
+                <th class="p-3.5 border border-border-card font-extrabold text-text-main">दर्जा (Standard)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3.5 border border-border-card font-bold">पेपर १ (Paper 1)</td>
+                <td class="p-3.5 border border-border-card font-bold text-primary">संयुक्त भाषा (मराठी व इंग्रजी)</td>
+                <td class="p-3.5 border border-border-card">१०० प्रश्न (५० मराठी + ५० इंग्रजी)</td>
+                <td class="p-3.5 border border-border-card font-bold text-primary">२०० गुण (१०० + १००)</td>
+                <td class="p-3.5 border border-border-card font-bold">१ तास</td>
+                <td class="p-3.5 border border-border-card">मराठी: १२ वी | इंग्रजी: पदवी</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 border border-border-card font-bold">पेपर २ (Paper 2)</td>
+                <td class="p-3.5 border border-border-card font-bold text-primary">सामान्य क्षमता चाचणी व पदनिहाय ज्ञान</td>
+                <td class="p-3.5 border border-border-card">१०० प्रश्न</td>
+                <td class="p-3.5 border border-border-card font-bold text-primary">२०० गुण</td>
+                <td class="p-3.5 border border-border-card font-bold">१ तास</td>
+                <td class="p-3.5 border border-border-card">पदवी दर्जा (Graduate Standard)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="text-lg font-bold text-text-main mt-6 mb-3">पेपर १ सविस्तर अभ्यासक्रम (Paper 1 Syllabus):</h3>
+        <div class="space-y-4">
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+            <h4 class="text-base font-extrabold text-primary m-0 mb-2">मराठी भाषा (५० प्रश्न / १०० गुण - दर्जा १२ वी):</h4>
+            <p class="text-xs text-text-secondary leading-relaxed m-0">
+              सर्वमान्य व्याकरण, शब्दसंग्रह, वाक्यरचना, प्रयोग, समास, समानार्थी व विरुद्धार्थी शब्द, म्हणी व वाक्प्रचार यांचा अर्थ व उपयोग आणि उताऱ्यावरील प्रश्नांची उत्तरे (Comprehension).
+            </p>
+          </div>
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+            <h4 class="text-base font-extrabold text-primary m-0 mb-2">English Language (50 Questions / 100 Marks - Degree Standard):</h4>
+            <p class="text-xs text-text-secondary leading-relaxed m-0">
+              Common Vocabulary, Sentence Structure, Grammar (Tenses, Parts of Speech, Voice, Direct-Indirect Speech), Idioms and Phrases with their Meaning and Usage, and Reading Comprehension Passages.
+            </p>
+          </div>
+        </div>
+
+        <h3 class="text-lg font-bold text-text-main mt-8 mb-3">पेपर २ सविस्तर अभ्यासक्रम (Paper 2 Syllabus):</h3>
+        <div class="bg-bg-surface border border-border-card p-6 rounded-2xl space-y-3">
+          <ul class="list-disc pl-5 space-y-2 text-xs sm:text-sm text-text-secondary m-0">
+            <li><strong><u>सामान्य ज्ञान व बुद्धिमापन:</u></strong> बुद्धिमत्ता चाचणी (अंकगणित, कोडी, तर्क), चालू घडामोडी.</li>
+            <li><strong><u>संगणक व माहिती तंत्रज्ञान:</u></strong> संगणकाचे मूलभूत ज्ञान, इंटरनेट, ई-मेल, सोशल मीडिया, सायबर सुरक्षा आणि शासकीय योजनांमधील आयटीचा वापर.</li>
+            <li><strong><u>माहितीचा अधिकार अधिनियम २००५ (RTI Act 2005):</u></strong> कायदेविषयक तरतुदी, केंद्रीय व राज्य माहिती आयोग, अधिकार व कर्तव्ये.</li>
+            <li><strong><u>महाराष्ट्र लोकसेवा हक्क अधिनियम २०१५:</u></strong> नागरिकांना पारदर्शक व वेळेत सेवा मिळण्यासाठी कायदेशीर तरतुदी.</li>
+            <li><strong><u>पदनिहाय तांत्रिक व कायदेविषयक घटक:</u></strong>
+              <ul class="list-circle pl-5 mt-1 space-y-1 text-xs">
+                <li><strong><u>कर सहाय्यक:</u></strong> मूलभूत बुककीपिंग, लेखापरीक्षण, जीएसटी (GST) व प्रत्यक्ष/अप्रत्यक्ष कर संकल्पना.</li>
+                <li><strong><u>लिपिक-टंकलेखक:</u></strong> कार्यालयीन कार्यपद्धती, टायपिंग कौशल्य व संगणक हाताळणी.</li>
+                <li><strong><u>दुय्यम निरीक्षक (Excise):</u></strong> राज्य उत्पादन शुल्क कायदे, दारूबंदी नियम व अंमलबजावणी.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Section 3: Typing Skill Test Pattern -->
+        <h2 id="typing-test-mr" class="text-xl md:text-2xl font-black text-primary border-l-4 border-primary pl-3 mt-10">
+          ३. टायपिंग कौशल्य चाचणी स्वरूप (Typing Skill Test Standard)
+        </h2>
+        <p>
+          लिपिक-टंकलेखक (Clerk-Typist) आणि कर सहाय्यक (Tax Assistant) या पदांसाठी मुख्य परीक्षेनंतर संगणकावर टायपिंग कौशल्य चाचणी घेतली जाते:
+        </p>
+        
+        <div class="bg-emerald-500/5 border border-emerald-500/20 p-5 rounded-2xl space-y-2">
+          <h4 class="text-sm font-extrabold text-emerald-600 dark:text-emerald-400 m-0 flex items-center gap-1.5">
+            <HiOutlineCheckCircle className="text-base shrink-0" /> टायपिंग कौशल्य चाचणी स्वरूप नियम:
+          </h4>
+          <ul class="list-disc pl-5 m-0 text-xs text-text-secondary space-y-1">
+            <li><strong><u>पात्रता चाचणी (Qualifying Test):</u></strong> या चाचणीचे गुण अंतिम गुणवत्ता यादीत जोडले जात नाहीत, ही चाचणी केवळ उत्तीर्ण (Qualify) होणे अनिवार्य असते.</li>
+            <li><strong><u>मराठी टायपिंग:</u></strong> ३० शब्द प्रति मिनिट (30 WPM) - संगणकावर १० मिनिटांत परिच्छेद टाईप करणे.</li>
+            <li><strong><u>इंग्रजी टायपिंग:</u></strong> ४० शब्द प्रति मिनिट (40 WPM) - संगणकावर १० मिनिटांत परिच्छेद टाईप करणे.</li>
+          </ul>
+        </div>
+
+        <!-- MPSC Links Table (Marathi) -->
+        <h2 id="links-table-mr" class="text-xl md:text-2xl font-black text-primary border-l-4 border-primary pl-3 mt-10">अधिकृत डाउनलोड लिंक्स</h2>
+        <div class="overflow-x-auto my-4">
+          <table class="w-full text-left border-collapse text-xs sm:text-sm">
+            <thead>
+              <tr class="bg-primary/10">
+                <th class="p-3.5 border border-border-card font-bold text-text-main">तपशील (Resource)</th>
+                <th class="p-3.5 border border-border-card font-bold text-text-main">डायरेक्ट लिंक (Action)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3.5 border border-border-card text-text-muted font-medium">एमपीएससी अधिकृत संकेतस्थळ (MPSC Portal)</td>
+                <td class="p-3.5 border border-border-card">
+                  <a href={mpscSyllabusPortalUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary text-white font-bold text-xs uppercase tracking-wider rounded-lg hover:bg-primary-dark transition-all no-underline">
+                    <HiOutlineArrowTopRightOnSquare className="text-base" /> अधिकृत पोर्टल
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3.5 border border-border-card text-text-muted font-medium">गट क संयुक्त पूर्व व मुख्य परीक्षा अभ्यासक्रम PDF</td>
+                <td class="p-3.5 border border-border-card">
+                  <a href={googleDrivePdfUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs uppercase tracking-wider rounded-lg transition-all no-underline">
+                    <HiOutlineArrowDownTray className="text-base" /> Download PDF
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= LANGUAGE SEPARATOR ================= -->
+    <div class="my-16 border-t-2 border-dashed border-border-card flex items-center justify-center relative">
+      <span class="absolute bg-bg-base px-8 py-2 text-base sm:text-lg font-extrabold uppercase tracking-widest text-primary border border-border-card rounded-full shadow-md">
+        English Version
+      </span>
+    </div>
+
+    <!-- ================= ENGLISH VERSION ================= -->
+    <div id="english-version" class="opacity-95">
+      <div class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-extrabold text-text-main mb-4">
+          MPSC Group C Combined Exam Syllabus 2026: Prelims & Mains Exam Pattern
+        </h2>
+        <p class="text-text-muted leading-relaxed italic">
+          Complete detailed syllabus for MPSC Non-Gazetted Group C Services (Clerk-Typist, Tax Assistant, Excise Inspector, Industry Inspector) including marks distribution, time duration, and negative marking rules.
+        </p>
+      </div>
+
+      <div class="space-y-8 text-text-main leading-relaxed">
+        <h2>1. Combined Prelims Exam Pattern (100 Marks)</h2>
+        <p>
+          The Preliminary examination is common for both Group B and Group C posts. It serves as a screening test to qualify candidates for the Mains exam.
+        </p>
+        <ul class="list-disc pl-5 space-y-2">
+          <li><strong><u>Total Questions:</u></strong> 100 Multiple Choice Questions (MCQs).</li>
+          <li><strong><u>Total Marks:</u></strong> 100 Marks.</li>
+          <li><strong><u>Duration:</u></strong> 1 Hour (60 Minutes).</li>
+          <li><strong><u>Negative Marking:</u></strong> 1/4th (25%) deduction for every incorrect answer.</li>
+          <li><strong><u>Subjects Covered:</u></strong> Current Affairs, Civics/Polity, History of India & Maharashtra, Geography of India & Maharashtra, Indian Economy & Budget, General Science (Physics, Chemistry, Biology, Hygiene), Aptitude & Logical Reasoning.</li>
+        </ul>
+
+        <h2>2. Mains Exam Pattern (400 Marks)</h2>
+        <p>
+          The Mains examination consists of 2 papers of 200 marks each (Total 400 Marks):
+        </p>
+        <ul class="list-disc pl-5 space-y-2">
+          <li><strong><u>Paper 1 (Languages - 200 Marks):</u></strong> 50 Questions on Marathi (12th Std Standard - 100 Marks) and 50 Questions on English (Degree Standard - 100 Marks). Duration: 1 Hour.</li>
+          <li><strong><u>Paper 2 (General Ability Test & Post Knowledge - 200 Marks):</u></strong> 100 Questions covering General Knowledge, Reasoning, Computer & IT, RTI Act 2005, Maharashtra Public Services Rights Act 2015, and Post-Specific Technical Concepts (Clerk, Tax Assistant, Excise). Duration: 1 Hour.</li>
+        </ul>
+
+        <h2>3. Computer Typing Skill Test</h2>
+        <p>
+          Candidates qualifying for Clerk-Typist and Tax Assistant posts must clear the Desktop Typing Skill Test (Qualifying nature):
+        </p>
+        <ul class="list-disc pl-5 space-y-2">
+          <li><strong><u>Clerk Typist:</u></strong> Marathi 30 WPM or English 40 WPM certificate & skill test.</li>
+          <li><strong><u>Tax Assistant:</u></strong> Marathi 30 WPM <strong><u>and</u></strong> English 40 WPM certificate & skill test.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Related Articles -->
+    <div class="my-12 border-t border-border-card pt-8 not-prose">
+      <h3 class="text-xl font-bold text-text-main mb-6">📚 इतर महत्त्वाचे लेख आणि अभ्यास साहित्य (Related Articles)</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <a href="/mpsc/mpsc-group-c-exam-details" class="p-4 bg-bg-surface border border-border-card hover:border-amber-500 rounded-2xl flex items-center gap-3 transition-colors duration-300 no-underline group">
+          <div class="p-2.5 bg-amber-500/10 text-amber-600 rounded-xl group-hover:bg-amber-500 group-hover:text-white transition-all duration-300">
+            <HiOutlineAcademicCap className="text-lg" />
+          </div>
+          <div>
+            <span class="text-[0.65rem] text-text-muted block font-semibold uppercase tracking-wider">MPSC Group C Exam Details</span>
+            <span class="text-sm font-bold text-text-main group-hover:text-amber-500 transition-colors">गट क पात्रता, टायपिंग व पदसंख्या माहिती</span>
+          </div>
+        </a>
+        <a href="/mpsc/mpsc-polity" class="p-4 bg-bg-surface border border-border-card hover:border-primary rounded-2xl flex items-center gap-3 transition-colors duration-300 no-underline group">
+          <div class="p-2.5 bg-primary/10 text-primary rounded-xl group-hover:bg-primary group-hover:text-white transition-all duration-300">
+            <HiOutlineDocumentText className="text-lg" />
+          </div>
+          <div>
+            <span class="text-[0.65rem] text-text-muted block font-semibold uppercase tracking-wider">MPSC Polity Notes</span>
+            <span class="text-sm font-bold text-text-main group-hover:text-primary transition-colors">एमपीएससी राज्यशास्त्र संपूर्ण अभ्यास साहित्य</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </article>
+</Layout>

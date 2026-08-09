@@ -3,20 +3,64 @@ import {
   HiOutlineBell, 
   HiOutlineCalendarDays, 
   HiOutlineChevronRight,
-  HiOutlineSparkles
+  HiOutlineSparkles,
+  HiOutlineMagnifyingGlass,
+  HiOutlineChevronLeft
 } from "react-icons/hi2";
 
 const updates = [
   {
+    id: "mpsc-group-c-syllabus-2026",
+    titleMr: "MPSC संयुक्त गट क परीक्षा अभ्यासक्रम २०२६: पूर्व व मुख्य परीक्षा पॅटर्न व अधिकृत PDF",
+    titleEn: "MPSC Non-Gazetted Group C Syllabus 2026: Combined Exam Pattern & PDF Download",
+    date: "August 09, 2026",
+    badge: "Syllabus PDF",
+    badgeClass: "text-amber-600 dark:text-amber-400 bg-amber-500/10 border-amber-500/20",
+    hasPulse: true,
+    link: "/mpsc/mpsc-group-c-syllabus-2026"
+  },
+  {
+    id: "mpsc-group-c-pesa-update-2026",
+    titleMr: "MPSC गट-क परीक्षा: पेसा (PESA) रहिवासी व माजी सैनिक आरक्षणाबाबत शुद्धिपत्रक जारी",
+    titleEn: "MPSC Group C Exam 2026: PESA Domicile & Ex-Servicemen Corrigendum Circular Released",
+    date: "August 07, 2026",
+    badge: "Corrigendum",
+    badgeClass: "text-amber-600 dark:text-amber-400 bg-amber-500/10 border-amber-500/20",
+    hasPulse: true,
+    link: "/mpsc-group-c-pesa-update-2026"
+  },
+  {
+    id: "mpsc-combine-group-c-2026",
+    titleMr: "MPSC गट-क संयुक्त पूर्व परीक्षा २०२६: ५,७०७ जागांसाठी जाहिरात व मुदतवाढ",
+    titleEn: "MPSC Group C Combined Prelims Exam 2026: 5,707 Vacancies & Deadline Extension",
+    date: "August 07, 2026",
+    badge: "Combine Exam",
+    badgeClass: "text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 border-emerald-500/20",
+    hasPulse: false,
+    link: "/mpsc-combine-group-c-2026"
+  },
+  {
+    id: "mpsc-group-c-last-date-extended-2026",
+    titleMr: "MPSC गट-क संयुक्त पूर्व परीक्षा २०२६: ऑनलाईन अर्ज मुदतवाढ (१० ऑगस्ट २०२६ मुदत)",
+    titleEn: "MPSC Group C Combined Exam 2026: Online Application Deadline Extended to August 10",
+    date: "August 05, 2026",
+    badge: "Deadline Extended",
+    badgeClass: "text-purple-600 dark:text-purple-400 bg-purple-500/10 border-purple-500/20",
+    hasPulse: false,
+    link: "/mpsc-group-c-last-date-extended-2026"
+  },
+  {
+    id: "mpsc-wrd-recruitment-rules-2026-mechanical",
     titleMr: "MPSC WRD कनिष्ठ अभियंता (यांत्रिकी) सेवाप्रवेश नियम २०२६ जाहीर",
     titleEn: "MPSC WRD Junior Engineer (Mechanical) Recruitment Rules 2026 Released",
     date: "July 05, 2026",
     badge: "Recruitment Rules",
     badgeClass: "text-rose-600 dark:text-rose-400 bg-rose-500/10 border-rose-500/20",
-    hasPulse: true,
+    hasPulse: false,
     link: "/mpsc/mpsc-wrd-recruitment-rules-2026-mechanical"
   },
   {
+    id: "mpsc-wrd-recruitment-rules-2026",
     titleMr: "MPSC WRD जलसंपदा विभाग कनिष्ठ अभियंता सेवाप्रवेश नियम २०२६",
     titleEn: "MPSC WRD Junior Engineer Recruitment Rules 2026",
     date: "June 28, 2026",
@@ -26,6 +70,7 @@ const updates = [
     link: "/mpsc/mpsc-wrd-recruitment-rules-2026"
   },
   {
+    id: "mpsc-group-c-bharti-2026",
     titleMr: "MPSC संयुक्त गट क (Non-Gazetted Group C) भरती जाहिरात २०२६",
     titleEn: "MPSC Non-Gazetted Group C Recruitment Notification 2026",
     date: "May 20, 2026",
@@ -42,45 +87,67 @@ const updates = [
   <div class="absolute -right-24 -top-24 w-60 h-60 bg-primary/5 rounded-full blur-3xl -z-10"></div>
   <div class="absolute -left-24 -bottom-24 w-60 h-60 bg-emerald-500/5 rounded-full blur-3xl -z-10"></div>
 
-  <!-- Header -->
-  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-border-card/30 mb-5">
+  <!-- Box Header & Controls -->
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-5 border-b border-border-card/30 mb-5">
     <div class="flex items-center gap-3">
-      <div class="p-2.5 bg-primary/10 text-primary rounded-xl animate-bounce">
+      <div class="p-2.5 bg-primary/10 text-primary rounded-xl animate-bounce shrink-0">
         <HiOutlineBell className="text-xl" />
       </div>
       <div>
-        <h3 class="text-base md:text-lg text-text-main font-black tracking-tight m-0 flex items-center gap-2">
+        <h3 class="text-base md:text-lg text-text-main font-black tracking-tight m-0 flex items-center gap-2 flex-wrap">
           MPSC NEW UPDATES
           <span class="inline-flex items-center gap-1 text-[0.6rem] font-bold uppercase tracking-wider text-rose-500 bg-rose-500/10 px-2 py-0.5 rounded-full border border-rose-500/20">
             <HiOutlineSparkles className="animate-pulse" /> Live updates
           </span>
         </h3>
-        <p class="text-[0.7rem] text-text-muted m-0 mt-0.5">
+        <p class="text-[0.7rem] sm:text-xs text-text-muted m-0 mt-0.5">
           एमपीएससी नवीन अपडेट्स, शासन निर्णय व जाहिराती (Table Format)
         </p>
       </div>
     </div>
+
+    <!-- Search Input Bar -->
+    <div class="relative w-full md:w-72 shrink-0">
+      <HiOutlineMagnifyingGlass className="absolute left-3 top-1/2 -translate-y-1/2 text-text-muted text-sm" />
+      <input
+        type="text"
+        id="mpsc-table-search"
+        placeholder="शोधा / Search updates..."
+        class="w-full pl-9 pr-4 py-2 bg-bg-surface/80 border border-border-card/80 focus:border-primary focus:ring-2 focus:ring-primary/20 rounded-xl text-xs text-text-main placeholder:text-text-muted transition-all outline-none"
+      />
+    </div>
   </div>
 
-  <!-- MPSC Updates Table -->
-  <div class="overflow-x-auto border border-border-card/40 rounded-2xl shadow-xs">
-    <table class="w-full text-left border-collapse bg-bg-surface">
+  <!-- Responsive Structured Table -->
+  <div class="overflow-x-auto border border-border-card/40 rounded-2xl shadow-xs bg-bg-surface">
+    <table class="w-full text-left border-collapse">
       <thead>
         <tr class="bg-primary/10 text-text-main border-b border-border-card/40">
+          <th class="p-3.5 sm:p-4 font-extrabold text-xs uppercase tracking-wider w-12 text-center">
+            #
+          </th>
           <th class="p-3.5 sm:p-4 font-extrabold text-xs uppercase tracking-wider">
-            नवीन एमपीएससी अपडेट्स व जाहिरात (MPSC Update & Notice)
+            एमपीएससी अपडेट्स व शासन निर्णय (MPSC Update & Notice)
           </th>
-          <th class="p-3.5 sm:p-4 font-extrabold text-xs uppercase tracking-wider text-center shrink-0 hidden sm:table-cell">
-            तारीख (Date)
+          <th class="p-3.5 sm:p-4 font-extrabold text-xs uppercase tracking-wider text-center shrink-0 hidden sm:table-cell w-36">
+            दिनांक (Date)
           </th>
-          <th class="p-3.5 sm:p-4 font-extrabold text-xs uppercase tracking-wider text-right shrink-0 min-w-[120px]">
+          <th class="p-3.5 sm:p-4 font-extrabold text-xs uppercase tracking-wider text-right shrink-0 w-32">
             कृती (Action)
           </th>
         </tr>
       </thead>
-      <tbody class="divide-y divide-border-card/30 text-sm">
-        {updates.map((update) => (
-          <tr class="hover:bg-primary/5 transition-colors group">
+      <tbody class="divide-y divide-border-card/30 text-sm" id="mpsc-updates-tbody">
+        {updates.map((update, index) => (
+          <tr class="mpsc-update-row hover:bg-primary/5 transition-colors group">
+            <!-- Col 1: Index Number -->
+            <td class="p-3.5 sm:p-4 text-center font-bold text-xs text-text-muted">
+              <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-primary/5 text-primary text-[0.65rem] border border-primary/10">
+                {index + 1}
+              </span>
+            </td>
+
+            <!-- Col 2: Title & Metadata -->
             <td class="p-3.5 sm:p-4 space-y-1.5">
               <div class="flex items-center gap-2 flex-wrap mb-1">
                 <span class={`text-[0.6rem] px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wide border whitespace-nowrap flex items-center gap-1 ${update.badgeClass}`}>
@@ -108,13 +175,15 @@ const updates = [
               </a>
             </td>
 
+            <!-- Col 3: Date (Desktop) -->
             <td class="p-3.5 sm:p-4 text-center whitespace-nowrap hidden sm:table-cell">
-              <span class="inline-flex items-center gap-1 text-xs font-semibold text-text-muted">
+              <span class="inline-flex items-center gap-1 text-xs font-semibold text-text-muted bg-primary/5 px-2.5 py-1 rounded-lg border border-primary/10">
                 <HiOutlineCalendarDays className="text-sm text-primary shrink-0" />
                 {update.date}
               </span>
             </td>
 
+            <!-- Col 4: Action Button -->
             <td class="p-3.5 sm:p-4 text-right whitespace-nowrap">
               <a 
                 href={update.link}
@@ -128,5 +197,149 @@ const updates = [
         ))}
       </tbody>
     </table>
+
+    <!-- Empty Search State -->
+    <div id="mpsc-table-empty" class="hidden p-8 text-center space-y-2">
+      <p class="text-sm font-extrabold text-text-main m-0">
+        🔍 कोणतेही अपडेट आढळले नाहीत (No matching updates found)
+      </p>
+      <p class="text-xs text-text-muted m-0">
+        कृपया वेगळा शब्द शोधून पहा (Try searching with a different keyword)
+      </p>
+    </div>
+  </div>
+
+  <!-- Table Pagination & Entries Info Bar -->
+  <div class="flex flex-col sm:flex-row items-center justify-between gap-3 mt-4 pt-3 border-t border-border-card/30 text-xs text-text-muted font-medium">
+    <div id="mpsc-table-entries-info">
+      Showing 1-5 of {updates.length} entries
+    </div>
+
+    <div class="flex items-center gap-2">
+      <button
+        id="mpsc-table-prev"
+        type="button"
+        class="inline-flex items-center gap-1 px-3 py-1.5 bg-bg-surface hover:bg-primary/10 text-text-main hover:text-primary border border-border-card rounded-xl text-xs font-bold transition-all cursor-pointer"
+      >
+        <HiOutlineChevronLeft className="text-xs shrink-0" />
+        <span>मागील (Prev)</span>
+      </button>
+
+      <span id="mpsc-table-page-info" class="px-2 font-bold text-text-main">
+        Page 1 of 2
+      </span>
+
+      <button
+        id="mpsc-table-next"
+        type="button"
+        class="inline-flex items-center gap-1 px-3 py-1.5 bg-bg-surface hover:bg-primary/10 text-text-main hover:text-primary border border-border-card rounded-xl text-xs font-bold transition-all cursor-pointer"
+      >
+        <span>पुढील (Next)</span>
+        <HiOutlineChevronRight className="text-xs shrink-0" />
+      </button>
+    </div>
   </div>
 </div>
+
+<script>
+  function setupMpscUpdatesTable() {
+    const searchInput = document.getElementById("mpsc-table-search") as HTMLInputElement | null;
+    const tableRows = document.querySelectorAll(".mpsc-update-row");
+    const emptyState = document.getElementById("mpsc-table-empty");
+    const prevBtn = document.getElementById("mpsc-table-prev") as HTMLButtonElement | null;
+    const nextBtn = document.getElementById("mpsc-table-next") as HTMLButtonElement | null;
+    const pageInfo = document.getElementById("mpsc-table-page-info");
+    const entriesInfo = document.getElementById("mpsc-table-entries-info");
+
+    const pageSize = 5;
+    let currentPage = 1;
+    let filteredRows: Element[] = Array.from(tableRows);
+
+    function renderTable() {
+      const searchTerm = searchInput ? searchInput.value.toLowerCase().trim() : "";
+      
+      filteredRows = Array.from(tableRows).filter((row) => {
+        const text = row.textContent?.toLowerCase() || "";
+        return text.includes(searchTerm);
+      });
+
+      const totalEntries = filteredRows.length;
+      const totalPages = Math.max(1, Math.ceil(totalEntries / pageSize));
+
+      if (currentPage > totalPages) currentPage = totalPages;
+      if (currentPage < 1) currentPage = 1;
+
+      // Hide all rows first
+      tableRows.forEach((row) => ((row as HTMLElement).style.display = "none"));
+
+      // Show rows for current page
+      const startIndex = (currentPage - 1) * pageSize;
+      const endIndex = Math.min(startIndex + pageSize, totalEntries);
+
+      for (let i = startIndex; i < endIndex; i++) {
+        if (filteredRows[i]) {
+          (filteredRows[i] as HTMLElement).style.display = "";
+        }
+      }
+
+      // Toggle empty state
+      if (emptyState) {
+        emptyState.style.display = totalEntries === 0 ? "block" : "none";
+      }
+
+      // Update Pagination Controls
+      if (pageInfo) {
+        pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+      }
+      if (entriesInfo) {
+        if (totalEntries === 0) {
+          entriesInfo.textContent = `Showing 0 entries`;
+        } else {
+          entriesInfo.textContent = `Showing ${startIndex + 1}-${endIndex} of ${totalEntries} entries`;
+        }
+      }
+      if (prevBtn) {
+        prevBtn.disabled = currentPage === 1;
+        prevBtn.classList.toggle("opacity-50", currentPage === 1);
+        prevBtn.classList.toggle("cursor-not-allowed", currentPage === 1);
+      }
+      if (nextBtn) {
+        nextBtn.disabled = currentPage === totalPages;
+        nextBtn.classList.toggle("opacity-50", currentPage === totalPages);
+        nextBtn.classList.toggle("cursor-not-allowed", currentPage === totalPages);
+      }
+    }
+
+    if (searchInput) {
+      searchInput.addEventListener("input", () => {
+        currentPage = 1;
+        renderTable();
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", () => {
+        if (currentPage > 1) {
+          currentPage--;
+          renderTable();
+        }
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener("click", () => {
+        const totalPages = Math.ceil(filteredRows.length / pageSize);
+        if (currentPage < totalPages) {
+          currentPage++;
+          renderTable();
+        }
+      });
+    }
+
+    // Initial render
+    renderTable();
+  }
+
+  setupMpscUpdatesTable();
+  document.addEventListener("astro:page-load", setupMpscUpdatesTable);
+</script>

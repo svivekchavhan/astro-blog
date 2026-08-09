@@ -13,6 +13,18 @@ export interface ArticleMeta {
 
 export const articlesRegistry: ArticleMeta[] = [
   {
+    titleEn: "MPSC Group C Syllabus 2026: Combined Prelims & Mains Exam Pattern, Subject-wise Marks & Official PDF Download",
+    titleMr: "MPSC संयुक्त गट क परीक्षा अभ्यासक्रम २०२६: पूर्व व मुख्य परीक्षा स्वरूप, विषय आणि अधिकृत PDF",
+    slug: "/mpsc/mpsc-group-c-syllabus-2026",
+    category: "Syllabus",
+    date: "August 09, 2026",
+    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1200",
+    postName: "गट क अभ्यासक्रम (Clerk & Tax Assistant)",
+    descriptionMr: "MPSC संयुक्त गट क (लिपिक टंकलेखक, कर सहाय्यक, दुय्यम निरीक्षक) पूर्व व मुख्य परीक्षेचा सविस्तर अपडेटेड अभ्यासक्रम, गुण विभागणी व अधिकृत PDF.",
+    vacancies: "5,707 Posts",
+    lastDate: "Download PDF"
+  },
+  {
     titleEn: "Mumbai Police Constable Bharti 2024-25: Final Selection & Waiting List Released for 3,521 Posts",
     titleMr: "मुंबई पोलीस शिपाई भरती २०२४-२५: ३,५२१ पदांची अंतिम निवड यादी (Final Selection List) व प्रतीक्षा यादी कट-ऑफसह प्रसिद्ध",
     slug: "/mumbai-police-constable-final-selection-list-2026",
