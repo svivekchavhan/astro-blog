@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { 
-  HiOutlineCalendarDays, 
+import {
+  HiOutlineCalendarDays,
   HiOutlineCursorArrowRays,
   HiOutlineArrowTopRightOnSquare,
   HiOutlineDocumentText,
@@ -14,461 +14,977 @@ import {
   HiOutlineBellAlert,
   HiOutlineCheckBadge,
   HiOutlineMegaphone,
-  HiOutlineClock
+  HiOutlineClock,
 } from "react-icons/hi2";
 
-const title = "MPSC गट-क सेवा संयुक्त पूर्व परीक्षा २०२६: ५,७०७ जागांसाठी शुद्धिपत्रक प्रसिद्ध, अर्ज मुदतवाढ व पदसंख्या वाढ!";
-const description = "महाराष्ट्र लोकसेवा आयोग (MPSC) गट-क सेवा संयुक्त पूर्व परीक्षा २०२६ चे नवीन शुद्धिपत्रक (Corrigendum) जाहीर. एकूण ५,७०७ पदे (२,६१९ + ३,०८८ = ५,७०७ पदे). ऑनलाईन अर्ज करण्याची मुदत १० ऑगस्ट २०२६ पर्यंत वाढवली असून परीक्षा २५ ऑक्टोबर २०२६ रोजी होणार आहे.";
+const title =
+  "MPSC गट-क सेवा संयुक्त पूर्व परीक्षा २०२६: ५,७०७ जागांसाठी शुद्धिपत्रक प्रसिद्ध, अर्ज मुदतवाढ व पदसंख्या वाढ!";
+const description =
+  "महाराष्ट्र लोकसेवा आयोग (MPSC) गट-क सेवा संयुक्त पूर्व परीक्षा २०२६ चे नवीन शुद्धिपत्रक (Corrigendum) जाहीर. एकूण ५,७०७ पदे (२,६१९ + ३,०८८ = ५,७०७ पदे). ऑनलाईन अर्ज करण्याची मुदत १० ऑगस्ट २०२६ पर्यंत वाढवली असून परीक्षा २५ ऑक्टोबर २०२६ रोजी होणार आहे.";
 const canonicalURL = "https://mahasandhi.in/mpsc-group-c-bharti-2026";
 const date = "August 05, 2026";
 const category = "MPSC Bharti";
 ---
 
-<Layout 
-  title={title} 
+<Layout
+  title={title}
   description={description}
   canonicalURL={canonicalURL}
+  pubDate={date}
+  category={category}
   image="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1200"
   article={true}
 >
-  <article class="py-8">
+  <article class="pt-2 pb-8">
     <!-- Header -->
-    <div class="mb-12">
+    <div class="mb-8">
       <div class="flex items-center gap-3 mb-6 flex-wrap">
-        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-primary/20 flex items-center gap-1.5">
-          <HiOutlineMegaphone className="text-sm" /> {category}
+        <span
+          class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-primary/20 flex items-center gap-1.5"
+        >
+          <HiOutlineMegaphone className="text-sm" />
+          {category}
         </span>
-        <span class="bg-rose-500/10 text-rose-600 dark:text-rose-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-rose-500/20">
+        <span
+          class="bg-rose-500/10 text-rose-600 dark:text-rose-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-rose-500/20"
+        >
           शुद्धिपत्रक (Corrigendum)
         </span>
         <span class="text-text-muted text-sm">• {date}</span>
       </div>
-      <h1 class="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-text-main mb-6 leading-[1.25]">
+      <h1
+        class="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-text-main mb-6 leading-[1.25]"
+      >
         {title}
       </h1>
-      <p class="text-text-muted text-lg leading-relaxed border-l-4 border-primary pl-6 py-2 italic">
+      <p
+        class="text-text-muted text-lg leading-relaxed border-l-4 border-primary pl-6 py-2 italic"
+      >
         {description}
       </p>
     </div>
 
     <!-- Quick Highlights Banner -->
-    <div class="bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/20 rounded-3xl p-6 md:p-8 mb-12 shadow-sm">
+    <div
+      class="bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/20 rounded-3xl p-6 md:p-8 mb-12 shadow-sm"
+    >
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
-        <div class="p-3 bg-bg-surface/80 backdrop-blur-sm rounded-2xl border border-border-card">
-          <span class="text-xs text-text-muted block uppercase font-bold tracking-wider mb-1">एकूण पदे (Total Vacancies)</span>
-          <span class="text-2xl md:text-3xl font-black text-primary">5,707</span>
-          <span class="text-[0.65rem] text-text-muted font-semibold block mt-0.5">(2619 + 3088 = 5707)</span>
+        <div
+          class="p-3 bg-bg-surface/80 backdrop-blur-sm rounded-2xl border border-border-card"
+        >
+          <span
+            class="text-xs text-text-muted block uppercase font-bold tracking-wider mb-1"
+            >एकूण पदे (Total Vacancies)</span
+          >
+          <span class="text-2xl md:text-3xl font-black text-primary">5,707</span
+          >
+          <span
+            class="text-[0.65rem] text-text-muted font-semibold block mt-0.5"
+            >(2619 + 3088 = 5707)</span
+          >
         </div>
-        <div class="p-3 bg-bg-surface/80 backdrop-blur-sm rounded-2xl border border-border-card">
-          <span class="text-xs text-text-muted block uppercase font-bold tracking-wider mb-1">नवीन अंतिम तारीख (Last Date)</span>
-          <span class="text-lg md:text-xl font-extrabold text-rose-600 dark:text-rose-400"><span class="line-through text-text-muted/70 font-normal text-sm sm:text-base mr-1.5">05 ऑगस्ट 2026</span>10 ऑगस्ट 2026</span>
+        <div
+          class="p-3 bg-bg-surface/80 backdrop-blur-sm rounded-2xl border border-border-card"
+        >
+          <span
+            class="text-xs text-text-muted block uppercase font-bold tracking-wider mb-1"
+            >नवीन अंतिम तारीख (Last Date)</span
+          >
+          <span
+            class="text-lg md:text-xl font-extrabold text-rose-600 dark:text-rose-400"
+            ><span
+              class="line-through text-text-muted/70 font-normal text-sm sm:text-base mr-1.5"
+              >05 ऑगस्ट 2026</span
+            >10 ऑगस्ट 2026</span
+          >
         </div>
-        <div class="p-3 bg-bg-surface/80 backdrop-blur-sm rounded-2xl border border-border-card">
-          <span class="text-xs text-text-muted block uppercase font-bold tracking-wider mb-1">परीक्षा तारीख (Exam Date)</span>
-          <span class="text-lg md:text-xl font-extrabold text-emerald-600 dark:text-emerald-400">25 ऑक्टोबर 2026</span>
+        <div
+          class="p-3 bg-bg-surface/80 backdrop-blur-sm rounded-2xl border border-border-card"
+        >
+          <span
+            class="text-xs text-text-muted block uppercase font-bold tracking-wider mb-1"
+            >परीक्षा तारीख (Exam Date)</span
+          >
+          <span
+            class="text-lg md:text-xl font-extrabold text-emerald-600 dark:text-emerald-400"
+            >25 ऑक्टोबर 2026</span
+          >
         </div>
-        <div class="p-3 bg-bg-surface/80 backdrop-blur-sm rounded-2xl border border-border-card">
-          <span class="text-xs text-text-muted block uppercase font-bold tracking-wider mb-1">परीक्षेचे स्वरूप (Exam Mode)</span>
-          <span class="text-lg md:text-xl font-bold text-text-main">Offline (OMR)</span>
+        <div
+          class="p-3 bg-bg-surface/80 backdrop-blur-sm rounded-2xl border border-border-card"
+        >
+          <span
+            class="text-xs text-text-muted block uppercase font-bold tracking-wider mb-1"
+            >परीक्षेचे स्वरूप (Exam Mode)</span
+          >
+          <span class="text-lg md:text-xl font-bold text-text-main"
+            >Offline (OMR)</span
+          >
         </div>
       </div>
     </div>
 
     <!-- Quick Resource Links Grid -->
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 not-prose">
-      <a 
-        href="https://mpsconline.gov.in" 
-        target="_blank" 
+      <a
+        href="https://mpsconline.gov.in"
+        target="_blank"
         rel="noopener noreferrer"
         class="group p-5 bg-gradient-to-br from-emerald-500/5 to-teal-500/5 hover:from-emerald-500/10 hover:to-teal-500/10 border border-emerald-500/20 hover:border-emerald-500/50 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-emerald-500/10 flex flex-col justify-between min-h-[130px]"
       >
         <div class="flex justify-between items-start">
-          <div class="p-3 bg-emerald-500/10 text-emerald-500 rounded-xl group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300">
+          <div
+            class="p-3 bg-emerald-500/10 text-emerald-500 rounded-xl group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300"
+          >
             <HiOutlineCursorArrowRays className="text-xl" />
           </div>
-          <HiOutlineArrowTopRightOnSquare className="text-emerald-500/40 group-hover:text-emerald-500 transition-colors duration-300" />
+          <HiOutlineArrowTopRightOnSquare
+            className="text-emerald-500/40 group-hover:text-emerald-500 transition-colors duration-300"
+          />
         </div>
         <div>
-          <h4 class="text-sm font-bold text-text-main group-hover:text-emerald-500 transition-colors mb-0.5">ऑनलाईन अर्ज (Apply Online)</h4>
-          <span class="text-[0.7rem] text-text-muted">mpsconline.gov.in वर अर्ज करा</span>
+          <h4
+            class="text-sm font-bold text-text-main group-hover:text-emerald-500 transition-colors mb-0.5"
+          >
+            ऑनलाईन अर्ज (Apply Online)
+          </h4>
+          <span class="text-[0.7rem] text-text-muted"
+            >mpsconline.gov.in वर अर्ज करा</span
+          >
         </div>
       </a>
 
-      <a 
-        href="https://mpsc.gov.in" 
-        target="_blank" 
+      <a
+        href="https://mpsc.gov.in"
+        target="_blank"
         rel="noopener noreferrer"
         class="group p-5 bg-gradient-to-br from-primary/5 to-primary-light/5 hover:from-primary/10 hover:to-primary-light/10 border border-primary/20 hover:border-primary/50 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-primary/10 flex flex-col justify-between min-h-[130px]"
       >
         <div class="flex justify-between items-start">
-          <div class="p-3 bg-primary/10 text-primary rounded-xl group-hover:bg-primary group-hover:text-white transition-all duration-300">
+          <div
+            class="p-3 bg-primary/10 text-primary rounded-xl group-hover:bg-primary group-hover:text-white transition-all duration-300"
+          >
             <HiOutlineDocumentText className="text-xl" />
           </div>
-          <HiOutlineArrowTopRightOnSquare className="text-primary/40 group-hover:text-primary transition-colors duration-300" />
+          <HiOutlineArrowTopRightOnSquare
+            className="text-primary/40 group-hover:text-primary transition-colors duration-300"
+          />
         </div>
         <div>
-          <h4 class="text-sm font-bold text-text-main group-hover:text-primary transition-colors mb-0.5">शुद्धिपत्रक PDF (Notice PDF)</h4>
-          <span class="text-[0.7rem] text-text-muted">अधिकृत जाहिरात व शुद्धिपत्रक</span>
+          <h4
+            class="text-sm font-bold text-text-main group-hover:text-primary transition-colors mb-0.5"
+          >
+            शुद्धिपत्रक PDF (Notice PDF)
+          </h4>
+          <span class="text-[0.7rem] text-text-muted"
+            >अधिकृत जाहिरात व शुद्धिपत्रक</span
+          >
         </div>
       </a>
 
-      <a 
-        href="/mpsc/mpsc-group-c-exam-details" 
+      <a
+        href="/mpsc/mpsc-group-c-exam-details"
         class="group p-5 bg-gradient-to-br from-amber-500/5 to-orange-500/5 hover:from-amber-500/10 hover:to-orange-500/10 border border-amber-500/20 hover:border-amber-500/50 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-amber-500/10 flex flex-col justify-between min-h-[130px]"
       >
         <div class="flex justify-between items-start">
-          <div class="p-3 bg-amber-500/10 text-amber-500 rounded-xl group-hover:bg-amber-500 group-hover:text-white transition-all duration-300">
+          <div
+            class="p-3 bg-amber-500/10 text-amber-500 rounded-xl group-hover:bg-amber-500 group-hover:text-white transition-all duration-300"
+          >
             <HiOutlineAcademicCap className="text-xl" />
           </div>
-          <HiOutlineArrowTopRightOnSquare className="text-amber-500/40 group-hover:text-amber-500 transition-colors duration-300" />
+          <HiOutlineArrowTopRightOnSquare
+            className="text-amber-500/40 group-hover:text-amber-500 transition-colors duration-300"
+          />
         </div>
         <div>
-          <h4 class="text-sm font-bold text-text-main group-hover:text-amber-500 transition-colors mb-0.5">गट क अभ्यासक्रम (Syllabus)</h4>
-          <span class="text-[0.7rem] text-text-muted">परीक्षा पद्धत व टायपिंग निकष</span>
+          <h4
+            class="text-sm font-bold text-text-main group-hover:text-amber-500 transition-colors mb-0.5"
+          >
+            गट क अभ्यासक्रम (Syllabus)
+          </h4>
+          <span class="text-[0.7rem] text-text-muted"
+            >परीक्षा पद्धत व टायपिंग निकष</span
+          >
         </div>
       </a>
 
-      <a 
-        href="/result" 
+      <a
+        href="/result"
         class="group p-5 bg-gradient-to-br from-rose-500/5 to-pink-500/5 hover:from-rose-500/10 hover:to-pink-500/10 border border-rose-500/20 hover:border-rose-500/50 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-rose-500/10 flex flex-col justify-between min-h-[130px]"
       >
         <div class="flex justify-between items-start">
-          <div class="p-3 bg-rose-500/10 text-rose-500 rounded-xl group-hover:bg-rose-500 group-hover:text-white transition-all duration-300">
+          <div
+            class="p-3 bg-rose-500/10 text-rose-500 rounded-xl group-hover:bg-rose-500 group-hover:text-white transition-all duration-300"
+          >
             <HiOutlineQueueList className="text-xl" />
           </div>
-          <HiOutlineArrowTopRightOnSquare className="text-rose-500/40 group-hover:text-rose-500 transition-colors duration-300" />
+          <HiOutlineArrowTopRightOnSquare
+            className="text-rose-500/40 group-hover:text-rose-500 transition-colors duration-300"
+          />
         </div>
         <div>
-          <h4 class="text-sm font-bold text-text-main group-hover:text-rose-500 transition-colors mb-0.5">निकाल व अपडेट्स (Results)</h4>
-          <span class="text-[0.7rem] text-text-muted">MPSC निकाल व गुणवत्ता यादी</span>
+          <h4
+            class="text-sm font-bold text-text-main group-hover:text-rose-500 transition-colors mb-0.5"
+          >
+            निकाल व अपडेट्स (Results)
+          </h4>
+          <span class="text-[0.7rem] text-text-muted"
+            >MPSC निकाल व गुणवत्ता यादी</span
+          >
         </div>
       </a>
     </div>
 
     <!-- Quick Language Navigation Links -->
     <div class="flex gap-4 mb-8">
-      <a href="#marathi-version" class="text-primary font-bold text-sm hover:underline">↓ मराठी आवृत्ती (Marathi Version)</a>
+      <a
+        href="#marathi-version"
+        class="text-primary font-bold text-sm hover:underline"
+        >↓ मराठी आवृत्ती (Marathi Version)</a
+      >
       <span class="text-text-muted">|</span>
-      <a href="#english-version" class="text-primary font-bold text-sm hover:underline">↓ English Version</a>
+      <a
+        href="#english-version"
+        class="text-primary font-bold text-sm hover:underline"
+        >↓ English Version</a
+      >
     </div>
 
     <!-- ================= MARATHI VERSION ================= -->
     <div id="marathi-version">
       <!-- Table of Contents -->
-      <div class="bg-bg-surface border border-border-card rounded-3xl p-6 md:p-8 mb-12">
-        <h2 class="text-xl font-bold text-text-main mb-4 flex items-center gap-2 m-0 border-none">
+      <div
+        class="bg-bg-surface border border-border-card rounded-3xl p-6 md:p-8 mb-12"
+      >
+        <h2
+          class="text-xl font-bold text-text-main mb-4 flex items-center gap-2 m-0 border-none"
+        >
           <HiOutlineDocumentText className="text-primary" />
           या लेखातील मुख्य मुद्दे (Table of Contents)
         </h2>
-        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 list-none p-0 m-0 mt-2">
-          <li><a href="#overview-mr" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">१. MPSC गट-क शुद्धिपत्रक २०२६ महत्त्वाचे अपडेट्स</a></li>
-          <li><a href="#vacancies-mr" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">२. विभागनिहाय व पदनिहाय ५,७०७ जागांचा सविस्तर तक्ता</a></li>
-          <li><a href="#eligibility-mr" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">३. पदनिहाय शैक्षणिक पात्रता (Educational Qualification)</a></li>
-          <li><a href="#age-limit-mr" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">४. वयाची अट व सवलत (Age Limit Criteria)</a></li>
-          <li><a href="#dates-mr" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">५. महत्त्वाच्या तारखा (Important Dates & Deadline Extension)</a></li>
-          <li><a href="#links-mr" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">६. अधिकृत लिंक्स व अर्ज प्रक्रिया</a></li>
+        <ul
+          class="grid grid-cols-1 md:grid-cols-2 gap-3 list-none p-0 m-0 mt-2"
+        >
+          <li>
+            <a
+              href="#overview-mr"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >१. MPSC गट-क शुद्धिपत्रक २०२६ महत्त्वाचे अपडेट्स</a
+            >
+          </li>
+          <li>
+            <a
+              href="#vacancies-mr"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >२. विभागनिहाय व पदनिहाय ५,७०७ जागांचा सविस्तर तक्ता</a
+            >
+          </li>
+          <li>
+            <a
+              href="#eligibility-mr"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >३. पदनिहाय शैक्षणिक पात्रता (Educational Qualification)</a
+            >
+          </li>
+          <li>
+            <a
+              href="#age-limit-mr"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >४. वयाची अट व सवलत (Age Limit Criteria)</a
+            >
+          </li>
+          <li>
+            <a
+              href="#dates-mr"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >५. महत्त्वाच्या तारखा (Important Dates & Deadline Extension)</a
+            >
+          </li>
+          <li>
+            <a
+              href="#links-mr"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >६. अधिकृत लिंक्स व अर्ज प्रक्रिया</a
+            >
+          </li>
         </ul>
       </div>
 
       <!-- Main Article Content (Marathi) -->
       <div class="space-y-8 text-text-main leading-relaxed">
-        <h2 id="overview-mr">MPSC गट-क सेवा संयुक्त पूर्व परीक्षा २०२६: नवीन शुद्धिपत्रक व मुदतवाढ</h2>
+        <h2 id="overview-mr">
+          MPSC गट-क सेवा संयुक्त पूर्व परीक्षा २०२६: नवीन शुद्धिपत्रक व मुदतवाढ
+        </h2>
         <p>
-          <strong>महाराष्ट्र लोकसेवा आयोग (MPSC)</strong> मार्फत <strong>महाराष्ट्र गट-क सेवा संयुक्त पूर्व परीक्षा - २०२६ (जाहिरात क्रमांक: ०१७/२०२६)</strong> अंतर्गत नवीन शुद्धिपत्रक प्रसिद्ध करण्यात आले आहे. या शुद्धिपत्रकानुसार विविध शासकीय विभागांकडून प्राप्त झालेल्या अतिरिक्त मागणीपत्रांचा समावेश करण्यात आला असून, एकूण पदसंख्या वाढवून <strong>५,७०७ पदे (२६१९ + ३०८८ = ५७०७ पदे)</strong> करण्यात आली आहे.
+          <strong>महाराष्ट्र लोकसेवा आयोग (MPSC)</strong> मार्फत <strong
+            >महाराष्ट्र गट-क सेवा संयुक्त पूर्व परीक्षा - २०२६ (जाहिरात क्रमांक:
+            ०१७/२०२६)</strong
+          > अंतर्गत नवीन शुद्धिपत्रक प्रसिद्ध करण्यात आले आहे. या शुद्धिपत्रकानुसार
+          विविध शासकीय विभागांकडून प्राप्त झालेल्या अतिरिक्त मागणीपत्रांचा समावेश
+          करण्यात आला असून, एकूण पदसंख्या वाढवून <strong
+            >५,७०७ पदे (२६१९ + ३०८८ = ५७०७ पदे)</strong
+          > करण्यात आली आहे.
         </p>
         <p>
-          ऑनलाईन अर्ज करण्यासाठी उमेदवारांना मुदतवाढ देण्यात आली असून <span class="line-through text-text-muted/70 font-normal">०५ ऑगस्ट २०२६</span> <strong>१० ऑगस्ट २०२६</strong> पर्यंत सुधारित ऑनलाईन अर्ज करता येतील. संयुक्त पूर्व परीक्षा <strong>२५ ऑक्टोबर २०२६</strong> रोजी आयोजित केली जाणार आहे.
+          ऑनलाईन अर्ज करण्यासाठी उमेदवारांना मुदतवाढ देण्यात आली असून <span
+            class="line-through text-text-muted/70 font-normal"
+            >०५ ऑगस्ट २०२६</span
+          >
+          <strong>१० ऑगस्ट २०२६</strong> पर्यंत सुधारित ऑनलाईन अर्ज करता येतील. संयुक्त
+          पूर्व परीक्षा <strong>२५ ऑक्टोबर २०२६</strong> रोजी आयोजित केली जाणार आहे.
         </p>
 
         <!-- Departmental Vacancy Table (Marathi) -->
-        <h2 id="vacancies-mr" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">
+        <h2
+          id="vacancies-mr"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
           विभागनिहाय व पदनिहाय ५,७०७ रिक्त पदांचा सविस्तर तक्ता
         </h2>
-        <p>गट-क भरती २०२६ अंतर्गत समाविष्ट सर्व ११ पदप्रकार व विभागांची माहिती खालीलप्रमाणे आहे:</p>
+        <p>
+          गट-क भरती २०२६ अंतर्गत समाविष्ट सर्व ११ पदप्रकार व विभागांची माहिती
+          खालीलप्रमाणे आहे:
+        </p>
 
         <div class="overflow-x-auto my-6">
-          <table class="w-full text-left border-collapse border border-border-card rounded-2xl overflow-hidden shadow-sm">
+          <table
+            class="w-full text-left border-collapse border border-border-card rounded-2xl overflow-hidden shadow-sm"
+          >
             <thead>
               <tr class="bg-primary/10 text-text-main">
-                <th class="p-3.5 border border-border-card font-extrabold text-sm text-center">पद क्र.</th>
-                <th class="p-3.5 border border-border-card font-extrabold text-sm">पदनाम (Post Name)</th>
-                <th class="p-3.5 border border-border-card font-extrabold text-sm">विभाग (Department)</th>
-                <th class="p-3.5 border border-border-card font-extrabold text-sm text-center">एकूण पदे</th>
+                <th
+                  class="p-3.5 border border-border-card font-extrabold text-sm text-center"
+                  >पद क्र.</th
+                >
+                <th
+                  class="p-3.5 border border-border-card font-extrabold text-sm"
+                  >पदनाम (Post Name)</th
+                >
+                <th
+                  class="p-3.5 border border-border-card font-extrabold text-sm"
+                  >विभाग (Department)</th
+                >
+                <th
+                  class="p-3.5 border border-border-card font-extrabold text-sm text-center"
+                  >एकूण पदे</th
+                >
               </tr>
             </thead>
             <tbody class="text-sm">
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card font-bold text-center">1</td>
-                <td class="p-3.5 border border-border-card font-bold text-text-main">उद्योग निरीक्षक</td>
-                <td class="p-3.5 border border-border-card font-semibold text-text-muted">उद्योग ऊर्जा व कामगार विभाग</td>
-                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary">09</td>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-center"
+                  >1</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                  >उद्योग निरीक्षक</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-semibold text-text-muted"
+                  >उद्योग ऊर्जा व कामगार विभाग</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-extrabold text-center text-primary"
+                  >09</td
+                >
               </tr>
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card font-bold text-center">2</td>
-                <td class="p-3.5 border border-border-card font-bold text-text-main">तांत्रिक सहायक</td>
-                <td class="p-3.5 border border-border-card font-semibold text-text-muted">वित्त विभाग</td>
-                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary">03</td>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-center"
+                  >2</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                  >तांत्रिक सहायक</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-semibold text-text-muted"
+                  >वित्त विभाग</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-extrabold text-center text-primary"
+                  >03</td
+                >
               </tr>
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card font-bold text-center">3</td>
-                <td class="p-3.5 border border-border-card font-bold text-text-main">कर सहायक</td>
-                <td class="p-3.5 border border-border-card font-semibold text-text-muted">वित्त विभाग</td>
-                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary">282</td>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-center"
+                  >3</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                  >कर सहायक</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-semibold text-text-muted"
+                  >वित्त विभाग</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-extrabold text-center text-primary"
+                  >282</td
+                >
               </tr>
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card font-bold text-center">4</td>
-                <td class="p-3.5 border border-border-card font-bold text-text-main">सहायक मोटार वाहन निरीक्षक, गट-क (AMVI)</td>
-                <td class="p-3.5 border border-border-card font-semibold text-text-muted">गृह विभाग</td>
-                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary">461</td>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-center"
+                  >4</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                  >सहायक मोटार वाहन निरीक्षक, गट-क (AMVI)</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-semibold text-text-muted"
+                  >गृह विभाग</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-extrabold text-center text-primary"
+                  >461</td
+                >
               </tr>
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card font-bold text-center">5</td>
-                <td class="p-3.5 border border-border-card font-bold text-text-main">लिपिक-टंकलेखक</td>
-                <td class="p-3.5 border border-border-card font-semibold text-text-muted">मंत्रालयीन प्रशासकीय विभाग तसेच राज्य शासनाची महाराष्ट्रातील विविध कार्यालये</td>
-                <td class="p-3.5 border border-border-card font-black text-center text-primary text-base">1,864</td>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-center"
+                  >5</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                  >लिपिक-टंकलेखक</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-semibold text-text-muted"
+                  >मंत्रालयीन प्रशासकीय विभाग तसेच राज्य शासनाची महाराष्ट्रातील
+                  विविध कार्यालये</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-black text-center text-primary text-base"
+                  >1,864</td
+                >
               </tr>
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card font-bold text-center">6</td>
-                <td class="p-3.5 border border-border-card font-bold text-primary">ग्राम महसूल अधिकारी (तलाठी), गट-क (विविध नियुक्ती प्राधिकारी)</td>
-                <td class="p-3.5 border border-border-card font-semibold text-text-muted">महसूल व वन विभाग</td>
-                <td class="p-3.5 border border-border-card font-black text-center text-primary text-base">1,539</td>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-center"
+                  >6</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-bold text-primary"
+                  >ग्राम महसूल अधिकारी (तलाठी), गट-क (विविध नियुक्ती प्राधिकारी)</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-semibold text-text-muted"
+                  >महसूल व वन विभाग</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-black text-center text-primary text-base"
+                  >1,539</td
+                >
               </tr>
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card font-bold text-center">7</td>
-                <td class="p-3.5 border border-border-card font-bold text-text-main">वरिष्ठ अभिलेखापाल / वरिष्ठ लिपिक / अभिलेखापाल, गट-क</td>
-                <td class="p-3.5 border border-border-card font-semibold text-text-muted">राज्य ग्राहक तक्रार निवारण आयोग, मुंबई</td>
-                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary">11</td>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-center"
+                  >7</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                  >वरिष्ठ अभिलेखापाल / वरिष्ठ लिपिक / अभिलेखापाल, गट-क</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-semibold text-text-muted"
+                  >राज्य ग्राहक तक्रार निवारण आयोग, मुंबई</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-extrabold text-center text-primary"
+                  >11</td
+                >
               </tr>
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card font-bold text-center">8</td>
-                <td class="p-3.5 border border-border-card font-bold text-text-main">सहायक अधीक्षक, गट-क</td>
-                <td class="p-3.5 border border-border-card font-semibold text-text-muted">राज्य ग्राहक तक्रार निवारण आयोग, मुंबई</td>
-                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary">11</td>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-center"
+                  >8</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                  >सहायक अधीक्षक, गट-क</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-semibold text-text-muted"
+                  >राज्य ग्राहक तक्रार निवारण आयोग, मुंबई</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-extrabold text-center text-primary"
+                  >11</td
+                >
               </tr>
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card font-bold text-center">9</td>
-                <td class="p-3.5 border border-border-card font-bold text-text-main">सहाय्यक मत्स्यव्यवसाय विकास अधिकारी (तांत्रिक), गट-क</td>
-                <td class="p-3.5 border border-border-card font-semibold text-text-muted">कृषी व प. दु. म. विभाग</td>
-                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary">254</td>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-center"
+                  >9</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                  >सहाय्यक मत्स्यव्यवसाय विकास अधिकारी (तांत्रिक), गट-क</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-semibold text-text-muted"
+                  >कृषी व प. दु. म. विभाग</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-extrabold text-center text-primary"
+                  >254</td
+                >
               </tr>
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card font-bold text-center" rowspan="4">10</td>
-                <td class="p-3.5 border border-border-card font-bold text-text-main" rowspan="4">लिपिक-टंकलेखक (विविध नियुक्ती प्राधिकारी)</td>
-                <td class="p-3.5 border border-border-card text-xs">नियंत्रक शिधावाटप व संचालक नागरी पुरवठा कार्यालय (230 पदे)</td>
-                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary" rowspan="4">944 <br/><span class="text-[0.65rem] text-text-muted font-normal">(230+155+69+490)</span></td>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-center"
+                  rowspan="4">10</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                  rowspan="4">लिपिक-टंकलेखक (विविध नियुक्ती प्राधिकारी)</td
+                >
+                <td class="p-3.5 border border-border-card text-xs"
+                  >नियंत्रक शिधावाटप व संचालक नागरी पुरवठा कार्यालय (230 पदे)</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-extrabold text-center text-primary"
+                  rowspan="4"
+                  >944 <br /><span
+                    class="text-[0.65rem] text-text-muted font-normal"
+                    >(230+155+69+490)</span
+                  ></td
+                >
               </tr>
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card text-xs">अन्न नागरी पुरवठा व ग्राहक संरक्षण विभाग (155 पदे)</td>
+                <td class="p-3.5 border border-border-card text-xs"
+                  >अन्न नागरी पुरवठा व ग्राहक संरक्षण विभाग (155 पदे)</td
+                >
               </tr>
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card text-xs">आदिवासी विकास विभाग (69 पदे)</td>
+                <td class="p-3.5 border border-border-card text-xs"
+                  >आदिवासी विकास विभाग (69 पदे)</td
+                >
               </tr>
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card text-xs">महसूल व वन विभाग (490 पदे)</td>
+                <td class="p-3.5 border border-border-card text-xs"
+                  >महसूल व वन विभाग (490 पदे)</td
+                >
               </tr>
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card font-bold text-center">11</td>
-                <td class="p-3.5 border border-border-card font-bold text-text-main">लिपिक-टंकलेखक नोंदणी व मुद्रांक विभाग</td>
-                <td class="p-3.5 border border-border-card font-semibold text-text-muted">महसूल व वन विभाग</td>
-                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary">339</td>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-center"
+                  >11</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                  >लिपिक-टंकलेखक नोंदणी व मुद्रांक विभाग</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-semibold text-text-muted"
+                  >महसूल व वन विभाग</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-extrabold text-center text-primary"
+                  >339</td
+                >
               </tr>
               <tr class="bg-primary/10 font-extrabold">
-                <td class="p-4 border border-border-card text-center text-base" colspan="3">एकूण पदे (Grand Total)</td>
-                <td class="p-4 border border-border-card text-center text-primary text-2xl font-black">5,707 <br/><span class="text-xs font-bold text-text-muted">(2619 + 3088 = 5707)</span></td>
+                <td
+                  class="p-4 border border-border-card text-center text-base"
+                  colspan="3">एकूण पदे (Grand Total)</td
+                >
+                <td
+                  class="p-4 border border-border-card text-center text-primary text-2xl font-black"
+                  >5,707 <br /><span class="text-xs font-bold text-text-muted"
+                    >(2619 + 3088 = 5707)</span
+                  ></td
+                >
               </tr>
             </tbody>
           </table>
         </div>
 
         <!-- Educational Eligibility Section -->
-        <h2 id="eligibility-mr" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">
+        <h2
+          id="eligibility-mr"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
           पदनिहाय शैक्षणिक पात्रता (Educational Qualification)
         </h2>
-        <div class="bg-bg-surface border border-border-card rounded-2xl p-5 md:p-6 space-y-3.5">
-          <div class="flex items-start gap-2.5 pb-2.5 border-b border-border-card/60">
-            <span class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-md shrink-0">पद क्र. 1</span>
+        <div
+          class="bg-bg-surface border border-border-card rounded-2xl p-5 md:p-6 space-y-3.5"
+        >
+          <div
+            class="flex items-start gap-2.5 pb-2.5 border-b border-border-card/60"
+          >
+            <span
+              class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-md shrink-0"
+              >पद क्र. 1</span
+            >
             <div>
-              <strong class="text-text-main block text-sm">उद्योग निरीक्षक:</strong>
-              <span class="text-xs text-text-muted">इंजिनिअरिंग पदवी किंवा तंत्रज्ञानातील डिप्लोमा किंवा विज्ञान शाखेतील पदवी.</span>
+              <strong class="text-text-main block text-sm"
+                >उद्योग निरीक्षक:</strong
+              >
+              <span class="text-xs text-text-muted"
+                >इंजिनिअरिंग पदवी किंवा तंत्रज्ञानातील डिप्लोमा किंवा विज्ञान
+                शाखेतील पदवी.</span
+              >
             </div>
           </div>
 
-          <div class="flex items-start gap-2.5 pb-2.5 border-b border-border-card/60">
-            <span class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-md shrink-0">पद क्र. 2</span>
+          <div
+            class="flex items-start gap-2.5 pb-2.5 border-b border-border-card/60"
+          >
+            <span
+              class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-md shrink-0"
+              >पद क्र. 2</span
+            >
             <div>
-              <strong class="text-text-main block text-sm">तांत्रिक सहायक:</strong>
-              <span class="text-xs text-text-muted">कोणत्याही शाखेतील पदवीधर (Degree).</span>
+              <strong class="text-text-main block text-sm"
+                >तांत्रिक सहायक:</strong
+              >
+              <span class="text-xs text-text-muted"
+                >कोणत्याही शाखेतील पदवीधर (Degree).</span
+              >
             </div>
           </div>
 
-          <div class="flex items-start gap-2.5 pb-2.5 border-b border-border-card/60">
-            <span class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-md shrink-0">पद क्र. 3</span>
+          <div
+            class="flex items-start gap-2.5 pb-2.5 border-b border-border-card/60"
+          >
+            <span
+              class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-md shrink-0"
+              >पद क्र. 3</span
+            >
             <div>
               <strong class="text-text-main block text-sm">कर सहायक:</strong>
-              <span class="text-xs text-text-muted">(i) पदवीधर (ii) मराठी टंकलेखन ३० श.प्र.मि. व इंग्रजी टंकलेखन ४० श.प्र.मि. (GCC-TBC).</span>
+              <span class="text-xs text-text-muted"
+                >(i) पदवीधर (ii) मराठी टंकलेखन ३० श.प्र.मि. व इंग्रजी टंकलेखन ४०
+                श.प्र.मि. (GCC-TBC).</span
+              >
             </div>
           </div>
 
-          <div class="flex items-start gap-2.5 pb-2.5 border-b border-border-card/60">
-            <span class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-md shrink-0">पद क्र. 4</span>
+          <div
+            class="flex items-start gap-2.5 pb-2.5 border-b border-border-card/60"
+          >
+            <span
+              class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-md shrink-0"
+              >पद क्र. 4</span
+            >
             <div>
-              <strong class="text-text-main block text-sm">सहायक मोटार वाहन निरीक्षक (AMVI):</strong>
-              <span class="text-xs text-text-muted">१०वी उत्तीर्ण + ऑटोमोबाईल / मेकॅनिकल इंजिनिअरिंग डिप्लोमा किंवा पदवी किंवा समतुल्य किंवा B.Tech (मेकॅट्रॉनिक्स/मेकॅनिकल आणि स्मार्ट मॅन्युफॅक्चरिंग किंवा मेटलर्जीमधील पदवी किंवा B.E (इंडस्ट्रियल & प्रॉडक्शन / प्रॉडक्शन सँडविच) किंवा मॅन्युफॅक्चरिंग ऑटोमेशन डिप्लोमा किंवा टूल & डाय मेकिंगमधील ०४ वर्षांचा डिप्लोमा.</span>
+              <strong class="text-text-main block text-sm"
+                >सहायक मोटार वाहन निरीक्षक (AMVI):</strong
+              >
+              <span class="text-xs text-text-muted"
+                >१०वी उत्तीर्ण + ऑटोमोबाईल / मेकॅनिकल इंजिनिअरिंग डिप्लोमा किंवा
+                पदवी किंवा समतुल्य किंवा B.Tech (मेकॅट्रॉनिक्स/मेकॅनिकल आणि
+                स्मार्ट मॅन्युफॅक्चरिंग किंवा मेटलर्जीमधील पदवी किंवा B.E
+                (इंडस्ट्रियल & प्रॉडक्शन / प्रॉडक्शन सँडविच) किंवा
+                मॅन्युफॅक्चरिंग ऑटोमेशन डिप्लोमा किंवा टूल & डाय मेकिंगमधील ०४
+                वर्षांचा डिप्लोमा.</span
+              >
             </div>
           </div>
 
-          <div class="flex items-start gap-2.5 pb-2.5 border-b border-border-card/60">
-            <span class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-md shrink-0">पद क्र. 5</span>
+          <div
+            class="flex items-start gap-2.5 pb-2.5 border-b border-border-card/60"
+          >
+            <span
+              class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-md shrink-0"
+              >पद क्र. 5</span
+            >
             <div>
-              <strong class="text-text-main block text-sm">लिपिक-टंकलेखक (मंत्रालयीन व विविध कार्यालये):</strong>
-              <span class="text-xs text-text-muted">(i) पदवीधर (ii) मराठी टंकलेखन ३० श.प्र.मि. किंवा इंग्रजी टंकलेखन ४० श.प्र.मि.</span>
+              <strong class="text-text-main block text-sm"
+                >लिपिक-टंकलेखक (मंत्रालयीन व विविध कार्यालये):</strong
+              >
+              <span class="text-xs text-text-muted"
+                >(i) पदवीधर (ii) मराठी टंकलेखन ३० श.प्र.मि. किंवा इंग्रजी
+                टंकलेखन ४० श.प्र.मि.</span
+              >
             </div>
           </div>
 
-          <div class="flex items-start gap-2.5 pb-2.5 border-b border-border-card/60">
-            <span class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-md shrink-0">पद क्र. 6</span>
+          <div
+            class="flex items-start gap-2.5 pb-2.5 border-b border-border-card/60"
+          >
+            <span
+              class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-md shrink-0"
+              >पद क्र. 6</span
+            >
             <div>
-              <strong class="text-text-main block text-sm">ग्राम महसूल अधिकारी (तलाठी), गट-क:</strong>
-              <span class="text-xs text-text-muted">कोणत्याही शाखेतील पदवी (Graduate in any discipline).</span>
+              <strong class="text-text-main block text-sm"
+                >ग्राम महसूल अधिकारी (तलाठी), गट-क:</strong
+              >
+              <span class="text-xs text-text-muted"
+                >कोणत्याही शाखेतील पदवी (Graduate in any discipline).</span
+              >
             </div>
           </div>
 
-          <div class="flex items-start gap-2.5 pb-2.5 border-b border-border-card/60">
-            <span class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-md shrink-0">पद क्र. 7</span>
+          <div
+            class="flex items-start gap-2.5 pb-2.5 border-b border-border-card/60"
+          >
+            <span
+              class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-md shrink-0"
+              >पद क्र. 7</span
+            >
             <div>
-              <strong class="text-text-main block text-sm">वरिष्ठ अभिलेखापाल / वरिष्ठ लिपिक / अभिलेखापाल:</strong>
-              <span class="text-xs text-text-muted">कोणत्याही शाखेतील पदवी.</span>
+              <strong class="text-text-main block text-sm"
+                >वरिष्ठ अभिलेखापाल / वरिष्ठ लिपिक / अभिलेखापाल:</strong
+              >
+              <span class="text-xs text-text-muted"
+                >कोणत्याही शाखेतील पदवी.</span
+              >
             </div>
           </div>
 
-          <div class="flex items-start gap-2.5 pb-2.5 border-b border-border-card/60">
-            <span class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-md shrink-0">पद क्र. 8</span>
+          <div
+            class="flex items-start gap-2.5 pb-2.5 border-b border-border-card/60"
+          >
+            <span
+              class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-md shrink-0"
+              >पद क्र. 8</span
+            >
             <div>
-              <strong class="text-text-main block text-sm">सहायक अधीक्षक, गट-क:</strong>
-              <span class="text-xs text-text-muted">कोणत्याही शाखेतील पदवी.</span>
+              <strong class="text-text-main block text-sm"
+                >सहायक अधीक्षक, गट-क:</strong
+              >
+              <span class="text-xs text-text-muted"
+                >कोणत्याही शाखेतील पदवी.</span
+              >
             </div>
           </div>
 
-          <div class="flex items-start gap-2.5 pb-2.5 border-b border-border-card/60">
-            <span class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-md shrink-0">पद क्र. 9</span>
+          <div
+            class="flex items-start gap-2.5 pb-2.5 border-b border-border-card/60"
+          >
+            <span
+              class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-md shrink-0"
+              >पद क्र. 9</span
+            >
             <div>
-              <strong class="text-text-main block text-sm">सहाय्यक मत्स्यव्यवसाय विकास अधिकारी (तांत्रिक):</strong>
-              <span class="text-xs text-text-muted font-semibold text-emerald-600 dark:text-emerald-400">मत्स्यविज्ञान विषयातील किमान द्वितीय श्रेणीतील पदवी (B.F.Sc.).</span>
+              <strong class="text-text-main block text-sm"
+                >सहाय्यक मत्स्यव्यवसाय विकास अधिकारी (तांत्रिक):</strong
+              >
+              <span
+                class="text-xs text-text-muted font-semibold text-emerald-600 dark:text-emerald-400"
+                >मत्स्यविज्ञान विषयातील किमान द्वितीय श्रेणीतील पदवी (B.F.Sc.).</span
+              >
             </div>
           </div>
 
-          <div class="flex items-start gap-2.5 pb-2.5 border-b border-border-card/60">
-            <span class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-md shrink-0">पद क्र. 10</span>
+          <div
+            class="flex items-start gap-2.5 pb-2.5 border-b border-border-card/60"
+          >
+            <span
+              class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-md shrink-0"
+              >पद क्र. 10</span
+            >
             <div>
-              <strong class="text-text-main block text-sm">लिपिक-टंकलेखक (विविध विभाग):</strong>
-              <span class="text-xs text-text-muted">(i) पदवीधर (ii) मराठी टंकलेखन ३० श.प्र.मि. किंवा इंग्रजी टंकलेखन ४० श.प्र.मि.</span>
+              <strong class="text-text-main block text-sm"
+                >लिपिक-टंकलेखक (विविध विभाग):</strong
+              >
+              <span class="text-xs text-text-muted"
+                >(i) पदवीधर (ii) मराठी टंकलेखन ३० श.प्र.मि. किंवा इंग्रजी
+                टंकलेखन ४० श.प्र.मि.</span
+              >
             </div>
           </div>
 
           <div class="flex items-start gap-2.5">
-            <span class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-md shrink-0">पद क्र. 11</span>
+            <span
+              class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-md shrink-0"
+              >पद क्र. 11</span
+            >
             <div>
-              <strong class="text-text-main block text-sm">लिपिक-टंकलेखक (नोंदणी व मुद्रांक विभाग):</strong>
-              <span class="text-xs text-text-muted">(i) पदवीधर (ii) मराठी टंकलेखन ३० श.प्र.मि. किंवा इंग्रजी टंकलेखन ४० श.प्र.मि.</span>
+              <strong class="text-text-main block text-sm"
+                >लिपिक-टंकलेखक (नोंदणी व मुद्रांक विभाग):</strong
+              >
+              <span class="text-xs text-text-muted"
+                >(i) पदवीधर (ii) मराठी टंकलेखन ३० श.प्र.मि. किंवा इंग्रजी
+                टंकलेखन ४० श.प्र.मि.</span
+              >
             </div>
           </div>
         </div>
 
         <!-- Age Limit Section -->
-        <h2 id="age-limit-mr" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">
+        <h2
+          id="age-limit-mr"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
           वयाची अट व सवलत (Age Limit Criteria)
         </h2>
-        <div class="bg-bg-surface border border-border-card rounded-2xl p-5 md:p-6 space-y-4">
+        <div
+          class="bg-bg-surface border border-border-card rounded-2xl p-5 md:p-6 space-y-4"
+        >
           <p class="text-xs sm:text-sm text-text-muted mb-3 m-0">
-            <strong>वयोमर्यादा गणण्याचा दिनांक:</strong> <span class="text-primary font-bold">०१ ऑक्टोबर २०२६</span> रोजी [मागासवर्गीय / आ.दु.घ (EWS) / अनाथ उमेदवारांसाठी: <strong>०५ वर्षे सूट</strong>]
+            <strong>वयोमर्यादा गणण्याचा दिनांक:</strong>
+            <span class="text-primary font-bold">०१ ऑक्टोबर २०२६</span> रोजी [मागासवर्गीय
+            / आ.दु.घ (EWS) / अनाथ उमेदवारांसाठी: <strong>०५ वर्षे सूट</strong>]
           </p>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs"
+          >
             <div class="p-3 bg-bg-base rounded-xl border border-border-card">
-              <strong class="block text-text-main mb-1">पद क्र. १ (उद्योग निरीक्षक):</strong>
+              <strong class="block text-text-main mb-1"
+                >पद क्र. १ (उद्योग निरीक्षक):</strong
+              >
               <span class="text-primary font-bold text-sm">१९ ते ३८ वर्षे</span>
             </div>
             <div class="p-3 bg-bg-base rounded-xl border border-border-card">
-              <strong class="block text-text-main mb-1">पद क्र. २ (तांत्रिक सहायक):</strong>
+              <strong class="block text-text-main mb-1"
+                >पद क्र. २ (तांत्रिक सहायक):</strong
+              >
               <span class="text-primary font-bold text-sm">१९ ते ३८ वर्षे</span>
             </div>
             <div class="p-3 bg-bg-base rounded-xl border border-border-card">
-              <strong class="block text-text-main mb-1">पद क्र. ३ (कर सहायक):</strong>
+              <strong class="block text-text-main mb-1"
+                >पद क्र. ३ (कर सहायक):</strong
+              >
               <span class="text-primary font-bold text-sm">१८ ते ३८ वर्षे</span>
             </div>
             <div class="p-3 bg-bg-base rounded-xl border border-border-card">
-              <strong class="block text-text-main mb-1">पद क्र. ४ (AMVI):</strong>
+              <strong class="block text-text-main mb-1"
+                >पद क्र. ४ (AMVI):</strong
+              >
               <span class="text-primary font-bold text-sm">१९ ते ३८ वर्षे</span>
             </div>
             <div class="p-3 bg-bg-base rounded-xl border border-border-card">
-              <strong class="block text-text-main mb-1">पद क्र. ५ (लिपिक-टंकलेखक):</strong>
+              <strong class="block text-text-main mb-1"
+                >पद क्र. ५ (लिपिक-टंकलेखक):</strong
+              >
               <span class="text-primary font-bold text-sm">१९ ते ३८ वर्षे</span>
             </div>
             <div class="p-3 bg-bg-base rounded-xl border border-border-card">
-              <strong class="block text-text-main mb-1">पद क्र. ६ (तलाठी):</strong>
+              <strong class="block text-text-main mb-1"
+                >पद क्र. ६ (तलाठी):</strong
+              >
               <span class="text-primary font-bold text-sm">१८ ते ३८ वर्षे</span>
             </div>
-            <div class="p-3 bg-bg-base rounded-xl border border-border-card sm:col-span-2 md:col-span-3">
-              <strong class="block text-text-main mb-1">पद क्र. ७ ते ११:</strong>
-              <span class="text-text-muted font-medium">जाहिरातीत स्वतंत्रपणे नमूद नाही / MPSC नियमानुसार</span>
+            <div
+              class="p-3 bg-bg-base rounded-xl border border-border-card sm:col-span-2 md:col-span-3"
+            >
+              <strong class="block text-text-main mb-1">पद क्र. ७ ते ११:</strong
+              >
+              <span class="text-text-muted font-medium"
+                >जाहिरातीत स्वतंत्रपणे नमूद नाही / MPSC नियमानुसार</span
+              >
             </div>
           </div>
         </div>
 
         <!-- Key Dates Section -->
-        <h2 id="dates-mr" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">
+        <h2
+          id="dates-mr"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
           महत्त्वाच्या तारखा आणि मुदतवाढ (Important Dates & Schedule)
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
-          <div class="p-5 bg-bg-surface border border-border-card rounded-2xl flex items-start gap-4">
+          <div
+            class="p-5 bg-bg-surface border border-border-card rounded-2xl flex items-start gap-4"
+          >
             <div class="p-3 bg-rose-500/10 text-rose-500 rounded-xl shrink-0">
               <HiOutlineCalendarDays className="text-2xl" />
             </div>
             <div>
-              <span class="text-xs text-text-muted font-bold uppercase tracking-wider block">ऑनलाईन अर्ज करण्याची नवीन शेवटची तारीख</span>
-              <span class="text-lg font-black text-rose-600 dark:text-rose-400"><span class="line-through text-text-muted/70 font-normal text-sm mr-1.5">०५ ऑगस्ट, २०२६</span>१० ऑगस्ट, २०२६</span>
-              <p class="text-xs text-text-muted mt-1 m-0">शुद्धिपत्रकानुसार अर्ज भरण्यास सुधारित मुदतवाढ.</p>
+              <span
+                class="text-xs text-text-muted font-bold uppercase tracking-wider block"
+                >ऑनलाईन अर्ज करण्याची नवीन शेवटची तारीख</span
+              >
+              <span class="text-lg font-black text-rose-600 dark:text-rose-400"
+                ><span
+                  class="line-through text-text-muted/70 font-normal text-sm mr-1.5"
+                  >०५ ऑगस्ट, २०२६</span
+                >१० ऑगस्ट, २०२६</span
+              >
+              <p class="text-xs text-text-muted mt-1 m-0">
+                शुद्धिपत्रकानुसार अर्ज भरण्यास सुधारित मुदतवाढ.
+              </p>
             </div>
           </div>
 
-          <div class="p-5 bg-bg-surface border border-border-card rounded-2xl flex items-start gap-4">
-            <div class="p-3 bg-emerald-500/10 text-emerald-500 rounded-xl shrink-0">
+          <div
+            class="p-5 bg-bg-surface border border-border-card rounded-2xl flex items-start gap-4"
+          >
+            <div
+              class="p-3 bg-emerald-500/10 text-emerald-500 rounded-xl shrink-0"
+            >
               <HiOutlineCalendarDays className="text-2xl" />
             </div>
             <div>
-              <span class="text-xs text-text-muted font-bold uppercase tracking-wider block">संयुक्त पूर्व परीक्षा तारीख (Prelims Exam Date)</span>
-              <span class="text-lg font-black text-emerald-600 dark:text-emerald-400">२५ ऑक्टोबर, २०२६</span>
-              <p class="text-xs text-text-muted mt-1 m-0">प्रचलित पद्धतीने (Offline - OMR आधारित) परीक्षा घेण्यात येईल.</p>
+              <span
+                class="text-xs text-text-muted font-bold uppercase tracking-wider block"
+                >संयुक्त पूर्व परीक्षा तारीख (Prelims Exam Date)</span
+              >
+              <span
+                class="text-lg font-black text-emerald-600 dark:text-emerald-400"
+                >२५ ऑक्टोबर, २०२६</span
+              >
+              <p class="text-xs text-text-muted mt-1 m-0">
+                प्रचलित पद्धतीने (Offline - OMR आधारित) परीक्षा घेण्यात येईल.
+              </p>
             </div>
           </div>
         </div>
 
         <!-- Official Links Table -->
-        <h2 id="links-mr" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">
+        <h2
+          id="links-mr"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
           अधिकृत लिंक्स (Official Direct Links)
         </h2>
         <div class="overflow-x-auto mt-3 mb-8">
           <table class="w-full text-left border-collapse">
             <thead>
               <tr class="bg-primary/10">
-                <th class="p-3.5 border border-border-card font-bold text-text-main">तपशील (Resource)</th>
-                <th class="p-3.5 border border-border-card font-bold text-text-main">डायरेक्ट लिंक (Action)</th>
+                <th
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                  >तपशील (Resource)</th
+                >
+                <th
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                  >डायरेक्ट लिंक (Action)</th
+                >
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="p-3.5 border border-border-card font-semibold text-text-main">MPSC ऑनलाईन अर्ज पोर्टल (Apply Online)</td>
+                <td
+                  class="p-3.5 border border-border-card font-semibold text-text-main"
+                  >MPSC ऑनलाईन अर्ज पोर्टल (Apply Online)</td
+                >
                 <td class="p-3.5 border border-border-card">
-                  <a href="https://mpsconline.gov.in" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-all shadow-sm">
-                    <HiOutlineCursorArrowRays className="text-base shrink-0" /> mpsconline.gov.in वर अर्ज करा
+                  <a
+                    href="https://mpsconline.gov.in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-all shadow-sm"
+                  >
+                    <HiOutlineCursorArrowRays className="text-base shrink-0" /> mpsconline.gov.in
+                    वर अर्ज करा
                   </a>
                 </td>
               </tr>
               <tr>
-                <td class="p-3.5 border border-border-card font-semibold text-text-main">MPSC अधिकृत वेबसाईट (Official Website)</td>
+                <td
+                  class="p-3.5 border border-border-card font-semibold text-text-main"
+                  >MPSC अधिकृत वेबसाईट (Official Website)</td
+                >
                 <td class="p-3.5 border border-border-card">
-                  <a href="https://mpsc.gov.in" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-primary/10 hover:bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider rounded-xl transition-all border border-primary/30">
-                    <HiOutlineArrowTopRightOnSquare className="text-base shrink-0" /> mpsc.gov.in ला भेट द्या
+                  <a
+                    href="https://mpsc.gov.in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-primary/10 hover:bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider rounded-xl transition-all border border-primary/30"
+                  >
+                    <HiOutlineArrowTopRightOnSquare
+                      className="text-base shrink-0"
+                    /> mpsc.gov.in ला भेट द्या
                   </a>
                 </td>
               </tr>
@@ -479,234 +995,563 @@ const category = "MPSC Bharti";
     </div>
 
     <!-- ================= LANGUAGE SEPARATOR ================= -->
-    <div class="my-16 border-t-2 border-dashed border-border-card flex items-center justify-center relative">
-      <span class="absolute bg-bg-base px-8 py-2 text-base sm:text-lg font-extrabold uppercase tracking-widest text-primary border border-border-card rounded-full shadow-md">
+    <div
+      class="my-16 border-t-2 border-dashed border-border-card flex items-center justify-center relative"
+    >
+      <span
+        class="absolute bg-bg-base px-8 py-2 text-base sm:text-lg font-extrabold uppercase tracking-widest text-primary border border-border-card rounded-full shadow-md"
+      >
         English Version
       </span>
     </div>
 
     <!-- ================= ENGLISH VERSION ================= -->
-    <div id="english-version" class="opacity-95 space-y-8 text-text-main leading-relaxed">
+    <div
+      id="english-version"
+      class="opacity-95 space-y-8 text-text-main leading-relaxed"
+    >
       <!-- English Header / Title -->
       <div class="mb-8">
         <h2 class="text-2xl md:text-3xl font-extrabold text-text-main mb-3">
-          MPSC Group C Services Combined Prelims Exam 2026: Corrigendum Released for 5,707 Vacancies & Deadline Extended
+          MPSC Group C Services Combined Prelims Exam 2026: Corrigendum Released
+          for 5,707 Vacancies & Deadline Extended
         </h2>
         <p class="text-text-muted leading-relaxed italic">
-          Maharashtra Public Service Commission (MPSC) has released an updated Corrigendum notification regarding Maharashtra Group C Services Combined Preliminary Examination 2026 (Advt No. 017/2026), expanding total vacancies to 5,707 posts (2,619 + 3,088).
+          Maharashtra Public Service Commission (MPSC) has released an updated
+          Corrigendum notification regarding Maharashtra Group C Services
+          Combined Preliminary Examination 2026 (Advt No. 017/2026), expanding
+          total vacancies to 5,707 posts (2,619 + 3,088).
         </p>
       </div>
 
       <!-- English Table of Contents -->
-      <div class="bg-bg-surface border border-border-card rounded-3xl p-6 md:p-8 mb-12">
-        <h2 class="text-xl font-bold text-text-main mb-4 flex items-center gap-2 m-0 border-none">
+      <div
+        class="bg-bg-surface border border-border-card rounded-3xl p-6 md:p-8 mb-12"
+      >
+        <h2
+          class="text-xl font-bold text-text-main mb-4 flex items-center gap-2 m-0 border-none"
+        >
           <HiOutlineDocumentText className="text-primary" />
           Table of Contents (English)
         </h2>
-        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 list-none p-0 m-0 mt-2">
-          <li><a href="#overview-en" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">1. MPSC Group C Corrigendum Overview</a></li>
-          <li><a href="#vacancies-en" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">2. Department-wise 5,707 Vacancy Breakdown Table</a></li>
-          <li><a href="#eligibility-en" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">3. Post-wise Educational Qualifications</a></li>
-          <li><a href="#age-en" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">4. Age Limit & Relaxation Criteria</a></li>
-          <li><a href="#dates-en" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">5. Key Dates & Application Schedule</a></li>
-          <li><a href="#links-en" class="text-text-muted hover:text-primary transition-colors text-sm font-medium">6. Official Apply Online Links</a></li>
+        <ul
+          class="grid grid-cols-1 md:grid-cols-2 gap-3 list-none p-0 m-0 mt-2"
+        >
+          <li>
+            <a
+              href="#overview-en"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >1. MPSC Group C Corrigendum Overview</a
+            >
+          </li>
+          <li>
+            <a
+              href="#vacancies-en"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >2. Department-wise 5,707 Vacancy Breakdown Table</a
+            >
+          </li>
+          <li>
+            <a
+              href="#eligibility-en"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >3. Post-wise Educational Qualifications</a
+            >
+          </li>
+          <li>
+            <a
+              href="#age-en"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >4. Age Limit & Relaxation Criteria</a
+            >
+          </li>
+          <li>
+            <a
+              href="#dates-en"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >5. Key Dates & Application Schedule</a
+            >
+          </li>
+          <li>
+            <a
+              href="#links-en"
+              class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+              >6. Official Apply Online Links</a
+            >
+          </li>
         </ul>
       </div>
 
       <!-- English Main Article Content -->
       <div class="space-y-8 text-text-main leading-relaxed">
-        <h2 id="overview-en">MPSC Group C Combined Exam 2026: Notice Details & Vacancy Hike</h2>
+        <h2 id="overview-en">
+          MPSC Group C Combined Exam 2026: Notice Details & Vacancy Hike
+        </h2>
         <p>
-          The <strong>Maharashtra Public Service Commission (MPSC)</strong> has published an updated <strong>Corrigendum Notice</strong> for the <strong>Group C Services Combined Preliminary Examination 2026</strong> (Advt No. 017/2026).
+          The <strong>Maharashtra Public Service Commission (MPSC)</strong> has published
+          an updated <strong>Corrigendum Notice</strong> for the <strong
+            >Group C Services Combined Preliminary Examination 2026</strong
+          > (Advt No. 017/2026).
         </p>
         <p>
-          Following additional requisitions submitted by Maharashtra State Government departments, the overall post count has been increased to <strong>5,707 vacancies</strong> (2,619 + 3,088). Online application submission deadline has been extended from <span class="line-through text-text-muted/70 font-normal">05 August 2026</span> to <strong>10 August 2026</strong>, while the preliminary examination will take place on <strong>25 October 2026</strong>.
+          Following additional requisitions submitted by Maharashtra State
+          Government departments, the overall post count has been increased to <strong
+            >5,707 vacancies</strong
+          > (2,619 + 3,088). Online application submission deadline has been extended
+          from <span class="line-through text-text-muted/70 font-normal"
+            >05 August 2026</span
+          > to <strong>10 August 2026</strong>, while the preliminary
+          examination will take place on <strong>25 October 2026</strong>.
         </p>
 
         <!-- Departmental Vacancy Table (English) -->
-        <h2 id="vacancies-en" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">
+        <h2
+          id="vacancies-en"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
           Department-wise & Post-wise 5,707 Vacancies Breakdown Table
         </h2>
 
         <div class="overflow-x-auto my-6">
-          <table class="w-full text-left border-collapse border border-border-card rounded-2xl overflow-hidden shadow-sm">
+          <table
+            class="w-full text-left border-collapse border border-border-card rounded-2xl overflow-hidden shadow-sm"
+          >
             <thead>
               <tr class="bg-primary/10 text-text-main">
-                <th class="p-3.5 border border-border-card font-extrabold text-sm text-center">Post No.</th>
-                <th class="p-3.5 border border-border-card font-extrabold text-sm">Post Name</th>
-                <th class="p-3.5 border border-border-card font-extrabold text-sm">Department Name</th>
-                <th class="p-3.5 border border-border-card font-extrabold text-sm text-center">Total Posts</th>
+                <th
+                  class="p-3.5 border border-border-card font-extrabold text-sm text-center"
+                  >Post No.</th
+                >
+                <th
+                  class="p-3.5 border border-border-card font-extrabold text-sm"
+                  >Post Name</th
+                >
+                <th
+                  class="p-3.5 border border-border-card font-extrabold text-sm"
+                  >Department Name</th
+                >
+                <th
+                  class="p-3.5 border border-border-card font-extrabold text-sm text-center"
+                  >Total Posts</th
+                >
               </tr>
             </thead>
             <tbody class="text-sm">
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card font-bold text-center">1</td>
-                <td class="p-3.5 border border-border-card font-bold text-text-main">Industry Inspector</td>
-                <td class="p-3.5 border border-border-card font-semibold text-text-muted">Industry, Energy & Labour Department</td>
-                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary">09</td>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-center"
+                  >1</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                  >Industry Inspector</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-semibold text-text-muted"
+                  >Industry, Energy & Labour Department</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-extrabold text-center text-primary"
+                  >09</td
+                >
               </tr>
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card font-bold text-center">2</td>
-                <td class="p-3.5 border border-border-card font-bold text-text-main">Technical Assistant</td>
-                <td class="p-3.5 border border-border-card font-semibold text-text-muted">Finance Department</td>
-                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary">03</td>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-center"
+                  >2</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                  >Technical Assistant</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-semibold text-text-muted"
+                  >Finance Department</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-extrabold text-center text-primary"
+                  >03</td
+                >
               </tr>
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card font-bold text-center">3</td>
-                <td class="p-3.5 border border-border-card font-bold text-text-main">Tax Assistant</td>
-                <td class="p-3.5 border border-border-card font-semibold text-text-muted">Finance Department</td>
-                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary">282</td>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-center"
+                  >3</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                  >Tax Assistant</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-semibold text-text-muted"
+                  >Finance Department</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-extrabold text-center text-primary"
+                  >282</td
+                >
               </tr>
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card font-bold text-center">4</td>
-                <td class="p-3.5 border border-border-card font-bold text-text-main">Assistant Motor Vehicle Inspector (AMVI), Group-C</td>
-                <td class="p-3.5 border border-border-card font-semibold text-text-muted">Home Department</td>
-                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary">461</td>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-center"
+                  >4</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                  >Assistant Motor Vehicle Inspector (AMVI), Group-C</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-semibold text-text-muted"
+                  >Home Department</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-extrabold text-center text-primary"
+                  >461</td
+                >
               </tr>
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card font-bold text-center">5</td>
-                <td class="p-3.5 border border-border-card font-bold text-text-main">Clerk-Typist</td>
-                <td class="p-3.5 border border-border-card font-semibold text-text-muted">Mantralaya Administrative Depts & State Govt Offices</td>
-                <td class="p-3.5 border border-border-card font-black text-center text-primary text-base">1,864</td>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-center"
+                  >5</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                  >Clerk-Typist</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-semibold text-text-muted"
+                  >Mantralaya Administrative Depts & State Govt Offices</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-black text-center text-primary text-base"
+                  >1,864</td
+                >
               </tr>
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card font-bold text-center">6</td>
-                <td class="p-3.5 border border-border-card font-bold text-primary">Gram Mahasul Adhikari (Talathi), Group-C</td>
-                <td class="p-3.5 border border-border-card font-semibold text-text-muted">Revenue & Forest Department</td>
-                <td class="p-3.5 border border-border-card font-black text-center text-primary text-base">1,539</td>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-center"
+                  >6</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-bold text-primary"
+                  >Gram Mahasul Adhikari (Talathi), Group-C</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-semibold text-text-muted"
+                  >Revenue & Forest Department</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-black text-center text-primary text-base"
+                  >1,539</td
+                >
               </tr>
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card font-bold text-center">7</td>
-                <td class="p-3.5 border border-border-card font-bold text-text-main">Senior Archivist / Senior Clerk / Archivist, Group-C</td>
-                <td class="p-3.5 border border-border-card font-semibold text-text-muted">State Consumer Disputes Redressal Commission, Mumbai</td>
-                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary">11</td>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-center"
+                  >7</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                  >Senior Archivist / Senior Clerk / Archivist, Group-C</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-semibold text-text-muted"
+                  >State Consumer Disputes Redressal Commission, Mumbai</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-extrabold text-center text-primary"
+                  >11</td
+                >
               </tr>
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card font-bold text-center">8</td>
-                <td class="p-3.5 border border-border-card font-bold text-text-main">Assistant Superintendent, Group-C</td>
-                <td class="p-3.5 border border-border-card font-semibold text-text-muted">State Consumer Disputes Redressal Commission, Mumbai</td>
-                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary">11</td>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-center"
+                  >8</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                  >Assistant Superintendent, Group-C</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-semibold text-text-muted"
+                  >State Consumer Disputes Redressal Commission, Mumbai</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-extrabold text-center text-primary"
+                  >11</td
+                >
               </tr>
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card font-bold text-center">9</td>
-                <td class="p-3.5 border border-border-card font-bold text-text-main">Assistant Fisheries Development Officer (Technical)</td>
-                <td class="p-3.5 border border-border-card font-semibold text-text-muted">Agriculture, Animal Husbandry & Fisheries Dept</td>
-                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary">254</td>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-center"
+                  >9</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                  >Assistant Fisheries Development Officer (Technical)</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-semibold text-text-muted"
+                  >Agriculture, Animal Husbandry & Fisheries Dept</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-extrabold text-center text-primary"
+                  >254</td
+                >
               </tr>
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card font-bold text-center" rowspan="4">10</td>
-                <td class="p-3.5 border border-border-card font-bold text-text-main" rowspan="4">Clerk-Typist (Various Authorities)</td>
-                <td class="p-3.5 border border-border-card text-xs">Rationing Controller & Director Civil Supplies (230)</td>
-                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary" rowspan="4">944 <br/><span class="text-[0.65rem] text-text-muted font-normal">(230+155+69+490)</span></td>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-center"
+                  rowspan="4">10</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                  rowspan="4">Clerk-Typist (Various Authorities)</td
+                >
+                <td class="p-3.5 border border-border-card text-xs"
+                  >Rationing Controller & Director Civil Supplies (230)</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-extrabold text-center text-primary"
+                  rowspan="4"
+                  >944 <br /><span
+                    class="text-[0.65rem] text-text-muted font-normal"
+                    >(230+155+69+490)</span
+                  ></td
+                >
               </tr>
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card text-xs">Food, Civil Supplies & Consumer Protection Dept (155)</td>
+                <td class="p-3.5 border border-border-card text-xs"
+                  >Food, Civil Supplies & Consumer Protection Dept (155)</td
+                >
               </tr>
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card text-xs">Tribal Development Department (69)</td>
+                <td class="p-3.5 border border-border-card text-xs"
+                  >Tribal Development Department (69)</td
+                >
               </tr>
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card text-xs">Revenue & Forest Department (490)</td>
+                <td class="p-3.5 border border-border-card text-xs"
+                  >Revenue & Forest Department (490)</td
+                >
               </tr>
               <tr class="hover:bg-bg-surface/50">
-                <td class="p-3.5 border border-border-card font-bold text-center">11</td>
-                <td class="p-3.5 border border-border-card font-bold text-text-main">Clerk-Typist (Registration & Stamps)</td>
-                <td class="p-3.5 border border-border-card font-semibold text-text-muted">Revenue & Forest Department</td>
-                <td class="p-3.5 border border-border-card font-extrabold text-center text-primary">339</td>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-center"
+                  >11</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                  >Clerk-Typist (Registration & Stamps)</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-semibold text-text-muted"
+                  >Revenue & Forest Department</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-extrabold text-center text-primary"
+                  >339</td
+                >
               </tr>
               <tr class="bg-primary/10 font-extrabold">
-                <td class="p-4 border border-border-card text-center text-base" colspan="3">Grand Total</td>
-                <td class="p-4 border border-border-card text-center text-primary text-2xl font-black">5,707 <br/><span class="text-xs font-bold text-text-muted">(2619 + 3088 = 5707)</span></td>
+                <td
+                  class="p-4 border border-border-card text-center text-base"
+                  colspan="3">Grand Total</td
+                >
+                <td
+                  class="p-4 border border-border-card text-center text-primary text-2xl font-black"
+                  >5,707 <br /><span class="text-xs font-bold text-text-muted"
+                    >(2619 + 3088 = 5707)</span
+                  ></td
+                >
               </tr>
             </tbody>
           </table>
         </div>
 
         <!-- Educational Qualifications Section (English) -->
-        <h2 id="eligibility-en" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">
+        <h2
+          id="eligibility-en"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
           Post-wise Educational Qualifications
         </h2>
         <ul class="list-disc pl-5 space-y-2 text-sm text-text-main">
-          <li><strong>Post 1 (Industry Inspector):</strong> Engineering Degree OR Tech Diploma OR B.Sc. degree.</li>
-          <li><strong>Post 2 (Technical Assistant):</strong> Bachelor's Degree in any discipline.</li>
-          <li><strong>Post 3 (Tax Assistant):</strong> (i) Bachelor's Degree (ii) Marathi Typing 30 WPM & English Typing 40 WPM (GCC-TBC).</li>
-          <li><strong>Post 4 (Assistant Motor Vehicle Inspector - AMVI):</strong> 10th Pass + Diploma/Degree in Automobile/Mechanical Engineering or B.Tech (Mechatronics/Mechanical & Smart Mfg/Metallurgy) or B.E (Industrial & Production / Production Sandwich) or 4-year Tool & Die Diploma.</li>
-          <li><strong>Post 5 (Clerk-Typist - Mantralaya & Govt Offices):</strong> (i) Bachelor's Degree (ii) Marathi Typing 30 WPM OR English Typing 40 WPM.</li>
-          <li><strong>Post 6 (Gram Mahasul Adhikari / Talathi):</strong> Bachelor's Degree in any discipline from a recognized university.</li>
-          <li><strong>Post 7 (Senior Archivist / Sr. Clerk / Archivist):</strong> Degree in any discipline.</li>
-          <li><strong>Post 8 (Assistant Superintendent):</strong> Degree in any discipline.</li>
-          <li><strong>Post 9 (Assistant Fisheries Development Officer):</strong> Bachelor's Degree in Fisheries Science (B.F.Sc.) with minimum 2nd class.</li>
-          <li><strong>Post 10 (Clerk-Typist - Various Depts):</strong> (i) Bachelor's Degree (ii) Marathi Typing 30 WPM OR English Typing 40 WPM.</li>
-          <li><strong>Post 11 (Clerk-Typist - Registration & Stamps):</strong> (i) Bachelor's Degree (ii) Marathi Typing 30 WPM OR English Typing 40 WPM.</li>
+          <li>
+            <strong>Post 1 (Industry Inspector):</strong> Engineering Degree OR Tech
+            Diploma OR B.Sc. degree.
+          </li>
+          <li>
+            <strong>Post 2 (Technical Assistant):</strong> Bachelor's Degree in any
+            discipline.
+          </li>
+          <li>
+            <strong>Post 3 (Tax Assistant):</strong> (i) Bachelor's Degree (ii) Marathi
+            Typing 30 WPM & English Typing 40 WPM (GCC-TBC).
+          </li>
+          <li>
+            <strong>Post 4 (Assistant Motor Vehicle Inspector - AMVI):</strong> 10th
+            Pass + Diploma/Degree in Automobile/Mechanical Engineering or B.Tech (Mechatronics/Mechanical
+            & Smart Mfg/Metallurgy) or B.E (Industrial & Production / Production Sandwich)
+            or 4-year Tool & Die Diploma.
+          </li>
+          <li>
+            <strong>Post 5 (Clerk-Typist - Mantralaya & Govt Offices):</strong> (i)
+            Bachelor's Degree (ii) Marathi Typing 30 WPM OR English Typing 40 WPM.
+          </li>
+          <li>
+            <strong>Post 6 (Gram Mahasul Adhikari / Talathi):</strong> Bachelor's
+            Degree in any discipline from a recognized university.
+          </li>
+          <li>
+            <strong>Post 7 (Senior Archivist / Sr. Clerk / Archivist):</strong> Degree
+            in any discipline.
+          </li>
+          <li>
+            <strong>Post 8 (Assistant Superintendent):</strong> Degree in any discipline.
+          </li>
+          <li>
+            <strong>Post 9 (Assistant Fisheries Development Officer):</strong> Bachelor's
+            Degree in Fisheries Science (B.F.Sc.) with minimum 2nd class.
+          </li>
+          <li>
+            <strong>Post 10 (Clerk-Typist - Various Depts):</strong> (i) Bachelor's
+            Degree (ii) Marathi Typing 30 WPM OR English Typing 40 WPM.
+          </li>
+          <li>
+            <strong>Post 11 (Clerk-Typist - Registration & Stamps):</strong> (i) Bachelor's
+            Degree (ii) Marathi Typing 30 WPM OR English Typing 40 WPM.
+          </li>
         </ul>
 
         <!-- Age Criteria Section (English) -->
-        <h2 id="age-en" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">
+        <h2
+          id="age-en"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
           Age Limit & Relaxation Criteria
         </h2>
         <p class="text-sm text-text-muted">
-          Age calculated as on <strong>01 October 2026</strong> [Age relaxation of <strong>5 years</strong> for Reserved categories / EWS / Orphan candidates].
+          Age calculated as on <strong>01 October 2026</strong> [Age relaxation of
+          <strong>5 years</strong> for Reserved categories / EWS / Orphan candidates].
         </p>
         <ul class="list-disc pl-5 space-y-1 text-sm text-text-main">
           <li><strong>Posts 1, 2, 4, 5:</strong> 19 to 38 years</li>
           <li><strong>Posts 3, 6 (Talathi):</strong> 18 to 38 years</li>
-          <li><strong>Posts 7 to 11:</strong> As per MPSC rules / As applicable</li>
+          <li>
+            <strong>Posts 7 to 11:</strong> As per MPSC rules / As applicable
+          </li>
         </ul>
 
         <!-- Key Dates Section (English) -->
-        <h2 id="dates-en" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">
+        <h2
+          id="dates-en"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
           Important Dates & Schedule Extension
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
-          <div class="p-5 bg-bg-surface border border-border-card rounded-2xl flex items-start gap-4">
+          <div
+            class="p-5 bg-bg-surface border border-border-card rounded-2xl flex items-start gap-4"
+          >
             <div class="p-3 bg-rose-500/10 text-rose-500 rounded-xl shrink-0">
               <HiOutlineCalendarDays className="text-2xl" />
             </div>
             <div>
-              <span class="text-xs text-text-muted font-bold uppercase tracking-wider block">Revised Online Application Deadline</span>
-              <span class="text-lg font-black text-rose-600 dark:text-rose-400"><span class="line-through text-text-muted/70 font-normal text-sm mr-1.5">05 August 2026</span>10 August 2026</span>
-              <p class="text-xs text-text-muted mt-1 m-0">Application window extended as per corrigendum notice.</p>
+              <span
+                class="text-xs text-text-muted font-bold uppercase tracking-wider block"
+                >Revised Online Application Deadline</span
+              >
+              <span class="text-lg font-black text-rose-600 dark:text-rose-400"
+                ><span
+                  class="line-through text-text-muted/70 font-normal text-sm mr-1.5"
+                  >05 August 2026</span
+                >10 August 2026</span
+              >
+              <p class="text-xs text-text-muted mt-1 m-0">
+                Application window extended as per corrigendum notice.
+              </p>
             </div>
           </div>
 
-          <div class="p-5 bg-bg-surface border border-border-card rounded-2xl flex items-start gap-4">
-            <div class="p-3 bg-emerald-500/10 text-emerald-500 rounded-xl shrink-0">
+          <div
+            class="p-5 bg-bg-surface border border-border-card rounded-2xl flex items-start gap-4"
+          >
+            <div
+              class="p-3 bg-emerald-500/10 text-emerald-500 rounded-xl shrink-0"
+            >
               <HiOutlineCalendarDays className="text-2xl" />
             </div>
             <div>
-              <span class="text-xs text-text-muted font-bold uppercase tracking-wider block">Combined Prelims Exam Date</span>
-              <span class="text-lg font-black text-emerald-600 dark:text-emerald-400">25 October 2026</span>
-              <p class="text-xs text-text-muted mt-1 m-0">Offline (OMR-based) objective examination format.</p>
+              <span
+                class="text-xs text-text-muted font-bold uppercase tracking-wider block"
+                >Combined Prelims Exam Date</span
+              >
+              <span
+                class="text-lg font-black text-emerald-600 dark:text-emerald-400"
+                >25 October 2026</span
+              >
+              <p class="text-xs text-text-muted mt-1 m-0">
+                Offline (OMR-based) objective examination format.
+              </p>
             </div>
           </div>
         </div>
 
         <!-- Official Links Table (English) -->
-        <h2 id="links-en" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">
+        <h2
+          id="links-en"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
           Official Links & Application Direct Portals
         </h2>
         <div class="overflow-x-auto mt-3 mb-8">
           <table class="w-full text-left border-collapse">
             <thead>
               <tr class="bg-primary/10">
-                <th class="p-3.5 border border-border-card font-bold text-text-main">Resource</th>
-                <th class="p-3.5 border border-border-card font-bold text-text-main">Direct Action Link</th>
+                <th
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                  >Resource</th
+                >
+                <th
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                  >Direct Action Link</th
+                >
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="p-3.5 border border-border-card font-semibold text-text-main">MPSC Online Application Portal</td>
+                <td
+                  class="p-3.5 border border-border-card font-semibold text-text-main"
+                  >MPSC Online Application Portal</td
+                >
                 <td class="p-3.5 border border-border-card">
-                  <a href="https://mpsconline.gov.in" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-all shadow-sm">
-                    <HiOutlineCursorArrowRays className="text-base shrink-0" /> Apply Online (mpsconline.gov.in)
+                  <a
+                    href="https://mpsconline.gov.in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-all shadow-sm"
+                  >
+                    <HiOutlineCursorArrowRays className="text-base shrink-0" /> Apply
+                    Online (mpsconline.gov.in)
                   </a>
                 </td>
               </tr>
               <tr>
-                <td class="p-3.5 border border-border-card font-semibold text-text-main">MPSC Official Website</td>
+                <td
+                  class="p-3.5 border border-border-card font-semibold text-text-main"
+                  >MPSC Official Website</td
+                >
                 <td class="p-3.5 border border-border-card">
-                  <a href="https://mpsc.gov.in" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-primary/10 hover:bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider rounded-xl transition-all border border-primary/30">
-                    <HiOutlineArrowTopRightOnSquare className="text-base shrink-0" /> Visit mpsc.gov.in
+                  <a
+                    href="https://mpsc.gov.in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-primary/10 hover:bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider rounded-xl transition-all border border-primary/30"
+                  >
+                    <HiOutlineArrowTopRightOnSquare
+                      className="text-base shrink-0"
+                    /> Visit mpsc.gov.in
                   </a>
                 </td>
               </tr>
@@ -715,15 +1560,34 @@ const category = "MPSC Bharti";
         </div>
 
         <!-- FAQs (English) -->
-        <h2 class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">Frequently Asked Questions (FAQs)</h2>
+        <h2
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          Frequently Asked Questions (FAQs)
+        </h2>
         <div class="space-y-4 mt-3 mb-8">
           <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
-            <h3 class="text-lg font-bold text-text-main mb-2">Q1: What is the extended last date to apply for MPSC Group C Bharti 2026?</h3>
-            <p class="text-text-muted m-0">A1: As per the latest Corrigendum, the online application deadline has been extended from <span class="line-through text-text-muted/70 font-normal">05 August 2026</span> to <strong>10 August 2026</strong>.</p>
+            <h3 class="text-lg font-bold text-text-main mb-2">
+              Q1: What is the extended last date to apply for MPSC Group C
+              Bharti 2026?
+            </h3>
+            <p class="text-text-muted m-0">
+              A1: As per the latest Corrigendum, the online application deadline
+              has been extended from <span
+                class="line-through text-text-muted/70 font-normal"
+                >05 August 2026</span
+              > to <strong>10 August 2026</strong>.
+            </p>
           </div>
           <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
-            <h3 class="text-lg font-bold text-text-main mb-2">Q2: How many total vacancies are announced in MPSC Group C 2026?</h3>
-            <p class="text-text-muted m-0">A2: A total of <strong>5,707 vacancies</strong> (2,619 + 3,088) have been announced across 11 post categories in Maharashtra state government departments.</p>
+            <h3 class="text-lg font-bold text-text-main mb-2">
+              Q2: How many total vacancies are announced in MPSC Group C 2026?
+            </h3>
+            <p class="text-text-muted m-0">
+              A2: A total of <strong>5,707 vacancies</strong> (2,619 + 3,088) have
+              been announced across 11 post categories in Maharashtra state government
+              departments.
+            </p>
           </div>
         </div>
       </div>
@@ -731,38 +1595,75 @@ const category = "MPSC Bharti";
 
     <!-- Related Articles -->
     <div class="my-12 border-t border-border-card pt-8 not-prose">
-      <h3 class="text-xl font-bold text-text-main mb-6">📚 संबंधित इतर लेख (Related Articles)</h3>
+      <h3 class="text-xl font-bold text-text-main mb-6">
+        📚 संबंधित इतर लेख (Related Articles)
+      </h3>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <a href="/mpsc/mpsc-group-c-exam-details" class="p-4 bg-bg-surface border border-border-card hover:border-primary rounded-2xl flex items-center gap-3 transition-colors duration-300 no-underline group">
-          <div class="p-2.5 bg-primary/10 text-primary rounded-xl group-hover:bg-primary group-hover:text-white transition-all duration-300">
+        <a
+          href="/mpsc/mpsc-group-c-exam-details"
+          class="p-4 bg-bg-surface border border-border-card hover:border-primary rounded-2xl flex items-center gap-3 transition-colors duration-300 no-underline group"
+        >
+          <div
+            class="p-2.5 bg-primary/10 text-primary rounded-xl group-hover:bg-primary group-hover:text-white transition-all duration-300"
+          >
             <HiOutlineAcademicCap className="text-lg" />
           </div>
           <div>
-            <span class="text-[0.65rem] text-text-muted block font-semibold uppercase tracking-wider">MPSC Group C Details</span>
-            <span class="text-sm font-bold text-text-main group-hover:text-primary transition-colors">MPSC संयुक्त गट क परीक्षा सविस्तर माहिती व टायपिंग निकष</span>
+            <span
+              class="text-[0.65rem] text-text-muted block font-semibold uppercase tracking-wider"
+              >MPSC Group C Details</span
+            >
+            <span
+              class="text-sm font-bold text-text-main group-hover:text-primary transition-colors"
+              >MPSC संयुक्त गट क परीक्षा सविस्तर माहिती व टायपिंग निकष</span
+            >
           </div>
         </a>
-        <a href="/mpsc/mpsc-group-b-exam-details" class="p-4 bg-bg-surface border border-border-card hover:border-primary rounded-2xl flex items-center gap-3 transition-colors duration-300 no-underline group">
-          <div class="p-2.5 bg-primary/10 text-primary rounded-xl group-hover:bg-primary group-hover:text-white transition-all duration-300">
+        <a
+          href="/mpsc/mpsc-group-b-exam-details"
+          class="p-4 bg-bg-surface border border-border-card hover:border-primary rounded-2xl flex items-center gap-3 transition-colors duration-300 no-underline group"
+        >
+          <div
+            class="p-2.5 bg-primary/10 text-primary rounded-xl group-hover:bg-primary group-hover:text-white transition-all duration-300"
+          >
             <HiOutlineDocumentText className="text-lg" />
           </div>
           <div>
-            <span class="text-[0.65rem] text-text-muted block font-semibold uppercase tracking-wider">MPSC Group B Details</span>
-            <span class="text-sm font-bold text-text-main group-hover:text-primary transition-colors">MPSC संयुक्त गट ब (PSI, STI, ASO) संपूर्ण माहिती</span>
+            <span
+              class="text-[0.65rem] text-text-muted block font-semibold uppercase tracking-wider"
+              >MPSC Group B Details</span
+            >
+            <span
+              class="text-sm font-bold text-text-main group-hover:text-primary transition-colors"
+              >MPSC संयुक्त गट ब (PSI, STI, ASO) संपूर्ण माहिती</span
+            >
           </div>
         </a>
       </div>
     </div>
 
     <!-- Call to Action -->
-    <div class="bg-primary/5 border border-primary/20 p-8 rounded-3xl text-center my-8 not-prose">
-      <h2 class="text-2xl font-black text-text-main mb-4 border-none p-0 mt-0">MPSC नवनवीन भरती अपडेट्स WhatsApp वर मिळवा!</h2>
-      <p class="text-text-muted mb-6">MPSC, तलाठी भरती, हॉलतिकीट आणि निकालाबाबत त्वरित माहिती मिळवण्यासाठी आमच्या ग्रूपमध्ये सहभागी व्हा.</p>
+    <div
+      class="bg-primary/5 border border-primary/20 p-8 rounded-3xl text-center my-8 not-prose"
+    >
+      <h2 class="text-2xl font-black text-text-main mb-4 border-none p-0 mt-0">
+        MPSC नवनवीन भरती अपडेट्स WhatsApp वर मिळवा!
+      </h2>
+      <p class="text-text-muted mb-6">
+        MPSC, तलाठी भरती, हॉलतिकीट आणि निकालाबाबत त्वरित माहिती मिळवण्यासाठी
+        आमच्या ग्रूपमध्ये सहभागी व्हा.
+      </p>
       <div class="flex flex-wrap justify-center gap-4">
-        <a href="#" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-600 text-white text-sm font-bold uppercase tracking-wider rounded-xl transition-colors shadow-sm no-underline">
+        <a
+          href="#"
+          class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-600 text-white text-sm font-bold uppercase tracking-wider rounded-xl transition-colors shadow-sm no-underline"
+        >
           WhatsApp Group जॉईन करा
         </a>
-        <a href="#" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white text-sm font-bold uppercase tracking-wider rounded-xl transition-colors shadow-sm no-underline">
+        <a
+          href="#"
+          class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white text-sm font-bold uppercase tracking-wider rounded-xl transition-colors shadow-sm no-underline"
+        >
           Telegram Channel जॉईन करा
         </a>
       </div>

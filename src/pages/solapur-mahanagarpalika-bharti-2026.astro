@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import SocialShare from "../components/SocialShare.astro";
 import { translateMarathi } from "../utils/wordLibrary";
 import {
   HiOutlineCalendarDays,
@@ -28,6 +27,8 @@ const category = "State Govt";
   title={title}
   description={description}
   canonicalURL={canonicalURL}
+  pubDate={date}
+  category={category}
   image="https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&q=80&w=1200"
   article={true}
   customBreadcrumbs={[
@@ -35,21 +36,9 @@ const category = "State Govt";
     { name: "Solapur Mahanagarpalika Bharti" },
   ]}
 >
-  <article class="py-8">
+  <article class="pt-2 pb-8">
     <!-- Header -->
-    <div class="mb-12">
-      <div
-        class="flex items-center justify-between flex-wrap gap-3 mb-6 pb-3 border-b border-border-card/30"
-      >
-        <div class="flex items-center gap-2.5">
-          <span
-            class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shrink-0"
-            >{category}
-          </span>
-          <span class="text-text-muted text-xs sm:text-sm font-medium shrink-0">• {date}</span>
-        </div>
-        <SocialShare title={title} url={canonicalURL} />
-      </div>
+    <div class="mb-8">
       <h1
         class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-text-main mb-6 leading-[1.25]"
       >

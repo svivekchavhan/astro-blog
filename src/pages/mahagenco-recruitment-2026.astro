@@ -1,45 +1,42 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { translateMarathi } from "../utils/wordLibrary";
-import { 
-  HiOutlineCalendarDays, 
+import {
+  HiOutlineCalendarDays,
   HiOutlineCursorArrowRays,
   HiOutlineDocumentText,
   HiOutlineCurrencyRupee,
   HiOutlineMapPin,
   HiOutlineBuildingOffice,
   HiOutlineAcademicCap,
-  HiOutlineBriefcase
+  HiOutlineBriefcase,
 } from "react-icons/hi2";
 
-const title = "महानिर्मिती भरती २०२६: मुख्य अभियंता (तांत्रिक व स्थापत्य) ७ जागांसाठी जाहिरात प्रसिद्ध";
-const description = "MAHAGENCO Recruitment 2026 (Advt No. 07/2026): Apply online for 07 Chief Engineer (Technical & Civil) vacancies in Maharashtra State Power Generation Company Ltd. Read eligibility, vacancies breakdown, key dates, and official apply links.";
+const title =
+  "महानिर्मिती भरती २०२६: मुख्य अभियंता (तांत्रिक व स्थापत्य) ७ जागांसाठी जाहिरात प्रसिद्ध";
+const description =
+  "MAHAGENCO Recruitment 2026 (Advt No. 07/2026): Apply online for 07 Chief Engineer (Technical & Civil) vacancies in Maharashtra State Power Generation Company Ltd. Read eligibility, vacancies breakdown, key dates, and official apply links.";
 const canonicalURL = "https://mahasandhi.in/mahagenco-recruitment-2026";
 const date = "July 29, 2026";
 const category = "Latest Job";
 ---
 
-<Layout 
-  title={title} 
+<Layout
+  title={title}
   description={description}
   canonicalURL={canonicalURL}
+  pubDate={date}
+  category={category}
   image="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=1200"
   article={true}
   customBreadcrumbs={[
     { name: "Current Recruitment", url: "/current-recruitment" },
-    { name: "MAHAGENCO Recruitment" }
+    { name: "MAHAGENCO Recruitment" },
   ]}
 >
   <article class="py-8">
     <!-- Header -->
     <div class="mb-12">
-      <div class="flex items-center gap-3 mb-6">
-        <span
-          class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"
-          >{category}
-        </span>
-        <span class="text-text-muted text-sm">• {date}</span>
-      </div>
       <h1
         class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-text-main mb-6 leading-[1.25]"
       >
@@ -54,135 +51,293 @@ const category = "Latest Job";
 
     <!-- Quick Language Navigation Links -->
     <div class="flex gap-4 mb-8">
-      <a href="#marathi-version" class="text-primary font-bold text-sm hover:underline">↓ मराठी आवृत्ती (Marathi Version)</a>
+      <a
+        href="#marathi-version"
+        class="text-primary font-bold text-sm hover:underline"
+        >↓ मराठी आवृत्ती (Marathi Version)</a
+      >
       <span class="text-text-muted">|</span>
-      <a href="#english-version" class="text-primary font-bold text-sm hover:underline">↓ English Version</a>
+      <a
+        href="#english-version"
+        class="text-primary font-bold text-sm hover:underline"
+        >↓ English Version</a
+      >
     </div>
 
     <!-- ================= MARATHI VERSION ================= -->
     <div id="marathi-version">
       <div class="space-y-6 text-text-main leading-relaxed">
-        
-        <h2 id="main-keyword-mr" class="text-2xl font-bold mt-2">महाराष्ट्र राज्य विद्युत निर्मिती कंपनी मर्यादित (महानिर्मिती) जाहिरात क्र. ०७/२०२६</h2>
+        <h2 id="main-keyword-mr" class="text-2xl font-bold mt-2">
+          महाराष्ट्र राज्य विद्युत निर्मिती कंपनी मर्यादित (महानिर्मिती) जाहिरात
+          क्र. ०७/२०२६
+        </h2>
 
         <!-- Introduction -->
         <div class="mb-6">
           <p>
-            <strong>Introduction:</strong> महानिर्मिती कंपनी ही महाराष्ट्र शासनाचा उपक्रम असून ऊर्जा निर्मिती क्षेत्रात देशात दुसऱ्या क्रमांकाची कंपनी आहे. १३,१५२ मे.व्हॉट स्थापित क्षमता (औष्णिक, जल, वायु आणि सौर) आणि ११,००० पेक्षा जास्त मनुष्यबळ असलेल्या कंपनीकडून <strong>मुख्य अभियंता (महानिर्मिती)</strong> आणि <strong>मुख्य अभियंता (स्थापत्य)</strong> या पदांवर नियमित तत्त्वावर भरतीसाठी पात्र उमेदवारांकडून अर्ज मागविण्यात येत आहेत.
+            <strong>Introduction:</strong> महानिर्मिती कंपनी ही महाराष्ट्र शासनाचा
+            उपक्रम असून ऊर्जा निर्मिती क्षेत्रात देशात दुसऱ्या क्रमांकाची कंपनी आहे.
+            १३,१५२ मे.व्हॉट स्थापित क्षमता (औष्णिक, जल, वायु आणि सौर) आणि ११,००० पेक्षा
+            जास्त मनुष्यबळ असलेल्या कंपनीकडून <strong
+              >मुख्य अभियंता (महानिर्मिती)</strong
+            > आणि <strong>मुख्य अभियंता (स्थापत्य)</strong> या पदांवर नियमित तत्त्वावर
+            भरतीसाठी पात्र उमेदवारांकडून अर्ज मागविण्यात येत आहेत.
           </p>
           <hr class="border-border-card my-6" />
         </div>
 
         <!-- Key Information Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
-          <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
-            <HiOutlineDocumentText className="text-primary text-2xl shrink-0 mt-0.5" />
+          <div
+            class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3"
+          >
+            <HiOutlineDocumentText
+              className="text-primary text-2xl shrink-0 mt-0.5"
+            />
             <div>
-              <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">जाहिरात क्र. (Advt No.)</span>
-              <span class="text-text-main font-semibold text-sm">जाहिरात क्र. ०७ / २०२६</span>
+              <span
+                class="text-xs text-text-muted block uppercase font-bold tracking-wider"
+                >जाहिरात क्र. (Advt No.)</span
+              >
+              <span class="text-text-main font-semibold text-sm"
+                >जाहिरात क्र. ०७ / २०२६</span
+              >
             </div>
           </div>
-          <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
-            <HiOutlineMapPin className="text-primary text-2xl shrink-0 mt-0.5" />
+          <div
+            class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3"
+          >
+            <HiOutlineMapPin
+              className="text-primary text-2xl shrink-0 mt-0.5"
+            />
             <div>
-              <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">नोकरीचे ठिकाण (Job Location)</span>
-              <span class="text-text-main font-semibold text-sm">महाराष्ट्र (Maharashtra)</span>
+              <span
+                class="text-xs text-text-muted block uppercase font-bold tracking-wider"
+                >नोकरीचे ठिकाण (Job Location)</span
+              >
+              <span class="text-text-main font-semibold text-sm"
+                >महाराष्ट्र (Maharashtra)</span
+              >
             </div>
           </div>
-          <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
-            <HiOutlineCurrencyRupee className="text-primary text-2xl shrink-0 mt-0.5" />
+          <div
+            class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3"
+          >
+            <HiOutlineCurrencyRupee
+              className="text-primary text-2xl shrink-0 mt-0.5"
+            />
             <div>
-              <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">अर्जाची पद्धत (Application Mode)</span>
-              <span class="text-text-main font-semibold text-sm">ऑनलाईन / अधिकृत संकेतस्थळ</span>
+              <span
+                class="text-xs text-text-muted block uppercase font-bold tracking-wider"
+                >अर्जाची पद्धत (Application Mode)</span
+              >
+              <span class="text-text-main font-semibold text-sm"
+                >ऑनलाईन / अधिकृत संकेतस्थळ</span
+              >
             </div>
           </div>
         </div>
 
         <!-- Post Details & Vacancy Category Breakdown Table -->
-        <h2 id="details" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">पदांचे नाव, जागा व सामाजिक वर्गवारी (Post Details & Category Breakdown)</h2>
+        <h2
+          id="details"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          पदांचे नाव, जागा व सामाजिक वर्गवारी (Post Details & Category
+          Breakdown)
+        </h2>
         <div class="overflow-x-auto mt-3 mb-8">
           <table class="w-full text-left border-collapse text-sm">
             <thead>
               <tr class="bg-primary/10">
-                <th class="p-3 border border-border-card font-bold text-text-main whitespace-nowrap">पदाचा कोड</th>
-                <th class="p-3 border border-border-card font-bold text-text-main">पदाचे नाव (Post Name)</th>
-                <th class="p-3 border border-border-card font-bold text-text-main">एकूण जागा</th>
-                <th class="p-3 border border-border-card font-bold text-text-main">प्रवर्गनिहाय सामाजिक आरक्षण (Category Distribution)</th>
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main whitespace-nowrap"
+                  >पदाचा कोड</th
+                >
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >पदाचे नाव (Post Name)</th
+                >
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >एकूण जागा</th
+                >
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >प्रवर्गनिहाय सामाजिक आरक्षण (Category Distribution)</th
+                >
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="p-3 border border-border-card text-text-muted font-medium text-center">तांत्रिक-०१</td>
-                <td class="p-3 border border-border-card text-text-muted font-bold">मुख्य अभियंता (महानिर्मिती)</td>
-                <td class="p-3 border border-border-card text-primary font-extrabold text-center">०५</td>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium text-center"
+                  >तांत्रिक-०१</td
+                >
+                <td
+                  class="p-3 border border-border-card text-text-muted font-bold"
+                  >मुख्य अभियंता (महानिर्मिती)</td
+                >
+                <td
+                  class="p-3 border border-border-card text-primary font-extrabold text-center"
+                  >०५</td
+                >
                 <td class="p-3 border border-border-card text-text-muted">
-                  अनुसूचित जमाती (ST): ०१ | भज-क (VJ-C): ०१ | भज-ड (VJ-D): ०१ | SEBC (सा.आणि शै.मा.वर्ग): ०१ | EWS (आ.दु.घ.): ०१
+                  अनुसूचित जमाती (ST): ०१ | भज-क (VJ-C): ०१ | भज-ड (VJ-D): ०१ |
+                  SEBC (सा.आणि शै.मा.वर्ग): ०१ | EWS (आ.दु.घ.): ०१
                 </td>
               </tr>
               <tr>
-                <td class="p-3 border border-border-card text-text-muted font-medium text-center">स्थापत्य-०१</td>
-                <td class="p-3 border border-border-card text-text-muted font-bold">मुख्य अभियंता (स्थापत्य)</td>
-                <td class="p-3 border border-border-card text-primary font-extrabold text-center">०२</td>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium text-center"
+                  >स्थापत्य-०१</td
+                >
+                <td
+                  class="p-3 border border-border-card text-text-muted font-bold"
+                  >मुख्य अभियंता (स्थापत्य)</td
+                >
+                <td
+                  class="p-3 border border-border-card text-primary font-extrabold text-center"
+                  >०२</td
+                >
                 <td class="p-3 border border-border-card text-text-muted">
                   अनुसूचित जाती (SC): ०१ | खुला (Open): ०१
                 </td>
               </tr>
               <tr class="bg-primary/5">
-                <td colspan="2" class="p-3 border border-border-card font-bold text-text-main text-right">एकूण रिक्त पदे (Total Vacancies)</td>
-                <td class="p-3 border border-border-card font-bold text-primary text-center">०७</td>
-                <td class="p-3 border border-border-card font-bold text-text-muted">तांत्रिक (०५) + स्थापत्य (०२) = ०७ पदे</td>
+                <td
+                  colspan="2"
+                  class="p-3 border border-border-card font-bold text-text-main text-right"
+                  >एकूण रिक्त पदे (Total Vacancies)</td
+                >
+                <td
+                  class="p-3 border border-border-card font-bold text-primary text-center"
+                  >०७</td
+                >
+                <td
+                  class="p-3 border border-border-card font-bold text-text-muted"
+                  >तांत्रिक (०५) + स्थापत्य (०२) = ०७ पदे</td
+                >
               </tr>
             </tbody>
           </table>
         </div>
 
         <!-- Educational Qualification & Experience Requirements -->
-        <h2 id="eligibility" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">शैक्षणिक पात्रता व अनुभव (Educational Qualifications & Experience)</h2>
-        <div class="bg-bg-surface border border-border-card p-5 rounded-2xl text-sm space-y-4">
+        <h2
+          id="eligibility"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          शैक्षणिक पात्रता व अनुभव (Educational Qualifications & Experience)
+        </h2>
+        <div
+          class="bg-bg-surface border border-border-card p-5 rounded-2xl text-sm space-y-4"
+        >
           <div>
-            <h3 class="text-base font-bold text-text-main mb-1">१) मुख्य अभियंता (तांत्रिक) - पद कोड: तांत्रिक-०१:</h3>
-            <p class="text-text-muted m-0">मान्यताप्राप्त विद्यापीठातून अभियांत्रिकी पदवी (इलेक्ट्रिकल / मेकॅनिकल / इलेक्ट्रॉनिक्स / इन्स्ट्रुमेंटेशन इंजिनिअरिंग) आणि ऊर्जा निर्मिती किंवा औष्णिक/जल/सौर ऊर्जा प्रकल्पांमधील संबंधित उच्च पदस्थ व्यवस्थापकीय/अभियांत्रिकी कामाचा किमान १५ वर्षांचा अनुभव.</p>
+            <h3 class="text-base font-bold text-text-main mb-1">
+              १) मुख्य अभियंता (तांत्रिक) - पद कोड: तांत्रिक-०१:
+            </h3>
+            <p class="text-text-muted m-0">
+              मान्यताप्राप्त विद्यापीठातून अभियांत्रिकी पदवी (इलेक्ट्रिकल /
+              मेकॅनिकल / इलेक्ट्रॉनिक्स / इन्स्ट्रुमेंटेशन इंजिनिअरिंग) आणि
+              ऊर्जा निर्मिती किंवा औष्णिक/जल/सौर ऊर्जा प्रकल्पांमधील संबंधित
+              उच्च पदस्थ व्यवस्थापकीय/अभियांत्रिकी कामाचा किमान १५ वर्षांचा
+              अनुभव.
+            </p>
           </div>
           <div>
-            <h3 class="text-base font-bold text-text-main mb-1">२) मुख्य अभियंता (स्थापत्य) - पद कोड: स्थापत्य-०१:</h3>
-            <p class="text-text-muted m-0">मान्यताप्राप्त विद्यापीठातून स्थापत्य अभियांत्रिकी पदवी (B.E. / B.Tech Civil Engineering) आणि मोठ्या प्रमाणावरील स्थापत्य व पायाभूत सुविधा प्रकल्पांमधील १५ वर्षांचा संबंधित कामाचा अनुभव.</p>
+            <h3 class="text-base font-bold text-text-main mb-1">
+              २) मुख्य अभियंता (स्थापत्य) - पद कोड: स्थापत्य-०१:
+            </h3>
+            <p class="text-text-muted m-0">
+              मान्यताप्राप्त विद्यापीठातून स्थापत्य अभियांत्रिकी पदवी (B.E. /
+              B.Tech Civil Engineering) आणि मोठ्या प्रमाणावरील स्थापत्य व
+              पायाभूत सुविधा प्रकल्पांमधील १५ वर्षांचा संबंधित कामाचा अनुभव.
+            </p>
           </div>
         </div>
 
         <!-- Important Dates & Links Table -->
-        <h2 id="important-dates" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">{translateMarathi("महत्त्वाच्या तारखा आणि लिंक्स (Important Dates & Links)")}</h2>
+        <h2
+          id="important-dates"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          {
+            translateMarathi(
+              "महत्त्वाच्या तारखा आणि लिंक्स (Important Dates & Links)",
+            )
+          }
+        </h2>
         <div class="overflow-x-auto mt-3 mb-8">
           <table class="w-full text-left border-collapse">
             <thead>
               <tr class="bg-primary/10">
-                <th class="p-3 border border-border-card font-bold text-text-main">तपशील (Event)</th>
-                <th class="p-3 border border-border-card font-bold text-text-main">तारीख / दुवा (Date / Action)</th>
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >तपशील (Event)</th
+                >
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >तारीख / दुवा (Date / Action)</th
+                >
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="p-3 border border-border-card text-text-muted font-medium">जाहिरात प्रसिद्धी दिनांक (Notification Release Date)</td>
-                <td class="p-3 border border-border-card text-text-main font-bold">२९ जुलै २०२६</td>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >जाहिरात प्रसिद्धी दिनांक (Notification Release Date)</td
+                >
+                <td
+                  class="p-3 border border-border-card text-text-main font-bold"
+                  >२९ जुलै २०२६</td
+                >
               </tr>
               <tr>
-                <td class="p-3 border border-border-card text-text-muted font-medium">अर्ज करण्याचा अंतिम दिनांक (Application Last Date)</td>
-                <td class="p-3 border border-border-card text-rose-500 font-bold whitespace-nowrap">
-                  <span class="flex items-center gap-1.5"><HiOutlineCalendarDays className="text-rose-500 text-lg shrink-0" /> २० ऑगस्ट २०२६ (20 August 2026)</span>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >अर्ज करण्याचा अंतिम दिनांक (Application Last Date)</td
+                >
+                <td
+                  class="p-3 border border-border-card text-rose-500 font-bold whitespace-nowrap"
+                >
+                  <span class="flex items-center gap-1.5"
+                    ><HiOutlineCalendarDays
+                      className="text-rose-500 text-lg shrink-0"
+                    /> २० ऑगस्ट २०२६ (20 August 2026)</span
+                  >
                 </td>
               </tr>
               <tr>
-                <td class="p-3 border border-border-card text-text-muted font-medium">अधिकृत संकेतस्थळ (Official Website)</td>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >अधिकृत संकेतस्थळ (Official Website)</td
+                >
                 <td class="p-3 border border-border-card">
-                  <a href="https://www.mahagenco.in" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider rounded-lg transition-colors border border-primary/20 w-full sm:w-auto">
+                  <a
+                    href="https://www.mahagenco.in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider rounded-lg transition-colors border border-primary/20 w-full sm:w-auto"
+                  >
                     <HiOutlineCursorArrowRays className="text-base shrink-0" /> www.mahagenco.in
                   </a>
                 </td>
               </tr>
               <tr>
-                <td class="p-3 border border-border-card text-text-muted font-medium">अधिकृत जाहिरात व अर्ज (Career Section)</td>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >अधिकृत जाहिरात व अर्ज (Career Section)</td
+                >
                 <td class="p-3 border border-border-card">
-                  <a href="https://www.mahagenco.in" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-amber-500/10 hover:bg-amber-500/20 text-amber-600 dark:text-amber-400 text-xs font-bold uppercase tracking-wider rounded-lg transition-colors border border-amber-500/30 w-full sm:w-auto">
-                    <HiOutlineDocumentText className="text-base shrink-0" /> करियर विभाग (Career Section)
+                  <a
+                    href="https://www.mahagenco.in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-amber-500/10 hover:bg-amber-500/20 text-amber-600 dark:text-amber-400 text-xs font-bold uppercase tracking-wider rounded-lg transition-colors border border-amber-500/30 w-full sm:w-auto"
+                  >
+                    <HiOutlineDocumentText className="text-base shrink-0" /> करियर
+                    विभाग (Career Section)
                   </a>
                 </td>
               </tr>
@@ -191,42 +346,82 @@ const category = "Latest Job";
         </div>
 
         <!-- FAQ Section -->
-        <h2 id="faq" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">वारंवार विचारले जाणारे प्रश्न (FAQ)</h2>
+        <h2
+          id="faq"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          वारंवार विचारले जाणारे प्रश्न (FAQ)
+        </h2>
         <div class="space-y-4 mt-3 mb-8">
           <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
-            <h3 class="text-base font-bold text-text-main mb-2">प्रश्न १: महानिर्मिती भरती २०२६ साठी अर्ज करण्याची अंतिम तारीख कोणती आहे?</h3>
-            <p class="text-text-muted text-xs m-0">उत्तर: अर्ज करण्याची अंतिम तारीख २० ऑगस्ट २०२६ (20 August 2026) आहे.</p>
+            <h3 class="text-base font-bold text-text-main mb-2">
+              प्रश्न १: महानिर्मिती भरती २०२६ साठी अर्ज करण्याची अंतिम तारीख
+              कोणती आहे?
+            </h3>
+            <p class="text-text-muted text-xs m-0">
+              उत्तर: अर्ज करण्याची अंतिम तारीख २० ऑगस्ट २०२६ (20 August 2026)
+              आहे.
+            </p>
           </div>
           <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
-            <h3 class="text-base font-bold text-text-main mb-2">प्रश्न २: महानिर्मिती जाहिरात क्र. ०७/२०२६ मध्ये एकूण किती पदे आहेत?</h3>
-            <p class="text-text-muted text-xs m-0">उत्तर: या भरती प्रक्रियेद्वारे एकूण ०७ मुख्य अभियंता (५ तांत्रिक व २ स्थापत्य) पदे भरली जाणार आहेत.</p>
+            <h3 class="text-base font-bold text-text-main mb-2">
+              प्रश्न २: महानिर्मिती जाहिरात क्र. ०७/२०२६ मध्ये एकूण किती पदे
+              आहेत?
+            </h3>
+            <p class="text-text-muted text-xs m-0">
+              उत्तर: या भरती प्रक्रियेद्वारे एकूण ०७ मुख्य अभियंता (५ तांत्रिक व
+              २ स्थापत्य) पदे भरली जाणार आहेत.
+            </p>
           </div>
           <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
-            <h3 class="text-base font-bold text-text-main mb-2">प्रश्न ३: भरतीची सविस्तर माहिती आणि अर्ज कोठे मिळेल?</h3>
-            <p class="text-text-muted text-xs m-0">उत्तर: अधिकृत संकेतस्थळ www.mahagenco.in या वेबसाईटवर "करियर" (Career) विभागांतर्गत सविस्तर माहिती उपलब्ध आहे.</p>
+            <h3 class="text-base font-bold text-text-main mb-2">
+              प्रश्न ३: भरतीची सविस्तर माहिती आणि अर्ज कोठे मिळेल?
+            </h3>
+            <p class="text-text-muted text-xs m-0">
+              उत्तर: अधिकृत संकेतस्थळ www.mahagenco.in या वेबसाईटवर "करियर"
+              (Career) विभागांतर्गत सविस्तर माहिती उपलब्ध आहे.
+            </p>
           </div>
         </div>
 
         <!-- Call to Action -->
-        <div class="bg-primary/5 border border-primary/20 p-8 rounded-3xl text-center my-8">
-          <h2 class="text-xl font-black text-text-main mb-4 border-none p-0 mt-0">ताज्या नोकरी अपडेट्ससाठी जॉईन करा!</h2>
-          <p class="text-text-muted mb-6 text-sm">महाराष्ट्रातील सर्व शासकीय व महामंडळ भरती अपडेट्स थेट मोबाईलवर मिळवण्यासाठी सामील व्हा.</p>
+        <div
+          class="bg-primary/5 border border-primary/20 p-8 rounded-3xl text-center my-8"
+        >
+          <h2
+            class="text-xl font-black text-text-main mb-4 border-none p-0 mt-0"
+          >
+            ताज्या नोकरी अपडेट्ससाठी जॉईन करा!
+          </h2>
+          <p class="text-text-muted mb-6 text-sm">
+            महाराष्ट्रातील सर्व शासकीय व महामंडळ भरती अपडेट्स थेट मोबाईलवर
+            मिळवण्यासाठी सामील व्हा.
+          </p>
           <div class="flex flex-wrap justify-center gap-4">
-            <a href="https://chat.whatsapp.com" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-600 text-white text-sm font-bold uppercase tracking-wider rounded-xl transition-colors shadow-sm">
+            <a
+              href="https://chat.whatsapp.com"
+              class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-600 text-white text-sm font-bold uppercase tracking-wider rounded-xl transition-colors shadow-sm"
+            >
               WhatsApp Group
             </a>
-            <a href="https://t.me" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white text-sm font-bold uppercase tracking-wider rounded-xl transition-colors shadow-sm">
+            <a
+              href="https://t.me"
+              class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white text-sm font-bold uppercase tracking-wider rounded-xl transition-colors shadow-sm"
+            >
               Telegram Channel
             </a>
           </div>
         </div>
-
       </div>
     </div>
 
     <!-- ================= LANGUAGE SEPARATOR ================= -->
-    <div class="my-16 border-t-2 border-dashed border-border-card flex items-center justify-center relative">
-      <span class="absolute bg-bg-base px-8 py-2 text-base sm:text-lg font-extrabold uppercase tracking-widest text-primary border border-border-card rounded-full shadow-md">
+    <div
+      class="my-16 border-t-2 border-dashed border-border-card flex items-center justify-center relative"
+    >
+      <span
+        class="absolute bg-bg-base px-8 py-2 text-base sm:text-lg font-extrabold uppercase tracking-widest text-primary border border-border-card rounded-full shadow-md"
+      >
         English Version
       </span>
     </div>
@@ -234,105 +429,229 @@ const category = "Latest Job";
     <!-- ================= ENGLISH VERSION ================= -->
     <div id="english-version" class="opacity-95">
       <div class="space-y-6 text-text-main leading-relaxed">
-        
-        <h2 id="main-keyword-en" class="text-2xl font-bold mt-2">MAHAGENCO Chief Engineer Recruitment 2026 (Advt No. 07/2026)</h2>
+        <h2 id="main-keyword-en" class="text-2xl font-bold mt-2">
+          MAHAGENCO Chief Engineer Recruitment 2026 (Advt No. 07/2026)
+        </h2>
 
         <!-- Key Information Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
-          <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
-            <HiOutlineDocumentText className="text-primary text-2xl shrink-0 mt-0.5" />
+          <div
+            class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3"
+          >
+            <HiOutlineDocumentText
+              className="text-primary text-2xl shrink-0 mt-0.5"
+            />
             <div>
-              <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">Authority</span>
-              <span class="text-text-main font-semibold text-sm">MAHAGENCO (Maharashtra State Power Generation Co. Ltd)</span>
+              <span
+                class="text-xs text-text-muted block uppercase font-bold tracking-wider"
+                >Authority</span
+              >
+              <span class="text-text-main font-semibold text-sm"
+                >MAHAGENCO (Maharashtra State Power Generation Co. Ltd)</span
+              >
             </div>
           </div>
-          <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
-            <HiOutlineMapPin className="text-primary text-2xl shrink-0 mt-0.5" />
+          <div
+            class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3"
+          >
+            <HiOutlineMapPin
+              className="text-primary text-2xl shrink-0 mt-0.5"
+            />
             <div>
-              <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">Job Location</span>
-              <span class="text-text-main font-semibold text-sm">Maharashtra</span>
+              <span
+                class="text-xs text-text-muted block uppercase font-bold tracking-wider"
+                >Job Location</span
+              >
+              <span class="text-text-main font-semibold text-sm"
+                >Maharashtra</span
+              >
             </div>
           </div>
-          <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
-            <HiOutlineBriefcase className="text-primary text-2xl shrink-0 mt-0.5" />
+          <div
+            class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3"
+          >
+            <HiOutlineBriefcase
+              className="text-primary text-2xl shrink-0 mt-0.5"
+            />
             <div>
-              <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">Employment Type</span>
-              <span class="text-text-main font-semibold text-sm">Regular Basis</span>
+              <span
+                class="text-xs text-text-muted block uppercase font-bold tracking-wider"
+                >Employment Type</span
+              >
+              <span class="text-text-main font-semibold text-sm"
+                >Regular Basis</span
+              >
             </div>
           </div>
         </div>
 
         <!-- Vacancy Breakdown Table -->
-        <h2 id="en-details" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">Post Distribution & Category Breakdown</h2>
+        <h2
+          id="en-details"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          Post Distribution & Category Breakdown
+        </h2>
         <div class="overflow-x-auto mt-3 mb-8">
           <table class="w-full text-left border-collapse text-sm">
             <thead>
               <tr class="bg-primary/10">
-                <th class="p-3 border border-border-card font-bold text-text-main">Post Code</th>
-                <th class="p-3 border border-border-card font-bold text-text-main">Post Name</th>
-                <th class="p-3 border border-border-card font-bold text-text-main">Total Posts</th>
-                <th class="p-3 border border-border-card font-bold text-text-main">Category Breakdown</th>
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >Post Code</th
+                >
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >Post Name</th
+                >
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >Total Posts</th
+                >
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >Category Breakdown</th
+                >
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="p-3 border border-border-card text-text-muted font-medium text-center">Tech-01</td>
-                <td class="p-3 border border-border-card text-text-muted font-bold">Chief Engineer (MAHAGENCO)</td>
-                <td class="p-3 border border-border-card text-primary font-extrabold text-center">05</td>
-                <td class="p-3 border border-border-card text-text-muted">ST: 01 | VJ-C: 01 | VJ-D: 01 | SEBC: 01 | EWS: 01</td>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium text-center"
+                  >Tech-01</td
+                >
+                <td
+                  class="p-3 border border-border-card text-text-muted font-bold"
+                  >Chief Engineer (MAHAGENCO)</td
+                >
+                <td
+                  class="p-3 border border-border-card text-primary font-extrabold text-center"
+                  >05</td
+                >
+                <td class="p-3 border border-border-card text-text-muted"
+                  >ST: 01 | VJ-C: 01 | VJ-D: 01 | SEBC: 01 | EWS: 01</td
+                >
               </tr>
               <tr>
-                <td class="p-3 border border-border-card text-text-muted font-medium text-center">Civil-01</td>
-                <td class="p-3 border border-border-card text-text-muted font-bold">Chief Engineer (Civil)</td>
-                <td class="p-3 border border-border-card text-primary font-extrabold text-center">02</td>
-                <td class="p-3 border border-border-card text-text-muted">SC: 01 | Open: 01</td>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium text-center"
+                  >Civil-01</td
+                >
+                <td
+                  class="p-3 border border-border-card text-text-muted font-bold"
+                  >Chief Engineer (Civil)</td
+                >
+                <td
+                  class="p-3 border border-border-card text-primary font-extrabold text-center"
+                  >02</td
+                >
+                <td class="p-3 border border-border-card text-text-muted"
+                  >SC: 01 | Open: 01</td
+                >
               </tr>
               <tr class="bg-primary/5">
-                <td colspan="2" class="p-3 border border-border-card font-bold text-text-main text-right">Total Vacancies</td>
-                <td class="p-3 border border-border-card font-bold text-primary text-center">07</td>
-                <td class="p-3 border border-border-card font-bold text-text-muted">Technical (05) + Civil (02) = 07 Posts</td>
+                <td
+                  colspan="2"
+                  class="p-3 border border-border-card font-bold text-text-main text-right"
+                  >Total Vacancies</td
+                >
+                <td
+                  class="p-3 border border-border-card font-bold text-primary text-center"
+                  >07</td
+                >
+                <td
+                  class="p-3 border border-border-card font-bold text-text-muted"
+                  >Technical (05) + Civil (02) = 07 Posts</td
+                >
               </tr>
             </tbody>
           </table>
         </div>
 
         <!-- Eligibility Criteria -->
-        <h2 id="en-eligibility" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">Eligibility & Experience Criteria</h2>
-        <div class="bg-bg-surface border border-border-card p-5 rounded-2xl text-sm space-y-3">
+        <h2
+          id="en-eligibility"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          Eligibility & Experience Criteria
+        </h2>
+        <div
+          class="bg-bg-surface border border-border-card p-5 rounded-2xl text-sm space-y-3"
+        >
           <p class="m-0 text-text-muted">
-            <strong>1. Chief Engineer (Technical):</strong> First class Degree in Engineering (Electrical / Mechanical / Electronics / Instrumentation) from a recognized university with minimum 15 years of relevant high-level managerial experience in power sector projects.
+            <strong>1. Chief Engineer (Technical):</strong> First class Degree in
+            Engineering (Electrical / Mechanical / Electronics / Instrumentation)
+            from a recognized university with minimum 15 years of relevant high-level
+            managerial experience in power sector projects.
           </p>
           <p class="m-0 text-text-muted">
-            <strong>2. Chief Engineer (Civil):</strong> First class Degree in Civil Engineering with minimum 15 years of relevant executive experience in large-scale civil infrastructure projects.
+            <strong>2. Chief Engineer (Civil):</strong> First class Degree in Civil
+            Engineering with minimum 15 years of relevant executive experience in
+            large-scale civil infrastructure projects.
           </p>
         </div>
 
         <!-- Important Dates & Links Table -->
-        <h2 id="en-important-dates" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">Important Dates & Portal Links</h2>
+        <h2
+          id="en-important-dates"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          Important Dates & Portal Links
+        </h2>
         <div class="overflow-x-auto mt-3 mb-8">
           <table class="w-full text-left border-collapse">
             <thead>
               <tr class="bg-primary/10">
-                <th class="p-3 border border-border-card font-bold text-text-main">Event</th>
-                <th class="p-3 border border-border-card font-bold text-text-main">Date / Action</th>
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >Event</th
+                >
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >Date / Action</th
+                >
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="p-3 border border-border-card text-text-muted font-medium">Notification Issue Date</td>
-                <td class="p-3 border border-border-card text-text-main font-bold">29 July 2026</td>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >Notification Issue Date</td
+                >
+                <td
+                  class="p-3 border border-border-card text-text-main font-bold"
+                  >29 July 2026</td
+                >
               </tr>
               <tr>
-                <td class="p-3 border border-border-card text-text-muted font-medium">Last Date to Submit Application</td>
-                <td class="p-3 border border-border-card text-rose-500 font-bold whitespace-nowrap">
-                  <span class="flex items-center gap-1.5"><HiOutlineCalendarDays className="text-rose-500 text-lg shrink-0" /> 20 August 2026</span>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >Last Date to Submit Application</td
+                >
+                <td
+                  class="p-3 border border-border-card text-rose-500 font-bold whitespace-nowrap"
+                >
+                  <span class="flex items-center gap-1.5"
+                    ><HiOutlineCalendarDays
+                      className="text-rose-500 text-lg shrink-0"
+                    /> 20 August 2026</span
+                  >
                 </td>
               </tr>
               <tr>
-                <td class="p-3 border border-border-card text-text-muted font-medium">Official Portal Link</td>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >Official Portal Link</td
+                >
                 <td class="p-3 border border-border-card">
-                  <a href="https://www.mahagenco.in" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider rounded-lg transition-colors border border-primary/20 w-full sm:w-auto">
-                    <HiOutlineCursorArrowRays className="text-base shrink-0" /> Visit www.mahagenco.in
+                  <a
+                    href="https://www.mahagenco.in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider rounded-lg transition-colors border border-primary/20 w-full sm:w-auto"
+                  >
+                    <HiOutlineCursorArrowRays className="text-base shrink-0" /> Visit
+                    www.mahagenco.in
                   </a>
                 </td>
               </tr>
@@ -341,18 +660,31 @@ const category = "Latest Job";
         </div>
 
         <!-- FAQ Section -->
-        <h2 id="en-faq" class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3">Frequently Asked Questions (FAQ)</h2>
+        <h2
+          id="en-faq"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          Frequently Asked Questions (FAQ)
+        </h2>
         <div class="space-y-4 mt-3 mb-8">
           <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
-            <h3 class="text-base font-bold text-text-main mb-2">Q1: What is the last date to apply for MAHAGENCO Recruitment 2026?</h3>
-            <p class="text-text-muted text-xs m-0">A1: The last date to submit the application is August 20, 2026.</p>
+            <h3 class="text-base font-bold text-text-main mb-2">
+              Q1: What is the last date to apply for MAHAGENCO Recruitment 2026?
+            </h3>
+            <p class="text-text-muted text-xs m-0">
+              A1: The last date to submit the application is August 20, 2026.
+            </p>
           </div>
           <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
-            <h3 class="text-base font-bold text-text-main mb-2">Q2: How many total posts are advertised in MahaGenco Advt 07/2026?</h3>
-            <p class="text-text-muted text-xs m-0">A2: A total of 07 regular posts of Chief Engineer (05 Technical + 02 Civil) are being filled.</p>
+            <h3 class="text-base font-bold text-text-main mb-2">
+              Q2: How many total posts are advertised in MahaGenco Advt 07/2026?
+            </h3>
+            <p class="text-text-muted text-xs m-0">
+              A2: A total of 07 regular posts of Chief Engineer (05 Technical +
+              02 Civil) are being filled.
+            </p>
           </div>
         </div>
-
       </div>
     </div>
   </article>

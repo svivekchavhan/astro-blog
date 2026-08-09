@@ -76,9 +76,7 @@ Whenever a new recruitment article is created, it must be registered in the foll
 
 ---
 
-## 📌 Rule 8: Article Top Social Media Share Standard
+## 📌 Rule 8: Article Clean Layout Standard
 
-- **Placement**: Every article page **MUST include social media share buttons** right beside the publication date and category badge in the article top header.
-- **Component**: Embed `<SocialShare title={title} url={canonicalURL} />` from `src/components/SocialShare.astro`.
-- **Supported Platforms**: WhatsApp (`FaWhatsapp`), Telegram (`FaTelegram`), X / Twitter (`FaXTwitter`), Facebook (`FaFacebookF`), and Native Share / Copy Link (`FaShareNodes`).
+- **Clean Header Layout**: Social share buttons are omitted to maintain a clean, distraction-free reading experience for users across desktop and mobile devices.
 

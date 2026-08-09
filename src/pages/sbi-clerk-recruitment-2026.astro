@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import SocialShare from "../components/SocialShare.astro";
 import { translateMarathi } from "../utils/wordLibrary";
 import {
   HiOutlineCalendarDays,
@@ -28,6 +27,8 @@ const category = "Bank Job";
   title={title}
   description={description}
   canonicalURL={canonicalURL}
+  pubDate={date}
+  category={category}
   image="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200"
   article={true}
   customBreadcrumbs={[
@@ -35,21 +36,9 @@ const category = "Bank Job";
     { name: "SBI Clerk Recruitment 2026" },
   ]}
 >
-  <article class="py-8">
+  <article class="pt-2 pb-8">
     <!-- Header -->
-    <div class="mb-12">
-      <div
-        class="flex items-center justify-between flex-wrap gap-3 mb-6 pb-3 border-b border-border-card/30"
-      >
-        <div class="flex items-center gap-2.5">
-          <span
-            class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shrink-0"
-            >{category}
-          </span>
-          <span class="text-text-muted text-xs sm:text-sm font-medium shrink-0">• {date}</span>
-        </div>
-        <SocialShare title={title} url={canonicalURL} />
-      </div>
+    <div class="mb-8">
       <h1
         class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-text-main mb-6 leading-[1.25]"
       >
@@ -724,34 +713,42 @@ const category = "Bank Job";
         <div class="space-y-4 mt-3 mb-8">
           <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
             <h3 class="text-base font-bold text-text-main mb-2">
-              Question 1: What is the last date to apply online for SBI Clerk Recruitment 2026?
+              Question 1: What is the last date to apply online for SBI Clerk
+              Recruitment 2026?
             </h3>
             <p class="text-text-muted text-xs m-0">
-              Answer: The last date for online registration and application submission is 27th August 2026.
+              Answer: The last date for online registration and application
+              submission is 27th August 2026.
             </p>
           </div>
           <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
             <h3 class="text-base font-bold text-text-main mb-2">
-              Question 2: What is the last date for printing the filled SBI Clerk application form?
+              Question 2: What is the last date for printing the filled SBI
+              Clerk application form?
             </h3>
             <p class="text-text-muted text-xs m-0">
-              Answer: The last date to print your submitted application form is 11th September 2026.
+              Answer: The last date to print your submitted application form is
+              11th September 2026.
             </p>
           </div>
           <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
             <h3 class="text-base font-bold text-text-main mb-2">
-              Question 3: When will the SBI Clerk Preliminary and Main examinations be conducted?
+              Question 3: When will the SBI Clerk Preliminary and Main
+              examinations be conducted?
             </h3>
             <p class="text-text-muted text-xs m-0">
-              Answer: The Preliminary exam will be held in September 2026, and the Main exam will be held in October / November 2026.
+              Answer: The Preliminary exam will be held in September 2026, and
+              the Main exam will be held in October / November 2026.
             </p>
           </div>
           <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
             <h3 class="text-base font-bold text-text-main mb-2">
-              Question 4: What is the educational qualification required for SBI Clerk 2026?
+              Question 4: What is the educational qualification required for SBI
+              Clerk 2026?
             </h3>
             <p class="text-text-muted text-xs m-0">
-              Answer: Candidates must possess a Graduation degree in any discipline from a recognized University.
+              Answer: Candidates must possess a Graduation degree in any
+              discipline from a recognized University.
             </p>
           </div>
           <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
@@ -759,7 +756,8 @@ const category = "Bank Job";
               Question 5: What is the age limit for SBI Clerk recruitment?
             </h3>
             <p class="text-text-muted text-xs m-0">
-              Answer: Candidates must be between 20 to 28 years of age as of 01.04.2026 (Age relaxation: SC/ST +5 years, OBC +3 years).
+              Answer: Candidates must be between 20 to 28 years of age as of
+              01.04.2026 (Age relaxation: SC/ST +5 years, OBC +3 years).
             </p>
           </div>
         </div>
