@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import SocialShare from "../components/SocialShare.astro";
 import { translateMarathi } from "../utils/wordLibrary";
 import { 
   HiOutlineCalendarDays, 
@@ -28,12 +29,17 @@ const category = "Latest Job";
   <article class="py-8">
     <!-- Header -->
     <div class="mb-12">
-      <div class="flex items-center gap-3 mb-6">
-        <span
-          class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"
-          >{category}
-        </span>
-        <span class="text-text-muted text-sm">• {date}</span>
+      <div
+        class="flex items-center justify-between flex-wrap gap-3 mb-6 pb-3 border-b border-border-card/30"
+      >
+        <div class="flex items-center gap-2.5">
+          <span
+            class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shrink-0"
+            >{category}
+          </span>
+          <span class="text-text-muted text-xs sm:text-sm font-medium shrink-0">• {date}</span>
+        </div>
+        <SocialShare title={title} url={canonicalURL} />
       </div>
       <h1
         class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-text-main mb-6 leading-[1.25]"
@@ -233,7 +239,7 @@ const category = "Latest Job";
                 <td class="p-3 border border-border-card text-text-muted font-medium">उमेदवाराचे वय मोजा (Age Calculator)</td>
                 <td class="p-3 border border-border-card">
                   <a href="/mpsc-age-calculator-marathi" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-purple-500/10 hover:bg-purple-500/20 text-purple-600 dark:text-purple-400 text-xs font-bold uppercase tracking-wider rounded-lg transition-colors border border-purple-500/30 w-full sm:w-auto no-underline">
-                    <HiOutlineCalculator className="text-base shrink-0" /> वय कॅल्क्युलेटर (Calculate Age)
+                    <HiOutlineCalculator className="text-base shrink-0" /> Age Calculator
                   </a>
                 </td>
               </tr>
@@ -446,7 +452,7 @@ const category = "Latest Job";
                 <td class="p-3 border border-border-card text-text-muted font-medium">Calculate Your Age (Age Limit Verification)</td>
                 <td class="p-3 border border-border-card">
                   <a href="/mpsc-age-calculator-marathi" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-purple-500/10 hover:bg-purple-500/20 text-purple-600 dark:text-purple-400 text-xs font-bold uppercase tracking-wider rounded-lg transition-colors border border-purple-500/30 w-full sm:w-auto no-underline">
-                    <HiOutlineCalculator className="text-base shrink-0" /> Calculate Age Online
+                    <HiOutlineCalculator className="text-base shrink-0" /> Age Calculator
                   </a>
                 </td>
               </tr>

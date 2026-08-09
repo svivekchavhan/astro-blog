@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import SocialShare from "../components/SocialShare.astro";
 import { translateMarathi } from "../utils/wordLibrary";
 import {
   HiOutlineCalendarDays,
@@ -37,12 +38,17 @@ const category = "Bank Job";
   <article class="py-8">
     <!-- Header -->
     <div class="mb-12">
-      <div class="flex items-center gap-3 mb-6">
-        <span
-          class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"
-          >{category}
-        </span>
-        <span class="text-text-muted text-sm">• {date}</span>
+      <div
+        class="flex items-center justify-between flex-wrap gap-3 mb-6 pb-3 border-b border-border-card/30"
+      >
+        <div class="flex items-center gap-2.5">
+          <span
+            class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shrink-0"
+            >{category}
+          </span>
+          <span class="text-text-muted text-xs sm:text-sm font-medium shrink-0">• {date}</span>
+        </div>
+        <SocialShare title={title} url={canonicalURL} />
       </div>
       <h1
         class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-text-main mb-6 leading-[1.25]"
@@ -377,7 +383,7 @@ const category = "Bank Job";
                     href="/mpsc-age-calculator-marathi"
                     class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-purple-500/10 hover:bg-purple-500/20 text-purple-600 dark:text-purple-400 text-xs font-bold uppercase tracking-wider rounded-lg transition-colors border border-purple-500/30 w-full sm:w-auto no-underline"
                   >
-                    <HiOutlineCalculator className="text-base shrink-0" /> वय कॅल्क्युलेटर (Calculate Age)
+                    <HiOutlineCalculator className="text-base shrink-0" /> Age Calculator
                   </a>
                 </td>
               </tr>
@@ -420,35 +426,6 @@ const category = "Bank Job";
               उत्तर: पूर्व परीक्षा सप्टेंबर २०२६ मध्ये तर मुख्य परीक्षा
               ऑक्टोबर/नोव्हेंबर २०२६ मध्ये आयोजित केली जाईल.
             </p>
-          </div>
-        </div>
-
-        <!-- Call to Action -->
-        <div
-          class="bg-primary/5 border border-primary/20 p-8 rounded-3xl text-center my-8"
-        >
-          <h2
-            class="text-xl font-black text-text-main mb-4 border-none p-0 mt-0"
-          >
-            SBI बँक भरती अपडेट्ससाठी जॉईन करा!
-          </h2>
-          <p class="text-text-muted mb-6 text-sm">
-            स्टेट बँक ऑफ इंडिया व सर्व सरकारी बँकिंग अपडेट्स थेट मोबाईलवर
-            मिळवण्यासाठी सामील व्हा.
-          </p>
-          <div class="flex flex-wrap justify-center gap-4">
-            <a
-              href="https://chat.whatsapp.com"
-              class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-600 text-white text-sm font-bold uppercase tracking-wider rounded-xl transition-colors shadow-sm"
-            >
-              WhatsApp Group
-            </a>
-            <a
-              href="https://t.me"
-              class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white text-sm font-bold uppercase tracking-wider rounded-xl transition-colors shadow-sm"
-            >
-              Telegram Channel
-            </a>
           </div>
         </div>
       </div>
@@ -729,7 +706,7 @@ const category = "Bank Job";
                     href="/mpsc-age-calculator-marathi"
                     class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-purple-500/10 hover:bg-purple-500/20 text-purple-600 dark:text-purple-400 text-xs font-bold uppercase tracking-wider rounded-lg transition-colors border border-purple-500/30 w-full sm:w-auto no-underline"
                   >
-                    <HiOutlineCalculator className="text-base shrink-0" /> Calculate Age Online
+                    <HiOutlineCalculator className="text-base shrink-0" /> Age Calculator
                   </a>
                 </td>
               </tr>

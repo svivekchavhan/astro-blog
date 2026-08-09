@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import SocialShare from "../components/SocialShare.astro";
 import { translateMarathi } from "../utils/wordLibrary";
 import {
   HiOutlineCalendarDays,
@@ -36,12 +37,17 @@ const category = "Result";
   <article class="py-8">
     <!-- Header -->
     <div class="mb-12">
-      <div class="flex items-center gap-3 mb-6">
-        <span
-          class="bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-emerald-500/20"
-          >{category} • Police Bharti
-        </span>
-        <span class="text-text-muted text-sm">• {date}</span>
+      <div
+        class="flex items-center justify-between flex-wrap gap-3 mb-6 pb-3 border-b border-border-card/30"
+      >
+        <div class="flex items-center gap-2.5">
+          <span
+            class="bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-emerald-500/20 shrink-0"
+            >{category} • Police Bharti
+          </span>
+          <span class="text-text-muted text-xs sm:text-sm font-medium shrink-0">• {date}</span>
+        </div>
+        <SocialShare title={title} url={canonicalURL} />
       </div>
       <h1
         class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-text-main mb-6 leading-[1.25]"

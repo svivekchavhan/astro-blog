@@ -45,7 +45,7 @@ Whenever a new recruitment article is created, it must be registered in the foll
   3. Official Notification Overview & Vacancy Details Table
   4. Eligibility Criteria, Educational Qualification & Age Limit
   5. Fee Details & Schedule Dates (Registration start, closure, editing closure, print date, fee payment dates)
-  6. Official PDF Download & Direct Application Links Table (Includes Age Calculator button linking to `/mpsc-age-calculator-marathi`)
+  6. Official PDF Download & Direct Application Links Table (Includes 'Age Calculator' button linking to `/mpsc-age-calculator-marathi`)
   7. Symmetrical Google SEO FAQ Section (matching questions & answers in both Marathi & English)
 
 ---
@@ -73,4 +73,12 @@ Whenever a new recruitment article is created, it must be registered in the foll
   - **Keyword-Rich Questions**: Structure questions targeting high-volume user search queries (e.g., last date to apply, qualification, age limit, application print date, prelims/mains exam dates).
   - **Concise & Direct Answers**: Keep answers clear, accurate, and direct without filler text for optimal Google search indexing and featured snippets.
   - **Structured Heading Hierarchy**: Use standard `<h2 id="faq">` for section titles and `<h3>` tags for each question to help search crawlers easily parse Q&A structures.
+
+---
+
+## 📌 Rule 8: Article Top Social Media Share Standard
+
+- **Placement**: Every article page **MUST include social media share buttons** right beside the publication date and category badge in the article top header.
+- **Component**: Embed `<SocialShare title={title} url={canonicalURL} />` from `src/components/SocialShare.astro`.
+- **Supported Platforms**: WhatsApp (`FaWhatsapp`), Telegram (`FaTelegram`), X / Twitter (`FaXTwitter`), Facebook (`FaFacebookF`), and Native Share / Copy Link (`FaShareNodes`).
 
