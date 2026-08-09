@@ -35,10 +35,18 @@ Whenever a new recruitment article is created, it must be registered in the foll
 
 ---
 
-## 📌 Rule 4: Bilingual Quality Standard
+## 📌 Rule 4: Bilingual Symmetrical Content Standard
 
-- Articles must provide **fully detailed, matching content in both Marathi and English**.
-- Both language sections must include complete vacancy breakdown tables, eligibility criteria, key dates, and direct action links.
+- **Strict Content Symmetry**: When writing any article, both **Marathi** and **English** versions **MUST contain identical/symmetrical content** adapted into their respective languages.
+- **No Omissions**: Neither language version should omit sections, tables, eligibility criteria, schedule dates, application fees, FAQs, or official download links that are present in the other version.
+- **Matching Structure**: Both language sections must include:
+  1. Main Keyword Heading & Introduction
+  2. Highlights Summary Grid
+  3. Official Notification Overview & Vacancy Details Table
+  4. Eligibility Criteria, Educational Qualification & Age Limit
+  5. Fee Details & Schedule Dates (Registration start, closure, editing closure, print date, fee payment dates)
+  6. Official PDF Download & Direct Application Links Table (Includes Age Calculator button linking to `/mpsc-age-calculator-marathi`)
+  7. Symmetrical Google SEO FAQ Section (matching questions & answers in both Marathi & English)
 
 ---
 
