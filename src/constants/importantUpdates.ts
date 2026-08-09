@@ -11,7 +11,7 @@ export const importantUpdates: ImportantUpdate[] = [
   {
     id: "pavitra-portal-tait-2025-preference-notice",
     title:
-      "🔥 पवित्र पोर्टल TAIT-2025: पवित्र पोर्टल Log In Problem बाबतीत सूचना ",
+      "🔥 पवित्र पोर्टल TAIT-2025: पवित्र पोर्टल वरील Log In Problem बाबतीत सूचना ",
     link: "/pavitra-portal-tait-2025-preference-filling-notice",
     date: "August 08, 2026",
     expiry: "2026-09-30T00:00:00.000Z",
