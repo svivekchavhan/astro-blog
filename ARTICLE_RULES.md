@@ -80,3 +80,10 @@ Whenever a new recruitment article is created, it must be registered in the foll
 
 - **Clean Header Layout**: Social share buttons are omitted to maintain a clean, distraction-free reading experience for users across desktop and mobile devices.
 
+---
+
+## 📌 Rule 9: No Table of Contents (Table of Contents Block Prohibition)
+
+- **No Table of Contents Blocks**: Do **NOT** add "Table of Contents" or "या लेखातील महत्त्वाचे मुद्दे / मुख्य मुद्दे (Table of Contents)" blocks to any articles.
+- **Streamlined Layout**: Articles must jump directly from the header/summary banner into the Quick Highlights table, detailed content sections, and FAQs without redundant link box clutter, ensuring a fast, mobile-friendly reading experience.
+
