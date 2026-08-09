@@ -9,6 +9,15 @@ export interface ImportantUpdate {
 
 export const importantUpdates: ImportantUpdate[] = [
   {
+    id: "pavitra-portal-tait-2025-preference-notice",
+    title:
+      "🔥 पवित्र पोर्टल TAIT-2025: शिक्षक पदभरती प्राधान्यक्रम जनरेट व लॉक करण्याबाबत सर्वसाधारण सूचना जारी (०८/०८/२०२६)",
+    link: "/pavitra-portal-tait-2025-preference-filling-notice",
+    date: "August 08, 2026",
+    expiry: "2026-09-30T00:00:00.000Z",
+    show: true,
+  },
+  {
     id: "mpsc-group-c-pesa-update-2026",
     title:
       "MPSC गट-क परीक्षा: पेसा (PESA) रहिवासी व माजी सैनिक आरक्षणाबाबत परिपत्रक जारी",
