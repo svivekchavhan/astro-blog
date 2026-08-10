@@ -23,12 +23,13 @@ const canonicalURL = "https://mahasandhi.in/syllabus";
   description={description}
   canonicalURL={canonicalURL}
   customBreadcrumbs={[{ name: "Syllabus" }]}
+  hideSidebar={true}
 >
   <section class="pt-2 pb-16 not-prose">
     <div class="max-w-[1100px] mx-auto px-2 md:px-0">
       <!-- Hero Banner -->
       <div
-        class="relative bg-gradient-to-br from-primary/15 via-secondary/10 to-primary/5 border border-primary/25 p-6 md:p-10 rounded-3xl mb-10 overflow-hidden shadow-xs"
+        class="relative bg-gradient-to-br from-primary/15 via-secondary/10 to-primary/5 border border-primary/25 p-6 md:p-10 rounded-3xl mb-8 overflow-hidden shadow-xs"
       >
         <div
           class="absolute -right-20 -top-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl -z-10"
@@ -143,7 +144,7 @@ const canonicalURL = "https://mahasandhi.in/syllabus";
 
       <!-- Main Clean Section Container -->
       <div
-        class="bg-bg-surface border border-border-card rounded-3xl p-6 sm:p-10 shadow-xs space-y-6"
+        class="bg-bg-surface border border-border-card rounded-3xl p-5 sm:p-8 shadow-xs space-y-6"
       >
         <div
           class="flex items-center justify-between border-b border-border-card/40 pb-4 flex-wrap gap-2"
@@ -161,181 +162,61 @@ const canonicalURL = "https://mahasandhi.in/syllabus";
           </div>
         </div>
 
-        <!-- Syllabus Cards Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Horizontal Syllabus Cards Stack -->
+        <div class="flex flex-col gap-4">
           <!-- Card 1: MPSC Group C Syllabus 2026 -->
           <a
             href="/mpsc/mpsc-group-c-syllabus-2026"
-            class="group relative bg-bg-surface border border-border-card hover:border-amber-500 rounded-3xl p-6 md:p-8 shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/5 flex flex-col justify-between min-h-[320px] overflow-hidden no-underline"
+            class="group bg-bg-surface border border-border-card hover:border-amber-500 rounded-2xl p-5 sm:p-6 transition-all duration-300 hover:shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-4 no-underline"
           >
-            <div
-              class="absolute -right-20 -top-20 w-64 h-64 bg-amber-500/5 rounded-full blur-3xl group-hover:bg-amber-500/10 transition-colors duration-500 -z-10"
-            >
-            </div>
+            <div class="flex items-start gap-4 flex-1 min-w-0">
+              <div
+                class="p-3 bg-amber-500/10 text-amber-600 rounded-xl group-hover:bg-amber-500 group-hover:text-white transition-all duration-300 shrink-0 hidden sm:flex items-center justify-center"
+              >
+                <HiOutlineDocumentText className="text-2xl" />
+              </div>
 
-            <div class="space-y-4">
-              <div class="flex justify-between items-start gap-3.5">
-                <div
-                  class="p-3.5 bg-amber-500/10 text-amber-600 rounded-2xl group-hover:bg-amber-500 group-hover:text-white transition-all duration-300 shrink-0"
-                >
-                  <HiOutlineDocumentText className="text-xl" />
-                </div>
-                <div class="flex items-center justify-end gap-1.5 flex-wrap">
+              <div class="space-y-1.5 flex-1 min-w-0">
+                <div class="flex items-center gap-2 flex-wrap">
                   <span
-                    class="text-[0.6rem] bg-amber-500/10 text-amber-600 px-2.5 py-0.5 rounded font-bold uppercase tracking-wider border border-amber-500/20 whitespace-nowrap"
+                    class="text-[0.65rem] bg-amber-500/10 text-amber-600 px-2.5 py-0.5 rounded font-bold uppercase tracking-wider border border-amber-500/20"
                   >
                     Group C Syllabus
                   </span>
                   <span
-                    class="text-[0.6rem] bg-emerald-500/10 text-emerald-500 px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wide border border-emerald-500/20 whitespace-nowrap"
+                    class="text-[0.65rem] bg-emerald-500/10 text-emerald-600 px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wide border border-emerald-500/20"
                   >
                     PDF Available
                   </span>
                 </div>
-              </div>
 
-              <div class="space-y-2">
                 <h3
-                  class="text-lg md:text-xl text-text-main font-extrabold leading-tight m-0 group-hover:text-amber-500 transition-colors"
+                  class="text-base sm:text-lg text-text-main font-bold leading-snug m-0 group-hover:text-amber-600 transition-colors"
                 >
                   MPSC Group C Syllabus 2026: संयुक्त गट क अभ्यासक्रम व स्वरूप PDF
                 </h3>
+
                 <p class="text-xs text-text-secondary leading-relaxed m-0">
                   लिपिक-टंकलेखक, कर सहाय्यक व दुय्यम निरीक्षक पदांचा संयुक्त पूर्व परीक्षा (१०० गुण) व मुख्य परीक्षा (४०० गुण) सविस्तर विषयनिहाय अभ्यासक्रम व PDF.
                 </p>
-              </div>
 
-              <div
-                class="flex flex-col gap-2 text-xs text-text-muted font-medium pt-3.5 border-t border-border-card/30"
-              >
-                <span class="flex items-center gap-1.5"
-                  ><HiOutlineAcademicCap className="text-amber-500 text-sm shrink-0" /> पूर्व परीक्षा (१०० गुण) व मुख्य परीक्षा (४०० गुण)</span
-                >
-                <span class="flex items-center gap-1.5"
-                  ><HiOutlineArrowDownTray className="text-amber-500 text-sm shrink-0" /> अधिकृत अभ्यासक्रम PDF डाऊनलोड</span
-                >
+                <div class="flex items-center gap-3 text-[0.75rem] text-text-muted pt-1 flex-wrap font-medium">
+                  <span class="flex items-center gap-1">
+                    <HiOutlineAcademicCap className="text-amber-500 text-sm shrink-0" /> पूर्व (१०० गुण) व मुख्य (४०० गुण)
+                  </span>
+                  <span>•</span>
+                  <span class="flex items-center gap-1">
+                    <HiOutlineArrowDownTray className="text-amber-500 text-sm shrink-0" /> अधिकृत PDF डाऊनलोड
+                  </span>
+                </div>
               </div>
             </div>
 
             <div
-              class="mt-6 pt-3.5 border-t border-border-card/30 flex items-center justify-between text-xs text-amber-600 font-bold uppercase tracking-wider"
+              class="shrink-0 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-amber-600 sm:self-center bg-amber-500/5 sm:bg-transparent px-3 py-2 sm:p-0 rounded-lg group-hover:translate-x-1 transition-transform"
             >
               <span>View Syllabus</span>
-              <HiOutlineArrowRight
-                className="text-sm transition-transform duration-300 group-hover:translate-x-1"
-              />
-            </div>
-          </a>
-
-          <!-- Card 2: MPSC Group B Exam Details / Syllabus -->
-          <a
-            href="/mpsc/mpsc-group-b-exam-details"
-            class="group relative bg-bg-surface border border-border-card hover:border-emerald-500 rounded-3xl p-6 md:p-8 shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/5 flex flex-col justify-between min-h-[320px] overflow-hidden no-underline"
-          >
-            <div
-              class="absolute -right-20 -top-20 w-64 h-64 bg-emerald-500/5 rounded-full blur-3xl group-hover:bg-emerald-500/10 transition-colors duration-500 -z-10"
-            >
-            </div>
-
-            <div class="space-y-4">
-              <div class="flex justify-between items-start gap-3.5">
-                <div
-                  class="p-3.5 bg-emerald-500/10 text-emerald-500 rounded-2xl group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300 shrink-0"
-                >
-                  <HiOutlineAcademicCap className="text-xl" />
-                </div>
-                <div class="flex items-center justify-end gap-1.5 flex-wrap">
-                  <span
-                    class="text-[0.6rem] bg-emerald-500/10 text-emerald-500 px-2.5 py-0.5 rounded font-bold uppercase tracking-wider border border-emerald-500/20 whitespace-nowrap"
-                  >
-                    Group B
-                  </span>
-                </div>
-              </div>
-
-              <div class="space-y-2">
-                <h3
-                  class="text-lg md:text-xl text-text-main font-extrabold leading-tight m-0 group-hover:text-emerald-500 transition-colors"
-                >
-                  MPSC Group B Exam Details: संयुक्त गट ब (PSI, STI, ASO) परीक्षा माहिती
-                </h3>
-                <p class="text-xs text-text-secondary leading-relaxed m-0">
-                  एमपीएससी संयुक्त गट ब परीक्षा स्वरूप, PSI शारीरिक चाचणी निकष व परीक्षा टप्पे.
-                </p>
-              </div>
-
-              <div
-                class="flex flex-col gap-2 text-xs text-text-muted font-medium pt-3.5 border-t border-border-card/30"
-              >
-                <span class="flex items-center gap-1.5"
-                  ><HiOutlineAcademicCap className="text-emerald-500 text-sm shrink-0" /> PSI, STI, ASO व दुय्यम निबंधक</span
-                >
-              </div>
-            </div>
-
-            <div
-              class="mt-6 pt-3.5 border-t border-border-card/30 flex items-center justify-between text-xs text-emerald-500 font-bold uppercase tracking-wider"
-            >
-              <span>View Details</span>
-              <HiOutlineArrowRight
-                className="text-sm transition-transform duration-300 group-hover:translate-x-1"
-              />
-            </div>
-          </a>
-
-          <!-- Card 3: MPSC Gazetted Exam Details -->
-          <a
-            href="/mpsc/mpsc-gazetted-exam-details"
-            class="group relative bg-bg-surface border border-border-card hover:border-primary rounded-3xl p-6 md:p-8 shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 flex flex-col justify-between min-h-[320px] overflow-hidden no-underline"
-          >
-            <div
-              class="absolute -right-20 -top-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors duration-500 -z-10"
-            >
-            </div>
-
-            <div class="space-y-4">
-              <div class="flex justify-between items-start gap-3.5">
-                <div
-                  class="p-3.5 bg-primary/10 text-primary rounded-2xl group-hover:bg-primary group-hover:text-white transition-all duration-300 shrink-0"
-                >
-                  <HiOutlineAcademicCap className="text-xl" />
-                </div>
-                <div class="flex items-center justify-end gap-1.5 flex-wrap">
-                  <span
-                    class="text-[0.6rem] bg-primary/10 text-primary px-2.5 py-0.5 rounded font-bold uppercase tracking-wider border border-primary/20 whitespace-nowrap"
-                  >
-                    State Services
-                  </span>
-                </div>
-              </div>
-
-              <div class="space-y-2">
-                <h3
-                  class="text-lg md:text-xl text-text-main font-extrabold leading-tight m-0 group-hover:text-primary transition-colors"
-                >
-                  MPSC Gazetted Exam Details: राजपत्रित नागरी सेवा परीक्षा माहिती
-                </h3>
-                <p class="text-xs text-text-secondary leading-relaxed m-0">
-                  डिप्टी कलेक्टर, डीवायएसपी, तहसीलदार पदांची नवीन वर्णनात्मक परीक्षा पद्धत.
-                </p>
-              </div>
-
-              <div
-                class="flex flex-col gap-2 text-xs text-text-muted font-medium pt-3.5 border-t border-border-card/30"
-              >
-                <span class="flex items-center gap-1.5"
-                  ><HiOutlineAcademicCap className="text-primary text-sm shrink-0" /> राज्यसेवा क्लास १ व क्लास २ पदे</span
-                >
-              </div>
-            </div>
-
-            <div
-              class="mt-6 pt-3.5 border-t border-border-card/30 flex items-center justify-between text-xs text-primary font-bold uppercase tracking-wider"
-            >
-              <span>View Details</span>
-              <HiOutlineArrowRight
-                className="text-sm transition-transform duration-300 group-hover:translate-x-1"
-              />
+              <HiOutlineArrowRight className="text-sm" />
             </div>
           </a>
         </div>
