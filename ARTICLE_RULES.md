@@ -87,3 +87,16 @@ Whenever a new recruitment article is created, it must be registered in the foll
 - **No Table of Contents Blocks**: Do **NOT** add "Table of Contents" or "या लेखातील महत्त्वाचे मुद्दे / मुख्य मुद्दे (Table of Contents)" blocks to any articles.
 - **Streamlined Layout**: Articles must jump directly from the header/summary banner into the Quick Highlights table, detailed content sections, and FAQs without redundant link box clutter, ensuring a fast, mobile-friendly reading experience.
 
+---
+
+## 📌 Rule 10: Category Page Synchronization Rule (Admit Card, Result, Syllabus, Admission, Bank Job, Answer Key)
+
+- **Category Mapping**: Every newly published article **MUST** be mapped and displayed on its dedicated category page:
+  - **Admit Card Articles** (`category: "Admit Card"`) -> **MUST appear on `/admit-card`** (`src/pages/admit-card/index.astro`).
+  - **Result Articles** (`category: "Result"`) -> **MUST appear on `/result`** (`src/pages/result/index.astro`).
+  - **Syllabus Articles** (`category: "Syllabus"`) -> **MUST appear on `/syllabus`** (`src/pages/syllabus.astro`).
+  - **Admission Articles** (`category: "Admission"`) -> **MUST appear on `/admission`** (`src/pages/admission/index.astro`).
+  - **Answer Key Articles** (`category: "Answer Key"`) -> **MUST appear on `/answer-key`** (`src/pages/answer-key/index.astro`).
+  - **Bank Job Articles** (`category: "Bank Job"`) -> **MUST appear on `/bank-recruitment`** (`src/pages/bank-recruitment/index.astro`).
+- **Synchronization Standard**: When creating or updating any article, verify that both the central `articlesRegistry` (`src/constants/articles.ts`) and the dedicated category listing page array (e.g., `admitCards` on `/admit-card`, `results` on `/result`) are updated with the new item.
+

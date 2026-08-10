@@ -1,4 +1,4 @@
-import dummyData from "./dummy-data.json";
+import dummyData from "./dummy-data.json
 
 export interface DemoMetadata {
   siteName: string;
