@@ -184,4 +184,63 @@
   .font-display {
     font-family: 'Outfit', 'Poppins', ui-sans-serif, system-ui, sans-serif;
   }
+
+  /* Image Skeleton & Blur Fade-In Loading Effects */
+  @keyframes skeleton-shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  .img-skeleton {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+      90deg,
+      rgba(226, 232, 240, 0.4) 25%,
+      rgba(203, 213, 225, 0.8) 50%,
+      rgba(226, 232, 240, 0.4) 75%
+    ) !important;
+    background-size: 200% 100% !important;
+    animation: skeleton-shimmer 1.5s infinite linear !important;
+  }
+
+  [data-theme="dark"] .img-skeleton {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.03) 25%,
+      rgba(255, 255, 255, 0.08) 50%,
+      rgba(255, 255, 255, 0.03) 75%
+    ) !important;
+    background-size: 200% 100% !important;
+  }
+
+  /* Article Images loading transition */
+  article img:not(.no-skeleton),
+  .prose img:not(.no-skeleton),
+  .article-content-wrapper img:not(.no-skeleton),
+  .article-img:not(.no-skeleton) {
+    opacity: 0;
+    filter: blur(10px);
+    transition: opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1), filter 0.45s cubic-bezier(0.4, 0, 0.2, 1), transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: opacity, filter;
+  }
+
+  article img.img-loaded,
+  .prose img.img-loaded,
+  .article-content-wrapper img.img-loaded,
+  .article-img.img-loaded {
+    opacity: 1;
+    filter: blur(0);
+  }
+
+  article img.img-error,
+  .prose img.img-error,
+  .article-img.img-error {
+    opacity: 0.8;
+    filter: grayscale(1);
+  }
 }

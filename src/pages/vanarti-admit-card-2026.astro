@@ -73,15 +73,16 @@ const imageUrl =
       class="mb-10 overflow-hidden rounded-3xl border border-border-card bg-bg-surface p-2 sm:p-3 shadow-sm space-y-2"
     >
       <div
-        class="w-full overflow-hidden rounded-2xl bg-bg-surface flex items-center justify-center min-h-[220px]"
+        class="w-full overflow-hidden rounded-2xl bg-bg-surface flex items-center justify-center min-h-[220px] img-skeleton"
       >
         <img
           src={imageUrl}
           width="1200"
           height="675"
           alt="वनार्टी प्रवेशपत्र २०२६ विद्यार्थ्यांच्या ऑनलाईन लॉगिन वर प्रसिद्ध - VANARTI Admit Card 2026 Student Login"
-          class="w-full h-auto max-h-[550px] object-cover sm:object-contain rounded-xl transition-all duration-300"
+          class="w-full h-auto max-h-[550px] object-cover sm:object-contain rounded-xl transition-all duration-300 article-img"
           loading="eager"
+          onload="this.classList.add('img-loaded'); this.parentElement?.classList.remove('img-skeleton');"
           onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1fAUV_we5xCbx8IiAcaMn1zu2NyAFlZFj';"
         />
       </div>

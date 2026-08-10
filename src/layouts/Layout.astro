@@ -251,21 +251,60 @@ const breadcrumbSchema = {
             }
           });
         });
-      }      // Run on initial load
+      }
+
+      // Universal Article Image Skeleton & Blur Fade-In Manager
+      function setupArticleImageSkeleton() {
+        const images = document.querySelectorAll(
+          "article img, .prose img, .article-content-wrapper img, .article-img, .img-skeleton img"
+        );
+        
+        images.forEach(img => {
+          if (img.classList.contains("no-skeleton")) return;
+
+          const parentSkeleton = img.closest(".img-skeleton");
+
+          const handleLoaded = () => {
+            img.classList.add("img-loaded");
+            if (parentSkeleton) {
+              parentSkeleton.classList.remove("img-skeleton");
+            }
+          };
+
+          const handleError = () => {
+            img.classList.add("img-error");
+            if (parentSkeleton) {
+              parentSkeleton.classList.remove("img-skeleton");
+            }
+          };
+
+          if (img.complete && img.naturalWidth !== 0) {
+            handleLoaded();
+          } else {
+            img.addEventListener("load", handleLoaded, { once: true });
+            img.addEventListener("error", handleError, { once: true });
+          }
+        });
+      }
+
+      // Run on initial load
       if (document.readyState === "loading") {
         document.addEventListener("DOMContentLoaded", () => {
           checkUrgentBadges();
           setupQrReveal();
+          setupArticleImageSkeleton();
         });
       } else {
         checkUrgentBadges();
         setupQrReveal();
+        setupArticleImageSkeleton();
       }
 
       // Run on View Transition navigation
       document.addEventListener("astro:page-load", () => {
         checkUrgentBadges();
         setupQrReveal();
+        setupArticleImageSkeleton();
       });
     </script>
     <script type="application/ld+json">
