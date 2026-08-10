@@ -82,7 +82,7 @@ export async function GET() {
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   ${allPages.map(page => `
   <url>
-    <loc>${siteUrl}${page}</loc>
+    <loc>${page === '' ? `${siteUrl}/` : `${siteUrl}${page}`}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>${page === '' ? '1.0' : (page === '/current-recruitment' || page === '/admit-card' || page === '/answer-key' || page === '/admission') ? '0.9' : dynamicPages.includes(page) ? '0.8' : '0.5'}</priority>

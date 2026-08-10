@@ -8,6 +8,7 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://mahasandhi.in',
+  trailingSlash: 'never',
   adapter: cloudflare({
     platformProxy: {
       enabled: true

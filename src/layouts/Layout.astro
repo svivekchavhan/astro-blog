@@ -54,9 +54,15 @@ const {
 
 const dateToDisplay = pubDate || articleDate;
 
-const canonicalURL = customCanonicalURL
-  ? new URL(customCanonicalURL, Astro.site || "https://mahasandhi.in")
-  : new URL(Astro.url.pathname, Astro.site || "https://mahasandhi.in");
+let rawPath = customCanonicalURL
+  ? new URL(customCanonicalURL, Astro.site || "https://mahasandhi.in").pathname
+  : Astro.url.pathname;
+
+if (rawPath.length > 1 && rawPath.endsWith("/")) {
+  rawPath = rawPath.slice(0, -1);
+}
+
+const canonicalURL = new URL(rawPath, Astro.site || "https://mahasandhi.in").href;
 
 const latestJobs = [
   {
