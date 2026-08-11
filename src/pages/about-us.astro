@@ -1,33 +1,228 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import {
+  HiOutlineAcademicCap,
+  HiOutlineBriefcase,
+  HiOutlineBolt,
+  HiOutlineRocketLaunch,
+  HiOutlineCpuChip,
+  HiOutlineShieldCheck,
+  HiOutlineCheckCircle,
+  HiOutlineArrowRight,
+  HiOutlineEnvelope,
+  HiOutlineClock,
+  HiOutlineDocumentCheck,
+  HiOutlineSparkles,
+} from "react-icons/hi2";
 ---
 
-<Layout title="About Us - Who We Are & Our Mission | MahaSandhi" description="Learn about MahaSandhi, India's trusted source for latest government jobs, sarkari naukri updates, exam results, admit cards, answer keys, and college admissions at mahasandhi.in.">
-  <article class="max-w-4xl mx-auto py-12 px-4">
-    <h1 class="text-4xl md:text-5xl font-extrabold mb-8 tracking-tight text-text-main">About <span class="gradient-text">MahaSandhi</span></h1>
-    
-    <div class="prose prose-lg dark:prose-invert max-w-none text-text-muted leading-relaxed space-y-6">
-      <p class="text-xl text-text-main font-medium">Welcome to MahaSandhi, your premier destination for high-quality technical content, web development tutorials, and insights into the future of technology.</p>
-      
-      <h2 class="text-2xl font-bold text-text-main pt-6">Our Mission</h2>
-      <p>Our mission is to simplify complex technology for developers, designers, and tech enthusiasts. We believe that great information should be accessible, well-structured, and easy to digest.</p>
-      
-      <h2 class="text-2xl font-bold text-text-main pt-6">What We Cover</h2>
-      <ul class="list-disc pl-6 space-y-2">
-        <li><strong>Web Development:</strong> Deep dives into Astro, React, Tailwind CSS, and modern JavaScript.</li>
-        <li><strong>AI & Innovation:</strong> Exploring how artificial intelligence is shaping our digital world.</li>
-        <li><strong>Design Systems:</strong> Best practices for creating scalable and beautiful user interfaces.</li>
-        <li><strong>Performance:</strong> Tips and tricks for achieving perfect Core Web Vitals scores.</li>
-      </ul>
-      
-      <h2 class="text-2xl font-bold text-text-main pt-6">The Team</h2>
-      <p>MahaSandhi is run by a dedicated team of developers and writers who are passionate about sharing their knowledge. We pride ourselves on accuracy, clarity, and providing value to our readers.</p>
-      
-      <div class="bg-bg-surface border border-border-card rounded-2xl p-8 mt-12">
-        <h3 class="text-xl font-bold text-text-main mb-4">Want to contribute?</h3>
-        <p class="mb-6">We're always looking for guest writers and collaborators. If you have something interesting to share with our community, get in touch!</p>
-        <a href="/contact-us" class="btn-primary inline-flex">Contact Us</a>
+<Layout
+  title="About Us - Who We Are & Our Mission | MahaSandhi"
+  description="Learn about MahaSandhi (mahasandhi.in) - founded by engineering minds to provide accurate, precise, and timely Sarkari Naukri (job) updates, college admission alerts, and exam results with simple, modern, clutter-free technology."
+>
+  <article class="max-w-4xl mx-auto py-10 px-4 sm:px-6">
+    <!-- Header Section -->
+    <header class="mb-10 text-center sm:text-left border-b border-border-card pb-8">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/10 text-primary font-semibold text-xs uppercase tracking-wider mb-4 border border-primary/20">
+        <HiOutlineSparkles className="text-sm" />
+        <span>Built by Engineers • Dedicated to Aspirants</span>
       </div>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-text-main mb-4">
+        About <span class="gradient-text">MahaSandhi</span>
+      </h1>
+      <p class="text-text-muted text-base sm:text-lg leading-relaxed max-w-3xl">
+        Delivering 100% accurate, precise, and timely updates for government jobs (Naukri) and college admissions across Maharashtra and India — powered by simple, ultra-fast, modern technology.
+      </p>
+      <div class="mt-4 text-xs text-text-muted/80 flex flex-wrap items-center gap-4">
+        <span>🌐 <strong>Domain:</strong> <a href="https://mahasandhi.in" class="text-primary hover:underline font-bold">mahasandhi.in</a></span>
+        <span>🎯 <strong>Focus:</strong> Sarkari Naukri, Admissions & Exams</span>
+        <span>⚡ <strong>Tech Stack:</strong> Modern, Clutter-Free & Fast</span>
+      </div>
+    </header>
+
+    <!-- Founder's Story & Vision Card -->
+    <div class="bg-gradient-to-br from-primary/5 via-bg-surface to-secondary/5 border border-primary/20 rounded-2xl p-6 sm:p-8 mb-12 shadow-sm relative overflow-hidden">
+      <div class="absolute -right-16 -bottom-16 w-40 h-40 bg-primary/10 rounded-full blur-3xl -z-0"></div>
+      
+      <div class="relative z-10 space-y-4">
+        <div class="flex items-center gap-3 text-primary font-bold text-lg">
+          <HiOutlineCpuChip className="text-2xl shrink-0" />
+          <h2>The Story Behind MahaSandhi</h2>
+        </div>
+        
+        <p class="text-text-main leading-relaxed text-sm sm:text-base">
+          Hi! I am an <strong>engineering student</strong> and technology enthusiast who experienced firsthand how frustrating it is to search for verified government recruitment notifications and college admission updates in Maharashtra.
+        </p>
+
+        <p class="text-text-muted leading-relaxed text-sm sm:text-base">
+          While preparing for competitive exams and navigating college admission CAP rounds, I noticed that most job portals and news websites were filled with <strong>confusing layouts, aggressive popup ads, fake download buttons, misleading titles, and outdated information</strong>. Crucial details like official notification PDFs, last dates to apply, fee structures, and exact eligibility criteria were hidden under mountains of unnecessary web clutter.
+        </p>
+
+        <p class="text-text-muted leading-relaxed text-sm sm:text-base">
+          I believed students and job aspirants deserved much better. Leveraging my engineering background and passion for modern software engineering, I built <strong class="text-text-main">MahaSandhi (mahasandhi.in)</strong> to solve this exact problem — a fast, clean, accurate, and completely transparent platform.
+        </p>
+      </div>
+    </div>
+
+    <!-- Core Pillars / Grid -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-bold text-text-main mb-6 flex items-center gap-2">
+        <HiOutlineRocketLaunch className="text-primary" />
+        <span>What We Do & Stand For</span>
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <!-- Card 1: Naukri Updates -->
+        <div class="bg-bg-surface border border-border-card rounded-2xl p-6 hover:border-primary/40 transition-all shadow-xs">
+          <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 text-xl font-bold">
+            <HiOutlineBriefcase />
+          </div>
+          <h3 class="text-lg font-bold text-text-main mb-2">Latest Naukri (Job) Updates</h3>
+          <p class="text-xs sm:text-sm text-text-muted leading-relaxed">
+            Timely notifications for Maharashtra State Govt Jobs (MPSC, ZP Bharti, Police Bharti, Talathi, WRD, ITI Apprentice) and All-India Recruitments (UPSC, SSC, Banking, Railways, Defense).
+          </p>
+        </div>
+
+        <!-- Card 2: Admission Guidance -->
+        <div class="bg-bg-surface border border-border-card rounded-2xl p-6 hover:border-primary/40 transition-all shadow-xs">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-4 text-xl font-bold">
+            <HiOutlineAcademicCap />
+          </div>
+          <h3 class="text-lg font-bold text-text-main mb-2">Admission & Exam Updates</h3>
+          <p class="text-xs sm:text-sm text-text-muted leading-relaxed">
+            Complete round-wise guidance for MHT-CET, Engineering (BE/B.Tech), Polytechnic Diploma, Direct Second Year (DSE), Pharmacy, MBA CAP admissions, Cutoff analyses, and Seat Matrices.
+          </p>
+        </div>
+
+        <!-- Card 3: Accurate & Precise -->
+        <div class="bg-bg-surface border border-border-card rounded-2xl p-6 hover:border-primary/40 transition-all shadow-xs">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-4 text-xl font-bold">
+            <HiOutlineDocumentCheck />
+          </div>
+          <h3 class="text-lg font-bold text-text-main mb-2">Accurate, Precise & Timely</h3>
+          <p class="text-xs sm:text-sm text-text-muted leading-relaxed">
+            Every update is thoroughly verified against official government PDFs, gazette notifications, and commission press releases before publication. No rumors, no clickbait.
+          </p>
+        </div>
+
+        <!-- Card 4: Simple & Modern Tech -->
+        <div class="bg-bg-surface border border-border-card rounded-2xl p-6 hover:border-primary/40 transition-all shadow-xs">
+          <div class="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-600 dark:text-sky-400 flex items-center justify-center mb-4 text-xl font-bold">
+            <HiOutlineBolt />
+          </div>
+          <h3 class="text-lg font-bold text-text-main mb-2">Simple & Modern Tech</h3>
+          <p class="text-xs sm:text-sm text-text-muted leading-relaxed">
+            Built using modern Jamstack & Astro SSG architecture for sub-second page loading speeds, minimal mobile data usage, and a completely clutter-free reading experience.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content Details -->
+    <div class="prose prose-md sm:prose-lg dark:prose-invert max-w-none text-text-muted leading-relaxed space-y-10">
+      
+      <!-- Section 1 -->
+      <section>
+        <h2 class="text-xl sm:text-2xl font-bold text-text-main mb-4 flex items-center gap-2">
+          1. Why Most Websites Fail Students & How We Fix It
+        </h2>
+        <p>
+          If you have ever tried downloading a government job notification or checking an exam date online, you have likely encountered websites that push dozens of ads, hide the actual PDF link behind multiple redirection loops, or post outdated schedules.
+        </p>
+        <p>
+          At <strong class="text-text-main">MahaSandhi</strong>, we adhere to strict engineering standards:
+        </p>
+        <ul class="list-disc pl-6 space-y-2 text-sm sm:text-base">
+          <li><strong>Direct Links Only:</strong> Direct links to official PDF notifications and official commission portals (<code class="text-xs bg-black/10 dark:bg-white/10 px-1.5 py-0.5 rounded">mpsc.gov.in</code>, <code class="text-xs bg-black/10 dark:bg-white/10 px-1.5 py-0.5 rounded">mahacet.org</code>).</li>
+          <li><strong>Key Summary Box:</strong> Important dates, vacancies, age limits, and fees summarized right at the top of every post.</li>
+          <li><strong>Sub-Second Load Times:</strong> Optimized pages that open instantly even on slow 2G or 3G mobile networks in rural regions of Maharashtra.</li>
+          <li><strong>Free Educational Tools:</strong> Built-in calculators (Age Eligibility Calculator, SGPA/CGPA Percentage Converters) to help with eligibility verification.</li>
+        </ul>
+      </section>
+
+      <!-- Section 2 -->
+      <section>
+        <h2 class="text-xl sm:text-2xl font-bold text-text-main mb-4 flex items-center gap-2">
+          2. Our Fact-Checking & Verification Process
+        </h2>
+        <p>
+          To maintain 100% precision and reliability, every piece of content published on MahaSandhi undergoes a rigorous verification workflow:
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6 not-prose">
+          <div class="bg-bg-surface border border-border-card rounded-xl p-4 text-center">
+            <div class="text-primary font-black text-xl mb-1">01</div>
+            <h4 class="font-bold text-text-main text-sm mb-1">Source Gathering</h4>
+            <p class="text-xs text-text-muted">Extracted strictly from official govt press notes, gazettes, and commission portals.</p>
+          </div>
+
+          <div class="bg-bg-surface border border-border-card rounded-xl p-4 text-center">
+            <div class="text-primary font-black text-xl mb-1">02</div>
+            <h4 class="font-bold text-text-main text-sm mb-1">Data Cross-Check</h4>
+            <p class="text-xs text-text-muted">Verification of age relaxation rules, qualification criteria, syllabus details & dates.</p>
+          </div>
+
+          <div class="bg-bg-surface border border-border-card rounded-xl p-4 text-center">
+            <div class="text-primary font-black text-xl mb-1">03</div>
+            <h4 class="font-bold text-text-main text-sm mb-1">Clutter-Free Publishing</h4>
+            <p class="text-xs text-text-muted">Formatted into clean, structured summaries for quick reading and instant action.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3 -->
+      <section>
+        <h2 class="text-xl sm:text-2xl font-bold text-text-main mb-4 flex items-center gap-2">
+          3. Our Core Guarantees & Values
+        </h2>
+        <div class="space-y-3 text-sm sm:text-base">
+          <div class="flex items-start gap-3 bg-bg-surface border border-border-card rounded-xl p-4">
+            <HiOutlineShieldCheck className="text-emerald-500 text-xl shrink-0 mt-0.5" />
+            <div>
+              <strong class="text-text-main block mb-0.5">100% Free Information</strong>
+              <span class="text-text-muted text-xs sm:text-sm">We will never ask candidates for money, job guarantees, or processing fees. Everything on MahaSandhi is 100% free for students and job seekers.</span>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3 bg-bg-surface border border-border-card rounded-xl p-4">
+            <HiOutlineClock className="text-sky-500 text-xl shrink-0 mt-0.5" />
+            <div>
+              <strong class="text-text-main block mb-0.5">Timely Deadline Alerts</strong>
+              <span class="text-text-muted text-xs sm:text-sm">We highlight last dates, hall ticket releases, and cutoff updates so candidates never miss a crucial career opportunity.</span>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3 bg-bg-surface border border-border-card rounded-xl p-4">
+            <HiOutlineCheckCircle className="text-primary text-xl shrink-0 mt-0.5" />
+            <div>
+              <strong class="text-text-main block mb-0.5">Honest Non-Government Declaration</strong>
+              <span class="text-text-muted text-xs sm:text-sm">MahaSandhi is an independent news and educational portal. We clearly disclose that we are a private initiative dedicated to student empowerment.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Contact & CTA -->
+      <section class="bg-bg-surface border border-border-card rounded-2xl p-6 sm:p-8 mt-12 not-prose">
+        <h2 class="text-xl font-bold text-text-main mb-3 flex items-center gap-2">
+          <HiOutlineEnvelope className="text-primary" />
+          <span>Have Feedback or Questions?</span>
+        </h2>
+        <p class="text-text-muted text-sm sm:text-base mb-6 leading-relaxed">
+          We are constantly refining MahaSandhi to provide the best candidate experience possible. If you spot an issue, have a suggestion, or want to collaborate, feel free to get in touch!
+        </p>
+
+        <div class="flex flex-wrap gap-4">
+          <a href="/contact-us" class="btn-primary inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm no-underline shadow-sm">
+            <span>Contact Us</span>
+            <HiOutlineArrowRight className="text-base" />
+          </a>
+          <a href="/disclaimer" class="px-5 py-2.5 rounded-xl font-bold text-sm text-text-main bg-bg-base hover:bg-black/5 dark:hover:bg-white/5 border border-border-card transition-colors no-underline">
+            Read Disclaimer
+          </a>
+        </div>
+      </section>
+
     </div>
   </article>
 </Layout>
