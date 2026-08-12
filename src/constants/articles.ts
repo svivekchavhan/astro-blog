@@ -14,6 +14,22 @@ export interface ArticleMeta {
 export const articlesRegistry: ArticleMeta[] = [
   {
     titleEn:
+      "Sangli DCC Bank Peon Bharti 2026: Apply Online for 79 Vacancies (12th Pass Eligible)",
+    titleMr:
+      "सांगली जिल्हा मध्यवर्ती बँक शिपाई पदभरती २०२६: ७९ जागांसाठी जाहिरात प्रसिद्ध!",
+    slug: "/sangli-dcc-bank-peon-bharti-2026",
+    category: "Bank Job",
+    date: "August 12, 2026",
+    image:
+      "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200",
+    postName: "शिपाई (Peon)",
+    descriptionMr:
+      "सांगली जिल्हा मध्यवर्ती सहकारी बँक लि., सांगली द्वारे शिपाई पदांच्या ७९ जागांसाठी सरळसेवा भरती जाहीर.",
+    vacancies: "79",
+    lastDate: "21 Aug 2026",
+  },
+  {
+    titleEn:
       "VANARTI Admit Card 2026: Free Coaching Screening Exam Hall Ticket Out in Candidate Login",
     titleMr:
       "वनार्टी प्रवेशपत्र २०२६: विद्यार्थ्यांच्या लॉगिन वर हॉलतिकीट प्रसिद्ध!",

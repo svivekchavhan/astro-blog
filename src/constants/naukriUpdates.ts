@@ -11,6 +11,15 @@ export interface NaukriUpdate {
 
 export const naukriUpdates: NaukriUpdate[] = [
   {
+    titleEn: "Sangli DCC Bank Peon Bharti 2026: Apply Online for 79 Vacancies (12th Pass Eligible)",
+    titleHi: "सांगली जिल्हा मध्यवर्ती बँक शिपाई पदभरती २०२६: ७९ जागांसाठी जाहिरात प्रसिद्ध (अंतिम तारीख २१ ऑगस्ट)",
+    date: "August 12, 2026",
+    badge: "New",
+    badgeType: "new",
+    link: "/sangli-dcc-bank-peon-bharti-2026",
+    description: "Sangli District Central Cooperative Bank Ltd (Sangli DCCB) invites online applications for 79 Peon vacancies. 12th pass eligible, 70 marks offline OMR exam. Apply by 21 August 2026."
+  },
+  {
     titleEn: "Mumbai Police Constable Bharti 2024-25: Final Selection List Out for 3,521 Vacancies",
     titleHi: "मुंबई पोलीस शिपाई भरती २०२४-२५: ३,५२१ पदांची अंतिम निवड यादी कट-ऑफसह जाहीर",
     date: "August 07, 2026",
