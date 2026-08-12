@@ -329,14 +329,14 @@ const breadcrumbSchema = {
 
     <div
       class:list={[
-        "max-w-[1200px] mx-auto px-4 sm:px-10 lg:px-14 w-full flex-1 flex flex-col lg:flex-row gap-8 lg:gap-12",
+        "max-w-[1260px] mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col lg:flex-row gap-8 lg:gap-10",
         pathSegments.length > 0 ? "py-4 sm:py-6" : "py-6 sm:py-12",
       ]}
     >
       <main
         class:list={[
           "min-w-0 prose dark:prose-invert prose-headings:text-text-main max-w-none w-full",
-          hideSidebar ? "flex-1" : "lg:flex-[2.3]",
+          hideSidebar ? "flex-1" : "lg:flex-1 min-w-0",
         ]}
       >
         {
@@ -488,7 +488,7 @@ const breadcrumbSchema = {
       </main>
       {
         !hideSidebar && (
-          <aside class="w-full lg:flex-1 space-y-6 lg:sticky lg:top-[calc(var(--navbar-height,190px)+16px)] h-fit">
+          <aside class="w-full lg:w-[350px] xl:w-[380px] shrink-0 space-y-6 lg:sticky lg:top-[calc(var(--navbar-height,190px)+16px)] h-fit">
             <!-- Important Updates Widget (Placed at Top) -->
             <ImportantUpdatesWidget />
 
