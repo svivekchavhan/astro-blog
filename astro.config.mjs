@@ -30,6 +30,7 @@ export default defineConfig({
       external: ['cloudflare:workers']
     },
     optimizeDeps: {
+      noDiscovery: true,
       include: ['react', 'react-dom'],
       exclude: ['cloudflare:workers']
     }

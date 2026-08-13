@@ -94,6 +94,22 @@ export const articlesRegistry: ArticleMeta[] = [
   },
   {
     titleEn:
+      "SBI Recruitment 2026: State Bank of India Advertisements, Exam Updates & Apply Links Hub",
+    titleMr:
+      "भारतीय स्टेट बँक (SBI) पदभरती जाहिराती, निकाल व ऑनलाईन अर्ज अपडेट्स २०२६",
+    slug: "/sbi-recruitment",
+    category: "Bank Job",
+    date: "August 13, 2026",
+    image:
+      "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200",
+    postName: "SBI Clerk, PO, SO, CBO & Apprentice",
+    descriptionMr:
+      "भारतीय स्टेट बँक (SBI) भरती २०२६ अंतर्गत लिपिक, PO, SO, CBO आणि अप्रेंटिस पदांच्या सर्व अधिकृत जाहिराती व ऑनलाईन अर्ज अपडेट्स एकाच ठिकाणी.",
+    vacancies: "1,538+",
+    lastDate: "Active Now",
+  },
+  {
+    titleEn:
       "PDCC Bank Peon Bharti 2026: Apply Online for 289 Vacancies (12th Pass Eligible)",
     titleMr:
       "पुणे जिल्हा मध्यवर्ती सहकारी बँक भरती २०२६: शिपाई २८९ पदांची सरळसेवा भरती जाहिरात प्रसिद्ध",

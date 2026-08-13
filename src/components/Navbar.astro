@@ -16,6 +16,7 @@ import {
   HiOutlineMap,
   HiOutlineIdentification,
   HiOutlineBriefcase,
+  HiOutlineBuildingOffice,
   HiOutlineKey,
   HiOutlineAcademicCap,
   HiOutlineCalculator,
@@ -63,6 +64,12 @@ const mainPages = [
     href: "/bank-recruitment",
     category: "Jobs",
     keywords: "bank ibps sbi po clerk",
+  },
+  {
+    title: "SBI Recruitment 2026 (एसबीआय बँक भरती जाहिरात)",
+    href: "/sbi-recruitment",
+    category: "SBI Job",
+    keywords: "sbi recruitment state bank clerk po so cbo apprentice bharti",
   },
   {
     title: "Naukri Updates & Alerts (नोकरी अपडेट्स)",
@@ -439,6 +446,15 @@ const searchData = [
               <span>Bank Recruitment</span>
             </a>
             <a
+              href="/sbi-recruitment"
+              class="flex items-center gap-2 mx-2 my-1 px-3.5 py-2.5 rounded-xl bg-sky-500/5 dark:bg-sky-500/10 border border-solid border-sky-500/25 text-text-main font-bold hover:bg-sky-500/10 hover:border-sky-500 hover:shadow-xs hover:shadow-sky-500/5 transition-all duration-300 text-[0.68rem] uppercase tracking-wider group no-underline"
+            >
+              <HiOutlineBuildingOffice
+                className="text-sm shrink-0 text-sky-500 group-hover:scale-110 transition-transform"
+              />
+              <span>SBI Recruitment</span>
+            </a>
+            <a
               href="/mpsc"
               class="flex items-center gap-2 mx-2 my-1 px-3.5 py-2.5 rounded-xl bg-violet-500/5 dark:bg-violet-500/10 border border-solid border-violet-500/25 text-text-main font-bold hover:bg-violet-500/10 hover:border-violet-500 hover:shadow-xs hover:shadow-violet-500/5 transition-all duration-300 text-[0.68rem] uppercase tracking-wider group no-underline"
             >
@@ -590,6 +606,15 @@ const searchData = [
         >
           <HiOutlineBriefcase className="text-lg shrink-0 text-sky-500" />
           <span>Bank Recruitment</span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="/sbi-recruitment"
+          class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-sky-500/5 dark:bg-sky-500/10 border border-solid border-sky-500/20 text-text-main font-bold hover:bg-sky-500/10 transition-all duration-300 text-xs uppercase tracking-wider no-underline"
+        >
+          <HiOutlineBuildingOffice className="text-lg shrink-0 text-sky-500" />
+          <span>SBI Recruitment</span>
         </a>
       </li>
       <li>

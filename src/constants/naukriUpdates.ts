@@ -29,6 +29,15 @@ export const naukriUpdates: NaukriUpdate[] = [
     description: "Brihanmumbai Police Commissionerate has officially published the Final Selection List & Waiting List with Cut-Off for 3,521 Police Constable posts."
   },
   {
+    titleEn: "SBI Recruitment 2026: State Bank of India Advertisements, Exam Updates & Apply Links",
+    titleHi: "भारतीय स्टेट बँक (SBI) भरती २०२६: अधिकृत जाहिराती, ऑनलाईन अर्ज व सर्व अपडेट्स एकाच ठिकाणी",
+    date: "August 13, 2026",
+    badge: "New Hub",
+    badgeType: "new",
+    link: "/sbi-recruitment",
+    description: "Explore all active and upcoming SBI recruitments (Clerk 1,538 posts, PO 2,000+ posts, SO, CBO, Apprentice). Qualifications, salary, syllabus, and direct apply links available."
+  },
+  {
     titleEn: "SBI Clerk Recruitment 2026: Apply Online for 1,538 Junior Associate Vacancies",
     titleHi: "भारतीय स्टेट बँकेत (SBI) लिपिक १५३८ जागांसाठी भरती २०२६: ऑनलाईन अर्ज सुरू",
     date: "August 08, 2026",
