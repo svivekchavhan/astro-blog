@@ -13,6 +13,13 @@ const { limit = 3, showViewAll = true } = Astro.props;
 // Filter out items where show === false
 const activeUpdates = naukriUpdates.filter(update => update.show !== false);
 const visibleUpdates = limit ? activeUpdates.slice(0, limit) : activeUpdates;
+
+function truncateWords(str: string, wordLimit: number = 10): string {
+  if (!str) return "";
+  const words = str.trim().split(/\s+/);
+  if (words.length <= wordLimit) return str;
+  return words.slice(0, wordLimit).join(" ") + "...";
+}
 ---
 
 <div class="flex flex-col">
@@ -30,15 +37,15 @@ const visibleUpdates = limit ? activeUpdates.slice(0, limit) : activeUpdates;
         <p class="text-xs text-text-muted text-center py-2 m-0">No naukri updates available.</p>
       ) : (
         visibleUpdates.map((update) => (
-          <div class="py-3 border-b border-border-card dark:border-border-card/30 last:border-b-0 last:pb-0 first:pt-0">
+          <div class="py-3 border-b border-border-card dark:border-border-card/30 last:border-b-0 last:pb-0">
             <a
               href={update.link}
               class="flex flex-col gap-1 text-text-muted hover:text-primary transition-colors duration-300 no-underline group/link"
             >
               <div class="flex items-start justify-between gap-2.5">
-                <span class="flex items-start gap-1.5 text-[0.75rem] font-bold text-text-main group-hover/link:text-primary transition-colors">
-                  <HiOutlineChevronRight className="text-primary text-[0.85rem] shrink-0 mt-0.5 transform group-hover/link:translate-x-0.5 transition-transform" />
-                  <span class="leading-snug">{update.titleHi}</span>
+                <span class="flex items-start gap-1.5 text-[0.75rem] font-bold text-text-main group-hover/link:text-primary transition-colors min-w-0 flex-1">
+                  <HiOutlineChevronRight className="text-primary text-[0.85rem] shrink-0 mt-1 transform group-hover/link:translate-x-0.5 transition-transform" />
+                  <span class="leading-relaxed pt-0.5 line-clamp-2">{truncateWords(update.titleHi, 10)}</span>
                 </span>
                 {update.badge && isWithin7Days(update.date) && (
                   <span class={`shrink-0 text-[0.5rem] px-1.5 py-0.5 rounded font-extrabold uppercase tracking-widest ${
@@ -52,7 +59,7 @@ const visibleUpdates = limit ? activeUpdates.slice(0, limit) : activeUpdates;
                   </span>
                 )}
               </div>
-              <span class="text-[0.65rem] text-text-muted/80 pl-5 font-semibold line-clamp-1">{update.titleEn}</span>
+              <span class="text-[0.65rem] text-text-muted/80 pl-5 font-semibold line-clamp-1">{truncateWords(update.titleEn, 8)}</span>
             </a>
           </div>
         ))

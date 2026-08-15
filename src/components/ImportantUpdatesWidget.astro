@@ -32,16 +32,16 @@ const totalPages = Math.ceil(totalItems / pageSize);
           const pageIndex = Math.floor(index / pageSize);
           return (
             <div 
-              class={`update-item py-2.5 border-b border-border-card dark:border-border-card/30 last:border-b-0 last:pb-0 first:pt-0 ${pageIndex !== 0 ? 'hidden' : ''}`}
+              class={`update-item py-2.5 border-b border-border-card dark:border-border-card/30 last:border-b-0 last:pb-0 ${pageIndex !== 0 ? 'hidden' : ''}`}
               data-page={pageIndex}
             >
               <a
                 href={update.link}
-                class="flex items-center justify-between w-full gap-3 text-text-muted hover:text-rose-500 transition-colors duration-300 text-xs font-semibold leading-snug no-underline group/link"
+                class="flex items-center justify-between w-full gap-3 text-text-muted hover:text-rose-500 transition-colors duration-300 text-xs font-semibold leading-relaxed no-underline group/link"
               >
                 <span class="flex items-start gap-2">
-                  <HiOutlineChevronRight className="text-rose-500 text-[0.85rem] shrink-0 mt-0.5 transform group-hover/link:translate-x-1 transition-transform" />
-                  <span>{update.title}</span>
+                  <HiOutlineChevronRight className="text-rose-500 text-[0.85rem] shrink-0 mt-1 transform group-hover/link:translate-x-1 transition-transform" />
+                  <span class="pt-0.5">{update.title}</span>
                 </span>
                 
                 {isWithin7Days(update.date) && (

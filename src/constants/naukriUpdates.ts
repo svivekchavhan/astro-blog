@@ -12,7 +12,7 @@ export interface NaukriUpdate {
 export const naukriUpdates: NaukriUpdate[] = [
   {
     titleEn: "Bombay High Court Clerk Admit Card 2026: Typing Test Hall Ticket Released",
-    titleHi: "बॉम्बे उच्च न्यायालय लिपिक हॉल तिकीट २०२६: टंकलेखक चाचणी प्रवेशपत्र डाऊनलोड करण्यासाठी डायरेक्ट लिंक उपलब्ध",
+    titleHi: "बॉम्बे उच्च न्यायालय लिपिक हॉल तिकीट २०२६ प्रसिद्ध!",
     date: "August 15, 2026",
     badge: "Admit Card",
     badgeType: "new",
@@ -21,7 +21,7 @@ export const naukriUpdates: NaukriUpdate[] = [
   },
   {
     titleEn: "Sangli DCC Bank Peon Bharti 2026: Apply Online for 79 Vacancies (12th Pass Eligible)",
-    titleHi: "सांगली जिल्हा मध्यवर्ती बँक शिपाई पदभरती २०२६: ७९ जागांसाठी जाहिरात प्रसिद्ध (अंतिम तारीख २१ ऑगस्ट)",
+    titleHi: "सांगली DCC बँक शिपाई भरती २०२६: ७९ जागा जाहीर",
     date: "August 12, 2026",
     badge: "New",
     badgeType: "new",
@@ -30,7 +30,7 @@ export const naukriUpdates: NaukriUpdate[] = [
   },
   {
     titleEn: "Mumbai Police Constable Bharti 2024-25: Final Selection List Out for 3,521 Vacancies",
-    titleHi: "मुंबई पोलीस शिपाई भरती २०२४-२५: ३,५२१ पदांची अंतिम निवड यादी कट-ऑफसह जाहीर",
+    titleHi: "मुंबई पोलीस भरती: ३,५२१ पदांची अंतिम निवड यादी जाहीर",
     date: "August 07, 2026",
     badge: "Result Out",
     badgeType: "important",
@@ -39,7 +39,7 @@ export const naukriUpdates: NaukriUpdate[] = [
   },
   {
     titleEn: "SBI Recruitment 2026: State Bank of India Advertisements, Exam Updates & Apply Links",
-    titleHi: "भारतीय स्टेट बँक (SBI) भरती २०२६: अधिकृत जाहिराती, ऑनलाईन अर्ज व सर्व अपडेट्स एकाच ठिकाणी",
+    titleHi: "SBI भरती २०२६: सर्व जाहिराती व ऑनलाईन अर्ज एकत्र",
     date: "August 13, 2026",
     badge: "New Hub",
     badgeType: "new",
@@ -48,7 +48,7 @@ export const naukriUpdates: NaukriUpdate[] = [
   },
   {
     titleEn: "SBI Clerk Recruitment 2026: Apply Online for 1,538 Junior Associate Vacancies",
-    titleHi: "भारतीय स्टेट बँकेत (SBI) लिपिक १५३८ जागांसाठी भरती २०२६: ऑनलाईन अर्ज सुरू",
+    titleHi: "SBI लिपिक भरती २०२६: १,५३८ जागांसाठी अर्ज सुरू",
     date: "August 08, 2026",
     badge: "New",
     badgeType: "new",
@@ -57,7 +57,7 @@ export const naukriUpdates: NaukriUpdate[] = [
   },
   {
     titleEn: "PDCC Bank Peon Bharti 2026: Apply Online for 289 Posts (12th Pass Eligible)",
-    titleHi: "पुणे जिल्हा मध्यवर्ती सहकारी बँक भरती २०२६: शिपाई २८९ पदांची सरळसेवा भरती जाहीर (अर्ज मुदत १० ऑगस्ट)",
+    titleHi: "PDCC बँक शिपाई भरती २०२६: २८९ जागा जाहीर",
     date: "August 06, 2026",
     badge: "New",
     badgeType: "new",
@@ -66,7 +66,7 @@ export const naukriUpdates: NaukriUpdate[] = [
   },
   {
     titleEn: "Solapur Mahanagarpalika Bharti 2026: Govt Approves 130 Posts Fill-up via TCS / IBPS",
-    titleHi: "सोलापूर महानगरपालिका भरती २०२६: १३० जागांच्या पदभरतीस शासन मान्यता जाहीर (नगर विकास विभाग)",
+    titleHi: "सोलापूर मनपा भरती २०२६: १३० जागांना शासन मान्यता",
     date: "August 06, 2026",
     badge: "Govt Order",
     badgeType: "new",
@@ -75,7 +75,7 @@ export const naukriUpdates: NaukriUpdate[] = [
   },
   {
     titleEn: "Latur DCC Bank Bharti 2026: Revised Waiting List Released as per GR dated 15.06.2018",
-    titleHi: "लातूर जिल्हा मध्यवर्ती बँक भरती २०२६: संवर्गनिहाय २०% सुधारीत प्रतीक्षा यादी (Revised Waiting List) प्रसिद्ध",
+    titleHi: "लातूर DCC बँक भरती: २०% सुधारित प्रतीक्षा यादी प्रसिद्ध",
     date: "August 03, 2026",
     badge: "Revised List",
     badgeType: "important",
@@ -84,7 +84,7 @@ export const naukriUpdates: NaukriUpdate[] = [
   },
   {
     titleEn: "Latur DCC Bank Result 2026: Phase 1 Selection List Released for 263 Posts",
-    titleHi: "लातूर जिल्हा मध्यवर्ती बँक निकाल २०२६: ३७५ पदांपैकी २६३ उमेदवारांची Phase 1 निवड यादी प्रसिद्ध",
+    titleHi: "लातूर DCC बँक निकाल २०२६: २६३ उमेदवारांची निवड यादी",
     date: "July 28, 2026",
     badge: "Result",
     badgeType: "important",
@@ -93,7 +93,7 @@ export const naukriUpdates: NaukriUpdate[] = [
   },
   {
     titleEn: "MPSC Group C Bharti 2026: Corrigendum Released for 5,707 Vacancies & Deadline Extended to 10 August",
-    titleHi: "MPSC गट-क संयुक्त परीक्षा २०२६: ५,७०७ जागांसाठी शुद्धिपत्रक प्रसिद्ध, ऑनलाईन अर्ज मुदतवाढ (१० ऑगस्ट २०२६)",
+    titleHi: "MPSC गट-क परीक्षा २०२६: ५,७०७ जागा शुद्धिपत्रक व मुदतवाढ",
     date: "July 22, 2026",
     badge: "New",
     badgeType: "new",
@@ -102,7 +102,7 @@ export const naukriUpdates: NaukriUpdate[] = [
   },
   {
     titleEn: "MH SET 2026 Exam Rescheduled: Date Postponed to 27 September",
-    titleHi: "महाराष्ट्र सेट परीक्षा (MH-SET) २०२६ पुढे ढकलली, नवीन तारीख जाहीर",
+    titleHi: "MH-SET परीक्षा २०२६ पुढे ढकलली: नवीन तारीख जाहीर",
     date: "July 20, 2026",
     badge: "Rescheduled",
     badgeType: "important",
@@ -111,7 +111,7 @@ export const naukriUpdates: NaukriUpdate[] = [
   },
   {
     titleEn: "Maharashtra Arogya Bharti 2026: Recruitment Announced for 7,195 Posts",
-    titleHi: "महाराष्ट्र आरोग्य विभाग भरती २०२६: ७,१९५ रिक्त जागांची मेगा भरती जाहीर",
+    titleHi: "महाराष्ट्र आरोग्य विभाग भरती: ७,१९५ जागांची मेगा भरती",
     date: "July 12, 2026",
     badge: "New",
     badgeType: "new",
@@ -120,7 +120,7 @@ export const naukriUpdates: NaukriUpdate[] = [
   },
   {
     titleEn: "MH SET 2026 Application Date Extended & Exam Postponed",
-    titleHi: "महाराष्ट्र सेट परीक्षा (MH-SET) २०२६: अर्ज मुदतवाढ आणि सुधारित परीक्षा तारीख जाहीर",
+    titleHi: "MH-SET २०२६: अर्ज मुदतवाढ व परीक्षा सुधारित तारीख",
     date: "July 12, 2026",
     badge: "Latest",
     badgeType: "important",
@@ -129,7 +129,7 @@ export const naukriUpdates: NaukriUpdate[] = [
   },
   {
     titleEn: "MPSC WRD Mechanical Recruitment Rules 2026 Notification Released",
-    titleHi: "एमपीएससी जलसंपदा विभाग (WRD) मेकॅनिकल भरती नियम २०२६ प्रसिद्ध",
+    titleHi: "MPSC जलसंपदा विभाग मेकॅनिकल भरती नियम २०२६ प्रसिद्ध",
     date: "July 10, 2026",
     badge: "New",
     badgeType: "new",
