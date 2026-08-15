@@ -11,6 +11,15 @@ export interface NaukriUpdate {
 
 export const naukriUpdates: NaukriUpdate[] = [
   {
+    titleEn: "Bombay High Court Clerk Admit Card 2026: Typing Test Hall Ticket Released",
+    titleHi: "बॉम्बे उच्च न्यायालय लिपिक हॉल तिकीट २०२६: टंकलेखक चाचणी प्रवेशपत्र डाऊनलोड करण्यासाठी डायरेक्ट लिंक उपलब्ध",
+    date: "August 15, 2026",
+    badge: "Admit Card",
+    badgeType: "new",
+    link: "/bhc-clerk-admit-card-2026",
+    description: "Bombay High Court (BHC) has officially released the Hall Ticket / Admit Card for Clerk Typing Test 2026. 👉 लिपिक हॉल तिकीट डाउनलोड करण्यासाठी खालील लिंकवर क्लिक करा 👇👇👇"
+  },
+  {
     titleEn: "Sangli DCC Bank Peon Bharti 2026: Apply Online for 79 Vacancies (12th Pass Eligible)",
     titleHi: "सांगली जिल्हा मध्यवर्ती बँक शिपाई पदभरती २०२६: ७९ जागांसाठी जाहिरात प्रसिद्ध (अंतिम तारीख २१ ऑगस्ट)",
     date: "August 12, 2026",

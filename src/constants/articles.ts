@@ -14,6 +14,22 @@ export interface ArticleMeta {
 export const articlesRegistry: ArticleMeta[] = [
   {
     titleEn:
+      "Bombay High Court Clerk Admit Card 2026: Typing Test Hall Ticket Download Direct Link",
+    titleMr:
+      "बॉम्बे उच्च न्यायालय लिपिक हॉल तिकीट २०२६: टंकलेखक चाचणी प्रवेशपत्र डाऊनलोड लिंक उपलब्ध!",
+    slug: "/bhc-clerk-admit-card-2026",
+    category: "Admit Card",
+    date: "August 15, 2026",
+    image:
+      "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1200",
+    postName: "लिपिक टंकलेखक (Clerk / Typist Hall Ticket)",
+    descriptionMr:
+      "बॉम्बे उच्च न्यायालय (BHC) लिपिक टंकलेखक चाचणी परीक्षेचे प्रवेशपत्र ऑनलाईन जाहीर. 👉 लिपिक हॉल तिकीट डाउनलोड करण्यासाठी खालील लिंकवर क्लिक करा 👇👇👇",
+    vacancies: "Clerk Hall Ticket",
+    lastDate: "Admit Card Out",
+  },
+  {
+    titleEn:
       "GMC Gondia Assistant Professor Recruitment 2026: Apply Online for 13 Vacancies",
     titleMr:
       "GMC Gondia भरती २०२६: शासकीय वैद्यकीय महाविद्यालय गोंदिया सहाय्यक प्राध्यापक १३ जागांसाठी जाहिरात प्रसिद्ध",
