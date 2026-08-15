@@ -11,6 +11,15 @@ export interface NaukriUpdate {
 
 export const naukriUpdates: NaukriUpdate[] = [
   {
+    titleEn: "Income Tax Pune Recruitment 2026: Apply Online for 85 Sports Quota Vacancies",
+    titleHi: "आयकर विभाग पुणे स्पोर्ट्स कोटा भरती २०२६: ८५ जागांसाठी अर्ज सुरू",
+    date: "August 15, 2026",
+    badge: "New",
+    badgeType: "new",
+    link: "/pune-income-tax-sports-quota-recruitment-2026",
+    description: "Principal Chief Commissioner of Income Tax (Pr.CCIT), Pune invites online applications for 85 vacancies of Stenographer Grade-II, Tax Assistant, and MTS under Sports Quota. Apply online by 15 Sept 2026."
+  },
+  {
     titleEn: "Bombay High Court Clerk Admit Card 2026: Typing Test Hall Ticket Released",
     titleHi: "बॉम्बे उच्च न्यायालय लिपिक हॉल तिकीट २०२६ प्रसिद्ध!",
     date: "August 15, 2026",

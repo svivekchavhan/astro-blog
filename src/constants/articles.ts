@@ -14,6 +14,22 @@ export interface ArticleMeta {
 export const articlesRegistry: ArticleMeta[] = [
   {
     titleEn:
+      "Income Tax Pune Sports Quota Recruitment 2026: Apply Online for 85 Vacancies (Steno, Tax Assistant & MTS)",
+    titleMr:
+      "आयकर विभाग पुणे स्पोर्ट्स कोटा पदभरती २०२६: ८५ जागांसाठी जाहिरात प्रसिद्ध!",
+    slug: "/pune-income-tax-sports-quota-recruitment-2026",
+    category: "Central Govt",
+    date: "August 15, 2026",
+    image:
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1200",
+    postName: "स्टेनोग्राफर, टॅक्स असिस्टंट व MTS",
+    descriptionMr:
+      "प्रधान मुख्य आयकर आयुक्त, पुणे (Pr.CCIT Pune) द्वारे खेळाडूंच्या ८५ जागांवर ऑनलाईन भरती जाहीर. १०वी, १२वी आणि पदवीधर खेळाडू पात्र.",
+    vacancies: "85",
+    lastDate: "15 Sept 2026",
+  },
+  {
+    titleEn:
       "Bombay High Court Clerk Admit Card 2026: Typing Test Hall Ticket Download Direct Link",
     titleMr:
       "बॉम्बे उच्च न्यायालय लिपिक हॉल तिकीट २०२६: टंकलेखक चाचणी प्रवेशपत्र डाऊनलोड लिंक उपलब्ध!",
