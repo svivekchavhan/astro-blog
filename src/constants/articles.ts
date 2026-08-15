@@ -14,6 +14,22 @@ export interface ArticleMeta {
 export const articlesRegistry: ArticleMeta[] = [
   {
     titleEn:
+      "GMC Gondia Assistant Professor Recruitment 2026: Apply Online for 13 Vacancies",
+    titleMr:
+      "GMC Gondia भरती २०२६: शासकीय वैद्यकीय महाविद्यालय गोंदिया सहाय्यक प्राध्यापक १३ जागांसाठी जाहिरात प्रसिद्ध",
+    slug: "/gmc-gondia-assistant-professor-recruitment-2026",
+    category: "Latest Job",
+    date: "August 15, 2026",
+    image:
+      "https://lh3.googleusercontent.com/d/1qMZYMWkp1Z1zKUWgRTdDwKMpJje5PSwd",
+    postName: "सहाय्यक प्राध्यापक (Assistant Professor)",
+    descriptionMr:
+      "शासकीय वैद्यकीय महाविद्यालय, गोंदिया (GMC Gondia) द्वारे सहाय्यक प्राध्यापक व सांख्यिकीशास्त्रज्ञ १३ जागांसाठी भरती जाहीर.",
+    vacancies: "13",
+    lastDate: "20 Aug 2026",
+  },
+  {
+    titleEn:
       "Sangli DCC Bank Peon Bharti 2026: Apply Online for 79 Vacancies (12th Pass Eligible)",
     titleMr:
       "सांगली जिल्हा मध्यवर्ती बँक शिपाई पदभरती २०२६: ७९ जागांसाठी जाहिरात प्रसिद्ध!",
