@@ -154,6 +154,13 @@ const latestJobs = [
     lastDate: "30 June 2026"
   }
 ];
+
+function truncateWords(str: string, wordLimit: number = 15): string {
+  if (!str) return "";
+  const words = str.trim().split(/\s+/);
+  if (words.length <= wordLimit) return str;
+  return words.slice(0, wordLimit).join(" ") + "...";
+}
 ---
 
 <Layout title="Latest Government Jobs & Vacancies 2026 | Sarkari Naukri Updates - MahaSandhi" description="Explore latest government job notifications 2026. Find UPSC, SSC, Banking, Railways, State PSC recruitment updates with vacancies, eligibility criteria, application dates, and direct apply links at mahasandhi.in.">
@@ -246,9 +253,9 @@ const latestJobs = [
                 </h3>
               </a>
 
-              <!-- Description (Responsive Text size) -->
+              <!-- Description (Responsive Text size - Truncated to 15 words) -->
               <p class="text-xs sm:text-sm text-text-secondary leading-relaxed mb-3.5 max-w-[850px]">
-                {job.description}
+                {truncateWords(job.description, 15)}
               </p>
               
               <!-- Prominent Row: Total Posts & Last Date (Responsive Sizes) -->
