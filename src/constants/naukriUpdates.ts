@@ -118,15 +118,7 @@ export const naukriUpdates: NaukriUpdate[] = [
     link: "/admit-card/maharashtra-set-exam-date-postponed",
     description: "The Savitribai Phule Pune University has postponed the MH-SET 2026 exam to September 27, 2026 due to a clash with the CTET exam. Read official notice."
   },
-  {
-    titleEn: "Maharashtra Arogya Bharti 2026: Recruitment Announced for 7,195 Posts",
-    titleHi: "महाराष्ट्र आरोग्य विभाग भरती: ७,१९५ जागांची मेगा भरती",
-    date: "July 12, 2026",
-    badge: "New",
-    badgeType: "new",
-    link: "/arogya-bharti-2026",
-    description: "Maharashtra Public Health Department announces 7,195 vacancies for Group C (5,307 posts) and Group D (1,888 posts). Testing is recommended via MPSC or TCS."
-  },
+
   {
     titleEn: "MH SET 2026 Application Date Extended & Exam Postponed",
     titleHi: "MH-SET २०२६: अर्ज मुदतवाढ व परीक्षा सुधारित तारीख",
@@ -142,7 +134,7 @@ export const naukriUpdates: NaukriUpdate[] = [
     date: "July 10, 2026",
     badge: "New",
     badgeType: "new",
-    link: "/mpsc-wrd-recruitment-rules-2026-mechanical",
+    link: "/mpsc/mpsc-wrd-recruitment-rules-2026-mechanical",
     description: "Check the latest recruitment rules, age criteria, and qualification standards for WRD Mechanical Engineering positions."
   }
 ];
