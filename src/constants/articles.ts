@@ -19,7 +19,7 @@ export const articlesRegistry: ArticleMeta[] = [
       "बँक ऑफ बडोदा मध्ये 'लोकल बँक ऑफिसर' २५०० जागांसाठी भरती २०२५: ऑनलाईन अर्ज सुरू",
     slug: "/bank-of-baroda-lbo-recruitment-2025",
     category: "Bank Job",
-    date: "July 04, 2025",
+    date: "August 18, 2026",
     image:
       "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200",
     postName: "Local Bank Officer (LBO - JMG/S-I)",

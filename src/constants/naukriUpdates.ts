@@ -13,7 +13,7 @@ export const naukriUpdates: NaukriUpdate[] = [
   {
     titleEn: "Bank of Baroda LBO Recruitment 2025: Apply Online for 2,500 Local Bank Officer Posts",
     titleHi: "बँक ऑफ बडोदा मध्ये 'लोकल बँक ऑफिसर' २५०० जागांसाठी भरती २०२५: ऑनलाईन अर्ज सुरू",
-    date: "July 04, 2025",
+    date: "August 18, 2026",
     badge: "New",
     badgeType: "new",
     link: "/bank-of-baroda-lbo-recruitment-2025",
