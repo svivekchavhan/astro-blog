@@ -14,6 +14,22 @@ export interface ArticleMeta {
 export const articlesRegistry: ArticleMeta[] = [
   {
     titleEn:
+      "Bank of Baroda LBO Recruitment 2025: Apply Online for 2,500 Local Bank Officer Posts",
+    titleMr:
+      "बँक ऑफ बडोदा मध्ये 'लोकल बँक ऑफिसर' २५०० जागांसाठी भरती २०२५: ऑनलाईन अर्ज सुरू",
+    slug: "/bank-of-baroda-lbo-recruitment-2025",
+    category: "Bank Job",
+    date: "July 04, 2025",
+    image:
+      "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200",
+    postName: "Local Bank Officer (LBO - JMG/S-I)",
+    descriptionMr:
+      "बँक ऑफ बडोदा (BOB) द्वारे लोकल बँक ऑफिसर (LBO) २५०० पदांची ऑनलाईन भरती जाहीर. पदवीधर + १ वर्षाचा बँक अधिकारी अनुभव आवश्यक.",
+    vacancies: "2,500",
+    lastDate: "07 Sept 2026",
+  },
+  {
+    titleEn:
       "Income Tax Pune Sports Quota Recruitment 2026: Apply Online for 85 Vacancies (Steno, Tax Assistant & MTS)",
     titleMr:
       "आयकर विभाग पुणे स्पोर्ट्स कोटा पदभरती २०२६: ८५ जागांसाठी जाहिरात प्रसिद्ध!",

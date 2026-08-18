@@ -11,6 +11,15 @@ export interface NaukriUpdate {
 
 export const naukriUpdates: NaukriUpdate[] = [
   {
+    titleEn: "Bank of Baroda LBO Recruitment 2025: Apply Online for 2,500 Local Bank Officer Posts",
+    titleHi: "बँक ऑफ बडोदा मध्ये 'लोकल बँक ऑफिसर' २५०० जागांसाठी भरती २०२५: ऑनलाईन अर्ज सुरू",
+    date: "July 04, 2025",
+    badge: "New",
+    badgeType: "new",
+    link: "/bank-of-baroda-lbo-recruitment-2025",
+    description: "Bank of Baroda (BOB) invites online applications for 2,500 Local Bank Officer (JMG/S-I) posts. Graduation + 1 year officer experience in RBI 2nd Schedule Bank/RRB eligible. Apply online by 7 September 2026."
+  },
+  {
     titleEn: "Income Tax Pune Recruitment 2026: Apply Online for 85 Sports Quota Vacancies",
     titleHi: "आयकर विभाग पुणे स्पोर्ट्स कोटा भरती २०२६: ८५ जागांसाठी अर्ज सुरू",
     date: "August 15, 2026",
