@@ -14,6 +14,22 @@ export interface ArticleMeta {
 export const articlesRegistry: ArticleMeta[] = [
   {
     titleEn:
+      "ISRO Recruitment 2026: Apply Online for 267 Assistant, JPA & UDC Vacancies",
+    titleMr:
+      "ISRO भरती २०२६: भारतीय अंतराळ संशोधन संस्थेत २६७ जागांसाठी भरती जाहीर!",
+    slug: "/isro-recruitment-2026",
+    category: "Central Govt",
+    date: "August 19, 2026",
+    image:
+      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
+    postName: "Assistant, JPA, UDC व Stenographer",
+    descriptionMr:
+      "भारतीय अंतराळ संशोधन संस्था (ISRO) अंतर्गत २६७ पदांसाठी ऑनलाईन अर्ज मागविण्यात येत आहेत. पदवीधर उमेदवारांसाठी सुवर्णसंधी.",
+    vacancies: "267",
+    lastDate: "20 Aug 2026",
+  },
+  {
+    titleEn:
       "Bank of Baroda LBO Recruitment 2025: Apply Online for 2,500 Local Bank Officer Posts",
     titleMr:
       "बँक ऑफ बडोदा मध्ये 'लोकल बँक ऑफिसर' २५०० जागांसाठी भरती २०२५: ऑनलाईन अर्ज सुरू",
