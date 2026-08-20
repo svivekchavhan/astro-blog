@@ -9,6 +9,7 @@ export interface ArticleMeta {
   descriptionMr?: string;
   vacancies?: string;
   lastDate?: string;
+  extendedDate?: string;
 }
 
 export const articlesRegistry: ArticleMeta[] = [
@@ -26,7 +27,8 @@ export const articlesRegistry: ArticleMeta[] = [
     descriptionMr:
       "भारतीय अंतराळ संशोधन संस्था (ISRO) अंतर्गत २६७ पदांसाठी ऑनलाईन अर्ज मागविण्यात येत आहेत. पदवीधर उमेदवारांसाठी सुवर्णसंधी.",
     vacancies: "267",
-    lastDate: "20 Aug 2026",
+    lastDate: "16 Aug 2026",
+    extendedDate: "20 Aug 2026",
   },
   {
     titleEn:
