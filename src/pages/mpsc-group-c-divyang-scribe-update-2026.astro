@@ -1,0 +1,329 @@
+---
+import Layout from "../layouts/Layout.astro";
+import {
+  HiOutlineCalendarDays,
+  HiOutlineCursorArrowRays,
+  HiOutlineArrowTopRightOnSquare,
+  HiOutlineDocumentText,
+  HiOutlineBuildingOffice,
+  HiOutlineShieldCheck,
+  HiOutlineMegaphone,
+  HiOutlineExclamationTriangle,
+  HiOutlineArrowLeft,
+  HiOutlineCheckCircle,
+  HiOutlineEnvelope,
+  HiOutlinePhone,
+  HiOutlineAcademicCap,
+} from "react-icons/hi2";
+
+const title =
+  "MPSC गट-क संयुक्त परीक्षा २०२६: दिव्यांग उमेदवारांसाठी लेखनिक व भरपाई वेळ परिपत्रक जारी!";
+const description =
+  "MPSC Combine Group C Exam 2026: दिव्यांग उमेदवारांना परीक्षांच्यावेळी लेखनिक (Scribe) व भरपाई वेळ (Compensatory Time) अर्ज प्रक्रियेबाबत महाराष्ट्र लोकसेवा आयोगाचे अधिकृत प्रसिद्धिपत्रक जारी. ईमेलद्वारे अर्ज करण्याची अंतिम मुदत २४ ऑगस्ट २०२६.";
+const canonicalURL =
+  "https://mahasandhi.in/mpsc-group-c-divyang-scribe-update-2026";
+const date = "August 17, 2026";
+const category = "Divyang Scribe Update";
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonicalURL={canonicalURL}
+  article={true}
+  customBreadcrumbs={[
+    { name: "MPSC Exam Hub", url: "/mpsc" },
+    { name: "MPSC Combine Group C 2026", url: "/mpsc-combine-group-c-2026" },
+    { name: "Scribe & Extra Time Notice" },
+  ]}
+>
+  <article class="py-8">
+    <!-- Back Button -->
+    <div class="mb-6 not-prose">
+      <a
+        href="/mpsc-combine-group-c-2026"
+        class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold uppercase tracking-wider text-text-muted hover:text-primary bg-bg-surface border border-border-card rounded-xl transition-all duration-300 no-underline"
+      >
+        <HiOutlineArrowLeft className="text-sm" /> back to combine group c hub / मागे
+        जा
+      </a>
+    </div>
+
+    <!-- Header -->
+    <div class="mb-10">
+      <div class="flex items-center gap-3 mb-4 flex-wrap">
+        <span
+          class="bg-rose-500/10 text-rose-600 dark:text-rose-400 px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider border border-rose-500/20 flex items-center gap-1.5 shadow-xs"
+        >
+          <HiOutlineMegaphone className="text-sm animate-pulse" />
+          {category} (नवीन प्रसिद्धिपत्रक)
+        </span>
+        <span
+          class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider border border-primary/20 flex items-center gap-1.5"
+        >
+          <HiOutlineBuildingOffice className="text-sm" /> MPSC जाहिरात क्र. ०१७/२०२६
+        </span>
+        <span class="text-text-muted text-sm font-semibold">• {date}</span>
+      </div>
+      <h1
+        class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-text-main mb-5 leading-tight"
+      >
+        {title}
+      </h1>
+      <p
+        class="text-text-muted text-base md:text-lg leading-relaxed border-l-4 border-rose-500 pl-4 sm:pl-6 py-2 italic font-medium"
+      >
+        {description}
+      </p>
+    </div>
+
+    <!-- Quick Action Banner -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 not-prose">
+      <a
+        href="mailto:pre-examination@mpsc.gov.in"
+        class="group p-5 bg-gradient-to-br from-rose-600 to-violet-600 text-white rounded-2xl transition-all duration-300 shadow-md hover:shadow-rose-500/20 flex items-center justify-between no-underline"
+      >
+        <div>
+          <span
+            class="text-[0.65rem] uppercase font-extrabold tracking-wider bg-white/20 px-2.5 py-0.5 rounded text-white block w-fit mb-1"
+            >अर्ज सादर करण्याचा ई-मेल</span
+          >
+          <h3
+            class="text-base sm:text-lg font-extrabold text-white m-0 flex items-center gap-1.5"
+          >
+            pre-examination@mpsc.gov.in <HiOutlineEnvelope
+              className="text-xl shrink-0"
+            />
+          </h3>
+          <p class="text-xs text-white/90 m-0 mt-1">
+            अंतिम मुदत: २४ ऑगस्ट २०२६ (नोंदणीकृत ई-मेल वरून पाठवावा)
+          </p>
+        </div>
+        <div
+          class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform"
+        >
+          <HiOutlineCursorArrowRays className="text-2xl" />
+        </div>
+      </a>
+
+      <a
+        href="https://mpsc.gov.in"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="p-5 bg-bg-surface border border-border-card hover:border-primary/50 rounded-2xl flex items-center justify-between transition-all duration-300 no-underline group shadow-xs"
+      >
+        <div class="flex items-center gap-4">
+          <div
+            class="w-12 h-12 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"
+          >
+            <HiOutlineDocumentText className="text-2xl" />
+          </div>
+          <div>
+            <span
+              class="text-xs text-text-muted font-bold uppercase tracking-wider block"
+              >अधिकृत संकेतस्थळ</span
+            >
+            <h4
+              class="text-sm font-bold text-text-main m-0 group-hover:text-primary transition-colors flex items-center gap-1"
+            >
+              Divyang Corner व प्रपत्रे डाउनलोड <HiOutlineArrowTopRightOnSquare
+                className="text-xs"
+              />
+            </h4>
+            <p class="text-xs text-text-muted m-0 mt-0.5">
+              mpsc.gov.in -> Instructions for Divyang Candidates
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Official Notice Main Content -->
+    <div
+      class="bg-bg-surface border border-border-card rounded-3xl p-6 md:p-8 shadow-xs space-y-8 text-text-main leading-relaxed"
+    >
+      <div class="border-b border-border-card/60 pb-4">
+        <h2
+          class="text-xl md:text-2xl font-black text-rose-600 dark:text-rose-400 m-0 flex items-center gap-2"
+        >
+          <HiOutlineShieldCheck className="text-2xl shrink-0" />
+          MPSC गट-क परीक्षा २०२६ - लेखनिक व भरपाई वेळ परिपत्रक महत्त्वाचे मुद्दे
+        </h2>
+      </div>
+
+      <!-- Section 1: Application Deadline & Procedure -->
+      <div class="space-y-4">
+        <h3
+          class="text-lg font-black text-primary border-l-4 border-primary pl-3 m-0"
+        >
+          १. अर्ज सादर करण्याची मुदत व पद्धत
+        </h3>
+        <p class="text-sm md:text-base leading-relaxed m-0 text-text-secondary">
+          महाराष्ट्र लोकसेवा आयोगामार्फत आयोजित <strong>महाराष्ट्र गट-क सेवा संयुक्त पूर्व परीक्षा – २०२६ (जाहिरात क्रमांक ०१७/२०२६)</strong> साठी अर्ज केलेल्या दिव्यांग उमेदवारांनी लेखनिक (Scribe) आणि/किंवा भरपाई वेळ (Compensatory Time) मिळण्यासाठी खालीलप्रमाणे अर्ज सादर करणे बंधनकारक आहे:
+        </p>
+
+        <div
+          class="bg-gradient-to-br from-violet-500/10 via-primary/5 to-rose-500/10 border border-violet-500/20 p-5 rounded-2xl space-y-3"
+        >
+          <div class="flex items-start gap-3">
+            <HiOutlineCheckCircle
+              className="text-lg text-violet-600 dark:text-violet-400 shrink-0 mt-0.5"
+            />
+            <div class="text-xs sm:text-sm font-medium leading-relaxed">
+              <strong>ई-मेल अर्ज मुदत:</strong> संबंधित सर्व कागदपत्रांसह <strong class="text-rose-600 dark:text-rose-400">pre-examination@mpsc.gov.in</strong> या ई-मेल आयडीवर **दिनांक २४ ऑगस्ट, २०२६** पर्यंत अर्ज सादर करणे आवश्यक आहे.
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <HiOutlineCheckCircle
+              className="text-lg text-violet-600 dark:text-violet-400 shrink-0 mt-0.5"
+            />
+            <div class="text-xs sm:text-sm font-medium leading-relaxed">
+              <strong>नोंदणीकृत ई-मेल अनिवार्य:</strong> अर्जाची ई-मेल फक्त उमेदवाराच्या **स्वत:च्या नोंदणीकृत ई-मेल आयडी वरूनच** पाठवणे अनिवार्य आहे.
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <HiOutlineCheckCircle
+              className="text-lg text-violet-600 dark:text-violet-400 shrink-0 mt-0.5"
+            />
+            <div class="text-xs sm:text-sm font-medium leading-relaxed">
+              <strong>पूर्व परवानगी आवश्यक:</strong> केवळ ऑनलाईन अर्जात दावा केल्यामुळे लेखनिक/भरपाई वेळेची सवलत मिळणार नाही. आयोगाकडून **स्वतंत्र पूर्व परवानगी** घेतलेली असल्यासच ही सवलत अनुज्ञेय राहील.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2: Scribe Qualification Limit (Critical Warning) -->
+      <div class="space-y-4">
+        <h3
+          class="text-lg font-black text-rose-600 dark:text-rose-400 border-l-4 border-rose-500 pl-3 m-0"
+        >
+          २. लेखनिकाची शैक्षणिक पात्रता मर्यादा (महत्त्वाची अट)
+        </h3>
+
+        <div
+          class="p-5 bg-rose-500/10 border border-rose-500/30 rounded-2xl space-y-3"
+        >
+          <div
+            class="flex items-start gap-3 text-rose-700 dark:text-rose-300 text-xs sm:text-sm font-semibold"
+          >
+            <HiOutlineAcademicCap
+              className="text-2xl shrink-0 mt-0.5 text-rose-600 dark:text-rose-400"
+            />
+            <div class="leading-relaxed">
+              <strong>कमाल पात्रता १२ वी (12th Pass):</strong> शासन परिपत्रकातील परिच्छेद क्र. ७ (ब) नुसार लेखनिकाची **कमाल शैक्षणिक अर्हता १२ वी असणे आवश्यक** आहे. त्यानुसारच दिव्यांग उमेदवाराने लेखनिकाची मागणी करणे अनिवार्य आहे.
+            </div>
+          </div>
+          <div
+            class="p-3 bg-bg-surface border border-rose-500/30 rounded-xl text-rose-600 dark:text-rose-400 font-bold text-xs sm:text-sm"
+          >
+            ⚠️ इशारा: लेखनिकाची कमाल शैक्षणिक अर्हता १२ वी पेक्षा जास्त असल्याचे आढळल्यास उमेदवार व लेखनिक यांच्यावर आयोगाच्या स्वेच्छानुसार कायदेशीर कारवाई केली जाईल.
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 3: Required Documents & Format -->
+      <div class="space-y-4">
+        <h3
+          class="text-lg font-black text-primary border-l-4 border-primary pl-3 m-0"
+        >
+          ३. ई-मेलसोबत पाठवायची आवश्यक कागदपत्रे
+        </h3>
+        <p class="text-sm md:text-base leading-relaxed m-0 text-text-secondary">
+          ई-मेलद्वारे अर्ज करताना खालील सर्व आवश्यक कागदपत्रे **एकाच ई-मेल सोबत अपलोड (Attach)** करून पाठवावीत:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm">
+          <div
+            class="p-4 bg-bg-surface/80 border border-border-card rounded-2xl space-y-2 shadow-xs"
+          >
+            <h4 class="font-bold text-primary text-sm m-0">१. प्रपत्र १ / प्रपत्र २</h4>
+            <p class="text-text-muted leading-relaxed m-0">
+              लेखनिक व भरपाई वेळ मागणीसाठी विहित नमून्यातील संपूर्ण भरलेला विनंती अर्ज.
+            </p>
+          </div>
+
+          <div
+            class="p-4 bg-bg-surface/80 border border-border-card rounded-2xl space-y-2 shadow-xs"
+          >
+            <h4 class="font-bold text-primary text-sm m-0">२. दिव्यांगत्व प्रमाणपत्र</h4>
+            <p class="text-text-muted leading-relaxed m-0">
+              सक्षम प्राधिकार्‍याने दिलेले अधिकृत कायमस्वरूपी दिव्यांगत्वाचे प्रमाणपत्र.
+            </p>
+          </div>
+
+          <div
+            class="p-4 bg-bg-surface/80 border border-border-card rounded-2xl space-y-2 shadow-xs"
+          >
+            <h4 class="font-bold text-primary text-sm m-0">३. नमुना क्रमांक ११</h4>
+            <p class="text-text-muted leading-relaxed m-0">
+              विहित वैद्यकीय नमुना क्र. ११ प्रमाणपत्र (अपवाद वगळता).
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="bg-amber-500/10 border border-amber-500/30 p-4 rounded-2xl space-y-2 text-xs sm:text-sm"
+        >
+          <div class="font-bold text-amber-700 dark:text-amber-300">
+            ℹ️ नमुना क्रमांक ११ संदर्भातील अपवाद:
+          </div>
+          <p class="text-text-main m-0 leading-relaxed font-medium">
+            अंधत्व / शारीरिक दिव्यांगत्व (दोन्ही हात बाधित / दोन्ही हात नसलेले) / मेंदूचा पक्षाघात (Cerebral Palsy) असलेल्या उमेदवारांना **नमुना क्रमांक ११ सादर करणे आवश्यक नाही**.
+          </p>
+        </div>
+      </div>
+
+      <!-- Section 4: Downloads & Helpline -->
+      <div class="space-y-4">
+        <h3
+          class="text-lg font-black text-primary border-l-4 border-primary pl-3 m-0"
+        >
+          ४. प्रपत्रे डाउनलोड व हेल्पलाईन संपर्क
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div
+            class="p-4 bg-bg-surface border border-border-card rounded-2xl space-y-2"
+          >
+            <h4 class="font-bold text-text-main text-sm m-0 flex items-center gap-1.5">
+              <HiOutlineDocumentText className="text-primary text-lg" /> विहित अर्ज नमुने
+            </h4>
+            <p class="text-text-muted leading-relaxed m-0">
+              प्रपत्र १, प्रपत्र २ व नमुना क्रमांक ११ हे MPSC च्या संकेतस्थळावर <strong>'Divyang Corner'</strong> किंवा <strong>'Instructions for Divyang Candidates'</strong> या सदराखाली उपलब्ध आहेत.
+            </p>
+          </div>
+
+          <div
+            class="p-4 bg-bg-surface border border-border-card rounded-2xl space-y-2"
+          >
+            <h4 class="font-bold text-text-main text-sm m-0 flex items-center gap-1.5">
+              <HiOutlinePhone className="text-rose-500 text-lg" /> आयोगाचा संपर्क क्रमांक
+            </h4>
+            <p class="text-text-muted leading-relaxed m-0">
+              प्रस्तुत प्रकरणी उमेदवारांना काही शंका किंवा अडचणी असल्यास निरसनासाठी <strong class="text-rose-600 dark:text-rose-400 font-bold">०२२-६९३८५९८३ (022-69385983)</strong> या दूरध्वनी क्रमांकावर संपर्क साधावा.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Action Links -->
+      <div class="pt-4 border-t border-border-card flex flex-wrap gap-4">
+        <a
+          href="mailto:pre-examination@mpsc.gov.in"
+          class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-rose-600 hover:bg-rose-700 text-white font-black uppercase tracking-wider text-xs rounded-xl shadow-xs transition-colors no-underline"
+        >
+          <HiOutlineEnvelope className="text-base shrink-0" /> MPSC कडे ईमेल पाठवा
+        </a>
+        <a
+          href="/mpsc-combine-group-c-2026"
+          class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary/10 hover:bg-primary/20 text-primary font-black uppercase tracking-wider text-xs rounded-xl transition-colors no-underline"
+        >
+          <HiOutlineArrowLeft className="text-base shrink-0" /> MPSC Combine Group
+          C Hub
+        </a>
+      </div>
+    </div>
+  </article>
+</Layout>

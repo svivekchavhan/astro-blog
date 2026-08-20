@@ -9,6 +9,14 @@ export interface ImportantUpdate {
 
 export const importantUpdates: ImportantUpdate[] = [
   {
+    id: "mpsc-group-c-divyang-scribe-update-2026",
+    title:
+      "MPSC गट-क परीक्षा: दिव्यांग उमेदवारांसाठी लेखनिक व भरपाई वेळ परिपत्रक जारी",
+    link: "/mpsc-group-c-divyang-scribe-update-2026",
+    date: "August 20, 2026",
+    show: true,
+  },
+  {
     id: "pavitra-portal-tait-2025-preference-notice",
     title:
       "🔥 पवित्र पोर्टल TAIT-2025: पवित्र पोर्टल वरील Log In Problem बाबतीत सूचना ",
