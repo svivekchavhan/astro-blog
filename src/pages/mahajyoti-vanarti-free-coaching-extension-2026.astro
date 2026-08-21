@@ -1,0 +1,307 @@
+---
+import Layout from "../layouts/Layout.astro";
+import {
+  HiOutlineCalendarDays,
+  HiOutlineCursorArrowRays,
+  HiOutlineArrowTopRightOnSquare,
+  HiOutlineDocumentText,
+  HiOutlineBuildingOffice,
+  HiOutlineShieldCheck,
+  HiOutlineMegaphone,
+  HiOutlineArrowLeft,
+  HiOutlineCheckCircle,
+  HiOutlineAcademicCap,
+  HiOutlineUserGroup,
+} from "react-icons/hi2";
+
+const title =
+  "महाज्योति व वनार्टी मोफत स्पर्धा परीक्षा पूर्व प्रशिक्षण: ऑनलाईन अर्जास २६ ऑगस्ट २०२६ पर्यंत मुदतवाढ!";
+const description =
+  "Mahajyoti & VANARTI Free Coaching Scheme 2026: UPSC, MPSC (राज्यसेवा, अभियांत्रिकी सेवा, संयुक्त गट ब व क) तसेच गोवारी व धनगर समाज विशेष प्रकल्पांतर्गत मोफत परीक्षापूर्व प्रशिक्षणासाठी ऑनलाईन अर्ज करण्यास २६ ऑगस्ट २०२६ पर्यंत मुदतवाढ. सविस्तर परिपत्रक पाहा.";
+const canonicalURL =
+  "https://mahasandhi.in/mahajyoti-vanarti-free-coaching-extension-2026";
+const date = "August 21, 2026";
+const category = "Free Coaching Update";
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonicalURL={canonicalURL}
+  article={true}
+  customBreadcrumbs={[
+    { name: "Exam Hub", url: "/naukri-updates" },
+    { name: "Mahajyoti & VANARTI Extension" },
+  ]}
+>
+  <article class="py-8">
+    <!-- Back Button -->
+    <div class="mb-6 not-prose">
+      <a
+        href="/"
+        class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold uppercase tracking-wider text-text-muted hover:text-primary bg-bg-surface border border-border-card rounded-xl transition-all duration-300 no-underline"
+      >
+        <HiOutlineArrowLeft className="text-sm" /> back to home / मुख्य पानावर जा
+      </a>
+    </div>
+
+    <!-- Header -->
+    <div class="mb-10">
+      <div class="flex items-center gap-3 mb-4 flex-wrap">
+        <span
+          class="bg-rose-500/10 text-rose-600 dark:text-rose-400 px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider border border-rose-500/20 flex items-center gap-1.5 shadow-xs"
+        >
+          <HiOutlineMegaphone className="text-sm animate-pulse" />
+          {category} (अधिकृत परिपत्रक)
+        </span>
+        <span
+          class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider border border-primary/20 flex items-center gap-1.5"
+        >
+          <HiOutlineBuildingOffice className="text-sm" /> महाज्योति व वनार्टी, नागपूर
+        </span>
+        <span class="text-text-muted text-sm font-semibold">• {date}</span>
+      </div>
+      <h1
+        class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-text-main mb-5 leading-tight"
+      >
+        {title}
+      </h1>
+      <p
+        class="text-text-muted text-base md:text-lg leading-relaxed border-l-4 border-rose-500 pl-4 sm:pl-6 py-2 italic font-medium"
+      >
+        {description}
+      </p>
+    </div>
+
+    <!-- Quick Action Banner -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 not-prose">
+      <a
+        href="https://mahajyoti.org.in"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group p-5 bg-gradient-to-br from-rose-600 to-amber-600 text-white rounded-2xl transition-all duration-300 shadow-md hover:shadow-rose-500/20 flex items-center justify-between no-underline"
+      >
+        <div>
+          <span
+            class="text-[0.65rem] uppercase font-extrabold tracking-wider bg-white/20 px-2.5 py-0.5 rounded text-white block w-fit mb-1"
+            >महाज्योति अधिकृत पोर्टल</span
+          >
+          <h3
+            class="text-base sm:text-lg font-extrabold text-white m-0 flex items-center gap-1.5"
+          >
+            Mahajyoti Online Apply <HiOutlineArrowTopRightOnSquare
+              className="text-xl shrink-0"
+            />
+          </h3>
+          <p class="text-xs text-white/90 m-0 mt-1">
+            सुधारित मुदत: २६ ऑगस्ट २०२६ पर्यंत ऑनलाईन अर्ज करा
+          </p>
+        </div>
+        <div
+          class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform"
+        >
+          <HiOutlineCursorArrowRays className="text-2xl" />
+        </div>
+      </a>
+
+      <a
+        href="https://vanarti.in/en/%E0%A4%B8%E0%A4%A8-%E0%A5%A8%E0%A5%A6%E0%A5%A8%E0%A5%AC-%E0%A5%A8%E0%A5%AD-%E0%A4%AF%E0%A4%BE-%E0%A4%86%E0%A4%B0%E0%A5%8D%E0%A4%A5%E0%A4%BF%E0%A4%95-%E0%A4%B5%E0%A4%B0%E0%A5%8D%E0%A4%B7%E0%A4%BE-8/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="p-5 bg-bg-surface border border-border-card hover:border-primary/50 rounded-2xl flex items-center justify-between transition-all duration-300 no-underline group shadow-xs"
+      >
+        <div class="flex items-center gap-4">
+          <div
+            class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"
+          >
+            <HiOutlineAcademicCap className="text-2xl" />
+          </div>
+          <div>
+            <span
+              class="text-xs text-text-muted font-bold uppercase tracking-wider block"
+              >वनार्टी संस्था पोर्टल</span
+            >
+            <h4
+              class="text-sm font-bold text-text-main m-0 group-hover:text-primary transition-colors flex items-center gap-1"
+            >
+              VANARTI Online Apply <HiOutlineArrowTopRightOnSquare
+                className="text-xs"
+              />
+            </h4>
+            <p class="text-xs text-text-muted m-0 mt-0.5">
+              vanarti.org.in द्वारे अर्ज सादर करा
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Official Notice Main Content -->
+    <div
+      class="bg-bg-surface border border-border-card rounded-3xl p-6 md:p-8 shadow-xs space-y-8 text-text-main leading-relaxed"
+    >
+      <div class="border-b border-border-card/60 pb-4">
+        <h2
+          class="text-xl md:text-2xl font-black text-rose-600 dark:text-rose-400 m-0 flex items-center gap-2"
+        >
+          <HiOutlineShieldCheck className="text-2xl shrink-0" />
+          महाज्योति व वनार्टी परिपत्रक - महत्त्वाचे ठळक मुद्दे
+        </h2>
+      </div>
+
+      <!-- Section 1: Overview & Notice Details -->
+      <div class="space-y-4">
+        <h3
+          class="text-lg font-black text-primary border-l-4 border-primary pl-3 m-0"
+        >
+          १. परिपत्रकाचा विषय व मुदतवाढ तपशील
+        </h3>
+        <p class="text-sm md:text-base leading-relaxed m-0 text-text-secondary">
+          इतर मागास बहुजन कल्याण विभाग, महाराष्ट्र राज्य अंतर्गत <strong
+            >महात्मा जोतिबा फुले संशोधन व प्रशिक्षण संस्था (महाज्योति), नागपूर</strong
+          > व <strong
+            >वसंतराव नाईक संशोधन व प्रशिक्षण संस्था (वनार्टी), नागपूर</strong
+          > या संस्थांमार्फत सन २०२६-२७ या आर्थिक वर्षात राबविण्यात येणाऱ्या विविध
+          स्पर्धा परीक्षापूर्व प्रशिक्षण योजनांसाठी ऑनलाईन अर्ज सादर करण्यास <strong
+            >२६ ऑगस्ट २०२६</strong
+          > पर्यंत मुदतवाढ देण्यात आली आहे.
+        </p>
+
+        <div
+          class="bg-gradient-to-br from-violet-500/10 via-primary/5 to-rose-500/10 border border-violet-500/20 p-5 rounded-2xl space-y-3"
+        >
+          <div class="flex items-start gap-3">
+            <HiOutlineCheckCircle
+              className="text-lg text-violet-600 dark:text-violet-400 shrink-0 mt-0.5"
+            />
+            <div class="text-xs sm:text-sm font-medium leading-relaxed">
+              <strong>परिपत्रक क्रमांक:</strong> जा.क्र/म/ब/स्पर्धा-परीक्षा/१५०७/२०२६-२७
+              (दिनांक २१/०८/२०२६)
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <HiOutlineCheckCircle
+              className="text-lg text-violet-600 dark:text-violet-400 shrink-0 mt-0.5"
+            />
+            <div class="text-xs sm:text-sm font-medium leading-relaxed">
+              <strong>पूर्वीची अंतिम मुदत:</strong> १०/०८/२०२६ ते २३/०८/२०२६
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <HiOutlineCheckCircle
+              className="text-lg text-violet-600 dark:text-violet-400 shrink-0 mt-0.5"
+            />
+            <div class="text-xs sm:text-sm font-medium leading-relaxed">
+              <strong>सुधारित वाढीव अंतिम मुदत:</strong>
+              <strong class="text-rose-600 dark:text-rose-400 text-sm"
+                >२६ ऑगस्ट २०२६ (26/08/2026)</strong
+              > पर्यंत
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2: Covered Schemes -->
+      <div class="space-y-4">
+        <h3
+          class="text-lg font-black text-primary border-l-4 border-primary pl-3 m-0"
+        >
+          २. कोणत्या प्रशिक्षण योजनांसाठी मुदतवाढ लागू आहे?
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div
+            class="p-5 bg-bg-surface border border-border-card rounded-2xl space-y-2 shadow-xs"
+          >
+            <h4
+              class="font-bold text-primary text-sm sm:text-base m-0 flex items-center gap-2"
+            >
+              <HiOutlineAcademicCap className="text-lg text-primary shrink-0" /> १.
+              UPSC & MPSC सामान्य प्रशिक्षण
+            </h4>
+            <ul
+              class="list-disc pl-5 space-y-1.5 text-text-muted m-0 leading-relaxed"
+            >
+              <li>
+                संघ लोकसेवा आयोग (UPSC Civil Services) परीक्षापूर्व प्रशिक्षण.
+              </li>
+              <li>
+                महाराष्ट्र लोकसेवा आयोग (MPSC राज्यसेवा / अभियांत्रिकी सेवा /
+                संयुक्त गट ब व क) पूर्व प्रशिक्षण.
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="p-5 bg-bg-surface border border-border-card rounded-2xl space-y-2 shadow-xs"
+          >
+            <h4
+              class="font-bold text-rose-600 dark:text-rose-400 text-sm sm:text-base m-0 flex items-center gap-2"
+            >
+              <HiOutlineUserGroup className="text-lg text-rose-500 shrink-0" /> २.
+              विशेष प्रकल्प (विशेष प्रवर्ग)
+            </h4>
+            <ul
+              class="list-disc pl-5 space-y-1.5 text-text-muted m-0 leading-relaxed"
+            >
+              <li>
+                विशेष मागास प्रवर्गातील <strong>गोवारी समाजातील</strong> विद्यार्थ्यांसाठी
+                UPSC, MPSC राज्यसेवा व सैनिक भरती प्रशिक्षण.
+              </li>
+              <li>
+                भटक्या जमाती क प्रवर्गातील <strong>धनगर समाजातील</strong> विद्यार्थ्यांसाठी
+                लष्करातील सैनिक भरती व UPSC/MPSC प्रशिक्षण.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 3: Notice Reason -->
+      <div class="space-y-4">
+        <h3
+          class="text-lg font-black text-rose-600 dark:text-rose-400 border-l-4 border-rose-500 pl-3 m-0"
+        >
+          ३. मुदतवाढ देण्याचे कारण
+        </h3>
+
+        <div
+          class="p-5 bg-amber-500/10 border border-amber-500/30 rounded-2xl space-y-2 text-xs sm:text-sm"
+        >
+          <p class="text-text-main m-0 leading-relaxed font-medium">
+            महाज्योति व वनार्टी संस्थेमार्फत राबविण्यात येणाऱ्या स्पर्धा
+            परीक्षापूर्व प्रशिक्षण योजनांकरिता ऑनलाईन अर्ज करण्यासाठी अनेक
+            विद्यार्थ्यांनी मुदतवाढ देण्याबाबत संबंधित कार्यालयास विनंती केली
+            होती. त्यानुसार विद्यार्थ्यांची मागणी विचारात घेऊन ही मुदत <strong
+              >२६ ऑगस्ट २०२६</strong
+            > पर्यंत वाढवून देण्यात आली आहे.
+          </p>
+        </div>
+      </div>
+
+      <!-- Footer Action Links -->
+      <div class="pt-4 border-t border-border-card flex flex-wrap gap-4">
+        <a
+          href="https://mahajyoti.org.in"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-rose-600 hover:bg-rose-700 text-white font-black uppercase tracking-wider text-xs rounded-xl shadow-xs transition-colors no-underline"
+        >
+          <HiOutlineCursorArrowRays className="text-base shrink-0" /> महाज्योति ऑनलाईन
+          अर्ज
+        </a>
+        <a
+          href="https://vanarti.in/en/%E0%A4%B8%E0%A4%A8-%E0%A5%A8%E0%A5%A6%E0%A5%A8%E0%A5%AC-%E0%A5%A8%E0%A5%AD-%E0%A4%AF%E0%A4%BE-%E0%A4%86%E0%A4%B0%E0%A5%8D%E0%A4%A5%E0%A4%BF%E0%A4%95-%E0%A4%B5%E0%A4%B0%E0%A5%8D%E0%A4%B7%E0%A4%BE-8/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary hover:bg-primary/90 text-white font-black uppercase tracking-wider text-xs rounded-xl shadow-xs transition-colors no-underline"
+        >
+          <HiOutlineCursorArrowRays className="text-base shrink-0" /> वनार्टी ऑनलाईन
+          अर्ज
+        </a>
+      </div>
+    </div>
+  </article>
+</Layout>

@@ -9,6 +9,15 @@ export interface ImportantUpdate {
 
 export const importantUpdates: ImportantUpdate[] = [
   {
+    id: "mahajyoti-vanarti-free-coaching-extension-2026",
+    title:
+      "🔥 महाज्योति व वनार्टी मोफत स्पर्धा परीक्षा प्रशिक्षण: अर्ज भरण्यास २६ ऑगस्ट २०२६ पर्यंत मुदतवाढ",
+    link: "/mahajyoti-vanarti-free-coaching-extension-2026",
+    date: "August 21, 2026",
+    expiry: "2026-08-30T00:00:00.000Z",
+    show: true,
+  },
+  {
     id: "mpsc-group-c-divyang-scribe-update-2026",
     title:
       "MPSC गट-क परीक्षा: दिव्यांग उमेदवारांसाठी लेखनिक व भरपाई वेळ परिपत्रक जारी",

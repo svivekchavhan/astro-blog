@@ -15,6 +15,22 @@ export interface ArticleMeta {
 export const articlesRegistry: ArticleMeta[] = [
   {
     titleEn:
+      "Mahajyoti & VANARTI Free Coaching 2026: Application Deadline Extended to 26 August",
+    titleMr:
+      "महाज्योति व वनार्टी मोफत स्पर्धा परीक्षा प्रशिक्षण: ऑनलाईन अर्जास २६ ऑगस्ट २०२६ पर्यंत मुदतवाढ!",
+    slug: "/mahajyoti-vanarti-free-coaching-extension-2026",
+    category: "Free Coaching",
+    date: "August 21, 2026",
+    image:
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1200",
+    postName: "UPSC, MPSC व सैनिक भरती परीक्षापूर्व प्रशिक्षण",
+    descriptionMr:
+      "महाज्योति व वनार्टी संस्थेमार्फत राबवण्यात येणाऱ्या UPSC, MPSC आणि विशेष प्रकल्पांतर्गत मोफत परीक्षापूर्व प्रशिक्षणासाठी ऑनलाईन अर्ज करण्यास २६ ऑगस्ट २०२६ पर्यंत मुदतवाढ देण्यात आली आहे.",
+    vacancies: "Free Coaching Scheme",
+    lastDate: "26 Aug 2026",
+  },
+  {
+    titleEn:
       "ISRO Recruitment 2026: Apply Online for 267 Assistant, JPA & UDC Vacancies",
     titleMr:
       "ISRO भरती २०२६: भारतीय अंतराळ संशोधन संस्थेत २६७ जागांसाठी भरती जाहीर!",
