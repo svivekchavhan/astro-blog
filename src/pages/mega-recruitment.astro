@@ -19,6 +19,7 @@ import {
 const title = "Mega Recruitment 2026 - Latest Govt Job Openings & Vacancies";
 const description = "Find all active and upcoming government mega recruitments in India and Maharashtra. Filter by qualification, search jobs, and apply online for Police Bharti, Railway RRB, SSC, MPSC, Banking, and Zilla Parishad exams.";
 const canonicalURL = "https://mahasandhi.in/mega-recruitment";
+
 // Realistic mega recruitment campaigns for 2026 based on the actual article base
 const recruitments = [
   {
@@ -76,24 +77,6 @@ const recruitments = [
     summaryEn: "Railway Recruitment Boards (RRB) invites online applications for 3,993 Junior Engineer (JE) & Depot Material Superintendent (DMS) posts under CEN 04/2026. Apply online from 14 August to 13 September 2026."
   },
   {
-    id: "mumbai-police-constable-final-selection-list-2026",
-    title: "मुंबई पोलीस शिपाई भरती २०२४-२५: ३,५२१ पदांची अंतिम निवड यादी व प्रतीक्षा यादी कट-ऑफसह प्रसिद्ध",
-    organisation: "बृहन्मुंबई पोलीस आयुक्त कार्यालय (Brihanmumbai Police)",
-    category: "maharashtra",
-    vacancies: "3,521 Posts",
-    qualification: "12th Pass",
-    status: "declared",
-    lastDate: "Result Out",
-    ageLimit: "18 to 28 years (Reserved up to 33 years)",
-    appFee: "Open: ₹450 | Reserved: ₹350",
-    salary: "Pay Matrix Level S-6 (Rs 21,700 - 69,100) + Allowances",
-    syllabus: "Physical Test (50 Marks) & Written Examination (100 Marks) Completed.",
-    applyLink: "/mumbai-police-constable-final-selection-list-2026",
-    notifLink: "/mumbai-police-constable-final-selection-list-2026",
-    summaryMr: "बृहन्मुंबई पोलीस आयुक्त कार्यालयाने (भरती कक्ष) ३,५२१ पोलीस शिपाई पदांची अंतिम निवड यादी व प्रतीक्षा यादी कट-ऑफ गुणांसह अधिकृत वेबसाईटवर जाहीर केली आहे.",
-    summaryEn: "Brihanmumbai Police Commissionerate has officially declared the Final Selection List and Waiting List with Cut-Off for 3,521 Police Constable vacancies."
-  },
-  {
     id: "sbi-clerk-recruitment-2026",
     title: "भारतीय स्टेट बँकेत (SBI) लिपिक (Junior Associate) १५३८ जागांसाठी भरती २०२६",
     organisation: "State Bank of India (SBI)",
@@ -126,23 +109,51 @@ const recruitments = [
     syllabus: "Combined Prelims (100 Marks MCQ), Mains (400 Marks MCQ) & Typing Skill Test.",
     applyLink: "/mpsc-group-c-bharti-2026",
     notifLink: "/mpsc-group-c-bharti-2026",
-    summaryMr: "एमपीएससी गट-क संयुक्त पूर्व परीक्षा २०२६ अंतर्गत तलाठी (१५३९ जागा), लिपिक टंकलेखक (३१९७ जागा) व इतर मिळून एकूण ५,७०७ रिक्त पदांसाठी शुद्धिपत्रक प्रसिद्ध. ऑनलाईन अर्ज भरण्याची अंतिम मुदत १० ऑगस्ट २०२६ पर्यंत वाढवली आहे.",
+    summaryMr: "एमपीएससी गट-क संयुक्त पूर्व परीक्षा २०२६ अंतर्गत तलाठी (१५३९ जागा), लिपिक टंकलेखक (३१९र्ट जागा) व इतर मिळून एकूण ५,७०७ रिक्त पदांसाठी शुद्धिपत्रक प्रसिद्ध. ऑनलाईन अर्ज भरण्याची अंतिम मुदत १० ऑगस्ट २०२६ पर्यंत वाढवली आहे.",
     summaryEn: "MPSC Group C Services Combined Prelims 2026 corrigendum released for 5,707 vacancies (including 1,539 Talathi & 3,197 Clerk-Typist posts). Last date to apply extended to August 10, 2026."
   },
-  
-  
+  {
+    id: "mumbai-police-constable-final-selection-list-2026",
+    title: "मुंबई पोलीस शिपाई भरती २०२४-२५: ३,५२१ पदांची अंतिम निवड यादी व प्रतीक्षा यादी कट-ऑफसह प्रसिद्ध",
+    organisation: "बृहन्मुंबई पोलीस आयुक्त कार्यालय (Brihanmumbai Police)",
+    category: "maharashtra",
+    vacancies: "3,521 Posts",
+    qualification: "12th Pass",
+    status: "declared",
+    lastDate: "Result Out",
+    ageLimit: "18 to 28 years (Reserved up to 33 years)",
+    appFee: "Open: ₹450 | Reserved: ₹350",
+    salary: "Pay Matrix Level S-6 (Rs 21,700 - 69,100) + Allowances",
+    syllabus: "Physical Test (50 Marks) & Written Examination (100 Marks) Completed.",
+    applyLink: "/mumbai-police-constable-final-selection-list-2026",
+    notifLink: "/mumbai-police-constable-final-selection-list-2026",
+    summaryMr: "बृहन्मुंबई पोलीस आयुक्त कार्यालयाने (भरती कक्ष) ३,५२१ पोलीस शिपाई पदांची अंतिम निवड यादी व प्रतीक्षा यादी कट-ऑफ गुणांसह अधिकृत वेबसाईटवर जाहीर केली आहे.",
+    summaryEn: "Brihanmumbai Police Commissionerate has officially declared the Final Selection List and Waiting List with Cut-Off for 3,521 Police Constable vacancies."
+  }
 ];
 
-// Filter recruitments: Only show active campaigns (status: apply-now) with >= 1000 vacancies
-const filteredRecruitments = recruitments.filter(job => {
-  if (job.status !== "apply-now" && job.status !== "declared") return false;
-  const count = parseInt(job.vacancies.replace(/[^0-9]/g, ''), 10) || 0;
-  return count >= 1000;
-});
+// Helper to determine if recruitment application last date has NOT expired yet
+const currentDateThreshold = new Date("2026-08-22T00:00:00");
 
-const totalVacanciesSum = filteredRecruitments.reduce((sum, job) => sum + (parseInt(job.vacancies.replace(/[^0-9]/g, ''), 10) || 0), 0);
+function isRecruitmentActive(job: typeof recruitments[0]): boolean {
+  if (job.status === "closed" || job.status === "declared") return false;
+  if (!job.lastDate || job.lastDate === "Result Out") return false;
+  
+  const parsedDate = new Date(job.lastDate);
+  if (isNaN(parsedDate.getTime())) return true;
+  return parsedDate >= currentDateThreshold;
+}
+
+// Separate recruitments into active vs expired/closed
+const activeJobs = recruitments.filter(job => isRecruitmentActive(job));
+const expiredJobs = recruitments.filter(job => !isRecruitmentActive(job));
+
+// Active count metric ONLY includes non-expired active application exams
+const activeCount = activeJobs.length;
+
+// Total vacancies sum across all active exams
+const totalVacanciesSum = activeJobs.reduce((sum, job) => sum + (parseInt(job.vacancies.replace(/[^0-9]/g, ''), 10) || 0), 0);
 const totalVacancies = totalVacanciesSum.toLocaleString("en-IN") + "+";
-const activeCount = filteredRecruitments.length;
 ---
 
 <Layout 
@@ -172,11 +183,11 @@ const activeCount = filteredRecruitments.length;
         <div class="grid grid-cols-2 gap-3 w-full max-w-[400px] border-t border-border-card dark:border-border-card/30 pt-6">
           <div class="text-center">
             <span class="block text-2xl md:text-3xl font-extrabold text-primary tracking-tight">{totalVacancies}</span>
-            <span class="block text-[0.65rem] md:text-xs text-text-muted uppercase font-semibold tracking-wider mt-1">Total Posts</span>
+            <span class="block text-[0.65rem] md:text-xs text-text-muted uppercase font-semibold tracking-wider mt-1">Total Active Posts</span>
           </div>
           <div class="text-center border-l border-border-card dark:border-border-card/30">
             <span class="block text-2xl md:text-3xl font-extrabold text-emerald-500 tracking-tight">{activeCount}</span>
-            <span class="block text-[0.65rem] md:text-xs text-text-muted uppercase font-semibold tracking-wider mt-1">Active Exams</span>
+            <span class="block text-[0.65rem] md:text-xs text-text-muted uppercase font-semibold tracking-wider mt-1">Active Exams (Live)</span>
           </div>
         </div>
       </div>
@@ -214,20 +225,19 @@ const activeCount = filteredRecruitments.length;
       </div>
     </div>
 
-    <!-- Active Recruitment Cards List -->
+    <!-- Recruitment Cards List -->
     <div class="space-y-4" id="recruitments-container">
-      {filteredRecruitments.length === 0 ? (
-        <div class="text-center py-16 bg-bg-surface border border-border-card rounded-2xl w-full">
-          <p class="text-text-muted text-sm m-0">No active mega recruitments currently available. Please check back later.</p>
-        </div>
-      ) : (
-        filteredRecruitments.map((job) => (
+      
+      <!-- ================= 1. ACTIVE RECRUITMENTS (TOP) ================= -->
+      <div class="space-y-4" id="active-jobs-group">
+        {activeJobs.map((job) => (
           <div 
             data-id={job.id}
             data-category={job.category}
             data-qualification={job.qualification}
             data-title={job.title.toLowerCase()}
             data-org={job.organisation.toLowerCase()}
+            data-[active]="true"
             class="job-card bg-bg-surface border border-border-card rounded-2xl overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-md"
           >
             <!-- Top Row Summary Card -->
@@ -238,33 +248,10 @@ const activeCount = filteredRecruitments.length;
                     {job.category === "maharashtra" ? "Maharashtra Gov" : job.category === "central" ? "Central Gov" : job.category}
                   </span>
 
-                  {job.status === "apply-now" && (
-                    <span class="text-[0.55rem] bg-emerald-500/10 text-emerald-500 px-2 py-0.5 rounded-full font-bold uppercase tracking-wide border border-emerald-500/20 flex items-center gap-1 whitespace-nowrap">
-                      <span class="w-1.5 h-1.5 bg-emerald-500 rounded-full shadow-[0_0_6px] shadow-emerald-500 animate-pulse inline-block"></span>
-                      Apply Active
-                    </span>
-                  )}
-
-                  {job.status === "declared" && (
-                    <span class="text-[0.55rem] bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 px-2 py-0.5 rounded-full font-bold uppercase tracking-wide border border-emerald-500/20 flex items-center gap-1 whitespace-nowrap">
-                      <span class="w-1.5 h-1.5 bg-emerald-500 rounded-full shadow-[0_0_6px] shadow-emerald-500 animate-pulse inline-block"></span>
-                      Result Declared
-                    </span>
-                  )}
-
-                  {job.status === "upcoming" && (
-                    <span class="text-[0.55rem] bg-amber-500/10 text-amber-500 px-2 py-0.5 rounded-full font-bold uppercase tracking-wide border border-amber-500/20 flex items-center gap-1 whitespace-nowrap">
-                      <span class="w-1.5 h-1.5 bg-amber-500 rounded-full shadow-[0_0_6px] shadow-emerald-500 animate-pulse inline-block"></span>
-                      Upcoming
-                    </span>
-                  )}
-
-                  {job.status === "closed" && (
-                    <span class="text-[0.55rem] bg-rose-500/10 text-rose-500 px-2 py-0.5 rounded-full font-bold uppercase tracking-wide border border-rose-500/20 flex items-center gap-1 whitespace-nowrap">
-                      <span class="w-1.5 h-1.5 bg-rose-500 rounded-full inline-block"></span>
-                      Closed
-                    </span>
-                  )}
+                  <span class="text-[0.55rem] bg-emerald-500/10 text-emerald-500 px-2 py-0.5 rounded-full font-bold uppercase tracking-wide border border-emerald-500/20 flex items-center gap-1 whitespace-nowrap">
+                    <span class="w-1.5 h-1.5 bg-emerald-500 rounded-full shadow-[0_0_6px] shadow-emerald-500 animate-pulse inline-block"></span>
+                    Apply Active
+                  </span>
                 </div>
 
                 <h3 class="text-lg md:text-xl text-text-main font-bold leading-tight mb-2 m-0 group-hover:text-primary transition-colors">
@@ -284,9 +271,9 @@ const activeCount = filteredRecruitments.length;
                   <span class="block text-xs md:text-sm font-black text-primary mt-0.5">{job.vacancies}</span>
                 </div>
                 
-                <div class="bg-rose-500/5 dark:bg-rose-500/10 border border-rose-500/25 rounded-xl px-3.5 py-2 text-center min-w-[100px] md:min-w-[115px]">
-                  <span class="block text-[0.55rem] text-rose-600 dark:text-rose-400 uppercase tracking-wider font-semibold">Last Date</span>
-                  <span class="block text-xs md:text-sm font-black text-rose-600 dark:text-rose-400 mt-0.5">{job.lastDate}</span>
+                <div class="bg-emerald-500/5 dark:bg-emerald-500/10 border border-emerald-500/25 rounded-xl px-3.5 py-2 text-center min-w-[100px] md:min-w-[115px]">
+                  <span class="block text-[0.55rem] text-emerald-600 dark:text-emerald-400 uppercase tracking-wider font-semibold">Last Date</span>
+                  <span class="block text-xs md:text-sm font-black text-emerald-600 dark:text-emerald-400 mt-0.5">{job.lastDate}</span>
                 </div>
 
                 <!-- Collapsible Chevron Button -->
@@ -337,9 +324,8 @@ const activeCount = filteredRecruitments.length;
                   </div>
                 </div>
 
-                <!-- Syllabus, Pattern & Bilingual Details Grid -->
-                <div class={`grid grid-cols-1 ${parseInt(job.vacancies.replace(/[^0-9]/g, ''), 10) > 1000 ? "lg:grid-cols-2" : ""} gap-6 mb-6`}>
-                  <!-- Left Column: Syllabus & Selection -->
+                <!-- Syllabus & Details -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
                   <div class="bg-bg-surface border border-border-card rounded-xl p-4">
                     <h4 class="text-xs uppercase tracking-wider font-extrabold text-primary flex items-center gap-1.5 mt-0 mb-3 border-none pb-0">
                       <HiOutlineDocumentText className="text-base shrink-0" /> Syllabus & Selection Process
@@ -347,49 +333,196 @@ const activeCount = filteredRecruitments.length;
                     <p class="text-xs text-text-secondary leading-relaxed m-0">{job.syllabus}</p>
                   </div>
 
-                  <!-- Right Column: Bilingual Summaries -->
-                  {parseInt(job.vacancies.replace(/[^0-9]/g, ''), 10) > 1000 && (
-                    <div class="bg-bg-surface border border-border-card rounded-xl p-4">
-                      <!-- Lang Switch Tab Buttons inside accordion -->
-                      <div class="flex items-center justify-between border-b border-border-card dark:border-border-card/30 pb-2 mb-3">
-                        <span class="text-xs uppercase tracking-wider font-extrabold text-primary flex items-center gap-1.5 border-none pb-0">
-                          📝 Recruitment Summary
-                        </span>
-                        <div class="flex gap-2">
-                          <button data-lang="mr" class="lang-switch active px-2.5 py-0.5 rounded text-[0.65rem] font-bold uppercase tracking-wider cursor-pointer border border-primary/20 transition-all">मराठी</button>
-                          <button data-lang="en" class="lang-switch px-2.5 py-0.5 rounded text-[0.65rem] font-bold uppercase tracking-wider cursor-pointer border border-border-card text-text-muted hover:border-primary/50 transition-all">English</button>
-                        </div>
-                      </div>
-
-                      <!-- Summary Content -->
-                      <div class="summary-text-box">
-                        <p class="mr-text text-xs text-text-secondary leading-relaxed m-0 font-medium">{job.summaryMr}</p>
-                        <p class="en-text text-xs text-text-secondary leading-relaxed m-0 font-medium hidden">{job.summaryEn}</p>
+                  <div class="bg-bg-surface border border-border-card rounded-xl p-4">
+                    <div class="flex items-center justify-between border-b border-border-card dark:border-border-card/30 pb-2 mb-3">
+                      <span class="text-xs uppercase tracking-wider font-extrabold text-primary flex items-center gap-1.5 border-none pb-0">
+                        📝 Recruitment Summary
+                      </span>
+                      <div class="flex gap-2">
+                        <button data-lang="mr" class="lang-switch active px-2.5 py-0.5 rounded text-[0.65rem] font-bold uppercase tracking-wider cursor-pointer border border-primary/20 transition-all">मराठी</button>
+                        <button data-lang="en" class="lang-switch px-2.5 py-0.5 rounded text-[0.65rem] font-bold uppercase tracking-wider cursor-pointer border border-border-card text-text-muted hover:border-primary/50 transition-all">English</button>
                       </div>
                     </div>
-                  )}
+
+                    <div class="summary-text-box">
+                      <p class="mr-text text-xs text-text-secondary leading-relaxed m-0 font-medium">{job.summaryMr}</p>
+                      <p class="en-text text-xs text-text-secondary leading-relaxed m-0 font-medium hidden">{job.summaryEn}</p>
+                    </div>
+                  </div>
                 </div>
 
-                <!-- Read Full Article Link Footer -->
-                {parseInt(job.vacancies.replace(/[^0-9]/g, ''), 10) > 1000 && (
-                  <div class="flex justify-end border-t border-border-card/30 dark:border-border-card/10 pt-4">
-                    <a 
-                      href={job.applyLink}
-                      class="px-5 py-2.5 bg-primary/10 hover:bg-primary/20 text-primary border border-primary/20 hover:border-primary/40 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-200 no-underline flex items-center gap-1.5"
-                    >
-                      Read Full Article <HiOutlineArrowTopRightOnSquare className="text-sm shrink-0" />
-                    </a>
-                  </div>
-                )}
-
-
+                <!-- Read Full Article Button -->
+                <div class="flex justify-end border-t border-border-card/30 dark:border-border-card/10 pt-4">
+                  <a 
+                    href={job.applyLink}
+                    class="px-5 py-2.5 bg-primary hover:bg-primary/90 text-white rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-200 no-underline flex items-center gap-1.5 shadow-xs"
+                  >
+                    Read Full Article & Apply Online <HiOutlineArrowTopRightOnSquare className="text-sm shrink-0" />
+                  </a>
+                </div>
 
               </div>
             </div>
 
           </div>
-        ))
+        ))}
+      </div>
+
+      <!-- ================= PARTITION DIVIDER ================= -->
+      {expiredJobs.length > 0 && (
+        <div class="my-10 border-t-2 border-dashed border-border-card flex items-center justify-center relative">
+          <span class="absolute bg-bg-surface px-5 py-1.5 text-xs font-extrabold uppercase tracking-wider text-rose-500 border border-rose-500/30 rounded-full shadow-xs flex items-center gap-2">
+            <HiOutlineXCircle className="text-base shrink-0" /> Application Deadline Passed / Expired (मुदत संपलेल्या भरती)
+          </span>
+        </div>
       )}
+
+      <!-- ================= 2. EXPIRED / CLOSED RECRUITMENTS (BOTTOM) ================= -->
+      <div class="space-y-4 opacity-85" id="expired-jobs-group">
+        {expiredJobs.map((job) => (
+          <div 
+            data-id={job.id}
+            data-category={job.category}
+            data-qualification={job.qualification}
+            data-title={job.title.toLowerCase()}
+            data-org={job.organisation.toLowerCase()}
+            data-[active]="false"
+            class="job-card bg-bg-surface/80 border border-border-card rounded-2xl overflow-hidden transition-all duration-300 hover:border-rose-500/40"
+          >
+            <!-- Top Row Summary Card -->
+            <div class="p-5 flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer select-none card-header-click">
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 mb-2.5 flex-wrap">
+                  <span class="text-[0.6rem] bg-text-muted/10 text-text-muted px-2 py-0.5 rounded font-bold uppercase tracking-wider border border-border-card whitespace-nowrap">
+                    {job.category === "maharashtra" ? "Maharashtra Gov" : job.category === "central" ? "Central Gov" : job.category}
+                  </span>
+
+                  {job.status === "declared" ? (
+                    <span class="text-[0.55rem] bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 px-2 py-0.5 rounded-full font-bold uppercase tracking-wide border border-emerald-500/20 flex items-center gap-1 whitespace-nowrap">
+                      <span class="w-1.5 h-1.5 bg-emerald-500 rounded-full inline-block"></span>
+                      Result Declared
+                    </span>
+                  ) : (
+                    <span class="text-[0.55rem] bg-rose-500/10 text-rose-500 px-2 py-0.5 rounded-full font-bold uppercase tracking-wide border border-rose-500/20 flex items-center gap-1 whitespace-nowrap">
+                      <HiOutlineXCircle className="text-xs shrink-0" />
+                      Application Closed (मुदत संपली)
+                    </span>
+                  )}
+                </div>
+
+                <h3 class="text-lg md:text-xl text-text-main font-bold leading-tight mb-2 m-0 opacity-90">
+                  {job.title}
+                </h3>
+                
+                <div class="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs text-text-muted">
+                  <span class="flex items-center gap-1"><HiOutlineBuildingOffice className="text-text-muted shrink-0 text-sm" /> {job.organisation}</span>
+                  <span class="flex items-center gap-1"><HiOutlineAcademicCap className="text-text-muted shrink-0 text-sm" /> {job.qualification}</span>
+                </div>
+              </div>
+
+              <!-- Total posts & Last date Summary badges -->
+              <div class="flex items-center flex-wrap md:flex-nowrap gap-3 shrink-0">
+                <div class="bg-bg-base border border-border-card rounded-xl px-3.5 py-2 text-center min-w-[95px] md:min-w-[110px]">
+                  <span class="block text-[0.55rem] text-text-muted uppercase tracking-wider font-semibold">Vacancies</span>
+                  <span class="block text-xs md:text-sm font-bold text-text-main mt-0.5">{job.vacancies}</span>
+                </div>
+                
+                <div class="bg-rose-500/10 border border-rose-500/20 rounded-xl px-3.5 py-2 text-center min-w-[100px] md:min-w-[115px]">
+                  <span class="block text-[0.55rem] text-rose-500 uppercase tracking-wider font-semibold">Last Date</span>
+                  <span class="block text-xs md:text-sm font-bold text-rose-500 mt-0.5 line-through">{job.lastDate}</span>
+                </div>
+
+                <!-- Collapsible Chevron Button -->
+                <button 
+                  type="button"
+                  aria-label="Toggle Details" 
+                  class="w-9 h-9 flex items-center justify-center border border-border-card rounded-full text-text-muted hover:text-primary hover:border-primary transition-colors cursor-pointer toggle-chevron-btn shrink-0"
+                >
+                  <HiOutlineChevronDown className="text-lg transition-transform duration-300" />
+                </button>
+              </div>
+            </div>
+
+            <!-- Slide Open Details Drawer -->
+            <div class="job-details-drawer max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out border-t border-border-card/0">
+              <div class="p-5 sm:p-6 bg-bg-base/30 dark:bg-black/10">
+                
+                <!-- Quick Info Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+                  <div class="bg-bg-surface border border-border-card rounded-xl p-4 flex gap-3.5">
+                    <div class="w-10 h-10 rounded-lg bg-text-muted/10 text-text-muted flex items-center justify-center shrink-0">
+                      <HiOutlineUser className="text-xl" />
+                    </div>
+                    <div>
+                      <span class="block text-[0.65rem] text-text-muted uppercase tracking-wider font-bold mb-0.5">Age Limit</span>
+                      <p class="text-xs text-text-main m-0 leading-relaxed font-semibold">{job.ageLimit}</p>
+                    </div>
+                  </div>
+
+                  <div class="bg-bg-surface border border-border-card rounded-xl p-4 flex gap-3.5">
+                    <div class="w-10 h-10 rounded-lg bg-text-muted/10 text-text-muted flex items-center justify-center shrink-0">
+                      <HiOutlineBanknotes className="text-xl" />
+                    </div>
+                    <div>
+                      <span class="block text-[0.65rem] text-text-muted uppercase tracking-wider font-bold mb-0.5">Pay Scale / Salary</span>
+                      <p class="text-xs text-text-main m-0 leading-relaxed font-semibold">{job.salary}</p>
+                    </div>
+                  </div>
+
+                  <div class="bg-bg-surface border border-border-card rounded-xl p-4 flex gap-3.5">
+                    <div class="w-10 h-10 rounded-lg bg-text-muted/10 text-text-muted flex items-center justify-center shrink-0">
+                      <HiOutlineCreditCard className="text-xl" />
+                    </div>
+                    <div>
+                      <span class="block text-[0.65rem] text-text-muted uppercase tracking-wider font-bold mb-0.5">Application Fee</span>
+                      <p class="text-xs text-text-main m-0 leading-relaxed font-semibold">{job.appFee}</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Syllabus & Details -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+                  <div class="bg-bg-surface border border-border-card rounded-xl p-4">
+                    <h4 class="text-xs uppercase tracking-wider font-extrabold text-text-muted flex items-center gap-1.5 mt-0 mb-3 border-none pb-0">
+                      <HiOutlineDocumentText className="text-base shrink-0" /> Syllabus & Selection Process
+                    </h4>
+                    <p class="text-xs text-text-secondary leading-relaxed m-0">{job.syllabus}</p>
+                  </div>
+
+                  <div class="bg-bg-surface border border-border-card rounded-xl p-4">
+                    <div class="flex items-center justify-between border-b border-border-card dark:border-border-card/30 pb-2 mb-3">
+                      <span class="text-xs uppercase tracking-wider font-extrabold text-text-muted flex items-center gap-1.5 border-none pb-0">
+                        📝 Recruitment Summary
+                      </span>
+                      <div class="flex gap-2">
+                        <button data-lang="mr" class="lang-switch active px-2.5 py-0.5 rounded text-[0.65rem] font-bold uppercase tracking-wider cursor-pointer border border-primary/20 transition-all">मराठी</button>
+                        <button data-lang="en" class="lang-switch px-2.5 py-0.5 rounded text-[0.65rem] font-bold uppercase tracking-wider cursor-pointer border border-border-card text-text-muted hover:border-primary/50 transition-all">English</button>
+                      </div>
+                    </div>
+
+                    <div class="summary-text-box">
+                      <p class="mr-text text-xs text-text-secondary leading-relaxed m-0 font-medium">{job.summaryMr}</p>
+                      <p class="en-text text-xs text-text-secondary leading-relaxed m-0 font-medium hidden">{job.summaryEn}</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Read Article Link -->
+                <div class="flex justify-end border-t border-border-card/30 dark:border-border-card/10 pt-4">
+                  <a 
+                    href={job.applyLink}
+                    class="px-5 py-2.5 bg-bg-surface hover:bg-bg-surface/80 text-text-muted border border-border-card rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-200 no-underline flex items-center gap-1.5"
+                  >
+                    View Archived Article <HiOutlineArrowTopRightOnSquare className="text-sm shrink-0" />
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        ))}
+      </div>
 
       <!-- No Results Card -->
       <div id="no-jobs-found" class="text-center py-16 bg-bg-surface border border-border-card rounded-2xl hidden">
@@ -446,7 +579,7 @@ const activeCount = filteredRecruitments.length;
         const title = card.dataset.title || "";
         const org = card.dataset.org || "";
         
-        // Category search helper mapping (supports bilingual search matching)
+        // Category search helper mapping
         const categorySearchText = (
           cat === "maharashtra" ? "maharashtra gov government state state-gov राज्य शासन पोलीस" : 
           cat === "central" ? "central gov government केंद्र शासन टपाल पोस्ट" : 
@@ -458,7 +591,7 @@ const activeCount = filteredRecruitments.length;
         // Qualification check
         const matchesQual = (activeQual === "all" || qual === activeQual);
         
-        // Search text check (evaluating title, department, qualification, and sector names)
+        // Search text check
         const matchesSearch = (
           title.includes(searchQuery) || 
           org.includes(searchQuery) ||
@@ -507,7 +640,6 @@ const activeCount = filteredRecruitments.length;
       
       if (header && drawer) {
         header.addEventListener("click", (e) => {
-          // Prevent trigger if clicking directly on anchor tags or CTA buttons
           const target = e.target as HTMLElement;
           if (target.closest("a") || target.closest("button:not(.toggle-chevron-btn)")) {
             return;
@@ -515,7 +647,6 @@ const activeCount = filteredRecruitments.length;
 
           const isExpanded = drawer.classList.contains("expanded");
           
-          // Close other drawers for accordion behavior
           jobCards.forEach(c => {
             const d = c.querySelector(".job-details-drawer");
             const ch = c.querySelector(".toggle-chevron-btn svg");
@@ -525,7 +656,6 @@ const activeCount = filteredRecruitments.length;
             }
           });
 
-          // Toggle current
           if (isExpanded) {
             drawer.classList.remove("expanded");
             if (chevron) (chevron as HTMLElement).style.transform = "rotate(0deg)";
@@ -556,12 +686,12 @@ const activeCount = filteredRecruitments.length;
           enSwitch.classList.add("active");
           mrSwitch.classList.remove("active");
           enText.classList.remove("hidden");
+          mrText.classList.style.display = "none";
           mrText.classList.add("hidden");
         });
       }
     });
   }
 
-  // Bind init functions on loads (supports client routing / transitions)
   document.addEventListener("astro:page-load", initMegaRecruitment);
 </script>
