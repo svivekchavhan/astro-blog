@@ -9,6 +9,15 @@ export interface ImportantUpdate {
 
 export const importantUpdates: ImportantUpdate[] = [
   {
+    id: "tmc-thane-hall-ticket-2026",
+    title:
+      "ठाणे महानगरपालिका (TMC) भरती परीक्षा प्रवेशपत्र / हॉलतिकीट ऑनलाईन उपलब्ध",
+    link: "/tmc-thane-hall-ticket-2026",
+    date: "August 22, 2026",
+    expiry: "2026-09-15T00:00:00.000Z",
+    show: true,
+  },
+  {
     id: "mahajyoti-vanarti-free-coaching-extension-2026",
     title:
       "🔥 महाज्योति व वनार्टी मोफत स्पर्धा परीक्षा प्रशिक्षण: अर्ज भरण्यास २६ ऑगस्ट २०२६ पर्यंत मुदतवाढ",

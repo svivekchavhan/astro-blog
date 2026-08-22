@@ -1,0 +1,525 @@
+---
+import Layout from "../layouts/Layout.astro";
+import {
+  HiOutlineCalendarDays,
+  HiOutlineCursorArrowRays,
+  HiOutlineDocumentText,
+  HiOutlineBuildingOffice,
+  HiOutlineAcademicCap,
+  HiOutlineCheckCircle,
+  HiOutlineArrowDownTray,
+  HiOutlineArrowTopRightOnSquare,
+  HiOutlineIdentification,
+  HiOutlineBell,
+  HiOutlineUserCircle,
+  HiOutlineMegaphone,
+  HiOutlineArrowLeft,
+  HiOutlineShieldCheck,
+} from "react-icons/hi2";
+
+const title =
+  "ठाणे महानगरपालिका हॉल तिकीट २०२६: TMC मनपा भरती परीक्षा दिनांक व प्रवेशपत्र डाऊनलोड!";
+const description =
+  "Thane Municipal Corporation (TMC) Hall Ticket 2026: ठाणे मनपा अग्निशमन व अभियांत्रिकी विभागातील ७ संवर्गातील ऑनलाईन भरती परीक्षेचे प्रवेशपत्र (Admit Card) व ०१ आणि ०२ सप्टेंबर २०२६ चे परीक्षा वेळापत्रक प्रसिद्ध. ऑनलाईन डाऊनलोड करा.";
+const canonicalURL = "https://mahasandhi.in/tmc-thane-hall-ticket-2026";
+const date = "August 22, 2026";
+const category = "Admit Card";
+const loginUrl =
+  "https://cdn.digialm.com/EForms/configuredHtml/32895/91092/login.html";
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonicalURL={canonicalURL}
+  article={true}
+  customBreadcrumbs={[
+    { name: "Admit Card", url: "/admit-card" },
+    { name: "TMC Thane Hall Ticket 2026" },
+  ]}
+>
+  <article class="py-8">
+    <!-- Back Button -->
+    <div class="mb-6 not-prose">
+      <a
+        href="/"
+        class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold uppercase tracking-wider text-text-muted hover:text-primary bg-bg-surface border border-border-card rounded-xl transition-all duration-300 no-underline"
+      >
+        <HiOutlineArrowLeft className="text-sm" /> back to home / मुख्य पानावर जा
+      </a>
+    </div>
+
+    <!-- Header Banner & Category -->
+    <div class="mb-10">
+      <div class="flex items-center gap-3 mb-4 flex-wrap">
+        <span
+          class="bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-emerald-500/20 flex items-center gap-1.5 shadow-xs"
+        >
+          <HiOutlineBell className="text-sm shrink-0 animate-pulse" />
+          {category} (अधिकृत सूचनापत्र जारी)
+        </span>
+        <span
+          class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-primary/20 flex items-center gap-1.5"
+        >
+          <HiOutlineBuildingOffice className="text-sm" /> ठाणे महानगरपालिका (TMC)
+        </span>
+        <span class="text-text-muted text-xs font-semibold">• {date}</span>
+      </div>
+
+      <h1
+        class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-text-main mb-6 leading-[1.25]"
+      >
+        {title}
+      </h1>
+
+      <p
+        class="text-text-muted text-base sm:text-lg leading-relaxed border-l-4 border-emerald-500 pl-6 py-2 italic bg-emerald-500/5 rounded-r-xl font-medium"
+      >
+        {description}
+      </p>
+    </div>
+
+    <!-- Quick Action Banner -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 not-prose">
+      <a
+        href={loginUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group p-5 bg-gradient-to-br from-emerald-600 to-teal-600 text-white rounded-2xl transition-all duration-300 shadow-md hover:shadow-emerald-500/20 flex items-center justify-between no-underline"
+      >
+        <div>
+          <span
+            class="text-[0.65rem] uppercase font-extrabold tracking-wider bg-white/20 px-2.5 py-0.5 rounded text-white block w-fit mb-1"
+            >TCS iON Login Portal</span
+          >
+          <h3
+            class="text-base sm:text-lg font-extrabold text-white m-0 flex items-center gap-1.5"
+          >
+            TMC Hall Ticket Download <HiOutlineArrowTopRightOnSquare
+              className="text-xl shrink-0"
+            />
+          </h3>
+          <p class="text-xs text-white/90 m-0 mt-1">
+            User ID व Password टाकून प्रवेशपत्र डाऊनलोड करा
+          </p>
+        </div>
+        <div
+          class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform"
+        >
+          <HiOutlineArrowDownTray className="text-2xl animate-bounce" />
+        </div>
+      </a>
+
+      <a
+        href="https://thanecity.gov.in"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="p-5 bg-bg-surface border border-border-card hover:border-primary/50 rounded-2xl flex items-center justify-between transition-all duration-300 no-underline group shadow-xs"
+      >
+        <div class="flex items-center gap-4">
+          <div
+            class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"
+          >
+            <HiOutlineBuildingOffice className="text-2xl" />
+          </div>
+          <div>
+            <span
+              class="text-xs text-text-muted font-bold uppercase tracking-wider block"
+              >अधिकृत संकेतस्थळ</span
+            >
+            <h4
+              class="text-sm font-bold text-text-main m-0 group-hover:text-primary transition-colors flex items-center gap-1"
+            >
+              thanecity.gov.in <HiOutlineArrowTopRightOnSquare
+                className="text-xs"
+              />
+            </h4>
+            <p class="text-xs text-text-muted m-0 mt-0.5">
+              ठाणे महानगरपालिका अधिकृत पोर्टल
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Quick Language Navigation Links -->
+    <div class="flex gap-4 mb-8">
+      <a
+        href="#marathi-version"
+        class="text-primary font-bold text-sm hover:underline"
+        >↓ मराठी माहिती (Marathi)</a
+      >
+      <span class="text-text-muted">|</span>
+      <a
+        href="#english-version"
+        class="text-primary font-bold text-sm hover:underline"
+        >↓ English Version</a
+      >
+    </div>
+
+    <!-- ================= MARATHI VERSION ================= -->
+    <div id="marathi-version">
+      <div class="space-y-6 text-text-main leading-relaxed">
+        <h2
+          id="main-keyword-mr"
+          class="text-xl md:text-2xl font-black text-text-main mt-2"
+        >
+          ठाणे महानगरपालिका (TMC) सरळसेवा भरती २०२५-२६ - परीक्षेचा दिनांक व ऑनलाईन प्रवेशपत्र!
+        </h2>
+
+        <!-- Introduction -->
+        <div class="mb-6 space-y-4">
+          <p>
+            <strong>TMC Thane Hall Ticket 2026 & Exam Date Notice:</strong> ठाणे महानगरपालिकेच्या आस्थापनेवरील गट-'क' व गट-'ड' मधील विविध रिक्त पदे सरळसेवेने भरण्याकरिता जाहिरात (क्र. ठामपा/पिआरओ/आस्था/५०६/२०२५-२६) प्रसिद्ध करण्यात आली होती.
+          </p>
+          <p>
+            त्या अनुषंगाने अत्यावश्यक सेवेतील <strong>'अग्निशमन व अभियांत्रिकी'</strong> विभागाकडील खालील एकूण <strong>०७ संवर्गांसाठी</strong> ऑनलाईन संगणकीकृत लेखी परीक्षा (Computer Based Test - CBT) <strong>०१ सप्टेंबर २०२६ व ०२ सप्टेंबर २०२६</strong> रोजी आयोजित करण्यात आली आहे.
+          </p>
+          <hr class="border-border-card my-6" />
+        </div>
+
+        <!-- Key Information Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
+          <div
+            class="bg-bg-surface border border-border-card p-4 rounded-2xl flex items-start gap-3 shadow-xs"
+          >
+            <HiOutlineBuildingOffice
+              className="text-primary text-2xl shrink-0 mt-0.5"
+            />
+            <div>
+              <span
+                class="text-xs text-text-muted block uppercase font-bold tracking-wider"
+                >प्राधिकरण व विभाग</span
+              >
+              <span class="text-text-main font-bold text-sm"
+                >TMC (अग्निशमन व अभियांत्रिकी)</span
+              >
+            </div>
+          </div>
+          <div
+            class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3 shadow-xs"
+          >
+            <HiOutlineCalendarDays
+              className="text-rose-500 text-2xl shrink-0 mt-0.5"
+            />
+            <div>
+              <span
+                class="text-xs text-text-muted block uppercase font-bold tracking-wider"
+                >परीक्षेचा दिनांक</span
+              >
+              <span
+                class="text-rose-600 dark:text-rose-400 font-extrabold text-sm"
+              >
+                ०१ सप्टेंबर व ०२ सप्टेंबर २०२६
+              </span>
+            </div>
+          </div>
+          <div
+            class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3 shadow-xs"
+          >
+            <HiOutlineIdentification
+              className="text-emerald-500 text-2xl shrink-0 mt-0.5"
+            />
+            <div>
+              <span
+                class="text-xs text-text-muted block uppercase font-bold tracking-wider"
+                >प्रवेशपत्र उपलब्ध</span
+              >
+              <span class="text-emerald-600 dark:text-emerald-400 font-extrabold text-sm flex items-center gap-1">
+                <span class="w-2 h-2 bg-emerald-500 rounded-full animate-ping"></span> परीक्षेच्या ७ दिवस आधी
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Exam Dates & Cadres Table (अधिकृत सूचनापत्र तक्ता) -->
+        <h2
+          id="exam-schedule-table"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          TMC पदनिहाय परीक्षेचा दिनांक तपशील (Exam Schedule Table - 7 Cadres)
+        </h2>
+
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="bg-primary/10">
+                <th
+                  class="p-3.5 border border-border-card font-bold text-text-main text-center w-16"
+                  >अ.क्र.</th
+                >
+                <th
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                  >संवर्गाचे नाव (Post Name)</th
+                >
+                <th
+                  class="p-3.5 border border-border-card font-bold text-text-main text-center whitespace-nowrap"
+                  >परीक्षेचा दिनांक (Exam Date)</th
+                >
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-border-card/30">
+              <tr>
+                <td class="p-3.5 border border-border-card text-center font-bold text-text-muted">१</td>
+                <td class="p-3.5 border border-border-card font-bold text-text-main">सहाय्यक अग्निशमन अधिकारी (Assistant Fire Officer)</td>
+                <td class="p-3.5 border border-border-card text-center font-extrabold text-rose-600 dark:text-rose-400" rowspan="7">
+                  <div class="flex flex-col items-center justify-center gap-1 py-4">
+                    <span class="text-base sm:text-lg">दिनांक ०१ सप्टेंबर, २०२६</span>
+                    <span class="text-xs text-text-muted font-normal">व</span>
+                    <span class="text-base sm:text-lg">दिनांक ०२ सप्टेंबर, २०२६</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3.5 border border-border-card text-center font-bold text-text-muted">२</td>
+                <td class="p-3.5 border border-border-card font-bold text-text-main">चालक-वाहनचालक (Driver Operator)</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 border border-border-card text-center font-bold text-text-muted">३</td>
+                <td class="p-3.5 border border-border-card font-bold text-text-main">फायरमन (Fireman)</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 border border-border-card text-center font-bold text-text-muted">४</td>
+                <td class="p-3.5 border border-border-card font-bold text-text-main">कनिष्ठ अभियंता-१ (नागरी - Junior Engineer Civil)</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 border border-border-card text-center font-bold text-text-muted">५</td>
+                <td class="p-3.5 border border-border-card font-bold text-text-main">कनिष्ठ अभियंता-१ (विद्युत - Junior Engineer Electrical)</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 border border-border-card text-center font-bold text-text-muted">६</td>
+                <td class="p-3.5 border border-border-card font-bold text-text-main">कनिष्ठ अभियंता-१ (यांत्रिकी/ऑटो - Junior Engineer Mech/Auto)</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 border border-border-card text-center font-bold text-text-muted">७</td>
+                <td class="p-3.5 border border-border-card font-bold text-text-main">कनिष्ठ अभियंता- २ (Junior Engineer 2)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Notice Highlights Box -->
+        <div
+          class="bg-gradient-to-br from-violet-500/10 via-primary/5 to-rose-500/10 border border-violet-500/20 p-5 rounded-2xl space-y-3 mb-8"
+        >
+          <div class="flex items-center gap-2 text-primary font-black text-sm">
+            <HiOutlineShieldCheck className="text-xl shrink-0" />
+            <span>अधिकृत सूचनापत्र मुख्य संदर्भ (Notice Reference):</span>
+          </div>
+          <ul class="list-disc pl-5 text-xs sm:text-sm text-text-main space-y-2 m-0 font-medium">
+            <li><strong>जाहिरात संदर्भ:</strong> ठामपा/पिआरओ/आस्था/५०६/२०२५-२६ (दिनांक १०/०८/२०२५)</li>
+            <li><strong>सूचनापत्र क्रमांक:</strong> जा.क्र.ठामपा/आस्था/पऑ/उपआ(मु.)-२७६८ (दिनांक ३१/०७/२०२६)</li>
+            <li><strong>प्रवेशपत्र नियम:</strong> पात्र उमेदवारांचे परीक्षेचे प्रवेशपत्र (Admit Card) परीक्षेच्या <strong>७ दिवस अगोदर</strong> `www.thanecity.gov.in` व अधिकृत ऑनलाईन पोर्टलवरून डाऊनलोड करता येईल.</li>
+          </ul>
+        </div>
+
+        <!-- Download Steps (मराठी) -->
+        <h2
+          id="download-steps-mr"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          TMC ठाणे मनपा हॉलतिकीट कसे डाऊनलोड करावे? (Step-by-Step Guide)
+        </h2>
+
+        <div class="space-y-4 my-6">
+          <div
+            class="bg-bg-surface border border-border-card p-5 rounded-2xl flex items-start gap-4 shadow-xs"
+          >
+            <span
+              class="w-8 h-8 rounded-xl bg-primary/10 text-primary font-black text-sm flex items-center justify-center shrink-0"
+              >1</span
+            >
+            <div>
+              <h3 class="text-base font-bold text-text-main m-0 mb-1">
+                TMC अधिकृत TCS iON / thanecity.gov.in पोर्टलवर जा
+              </h3>
+              <p class="text-xs text-text-muted m-0">
+                डायरेक्ट प्रवेशपत्र डाऊनलोड लिंकवर क्लिक करा.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-bg-surface border border-border-card p-5 rounded-2xl flex items-start gap-4 shadow-xs"
+          >
+            <span
+              class="w-8 h-8 rounded-xl bg-primary/10 text-primary font-black text-sm flex items-center justify-center shrink-0"
+              >2</span
+            >
+            <div>
+              <h3 class="text-base font-bold text-text-main m-0 mb-1">
+                User ID व Password टाका
+              </h3>
+              <p class="text-xs text-text-muted m-0">
+                तुमचा नोंदणीकृत User ID (अर्ज क्रमांक) व Password प्रविष्ट करून Login करा.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-bg-surface border border-border-card p-5 rounded-2xl flex items-start gap-4 shadow-xs"
+          >
+            <span
+              class="w-8 h-8 rounded-xl bg-primary/10 text-primary font-black text-sm flex items-center justify-center shrink-0"
+              >3</span
+            >
+            <div>
+              <h3 class="text-base font-bold text-text-main m-0 mb-1">
+                Hall Ticket डाऊनलोड करून प्रिंन्ट काढा
+              </h3>
+              <p class="text-xs text-text-muted m-0">
+                डॅशबोर्डवरून हॉलतिकीट PDF डाऊनलोड करा व परीक्षेसाठी सोबत ठेवा.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Direct Links Table (मराठी) -->
+        <h2
+          id="important-links-mr"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          TMC प्रवेशपत्र डाऊनलोड आणि महत्त्वाच्या लिंक्स (Important Links Table)
+        </h2>
+
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="bg-primary/10">
+                <th
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                  >तपशील (Resource)</th
+                >
+                <th
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                  >डायरेक्ट लिंक (Direct Link)</th
+                >
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-emerald-500/5">
+                <td
+                  class="p-3.5 border border-border-card font-extrabold text-text-main"
+                >
+                  <span class="flex items-center gap-2">
+                    <HiOutlineUserCircle
+                      className="text-emerald-500 text-lg shrink-0"
+                    />
+                    TMC ठाणे मनपा हॉलतिकीट डाऊनलोड लिंक (Candidate Login)
+                  </span>
+                </td>
+                <td class="p-3.5 border border-border-card">
+                  <a
+                    href={loginUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-extrabold uppercase tracking-wider rounded-xl transition-all shadow-xs w-full sm:w-auto no-underline"
+                  >
+                    <HiOutlineArrowDownTray
+                      className="text-base shrink-0 animate-bounce"
+                    />
+                    <span>प्रवेशपत्र डाऊनलोड करा</span>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-muted"
+                >
+                  ठाणे महानगरपालिका अधिकृत वेबसाईट (Official Website)
+                </td>
+                <td class="p-3.5 border border-border-card">
+                  <a
+                    href="https://thanecity.gov.in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider rounded-xl transition-colors border border-primary/20 w-full sm:w-auto no-underline"
+                  >
+                    <HiOutlineArrowTopRightOnSquare
+                      className="text-base shrink-0"
+                    />
+                    <span>thanecity.gov.in</span>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= LANGUAGE SEPARATOR ================= -->
+    <div
+      class="my-16 border-t-2 border-dashed border-border-card flex items-center justify-center relative"
+    >
+      <span
+        class="absolute bg-bg-base px-8 py-2 text-base sm:text-lg font-extrabold uppercase tracking-widest text-primary border border-border-card rounded-full shadow-md"
+      >
+        English Version
+      </span>
+    </div>
+
+    <!-- ================= ENGLISH VERSION ================= -->
+    <div id="english-version" class="opacity-95">
+      <div class="space-y-6 text-text-main leading-relaxed">
+        <h2
+          id="main-keyword-en"
+          class="text-xl md:text-2xl font-black text-text-main mt-2"
+        >
+          Thane Municipal Corporation (TMC) Exam Date & Hall Ticket 2026
+        </h2>
+
+        <div class="mb-6 space-y-4">
+          <p>
+            <strong>TMC Hall Ticket 2026:</strong> Thane Municipal Corporation has announced the CBT exam dates (01st & 02nd September 2026) for 7 cadres in Fire & Engineering Department (Assistant Fire Officer, Driver Operator, Fireman, and Junior Engineer Posts). Candidates can download their admit card via the official candidate login portal.
+          </p>
+        </div>
+
+        <!-- Direct Link Table (English) -->
+        <h2
+          id="important-links-en"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          TMC Hall Ticket Download Links
+        </h2>
+
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="bg-primary/10">
+                <th
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                  >Resource</th
+                >
+                <th
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                  >Direct Link</th
+                >
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                >
+                  TMC Candidate Login Hall Ticket Link
+                </td>
+                <td class="p-3.5 border border-border-card">
+                  <a
+                    href={loginUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-all no-underline"
+                  >
+                    <HiOutlineArrowDownTray className="text-base shrink-0" />
+                    <span>Download Hall Ticket</span>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

@@ -15,6 +15,22 @@ export interface ArticleMeta {
 export const articlesRegistry: ArticleMeta[] = [
   {
     titleEn:
+      "TMC Thane Hall Ticket 2026 Out: Download Thane Municipal Corporation Admit Card Direct Link",
+    titleMr:
+      "ठाणे महानगरपालिका (TMC) भरती परीक्षा २०२६: हॉलतिकीट ऑनलाईन उपलब्ध!",
+    slug: "/tmc-thane-hall-ticket-2026",
+    category: "Admit Card",
+    date: "August 22, 2026",
+    image:
+      "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1200",
+    postName: "अग्निशमन व अभियांत्रिकी (७ संवर्ग पदे)",
+    descriptionMr:
+      "ठाणे महानगरपालिका (TMC) अग्निशमन व अभियांत्रिकी विभागातील ७ संवर्गातील भरती परीक्षा ०१ व ०२ सप्टेंबर २०२६ रोजी होणार असून हॉलतिकीट डाऊनलोड दुवा उपलब्ध.",
+    vacancies: "07 Cadres (CBT)",
+    lastDate: "Exam: 01 & 02 Sep 2026",
+  },
+  {
+    titleEn:
       "Mahajyoti & VANARTI Free Coaching 2026: Application Deadline Extended to 26 August",
     titleMr:
       "महाज्योति व वनार्टी मोफत स्पर्धा परीक्षा प्रशिक्षण: ऑनलाईन अर्जास २६ ऑगस्ट २०२६ पर्यंत मुदतवाढ!",
