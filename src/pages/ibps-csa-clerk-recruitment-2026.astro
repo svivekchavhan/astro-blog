@@ -1,0 +1,769 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { translateMarathi } from "../utils/wordLibrary";
+import {
+  HiOutlineCalendarDays,
+  HiOutlineCursorArrowRays,
+  HiOutlineDocumentText,
+  HiOutlineCurrencyRupee,
+  HiOutlineMapPin,
+  HiOutlineBuildingOffice,
+  HiOutlineAcademicCap,
+  HiOutlineBriefcase,
+  HiOutlineCheckCircle,
+  HiOutlineCalculator,
+  HiOutlineArrowTopRightOnSquare,
+  HiOutlineArrowLeft,
+  HiOutlineBell,
+  HiOutlineShieldCheck,
+} from "react-icons/hi2";
+
+const title =
+  "IBPS भरती २०२६: क्लर्क (CSA-XVI) ११,४०३ जागांसाठी भरती जाहीर, महाराष्ट्रात १,०५१ पदे! ऑनलाईन अर्जास २८ ऑगस्ट मुदतवाढ";
+const description =
+  "IBPS CRP CSA-XVI Customer Service Associate (Clerk) Recruitment 2026: बँकेत ११,४०३ पदांची मेगा भरती (महाराष्ट्रात १,०५१ जागा). पदवीधर पात्र, बेसिक पगार ₹२४,०५०. ऑनलाईन अर्ज करण्याची वाढीव मुदत २८ ऑगस्ट २०२६ पर्यंत. direct apply link: https://ibpsreg.ibps.in/csaxvijul26/";
+const canonicalURL = "https://mahasandhi.in/ibps-csa-clerk-recruitment-2026";
+const date = "August 22, 2026";
+const category = "Bank Job";
+const applyUrl = "https://ibpsreg.ibps.in/csaxvijul26/";
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonicalURL={canonicalURL}
+  pubDate={date}
+  category={category}
+  image="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200"
+  article={true}
+  customBreadcrumbs={[
+    { name: "Current Recruitment", url: "/current-recruitment" },
+    { name: "IBPS Clerk Recruitment 2026" },
+  ]}
+>
+  <article class="pt-2 pb-8">
+    <!-- Back Button -->
+    <div class="mb-6 not-prose">
+      <a
+        href="/current-recruitment"
+        class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold uppercase tracking-wider text-text-muted hover:text-primary bg-bg-surface border border-border-card rounded-xl transition-all duration-300 no-underline"
+      >
+        <HiOutlineArrowLeft className="text-sm" /> back to current recruitment / मागे
+        जा
+      </a>
+    </div>
+
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="flex items-center gap-3 mb-4 flex-wrap">
+        <span
+          class="bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-emerald-500/20 flex items-center gap-1.5 shadow-xs"
+        >
+          <HiOutlineBell className="text-sm shrink-0 animate-pulse" />
+          {category} (ऑनलाईन अर्ज सुरू)
+        </span>
+        <span
+          class="bg-rose-500/10 text-rose-600 dark:text-rose-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-rose-500/20 flex items-center gap-1.5"
+        >
+          <HiOutlineCalendarDays className="text-sm" /> नवीन अर्ज मुदत: २८ ऑगस्ट २०२६
+        </span>
+        <span class="text-text-muted text-xs font-semibold">• {date}</span>
+      </div>
+
+      <h1
+        class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-text-main mb-6 leading-[1.25]"
+      >
+        {title}
+      </h1>
+      <p
+        class="text-text-muted text-base sm:text-lg leading-relaxed border-l-4 border-primary pl-4 sm:pl-6 py-2 italic font-medium"
+      >
+        {description}
+      </p>
+    </div>
+
+    <!-- Quick Action Apply Banner -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 not-prose">
+      <a
+        href={applyUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group p-5 bg-gradient-to-br from-primary to-indigo-700 text-white rounded-2xl transition-all duration-300 shadow-md hover:shadow-primary/20 flex items-center justify-between no-underline"
+      >
+        <div>
+          <span
+            class="text-[0.65rem] uppercase font-extrabold tracking-wider bg-white/20 px-2.5 py-0.5 rounded text-white block w-fit mb-1"
+            >IBPS CRP CSA-XVI Apply Portal</span
+          >
+          <h3
+            class="text-base sm:text-lg font-extrabold text-white m-0 flex items-center gap-1.5"
+          >
+            Apply Online Portal <HiOutlineArrowTopRightOnSquare
+              className="text-xl shrink-0"
+            />
+          </h3>
+          <p class="text-xs text-white/90 m-0 mt-1">
+            वाढीव मुदत: २८ ऑगस्ट २०२६ पर्यंत ऑनलाईन अर्ज करा
+          </p>
+        </div>
+        <div
+          class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform"
+        >
+          <HiOutlineCursorArrowRays className="text-2xl" />
+        </div>
+      </a>
+
+      <a
+        href="https://www.ibps.in"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="p-5 bg-bg-surface border border-border-card hover:border-primary/50 rounded-2xl flex items-center justify-between transition-all duration-300 no-underline group shadow-xs"
+      >
+        <div class="flex items-center gap-4">
+          <div
+            class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"
+          >
+            <HiOutlineBuildingOffice className="text-2xl" />
+          </div>
+          <div>
+            <span
+              class="text-xs text-text-muted font-bold uppercase tracking-wider block"
+              >अधिकृत संकेतस्थळ</span
+            >
+            <h4
+              class="text-sm font-bold text-text-main m-0 group-hover:text-primary transition-colors flex items-center gap-1"
+            >
+              ibps.in <HiOutlineArrowTopRightOnSquare className="text-xs" />
+            </h4>
+            <p class="text-xs text-text-muted m-0 mt-0.5">
+              Institute of Banking Personnel Selection
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Quick Language Navigation Links -->
+    <div class="flex flex-wrap items-center gap-4 mb-8">
+      <a
+        href="#marathi-version"
+        class="text-primary font-bold text-sm hover:underline"
+        >↓ मराठी आवृत्ती (Marathi Version)</a
+      >
+      <span class="text-text-muted">|</span>
+      <a
+        href="#english-version"
+        class="text-primary font-bold text-sm hover:underline"
+        >↓ English Summary</a
+      >
+    </div>
+
+    <!-- ================= MARATHI VERSION ================= -->
+    <div id="marathi-version">
+      <div class="space-y-6 text-text-main leading-relaxed">
+        <h2
+          id="main-keyword-mr"
+          class="text-xl md:text-2xl font-black text-text-main mt-2"
+        >
+          🏦 IBPS क्लर्क (Customer Service Associate - CSA XVI) पदभरती जाहिरात
+          २०२६
+        </h2>
+
+        <!-- Introduction -->
+        <div class="mb-6 space-y-4">
+          <p>
+            <strong>IBPS Clerk (CSA-XVI) Recruitment 2026:</strong> इन्स्टिट्यूट ऑफ
+            बँकिंग पर्सोनेल सिलेक्शन (IBPS - Institute of Banking Personnel Selection)
+            द्वारे सहभागी सार्वजनिक क्षेत्रातील बँकांमध्ये <strong
+              >Customer Service Associate (CSA / Clerk)</strong
+            > पदांच्या एकूण <strong>११,४०३ जागांसाठी</strong> मेगा भरती जाहिरात प्रसिद्ध
+            झाली आहे.
+          </p>
+          <p>
+            यापैकी <strong>महाराष्ट्रात तब्बल १,०५१ पदे</strong> उपलब्ध आहेत. कोणत्याही
+            शाखेतील पदवीधर उमेदवार या भरतीसाठी अर्ज करण्यास पात्र आहेत. ऑनलाईन अर्ज
+            करण्याची मुदत आता वाढवून <strong
+              class="text-rose-600 dark:text-rose-400">२८ ऑगस्ट २०२६</strong
+            > पर्यंत करण्यात आली आहे.
+          </p>
+          <hr class="border-border-card my-6" />
+        </div>
+
+        <!-- Key Information Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
+          <div
+            class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3 shadow-xs"
+          >
+            <HiOutlineBuildingOffice
+              className="text-primary text-2xl shrink-0 mt-0.5"
+            />
+            <div>
+              <span
+                class="text-xs text-text-muted block uppercase font-bold tracking-wider"
+                >संस्थेचे नाव</span
+              >
+              <span class="text-text-main font-semibold text-sm"
+                >IBPS (सहभागी बँका)</span
+              >
+            </div>
+          </div>
+          <div
+            class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3 shadow-xs"
+          >
+            <HiOutlineMapPin
+              className="text-primary text-2xl shrink-0 mt-0.5"
+            />
+            <div>
+              <span
+                class="text-xs text-text-muted block uppercase font-bold tracking-wider"
+                >एकूण पदे (Vacancies)</span
+              >
+              <span class="text-text-main font-bold text-sm text-primary"
+                >११,४०३ (महाराष्ट्र: १,०५१)</span
+              >
+            </div>
+          </div>
+          <div
+            class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3 shadow-xs"
+          >
+            <HiOutlineCurrencyRupee
+              className="text-primary text-2xl shrink-0 mt-0.5"
+            />
+            <div>
+              <span
+                class="text-xs text-text-muted block uppercase font-bold tracking-wider"
+                >बेसिक पगार (Basic Pay)</span
+              >
+              <span class="text-text-main font-semibold text-sm"
+                >₹२४,०५०/- ते ₹६४,४८०/-</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Educational Qualification & Local Language -->
+        <h2
+          id="qualification"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          🔹 शैक्षणिक पात्रता व अटी (Educational Qualification)
+        </h2>
+        <div
+          class="bg-bg-surface border border-border-card p-5 rounded-2xl text-sm space-y-3 mb-6"
+        >
+          <ul class="list-disc pl-6 space-y-2 text-text-main font-medium m-0">
+            <li>
+              <strong>पदवी (Graduation):</strong> मान्यताप्राप्त विद्यापीठाची <strong
+                >कोणत्याही शाखेतील पदवी (Graduation in any discipline)</strong
+              > उत्तीर्ण. (निकाल २१ ऑगस्ट २०२६ पर्यंत घोषित झालेला असावा).
+            </li>
+            <li>
+              <strong>संगणक ज्ञान (Computer Literacy):</strong> संगणक किंवा आयटी हा
+              विषय शाळेत/कॉलेजमध्ये शिकलेला असावा किंवा संगणक ऑपरेशन्स/लँग्वेजचे प्रमाणपत्र/डिप्लोमा/डिग्री
+              असणे आवश्यक.
+            </li>
+            <li>
+              <strong>स्थानिक भाषा ज्ञान (Local Language Proficiency):</strong> ज्या
+              राज्यासाठी अर्ज केला आहे, त्या राज्याची स्थानिक भाषा वाचता, लिहिता,
+              बोलता व समजता आली पाहिजे. <strong
+                >(महाराष्ट्रासाठी स्थानिक भाषा: मराठी - Marathi)</strong
+              >.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Post Name and Vacancy Summary Table -->
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="bg-primary/10">
+                <th
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                  >पदाचे नाव (Post Name)</th
+                >
+                <th
+                  class="p-3.5 border border-border-card font-bold text-text-main text-center whitespace-nowrap"
+                  >एकूण जागा (Total Posts)</th
+                >
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-primary"
+                >
+                  Clerk (लिपिक)
+                </td>
+                <td
+                  class="p-3.5 border border-border-card font-black text-rose-600 dark:text-rose-400 text-center text-base"
+                >
+                  ११,४०३ <span
+                    class="block text-xs font-semibold text-text-muted"
+                    >(महाराष्ट्रात १,०५१ पदे)</span
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Age Limit Details -->
+        <h2
+          id="age-limit"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          🔹 वयोमर्यादा (Age Limit - दि. ०१ ऑगस्ट २०२६ रोजी)
+        </h2>
+        <div
+          class="bg-bg-surface border border-border-card p-5 rounded-2xl text-sm space-y-3 mb-6"
+        >
+          <p class="m-0 text-text-main font-bold">
+            वय मोजण्याचा दिनांक: <span class="text-rose-600 dark:text-rose-400"
+              >०१ ऑगस्ट २०२६</span
+            > (उमेदवाराचा जन्म ०२-०८-१९९८ ते ०१-०८-२००६ दरम्यान असावा)
+          </p>
+          <ul class="list-disc pl-6 space-y-1.5 text-text-muted m-0">
+            <li>
+              <strong>खुला प्रवर्ग (Unreserved / EWS):</strong> २० ते २८ वर्षे
+            </li>
+            <li>
+              <strong>SC / ST प्रवर्ग:</strong> ०५ वर्षे सूट (२० ते ३३ वर्षे)
+            </li>
+            <li>
+              <strong>OBC (NCL) प्रवर्ग:</strong> ०३ वर्षे सूट (२० ते ३१ वर्षे)
+            </li>
+            <li><strong>PwBD (दिव्यांग):</strong> १० वर्षे अतिरिक्त सूट</li>
+            <li>
+              <strong>माजी सैनिक / विधवा / घटस्फोटीत महिला:</strong> नियमानुसार नियमावलीनुसार
+              सूट
+            </li>
+          </ul>
+        </div>
+
+        <!-- Salary Details -->
+        <h2
+          id="salary"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          🔹 वेतनश्रेणी व भत्ते (Pay Scale & Salary)
+        </h2>
+        <div
+          class="bg-bg-surface border border-border-card p-5 rounded-2xl text-sm space-y-2 mb-6"
+        >
+          <p class="m-0 text-text-main font-bold">
+            बेसिक पगार (Starting Basic Pay): <span
+              class="text-emerald-600 dark:text-emerald-400 font-extrabold text-base"
+              >₹२४,०५०/-</span
+            >
+          </p>
+          <p class="m-0 text-text-muted text-xs">
+            Pay Scale: ₹24050 – ₹64480. या व्यतिरिक्त महागाई भत्ता (DA), घरभाडे
+            भत्ता (HRA), वाहतूक भत्ता व इतर भत्ते बँकेच्या नियमानुसार लागू
+            राहतील.
+          </p>
+        </div>
+
+        <!-- Application Fee Details -->
+        <h2
+          id="application-fee"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          🔹 ऑनलाईन अर्ज शुल्क (Application Fee)
+        </h2>
+        <div
+          class="bg-bg-surface border border-border-card p-5 rounded-2xl text-sm space-y-2 mb-6"
+        >
+          <ul class="list-disc pl-6 space-y-1.5 text-text-main font-medium m-0">
+            <li>
+              <strong>SC / ST / PwBD / ESM / DESM उमेदवारांसाठी:</strong>
+              <span class="text-emerald-600 dark:text-emerald-400 font-bold"
+                >₹१७५/-</span
+              > (जीएसटी सह)
+            </li>
+            <li>
+              <strong>इतर सर्व उमेदवारांसाठी (UR / OBC / EWS):</strong>
+              <span class="text-primary font-bold">₹८५०/-</span> (जीएसटी सह)
+            </li>
+          </ul>
+        </div>
+
+        <!-- Selection Process -->
+        <h2
+          id="selection-process"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          🔹 निवड प्रक्रिया (Selection Process)
+        </h2>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 my-6 text-xs font-semibold"
+        >
+          <div
+            class="bg-bg-surface border border-border-card p-3.5 rounded-xl shadow-xs"
+          >
+            <span class="text-primary font-bold text-sm block mb-1"
+              >१. ऑनलाईन पूर्व परीक्षा</span
+            >
+            <span class="text-text-muted"
+              >Online Prelims Exam (ऑक्टोबर २०२६)</span
+            >
+          </div>
+          <div
+            class="bg-bg-surface border border-border-card p-3.5 rounded-xl shadow-xs"
+          >
+            <span class="text-primary font-bold text-sm block mb-1"
+              >२. ऑनलाईन मुख्य परीक्षा</span
+            >
+            <span class="text-text-muted"
+              >Online Mains Exam (२७ डिसेंबर २०२६)</span
+            >
+          </div>
+          <div
+            class="bg-bg-surface border border-border-card p-3.5 rounded-xl shadow-xs"
+          >
+            <span class="text-primary font-bold text-sm block mb-1"
+              >३. स्थानिक भाषा चाचणी</span
+            >
+            <span class="text-text-muted">Local Language Test (LLPT)</span>
+          </div>
+          <div
+            class="bg-bg-surface border border-border-card p-3.5 rounded-xl shadow-xs"
+          >
+            <span class="text-primary font-bold text-sm block mb-1"
+              >४. कागदपत्र पडताळणी</span
+            >
+            <span class="text-text-muted"
+              >Document Verification & Allotment</span
+            >
+          </div>
+        </div>
+
+        <!-- Important Dates & Links Table -->
+        <h2
+          id="important-dates"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          {
+            translateMarathi(
+              "महत्त्वाच्या तारखा आणि लिंक्स (Important Dates & Links)",
+            )
+          }
+        </h2>
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="bg-primary/10">
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >तपशील (Event)</th
+                >
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >तारीख / दुवा (Date / Link)</th
+                >
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >ऑनलाईन अर्ज व शुल्क भरण्याची मुदत (Online Apply)</td
+                >
+                <td
+                  class="p-3 border border-border-card text-rose-600 dark:text-rose-400 font-extrabold whitespace-nowrap"
+                >
+                  <span class="flex items-center gap-1.5">
+                    <HiOutlineCalendarDays
+                      className="text-rose-500 text-lg shrink-0"
+                    />
+                    <span class="line-through text-text-muted/70 font-medium"
+                      >२१ ऑगस्ट २०२६</span
+                    >
+                    <span
+                      class="text-rose-600 dark:text-rose-400 font-extrabold"
+                      >२८ ऑगस्ट २०२६ (वाढीव मुदत)</span
+                    >
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >पूर्व परीक्षा (Preliminary Exam)</td
+                >
+                <td
+                  class="p-3 border border-border-card text-text-main font-bold"
+                  >१० व ११ ऑक्टोबर २०२६ (10 & 11 Oct 2026)</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >मुख्य परीक्षा (Main Exam)</td
+                >
+                <td class="p-3 border border-border-card text-primary font-bold"
+                  >२७ डिसेंबर २०२६ (27 Dec 2026)</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >अंतिम निवड यादी / वाटप (Provisional Allotment)</td
+                >
+                <td
+                  class="p-3 border border-border-card text-text-main font-bold"
+                  >मार्च २०२७ (March 2027)</td
+                >
+              </tr>
+              <tr class="bg-emerald-500/5">
+                <td
+                  class="p-3 border border-border-card text-text-main font-bold"
+                  >ऑनलाईन अर्ज करण्याची लिंक (Apply Online Portal)</td
+                >
+                <td class="p-3 border border-border-card">
+                  <a
+                    href={applyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-colors border-none w-full sm:w-auto shadow-xs no-underline"
+                  >
+                    <HiOutlineCursorArrowRays className="text-base shrink-0" /> IBPS
+                    CSA Apply Online Link
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >अधिकृत संकेतस्थळ (Official Website)</td
+                >
+                <td class="p-3 border border-border-card">
+                  <a
+                    href="https://www.ibps.in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider rounded-xl transition-colors border border-primary/20 w-full sm:w-auto no-underline"
+                  >
+                    <HiOutlineDocumentText className="text-base shrink-0" /> ibps.in
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >उमेदवाराचे वय मोजा (Age Calculator)</td
+                >
+                <td class="p-3 border border-border-card">
+                  <a
+                    href="/mpsc-age-calculator-marathi"
+                    class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-purple-500/10 hover:bg-purple-500/20 text-purple-600 dark:text-purple-400 text-xs font-bold uppercase tracking-wider rounded-xl transition-colors border border-purple-500/30 w-full sm:w-auto no-underline"
+                  >
+                    <HiOutlineCalculator className="text-base shrink-0" /> Age Calculator
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- FAQ Section -->
+        <h2
+          id="faq"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          वारंवार विचारले जाणारे प्रश्न (FAQ)
+        </h2>
+        <div class="space-y-4 mt-3 mb-8">
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+            <h3 class="text-base font-bold text-text-main mb-2">
+              प्रश्न १: IBPS क्लर्क (CSA-XVI) ऑनलाईन अर्ज करण्याची वाढीव मुदत
+              काय आहे?
+            </h3>
+            <p class="text-text-muted text-xs m-0">
+              उत्तर: ऑनलाईन नोंदणी आणि शुल्क भरण्याची सुधारित वाढीव अंतिम तारीख
+              २८ ऑगस्ट २०२६ आहे.
+            </p>
+          </div>
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+            <h3 class="text-base font-bold text-text-main mb-2">
+              प्रश्न २: महाराष्ट्रात एकूण किती जागा उपलब्ध आहेत?
+            </h3>
+            <p class="text-text-muted text-xs m-0">
+              उत्तर: महाराष्ट्रात विविध १० सार्वजनिक क्षेत्रातील बँकांमध्ये एकूण
+              १,०५१ जागा उपलब्ध आहेत.
+            </p>
+          </div>
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+            <h3 class="text-base font-bold text-text-main mb-2">
+              प्रश्न ३: पूर्व परीक्षा व मुख्य परीक्षा कधी होणार आहे?
+            </h3>
+            <p class="text-text-muted text-xs m-0">
+              उत्तर: पूर्व परीक्षा १० व ११ ऑक्टोबर २०२६ रोजी तर मुख्य परीक्षा २७
+              डिसेंबर २०२६ रोजी आयोजित केली जाईल.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= LANGUAGE SEPARATOR ================= -->
+    <div
+      class="my-16 border-t-2 border-dashed border-border-card flex items-center justify-center relative"
+    >
+      <span
+        class="absolute bg-bg-base px-8 py-2 text-base sm:text-lg font-extrabold uppercase tracking-widest text-primary border border-border-card rounded-full shadow-md"
+      >
+        English Summary
+      </span>
+    </div>
+
+    <!-- ================= ENGLISH VERSION ================= -->
+    <div id="english-version" class="opacity-95">
+      <div class="space-y-6 text-text-main leading-relaxed">
+        <h2 id="main-keyword-en" class="text-2xl font-bold mt-2">
+          IBPS CRP CSA-XVI (Customer Service Associate) Recruitment 2026
+        </h2>
+
+        <div class="mb-6 space-y-4">
+          <p>
+            <strong>IBPS CSA-XVI Recruitment 2026:</strong> Institute of Banking Personnel
+            Selection (IBPS) has invited online applications for <strong
+              >11,403 Customer Service Associate (Clerk) posts</strong
+            > across participating public sector banks for FY 2027-28. There are <strong
+              >1,051 posts in Maharashtra</strong
+            >.
+          </p>
+          <p>
+            The extended last date to apply online is <strong
+              >28th August 2026</strong
+            >. Candidates possessing any Graduation degree along with Computer
+            literacy and local language proficiency (Marathi for Maharashtra)
+            are eligible.
+          </p>
+          <hr class="border-border-card my-6" />
+        </div>
+
+        <!-- Direct Link Table (English) -->
+        <h2
+          id="en-important-dates"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          Application Schedule & Important Direct Links
+        </h2>
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="bg-primary/10">
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >Event / Item</th
+                >
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >Details</th
+                >
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >Post Name</td
+                >
+                <td
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >Customer Service Associate (CSA / Clerk)</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >Total Vacancies (India)</td
+                >
+                <td class="p-3 border border-border-card font-bold text-primary"
+                  >11,403 Posts</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >Maharashtra Vacancies</td
+                >
+                <td
+                  class="p-3 border border-border-card font-bold text-rose-600 dark:text-rose-400"
+                  >1,051 Posts</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >Starting Basic Pay</td
+                >
+                <td
+                  class="p-3 border border-border-card font-bold text-emerald-600 dark:text-emerald-400"
+                  >₹24,050/- (Pay Scale: ₹24,050 – ₹64,480)</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >Extended Registration Last Date</td
+                >
+                <td
+                  class="p-3 border border-border-card font-bold text-rose-600 dark:text-rose-400"
+                  >28th August 2026</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >Preliminary Exam Schedule</td
+                >
+                <td
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >10th & 11th October 2026</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >Main Exam Schedule</td
+                >
+                <td
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >27th December 2026</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >Application Fee</td
+                >
+                <td
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >₹175 for SC/ST/PwBD/ESM | ₹850 for All Others</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >Direct Online Apply Portal Link</td
+                >
+                <td class="p-3 border border-border-card">
+                  <a
+                    href={applyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-all no-underline"
+                  >
+                    <HiOutlineCursorArrowRays className="text-base shrink-0" /> Apply
+                    Online Portal
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

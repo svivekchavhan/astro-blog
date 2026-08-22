@@ -9,6 +9,15 @@ export interface ImportantUpdate {
 
 export const importantUpdates: ImportantUpdate[] = [
   {
+    id: "ibps-csa-clerk-recruitment-2026",
+    title:
+      "IBPS क्लर्क (CSA) ११,४०३ जागा भरती: ऑनलाईन अर्जास २८ ऑगस्ट २०२६ पर्यंत मुदतवाढ",
+    link: "/ibps-csa-clerk-recruitment-2026",
+    date: "August 22, 2026",
+    expiry: "2026-08-30T00:00:00.000Z",
+    show: true,
+  },
+  {
     id: "tmc-thane-hall-ticket-2026",
     title:
       "ठाणे महानगरपालिका (TMC) भरती परीक्षा प्रवेशपत्र / हॉलतिकीट ऑनलाईन उपलब्ध",

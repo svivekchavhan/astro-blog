@@ -15,6 +15,23 @@ export interface ArticleMeta {
 export const articlesRegistry: ArticleMeta[] = [
   {
     titleEn:
+      "IBPS Clerk (CSA-XVI) Recruitment 2026: Apply Online for 11,403 Vacancies (1,051 in Maharashtra)",
+    titleMr:
+      "IBPS क्लर्क (CSA-XVI) ११,४०३ जागा भरती २०२६: ऑनलाईन अर्जास २८ ऑगस्ट पर्यंत मुदतवाढ!",
+    slug: "/ibps-csa-clerk-recruitment-2026",
+    category: "Bank Job",
+    date: "August 22, 2026",
+    image:
+      "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200",
+    postName: "Customer Service Associate (CSA / Clerk)",
+    descriptionMr:
+      "IBPS द्वारे सहभागी बँकांमध्ये ११,४०३ जागांसाठी भरती जाहिरात (महाराष्ट्रात १,०५१ पदे). पदवीधरांसाठी संधी, अर्जास २८ ऑगस्ट २०२६ पर्यंत मुदतवाढ.",
+    vacancies: "11,403 (Maha: 1,051)",
+    lastDate: "21 Aug 2026",
+    extendedDate: "28 Aug 2026",
+  },
+  {
+    titleEn:
       "TMC Thane Hall Ticket 2026 Out: Download Thane Municipal Corporation Admit Card Direct Link",
     titleMr:
       "ठाणे महानगरपालिका (TMC) भरती परीक्षा २०२६: हॉलतिकीट ऑनलाईन उपलब्ध!",
