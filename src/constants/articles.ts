@@ -15,7 +15,7 @@ export interface ArticleMeta {
 export const articlesRegistry: ArticleMeta[] = [
   {
     titleEn:
-      "IBPS Clerk (CSA-XVI) Recruitment 2026: Apply Online for 11,403 Vacancies (1,051 in Maharashtra)",
+      "IBPS Clerk  Recruitment 2026: Apply Online for 11,403 Vacancies (1,051 in Maharashtra)",
     titleMr:
       "IBPS क्लर्क (CSA-XVI) ११,४०३ जागा भरती २०२६: ऑनलाईन अर्जास २८ ऑगस्ट पर्यंत मुदतवाढ!",
     slug: "/ibps-csa-clerk-recruitment-2026",
