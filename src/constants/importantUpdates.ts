@@ -9,6 +9,15 @@ export interface ImportantUpdate {
 
 export const importantUpdates: ImportantUpdate[] = [
   {
+    id: "pdcc-bank-peon-hall-ticket-2026",
+    title:
+      "पुणे बँक (PDCC Bank) शिपाई २८९ जागा भरती हॉल तिकीट / प्रवेशपत्र उपलब्ध",
+    link: "/pdcc-bank-peon-hall-ticket-2026",
+    date: "August 23, 2026",
+    expiry: "2026-09-20T00:00:00.000Z",
+    show: true,
+  },
+  {
     id: "ibps-csa-clerk-recruitment-2026",
     title:
       "IBPS क्लर्क (CSA) ११,४०३ जागा भरती: ऑनलाईन अर्जास २८ ऑगस्ट २०२६ पर्यंत मुदतवाढ",

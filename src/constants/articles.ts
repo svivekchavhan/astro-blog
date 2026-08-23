@@ -15,6 +15,21 @@ export interface ArticleMeta {
 export const articlesRegistry: ArticleMeta[] = [
   {
     titleEn:
+      "PDCC Bank Peon Hall Ticket 2026 Out: Download Call Letter for 289 Posts",
+    titleMr:
+      "पुणे बँक (PDCC Bank) शिपाई २८९ जागा भरती हॉल तिकीट / प्रवेशपत्र प्रसिद्ध!",
+    slug: "/pdcc-bank-peon-hall-ticket-2026",
+    category: "Admit Card",
+    date: "August 23, 2026",
+    image:
+      "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200",
+    postName: "Peon (शिपाई)",
+    descriptionMr:
+      "पुणे जिल्हा मध्यवर्ती सहकारी बँक शिपाई भरती परीक्षेचे प्रवेशपत्र (Hall Ticket) ऑनलाईन उपलब्ध. डायरेक्ट डाउनलोड करा.",
+    vacancies: "289",
+  },
+  {
+    titleEn:
       "IBPS Clerk  Recruitment 2026: Apply Online for 11,403 Vacancies (1,051 in Maharashtra)",
     titleMr:
       "IBPS क्लर्क (CSA-XVI) ११,४०३ जागा भरती २०२६: ऑनलाईन अर्जास २८ ऑगस्ट पर्यंत मुदतवाढ!",
