@@ -15,6 +15,22 @@ export interface ArticleMeta {
 export const articlesRegistry: ArticleMeta[] = [
   {
     titleEn:
+      "Chhatrapati Sambhajinagar Municipal Corporation Result 2026: Selection Merit List Released for 5 Posts",
+    titleMr:
+      "छत्रपती संभाजीनगर महानगरपालिका भरती निकाल २०२६: ५ विविध पदांचे निकाल व निवड यादी जाहीर!",
+    slug: "/chhatrapati-sambhajinagar-mahanagarpalika-result-2026",
+    category: "Result",
+    date: "August 24, 2026",
+    image:
+      "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200",
+    postName: "स्वच्छता निरीक्षक, ट्रेसर, पशुधन पर्यवेक्षक व इतर ५ पदे",
+    descriptionMr:
+      "छत्रपती संभाजीनगर महानगरपालिका (CSMC) ५ विविध पदांचा ऑनलाईन परीक्षा निकाल व निवड यादी chhsambhajinagarmc.org वर प्रसिद्ध.",
+    vacancies: "5 Posts Result Out",
+    lastDate: "Merit List Out",
+  },
+  {
+    titleEn:
       "PDCC Bank Peon Hall Ticket 2026 Out: Download Call Letter for 289 Posts",
     titleMr:
       "पुणे बँक (PDCC Bank) शिपाई २८९ जागा भरती हॉल तिकीट / प्रवेशपत्र प्रसिद्ध!",
