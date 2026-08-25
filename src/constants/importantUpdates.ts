@@ -9,6 +9,15 @@ export interface ImportantUpdate {
 
 export const importantUpdates: ImportantUpdate[] = [
   {
+    id: "mpsc-rajyaseva-mains-result-2025",
+    title:
+      "MPSC राज्यसेवा मुख्य परीक्षा २०२५: लेखी परीक्षेचा निकाल व अधिकृत कट-ऑफ (Cutoff Marks) जाहीर",
+    link: "/mpsc-rajyaseva-mains-result-2025",
+    date: "August 25, 2026",
+    expiry: "2026-09-30T00:00:00.000Z",
+    show: true,
+  },
+  {
     id: "pdcc-bank-peon-hall-ticket-2026",
     title:
       "पुणे बँक (PDCC Bank) शिपाई २८९ जागा पदांचे हॉल तिकीट / प्रवेशपत्र उपलब्ध",

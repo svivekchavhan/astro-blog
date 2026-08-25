@@ -15,6 +15,22 @@ export interface ArticleMeta {
 export const articlesRegistry: ArticleMeta[] = [
   {
     titleEn:
+      "MPSC State Services Main Examination 2025: Written Exam Result & Cutoff Marks Declared",
+    titleMr:
+      "MPSC राज्यसेवा मुख्य परीक्षा २०२५: लिखित परीक्षेचा निकाल व अधिकृत कट-ऑफ (Cutoff Marks) जाहीर!",
+    slug: "/mpsc-rajyaseva-mains-result-2025",
+    category: "MPSC Result",
+    date: "August 25, 2026",
+    image:
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1200",
+    postName: "राज्यसेवा मुख्य परीक्षा २०२५ लिखित निकाल",
+    descriptionMr:
+      "महाराष्ट्र लोकसेवा आयोग (MPSC) राज्यसेवा मुख्य परीक्षा २०२५ चा लिखित निकाल व प्रवर्गनिहाय कट-ऑफ गुण mpsc.gov.in वर जाहीर.",
+    vacancies: "Main Exam Cutoff Out",
+    lastDate: "25 Aug 2026",
+  },
+  {
+    titleEn:
       "Chhatrapati Sambhajinagar Municipal Corporation Result 2026: Selection Merit List Released for 5 Posts",
     titleMr:
       "छत्रपती संभाजीनगर महानगरपालिका भरती निकाल २०२६: ५ विविध पदांचे निकाल व निवड यादी जाहीर!",
