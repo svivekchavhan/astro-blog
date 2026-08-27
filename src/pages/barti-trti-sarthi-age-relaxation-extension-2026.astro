@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { OFFICIAL_LINKS } from "../constants/links";
 import {
   HiOutlineCalendarDays,
   HiOutlineCursorArrowRays,
@@ -76,64 +77,100 @@ const category = "Free Coaching Update";
     </div>
 
     <!-- Quick Action Banner -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 not-prose">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10 not-prose">
       <a
-        href="https://trti.maharashtra.gov.in"
+        href={OFFICIAL_LINKS.trtiPortal}
         target="_blank"
         rel="noopener noreferrer"
-        class="group p-5 bg-gradient-to-br from-rose-600 to-amber-600 text-white rounded-2xl transition-all duration-300 shadow-md hover:shadow-rose-500/20 flex items-center justify-between no-underline"
+        class="group p-4 bg-gradient-to-br from-rose-600 to-amber-600 text-white rounded-2xl transition-all duration-300 shadow-md hover:shadow-rose-500/20 flex flex-col justify-between no-underline"
       >
         <div>
           <span
-            class="text-[0.65rem] uppercase font-extrabold tracking-wider bg-white/20 px-2.5 py-0.5 rounded text-white block w-fit mb-1"
-            >TRTI अधिकृत पोर्टल</span
+            class="text-[0.65rem] uppercase font-extrabold tracking-wider bg-white/20 px-2 py-0.5 rounded text-white block w-fit mb-1"
+            >TRTI अधिकृत</span
           >
           <h3
-            class="text-base sm:text-lg font-extrabold text-white m-0 flex items-center gap-1.5"
+            class="text-sm font-extrabold text-white m-0 flex items-center gap-1"
           >
-            TRTI Online Apply Portal <HiOutlineArrowTopRightOnSquare
-              className="text-xl shrink-0"
+            TRTI Apply <HiOutlineArrowTopRightOnSquare
+              className="text-sm shrink-0"
             />
           </h3>
-          <p class="text-xs text-white/90 m-0 mt-1">
-            सुधारित मुदत: ०४ सप्टेंबर २०२६ पर्यंत ऑनलाईन अर्ज करा
+          <p class="text-[0.7rem] text-white/90 m-0 mt-1">
+            trti.maharashtra.gov.in
           </p>
-        </div>
-        <div
-          class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform"
-        >
-          <HiOutlineCursorArrowRays className="text-2xl" />
         </div>
       </a>
 
       <a
-        href="https://barti.maharashtra.gov.in"
+        href={OFFICIAL_LINKS.bartiPortal}
         target="_blank"
         rel="noopener noreferrer"
-        class="p-5 bg-bg-surface border border-border-card hover:border-primary/50 rounded-2xl flex items-center justify-between transition-all duration-300 no-underline group shadow-xs"
+        class="group p-4 bg-bg-surface border border-border-card hover:border-primary/50 rounded-2xl flex flex-col justify-between transition-all duration-300 no-underline shadow-xs"
       >
-        <div class="flex items-center gap-4">
-          <div
-            class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"
+        <div>
+          <span
+            class="text-[0.65rem] text-text-muted font-bold uppercase tracking-wider block mb-1"
+            >BARTI अधिकृत</span
           >
-            <HiOutlineAcademicCap className="text-2xl" />
-          </div>
-          <div>
-            <span
-              class="text-xs text-text-muted font-bold uppercase tracking-wider block"
-              >बार्टी (BARTI) संस्था पोर्टल</span
-            >
-            <h4
-              class="text-sm font-bold text-text-main m-0 group-hover:text-primary transition-colors flex items-center gap-1"
-            >
-              BARTI Online Apply <HiOutlineArrowTopRightOnSquare
-                className="text-xs"
-              />
-            </h4>
-            <p class="text-xs text-text-muted m-0 mt-0.5">
-              barti.maharashtra.gov.in द्वारे अर्ज करा
-            </p>
-          </div>
+          <h4
+            class="text-sm font-bold text-text-main m-0 group-hover:text-primary transition-colors flex items-center gap-1"
+          >
+            BARTI Apply <HiOutlineArrowTopRightOnSquare
+              className="text-sm"
+            />
+          </h4>
+          <p class="text-[0.7rem] text-text-muted m-0 mt-1">
+            barti.maharashtra.gov.in
+          </p>
+        </div>
+      </a>
+
+      <a
+        href={OFFICIAL_LINKS.sarthiPortal}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group p-4 bg-bg-surface border border-border-card hover:border-primary/50 rounded-2xl flex flex-col justify-between transition-all duration-300 no-underline shadow-xs"
+      >
+        <div>
+          <span
+            class="text-[0.65rem] text-rose-500 font-bold uppercase tracking-wider block mb-1"
+            >सारथी (SARTHI)</span
+          >
+          <h4
+            class="text-sm font-bold text-text-main m-0 group-hover:text-primary transition-colors flex items-center gap-1"
+          >
+            SARTHI Apply <HiOutlineArrowTopRightOnSquare
+              className="text-sm"
+            />
+          </h4>
+          <p class="text-[0.7rem] text-text-muted m-0 mt-1">
+            sarthi.maharashtra.gov.in
+          </p>
+        </div>
+      </a>
+
+      <a
+        href={OFFICIAL_LINKS.amrutPortal}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group p-4 bg-bg-surface border border-border-card hover:border-primary/50 rounded-2xl flex flex-col justify-between transition-all duration-300 no-underline shadow-xs"
+      >
+        <div>
+          <span
+            class="text-[0.65rem] text-amber-500 font-bold uppercase tracking-wider block mb-1"
+            >अमृत (AMRUT)</span
+          >
+          <h4
+            class="text-sm font-bold text-text-main m-0 group-hover:text-primary transition-colors flex items-center gap-1"
+          >
+            AMRUT Apply <HiOutlineArrowTopRightOnSquare
+              className="text-sm"
+            />
+          </h4>
+          <p class="text-[0.7rem] text-text-muted m-0 mt-1">
+            mahaamrut.org.in
+          </p>
         </div>
       </a>
     </div>
@@ -335,22 +372,38 @@ const category = "Free Coaching Update";
       </div>
 
       <!-- Footer Action Links -->
-      <div class="pt-4 border-t border-border-card flex flex-wrap gap-4">
+      <div class="pt-4 border-t border-border-card flex flex-wrap gap-3">
         <a
-          href="https://trti.maharashtra.gov.in"
+          href={OFFICIAL_LINKS.trtiPortal}
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-rose-600 hover:bg-rose-700 text-white font-black uppercase tracking-wider text-xs rounded-xl shadow-xs transition-colors no-underline"
+          class="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 bg-rose-600 hover:bg-rose-700 text-white font-black uppercase tracking-wider text-xs rounded-xl shadow-xs transition-colors no-underline"
         >
-          <HiOutlineCursorArrowRays className="text-base shrink-0" /> TRTI अधिकृत अर्ज लिंक
+          <HiOutlineCursorArrowRays className="text-base shrink-0" /> TRTI अर्ज लिंक
         </a>
         <a
-          href="https://barti.maharashtra.gov.in"
+          href={OFFICIAL_LINKS.bartiPortal}
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary hover:bg-primary/90 text-white font-black uppercase tracking-wider text-xs rounded-xl shadow-xs transition-colors no-underline"
+          class="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 bg-primary hover:bg-primary/90 text-white font-black uppercase tracking-wider text-xs rounded-xl shadow-xs transition-colors no-underline"
         >
-          <HiOutlineCursorArrowRays className="text-base shrink-0" /> BARTI अधिकृत अर्ज लिंक
+          <HiOutlineCursorArrowRays className="text-base shrink-0" /> BARTI अर्ज लिंक
+        </a>
+        <a
+          href={OFFICIAL_LINKS.sarthiPortal}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 bg-amber-600 hover:bg-amber-700 text-white font-black uppercase tracking-wider text-xs rounded-xl shadow-xs transition-colors no-underline"
+        >
+          <HiOutlineCursorArrowRays className="text-base shrink-0" /> SARTHI अर्ज लिंक
+        </a>
+        <a
+          href={OFFICIAL_LINKS.amrutPortal}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 bg-violet-600 hover:bg-violet-700 text-white font-black uppercase tracking-wider text-xs rounded-xl shadow-xs transition-colors no-underline"
+        >
+          <HiOutlineCursorArrowRays className="text-base shrink-0" /> AMRUT अर्ज लिंक
         </a>
       </div>
     </div>
