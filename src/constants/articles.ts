@@ -15,6 +15,22 @@ export interface ArticleMeta {
 export const articlesRegistry: ArticleMeta[] = [
   {
     titleEn:
+      "CTET 2026 Online Application Window Reopened: Apply for 22nd Edition Till 01 September",
+    titleMr:
+      "CTET २०२६ ऑनलाईन अर्ज पुन्हा सुरू: २२ व्या केंद्रीय शिक्षक पात्रता परीक्षेसाठी ०१ सप्टेंबर पर्यंत मुदत!",
+    slug: "/ctet-2026-online-application-reopened",
+    category: "Exam Update",
+    date: "August 25, 2026",
+    image:
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1200",
+    postName: "CTET 2026 (२२ वी केंद्रीय शिक्षक पात्रता परीक्षा)",
+    descriptionMr:
+      "सर्वोच्च न्यायालयाच्या आदेशानुसार २२ व्या CTET परीक्षेचे ऑनलाईन अर्ज २५ ऑगस्ट ते ०१ सप्टेंबर २०२६ दरम्यान पुन्हा सुरू करण्यात आले आहेत.",
+    vacancies: "Teacher Eligibility Test",
+    lastDate: "01 Sept 2026",
+  },
+  {
+    titleEn:
       "TRTI, BARTI, SARTHI, AMRUT & ARTI Free Coaching CET 2026: Age Limit Relaxed & Application Extended to 04 September",
     titleMr:
       "बार्टी, TRTI, सारथी, अमृत व आर्टी मोफत परीक्षा पूर्व प्रशिक्षण २०२६: वयोमर्यादा शिथिल आणि अर्जास ०४ सप्टेंबर पर्यंत मुदतवाढ!",

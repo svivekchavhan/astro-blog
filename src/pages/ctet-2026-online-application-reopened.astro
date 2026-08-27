@@ -1,0 +1,501 @@
+---
+import Layout from "../layouts/Layout.astro";
+import {
+  HiOutlineCalendarDays,
+  HiOutlineCursorArrowRays,
+  HiOutlineArrowTopRightOnSquare,
+  HiOutlineDocumentText,
+  HiOutlineBuildingOffice,
+  HiOutlineShieldCheck,
+  HiOutlineMegaphone,
+  HiOutlineArrowLeft,
+  HiOutlineCheckCircle,
+  HiOutlineAcademicCap,
+  HiOutlineUserGroup,
+  HiOutlineClock,
+  HiOutlineSparkles,
+  HiOutlineExclamationTriangle,
+  HiOutlineQuestionMarkCircle,
+} from "react-icons/hi2";
+
+const title =
+  "CTET २०२६ ऑनलाईन अर्ज पुन्हा सुरू: २२ व्या केंद्रीय शिक्षक पात्रता परीक्षेसाठी ०१ सप्टेंबर पर्यंत मुदतवाढ!";
+const description =
+  "CTET 22nd Edition Application Window Reopened 2026: सीबीएसई (CBSE) द्वारे २२ व्या केंद्रीय शिक्षक पात्रता परीक्षेचे (CTET 2026) ऑनलाईन अर्ज २५ ऑगस्ट ते ०१ सप्टेंबर २०२६ दरम्यान पुन्हा मागविण्यात येत आहेत. सर्वोच्च न्यायालयाच्या आदेशानुसार संधी. अधिकृत परिपत्रक पाहा.";
+const canonicalURL =
+  "https://mahasandhi.in/ctet-2026-online-application-reopened";
+const date = "August 25, 2026";
+const category = "Exam Update";
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonicalURL={canonicalURL}
+  article={true}
+  customBreadcrumbs={[
+    { name: "Exam Hub", url: "/naukri-updates" },
+    { name: "CTET 2026 Application Reopened" },
+  ]}
+>
+  <article class="py-8">
+    <!-- Back Button -->
+    <div class="mb-6 not-prose">
+      <a
+        href="/"
+        class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold uppercase tracking-wider text-text-muted hover:text-primary bg-bg-surface border border-border-card rounded-xl transition-all duration-300 no-underline"
+      >
+        <HiOutlineArrowLeft className="text-sm" /> back to home / मुख्य पानावर जा
+      </a>
+    </div>
+
+    <!-- Header -->
+    <div class="mb-10">
+      <div class="flex items-center gap-3 mb-4 flex-wrap">
+        <span
+          class="bg-rose-500/10 text-rose-600 dark:text-rose-400 px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider border border-rose-500/20 flex items-center gap-1.5 shadow-xs"
+        >
+          <HiOutlineMegaphone className="text-sm animate-pulse" />
+          {category} (अधिकृत बातमी)
+        </span>
+        <span
+          class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider border border-primary/20 flex items-center gap-1.5"
+        >
+          <HiOutlineBuildingOffice className="text-sm" /> Central Board of Secondary Education (CBSE)
+        </span>
+        <span class="text-text-muted text-sm font-semibold">• {date}</span>
+      </div>
+      <h1
+        class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-text-main mb-5 leading-tight"
+      >
+        {title}
+      </h1>
+      <p
+        class="text-text-muted text-base md:text-lg leading-relaxed border-l-4 border-rose-500 pl-4 sm:pl-6 py-2 italic font-medium"
+      >
+        {description}
+      </p>
+    </div>
+
+    <!-- Quick Action Banners -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 not-prose">
+      <a
+        href="https://ctet.nic.in"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group p-5 bg-gradient-to-br from-rose-600 to-amber-600 text-white rounded-2xl transition-all duration-300 shadow-md hover:shadow-rose-500/20 flex items-center justify-between no-underline"
+      >
+        <div>
+          <span
+            class="text-[0.65rem] uppercase font-extrabold tracking-wider bg-white/20 px-2.5 py-0.5 rounded text-white block w-fit mb-1"
+            >CTET Official Portal</span
+          >
+          <h3
+            class="text-base sm:text-lg font-extrabold text-white m-0 flex items-center gap-1.5"
+          >
+            CTET 2026 Apply Online <HiOutlineArrowTopRightOnSquare
+              className="text-xl shrink-0"
+            />
+          </h3>
+          <p class="text-xs text-white/90 m-0 mt-1">
+            Re-opened Window: 25 Aug to 01 Sept 2026
+          </p>
+        </div>
+        <div
+          class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform"
+        >
+          <HiOutlineCursorArrowRays className="text-2xl" />
+        </div>
+      </a>
+
+      <a
+        href="/mpsc-age-calculator-marathi"
+        class="p-5 bg-bg-surface border border-border-card hover:border-primary/50 rounded-2xl flex items-center justify-between transition-all duration-300 no-underline group shadow-xs"
+      >
+        <div class="flex items-center gap-4">
+          <div
+            class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"
+          >
+            <HiOutlineAcademicCap className="text-2xl" />
+          </div>
+          <div>
+            <span
+              class="text-xs text-text-muted font-bold uppercase tracking-wider block"
+              >पात्रता व वयोमर्यादा टूल</span
+            >
+            <h4
+              class="text-sm font-bold text-text-main m-0 group-hover:text-primary transition-colors flex items-center gap-1"
+            >
+              Age Calculator / वयोमर्यादा तपासा <HiOutlineArrowTopRightOnSquare
+                className="text-xs"
+              />
+            </h4>
+            <p class="text-xs text-text-muted m-0 mt-0.5">
+              तुमचे अचूक वय गणना करा
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Quick Highlights Summary Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10 not-prose">
+      <div class="p-6 bg-amber-500/10 border border-amber-500/30 rounded-2xl space-y-2">
+        <div class="flex items-center gap-2 text-amber-600 dark:text-amber-400 font-black text-sm uppercase tracking-wider">
+          <HiOutlineSparkles className="text-lg animate-pulse" />
+          महत्त्वाचे: ऑनलाईन अर्ज पुन्हा सुरू
+        </div>
+        <h3 class="text-lg font-bold text-text-main m-0">२५ ऑगस्ट ते ०१ सप्टेंबर २०२६</h3>
+        <p class="text-xs sm:text-sm text-text-secondary m-0 leading-relaxed">
+          ज्या पात्र उमेदवारांना पूर्वी अर्ज भरता आला नव्हता, त्यांच्यासाठी सीबीएसई (CBSE) द्वारे CTET 2026 चा ऑनलाईन अर्ज पोर्टल पुन्हा सुरू करण्यात आला आहे.
+        </p>
+      </div>
+
+      <div class="p-6 bg-rose-500/10 border border-rose-500/30 rounded-2xl space-y-2">
+        <div class="flex items-center gap-2 text-rose-600 dark:text-rose-400 font-black text-sm uppercase tracking-wider">
+          <HiOutlineClock className="text-lg animate-bounce" />
+          सर्वोच्च न्यायालयाचा महत्त्वपूर्ण निर्णय
+        </div>
+        <h3 class="text-lg font-bold text-text-main m-0">शिक्षक उमेदवारांसाठी विशेष संधी</h3>
+        <p class="text-xs sm:text-sm text-text-secondary m-0 leading-relaxed">
+          मा. सर्वोच्च न्यायालयाच्या पुनर्विलोकन याचिका आदेशानुसार पात्र शिक्षकांना TET अर्हता प्राप्त करण्याची संधी देण्यासाठी ही मुदतवाढ देण्यात आली आहे.
+        </p>
+      </div>
+    </div>
+
+    <!-- Main Content Container -->
+    <div
+      class="bg-bg-surface border border-border-card rounded-3xl p-6 md:p-8 shadow-xs space-y-10 text-text-main leading-relaxed"
+    >
+      <!-- ================= MARATHI CONTENT SECTION ================= -->
+      <section class="space-y-8 border-b border-border-card pb-10">
+        <div class="border-b border-border-card/60 pb-4">
+          <span class="text-xs font-black uppercase tracking-wider text-rose-600 dark:text-rose-400 block mb-1">
+            मराठी माहिती व सविस्तर तपशील
+          </span>
+          <h2
+            class="text-xl md:text-2xl font-black text-text-main m-0 flex items-center gap-2"
+          >
+            <HiOutlineShieldCheck className="text-2xl shrink-0 text-rose-500" />
+            CTET २०२६ ऑनलाईन अर्ज पुन्हा सुरू - अधिकृत परिपत्रक स्पष्टीकरण
+          </h2>
+        </div>
+
+        <!-- Marathi Section 1: Public Notice Overview Table -->
+        <div class="space-y-4">
+          <h3 class="text-lg font-black text-primary border-l-4 border-primary pl-3 m-0">
+            १. ऑनलाईन अर्ज व परीक्षेचा संक्षिप्त तक्ता (Overview)
+          </h3>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs sm:text-sm border-collapse border border-border-card rounded-xl">
+              <tbody class="divide-y divide-border-card">
+                <tr class="bg-primary/5">
+                  <td class="p-3 font-bold text-primary w-1/3">आयोजक संस्था</td>
+                  <td class="p-3 font-semibold">केंद्रीय माध्यमिक शिक्षण मंडळ (CBSE), नवी दिल्ली</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold text-primary">परीक्षेचे नाव</td>
+                  <td class="p-3 font-semibold text-rose-600 dark:text-rose-400">
+                    २२ वी केंद्रीय शिक्षक पात्रता परीक्षा (CTET 22nd Edition 2026)
+                  </td>
+                </tr>
+                <tr class="bg-primary/5">
+                  <td class="p-3 font-bold text-primary">परिपत्रक क्र. व दिनांक</td>
+                  <td class="p-3 font-medium">F. No. CBSE/CTET/Sept./2026/e-73233 (दिनांक २५/०८/२०२६)</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold text-primary">अर्ज विंडो पुन्हा सुरु दिनांक</td>
+                  <td class="p-3 font-bold text-emerald-600 dark:text-emerald-400">२५ ऑगस्ट २०२६</td>
+                </tr>
+                <tr class="bg-primary/5">
+                  <td class="p-3 font-bold text-rose-600 dark:text-rose-400">अंतिम अर्ज दिनांक</td>
+                  <td class="p-3 font-black text-rose-600 dark:text-rose-400 text-sm">
+                    ०१ सप्टेंबर २०२६ (01/09/2026)
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold text-primary">सुधारित परीक्षा तारीख</td>
+                  <td class="p-3 font-semibold text-amber-600 dark:text-amber-400">
+                    अर्ज प्रक्रिया बंद झाल्यानंतर स्वतंत्रपणे जाहीर केली जाईल
+                  </td>
+                </tr>
+                <tr class="bg-primary/5">
+                  <td class="p-3 font-bold text-primary">अधिकृत संकेतस्थळ</td>
+                  <td class="p-3 font-bold text-primary">ctet.nic.in / cbse.gov.in</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Marathi Section 2: Detailed Explanation of Supreme Court Notice -->
+        <div class="space-y-4">
+          <h3 class="text-lg font-black text-primary border-l-4 border-primary pl-3 m-0">
+            २. अर्ज विंडो पुन्हा सुरू करण्याचे कारण
+          </h3>
+          <p class="text-sm md:text-base leading-relaxed m-0 text-text-secondary">
+            सीबीएसईने यापूर्वी दिलेल्या प्रसिद्धी सूचनेनुसार CTET २२ व्या परीक्षेसाठी ११ मे २०२६ ते १० जून २०२६ या कालावधीत ऑनलाईन अर्ज मागवले होते. परंतु, मा. सर्वोच्च न्यायालयाने <strong>Review Petition (Civil) Diary No. 53434/2025 in Civil Appeal No. 1385/2025</strong> मध्ये दिलेल्या महत्त्वपूर्ण निर्णयात पात्र शिक्षकांना TET अर्हता पूर्ण करण्यासाठी पुरेशी व वाजवी संधी देण्यावर भर दिला आहे.
+          </p>
+
+          <div class="bg-gradient-to-br from-violet-500/10 via-primary/5 to-rose-500/10 border border-violet-500/20 p-5 rounded-2xl space-y-3">
+            <div class="flex items-start gap-3">
+              <HiOutlineCheckCircle className="text-lg text-violet-600 dark:text-violet-400 shrink-0 mt-0.5" />
+              <div class="text-xs sm:text-sm font-medium leading-relaxed">
+                <strong>नवीन अर्जदारांसाठी संधी:</strong> ज्या पात्र उमेदवारांनी पहिल्या टप्प्यात अर्ज केला नव्हता, ते आता <strong>२५ ऑगस्ट २०२६ ते ०१ सप्टेंबर २०२६</strong> पर्यंत ऑनलाईन अर्ज करू शकतात.
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <HiOutlineExclamationTriangle className="text-lg text-rose-500 shrink-0 mt-0.5" />
+              <div class="text-xs sm:text-sm font-bold text-rose-600 dark:text-rose-400 leading-relaxed">
+                <strong>पूर्वी अर्ज केलेल्या उमेदवारांसाठी सूचना:</strong> ज्या उमेदवारांनी यापूर्वी यशस्वीरीत्या ऑनलाईन अर्ज सादर केला आहे, त्यांना <u>पुन्हा अर्ज करण्याची आवश्यकता नाही</u>.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Marathi Section 3: Eligibility & Exam Paper Pattern -->
+        <div class="space-y-4">
+          <h3 class="text-lg font-black text-primary border-l-4 border-primary pl-3 m-0">
+            ३. पात्रता व परीक्षेचे स्वरूप (Paper 1 & Paper 2 Eligibility)
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+            <div class="p-5 bg-bg-surface border border-border-card rounded-2xl space-y-2 shadow-xs">
+              <h4 class="font-bold text-primary text-sm sm:text-base m-0 flex items-center gap-2">
+                <HiOutlineAcademicCap className="text-lg text-primary shrink-0" /> १. पेपर १ (इयत्ता १ ली ते ५ वी)
+              </h4>
+              <ul class="list-disc pl-5 space-y-1.5 text-text-muted m-0 leading-relaxed">
+                <li>५०% गुणांसह १२ वी उत्तीर्ण आणि D.El.Ed / D.Ed / B.El.Ed अंतिम वर्षात शिकत असलेले किंवा उत्तीर्ण.</li>
+                <li>प्राथमिक शिक्षक होण्यासाठी CTET Paper I उत्तीर्ण असणे आवश्यक आहे.</li>
+              </ul>
+            </div>
+
+            <div class="p-5 bg-bg-surface border border-border-card rounded-2xl space-y-2 shadow-xs">
+              <h4 class="font-bold text-rose-600 dark:text-rose-400 text-sm sm:text-base m-0 flex items-center gap-2">
+                <HiOutlineUserGroup className="text-lg text-rose-500 shrink-0" /> २. पेपर २ (इयत्ता ६ वी ते ८ वी)
+              </h4>
+              <ul class="list-disc pl-5 space-y-1.5 text-text-muted m-0 leading-relaxed">
+                <li>कोणत्याही शाखेतील पदवी (Graduation) आणि B.Ed / D.El.Ed / B.Sc.Ed उत्तीर्ण किंवा अंतिम वर्षात शिकत असलेले.</li>
+                <li>उच्च प्राथमिक वर्गांसाठी CTET Paper II उत्तीर्ण असणे आवश्यक आहे.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Marathi Section 4: Marathi FAQ Section -->
+        <div class="space-y-4">
+          <h3 id="faq-mr" class="text-lg font-black text-rose-600 dark:text-rose-400 border-l-4 border-rose-500 pl-3 m-0 flex items-center gap-2">
+            <HiOutlineQuestionMarkCircle className="text-xl shrink-0" />
+            ४. वारंवार विचारले जाणारे प्रश्न (FAQ - Marathi)
+          </h3>
+
+          <div class="space-y-3 text-xs sm:text-sm">
+            <div class="p-4 bg-bg-surface border border-border-card rounded-2xl space-y-1">
+              <h4 class="font-bold text-text-main m-0">प्रश्न १: CTET २०२६ चा ऑनलाईन अर्ज करण्यासाठी शेवटची तारीख कोणती आहे?</h4>
+              <p class="text-text-muted m-0">उत्तर: सुधारित वेळापत्रकानुसार २५ ऑगस्ट २०२६ ते ०१ सप्टेंबर २०२६ पर्यंत ऑनलाईन अर्ज सादर करता येईल.</p>
+            </div>
+
+            <div class="p-4 bg-bg-surface border border-border-card rounded-2xl space-y-1">
+              <h4 class="font-bold text-text-main m-0">प्रश्न २: मी आधीच अर्ज केला असल्यास पुन्हा अर्ज करावा लागेल का?</h4>
+              <p class="text-text-muted m-0">उत्तर: नाही. ज्या उमेदवारांनी पहिल्या टप्प्यात यशस्वीरीत्या अर्ज भरला आहे, त्यांना पुन्हा अर्ज करण्याची आवश्यकता नाही.</p>
+            </div>
+
+            <div class="p-4 bg-bg-surface border border-border-card rounded-2xl space-y-1">
+              <h4 class="font-bold text-text-main m-0">प्रश्न ३: CTET २२ व्या आवृत्तीची परीक्षा तारीख कोणती आहे?</h4>
+              <p class="text-text-muted m-0">उत्तर: अर्जाची मुदत ०१ सप्टेंबर २०२६ रोजी संपल्यानंतर सीबीएसई द्वारे परीक्षेची सुधारित तारीख अधिकृत वेबसाईटवर जाहीर केली जाईल.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= ENGLISH CONTENT SECTION ================= -->
+      <section class="space-y-8">
+        <div class="border-b border-border-card/60 pb-4">
+          <span class="text-xs font-black uppercase tracking-wider text-primary block mb-1">
+            English Information & Detailed Notice
+          </span>
+          <h2
+            class="text-xl md:text-2xl font-black text-text-main m-0 flex items-center gap-2"
+          >
+            <HiOutlineShieldCheck className="text-2xl shrink-0 text-primary" />
+            CTET 2026 Online Application Re-opened: Official CBSE Public Notice
+          </h2>
+        </div>
+
+        <!-- English Section 1: Overview Table -->
+        <div class="space-y-4">
+          <h3 class="text-lg font-black text-primary border-l-4 border-primary pl-3 m-0">
+            1. Official Notice & Application Overview
+          </h3>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs sm:text-sm border-collapse border border-border-card rounded-xl">
+              <tbody class="divide-y divide-border-card">
+                <tr class="bg-primary/5">
+                  <td class="p-3 font-bold text-primary w-1/3">Conducting Body</td>
+                  <td class="p-3 font-semibold">Central Board of Secondary Education (CBSE), New Delhi</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold text-primary">Exam Name</td>
+                  <td class="p-3 font-semibold text-rose-600 dark:text-rose-400">
+                    22nd Edition of Central Teacher Eligibility Test (CTET 2026)
+                  </td>
+                </tr>
+                <tr class="bg-primary/5">
+                  <td class="p-3 font-bold text-primary">Public Notice No. & Date</td>
+                  <td class="p-3 font-medium">F. No. CBSE/CTET/Sept./2026/e-73233 (Dated: 25.08.2026)</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold text-primary">Re-opened Portal Start Date</td>
+                  <td class="p-3 font-bold text-emerald-600 dark:text-emerald-400">25th August 2026</td>
+                </tr>
+                <tr class="bg-primary/5">
+                  <td class="p-3 font-bold text-rose-600 dark:text-rose-400">Portal Closing Date</td>
+                  <td class="p-3 font-black text-rose-600 dark:text-rose-400 text-sm">
+                    01st September 2026
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold text-primary">Revised Exam Date</td>
+                  <td class="p-3 font-semibold text-amber-600 dark:text-amber-400">
+                    To be announced after closure of the online application portal
+                  </td>
+                </tr>
+                <tr class="bg-primary/5">
+                  <td class="p-3 font-bold text-primary">Official Websites</td>
+                  <td class="p-3 font-bold text-primary">ctet.nic.in | cbse.gov.in</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- English Section 2: Supreme Court Order Details -->
+        <div class="space-y-4">
+          <h3 class="text-lg font-black text-primary border-l-4 border-primary pl-3 m-0">
+            2. Supreme Court Judgment & Application Window Details
+          </h3>
+          <p class="text-sm md:text-base leading-relaxed m-0 text-text-secondary">
+            In compliance with the Hon'ble Supreme Court judgment in Review Petition (Civil) Diary No. 53434/2025 in Civil Appeal No. 1385/2025 emphasizing a reasonable opportunity for eligible teachers to acquire statutory TET qualification, CBSE has re-opened the portal for candidates who missed the earlier May-June window.
+          </p>
+
+          <div class="bg-gradient-to-br from-violet-500/10 via-primary/5 to-rose-500/10 border border-violet-500/20 p-5 rounded-2xl space-y-3">
+            <div class="flex items-start gap-3">
+              <HiOutlineCheckCircle className="text-lg text-violet-600 dark:text-violet-400 shrink-0 mt-0.5" />
+              <div class="text-xs sm:text-sm font-medium leading-relaxed">
+                <strong>New Applicants:</strong> Eligible candidates who could not apply during the earlier window (11.05.2026 to 10.06.2026) can submit their online forms between <strong>25.08.2026 and 01.09.2026</strong>.
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <HiOutlineExclamationTriangle className="text-lg text-rose-500 shrink-0 mt-0.5" />
+              <div class="text-xs sm:text-sm font-bold text-rose-600 dark:text-rose-400 leading-relaxed">
+                <strong>Already Submitted Candidates:</strong> Candidates who have already successfully submitted their application <u>NEED NOT apply again</u>.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- English Section 3: Official Links Table -->
+        <div class="space-y-4">
+          <h3 class="text-lg font-black text-primary border-l-4 border-primary pl-3 m-0">
+            3. Official Apply & Download Links
+          </h3>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs sm:text-sm border-collapse border border-border-card rounded-xl">
+              <thead>
+                <tr class="bg-primary text-white">
+                  <th class="p-3 font-bold">Resource / Description</th>
+                  <th class="p-3 font-bold">Official Link</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-border-card">
+                <tr>
+                  <td class="p-3 font-bold">CTET 2026 Online Application Portal</td>
+                  <td class="p-3">
+                    <a
+                      href="https://ctet.nic.in"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-rose-600 dark:text-rose-400 font-extrabold hover:underline inline-flex items-center gap-1"
+                    >
+                      Apply Online at ctet.nic.in <HiOutlineArrowTopRightOnSquare className="text-xs" />
+                    </a>
+                  </td>
+                </tr>
+                <tr class="bg-primary/5">
+                  <td class="p-3 font-bold">CBSE Official Website</td>
+                  <td class="p-3">
+                    <a
+                      href="https://www.cbse.gov.in"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-primary font-bold hover:underline inline-flex items-center gap-1"
+                    >
+                      cbse.gov.in <HiOutlineArrowTopRightOnSquare className="text-xs" />
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold">Check Age & Eligibility Tool</td>
+                  <td class="p-3">
+                    <a
+                      href="/mpsc-age-calculator-marathi"
+                      class="text-emerald-600 dark:text-emerald-400 font-bold hover:underline inline-flex items-center gap-1"
+                    >
+                      Use Age Calculator <HiOutlineArrowTopRightOnSquare className="text-xs" />
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- English Section 4: English Symmetrical FAQ Section -->
+        <div class="space-y-4">
+          <h3 id="faq" class="text-lg font-black text-rose-600 dark:text-rose-400 border-l-4 border-rose-500 pl-3 m-0 flex items-center gap-2">
+            <HiOutlineQuestionMarkCircle className="text-xl shrink-0" />
+            4. Frequently Asked Questions (FAQ - English)
+          </h3>
+
+          <div class="space-y-3 text-xs sm:text-sm">
+            <div class="p-4 bg-bg-surface border border-border-card rounded-2xl space-y-1">
+              <h4 class="font-bold text-text-main m-0">Q1: What is the last date to submit CTET 2026 online application in the reopened window?</h4>
+              <p class="text-text-muted m-0">Answer: The reopened online application window is open from 25th August 2026 to 01st September 2026.</p>
+            </div>
+
+            <div class="p-4 bg-bg-surface border border-border-card rounded-2xl space-y-1">
+              <h4 class="font-bold text-text-main m-0">Q2: Do candidates who applied earlier need to re-apply?</h4>
+              <p class="text-text-muted m-0">Answer: No. Candidates who have already successfully submitted their application during the earlier window do not need to apply again.</p>
+            </div>
+
+            <div class="p-4 bg-bg-surface border border-border-card rounded-2xl space-y-1">
+              <h4 class="font-bold text-text-main m-0">Q3: When will the 22nd Edition CTET revised exam date be announced?</h4>
+              <p class="text-text-muted m-0">Answer: The revised exam date for the 22nd Edition of CTET will be officially announced by CBSE after the portal closes on 01st September 2026.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer Action Links -->
+      <div class="pt-4 border-t border-border-card flex flex-wrap gap-3">
+        <a
+          href="https://ctet.nic.in"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-1.5 px-6 py-3 bg-rose-600 hover:bg-rose-700 text-white font-black uppercase tracking-wider text-xs rounded-xl shadow-xs transition-colors no-underline"
+        >
+          <HiOutlineCursorArrowRays className="text-base shrink-0" /> Apply Online at ctet.nic.in
+        </a>
+        <a
+          href="https://www.cbse.gov.in"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-1.5 px-6 py-3 bg-primary hover:bg-primary/90 text-white font-black uppercase tracking-wider text-xs rounded-xl shadow-xs transition-colors no-underline"
+        >
+          <HiOutlineCursorArrowRays className="text-base shrink-0" /> CBSE Official Website
+        </a>
+      </div>
+    </div>
+  </article>
+</Layout>

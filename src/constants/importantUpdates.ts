@@ -9,6 +9,15 @@ export interface ImportantUpdate {
 
 export const importantUpdates: ImportantUpdate[] = [
   {
+    id: "ctet-2026-online-application-reopened",
+    title:
+      "🔥 CTET २०२६: २२ व्या केंद्रीय शिक्षक पात्रता परीक्षेचे ऑनलाईन अर्ज पुन्हा सुरू (०१ सप्टेंबर पर्यंत मुदतवाढ)",
+    link: "/ctet-2026-online-application-reopened",
+    date: "August 25, 2026",
+    expiry: "2026-09-05T00:00:00.000Z",
+    show: true,
+  },
+  {
     id: "barti-trti-sarthi-free-coaching-extension-2026",
     title:
       "BARTI, TRTI, SARTHI, AMRUT & ARTI मोफत परीक्षा पूर्व प्रशिक्षण २०२६: वयोमर्यादा शिथिल व अर्जास मुदतवाढ",
