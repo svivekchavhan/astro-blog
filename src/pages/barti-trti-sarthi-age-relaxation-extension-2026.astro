@@ -1,0 +1,358 @@
+---
+import Layout from "../layouts/Layout.astro";
+import {
+  HiOutlineCalendarDays,
+  HiOutlineCursorArrowRays,
+  HiOutlineArrowTopRightOnSquare,
+  HiOutlineDocumentText,
+  HiOutlineBuildingOffice,
+  HiOutlineShieldCheck,
+  HiOutlineMegaphone,
+  HiOutlineArrowLeft,
+  HiOutlineCheckCircle,
+  HiOutlineAcademicCap,
+  HiOutlineUserGroup,
+  HiOutlineClock,
+  HiOutlineSparkles,
+} from "react-icons/hi2";
+
+const title =
+  "बार्टी, TRTI, सारथी, अमृत व आर्टी मोफत परीक्षा पूर्व प्रशिक्षण २०२६: वयोमर्यादा शिथिल आणि अर्जास ०४ सप्टेंबर पर्यंत मुदतवाढ!";
+const description =
+  "TRTI, BARTI, SARTHI, AMRUT & ARTI CET Exam 2026: २०२६-२७ स्वायत्त संस्थांमार्फत मोफत स्पर्धा परीक्षा पूर्व प्रशिक्षण चाळणी परीक्षेसाठी कमाल ३० वर्षे वयोमर्यादा अट शिथिल! ऑनलाईन अर्जास ०४ सप्टेंबर २०२६ पर्यंत मुदतवाढ. अधिकृत प्रसिध्दीपत्रक पाहा.";
+const canonicalURL =
+  "https://mahasandhi.in/barti-trti-sarthi-age-relaxation-extension-2026";
+const date = "August 25, 2026";
+const category = "Free Coaching Update";
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonicalURL={canonicalURL}
+  article={true}
+  customBreadcrumbs={[
+    { name: "Exam Hub", url: "/naukri-updates" },
+    { name: "BARTI & TRTI CET Extension 2026" },
+  ]}
+>
+  <article class="py-8">
+    <!-- Back Button -->
+    <div class="mb-6 not-prose">
+      <a
+        href="/"
+        class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold uppercase tracking-wider text-text-muted hover:text-primary bg-bg-surface border border-border-card rounded-xl transition-all duration-300 no-underline"
+      >
+        <HiOutlineArrowLeft className="text-sm" /> back to home / मुख्य पानावर जा
+      </a>
+    </div>
+
+    <!-- Header -->
+    <div class="mb-10">
+      <div class="flex items-center gap-3 mb-4 flex-wrap">
+        <span
+          class="bg-rose-500/10 text-rose-600 dark:text-rose-400 px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider border border-rose-500/20 flex items-center gap-1.5 shadow-xs"
+        >
+          <HiOutlineMegaphone className="text-sm animate-pulse" />
+          {category} (अधिकृत प्रसिध्दीपत्रक)
+        </span>
+        <span
+          class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider border border-primary/20 flex items-center gap-1.5"
+        >
+          <HiOutlineBuildingOffice className="text-sm" /> TRTI, BARTI, SARTHI, AMRUT & ARTI
+        </span>
+        <span class="text-text-muted text-sm font-semibold">• {date}</span>
+      </div>
+      <h1
+        class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-text-main mb-5 leading-tight"
+      >
+        {title}
+      </h1>
+      <p
+        class="text-text-muted text-base md:text-lg leading-relaxed border-l-4 border-rose-500 pl-4 sm:pl-6 py-2 italic font-medium"
+      >
+        {description}
+      </p>
+    </div>
+
+    <!-- Quick Action Banner -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 not-prose">
+      <a
+        href="https://trti.maharashtra.gov.in"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group p-5 bg-gradient-to-br from-rose-600 to-amber-600 text-white rounded-2xl transition-all duration-300 shadow-md hover:shadow-rose-500/20 flex items-center justify-between no-underline"
+      >
+        <div>
+          <span
+            class="text-[0.65rem] uppercase font-extrabold tracking-wider bg-white/20 px-2.5 py-0.5 rounded text-white block w-fit mb-1"
+            >TRTI अधिकृत पोर्टल</span
+          >
+          <h3
+            class="text-base sm:text-lg font-extrabold text-white m-0 flex items-center gap-1.5"
+          >
+            TRTI Online Apply Portal <HiOutlineArrowTopRightOnSquare
+              className="text-xl shrink-0"
+            />
+          </h3>
+          <p class="text-xs text-white/90 m-0 mt-1">
+            सुधारित मुदत: ०४ सप्टेंबर २०२६ पर्यंत ऑनलाईन अर्ज करा
+          </p>
+        </div>
+        <div
+          class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform"
+        >
+          <HiOutlineCursorArrowRays className="text-2xl" />
+        </div>
+      </a>
+
+      <a
+        href="https://barti.maharashtra.gov.in"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="p-5 bg-bg-surface border border-border-card hover:border-primary/50 rounded-2xl flex items-center justify-between transition-all duration-300 no-underline group shadow-xs"
+      >
+        <div class="flex items-center gap-4">
+          <div
+            class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"
+          >
+            <HiOutlineAcademicCap className="text-2xl" />
+          </div>
+          <div>
+            <span
+              class="text-xs text-text-muted font-bold uppercase tracking-wider block"
+              >बार्टी (BARTI) संस्था पोर्टल</span
+            >
+            <h4
+              class="text-sm font-bold text-text-main m-0 group-hover:text-primary transition-colors flex items-center gap-1"
+            >
+              BARTI Online Apply <HiOutlineArrowTopRightOnSquare
+                className="text-xs"
+              />
+            </h4>
+            <p class="text-xs text-text-muted m-0 mt-0.5">
+              barti.maharashtra.gov.in द्वारे अर्ज करा
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Key Updates Highlights Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10 not-prose">
+      <div class="p-6 bg-amber-500/10 border border-amber-500/30 rounded-2xl space-y-2">
+        <div class="flex items-center gap-2 text-amber-600 dark:text-amber-400 font-black text-sm uppercase tracking-wider">
+          <HiOutlineSparkles className="text-lg animate-pulse" />
+          अपडेट १: कमाल वयोमर्यादा शिथिल
+        </div>
+        <h3 class="text-lg font-bold text-text-main m-0">कमाल ३० वर्षे वयोमर्यादेची अट रद्द!</h3>
+        <p class="text-xs sm:text-sm text-text-secondary m-0 leading-relaxed">
+          सामायिक चाळणी परीक्षा २०२६ साठी पूर्वी निश्चित करण्यात आलेली कमाल ३० वर्षे वयोमर्यादा आता शिथिल करण्यात आली आहे. उमेदवार संबंधित संस्थांच्या नियमानुसार पात्र राहतील.
+        </p>
+      </div>
+
+      <div class="p-6 bg-rose-500/10 border border-rose-500/30 rounded-2xl space-y-2">
+        <div class="flex items-center gap-2 text-rose-600 dark:text-rose-400 font-black text-sm uppercase tracking-wider">
+          <HiOutlineClock className="text-lg animate-bounce" />
+          अपडेट २: मुदतवाढ मुदत
+        </div>
+        <h3 class="text-lg font-bold text-text-main m-0">०४ सप्टेंबर २०२६ (रात्री ११:५९ वा.)</h3>
+        <p class="text-xs sm:text-sm text-text-secondary m-0 leading-relaxed">
+          टीआरटीआय, बार्टी, सारथी, अमृत आणि आर्टी या संस्थांच्या ऑनलाईन अर्ज प्रक्रियेस ०४ सप्टेंबर २०२६ पर्यंत अंतिम मुदतवाढ देण्यात आली आहे.
+        </p>
+      </div>
+    </div>
+
+    <!-- Official Notice Main Content -->
+    <div
+      class="bg-bg-surface border border-border-card rounded-3xl p-6 md:p-8 shadow-xs space-y-8 text-text-main leading-relaxed"
+    >
+      <div class="border-b border-border-card/60 pb-4">
+        <h2
+          class="text-xl md:text-2xl font-black text-rose-600 dark:text-rose-400 m-0 flex items-center gap-2"
+        >
+          <HiOutlineShieldCheck className="text-2xl shrink-0" />
+          TRTI & BARTI चाळणी परीक्षा प्रसिध्दीपत्रक - महत्त्वाचे तपशील
+        </h2>
+      </div>
+
+      <!-- Overview Table -->
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-xs sm:text-sm border-collapse border border-border-card rounded-xl">
+          <tbody class="divide-y divide-border-card">
+            <tr class="bg-primary/5">
+              <td class="p-3 font-bold text-primary w-1/3">आयोजक संस्था</td>
+              <td class="p-3 font-semibold">आदिवासी संशोधन व प्रशिक्षण संस्था (TRTI), पुणे</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold text-primary">सहभागी स्वायत्त संस्था</td>
+              <td class="p-3 font-semibold text-rose-600 dark:text-rose-400">TRTI, BARTI, SARTHI, AMRUT व ARTI</td>
+            </tr>
+            <tr class="bg-primary/5">
+              <td class="p-3 font-bold text-primary">परीक्षेचे नाव</td>
+              <td class="p-3 font-semibold">सामायिक चाळणी परीक्षा - २०२६ (Common CET 2026)</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold text-primary">प्रशिक्षणाचे वर्ष</td>
+              <td class="p-3">सन २०२६ - २७ (स्पर्धा परीक्षा पूर्व प्रशिक्षण योजना)</td>
+            </tr>
+            <tr class="bg-primary/5">
+              <td class="p-3 font-bold text-primary">ऑनलाईन अर्ज सुरु तारीख</td>
+              <td class="p-3">०९ ऑगस्ट २०२६ पासून</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold text-rose-600 dark:text-rose-400">सुधारित अंतिम मुदत</td>
+              <td class="p-3 font-black text-rose-600 dark:text-rose-400 text-sm">
+                ०४ सप्टेंबर २०२६ (रात्री ११:५९ वाजेपर्यंत)
+              </td>
+            </tr>
+            <tr class="bg-primary/5">
+              <td class="p-3 font-bold text-primary">वयोमर्यादा सुधारणा</td>
+              <td class="p-3 font-bold text-emerald-600 dark:text-emerald-400">
+                कमाल ३० वर्षे वयोमर्यादा अट शिथिल (Age Limit Relaxed)
+              </td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold text-primary">प्रसिध्दीपत्रक क्रमांक व दिनांक</td>
+              <td class="p-3">जा.क्र./आसंप्रसं/२०२६/स्प.प./साचापर६/का.०४/३८९३ (दि. २५/०८/२०२६)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Section 1: Overview & Notice Details -->
+      <div class="space-y-4">
+        <h3
+          class="text-lg font-black text-primary border-l-4 border-primary pl-3 m-0"
+        >
+          १. प्रसिध्दीपत्रकाचा सविस्तर तपशील
+        </h3>
+        <p class="text-sm md:text-base leading-relaxed m-0 text-text-secondary">
+          महाराष्ट्र शासनाच्या सर्वंकष धोरणाच्या अनुषंगाने सन २०२६ - २७ करीता <strong>टीआरटीआय (TRTI)</strong>, <strong>बार्टी (BARTI)</strong>, <strong>सारथी (SARTHI)</strong>, <strong>अमृत (AMRUT)</strong> आणि <strong>आर्टी (ARTI)</strong> या स्वायत्त संस्थांमार्फत राबविण्यात येणाऱ्या विविध स्पर्धा परीक्षा पूर्व प्रशिक्षण योजनांच्या लाभार्थी निवडीसाठी घेण्यात येणाऱ्या <strong>सामायिक चाळणी परीक्षा - २०२६</strong> करीता ऑनलाईन अर्ज मागविण्याची प्रक्रिया दि. ०९ ऑगस्ट, २०२६ पासून सुरू करण्यात आली आहे.
+        </p>
+
+        <div
+          class="bg-gradient-to-br from-violet-500/10 via-primary/5 to-rose-500/10 border border-violet-500/20 p-5 rounded-2xl space-y-3"
+        >
+          <div class="flex items-start gap-3">
+            <HiOutlineCheckCircle
+              className="text-lg text-violet-600 dark:text-violet-400 shrink-0 mt-0.5"
+            />
+            <div class="text-xs sm:text-sm font-medium leading-relaxed">
+              <strong>१. वयोमर्यादेतील सवलत:</strong> टीआरटीआय, बार्टी, सारथी, अमृत आणि आर्टी या संस्थांच्या लक्षित गटातील पात्र व इच्छुक उमेदवारांना सूचित करण्यात येते की, सामायिक चाळणी परीक्षा - २०२६ साठी निर्धारित करण्यात आलेली <strong>कमाल ३० वर्षे वयोमर्यादा शिथिल करण्यात आलेली आहे</strong>.
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <HiOutlineCheckCircle
+              className="text-lg text-violet-600 dark:text-violet-400 shrink-0 mt-0.5"
+            />
+            <div class="text-xs sm:text-sm font-medium leading-relaxed">
+              <strong>२. उमेदवारांसाठी सूचना:</strong> उमेदवारांनी ऑनलाईन अर्ज सादर करण्यापूर्वी स्पर्धा परीक्षा पूर्व प्रशिक्षण योजना व संस्थेनुसार लागू असलेली सुधारित किमान/कमाल वयोमर्यादा निकष संबंधित संस्थेच्या अधिकृत संकेतस्थळावर प्रसिद्ध करण्यात आलेल्या सूचनेनुसार काळजीपूर्वक तपासून अर्ज करावा.
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <HiOutlineCheckCircle
+              className="text-lg text-violet-600 dark:text-violet-400 shrink-0 mt-0.5"
+            />
+            <div class="text-xs sm:text-sm font-medium leading-relaxed">
+              <strong>३. अंतिम मुदतवाढ:</strong> सदर ऑनलाईन अर्ज प्रक्रियेस <strong>दि. ०४ सप्टेंबर, २०२६, रात्री ११:५९ वाजेपर्यंत मुदतवाढ</strong> देण्यात येत आहे. त्यानंतर कोणत्याही प्रकारची मुदतवाढ देण्यात येणार नाही.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2: Institutes Covered -->
+      <div class="space-y-4">
+        <h3
+          class="text-lg font-black text-primary border-l-4 border-primary pl-3 m-0"
+        >
+          २. समाविष्ट स्वायत्त संस्था (Autonomous Institutes Covered)
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div
+            class="p-5 bg-bg-surface border border-border-card rounded-2xl space-y-2 shadow-xs"
+          >
+            <h4
+              class="font-bold text-primary text-sm sm:text-base m-0 flex items-center gap-2"
+            >
+              <HiOutlineAcademicCap className="text-lg text-primary shrink-0" /> १. TRTI व BARTI
+            </h4>
+            <ul
+              class="list-disc pl-5 space-y-1.5 text-text-muted m-0 leading-relaxed"
+            >
+              <li>
+                <strong>TRTI:</strong> आदिवासी संशोधन व प्रशिक्षण संस्था, पुणे (अनुसूचित जमाती ST उमेदवार).
+              </li>
+              <li>
+                <strong>BARTI:</strong> डॉ. बाबासाहेब आंबेडकर संशोधन व प्रशिक्षण संस्था, पुणे (अनुसूचित जाती SC उमेदवार).
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="p-5 bg-bg-surface border border-border-card rounded-2xl space-y-2 shadow-xs"
+          >
+            <h4
+              class="font-bold text-rose-600 dark:text-rose-400 text-sm sm:text-base m-0 flex items-center gap-2"
+            >
+              <HiOutlineUserGroup className="text-lg text-rose-500 shrink-0" /> २. SARTHI, AMRUT & ARTI
+            </h4>
+            <ul
+              class="list-disc pl-5 space-y-1.5 text-text-muted m-0 leading-relaxed"
+            >
+              <li>
+                <strong>SARTHI:</strong> छत्रपती शाहू महाराज संशोधन प्रशिक्षण व मानव विकास संस्था (मराठा, कुणबी उमेदवार).
+              </li>
+              <li>
+                <strong>AMRUT:</strong> महाराष्ट्र संशोधन, उन्नती व प्रशिक्षण प्रबोधिनी (खुला/आर्थिकदृष्ट्या दुर्बल EWS उमेदवार).
+              </li>
+              <li>
+                <strong>ARTI:</strong> संशोधन व प्रशिक्षण संस्था (संबंधित प्रवर्गातील उमेदवार).
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 3: Notice Reason & Authority -->
+      <div class="space-y-4">
+        <h3
+          class="text-lg font-black text-rose-600 dark:text-rose-400 border-l-4 border-rose-500 pl-3 m-0"
+        >
+          ३. अधिकृत परिपत्रक स्वाक्षरीकर्ता
+        </h3>
+
+        <div
+          class="p-5 bg-rose-500/10 border border-rose-500/30 rounded-2xl space-y-2 text-xs sm:text-sm"
+        >
+          <p class="text-text-main m-0 leading-relaxed font-medium">
+            सदर प्रसिध्दीपत्रक <strong>निलेश सागर (भा.प्र.से.)</strong>, अध्यक्ष, स्पर्धा परीक्षा प्रशिक्षण अंमलबजावणी व समन्वय समिती तथा आयुक्त, आदिवासी संशोधन व प्रशिक्षण संस्था (TRTI), पुणे यांच्या स्वाक्षरीने प्रसिद्ध करण्यात आले आहे.
+          </p>
+        </div>
+      </div>
+
+      <!-- Footer Action Links -->
+      <div class="pt-4 border-t border-border-card flex flex-wrap gap-4">
+        <a
+          href="https://trti.maharashtra.gov.in"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-rose-600 hover:bg-rose-700 text-white font-black uppercase tracking-wider text-xs rounded-xl shadow-xs transition-colors no-underline"
+        >
+          <HiOutlineCursorArrowRays className="text-base shrink-0" /> TRTI अधिकृत अर्ज लिंक
+        </a>
+        <a
+          href="https://barti.maharashtra.gov.in"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary hover:bg-primary/90 text-white font-black uppercase tracking-wider text-xs rounded-xl shadow-xs transition-colors no-underline"
+        >
+          <HiOutlineCursorArrowRays className="text-base shrink-0" /> BARTI अधिकृत अर्ज लिंक
+        </a>
+      </div>
+    </div>
+  </article>
+</Layout>

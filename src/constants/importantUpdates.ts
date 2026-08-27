@@ -9,6 +9,15 @@ export interface ImportantUpdate {
 
 export const importantUpdates: ImportantUpdate[] = [
   {
+    id: "barti-trti-sarthi-free-coaching-extension-2026",
+    title:
+      "BARTI, TRTI, SARTHI, AMRUT & ARTI मोफत परीक्षा पूर्व प्रशिक्षण २०२६: वयोमर्यादा शिथिल व अर्जास मुदतवाढ",
+    link: "/barti-trti-sarthi-age-relaxation-extension-2026",
+    date: "August 25, 2026",
+    expiry: "2026-09-10T00:00:00.000Z",
+    show: true,
+  },
+  {
     id: "mpsc-rajyaseva-mains-result-2025",
     title:
       "MPSC राज्यसेवा मुख्य परीक्षा २०२५: लेखी परीक्षेचा निकाल व अधिकृत कट-ऑफ (Cutoff Marks) जाहीर",

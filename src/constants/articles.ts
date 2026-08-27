@@ -15,6 +15,22 @@ export interface ArticleMeta {
 export const articlesRegistry: ArticleMeta[] = [
   {
     titleEn:
+      "TRTI, BARTI, SARTHI, AMRUT & ARTI Free Coaching CET 2026: Age Limit Relaxed & Application Extended to 04 September",
+    titleMr:
+      "बार्टी, TRTI, सारथी, अमृत व आर्टी मोफत परीक्षा पूर्व प्रशिक्षण २०२६: वयोमर्यादा शिथिल आणि अर्जास ०४ सप्टेंबर पर्यंत मुदतवाढ!",
+    slug: "/barti-trti-sarthi-age-relaxation-extension-2026",
+    category: "Free Coaching",
+    date: "August 25, 2026",
+    image:
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1200",
+    postName: "TRTI, BARTI, SARTHI CET 2026 वयोमर्यादा शिथिलता व मुदतवाढ",
+    descriptionMr:
+      "स्वायत्त संस्थांमार्फत राबविण्यात येणाऱ्या स्पर्धा परीक्षा पूर्व प्रशिक्षण चाळणी परीक्षा २०२६ करीता कमाल ३० वर्षे वयोमर्यादा अट शिथिल व ऑनलाईन अर्जास ०४ सप्टेंबर २०२६ पर्यंत मुदतवाढ.",
+    vacancies: "Free CET Coaching",
+    lastDate: "04 Sept 2026",
+  },
+  {
+    titleEn:
       "MPSC State Services Main Examination 2025: Written Exam Result & Cutoff Marks Declared",
     titleMr:
       "MPSC राज्यसेवा मुख्य परीक्षा २०२५: लिखित परीक्षेचा निकाल व अधिकृत कट-ऑफ (Cutoff Marks) जाहीर!",
