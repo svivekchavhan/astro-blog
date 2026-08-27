@@ -100,3 +100,28 @@ Whenever a new recruitment article is created, it must be registered in the foll
   - **Bank Job Articles** (`category: "Bank Job"`) -> **MUST appear on `/bank-recruitment`** (`src/pages/bank-recruitment/index.astro`).
 - **Synchronization Standard**: When creating or updating any article, verify that both the central `articlesRegistry` (`src/constants/articles.ts`) and the dedicated category listing page array (e.g., `admitCards` on `/admit-card`, `results` on `/result`) are updated with the new item.
 
+---
+
+## 📌 Rule 11: Content Separation & Feed Allocation Standard
+
+- **Homepage (`src/pages/index.astro`)**:
+  - The `latestJobs` array **MUST contain ONLY active job recruitment notifications** (Bank Jobs, Central Govt, State Govt, Latest Jobs).
+  - Non-job items like Results, Admit Cards, and Exam Alerts **MUST NOT** be included in the homepage main job list.
+- **Important Updates Widgets (`importantUpdates.ts` & `MobileUrgentBoard.astro`)**:
+  - Serves as the breaking/urgent notification list. Shows **ONLY specific breaking & urgent notices** (Results, Admit Cards, Application Deadline Extensions, Official Notices).
+- **Naukri Updates (`naukriUpdates.ts` & `NaukriUpdatesWidget.astro` / `/naukri-updates`)**:
+  - Serves as the comprehensive multi-category feed containing all updates (Recruitments, Extensions, Admit Cards, Results, Exam Alerts, Free Coaching).
+  - **MUST** be sorted in strict reverse chronological date-wise order (newest/today's updates rendered at the top).
+
+---
+
+## 📌 Rule 12: Centralized Official Link Management Rule (`src/constants/links.ts`)
+
+- **Central Link Repository**: All external and official website URLs (government portals, board websites, autonomous institute sites like MPSC, CTET, SARTHI, BARTI, AMRUT, TRTI, etc.) **MUST** be stored in `src/constants/links.ts` (`OFFICIAL_LINKS`).
+- **Lookup First**: Before hardcoding any new URL in an article, button, or component, **ALWAYS check if the link already exists in `src/constants/links.ts`**.
+- **Use or Register Standard**:
+  - **If Present**: Import `OFFICIAL_LINKS` from `@/constants/links` (or relative path) and reference `OFFICIAL_LINKS.linkName`.
+  - **If New**: Add the new key-value link pair into `OFFICIAL_LINKS` in `src/constants/links.ts` first, then import and reference it in the target page/component.
+
+
+

@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { OFFICIAL_LINKS } from "../constants/links";
 import {
   HiOutlineCalendarDays,
   HiOutlineCursorArrowRays,
@@ -80,7 +81,7 @@ const category = "Exam Update";
     <!-- Quick Action Banners -->
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 not-prose">
       <a
-        href="https://ctet.nic.in"
+        href={OFFICIAL_LINKS.ctetPortal}
         target="_blank"
         rel="noopener noreferrer"
         class="group p-5 bg-gradient-to-br from-rose-600 to-amber-600 text-white rounded-2xl transition-all duration-300 shadow-md hover:shadow-rose-500/20 flex items-center justify-between no-underline"
@@ -413,7 +414,7 @@ const category = "Exam Update";
                   <td class="p-3 font-bold">CTET 2026 Online Application Portal</td>
                   <td class="p-3">
                     <a
-                      href="https://ctet.nic.in"
+                      href={OFFICIAL_LINKS.ctetPortal}
                       target="_blank"
                       rel="noopener noreferrer"
                       class="text-rose-600 dark:text-rose-400 font-extrabold hover:underline inline-flex items-center gap-1"
@@ -426,7 +427,7 @@ const category = "Exam Update";
                   <td class="p-3 font-bold">CBSE Official Website</td>
                   <td class="p-3">
                     <a
-                      href="https://www.cbse.gov.in"
+                      href={OFFICIAL_LINKS.cbsePortal}
                       target="_blank"
                       rel="noopener noreferrer"
                       class="text-primary font-bold hover:underline inline-flex items-center gap-1"
@@ -480,7 +481,7 @@ const category = "Exam Update";
       <!-- Footer Action Links -->
       <div class="pt-4 border-t border-border-card flex flex-wrap gap-3">
         <a
-          href="https://ctet.nic.in"
+          href={OFFICIAL_LINKS.ctetPortal}
           target="_blank"
           rel="noopener noreferrer"
           class="inline-flex items-center justify-center gap-1.5 px-6 py-3 bg-rose-600 hover:bg-rose-700 text-white font-black uppercase tracking-wider text-xs rounded-xl shadow-xs transition-colors no-underline"
@@ -488,7 +489,7 @@ const category = "Exam Update";
           <HiOutlineCursorArrowRays className="text-base shrink-0" /> Apply Online at ctet.nic.in
         </a>
         <a
-          href="https://www.cbse.gov.in"
+          href={OFFICIAL_LINKS.cbsePortal}
           target="_blank"
           rel="noopener noreferrer"
           class="inline-flex items-center justify-center gap-1.5 px-6 py-3 bg-primary hover:bg-primary/90 text-white font-black uppercase tracking-wider text-xs rounded-xl shadow-xs transition-colors no-underline"

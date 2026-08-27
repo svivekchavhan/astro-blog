@@ -12,12 +12,15 @@ export const OFFICIAL_LINKS = {
   bartiPortal: "https://barti.maharashtra.gov.in",
   sarthiPortal: "https://sarthi.maharashtra.gov.in/announcement",
   amrutPortal: "https://mahaamrut.org.in/",
-  
+
+  // CTET / CBSE Official Links
+  ctetPortal: "https://ctet.nic.in",
+  cbsePortal: "https://www.cbse.gov.in",
+
   // Social Media Groups & Channels
   whatsappChannel: "https://whatsapp.com/channel/0029VbDPyOQEKyZFrclY0l1w",
   whatsappGroup: "https://whatsapp.com/channel/0029VbDPyOQEKyZFrclY0l1w",
-  telegramChannel: "https://t.me/mahasandhi",
-  
+
   // Main Site URL
   mainSite: "https://mahasandhi.in",
 };

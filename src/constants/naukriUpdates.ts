@@ -11,6 +11,78 @@ export interface NaukriUpdate {
 
 export const naukriUpdates: NaukriUpdate[] = [
   {
+    titleEn: "CTET 2026 Online Application Window Re-opened: Apply Till 01 September",
+    titleHi: "CTET २०२६ ऑनलाईन अर्ज पुन्हा सुरू: २२ व्या परीक्षा अर्जास ०१ सप्टेंबर मुदत",
+    date: "August 25, 2026",
+    badge: "New",
+    badgeType: "new",
+    link: "/ctet-2026-online-application-reopened",
+    description: "CBSE CTET 2026 online application window has been reopened from 25 August to 01 September 2026 per Supreme Court judgment."
+  },
+  {
+    titleEn: "TRTI, BARTI, SARTHI, AMRUT & ARTI Free Coaching CET 2026: Age Limit Relaxed & Extension",
+    titleHi: "बार्टी, TRTI व सारथी मोफत परीक्षा पूर्व प्रशिक्षण: वयोमर्यादा शिथिल व मुदतवाढ",
+    date: "August 25, 2026",
+    badge: "Important",
+    badgeType: "important",
+    link: "/barti-trti-sarthi-age-relaxation-extension-2026",
+    description: "Upper age limit of 30 years relaxed for TRTI, BARTI, SARTHI, AMRUT & ARTI CET exam 2026. Online application extended to 04 September 2026."
+  },
+  {
+    titleEn: "MPSC State Services Main Examination 2025: Written Exam Result & Cutoff Marks Declared",
+    titleHi: "MPSC राज्यसेवा मुख्य परीक्षा २०२५: लिखित निकाल व Cutoff जाहीर",
+    date: "August 25, 2026",
+    badge: "Result Out",
+    badgeType: "important",
+    link: "/mpsc-rajyaseva-mains-result-2025",
+    description: "MPSC State Services Main Exam 2025 written exam result & category-wise cut-off marks published at mpsc.gov.in."
+  },
+  {
+    titleEn: "Chhatrapati Sambhajinagar Municipal Corporation Result 2026: Selection Merit List Released for 5 Posts",
+    titleHi: "छत्रपती संभाजीनगर मनपा भरती: ५ पदांचे निकाल व निवड यादी जाहीर",
+    date: "August 24, 2026",
+    badge: "Result Out",
+    badgeType: "important",
+    link: "/chhatrapati-sambhajinagar-mahanagarpalika-result-2026",
+    description: "Chhatrapati Sambhajinagar Municipal Corporation 5 posts selection merit list released on official website."
+  },
+  {
+    titleEn: "PDCC Bank Peon Hall Ticket 2026 Out: Download Call Letter for 289 Posts",
+    titleHi: "पुणे बँक (PDCC Bank) शिपाई २८९ जागा हॉल तिकीट उपलब्ध",
+    date: "August 23, 2026",
+    badge: "Admit Card",
+    badgeType: "new",
+    link: "/pdcc-bank-peon-hall-ticket-2026",
+    description: "PDCC Bank Peon exam hall ticket released. Download call letter directly."
+  },
+  {
+    titleEn: "IBPS Clerk Recruitment 2026: Apply Online for 11,403 Vacancies (1,051 in Maharashtra)",
+    titleHi: "IBPS क्लर्क ११,४०३ जागा भरती: ऑनलाईन अर्जास २८ ऑगस्ट पर्यंत मुदतवाढ",
+    date: "August 22, 2026",
+    badge: "Extended",
+    badgeType: "extended",
+    link: "/ibps-csa-clerk-recruitment-2026",
+    description: "IBPS Clerk CSA-XVI 11,403 posts application deadline extended to 28 August 2026."
+  },
+  {
+    titleEn: "TMC Thane Hall Ticket 2026 Out: Download Thane Municipal Corporation Admit Card",
+    titleHi: "ठाणे महानगरपालिका (TMC) भरती परीक्षा प्रवेशपत्र / हॉलतिकीट उपलब्ध",
+    date: "August 22, 2026",
+    badge: "Admit Card",
+    badgeType: "new",
+    link: "/tmc-thane-hall-ticket-2026",
+    description: "Thane Municipal Corporation exam admit card released for 7 cadre posts."
+  },
+  {
+    titleEn: "Mahajyoti & VANARTI Free Coaching 2026: Deadline Extended to 26 August",
+    titleHi: "महाज्योति व वनार्टी मोफत स्पर्धा परीक्षा प्रशिक्षण मुदतवाढ",
+    date: "August 21, 2026",
+    badge: "Extended",
+    badgeType: "extended",
+    link: "/mahajyoti-vanarti-free-coaching-extension-2026",
+    description: "Mahajyoti & VANARTI free coaching application extended to 26 August 2026."
+  },
+  {
     titleEn: "Bank of Baroda LBO Recruitment 2025: Apply Online for 2,500 Local Bank Officer Posts",
     titleHi: "बँक ऑफ बडोदा मध्ये 'लोकल बँक ऑफिसर' २५०० जागांसाठी भरती २०२५: ऑनलाईन अर्ज सुरू",
     date: "August 18, 2026",
@@ -35,7 +107,7 @@ export const naukriUpdates: NaukriUpdate[] = [
     badge: "Admit Card",
     badgeType: "new",
     link: "/bhc-clerk-admit-card-2026",
-    description: "Bombay High Court (BHC) has officially released the Hall Ticket / Admit Card for Clerk Typing Test 2026. 👉 लिपिक हॉल तिकीट डाउनलोड करण्यासाठी खालील लिंकवर क्लिक करा 👇👇👇"
+    description: "Bombay High Court (BHC) has officially released the Hall Ticket / Admit Card for Clerk Typing Test 2026."
   },
   {
     titleEn: "Sangli DCC Bank Peon Bharti 2026: Apply Online for 79 Vacancies (12th Pass Eligible)",
@@ -47,22 +119,13 @@ export const naukriUpdates: NaukriUpdate[] = [
     description: "Sangli District Central Cooperative Bank Ltd (Sangli DCCB) invites online applications for 79 Peon vacancies. 12th pass eligible, 70 marks offline OMR exam. Apply by 21 August 2026."
   },
   {
-    titleEn: "Mumbai Police Constable Bharti 2024-25: Final Selection List Out for 3,521 Vacancies",
-    titleHi: "मुंबई पोलीस भरती: ३,५२१ पदांची अंतिम निवड यादी जाहीर",
-    date: "August 07, 2026",
-    badge: "Result Out",
-    badgeType: "important",
-    link: "/mumbai-police-constable-final-selection-list-2026",
-    description: "Brihanmumbai Police Commissionerate has officially published the Final Selection List & Waiting List with Cut-Off for 3,521 Police Constable posts."
-  },
-  {
     titleEn: "SBI Recruitment 2026: State Bank of India Advertisements, Exam Updates & Apply Links",
     titleHi: "SBI भरती २०२६: सर्व जाहिराती व ऑनलाईन अर्ज एकत्र",
     date: "August 13, 2026",
     badge: "New Hub",
     badgeType: "new",
     link: "/sbi-recruitment",
-    description: "Explore all active and upcoming SBI recruitments (Clerk 1,538 posts, PO 2,000+ posts, SO, CBO, Apprentice). Qualifications, salary, syllabus, and direct apply links available."
+    description: "Explore all active and upcoming SBI recruitments (Clerk 1,538 posts, PO 2,000+ posts, SO, CBO, Apprentice)."
   },
   {
     titleEn: "SBI Clerk Recruitment 2026: Apply Online for 1,538 Junior Associate Vacancies",
@@ -89,7 +152,7 @@ export const naukriUpdates: NaukriUpdate[] = [
     badge: "Govt Order",
     badgeType: "new",
     link: "/solapur-mahanagarpalika-bharti-2026",
-    description: "Urban Development Department of Maharashtra approves recruitment for 130 Group-C vacancies in Solapur Municipal Corporation (including 41 Clerk Typists & 30 JE Civil posts) via TCS/IBPS."
+    description: "Urban Development Department of Maharashtra approves recruitment for 130 Group-C vacancies in Solapur Municipal Corporation."
   },
   {
     titleEn: "Latur DCC Bank Bharti 2026: Revised Waiting List Released as per GR dated 15.06.2018",
@@ -98,7 +161,7 @@ export const naukriUpdates: NaukriUpdate[] = [
     badge: "Revised List",
     badgeType: "important",
     link: "/latur-dcc-bank-revised-waiting-list-2026",
-    description: "Latur DCC Bank has officially published the revised waiting list (20% category merit quota) for Lipik, Sevak, and Driver posts valid for 365 days as per GR directives."
+    description: "Latur DCC Bank has officially published the revised waiting list for Lipik, Sevak, and Driver posts."
   },
   {
     titleEn: "Latur DCC Bank Result 2026: Phase 1 Selection List Released for 263 Posts",
@@ -107,7 +170,7 @@ export const naukriUpdates: NaukriUpdate[] = [
     badge: "Result",
     badgeType: "important",
     link: "/latur-dcc-bank-result-2026",
-    description: "Latur DCC Bank has declared the Phase 1 result & selection list for Clerk, Multipurpose Support Staff, and Driver posts. Selected candidates must report on 14 August 2026."
+    description: "Latur DCC Bank has declared the Phase 1 result & selection list for Clerk, Multipurpose Support Staff, and Driver posts."
   },
   {
     titleEn: "MPSC Group C Bharti 2026: Corrigendum Released for 5,707 Vacancies & Deadline Extended to 10 August",
@@ -116,7 +179,7 @@ export const naukriUpdates: NaukriUpdate[] = [
     badge: "New",
     badgeType: "new",
     link: "/mpsc-group-c-bharti-2026",
-    description: "MPSC has released a Corrigendum notice updating total vacancies to 5,707 across 11 departments (including 1,539 Talathi & 3,197 Clerk-Typist posts). Last date to apply extended to 10 August 2026."
+    description: "MPSC has released a Corrigendum notice updating total vacancies to 5,707 across 11 departments."
   },
   {
     titleEn: "MH SET 2026 Exam Rescheduled: Date Postponed to 27 September",
@@ -125,25 +188,6 @@ export const naukriUpdates: NaukriUpdate[] = [
     badge: "Rescheduled",
     badgeType: "important",
     link: "/admit-card/maharashtra-set-exam-date-postponed",
-    description: "The Savitribai Phule Pune University has postponed the MH-SET 2026 exam to September 27, 2026 due to a clash with the CTET exam. Read official notice."
-  },
-
-  {
-    titleEn: "MH SET 2026 Application Date Extended & Exam Postponed",
-    titleHi: "MH-SET २०२६: अर्ज मुदतवाढ व परीक्षा सुधारित तारीख",
-    date: "July 12, 2026",
-    badge: "Latest",
-    badgeType: "important",
-    link: "/maharashtra-set-exam-2026",
-    description: "The online registration with a late fee has been extended from July 13 to July 23, 2026. The exam is tentatively rescheduled to September 6, 2026."
-  },
-  {
-    titleEn: "MPSC WRD Mechanical Recruitment Rules 2026 Notification Released",
-    titleHi: "MPSC जलसंपदा विभाग मेकॅनिकल भरती नियम २०२६ प्रसिद्ध",
-    date: "July 10, 2026",
-    badge: "New",
-    badgeType: "new",
-    link: "/mpsc/mpsc-wrd-recruitment-rules-2026-mechanical",
-    description: "Check the latest recruitment rules, age criteria, and qualification standards for WRD Mechanical Engineering positions."
+    description: "The Savitribai Phule Pune University has postponed the MH-SET 2026 exam to September 27, 2026."
   }
 ];
