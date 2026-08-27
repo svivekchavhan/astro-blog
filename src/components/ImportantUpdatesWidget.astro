@@ -3,6 +3,7 @@ import {
   HiOutlineMegaphone,
   HiOutlineChevronRight,
   HiOutlineChevronLeft,
+  HiOutlineCalendarDays,
 } from "react-icons/hi2";
 import {
   importantUpdates,
@@ -27,12 +28,17 @@ const totalPages = Math.ceil(totalItems / pageSize);
 <div class="flex flex-col important-updates-widget">
   <!-- Heading Container for Important Updates -->
   <div
-    class="bg-rose-500 text-white px-5 py-3 rounded-t-2xl font-bold flex items-center gap-2 border border-rose-500 border-b-0 shadow-xs mt-0"
+    class="bg-rose-500 text-white px-5 py-3 rounded-t-2xl font-bold flex items-center justify-between gap-2 border border-rose-500 border-b-0 shadow-xs mt-0"
   >
-    <HiOutlineMegaphone className="text-white text-[1.1rem] shrink-0" />
-    <span class="text-xs font-extrabold uppercase tracking-wider"
-      >Important Updates (महत्वाचे अपडेट्स)</span
-    >
+    <div class="flex items-center gap-2">
+      <HiOutlineMegaphone className="text-white text-[1.1rem] shrink-0" />
+      <span class="text-xs font-extrabold uppercase tracking-wider"
+        >Important Updates </span
+      >
+    </div>
+    <span class="text-[0.65rem] bg-white/20 text-white font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider shrink-0">
+      Urgent
+    </span>
   </div>
 
   <!-- Content Container for Important Updates -->
@@ -50,26 +56,51 @@ const totalPages = Math.ceil(totalItems / pageSize);
             const pageIndex = Math.floor(index / pageSize);
             return (
               <div
-                class={`update-item py-2.5 border-b border-border-card dark:border-border-card/30 last:border-b-0 last:pb-0 ${pageIndex !== 0 ? "hidden" : ""}`}
+                class={`update-item py-3 border-b border-border-card dark:border-border-card/30 last:border-b-0 last:pb-0 ${pageIndex !== 0 ? "hidden" : ""}`}
                 data-page={pageIndex}
               >
                 <a
                   href={update.link}
-                  class="flex items-center justify-between w-full gap-3 text-text-muted hover:text-rose-500 transition-colors duration-300 text-xs font-semibold leading-relaxed no-underline group/link"
+                  class="flex flex-col gap-1 text-text-muted hover:text-rose-500 transition-colors duration-300 no-underline group/link"
                 >
-                  <span class="flex items-start gap-2">
-                    <HiOutlineChevronRight className="text-rose-500 text-[0.85rem] shrink-0 mt-1 transform group-hover/link:translate-x-1 transition-transform" />
-                    <span class="pt-0.5">{update.title}</span>
-                  </span>
-
-                  {isWithin7Days(update.date) && (
-                    <span
-                      class="urgent-new-badge shrink-0 text-[0.5rem] bg-rose-500 text-white px-1.5 py-0.5 rounded font-bold uppercase tracking-wider select-none animate-pulse"
-                      data-expiry={update.expiry}
-                    >
-                      NEW
+                  <div class="flex items-start justify-between gap-2">
+                    <span class="flex items-start gap-1.5 text-xs font-bold text-text-main group-hover/link:text-rose-500 transition-colors min-w-0 flex-1 leading-snug">
+                      <HiOutlineChevronRight className="text-rose-500 text-[0.8rem] shrink-0 mt-0.5 transform group-hover/link:translate-x-0.5 transition-transform" />
+                      <span class="line-clamp-2">{update.title}</span>
                     </span>
-                  )}
+
+                    {update.badge ? (
+                      <span
+                        class={`shrink-0 text-[0.5rem] px-1.5 py-0.5 rounded font-extrabold uppercase tracking-widest self-start mt-0.5 ${
+                          update.badgeType === "result"
+                            ? "bg-rose-600 text-white"
+                            : update.badgeType === "admit"
+                              ? "bg-indigo-600 text-white"
+                              : update.badgeType === "extended"
+                                ? "bg-amber-500 text-white"
+                                : update.badgeType === "important"
+                                  ? "bg-purple-600 text-white"
+                                  : "bg-emerald-600 text-white"
+                        }`}
+                      >
+                        {update.badge}
+                      </span>
+                    ) : isWithin7Days(update.date) ? (
+                      <span
+                        class="shrink-0 text-[0.5rem] bg-rose-500 text-white px-1.5 py-0.5 rounded font-bold uppercase tracking-wider self-start mt-0.5 animate-pulse"
+                      >
+                        NEW
+                      </span>
+                    ) : null}
+                  </div>
+
+                  <!-- Date Row -->
+                  <div class="flex items-center justify-end text-[0.65rem] text-rose-600 dark:text-rose-400 font-extrabold pl-5 pt-0.5">
+                    <span class="flex items-center gap-1 shrink-0">
+                      <HiOutlineCalendarDays className="text-xs text-rose-500 shrink-0" />
+                      {update.date}
+                    </span>
+                  </div>
                 </a>
               </div>
             );

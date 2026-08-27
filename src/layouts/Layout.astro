@@ -18,11 +18,9 @@ import {
   HiOutlineMapPin
 } from "react-icons/hi2";
 import { OFFICIAL_LINKS } from "../constants/links";
-import { naukriUpdates } from "../constants/naukriUpdates";
 import { MAHARASHTRA_DISTRICTS } from "../constants/districts";
 import { isWithin7Days } from "../utils/dateUtils";
 import ImportantUpdatesWidget from "../components/ImportantUpdatesWidget.astro";
-import NaukriUpdatesWidget from "../components/NaukriUpdatesWidget.astro";
 import WhatsAppChannelWidget from "../components/WhatsAppChannelWidget.astro";
 import MobileUrgentBoard from "../components/MobileUrgentBoard.astro";
 import FloatingWhatsAppWidget from "../components/FloatingWhatsAppWidget.astro";
@@ -493,9 +491,6 @@ const breadcrumbSchema = {
           <aside class="w-full lg:w-[350px] xl:w-[380px] shrink-0 space-y-6 lg:sticky lg:top-[calc(var(--navbar-height,190px)+16px)] h-fit">
             <!-- Important Updates Widget (Placed at Top) -->
             <ImportantUpdatesWidget />
-
-            <!-- Latest Naukri Updates Widget -->
-            <NaukriUpdatesWidget limit={3} />
 
             <!-- WhatsApp Channel QR Code Widget -->
             <WhatsAppChannelWidget />

@@ -107,10 +107,10 @@ Whenever a new recruitment article is created, it must be registered in the foll
 - **Homepage (`src/pages/index.astro`)**:
   - The `latestJobs` array **MUST contain ONLY active job recruitment notifications** (Bank Jobs, Central Govt, State Govt, Latest Jobs).
   - Non-job items like Results, Admit Cards, and Exam Alerts **MUST NOT** be included in the homepage main job list.
-- **Important Updates Widgets (`importantUpdates.ts` & `MobileUrgentBoard.astro`)**:
-  - Serves as the breaking/urgent notification list. Shows **ONLY specific breaking & urgent notices** (Results, Admit Cards, Application Deadline Extensions, Official Notices).
-- **Naukri Updates (`naukriUpdates.ts` & `NaukriUpdatesWidget.astro` / `/naukri-updates`)**:
-  - Serves as the comprehensive multi-category feed containing all updates (Recruitments, Extensions, Admit Cards, Results, Exam Alerts, Free Coaching).
+- **Important Updates Widget (`importantUpdates.ts`, `ImportantUpdatesWidget.astro` & `MobileUrgentBoard.astro`)**:
+  - Placed at the top of the global sidebar layout. Shows **ONLY specific breaking & urgent notices** (Results, Admit Cards, Application Deadline Extensions, Official Notices).
+- **Naukri Updates (`naukriUpdates.ts` & `/naukri-updates`)**:
+  - Serves as the dedicated comprehensive multi-category feed page (`/naukri-updates`) containing all updates (Recruitments, Extensions, Admit Cards, Results, Exam Alerts, Free Coaching).
   - **MUST** be sorted in strict reverse chronological date-wise order (newest/today's updates rendered at the top).
 
 ---

@@ -27,6 +27,22 @@ import { MAHARASHTRA_DISTRICTS } from "../constants/districts";
 import { naukriUpdates } from "../constants/naukriUpdates";
 import Marquee from "./Marquee.astro";
 
+// Calculate latest post timestamps for dynamic NEW badges on navbar
+const latestResultDate = articlesRegistry
+  .filter((a) => a.category === "Result" || (a.titleEn && a.titleEn.toLowerCase().includes("result")))
+  .map((a) => new Date(a.date).getTime())
+  .sort((a, b) => b - a)[0] || 0;
+
+const latestAdmitCardDate = articlesRegistry
+  .filter((a) => a.category === "Admit Card" || (a.titleEn && (a.titleEn.toLowerCase().includes("admit card") || a.titleEn.toLowerCase().includes("hall ticket"))))
+  .map((a) => new Date(a.date).getTime())
+  .sort((a, b) => b - a)[0] || 0;
+
+const latestNaukriUpdateDate = naukriUpdates
+  .filter((u) => u.show !== false)
+  .map((u) => new Date(u.date).getTime())
+  .sort((a, b) => b - a)[0] || 0;
+
 // 1. Core Pages & Tools
 const mainPages = [
   {
@@ -375,6 +391,20 @@ const searchData = [
             ><HiOutlineBriefcase className="text-sm shrink-0" /> Current Recruitment</a
           >
         </li>
+        <li class="relative">
+          <a
+            href="/naukri-updates"
+            data-nav-badge="naukri-updates"
+            data-latest-ts={latestNaukriUpdateDate}
+            class="relative flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-orange-500/5 dark:bg-orange-500/10 border border-solid border-orange-500/25 text-text-main font-bold hover:bg-orange-500/10 hover:border-orange-500 hover:shadow-sm hover:shadow-orange-500/5 transition-all duration-300 text-[0.7rem] uppercase tracking-wider"
+          >
+            <HiOutlineBell className="text-sm shrink-0 text-orange-500" />
+            <span>Naukri Updates</span>
+            <span class="nav-new-badge hidden absolute -top-1.5 -right-1 px-1.5 py-0.5 text-[0.5rem] font-black uppercase tracking-widest bg-rose-500 text-white rounded-full shadow-xs animate-pulse">
+              NEW
+            </span>
+          </a>
+        </li>
         <li>
           <a
             href="/mega-recruitment"
@@ -382,19 +412,33 @@ const searchData = [
             ><HiOutlineNewspaper className="text-sm shrink-0" /> Mega Recruitment</a
           >
         </li>
-        <li>
+        <li class="relative">
           <a
             href="/result"
-            class="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-emerald-500/5 dark:bg-emerald-500/10 border border-solid border-emerald-500/25 text-text-main font-bold hover:bg-emerald-500/10 hover:border-emerald-500 hover:shadow-sm hover:shadow-emerald-500/5 transition-all duration-300 text-[0.7rem] uppercase tracking-wider"
-            ><HiOutlineQueueList className="text-sm shrink-0" /> Result</a
+            data-nav-badge="result"
+            data-latest-ts={latestResultDate}
+            class="relative flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-emerald-500/5 dark:bg-emerald-500/10 border border-solid border-emerald-500/25 text-text-main font-bold hover:bg-emerald-500/10 hover:border-emerald-500 hover:shadow-sm hover:shadow-emerald-500/5 transition-all duration-300 text-[0.7rem] uppercase tracking-wider"
           >
+            <HiOutlineQueueList className="text-sm shrink-0" />
+            <span>Result</span>
+            <span class="nav-new-badge hidden absolute -top-1.5 -right-1 px-1.5 py-0.5 text-[0.5rem] font-black uppercase tracking-widest bg-rose-500 text-white rounded-full shadow-xs animate-pulse">
+              NEW
+            </span>
+          </a>
         </li>
-        <li>
+        <li class="relative">
           <a
             href="/admit-card"
-            class="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-rose-500/5 dark:bg-rose-500/10 border border-solid border-rose-500/25 text-text-main font-bold hover:bg-rose-500/10 hover:border-rose-500 hover:shadow-sm hover:shadow-rose-500/5 transition-all duration-300 text-[0.7rem] uppercase tracking-wider"
-            ><HiOutlineIdentification className="text-sm shrink-0" /> Admit Card</a
+            data-nav-badge="admit-card"
+            data-latest-ts={latestAdmitCardDate}
+            class="relative flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-rose-500/5 dark:bg-rose-500/10 border border-solid border-rose-500/25 text-text-main font-bold hover:bg-rose-500/10 hover:border-rose-500 hover:shadow-sm hover:shadow-rose-500/5 transition-all duration-300 text-[0.7rem] uppercase tracking-wider"
           >
+            <HiOutlineIdentification className="text-sm shrink-0" />
+            <span>Admit Card</span>
+            <span class="nav-new-badge hidden absolute -top-1.5 -right-1 px-1.5 py-0.5 text-[0.5rem] font-black uppercase tracking-widest bg-rose-500 text-white rounded-full shadow-xs animate-pulse">
+              NEW
+            </span>
+          </a>
         </li>
 
         <li>
@@ -427,6 +471,15 @@ const searchData = [
           <div
             class="absolute right-0 mt-2 w-56 bg-bg-surface border border-border-card rounded-2xl shadow-xl py-2 opacity-0 invisible translate-y-2 group-hover/dropdown:opacity-100 group-hover/dropdown:visible group-hover/dropdown:translate-y-0 transition-all duration-300 z-50 backdrop-blur-xl flex flex-col"
           >
+            <a
+              href="/naukri-updates"
+              class="flex items-center gap-2 mx-2 my-1 px-3.5 py-2.5 rounded-xl bg-orange-500/5 dark:bg-orange-500/10 border border-solid border-orange-500/25 text-text-main font-bold hover:bg-orange-500/10 hover:border-orange-500 hover:shadow-xs hover:shadow-orange-500/5 transition-all duration-300 text-[0.68rem] uppercase tracking-wider group no-underline"
+            >
+              <HiOutlineBell
+                className="text-sm shrink-0 text-orange-500 group-hover:scale-110 transition-transform"
+              />
+              <span>Naukri Updates</span>
+            </a>
             <a
               href="/walk-in-jobs"
               class="flex items-center gap-2 mx-2 my-1 px-3.5 py-2.5 rounded-xl bg-emerald-500/5 dark:bg-emerald-500/10 border border-solid border-emerald-500/25 text-text-main font-bold hover:bg-emerald-500/10 hover:border-emerald-500 hover:shadow-xs hover:shadow-emerald-500/5 transition-all duration-300 text-[0.68rem] uppercase tracking-wider group no-underline"
@@ -536,6 +589,22 @@ const searchData = [
       </li>
       <li>
         <a
+          href="/naukri-updates"
+          data-nav-badge="naukri-updates"
+          data-latest-ts={latestNaukriUpdateDate}
+          class="flex items-center justify-between px-4 py-3 rounded-2xl bg-orange-500/5 dark:bg-orange-500/10 border border-solid border-orange-500/20 text-text-main font-bold hover:bg-orange-500/10 transition-all duration-300 text-xs uppercase tracking-wider no-underline"
+        >
+          <div class="flex items-center gap-3">
+            <HiOutlineBell className="text-lg shrink-0 text-orange-500" />
+            <span>Naukri Updates</span>
+          </div>
+          <span class="nav-new-badge hidden text-[0.5rem] font-black uppercase tracking-widest bg-rose-500 text-white px-2 py-0.5 rounded-full shadow-xs animate-pulse">
+            NEW
+          </span>
+        </a>
+      </li>
+      <li>
+        <a
           href="/mega-recruitment"
           class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-fuchsia-500/5 dark:bg-fuchsia-500/10 border border-solid border-fuchsia-500/20 text-text-main font-bold hover:bg-fuchsia-500/10 transition-all duration-300 text-xs uppercase tracking-wider no-underline"
         >
@@ -566,19 +635,33 @@ const searchData = [
       <li>
         <a
           href="/result"
-          class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-emerald-500/5 dark:bg-emerald-500/10 border border-solid border-emerald-500/20 text-text-main font-bold hover:bg-emerald-500/10 transition-all duration-300 text-xs uppercase tracking-wider no-underline"
+          data-nav-badge="result"
+          data-latest-ts={latestResultDate}
+          class="flex items-center justify-between px-4 py-3 rounded-2xl bg-emerald-500/5 dark:bg-emerald-500/10 border border-solid border-emerald-500/20 text-text-main font-bold hover:bg-emerald-500/10 transition-all duration-300 text-xs uppercase tracking-wider no-underline"
         >
-          <HiOutlineQueueList className="text-lg shrink-0 text-emerald-500" />
-          <span>Result</span>
+          <div class="flex items-center gap-3">
+            <HiOutlineQueueList className="text-lg shrink-0 text-emerald-500" />
+            <span>Result</span>
+          </div>
+          <span class="nav-new-badge hidden text-[0.5rem] font-black uppercase tracking-widest bg-rose-500 text-white px-2 py-0.5 rounded-full shadow-xs animate-pulse">
+            NEW
+          </span>
         </a>
       </li>
       <li>
         <a
           href="/admit-card"
-          class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-rose-500/5 dark:bg-rose-500/10 border border-solid border-rose-500/20 text-text-main font-bold hover:bg-rose-500/10 transition-all duration-300 text-xs uppercase tracking-wider no-underline"
+          data-nav-badge="admit-card"
+          data-latest-ts={latestAdmitCardDate}
+          class="flex items-center justify-between px-4 py-3 rounded-2xl bg-rose-500/5 dark:bg-rose-500/10 border border-solid border-rose-500/20 text-text-main font-bold hover:bg-rose-500/10 transition-all duration-300 text-xs uppercase tracking-wider no-underline"
         >
-          <HiOutlineIdentification className="text-lg shrink-0 text-rose-500" />
-          <span>Admit Card</span>
+          <div class="flex items-center gap-3">
+            <HiOutlineIdentification className="text-lg shrink-0 text-rose-500" />
+            <span>Admit Card</span>
+          </div>
+          <span class="nav-new-badge hidden text-[0.5rem] font-black uppercase tracking-widest bg-rose-500 text-white px-2 py-0.5 rounded-full shadow-xs animate-pulse">
+            NEW
+          </span>
         </a>
       </li>
       <li>
@@ -898,10 +981,48 @@ const searchData = [
     });
   }
 
+  function initNavBadges() {
+    const rawPath = window.location.pathname;
+    const currentPath = rawPath.replace(/\/$/, "") || "/";
+    const badgeLinks = document.querySelectorAll("[data-nav-badge]");
+
+    badgeLinks.forEach((link) => {
+      const categoryKey = link.getAttribute("data-nav-badge"); // 'result', 'admit-card', 'naukri-updates'
+      const latestTs = parseInt(link.getAttribute("data-latest-ts") || "0", 10);
+      const badgeEl = link.querySelector(".nav-new-badge");
+
+      if (!categoryKey || !badgeEl) return;
+
+      const visitedKey = "nav_visited_" + categoryKey;
+
+      // If user is currently on this page, update visited timestamp
+      if (currentPath === "/" + categoryKey) {
+        localStorage.setItem(visitedKey, Date.now().toString());
+      }
+
+      const lastVisited = parseInt(localStorage.getItem(visitedKey) || "0", 10);
+
+      // Show NEW badge if there is a recent update timestamp (latestTs > 0)
+      // AND user has NOT visited the page since the latest update (lastVisited < latestTs)
+      if (latestTs > 0 && lastVisited < latestTs) {
+        badgeEl.classList.remove("hidden");
+      } else {
+        badgeEl.classList.add("hidden");
+      }
+
+      // Add click handler to immediately remove badge when user clicks link
+      link.addEventListener("click", () => {
+        localStorage.setItem(visitedKey, Date.now().toString());
+        if (badgeEl) badgeEl.classList.add("hidden");
+      });
+    });
+  }
+
   // Initialize on page load and after view transitions
   document.addEventListener("astro:page-load", () => {
     initNavbar();
     initDateTime();
+    initNavBadges();
     updateNavbarHeight();
 
     // Add event listener to recalculate height on window resize
