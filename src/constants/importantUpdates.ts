@@ -19,7 +19,7 @@ export const importantUpdates: ImportantUpdate[] = [
     expiry: "2026-09-05T00:00:00.000Z",
     show: true,
     badge: "Reopened",
-    badgeType: "extended"
+    badgeType: "extended",
   },
   {
     id: "barti-trti-sarthi-free-coaching-extension-2026",
@@ -30,7 +30,7 @@ export const importantUpdates: ImportantUpdate[] = [
     expiry: "2026-09-10T00:00:00.000Z",
     show: true,
     badge: "Free CET",
-    badgeType: "important"
+    badgeType: "important",
   },
   {
     id: "mpsc-rajyaseva-mains-result-2025",
@@ -41,7 +41,7 @@ export const importantUpdates: ImportantUpdate[] = [
     expiry: "2026-09-30T00:00:00.000Z",
     show: true,
     badge: "Result Out",
-    badgeType: "result"
+    badgeType: "result",
   },
   {
     id: "pdcc-bank-peon-hall-ticket-2026",
@@ -52,7 +52,7 @@ export const importantUpdates: ImportantUpdate[] = [
     expiry: "2026-09-20T00:00:00.000Z",
     show: true,
     badge: "Admit Card",
-    badgeType: "admit"
+    badgeType: "admit",
   },
   {
     id: "ibps-csa-clerk-recruitment-2026",
@@ -63,7 +63,7 @@ export const importantUpdates: ImportantUpdate[] = [
     expiry: "2026-08-30T00:00:00.000Z",
     show: true,
     badge: "Extended",
-    badgeType: "extended"
+    badgeType: "extended",
   },
   {
     id: "tmc-thane-hall-ticket-2026",
@@ -74,7 +74,7 @@ export const importantUpdates: ImportantUpdate[] = [
     expiry: "2026-09-15T00:00:00.000Z",
     show: true,
     badge: "Admit Card",
-    badgeType: "admit"
+    badgeType: "admit",
   },
   {
     id: "mahajyoti-vanarti-free-coaching-extension-2026",
@@ -85,7 +85,7 @@ export const importantUpdates: ImportantUpdate[] = [
     expiry: "2026-08-30T00:00:00.000Z",
     show: true,
     badge: "Extended",
-    badgeType: "extended"
+    badgeType: "extended",
   },
   {
     id: "mpsc-group-c-divyang-scribe-update-2026",
@@ -95,7 +95,7 @@ export const importantUpdates: ImportantUpdate[] = [
     date: "August 20, 2026",
     show: true,
     badge: "Notice",
-    badgeType: "important"
+    badgeType: "important",
   },
   {
     id: "pavitra-portal-tait-2025-preference-notice",
@@ -106,18 +106,18 @@ export const importantUpdates: ImportantUpdate[] = [
     expiry: "2026-09-30T00:00:00.000Z",
     show: true,
     badge: "Notice",
-    badgeType: "important"
+    badgeType: "important",
   },
   {
     id: "mpsc-group-c-pesa-update-2026",
     title:
-      "MPSC गट-क परीक्षा: पेसा (PESA) रहिवासी व माजी सैनिक आरक्षणाबाबत परिपत्रक जारी",
+      "MPSC गट-क परीक्षा: पेसा (PESA) रहिवासी व माजी सैनिक आरक्षणाबाबत परिपत्रक जारी.",
     link: "/mpsc-group-c-pesa-update-2026",
     date: "August 07, 2026",
     expiry: "2026-08-30T00:00:00.000Z",
     show: true,
     badge: "Notice",
-    badgeType: "important"
+    badgeType: "important",
   },
   {
     id: "mahajyoti-free-coaching-exam-timetable-2026",
@@ -127,6 +127,6 @@ export const importantUpdates: ImportantUpdate[] = [
     expiry: "2026-08-30T00:00:00.000Z",
     show: true,
     badge: "Timetable",
-    badgeType: "important"
-  }
+    badgeType: "important",
+  },
 ];
