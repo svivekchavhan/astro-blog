@@ -11,6 +11,17 @@ export interface ImportantUpdate {
 
 export const importantUpdates: ImportantUpdate[] = [
   {
+    id: "india-post-gds-recruitment-2026",
+    title:
+      "भारतीय डाक विभागात GDS पदांच्या २३,७५७ जागांसाठी मेगाभरती! (२१ सप्टेंबर २०२६ अर्ज मुदत)",
+    link: "/india-post-gds-recruitment-2026",
+    date: "September 01, 2026",
+    expiry: "2026-09-22T00:00:00.000Z",
+    show: true,
+    badge: "Mega Bharti",
+    badgeType: "new",
+  },
+  {
     id: "ctet-2026-online-application-reopened",
     title:
       "CTET २०२६: २२ व्या केंद्रीय शिक्षक पात्रता परीक्षेचे ऑनलाईन अर्ज पुन्हा सुरू (०१ सप्टेंबर पर्यंत मुदतवाढ)",

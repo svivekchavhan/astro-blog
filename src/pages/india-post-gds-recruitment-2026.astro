@@ -1,0 +1,698 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { translateMarathi } from "../utils/wordLibrary";
+import {
+  HiOutlineCalendarDays,
+  HiOutlineCursorArrowRays,
+  HiOutlineDocumentText,
+  HiOutlineCurrencyRupee,
+  HiOutlineMapPin,
+  HiOutlineBuildingOffice,
+  HiOutlineAcademicCap,
+  HiOutlineCheckCircle,
+  HiOutlineCalculator,
+  HiOutlineArrowTopRightOnSquare,
+  HiOutlineArrowLeft,
+  HiOutlineBell,
+} from "react-icons/hi2";
+
+const title =
+  "भारतीय डाक विभागात GDS पदांच्या २३,७५७ जागांसाठी मेगाभरती २०२६ - ऑनलाईन अर्ज सुरू | India Post GDS Recruitment 2026";
+const description =
+  "India Post GDS Recruitment 2026: भारतीय टपाल विभागात २३,७५७ ग्रामीण डाक सेवक (GDS/BPM/ABPM) पदांची मेगा भरती! १०वी पास पात्र (परीक्षा नाही - १०वी मेरिटवर निवड). ऑनलाईन नोंदणी: ३१ ऑगस्ट ते १९ सप्टेंबर २०२६. ऑनलाईन अर्ज शेवटची तारीख: २१ सप्टेंबर २०२६. direct apply link: https://indiapost.gov.in/gdsonlineengagement";
+const canonicalURL = "https://mahasandhi.in/india-post-gds-recruitment-2026";
+const date = "September 01, 2026";
+const category = "Central Govt";
+const applyUrl = "https://indiapost.gov.in/gdsonlineengagement";
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonicalURL={canonicalURL}
+  pubDate={date}
+  category={category}
+  image="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=1200"
+  article={true}
+  customBreadcrumbs={[
+    { name: "Current Recruitment", url: "/current-recruitment" },
+    { name: "India Post GDS Recruitment 2026" },
+  ]}
+>
+  <article class="pt-2 pb-8">
+    <!-- Back Button -->
+    <div class="mb-6 not-prose">
+      <a
+        href="/current-recruitment"
+        class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold uppercase tracking-wider text-text-muted hover:text-primary bg-bg-surface border border-border-card rounded-xl transition-all duration-300 no-underline"
+      >
+        <HiOutlineArrowLeft className="text-sm" /> back to current recruitment / मागे जा
+      </a>
+    </div>
+
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="flex items-center gap-3 mb-4 flex-wrap">
+        <span
+          class="bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-emerald-500/20 flex items-center gap-1.5 shadow-xs"
+        >
+          <HiOutlineBell className="text-sm shrink-0 animate-pulse" />
+          {category} (ऑनलाईन अर्ज सुरू)
+        </span>
+        <span
+          class="bg-rose-500/10 text-rose-600 dark:text-rose-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-rose-500/20 flex items-center gap-1.5"
+        >
+          <HiOutlineCalendarDays className="text-sm" /> अर्ज मुदत: २१ सप्टेंबर २०२६ (05:00 PM)
+        </span>
+        <span class="text-text-muted text-xs font-semibold">• {date}</span>
+      </div>
+
+      <h1
+        class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-text-main mb-6 leading-[1.25]"
+      >
+        {title}
+      </h1>
+      <p
+        class="text-text-muted text-base sm:text-lg leading-relaxed border-l-4 border-primary pl-4 sm:pl-6 py-2 italic font-medium"
+      >
+        {description}
+      </p>
+    </div>
+
+    <!-- Quick Action Apply Banner -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 not-prose">
+      <a
+        href={applyUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group p-5 bg-gradient-to-br from-primary to-indigo-700 text-white rounded-2xl transition-all duration-300 shadow-md hover:shadow-primary/20 flex items-center justify-between no-underline"
+      >
+        <div>
+          <span
+            class="text-[0.65rem] uppercase font-extrabold tracking-wider bg-white/20 px-2.5 py-0.5 rounded text-white block w-fit mb-1"
+            >India Post GDS Official Apply Portal</span
+          >
+          <h3
+            class="text-base sm:text-lg font-extrabold text-white m-0 flex items-center gap-1.5"
+          >
+            Online Apply Portal <HiOutlineArrowTopRightOnSquare
+              className="text-xl shrink-0"
+            />
+          </h3>
+          <p class="text-xs text-white/90 m-0 mt-1">
+            नोंदणी: ३१ ऑगस्ट ते १९ सप्टें | अर्ज शेवटची तारीख: २१ सप्टेंबर २०२६
+          </p>
+        </div>
+        <div
+          class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform"
+        >
+          <HiOutlineCursorArrowRays className="text-2xl" />
+        </div>
+      </a>
+
+      <a
+        href="https://indiapost.gov.in"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="p-5 bg-bg-surface border border-border-card hover:border-primary/50 rounded-2xl flex items-center justify-between transition-all duration-300 no-underline group shadow-xs"
+      >
+        <div class="flex items-center gap-4">
+          <div
+            class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"
+          >
+            <HiOutlineBuildingOffice className="text-2xl" />
+          </div>
+          <div>
+            <span
+              class="text-xs text-text-muted font-bold uppercase tracking-wider block"
+              >अधिकृत संकेतस्थळ</span
+            >
+            <h4
+              class="text-sm font-bold text-text-main m-0 group-hover:text-primary transition-colors flex items-center gap-1"
+            >
+              indiapost.gov.in <HiOutlineArrowTopRightOnSquare className="text-xs" />
+            </h4>
+            <p class="text-xs text-text-muted m-0 mt-0.5">
+              Department of Posts - India Post GDS Engagement
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Quick Language Navigation Links -->
+    <div class="flex flex-wrap items-center gap-4 mb-8">
+      <a
+        href="#marathi-version"
+        class="text-primary font-bold text-sm hover:underline"
+        >↓ मराठी आवृत्ती (Marathi Version)</a
+      >
+      <span class="text-text-muted">|</span>
+      <a
+        href="#english-version"
+        class="text-primary font-bold text-sm hover:underline"
+        >↓ English Summary</a
+      >
+    </div>
+
+    <!-- ================= MARATHI VERSION ================= -->
+    <div id="marathi-version">
+      <div class="space-y-6 text-text-main leading-relaxed">
+        <h2
+          id="main-keyword-mr"
+          class="text-xl md:text-2xl font-black text-text-main mt-2"
+        >
+          📮 भारतीय डाक विभाग GDS (ग्रामीण डाक सेवक) मेगाभरती २०२६
+        </h2>
+
+        <!-- Introduction -->
+        <div class="mb-6 space-y-4">
+          <p>
+            <strong>India Post GDS Recruitment 2026:</strong> भारतीय टपाल विभागाद्वारे (India Post - Department of Posts) देशातील विविध टपाल मंडळांमध्ये <strong>Gramin Dak Sevak (GDS)</strong>, <strong>Branch Postmaster (BPM)</strong> आणि <strong>Assistant Branch Postmaster (ABPM)</strong> पदांच्या एकूण <strong>२३,७५७ जागांसाठी</strong> नवीन मेगाभरती जाहिरात प्रसिद्ध करण्यात आली आहे.
+          </p>
+          <p>
+            या भरतीसाठी <strong>१०वी उत्तीर्ण (10th Pass)</strong> उमेदवार अर्ज करण्यास पात्र असून निवड प्रक्रियेसाठी <strong>कोणतीही परीक्षा घेतली जाणार नाही</strong> (१०वीच्या गुणांच्या मेरिट लिस्टवर थेट निवड केली जाईल). इच्छुक उमेदवारांनी वेळेत ऑनलाईन अर्ज सादर करावा.
+          </p>
+          <hr class="border-border-card my-6" />
+        </div>
+
+        <!-- Key Information Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
+          <div
+            class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3 shadow-xs"
+          >
+            <HiOutlineBuildingOffice
+              className="text-primary text-2xl shrink-0 mt-0.5"
+            />
+            <div>
+              <span
+                class="text-xs text-text-muted block uppercase font-bold tracking-wider"
+                >विभाग / संस्था</span
+              >
+              <span class="text-text-main font-semibold text-sm"
+                >भारतीय टपाल विभाग (India Post)</span
+              >
+            </div>
+          </div>
+          <div
+            class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3 shadow-xs"
+          >
+            <HiOutlineMapPin
+              className="text-primary text-2xl shrink-0 mt-0.5"
+            />
+            <div>
+              <span
+                class="text-xs text-text-muted block uppercase font-bold tracking-wider"
+                >एकूण जागा (Vacancies)</span
+              >
+              <span class="text-text-main font-bold text-sm text-primary"
+                >२३,७५७ पदे (GDS / BPM / ABPM)</span
+              >
+            </div>
+          </div>
+          <div
+            class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3 shadow-xs"
+          >
+            <HiOutlineAcademicCap
+              className="text-primary text-2xl shrink-0 mt-0.5"
+            />
+            <div>
+              <span
+                class="text-xs text-text-muted block uppercase font-bold tracking-wider"
+                >शैक्षणिक पात्रता</span
+              >
+              <span class="text-text-main font-semibold text-sm"
+                >१०वी उत्तीर्ण (10th Pass)</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Educational Qualification -->
+        <h2
+          id="qualification"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          🔹 शैक्षणिक पात्रता व आवश्यक अटी (Educational Qualification)
+        </h2>
+        <div
+          class="bg-bg-surface border border-border-card p-5 rounded-2xl text-sm space-y-3 mb-6"
+        >
+          <ul class="list-disc pl-6 space-y-2 text-text-main font-medium m-0">
+            <li>
+              <strong>शैक्षणिक पात्रता:</strong> मान्यताप्राप्त मंडळातून <strong>१०वी (Secondary School Examination - 10th Standard)</strong> उत्तीर्ण (गणित व इंग्रजी विषयासह).
+            </li>
+            <li>
+              <strong>स्थानिक भाषा ज्ञान:</strong> उमेदवाराला संबंधित मंडळाची / राज्याची <strong>स्थानिक भाषा (Local Language)</strong> बोलता, लिहिता व वाचता येणे बंधनकारक आहे. (महाराष्ट्रासाठी: मराठी).
+            </li>
+            <li>
+              <strong>संगणक ज्ञान:</strong> मूलभूत संगणक ज्ञान (Basic Computer Knowledge) असणे आवश्यक.
+            </li>
+            <li>
+              <strong>इतर अटी:</strong> सायकल चालवण्याचे ज्ञान (Knowledge of Cycling) असणे आवश्यक.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Post Name and Vacancy Summary Table -->
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="bg-primary/10">
+                <th
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                  >पदाचे नाव (Post Name)</th
+                >
+                <th
+                  class="p-3.5 border border-border-card font-bold text-text-main text-center whitespace-nowrap"
+                  >एकूण पदे (Total Vacancies)</th
+                >
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-primary"
+                >
+                  ग्रामीण डाक सेवक (GDS / BPM / ABPM / Dak Sevak)
+                </td>
+                <td
+                  class="p-3.5 border border-border-card font-black text-rose-600 dark:text-rose-400 text-center text-base"
+                >
+                  २३,७५७ पदे
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Age Limit Details -->
+        <h2
+          id="age-limit"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          🔹 वयोमर्यादा (Age Limit)
+        </h2>
+        <div
+          class="bg-bg-surface border border-border-card p-5 rounded-2xl text-sm space-y-3 mb-6"
+        >
+          <p class="m-0 text-text-main font-bold">
+            उमेदवाराचे वय: <span class="text-primary">१८ ते ४० वर्षे</span>
+          </p>
+          <ul class="list-disc pl-6 space-y-1.5 text-text-muted m-0">
+            <li>
+              <strong>SC / ST प्रवर्ग:</strong> ०५ वर्षे सूट (१८ ते ४५ वर्षे)
+            </li>
+            <li>
+              <strong>OBC प्रवर्ग:</strong> ०३ वर्षे सूट (१८ ते ४३ वर्षे)
+            </li>
+            <li>
+              <strong>PwBD (दिव्यांग) प्रवर्ग:</strong> १० वर्षे सूट
+            </li>
+          </ul>
+        </div>
+
+        <!-- Application Fee Details -->
+        <h2
+          id="application-fee"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          🔹 अर्ज शुल्क (Application Fee)
+        </h2>
+        <div
+          class="bg-bg-surface border border-border-card p-5 rounded-2xl text-sm space-y-2 mb-6"
+        >
+          <ul class="list-disc pl-6 space-y-1.5 text-text-main font-medium m-0">
+            <li>
+              <strong>UR / OBC / EWS पुरुष उमेदवार:</strong>
+              <span class="text-primary font-bold">₹१००/-</span>
+            </li>
+            <li>
+              <strong>SC / ST / PwBD / सर्व महिला उमेदवार:</strong>
+              <span class="text-emerald-600 dark:text-emerald-400 font-bold"
+                >फी माफ (₹०/-)</span
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Important Dates & Links Table -->
+        <h2
+          id="important-dates"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          {
+            translateMarathi(
+              "महत्त्वाच्या तारखा आणि लिंक्स (Important Dates & Links)",
+            )
+          }
+        </h2>
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="bg-primary/10">
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >तपशील (Event)</th
+                >
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >तारीख / दुवा (Date / Link)</th
+                >
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >Online एक-वेळ नोंदणी करण्याची तारीख (One-Time Registration)</td
+                >
+                <td
+                  class="p-3 border border-border-card text-text-main font-bold whitespace-nowrap"
+                >
+                  ३१ ऑगस्ट ते १९ सप्टेंबर २०२६
+                </td>
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >Online अर्ज करण्याची अंतिम तारीख (Application Last Date)</td
+                >
+                <td
+                  class="p-3 border border-border-card text-rose-600 dark:text-rose-400 font-extrabold whitespace-nowrap"
+                >
+                  ०२ सप्टेंबर ते २१ सप्टेंबर २०२६ (संध्याकाळी ०५:०० PM)
+                </td>
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >अर्ज दुरुस्ती / एडिट मुदत (Correction Window)</td
+                >
+                <td
+                  class="p-3 border border-border-card text-text-main font-bold"
+                >
+                  २२ ते २४ सप्टेंबर २०२६
+                </td>
+              </tr>
+              <tr class="bg-emerald-500/5">
+                <td
+                  class="p-3 border border-border-card text-text-main font-bold"
+                  >ऑनलाईन अर्ज लिंक (Direct Apply Portal Link)</td
+                >
+                <td class="p-3 border border-border-card">
+                  <a
+                    href={applyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-colors border-none w-full sm:w-auto shadow-xs no-underline"
+                  >
+                    <HiOutlineCursorArrowRays className="text-base shrink-0" /> India Post GDS Apply Online Link
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >अधिकृत संकेतस्थळ (Official Website)</td
+                >
+                <td class="p-3 border border-border-card">
+                  <a
+                    href="https://indiapost.gov.in/gdsonlineengagement"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider rounded-xl transition-colors border border-primary/20 w-full sm:w-auto no-underline"
+                  >
+                    <HiOutlineDocumentText className="text-base shrink-0" /> indiapost.gov.in
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- FAQ Section -->
+        <h2
+          id="faq"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          वारंवार विचारले जाणारे प्रश्न (FAQ)
+        </h2>
+        <div class="space-y-4 mt-3 mb-8">
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+            <h3 class="text-base font-bold text-text-main mb-2">
+              प्रश्न १: ऑनलाईन अर्ज करण्याची शेवटची तारीख कोणती आहे?
+            </h3>
+            <p class="text-text-muted text-xs m-0">
+              उत्तर: ऑनलाईन अर्ज सादर करण्याची अंतिम तारीख २१ सप्टेंबर २०२६ (संध्याकाळी ०५:०० वाजेपर्यंत) आहे.
+            </p>
+          </div>
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+            <h3 class="text-base font-bold text-text-main mb-2">
+              प्रश्न २: या भरतीसाठी कोणतीही परीक्षा घेतली जाते का?
+            </h3>
+            <p class="text-text-muted text-xs m-0">
+              उत्तर: नाही, या भरतीसाठी कोणतीही लेखी परीक्षा घेतली जात नाही. १०वीच्या गुणांच्या मेरिट लिस्टवर थेट निवड केली जाते.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= LANGUAGE SEPARATOR ================= -->
+    <div
+      class="my-16 border-t-2 border-dashed border-border-card flex items-center justify-center relative"
+    >
+      <span
+        class="absolute bg-bg-base px-8 py-2 text-base sm:text-lg font-extrabold uppercase tracking-widest text-primary border border-border-card rounded-full shadow-md"
+      >
+        English Summary
+      </span>
+    </div>
+
+    <!-- ================= ENGLISH VERSION ================= -->
+    <div id="english-version" class="opacity-95">
+      <div class="space-y-6 text-text-main leading-relaxed">
+        <h2 id="main-keyword-en" class="text-2xl font-bold mt-2">
+          India Post GDS Recruitment 2026 Notification (23,757 Vacancies)
+        </h2>
+
+        <div class="mb-6 space-y-4">
+          <p>
+            <strong>India Post GDS Bharti 2026:</strong> Department of Posts (India Post) has released a official mega notification for <strong>23,757 Gramin Dak Sevak (GDS), Branch Postmaster (BPM), and Assistant Branch Postmaster (ABPM) posts</strong> across various postal circles in India.
+          </p>
+          <p>
+            Candidates who have passed <strong>10th Standard (Matriculation)</strong> with Mathematics and English as compulsory or elective subjects are eligible to apply. No written examination will be conducted; candidate selection is strictly based on 10th Standard merit marks.
+          </p>
+          <hr class="border-border-card my-6" />
+        </div>
+
+        <!-- Key Information Grid (English) -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
+          <div
+            class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3 shadow-xs"
+          >
+            <HiOutlineBuildingOffice
+              className="text-primary text-2xl shrink-0 mt-0.5"
+            />
+            <div>
+              <span
+                class="text-xs text-text-muted block uppercase font-bold tracking-wider"
+                >Organization</span
+              >
+              <span class="text-text-main font-semibold text-sm"
+                >Department of Posts (India Post)</span
+              >
+            </div>
+          </div>
+          <div
+            class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3 shadow-xs"
+          >
+            <HiOutlineMapPin
+              className="text-primary text-2xl shrink-0 mt-0.5"
+            />
+            <div>
+              <span
+                class="text-xs text-text-muted block uppercase font-bold tracking-wider"
+                >Total Vacancies</span
+              >
+              <span class="text-text-main font-bold text-sm text-primary"
+                >23,757 Posts (GDS/BPM/ABPM)</span
+              >
+            </div>
+          </div>
+          <div
+            class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3 shadow-xs"
+          >
+            <HiOutlineAcademicCap
+              className="text-primary text-2xl shrink-0 mt-0.5"
+            />
+            <div>
+              <span
+                class="text-xs text-text-muted block uppercase font-bold tracking-wider"
+                >Educational Qualification</span
+              >
+              <span class="text-text-main font-semibold text-sm"
+                >10th Standard Pass</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Educational Qualification (English) -->
+        <h2
+          id="en-qualification"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          🔹 Eligibility Criteria & Educational Qualification
+        </h2>
+        <div
+          class="bg-bg-surface border border-border-card p-5 rounded-2xl text-sm space-y-3 mb-6"
+        >
+          <ul class="list-disc pl-6 space-y-2 text-text-main font-medium m-0">
+            <li>
+              <strong>Educational Qualification:</strong> Secondary School Examination (10th Standard) pass certificate with passing marks in Mathematics and English (having been studied as compulsory or elective subjects) conducted by any recognized Board of School Education.
+            </li>
+            <li>
+              <strong>Local Language Proficiency:</strong> Candidate should have studied the local language (Marathi for Maharashtra Circle) at least up to 10th standard.
+            </li>
+            <li>
+              <strong>Computer Knowledge:</strong> Basic computer training certificate of at least 60 days duration from any Computer Training Institute or computer as a subject in Class X/XII.
+            </li>
+            <li>
+              <strong>Other Requirements:</strong> Knowledge of Cycling is required for all GDS posts.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Direct Link Table (English) -->
+        <h2
+          id="en-important-dates"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          Application Schedule & Important Direct Links
+        </h2>
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="bg-primary/10">
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >Event / Item</th
+                >
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >Details</th
+                >
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >Post Name</td
+                >
+                <td
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >Gramin Dak Sevak (GDS / BPM / ABPM)</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >Total Vacancies</td
+                >
+                <td class="p-3 border border-border-card font-bold text-primary"
+                  >23,757 Posts</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >Qualification</td
+                >
+                <td
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >10th Standard Pass</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >One-Time Registration Window</td
+                >
+                <td
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >31st August to 19th September 2026</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >Online Application Last Date</td
+                >
+                <td
+                  class="p-3 border border-border-card font-bold text-rose-600 dark:text-rose-400"
+                  >21st September 2026 (05:00 PM)</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >Application Fee</td
+                >
+                <td
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >₹100 for UR/OBC/EWS Male | Fee Exempted for All Female / SC / ST / PwD</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >Direct Online Apply Link</td
+                >
+                <td class="p-3 border border-border-card">
+                  <a
+                    href={applyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-all no-underline"
+                  >
+                    <HiOutlineCursorArrowRays className="text-base shrink-0" /> Apply Online Portal
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- FAQ Section (English) -->
+        <h2
+          id="en-faq"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          Frequently Asked Questions (FAQ)
+        </h2>
+        <div class="space-y-4 mt-3 mb-8">
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+            <h3 class="text-base font-bold text-text-main mb-2">
+              Q1: What is the last date to apply online for India Post GDS 2026?
+            </h3>
+            <p class="text-text-muted text-xs m-0">
+              Answer: The last date to submit online applications is 21st September 2026 (up to 05:00 PM).
+            </p>
+          </div>
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+            <h3 class="text-base font-bold text-text-main mb-2">
+              Q2: Is there any written exam for India Post GDS Recruitment?
+            </h3>
+            <p class="text-text-muted text-xs m-0">
+              Answer: No written exam is conducted. Candidates are shortlisted automatically based on 10th standard merit marks.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </article>
+</Layout>

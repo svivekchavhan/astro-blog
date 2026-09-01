@@ -23,6 +23,24 @@ const canonicalURL = "https://mahasandhi.in/mega-recruitment";
 // Realistic mega recruitment campaigns for 2026 based on the actual article base
 const recruitments = [
   {
+    id: "india-post-gds-recruitment-2026",
+    title: "भारतीय डाक विभागात GDS पदांच्या २३,७५७ जागांसाठी मेगाभरती २०२६: ऑनलाईन अर्ज सुरू",
+    organisation: "Department of Posts (India Post)",
+    category: "central",
+    vacancies: "23,757 Posts",
+    qualification: "10th Pass",
+    status: "apply-now",
+    lastDate: "September 21, 2026",
+    ageLimit: "18 to 40 years (SC/ST: +5 yrs, OBC: +3 yrs)",
+    appFee: "General/OBC/EWS Male: ₹100 | SC/ST/Female/PwD: Free",
+    salary: "TRCA Pay Scale for BPM / ABPM / GDS",
+    syllabus: "No Written Exam - Selection strictly based on 10th Standard Merit Marks.",
+    applyLink: "/india-post-gds-recruitment-2026",
+    notifLink: "/india-post-gds-recruitment-2026",
+    summaryMr: "भारतीय टपाल विभागात २३,७५७ ग्रामीण डाक सेवक (GDS/BPM/ABPM) पदांची भरती जाहिरात प्रसिद्ध. १०वी उत्तीर्ण पात्र (कोणतीही परीक्षा नाही - १०वी गुणवत्तेवर थेट निवड). ऑनलाईन नोंदणी: ३१ ऑगस्ट ते १९ सप्टेंबर २०२६. अर्ज अंतिम तारीख: २१ सप्टेंबर २०२६.",
+    summaryEn: "Department of Posts (India Post) invites online applications for 23,757 Gramin Dak Sevak (GDS), BPM, and ABPM positions. 10th Standard Pass eligible with no written exam (selection via 10th merit). Apply online from 31 August to 21 September 2026."
+  },
+  {
     id: "ibps-csa-clerk-recruitment-2026",
     title: "IBPS क्लर्क (CSA-XVI) ११,४०३ जागांची भरती २०२६: ऑनलाईन अर्ज मुदतवाढ २८ ऑगस्ट",
     organisation: "Institute of Banking Personnel Selection (IBPS)",
@@ -133,15 +151,20 @@ const recruitments = [
 ];
 
 // Helper to determine if recruitment application last date has NOT expired yet
-const currentDateThreshold = new Date("2026-08-22T00:00:00");
-
 function isRecruitmentActive(job: typeof recruitments[0]): boolean {
   if (job.status === "closed" || job.status === "declared") return false;
   if (!job.lastDate || job.lastDate === "Result Out") return false;
   
-  const parsedDate = new Date(job.lastDate);
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  const dateStr = (job as any).extendedDate || job.lastDate;
+  const parsedDate = new Date(dateStr);
+  
   if (isNaN(parsedDate.getTime())) return true;
-  return parsedDate >= currentDateThreshold;
+  parsedDate.setHours(23, 59, 59, 999);
+  
+  return parsedDate >= today;
 }
 
 // Separate recruitments into active vs expired/closed
