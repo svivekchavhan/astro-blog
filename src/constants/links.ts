@@ -21,6 +21,12 @@ export const OFFICIAL_LINKS = {
   whatsappChannel: "https://whatsapp.com/channel/0029VbDPyOQEKyZFrclY0l1w",
   whatsappGroup: "https://whatsapp.com/channel/0029VbDPyOQEKyZFrclY0l1w",
 
+  // India Post GDS Link
+  indiaPostGdsPortal: "https://indiapost.gov.in/gdsonlineengagement",
+
+  // Chhatrapati Sambhajinagar MC Portal Link
+  csmcRecruitmentPortal: "https://chhsambhajinagarmc.org/recruitment-2026",
+
   // Main Site URL
   mainSite: "https://mahasandhi.in",
 };

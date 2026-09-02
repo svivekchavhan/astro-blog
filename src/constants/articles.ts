@@ -15,6 +15,22 @@ export interface ArticleMeta {
 export const articlesRegistry: ArticleMeta[] = [
   {
     titleEn:
+      "India Post GDS Recruitment 2026: Apply Online for 23,757 Vacancies",
+    titleMr:
+      "भारतीय डाक विभागात GDS पदांच्या २३,७५७ जागांसाठी मेगाभरती २०२६: ऑनलाईन अर्ज सुरू!",
+    slug: "/india-post-gds-recruitment-2026",
+    category: "Central Govt",
+    date: "September 01, 2026",
+    image:
+      "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=1200",
+    postName: "Gramin Dak Sevak (GDS / BPM / ABPM)",
+    descriptionMr:
+      "भारतीय टपाल विभागात २३,७५७ ग्रामीण डाक सेवक पदांची मेगाभरती. १०वी पास पात्र. कोणतीही परीक्षा नाही - १०वी मेरिटवर निवड.",
+    vacancies: "23,757",
+    lastDate: "21 Sep 2026",
+  },
+  {
+    titleEn:
       "CTET 2026 Online Application Window Reopened: Apply for 22nd Edition Till 01 September",
     titleMr:
       "CTET २०२६ ऑनलाईन अर्ज पुन्हा सुरू: २२ व्या केंद्रीय शिक्षक पात्रता परीक्षेसाठी ०१ सप्टेंबर पर्यंत मुदत!",

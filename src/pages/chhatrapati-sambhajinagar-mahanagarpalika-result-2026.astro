@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { OFFICIAL_LINKS } from "../constants/links";
 import {
   HiOutlineCalendarDays,
   HiOutlineCursorArrowRays,
@@ -17,16 +18,19 @@ import {
   HiOutlineEnvelope,
   HiOutlineBriefcase,
   HiOutlineCheckCircle,
+  HiOutlineShieldCheck,
+  HiOutlineExclamationTriangle,
 } from "react-icons/hi2";
 
 const title =
-  "छत्रपती संभाजीनगर महानगरपालिका भरती निकाल २०२६: ५ विविध पदांचे निकाल व निवड यादी जाहीर!";
+  "छत्रपती संभाजीनगर महानगरपालिका भरती निकाल २०२६: २२२ पदांच्या IBPS परीक्षेतील ५ पदांचा निकाल जाहीर (अधिकृत प्रेस नोट)";
 const description =
-  "Chhatrapati Sambhajinagar Municipal Corporation Result 2026: छत्रपती संभाजीनगर महानगरपालिका (CSMC) भरती परीक्षा निकाल chhsambhajinagarmc.org वर प्रसिद्ध. स्वच्छता निरीक्षक, ट्रेसर, पशुधन पर्यवेक्षक, अग्निशामक व इतर ५ पदांचे गुण व गुणवत्ता यादी (Merit List PDF) डाऊनलोड करा.";
+  "Chhatrapati Sambhajinagar Municipal Corporation Result 2026: छत्रपती संभाजीनगर मनपा २२२ पदांच्या भरतीपैकी उपअग्निशमन केंद्र अधिकारी, सहाय्यक सुरक्षा अधिकारी, पशुधन पर्यवेक्षक, उद्यान सहाय्यक व अनुरेखक ५ पदांचा IBPS कडून निकाल जाहीर. chhsambhajinagarmc.org/recruitment-2026 वरून गुणवत्ता यादी डाऊनलोड करा.";
 const canonicalURL =
   "https://mahasandhi.in/chhatrapati-sambhajinagar-mahanagarpalika-result-2026";
-const date = "August 24, 2026";
+const date = "August 28, 2026";
 const category = "Result";
+const resultUrl = OFFICIAL_LINKS.csmcRecruitmentPortal;
 ---
 
 <Layout
@@ -47,17 +51,17 @@ const category = "Result";
     <div class="mb-8">
       <div class="flex items-center gap-3 mb-6 flex-wrap">
         <span
-          class="bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-emerald-500/20 flex items-center gap-1.5"
+          class="bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-emerald-500/20 flex items-center gap-1.5 shadow-xs"
         >
           <HiOutlineCheckBadge className="text-sm" />
-          {category} (निकाल जाहीर)
+          {category} (प्रेस नोट प्रसिद्ध)
         </span>
         <span
           class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-primary/20 flex items-center gap-1.5"
         >
           <HiOutlineMapPin className="text-sm" /> छत्रपती संभाजीनगर (Chhatrapati Sambhajinagar)
         </span>
-        <span class="text-text-muted text-sm">• {date}</span>
+        <span class="text-text-muted text-sm font-semibold">• दिनांक: {date}</span>
       </div>
 
       <h1
@@ -66,7 +70,7 @@ const category = "Result";
         {title}
       </h1>
       <p
-        class="text-text-muted text-lg leading-relaxed border-l-4 border-emerald-500 pl-6 py-2 italic"
+        class="text-text-muted text-base sm:text-lg leading-relaxed border-l-4 border-emerald-500 pl-4 sm:pl-6 py-2 italic font-medium"
       >
         {description}
       </p>
@@ -74,39 +78,51 @@ const category = "Result";
 
     <!-- Quick Highlights Banner -->
     <div
-      class="bg-gradient-to-br from-emerald-500/10 via-teal-500/5 to-transparent border border-emerald-500/20 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 mb-8 sm:mb-12 shadow-xs"
+      class="bg-gradient-to-br from-emerald-500/10 via-teal-500/5 to-transparent border border-emerald-500/20 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 mb-8 shadow-xs"
     >
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 text-center">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 text-center">
         <div
-          class="p-3 bg-bg-surface/80 backdrop-blur-xs rounded-xl sm:rounded-2xl border border-border-card flex flex-col justify-center items-center"
+          class="p-3.5 bg-bg-surface/80 backdrop-blur-xs rounded-xl sm:rounded-2xl border border-border-card flex flex-col justify-center items-center"
         >
           <span
             class="text-[0.65rem] sm:text-xs text-text-muted block uppercase font-bold tracking-wider mb-1"
-            >प्राधिकरण (Authority)</span
+            >भरती परीक्षा संस्था</span
           >
-          <span class="text-sm sm:text-base md:text-lg font-black text-primary"
-            >छत्रपती संभाजीनगर मनपा</span
+          <span class="text-sm sm:text-base font-black text-primary"
+            >IBPS (ऑनलाइन CBT परीक्षा)</span
           >
         </div>
         <div
-          class="p-3 bg-bg-surface/80 backdrop-blur-xs rounded-xl sm:rounded-2xl border border-border-card flex flex-col justify-center items-center"
+          class="p-3.5 bg-bg-surface/80 backdrop-blur-xs rounded-xl sm:rounded-2xl border border-border-card flex flex-col justify-center items-center"
         >
           <span
             class="text-[0.65rem] sm:text-xs text-text-muted block uppercase font-bold tracking-wider mb-1"
-            >निकाल घोषित पदे (Declared Posts)</span
+            >एकूण संवर्ग व पदे</span
           >
           <span
-            class="text-lg sm:text-xl md:text-2xl font-black text-emerald-600 dark:text-emerald-400"
-            >5 Posts</span
+            class="text-sm sm:text-base font-black text-text-main"
+            >११ संवर्ग (एकूण २२२ पदे)</span
+          >
+        </div>
+        <div
+          class="p-3.5 bg-bg-surface/80 backdrop-blur-xs rounded-xl sm:rounded-2xl border border-border-card flex flex-col justify-center items-center"
+        >
+          <span
+            class="text-[0.65rem] sm:text-xs text-text-muted block uppercase font-bold tracking-wider mb-1"
+            >निकाल घोषित पदे</span
+          >
+          <span
+            class="text-base sm:text-xl font-black text-emerald-600 dark:text-emerald-400"
+            >५ पदे (उर्वरित ६ पदे लवकरच)</span
           >
         </div>
       </div>
     </div>
 
     <!-- Direct Action Banner -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12 not-prose">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 not-prose">
       <a
-        href="https://chhsambhajinagarmc.org/recruitment-2026"
+        href={resultUrl}
         target="_blank"
         rel="noopener noreferrer"
         class="group p-5 bg-gradient-to-br from-emerald-600 to-teal-700 text-white rounded-2xl transition-all duration-300 shadow-md hover:shadow-emerald-500/20 flex items-center justify-between no-underline"
@@ -114,17 +130,17 @@ const category = "Result";
         <div>
           <span
             class="text-[0.65rem] uppercase font-extrabold tracking-wider bg-white/20 px-2.5 py-0.5 rounded text-white block w-fit mb-1"
-            >अधिकृत निकाल पोर्टल (Official Result Link)</span
+            >CSMC Official Result Portal</span
           >
           <h3
-            class="text-base font-extrabold text-white m-0 flex items-center gap-1.5"
+            class="text-base sm:text-lg font-extrabold text-white m-0 flex items-center gap-1.5"
           >
-            CSMC निकाल व गुणवत्ता यादी डाउनलोड करा <HiOutlineArrowTopRightOnSquare
-              className="text-lg"
+            CSMC निकाल PDF डाऊनलोड करा <HiOutlineArrowTopRightOnSquare
+              className="text-xl shrink-0"
             />
           </h3>
-          <p class="text-xs text-white/80 m-0 mt-0.5">
-            chhsambhajinagarmc.org/recruitment-2026 वर PDF उपलब्ध
+          <p class="text-xs text-white/90 m-0 mt-1">
+            chhsambhajinagarmc.org/recruitment-2026 वर निकाल प्रसिद्ध
           </p>
         </div>
         <div
@@ -135,7 +151,7 @@ const category = "Result";
       </a>
 
       <div
-        class="p-5 bg-bg-surface border border-border-card rounded-2xl flex items-center gap-4"
+        class="p-5 bg-bg-surface border border-border-card rounded-2xl flex items-center gap-4 shadow-xs"
       >
         <div
           class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0"
@@ -145,20 +161,20 @@ const category = "Result";
         <div>
           <span
             class="text-xs text-text-muted font-bold uppercase tracking-wider block"
-            >प्राधिकरणाचे नाव (Authority Name)</span
+            >प्राधिकरणाचे नाव</span
           >
           <h4 class="text-sm font-bold text-text-main m-0">
-            छत्रपती संभाजीनगर शहर महानगरपालिका
+            छत्रपती संभाजीनगर महानगरपालिका
           </h4>
-          <p class="text-xs text-text-muted m-0">
-            टाऊन हॉल, छत्रपती संभाजीनगर, महाराष्ट्र
+          <p class="text-xs text-text-muted m-0 mt-0.5">
+            टाऊन हॉल, छत्रपती संभाजीनगर (प्रेस नोट दि. २८/०८/२०२६)
           </p>
         </div>
       </div>
     </div>
 
     <!-- Quick Language Navigation Links -->
-    <div class="flex gap-4 mb-8">
+    <div class="flex flex-wrap items-center gap-4 mb-8">
       <a
         href="#marathi-version"
         class="text-primary font-bold text-sm hover:underline"
@@ -174,42 +190,56 @@ const category = "Result";
 
     <!-- ================= MARATHI VERSION ================= -->
     <div id="marathi-version">
-      <div class="space-y-8 text-text-main leading-relaxed">
+      <div class="space-y-6 text-text-main leading-relaxed">
         <h2
           id="overview-mr"
-          class="text-2xl font-bold border-l-4 border-primary pl-3"
+          class="text-xl md:text-2xl font-black text-text-main mt-2 border-l-4 border-primary pl-3"
         >
-          छत्रपती संभाजीनगर महानगरपालिका ५ पदांचा ऑनलाईन परीक्षा निकाल जाहीर
-          सूचना
+          📢 छत्रपती संभाजीनगर मनपा भरती: IBPS परीक्षेतील ५ पदांचा निकाल जाहीर (अधिकृत प्रेस नोट)
         </h2>
+
         <p>
-          <strong
-            >छत्रपती संभाजीनगर महानगरपालिका (Chhatrapati Sambhajinagar Municipal
-            Corporation - CSMC)</strong
-          > यांच्या आस्थापनेवरील 'गट-क' (Group C) संवर्गातील विविध २२२ पदांच्या सरळसेवा
-          भरती प्रक्रियेअंतर्गत आयोजित ऑनलाईन परीक्षेचा निकाल व <strong
-            >५ प्रमुख पदांची गुणवत्ता व गुणपत्रक यादी (Merit List & Marks PDF)</strong
-          > अधिकृत संकेतस्थळावर जाहीर करण्यात आली आहे.
+          <strong>छत्रपती संभाजीनगर महानगरपालिका (Chhatrapati Sambhajinagar Municipal Corporation - CSMC):</strong> मनपाच्या आस्थापनेवरील गट-क मधील एकूण <strong>११ विविध संवर्गातील सरळसेवेच्या २२२ पदांची</strong> लेखी ऑनलाईन परीक्षा IBPS संस्थेमार्फत दिनांक <strong>०८ जुलै २०२६ ते ०९ जुलै २०२६</strong> या कालावधीत घेण्यात आली होती.
         </p>
+
         <p>
-          सदर भरती परीक्षा दिनांक <strong>०९ जुलै २०२६</strong> रोजी विविध परीक्षा
-          केंद्रांवर ऑनलाईन कॉम्प्युटर बेस्ड टेस्ट (CBT) पद्धतीने पार पडली होती. परीक्षेमध्ये
-          उमेदवारांनी प्राप्त केलेले गुण व निवड याद्या अधिकृत पोर्टल <code
-            >chhsambhajinagarmc.org/recruitment-2026</code
-          > वर प्रसिद्ध करण्यात आल्या आहेत.
+          त्यापैकी <strong>IBPS संस्थेने ०५ पदांचा निकाल</strong> महानगरपालिकेस सादर केला असून तो मनपाच्या अधिकृत संकेतस्थळावर प्रसिद्ध करण्यात आला आहे.
         </p>
+
+        <!-- Official Press Note Card -->
+        <div
+          class="bg-bg-surface border-2 border-primary/30 rounded-2xl p-6 shadow-sm my-6"
+        >
+          <div class="flex items-center gap-2 mb-3 text-primary font-black text-base">
+            <HiOutlineMegaphone className="text-xl shrink-0" />
+            <span>अधिकृत प्रेस नोट सारांश (दिनांक: २८/०८/२०२६)</span>
+          </div>
+          <div class="space-y-3 text-sm text-text-main font-medium">
+            <p>
+              <strong>१. निकाल जाहीर झालेली ५ पदे:</strong> उपअग्निशमन केंद्र अधिकारी, सहाय्यक सुरक्षा अधिकारी, पशुधन पर्यवेक्षक, उद्यान सहाय्यक व अनुरेखक.
+            </p>
+            <p>
+              <strong>२. उर्वरित ०६ पदांचा निकाल:</strong> IBPS कंपनीकडून निकाल प्राप्त झाल्यानंतर लगेच महानगरपालिकेच्या संकेतस्थळावर प्रसिद्ध केला जाईल.
+            </p>
+            <p>
+              <strong>३. परीक्षा पारदर्शकता सूचना:</strong> सदर पदांची परीक्षा घेणे व निकाल तयार करून महानगरपालिकेस पाठवणे याबाबतची संपूर्ण प्रक्रिया ही IBPS संस्थेमार्फत केली जाते. IBPS कडून PDF स्वरूपात निकाल प्राप्त झाल्यानंतरच तो संकेतस्थळावर प्रसिद्ध केला जातो.
+            </p>
+            <div class="bg-amber-500/10 border border-amber-500/30 p-4 rounded-xl text-xs text-amber-700 dark:text-amber-300 font-semibold flex items-start gap-2 mt-4">
+              <HiOutlineExclamationTriangle className="text-lg shrink-0 mt-0.5" />
+              <span>
+                <strong>महत्त्वाची सावधानता:</strong> सदर प्रक्रिया पूर्णपणे पारदर्शक पद्धतीने पार पाडली जाते. उमेदवारांनी कोणत्याही आमिषाला किंवा भूलथापांना बळी पडू नये. कोणी चुकीची माहिती किंवा आमिष दाखवत असल्यास त्याची माहिती मनपास कळवावी. <em>(- रणजीत आ. पाटील, अतिरिक्त आयुक्त-१)</em>
+              </span>
+            </div>
+          </div>
+        </div>
 
         <!-- Vacancy & Result Breakdown Table (Marathi) -->
         <h2
           id="vacancies-mr"
           class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
         >
-          निकाल जाहीर झालेल्या ५ पदांचा तपशील (5 Posts Result Details Table)
+          🔹 निकाल जाहीर झालेल्या ५ पदांची यादी (Declared 5 Posts Result Table)
         </h2>
-        <p class="text-sm text-text-muted mb-4">
-          छत्रपती संभाजीनगर महानगरपालिकेने ज्या ५ पदांचे निकाल जाहीर केले आहेत,
-          त्यांचा संक्षिप्त तपशील खालीलप्रमाणे आहे:
-        </p>
 
         <div class="overflow-x-auto my-6">
           <table
@@ -246,7 +276,7 @@ const category = "Result";
                 >
                 <td
                   class="p-3.5 border border-border-card font-bold text-primary"
-                  >स्वच्छता निरीक्षक (Sanitation Inspector)</td
+                  >उपअग्निशमन केंद्र अधिकारी (Sub-Fire Station Officer)</td
                 >
                 <td
                   class="p-3.5 border border-border-card text-center font-bold"
@@ -254,11 +284,11 @@ const category = "Result";
                 >
                 <td
                   class="p-3.5 border border-border-card font-black text-center text-emerald-600 dark:text-emerald-400"
-                  >गुणवत्ता यादी उपलब्ध (Declared)</td
+                  >गुणवत्ता यादी जाहीर (Declared)</td
                 >
                 <td class="p-3.5 border border-border-card text-center">
                   <a
-                    href="https://chhsambhajinagarmc.org/recruitment-2026"
+                    href={resultUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     class="text-xs font-bold text-primary hover:underline inline-flex items-center gap-1"
@@ -274,7 +304,7 @@ const category = "Result";
                 >
                 <td
                   class="p-3.5 border border-border-card font-bold text-primary"
-                  >ट्रेसर (Tracer)</td
+                  >सहाय्यक सुरक्षा अधिकारी (Assistant Security Officer)</td
                 >
                 <td
                   class="p-3.5 border border-border-card text-center font-bold"
@@ -282,11 +312,11 @@ const category = "Result";
                 >
                 <td
                   class="p-3.5 border border-border-card font-black text-center text-emerald-600 dark:text-emerald-400"
-                  >गुणवत्ता यादी उपलब्ध (Declared)</td
+                  >गुणवत्ता यादी जाहीर (Declared)</td
                 >
                 <td class="p-3.5 border border-border-card text-center">
                   <a
-                    href="https://chhsambhajinagarmc.org/recruitment-2026"
+                    href={resultUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     class="text-xs font-bold text-primary hover:underline inline-flex items-center gap-1"
@@ -310,11 +340,11 @@ const category = "Result";
                 >
                 <td
                   class="p-3.5 border border-border-card font-black text-center text-emerald-600 dark:text-emerald-400"
-                  >गुणवत्ता यादी उपलब्ध (Declared)</td
+                  >गुणवत्ता यादी जाहीर (Declared)</td
                 >
                 <td class="p-3.5 border border-border-card text-center">
                   <a
-                    href="https://chhsambhajinagarmc.org/recruitment-2026"
+                    href={resultUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     class="text-xs font-bold text-primary hover:underline inline-flex items-center gap-1"
@@ -330,7 +360,7 @@ const category = "Result";
                 >
                 <td
                   class="p-3.5 border border-border-card font-bold text-primary"
-                  >अग्निशामक (Fireman / Fire Operator)</td
+                  >उद्यान सहाय्यक (Horticulture Assistant)</td
                 >
                 <td
                   class="p-3.5 border border-border-card text-center font-bold"
@@ -338,11 +368,11 @@ const category = "Result";
                 >
                 <td
                   class="p-3.5 border border-border-card font-black text-center text-emerald-600 dark:text-emerald-400"
-                  >गुणवत्ता यादी उपलब्ध (Declared)</td
+                  >गुणवत्ता यादी जाहीर (Declared)</td
                 >
                 <td class="p-3.5 border border-border-card text-center">
                   <a
-                    href="https://chhsambhajinagarmc.org/recruitment-2026"
+                    href={resultUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     class="text-xs font-bold text-primary hover:underline inline-flex items-center gap-1"
@@ -358,7 +388,7 @@ const category = "Result";
                 >
                 <td
                   class="p-3.5 border border-border-card font-bold text-primary"
-                  >रोखपाल / सहाय्यक तांत्रिक पदे (Cashier / Technical Posts)</td
+                  >अनुरेखक (Tracer)</td
                 >
                 <td
                   class="p-3.5 border border-border-card text-center font-bold"
@@ -366,11 +396,11 @@ const category = "Result";
                 >
                 <td
                   class="p-3.5 border border-border-card font-black text-center text-emerald-600 dark:text-emerald-400"
-                  >गुणवत्ता यादी उपलब्ध (Declared)</td
+                  >गुणवत्ता यादी जाहीर (Declared)</td
                 >
                 <td class="p-3.5 border border-border-card text-center">
                   <a
-                    href="https://chhsambhajinagarmc.org/recruitment-2026"
+                    href={resultUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     class="text-xs font-bold text-primary hover:underline inline-flex items-center gap-1"
@@ -388,16 +418,15 @@ const category = "Result";
           id="how-to-check-mr"
           class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
         >
-          छत्रपती संभाजीनगर मनपा निकाल डाऊनलोड कसा करावा? (Step-by-Step Guide)
+          🔹 छत्रपती संभाजीनगर मनपा निकाल डाऊनलोड कसा करावा? (Step-by-Step Guide)
         </h2>
         <div
-          class="bg-bg-surface border border-border-card p-6 rounded-2xl text-sm space-y-4"
+          class="bg-bg-surface border border-border-card p-6 rounded-2xl text-sm space-y-3 mb-6"
         >
-          <ol class="list-decimal pl-5 space-y-2.5 text-text-main">
+          <ol class="list-decimal pl-5 space-y-2.5 text-text-main font-medium m-0">
             <li>
-              सर्वप्रथम छत्रपती संभाजीनगर महानगरपालिकेच्या अधिकृत संकेतस्थळाला
-              भेट द्या: <a
-                href="https://chhsambhajinagarmc.org/recruitment-2026"
+              सर्वप्रथम छत्रपती संभाजीनगर महानगरपालिकेच्या अधिकृत भरती पोर्टलला भेट द्या: <a
+                href={resultUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 class="text-primary font-bold hover:underline"
@@ -405,53 +434,16 @@ const category = "Result";
               >
             </li>
             <li>
-              होमपेजवरील <strong>"Recruitment 2026 / निकाल"</strong> या टॅबवर क्लिक
-              करा.
+              होमपेजवरील <strong>"Recruitment 2026 / निकाल"</strong> टॅबवर जा.
             </li>
             <li>
-              तुमच्या संबंधित पदाच्या <strong>"Post-wise Merit List PDF"</strong
-              > लिंकवर क्लिक करा.
+              तुमच्या संबंधित पदाच्या (उदा. उपअग्निशमन केंद्र अधिकारी, सहाय्यक सुरक्षा अधिकारी, पशुधन पर्यवेक्षक, उद्यान सहाय्यक किंवा अनुरेखक) <strong>"Merit List PDF"</strong> वर क्लिक करा.
             </li>
-            <li>स्क्रीनवर गुणवत्ता यादीची PDF फाईल उघडेल.</li>
+            <li>स्क्रीनवर गुण व निवड यादीची PDF फाईल डाऊनलोड होईल.</li>
             <li>
-              उदा. Windows वर <code>Ctrl + F</code> दाबून तुमचा Roll Number किंवा
-              तुमचे नाव सर्च करून गुण तपासा.
+              <code>Ctrl + F</code> दाबून तुमचा Roll Number किंवा तुमचे नाव सर्च करा.
             </li>
-            <li>भविष्यातील संदर्भासाठी PDF फाईल डाऊनलोड व सेव्ह करून ठेवा.</li>
           </ol>
-        </div>
-
-        <!-- Document Verification Section -->
-        <h2
-          id="verification-mr"
-          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
-        >
-          कागदपत्र पडताळणी (Document Verification) सूचना
-        </h2>
-        <div
-          class="bg-gradient-to-br from-amber-500/10 via-amber-500/5 to-transparent border border-amber-500/20 rounded-2xl p-6 my-6"
-        >
-          <ul class="space-y-3 text-sm text-text-main m-0 list-none p-0">
-            <li class="flex items-start gap-3">
-              <span class="w-2 h-2 rounded-full bg-amber-500 mt-2 shrink-0"
-              ></span>
-              <span
-                ><strong>मूळ कागदपत्रे तयार ठेवा:</strong> गुणवत्तेनुसार पात्र ठरलेल्या
-                सर्व उमेदवारांनी आपले सर्व शैक्षणिक गुणपत्रके, सनद, जातीचे प्रमाणपत्र,
-                नॉन-क्रिमीलेयर (लागू असल्यास), अधिवास प्रमाणपत्र (Domicile) व ओळखपत्र
-                मूळ प्रतीसह तयार ठेवावीत.</span
-              >
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="w-2 h-2 rounded-full bg-amber-500 mt-2 shrink-0"
-              ></span>
-              <span
-                ><strong>स्वतंत्र निमंत्रण पत्र / ई-मेल:</strong> कागदपत्र पडताळणीचे
-                ठिकाण व दिनांक महापालिकेच्या पोर्टलवर आणि नोंदणीकृत ई-मेलवर लवकरच
-                पाठवण्यात येईल.</span
-              >
-            </li>
-          </ul>
         </div>
 
         <!-- FAQ Section (Marathi) -->
@@ -464,67 +456,22 @@ const category = "Result";
         <div class="space-y-4 mt-3 mb-8">
           <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
             <h3 class="text-base font-bold text-text-main mb-2">
-              प्रश्न १: छत्रपती संभाजीनगर मनपाने कोणत्या ५ पदांचे निकाल जाहीर
-              केले आहेत?
+              प्रश्न १: २८ ऑगस्ट २०२६ च्या प्रेस नोटनुसार कोणत्या ५ पदांचा निकाल जाहीर झाला?
             </h3>
             <p class="text-text-muted text-xs m-0">
-              उत्तर: स्वच्छता निरीक्षक, ट्रेसर, पशुधन पर्यवेक्षक, अग्निशामक आणि
-              रोखपाल/सहाय्यक तांत्रिक पदांचे निकाल जाहीर करण्यात आले आहेत.
+              उत्तर: IBPS कडून उपअग्निशमन केंद्र अधिकारी, सहाय्यक सुरक्षा अधिकारी, पशुधन पर्यवेक्षक, उद्यान सहाय्यक व अनुरेखक या ५ पदांचा निकाल जाहीर करण्यात आला आहे.
             </p>
           </div>
           <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
             <h3 class="text-base font-bold text-text-main mb-2">
-              प्रश्न २: निकाल कुठे व कसा पाहायचा?
+              प्रश्न २: उर्वरित ६ पदांचा निकाल कधी जाहीर होणार?
             </h3>
             <p class="text-text-muted text-xs m-0">
-              उत्तर: उमेदवार अधिकृत संकेतस्थळ
-              chhsambhajinagarmc.org/recruitment-2026 वर जाऊन थेट निकाल PDF
-              डाउनलोड करू शकतात.
-            </p>
-          </div>
-          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
-            <h3 class="text-base font-bold text-text-main mb-2">
-              प्रश्न ३: पुढील टप्पा काय असेल?
-            </h3>
-            <p class="text-text-muted text-xs m-0">
-              उत्तर: गुणवत्ता यादीनुसार निवड झालेल्या उमेदवारांची मूळ कागदपत्र
-              पडताळणी (Document Verification) केली जाईल.
+              उत्तर: IBPS संस्थेकडून उर्वरित ६ पदांचा निकाल PDF स्वरूपात प्राप्त होताच मनपाच्या अधिकृत संकेतस्थळावर प्रसिद्ध केला जाईल.
             </p>
           </div>
         </div>
 
-        <!-- Call to Action -->
-        <div
-          class="bg-primary/5 border border-primary/20 p-8 rounded-3xl text-center my-8"
-        >
-          <h2
-            class="text-xl font-black text-text-main mb-4 border-none p-0 mt-0"
-          >
-            सर्व सरकारी भरती व निकाल अपडेट्ससाठी जॉईन करा!
-          </h2>
-          <p class="text-text-muted mb-6 text-sm">
-            महाराष्ट्रातील सर्व मनपा भरती व निकाल अपडेट्स थेट मोबाईलवर
-            मिळवण्यासाठी Telegram आणि WhatsApp ग्रुपला जॉईन व्हा.
-          </p>
-          <div class="flex flex-wrap justify-center gap-4">
-            <a
-              href="https://chat.whatsapp.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-600 text-white text-sm font-bold uppercase tracking-wider rounded-xl transition-colors shadow-sm no-underline"
-            >
-              WhatsApp Group
-            </a>
-            <a
-              href="https://t.me"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white text-sm font-bold uppercase tracking-wider rounded-xl transition-colors shadow-sm no-underline"
-            >
-              Telegram Channel
-            </a>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -541,18 +488,14 @@ const category = "Result";
 
     <!-- ================= ENGLISH VERSION ================= -->
     <div id="english-version" class="opacity-95">
-      <div class="space-y-8 text-text-main leading-relaxed">
+      <div class="space-y-6 text-text-main leading-relaxed">
         <!-- English Header -->
         <div class="mb-8">
           <h2 class="text-2xl md:text-3xl font-extrabold text-text-main mb-3">
-            Chhatrapati Sambhajinagar Municipal Corporation Result 2026
-            Announced for 5 Posts
+            Chhatrapati Sambhajinagar Municipal Corporation Result 2026 (Official Press Note)
           </h2>
           <p class="text-text-muted leading-relaxed italic">
-            The Chhatrapati Sambhajinagar Municipal Corporation (CSMC) has
-            officially released the exam scorecards and merit selection list for
-            5 post cadres under its recruitment 2026 drive at
-            chhsambhajinagarmc.org.
+            Official Press Note released on 28th August 2026 regarding the IBPS CBT exam results conducted for 222 vacancies across 11 Group C cadres at chhsambhajinagarmc.org.
           </p>
         </div>
 
@@ -561,27 +504,23 @@ const category = "Result";
           id="overview-en"
           class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
         >
-          CSMC Recruitment 2026 Official Result Declaration
+          CSMC Recruitment 2026 IBPS Result Update
         </h2>
         <p>
-          <strong>Chhatrapati Sambhajinagar Municipal Corporation (CSMC)</strong
-          > has published the official merit lists and candidate marks for 5 key posts
-          under the Group C recruitment drive. The online Computer Based Test (CBT)
-          was held on <strong>09 July 2026</strong>.
+          <strong>Chhatrapati Sambhajinagar Municipal Corporation (CSMC)</strong> conducted the online written exam via IBPS from <strong>08 July to 09 July 2026</strong> for 222 Group C posts across 11 cadres.
         </p>
         <p>
-          Candidates who appeared for the exam can now check their results and
-          download the merit PDF directly from the official portal <code
+          Out of 11 cadres, IBPS has submitted the merit list for <strong>05 posts</strong> which is now published on the official portal <code
             >chhsambhajinagarmc.org/recruitment-2026</code
-          >.
+          >. Results for the remaining 06 posts will be published as soon as received from IBPS.
         </p>
 
-        <!-- English Breakdown Table -->
+        <!-- Declared Posts Table (English) -->
         <h2
           id="vacancies-en"
           class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
         >
-          Post-Wise Result Status Table (5 Cadres)
+          Declared 5 Posts Result Summary Table
         </h2>
         <div class="overflow-x-auto my-6">
           <table
@@ -598,7 +537,7 @@ const category = "Result";
                 >
                 <th
                   class="p-3.5 border border-border-card font-extrabold text-center"
-                  >Group</th
+                  >Cadre Group</th
                 >
                 <th
                   class="p-3.5 border border-border-card font-extrabold text-center"
@@ -606,7 +545,7 @@ const category = "Result";
                 >
                 <th
                   class="p-3.5 border border-border-card font-extrabold text-center"
-                  >Action</th
+                  >Direct Link</th
                 >
               </tr>
             </thead>
@@ -618,7 +557,7 @@ const category = "Result";
                 >
                 <td
                   class="p-3.5 border border-border-card font-bold text-primary"
-                  >Sanitation Inspector (स्वच्छता निरीक्षक)</td
+                  >Sub-Fire Station Officer (उपअग्निशमन केंद्र अधिकारी)</td
                 >
                 <td class="p-3.5 border border-border-card text-center"
                   >Group-C</td
@@ -629,7 +568,7 @@ const category = "Result";
                 >
                 <td class="p-3.5 border border-border-card text-center">
                   <a
-                    href="https://chhsambhajinagarmc.org/recruitment-2026"
+                    href={resultUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     class="text-xs font-bold text-primary hover:underline"
@@ -644,7 +583,7 @@ const category = "Result";
                 >
                 <td
                   class="p-3.5 border border-border-card font-bold text-primary"
-                  >Tracer (ट्रेसर)</td
+                  >Assistant Security Officer (सहाय्यक सुरक्षा अधिकारी)</td
                 >
                 <td class="p-3.5 border border-border-card text-center"
                   >Group-C</td
@@ -655,7 +594,7 @@ const category = "Result";
                 >
                 <td class="p-3.5 border border-border-card text-center">
                   <a
-                    href="https://chhsambhajinagarmc.org/recruitment-2026"
+                    href={resultUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     class="text-xs font-bold text-primary hover:underline"
@@ -681,7 +620,7 @@ const category = "Result";
                 >
                 <td class="p-3.5 border border-border-card text-center">
                   <a
-                    href="https://chhsambhajinagarmc.org/recruitment-2026"
+                    href={resultUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     class="text-xs font-bold text-primary hover:underline"
@@ -696,7 +635,7 @@ const category = "Result";
                 >
                 <td
                   class="p-3.5 border border-border-card font-bold text-primary"
-                  >Fireman / Fire Operator (अग्निशामक)</td
+                  >Horticulture Assistant (उद्यान सहाय्यक)</td
                 >
                 <td class="p-3.5 border border-border-card text-center"
                   >Group-C</td
@@ -707,7 +646,7 @@ const category = "Result";
                 >
                 <td class="p-3.5 border border-border-card text-center">
                   <a
-                    href="https://chhsambhajinagarmc.org/recruitment-2026"
+                    href={resultUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     class="text-xs font-bold text-primary hover:underline"
@@ -722,7 +661,7 @@ const category = "Result";
                 >
                 <td
                   class="p-3.5 border border-border-card font-bold text-primary"
-                  >Cashier / Technical Posts (रोखपाल/तांत्रिक पदे)</td
+                  >Tracer (अनुरेखक)</td
                 >
                 <td class="p-3.5 border border-border-card text-center"
                   >Group-C</td
@@ -733,7 +672,7 @@ const category = "Result";
                 >
                 <td class="p-3.5 border border-border-card text-center">
                   <a
-                    href="https://chhsambhajinagarmc.org/recruitment-2026"
+                    href={resultUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     class="text-xs font-bold text-primary hover:underline"
@@ -774,7 +713,7 @@ const category = "Result";
                 >
                 <td class="p-3.5 border border-border-card">
                   <a
-                    href="https://chhsambhajinagarmc.org/recruitment-2026"
+                    href={resultUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-all shadow-xs no-underline"

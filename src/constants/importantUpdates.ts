@@ -22,6 +22,17 @@ export const importantUpdates: ImportantUpdate[] = [
     badgeType: "new",
   },
   {
+    id: "chhatrapati-sambhajinagar-mahanagarpalika-result-2026",
+    title:
+      "छत्रपती संभाजीनगर मनपा भरती: २२२ पदांच्या IBPS परीक्षेतील ५ पदांचा निकाल जाहीर (प्रेस नोट दि. २८/०८/२०२६)",
+    link: "/chhatrapati-sambhajinagar-mahanagarpalika-result-2026",
+    date: "August 28, 2026",
+    expiry: "2026-09-30T00:00:00.000Z",
+    show: true,
+    badge: "Press Note",
+    badgeType: "result",
+  },
+  {
     id: "ctet-2026-online-application-reopened",
     title:
       "CTET २०२६: २२ व्या केंद्रीय शिक्षक पात्रता परीक्षेचे ऑनलाईन अर्ज पुन्हा सुरू (०१ सप्टेंबर पर्यंत मुदतवाढ)",
