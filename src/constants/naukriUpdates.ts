@@ -11,6 +11,15 @@ export interface NaukriUpdate {
 
 export const naukriUpdates: NaukriUpdate[] = [
   {
+    titleEn: "Sindhudurg DCC Bank Clerk Recruitment 2026: Apply Online for 67 Vacancies",
+    titleHi: "सिंधुदुर्ग जिल्हा मध्यवर्ती बँक भरती २०२६: लिपिक ६७ जागांसाठी ऑनलाईन अर्ज सुरू",
+    date: "September 03, 2026",
+    badge: "New",
+    badgeType: "new",
+    link: "/sindhudurg-dcc-bank-clerk-recruitment-2026",
+    description: "The Sindhudurg District Central Co-operative Bank Ltd (Sindhudurg DCCB) invites online applications for 67 Clerk posts. Graduates eligible, ₹18,000 monthly stipend. Apply online by 17 September 2026."
+  },
+  {
     titleEn: "CTET 2026 Online Application Window Re-opened: Apply Till 01 September",
     titleHi: "CTET २०२६ ऑनलाईन अर्ज पुन्हा सुरू: २२ व्या परीक्षा अर्जास ०१ सप्टेंबर मुदत",
     date: "August 25, 2026",

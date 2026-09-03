@@ -15,6 +15,22 @@ export interface ArticleMeta {
 export const articlesRegistry: ArticleMeta[] = [
   {
     titleEn:
+      "Sindhudurg DCC Bank Clerk Recruitment 2026: Apply Online for 67 Vacancies",
+    titleMr:
+      "सिंधुदुर्ग जिल्हा मध्यवर्ती सहकारी बँक भरती २०२६: लिपिक ६७ पदांची सरळसेवा भरती जाहिरात प्रसिद्ध",
+    slug: "/sindhudurg-dcc-bank-clerk-recruitment-2026",
+    category: "Bank Job",
+    date: "September 03, 2026",
+    image:
+      "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200",
+    postName: "लिपिक (Clerk)",
+    descriptionMr:
+      "दि सिंधुदुर्ग जिल्हा मध्यवर्ती सहकारी बँक लि. (Sindhudurg DCCB) कडून लिपिक ६७ पदांची ऑनलाईन सरळसेवा भरती जाहीर. पदवीधरांसाठी संधी. अंतिम तारीख १७ सप्टेंबर २०२६.",
+    vacancies: "67",
+    lastDate: "17 Sep 2026",
+  },
+  {
+    titleEn:
       "India Post GDS Recruitment 2026: Apply Online for 23,757 Vacancies",
     titleMr:
       "भारतीय डाक विभागात GDS पदांच्या २३,७५७ जागांसाठी मेगाभरती २०२६: ऑनलाईन अर्ज सुरू!",
