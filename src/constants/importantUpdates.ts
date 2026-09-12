@@ -13,7 +13,7 @@ export const importantUpdates: ImportantUpdate[] = [
   {
     id: "ssc-je-recruitment-2026",
     title:
-      "🔥 SSC JE भरती २०२६: कनिष्ठ अभियंता (JE) १,७४८ जागांसाठी ऑनलाईन अर्ज सुरू (२२ सप्टेंबर मुदत)",
+      "🔥 SSC JE भरती २०२६: कनिष्ठ अभियंता (JE) १,७४८ जागांसाठी ऑनलाईन अर्ज सुरू",
     link: "/ssc-je-recruitment-2026",
     date: "September 02, 2026",
     expiry: "2026-09-23T00:00:00.000Z",

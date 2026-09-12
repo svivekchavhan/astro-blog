@@ -213,63 +213,6 @@ const category = "SSC Recruitment";
               <tr>
                 <td
                   class="p-3 border border-border-card font-semibold text-text-main"
-                  >🎓 शैक्षणिक पात्रता (Qualification)</td
-                >
-                <td class="p-3 border border-border-card text-text-muted"
-                  >सिव्हिल / मेकॅनिकल / इलेक्ट्रिकल मध्ये डिप्लोमा किंवा B.E./B.Tech पदवी (किंवा B.Sc./Computer Science/Physics)</td
-                >
-              </tr>
-              <tr>
-                <td
-                  class="p-3 border border-border-card font-semibold text-text-main"
-                  >🎂 वयोमर्यादा (Age Limit)</td
-                >
-                <td class="p-3 border border-border-card text-text-muted"
-                  >१८ ते ३०/३२ वर्षे (दि. ०१ ऑगस्ट २०२६ रोजी, नियमांनुसार सवलत)</td
-                >
-              </tr>
-              <tr>
-                <td
-                  class="p-3 border border-border-card font-semibold text-text-main"
-                  >💵 अर्ज शुल्क (Application Fee)</td
-                >
-                <td class="p-3 border border-border-card text-text-muted"
-                  ><strong>₹१००/-</strong> (महिला/SC/ST/PwBD/Ex-SM उमेदवारांना <strong>मोफत / शुल्क नाही</strong>)</td
-                >
-              </tr>
-              <tr>
-                <td
-                  class="p-3 border border-border-card font-semibold text-text-main"
-                  >📝 ऑनलाईन अर्ज मुदत (Application Window)</td
-                >
-                <td
-                  class="p-3 border border-border-card text-emerald-600 dark:text-emerald-400 font-bold"
-                  >०२ सप्टेंबर ते २२ सप्टेंबर २०२६ (रात्री ११:०० वाजेपर्यंत)</td
-                >
-              </tr>
-              <tr>
-                <td
-                  class="p-3 border border-border-card font-semibold text-text-main"
-                  >💳 ऑनलाईन शुल्क भरण्याची अंतिम तारीख</td
-                >
-                <td
-                  class="p-3 border border-border-card font-bold text-text-main"
-                  >२३ सप्टेंबर २०२६ (रात्री ११:०० वाजेपर्यंत)</td
-                >
-              </tr>
-              <tr>
-                <td
-                  class="p-3 border border-border-card font-semibold text-text-main"
-                  >✏️ अर्ज दुरुस्ती कालावधी (Correction Window)</td
-                >
-                <td
-                  class="p-3 border border-border-card font-bold text-amber-600 dark:text-amber-400"
-                  >२८ सप्टेंबर ते ३० सप्टेंबर २०२६</td
-                >
-              </tr>
-              <tr>
-                <td
-                  class="p-3 border border-border-card font-semibold text-text-main"
                   >🗓️ परीक्षा दिनांक (Exam Dates)</td
                 >
                 <td class="p-3 border border-border-card text-text-muted"
@@ -430,45 +373,47 @@ const category = "SSC Recruitment";
         >
           अर्ज शुल्क (Application Fee)
         </h2>
-        <div
-          class="bg-bg-surface border border-border-card p-5 rounded-2xl text-sm space-y-4 mb-8 shadow-xs"
-        >
-          <div class="flex items-start gap-3">
-            <HiOutlineCurrencyRupee
-              className="text-primary text-2xl shrink-0 mt-0.5"
-            />
-            <div>
-              <h3 class="text-base font-bold text-text-main m-0 mb-1">
-                General / OBC / EWS (पुरुष उमेदवार):
-              </h3>
-              <p class="text-text-muted text-xs m-0">
-                • <strong>ऑनलाईन परीक्षा शुल्क: ₹१००/- (रुपये शंभर फक्त)</strong><br />
-                • शुल्काचा भरणा ऑनलाईन पद्धतीने (UPI, Net Banking, Debit/Credit Card) करता येईल.
-              </p>
-            </div>
-          </div>
-          <hr class="border-border-card" />
-          <div class="flex items-start gap-3">
-            <HiOutlineCheckCircle
-              className="text-emerald-500 text-2xl shrink-0 mt-0.5"
-            />
-            <div>
-              <h3 class="text-base font-bold text-emerald-600 dark:text-emerald-400 m-0 mb-1">
-                सर्व महिला / SC / ST / PwBD / Ex-Servicemen उमेदवार:
-              </h3>
-              <p class="text-text-muted text-xs m-0">
-                • <strong>कोणतेही परीक्षा शुल्क नाही (Free / Exempted)</strong>.
-              </p>
-            </div>
-          </div>
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="bg-primary/10">
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >प्रवर्ग (Category)</th
+                >
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >परीक्षा शुल्क (Application Fee)</th
+                >
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-border-card font-bold text-text-main"
+                  >👤 General / OBC / EWS (पुरुष उमेदवार)</td
+                >
+                <td class="p-3 border border-border-card font-bold text-text-main"
+                  ><strong>₹१००/-</strong> (रुपये शंभर फक्त)</td
+                >
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-bold text-emerald-600 dark:text-emerald-400"
+                  >👩‍💼 सर्व महिला / SC / ST / PwBD / Ex-Servicemen</td
+                >
+                <td class="p-3 border border-border-card font-black text-emerald-600 dark:text-emerald-400"
+                  ><strong>निःशुल्क (Nil / Free)</strong></td
+                >
+              </tr>
+            </tbody>
+          </table>
         </div>
 
-        <!-- Important Dates & Official Links Table -->
+        <!-- Important Dates Table (Marathi) -->
         <h2
-          id="important-links"
+          id="important-dates"
           class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
         >
-          महत्त्वाच्या तारखा आणि लिंक्स (Important Dates & Official Links)
+          महत्त्वाच्या तारखा (Important Dates)
         </h2>
         <div class="overflow-x-auto mt-3 mb-8">
           <table class="w-full text-left border-collapse text-sm">
@@ -476,11 +421,11 @@ const category = "SSC Recruitment";
               <tr class="bg-primary/10">
                 <th
                   class="p-3 border border-border-card font-bold text-text-main"
-                  >तपशील (Event / Resource)</th
+                  >तपशील (Event)</th
                 >
                 <th
                   class="p-3 border border-border-card font-bold text-text-main"
-                  >तारीख / दुवा (Date / Direct Link)</th
+                  >तारीख / वेळ (Date & Time)</th
                 >
               </tr>
             </thead>
@@ -536,6 +481,32 @@ const category = "SSC Recruitment";
                   >डिसेंबर २०२६ (Tentative)</td
                 >
               </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Official Links Table (Marathi) -->
+        <h2
+          id="important-links"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          महत्त्वाचे दुवे व अधिकृत लिंक्स (Official Links & Resources)
+        </h2>
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="bg-primary/10">
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >तपशील (Resource Name)</th
+                >
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >अधिकृत दुवा (Direct Action Link)</th
+                >
+              </tr>
+            </thead>
+            <tbody>
               <tr>
                 <td class="p-3 border border-border-card text-text-muted font-medium"
                   >ऑनलाईन अर्ज लिंक (SSC Login Portal)</td
@@ -631,70 +602,556 @@ const category = "SSC Recruitment";
             </p>
           </div>
         </div>
+
+        <!-- Quick Action Call-to-Action Buttons Box (Marathi) -->
+        <div
+          class="p-6 rounded-2xl bg-gradient-to-r from-primary/10 via-violet-500/10 to-primary/10 border border-primary/25 text-center space-y-4 shadow-xs"
+        >
+          <h3 class="text-lg font-black text-text-main m-0">
+            SSC कनिष्ठ अभियंता (JE) भरती २०२६ ऑनलाईन अर्ज करा
+          </h3>
+          <p class="text-xs text-text-muted max-w-xl mx-auto m-0">
+            २२ सप्टेंबर २०२६ (रात्री ११:०० वाजेपर्यंत) SSC च्या अधिकृत पोर्टलवर ऑनलाईन अर्ज सादर करा.
+          </p>
+          <div class="flex flex-wrap justify-center gap-3 pt-2">
+            <a
+              href="https://ssc.gov.in/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary hover:bg-primary/90 text-white font-bold uppercase tracking-wider text-xs rounded-xl shadow-xs transition-colors no-underline"
+            >
+              <HiOutlineCursorArrowRays className="text-base shrink-0" /> SSC लॉगिन व अर्ज लिंक →
+            </a>
+            <a
+              href="https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_je_2026.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-bg-surface hover:bg-bg-surface/80 text-text-main border border-border-card font-bold uppercase tracking-wider text-xs rounded-xl transition-colors no-underline"
+            >
+              <HiOutlineDocumentText className="text-base shrink-0" /> अधिकृत जाहिरात PDF डाउनलोड करा
+            </a>
+          </div>
+        </div>
       </div>
     </div>
 
     <!-- ================= ENGLISH VERSION ================= -->
     <div id="english-version" class="pt-8 border-t border-border-card mt-12">
       <div class="space-y-6 text-text-main leading-relaxed">
-        <h2 class="text-2xl font-bold">
-          SSC Junior Engineer (JE) Recruitment 2026 Notification Overview
+        <h2 class="text-2xl font-bold mt-2">
+          Staff Selection Commission (SSC) Junior Engineer (JE) Recruitment 2026
         </h2>
-        <p class="text-text-muted text-sm leading-relaxed">
-          The Staff Selection Commission (SSC) has released the official notification for <strong>Junior Engineer (JE) Examination 2026</strong> for <strong>1,748 tentative vacancies</strong> across Civil, Electrical, Mechanical, and Scientific Assistant disciplines in various Union Government Ministries & Organizations.
-        </p>
 
-        <!-- English Key Summary Table -->
-        <div class="overflow-x-auto my-6">
+        <!-- Introduction -->
+        <div class="mb-6">
+          <p>
+            <strong>SSC JE Recruitment 2026 Notification:</strong> Staff Selection Commission (SSC) has officially released the recruitment advertisement for <strong>Junior Engineer (JE - Civil, Electrical, Mechanical & Scientific Assistant) Examination 2026</strong> for <strong>1,748 tentative vacancies</strong> in various Union Ministries, Departments, and Organizations.
+          </p>
+          <p>
+            Candidates holding a 3-year Diploma or B.E./B.Tech Degree in <strong>Civil, Mechanical, or Electrical Engineering</strong> (or B.Sc./Computer Science for Scientific Assistant) are eligible to apply for these prestigious Central Government jobs. Online registration started on <strong>September 02, 2026</strong>, and the last date to submit online applications is <strong>September 22, 2026 (up to 11:00 PM)</strong>.
+          </p>
+          <hr class="border-border-card my-6" />
+        </div>
+
+        <!-- Key Information Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
+          <div
+            class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3 shadow-xs"
+          >
+            <HiOutlineBuildingOffice
+              className="text-primary text-2xl shrink-0 mt-0.5"
+            />
+            <div>
+              <span
+                class="text-xs text-text-muted block uppercase font-bold tracking-wider"
+                >Recruiting Organization</span
+              >
+              <span class="text-text-main font-semibold text-sm"
+                >Staff Selection Commission (SSC)</span
+              >
+            </div>
+          </div>
+          <div
+            class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3 shadow-xs"
+          >
+            <HiOutlineBriefcase
+              className="text-primary text-2xl shrink-0 mt-0.5"
+            />
+            <div>
+              <span
+                class="text-xs text-text-muted block uppercase font-bold tracking-wider"
+                >Post & Vacancies</span
+              >
+              <span class="text-text-main font-semibold text-sm"
+                >Junior Engineer (1,748 Posts)</span
+              >
+            </div>
+          </div>
+          <div
+            class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3 shadow-xs"
+          >
+            <HiOutlineCalendarDays
+              className="text-rose-500 text-2xl shrink-0 mt-0.5"
+            />
+            <div>
+              <span
+                class="text-xs text-text-muted block uppercase font-bold tracking-wider"
+                >Last Date to Apply</span
+              >
+              <span class="text-rose-600 dark:text-rose-400 font-extrabold text-sm"
+                >22 September 2026 (11:00 PM)</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- English Summary Table -->
+        <h2
+          id="summary-en"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          SSC JE Recruitment 2026: Summary Overview
+        </h2>
+        <div class="overflow-x-auto mt-3 mb-8">
           <table class="w-full text-left border-collapse text-sm">
             <thead>
               <tr class="bg-primary/10">
-                <th class="p-3 border border-border-card font-bold">Particulars</th>
-                <th class="p-3 border border-border-card font-bold">Details</th>
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >📌 Particulars</th
+                >
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >Details</th
+                >
               </tr>
             </thead>
-            <tbody class="text-xs sm:text-sm">
+            <tbody>
               <tr>
-                <td class="p-3 border border-border-card font-semibold">Recruiting Body</td>
-                <td class="p-3 border border-border-card text-text-muted">Staff Selection Commission (SSC)</td>
+                <td
+                  class="p-3 border border-border-card font-semibold text-text-main"
+                  >🏢 Recruiting Body</td
+                >
+                <td class="p-3 border border-border-card text-text-muted"
+                  >Staff Selection Commission (SSC)</td
+                >
               </tr>
               <tr>
-                <td class="p-3 border border-border-card font-semibold">Post Name</td>
-                <td class="p-3 border border-border-card text-text-muted">Junior Engineer (Civil, Mechanical, Electrical & Scientific Assistant)</td>
+                <td
+                  class="p-3 border border-border-card font-semibold text-text-main"
+                  >👷 Exam Name</td
+                >
+                <td class="p-3 border border-border-card text-text-muted"
+                  >Junior Engineer (Civil, Mechanical, Electrical & Scientific Assistant) Exam 2026</td
+                >
               </tr>
               <tr>
-                <td class="p-3 border border-border-card font-semibold">Total Vacancies</td>
-                <td class="p-3 border border-border-card font-bold text-rose-600 dark:text-rose-400">1,748 Posts (Tentative)</td>
+                <td
+                  class="p-3 border border-border-card font-semibold text-text-main"
+                  >🔢 Total Vacancies</td
+                >
+                <td
+                  class="p-3 border border-border-card font-extrabold text-rose-600 dark:text-rose-400 text-base"
+                  >1,748 Posts (Tentative)</td
+                >
               </tr>
               <tr>
-                <td class="p-3 border border-border-card font-semibold">Application Start Date</td>
-                <td class="p-3 border border-border-card text-emerald-600 dark:text-emerald-400 font-bold">September 02, 2026</td>
+                <td
+                  class="p-3 border border-border-card font-semibold text-text-main"
+                  >🗓️ Tentative Exam Dates</td
+                >
+                <td class="p-3 border border-border-card text-text-muted"
+                  >• Paper-I (CBT): <strong>October / November 2026</strong><br />
+                  • Paper-II (CBT): <strong>December 2026</strong></td
+                >
               </tr>
               <tr>
-                <td class="p-3 border border-border-card font-semibold">Last Date to Apply</td>
-                <td class="p-3 border border-border-card text-rose-600 dark:text-rose-400 font-bold">September 22, 2026 (11:00 PM)</td>
-              </tr>
-              <tr>
-                <td class="p-3 border border-border-card font-semibold">Fee Payment Last Date</td>
-                <td class="p-3 border border-border-card text-text-main font-bold">September 23, 2026 (11:00 PM)</td>
-              </tr>
-              <tr>
-                <td class="p-3 border border-border-card font-semibold">Correction Window</td>
-                <td class="p-3 border border-border-card text-amber-600 dark:text-amber-400 font-bold">September 28 to 30, 2026</td>
-              </tr>
-              <tr>
-                <td class="p-3 border border-border-card font-semibold">Tentative Exam Dates</td>
-                <td class="p-3 border border-border-card text-text-muted">Paper-I: October/November 2026 | Paper-II: December 2026</td>
-              </tr>
-              <tr>
-                <td class="p-3 border border-border-card font-semibold">Application Fee</td>
-                <td class="p-3 border border-border-card text-text-muted">₹100 (Exempted for Women, SC, ST, PwBD & ESM)</td>
+                <td
+                  class="p-3 border border-border-card font-semibold text-text-main"
+                  >🖥️ Selection Process</td
+                >
+                <td class="p-3 border border-border-card text-text-muted"
+                  >Paper-1 Computer Based Examination → Paper-2 Computer Based Examination → Document Verification (DV)</td
+                >
               </tr>
             </tbody>
           </table>
         </div>
 
-        <!-- Quick Action Buttons Box -->
+        <!-- Post-wise Qualification Table (English) -->
+        <h2
+          id="qualification-en"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          Post-wise Educational Qualification & Eligible Streams
+        </h2>
+        <p class="text-sm text-text-muted mb-4">
+          Candidates must possess the requisite Diploma or Degree qualification in the respective discipline:
+        </p>
+
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="bg-primary/10">
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >Discipline / Post</th
+                >
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >Required Qualification Criteria</th
+                >
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-border-card font-bold text-primary"
+                  >Civil Engineering</td
+                >
+                <td class="p-3 border border-border-card text-text-muted">
+                  • <strong>3-year Diploma in Civil Engineering</strong>, OR<br />
+                  • <strong>Degree in Civil Engineering (B.E. / B.Tech)</strong> from a recognized University/Institute.
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-bold text-primary"
+                  >Mechanical Engineering</td
+                >
+                <td class="p-3 border border-border-card text-text-muted">
+                  • <strong>3-year Diploma in Mechanical Engineering</strong>, OR<br />
+                  • <strong>Degree in Mechanical Engineering (B.E. / B.Tech)</strong> from a recognized University/Institute.
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-bold text-primary"
+                  >Electrical Engineering</td
+                >
+                <td class="p-3 border border-border-card text-text-muted">
+                  • <strong>3-year Diploma in Electrical Engineering</strong>, OR<br />
+                  • <strong>Degree in Electrical Engineering (B.E. / B.Tech)</strong> from a recognized University/Institute.
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-bold text-primary"
+                  >Scientific Assistant (IMD) / Other Criteria</td
+                >
+                <td class="p-3 border border-border-card text-text-muted">
+                  • <strong>Bachelor's Degree in Science (B.Sc.)</strong> with Physics as one of the subjects, OR<br />
+                  • Degree in <strong>Computer Science / Computer Applications / Electronics</strong> or equivalent criteria.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Age Limit Table (English) -->
+        <h2
+          id="age-limit-en"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          Age Limit & Upper Age Relaxation
+        </h2>
+        <p class="text-sm text-text-muted mb-4">
+          The crucial date for age calculation is <strong>01 August 2026</strong>. The candidate's age must be <strong>18 to 30 or 32 years</strong> depending on the specific department rules.
+        </p>
+
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="bg-primary/10">
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >Category</th
+                >
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >Age Limit & Relaxation</th
+                >
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-border-card font-bold text-text-main"
+                  >👤 Unreserved (UR) / EWS</td
+                >
+                <td class="p-3 border border-border-card text-text-muted"
+                  >Max 30 or 32 Years (post-wise)</td
+                >
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-bold text-text-main"
+                  >🟠 OBC</td
+                >
+                <td class="p-3 border border-border-card text-text-muted"
+                  ><strong>+3 Years Relaxation</strong> (Max 33 or 35 Years)</td
+                >
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-bold text-text-main"
+                  >🔵 SC / ST</td
+                >
+                <td class="p-3 border border-border-card text-text-muted"
+                  ><strong>+5 Years Relaxation</strong> (Max 35 or 37 Years)</td
+                >
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-bold text-text-main"
+                  >♿ PwBD (Persons with Disabilities)</td
+                >
+                <td class="p-3 border border-border-card text-text-muted"
+                  ><strong>+10 Years (UR), +13 Years (OBC), +15 Years (SC/ST)</strong></td
+                >
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-bold text-text-main"
+                  >🪖 Ex-Servicemen (ESM)</td
+                >
+                <td class="p-3 border border-border-card text-text-muted"
+                  >Deduction of military service plus 3 years as per Govt rules</td
+                >
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Application Fee Section (English) -->
+        <h2
+          id="fee-details-en"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          Application Fee & Fee Payment Terms
+        </h2>
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="bg-primary/10">
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >Category</th
+                >
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >Application Fee</th
+                >
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-border-card font-bold text-text-main"
+                  >👤 General / OBC / EWS Male Candidates</td
+                >
+                <td class="p-3 border border-border-card font-bold text-text-main"
+                  ><strong>₹100/-</strong> (Rupees One Hundred Only)</td
+                >
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-bold text-emerald-600 dark:text-emerald-400"
+                  >👩‍💼 All Female / SC / ST / PwBD / Ex-Servicemen</td
+                >
+                <td class="p-3 border border-border-card font-black text-emerald-600 dark:text-emerald-400"
+                  ><strong>NIL / Exempted (Free Application)</strong></td
+                >
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Important Dates Table (English) -->
+        <h2
+          id="important-dates-en"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          Important Dates
+        </h2>
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="bg-primary/10">
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >Event</th
+                >
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >Date & Time</th
+                >
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium"
+                  >Online Application Start Date</td
+                >
+                <td
+                  class="p-3 border border-border-card text-emerald-600 dark:text-emerald-400 font-bold"
+                  >September 02, 2026</td
+                >
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium"
+                  >Last Date to Submit Application</td
+                >
+                <td
+                  class="p-3 border border-border-card text-rose-600 dark:text-rose-400 font-black"
+                >
+                  September 22, 2026 (up to 11:00 PM)
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium"
+                  >Last Date for Online Fee Payment</td
+                >
+                <td class="p-3 border border-border-card text-text-main font-bold"
+                  >September 23, 2026 (up to 11:00 PM)</td
+                >
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium"
+                  >Application Correction Window</td
+                >
+                <td class="p-3 border border-border-card text-amber-600 dark:text-amber-400 font-bold"
+                  >September 28 to September 30, 2026</td
+                >
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium"
+                  >Paper-I Exam Date (Tentative)</td
+                >
+                <td class="p-3 border border-border-card text-text-main font-bold"
+                  >October / November 2026</td
+                >
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium"
+                  >Paper-II Exam Date (Tentative)</td
+                >
+                <td class="p-3 border border-border-card text-text-main font-bold"
+                  >December 2026</td
+                >
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Official Links Table (English) -->
+        <h2
+          id="important-links-en"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          Official Apply Links & Resources
+        </h2>
+        <div class="overflow-x-auto mt-3 mb-8">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="bg-primary/10">
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >Resource Name</th
+                >
+                <th
+                  class="p-3 border border-border-card font-bold text-text-main"
+                  >Direct Action Link</th
+                >
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium"
+                  >Online Application Link (SSC Portal)</td
+                >
+                <td class="p-3 border border-border-card">
+                  <a
+                    href="https://ssc.gov.in/login"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-primary hover:bg-primary/90 text-white text-xs font-bold uppercase tracking-wider rounded-lg transition-colors border-none w-full sm:w-auto shadow-xs no-underline"
+                  >
+                    <HiOutlineCursorArrowRays className="text-base shrink-0" /> SSC Apply Online Portal →
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium"
+                  >Official Notification PDF</td
+                >
+                <td class="p-3 border border-border-card">
+                  <a
+                    href="https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_je_2026.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-amber-500/10 hover:bg-amber-500/20 text-amber-600 dark:text-amber-400 text-xs font-bold uppercase tracking-wider rounded-lg transition-colors border border-amber-500/30 w-full sm:w-auto no-underline"
+                  >
+                    <HiOutlineDocumentText className="text-base shrink-0" /> Download Notification PDF
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium"
+                  >SSC Official Website</td
+                >
+                <td class="p-3 border border-border-card">
+                  <a
+                    href="https://ssc.gov.in/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-bg-surface border border-border-card hover:border-primary text-text-main hover:text-primary text-xs font-bold uppercase tracking-wider rounded-lg transition-colors w-full sm:w-auto no-underline"
+                  >
+                    <HiOutlineArrowTopRightOnSquare className="text-base shrink-0" /> ssc.gov.in
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card text-text-muted font-medium"
+                  >Age Calculator Tool</td
+                >
+                <td class="p-3 border border-border-card">
+                  <a
+                    href="/mpsc-age-calculator-marathi"
+                    class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-purple-500/10 hover:bg-purple-500/20 text-purple-600 dark:text-purple-400 text-xs font-bold uppercase tracking-wider rounded-lg transition-colors border border-purple-500/30 w-full sm:w-auto no-underline"
+                  >
+                    <HiOutlineCalculator className="text-base shrink-0" /> Check Age Limit
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- FAQ Section (English) -->
+        <h2
+          id="faq-en"
+          class="text-xl md:text-2xl font-black text-primary mb-2 mt-8 border-l-4 border-primary pl-3"
+        >
+          Frequently Asked Questions (FAQ)
+        </h2>
+        <div class="space-y-4 mt-3 mb-8">
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl shadow-xs">
+            <h3 class="text-base font-bold text-text-main mb-2">
+              Q1: How many total vacancies are announced in SSC JE Recruitment 2026?
+            </h3>
+            <p class="text-text-muted text-xs m-0 leading-relaxed">
+              Answer: According to the official SSC notification, approximately <strong>1,748 tentative vacancies</strong> have been announced for Junior Engineer (JE) posts.
+            </p>
+          </div>
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl shadow-xs">
+            <h3 class="text-base font-bold text-text-main mb-2">
+              Q2: What is the deadline to submit the online application form?
+            </h3>
+            <p class="text-text-muted text-xs m-0 leading-relaxed">
+              Answer: The online application portal remains open until <strong>22 September 2026 (up to 11:00 PM)</strong>.
+            </p>
+          </div>
+          <div class="bg-bg-surface border border-border-card p-5 rounded-2xl shadow-xs">
+            <h3 class="text-base font-bold text-text-main mb-2">
+              Q3: Who is exempted from paying the SSC JE application fee?
+            </h3>
+            <p class="text-text-muted text-xs m-0 leading-relaxed">
+              Answer: All female candidates, SC, ST, PwBD, and Ex-Servicemen (ESM) candidates are <strong>completely exempted from paying the application fee (NIL fee)</strong>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Quick Action Call-to-Action Buttons Box -->
         <div
           class="p-6 rounded-2xl bg-gradient-to-r from-primary/10 via-violet-500/10 to-primary/10 border border-primary/25 text-center space-y-4 shadow-xs"
         >
