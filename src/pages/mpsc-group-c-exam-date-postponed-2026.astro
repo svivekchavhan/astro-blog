@@ -1,0 +1,311 @@
+---
+import Layout from "../layouts/Layout.astro";
+import {
+  HiOutlineCalendarDays,
+  HiOutlineCursorArrowRays,
+  HiOutlineArrowTopRightOnSquare,
+  HiOutlineDocumentText,
+  HiOutlineBuildingOffice,
+  HiOutlineShieldCheck,
+  HiOutlineMegaphone,
+  HiOutlineExclamationTriangle,
+  HiOutlineArrowLeft,
+  HiOutlineCheckCircle,
+  HiOutlineClock,
+  HiOutlineAcademicCap,
+  HiOutlineInformationCircle,
+} from "react-icons/hi2";
+
+const title =
+  "MPSC गट-क संयुक्त पूर्व परीक्षा २०२६ पुढे ढकलली: नवीन परीक्षा दिनांक ०३ जानेवारी २०२७ जाहीर! (अधिकृत शुद्धीपत्रक)";
+const description =
+  "MPSC Combine Group C Exam 2026 Postponed: महाराष्ट्र लोकसेवा आयोग गट-क संयुक्त पूर्व परीक्षा-२०२६ ची दिनांक २५ ऑक्टोबर २०२६ रोजी होणारी परीक्षा पुढे ढकलण्यात आली असून सुधारित नवीन परीक्षा दिनांक ०३ जानेवारी २०२७ रोजी होणार आहे. अधिकृत शुद्धीपत्रक जारी.";
+const canonicalURL =
+  "https://mahasandhi.in/mpsc-group-c-exam-date-postponed-2026";
+const date = "September 09, 2026";
+const category = "Exam Date Postponed Notice";
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonicalURL={canonicalURL}
+  article={true}
+  customBreadcrumbs={[
+    { name: "MPSC Exam Hub", url: "/mpsc" },
+    { name: "MPSC Combine Group C 2026", url: "/mpsc-combine-group-c-2026" },
+    { name: "Exam Postponed Corrigendum" },
+  ]}
+>
+  <article class="py-8">
+    <!-- Back Button -->
+    <div class="mb-6 not-prose">
+      <a
+        href="/mpsc-combine-group-c-2026"
+        class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold uppercase tracking-wider text-text-muted hover:text-primary bg-bg-surface border border-border-card rounded-xl transition-all duration-300 no-underline shadow-xs"
+      >
+        <HiOutlineArrowLeft className="text-sm" /> back to combine group c hub / मागे
+        जा
+      </a>
+    </div>
+
+    <!-- Header -->
+    <div class="mb-10">
+      <div class="flex items-center gap-3 mb-4 flex-wrap">
+        <span
+          class="bg-rose-600 text-white px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider flex items-center gap-1.5 shadow-xs animate-pulse"
+        >
+          <HiOutlineMegaphone className="text-sm" />
+          {category} (शुद्धीपत्रक)
+        </span>
+        <span
+          class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider border border-primary/20 flex items-center gap-1.5"
+        >
+          <HiOutlineBuildingOffice className="text-sm" /> MPSC जाहिरात क्र. ०१७/२०२६
+        </span>
+        <span class="text-text-muted text-sm font-semibold">• {date}</span>
+      </div>
+      <h1
+        class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-text-main mb-5 leading-tight"
+      >
+        {title}
+      </h1>
+      <p
+        class="text-text-muted text-base md:text-lg leading-relaxed border-l-4 border-rose-500 pl-4 sm:pl-6 py-2 italic font-medium"
+      >
+        {description}
+      </p>
+    </div>
+
+    <!-- Highlight Comparison Card (Old vs New Exam Date) -->
+    <div
+      class="mb-10 p-5 sm:p-6 md:p-8 rounded-3xl bg-gradient-to-br from-rose-500/10 via-bg-surface to-amber-500/10 border-2 border-rose-500/40 shadow-sm not-prose space-y-6"
+    >
+      <!-- Top Title & Badge Bar -->
+      <div class="flex flex-col gap-2.5">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span
+            class="inline-flex items-center gap-1.5 px-3 py-1 bg-rose-600 text-white rounded-full text-[0.7rem] sm:text-xs font-black uppercase tracking-wider shadow-xs"
+          >
+            <HiOutlineExclamationTriangle className="text-sm shrink-0" />
+            <span>परीक्षेच्या वेळापत्रकात बदल / Exam Date Changed</span>
+          </span>
+          <span
+            class="inline-flex items-center gap-1 px-2.5 py-1 bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20 rounded-full text-[0.7rem] font-bold"
+          >
+            दिनांक: ०९ सप्टेंबर, २०२६
+          </span>
+        </div>
+
+        <h2
+          class="text-xl sm:text-2xl md:text-3xl font-black text-text-main m-0 leading-tight tracking-tight"
+        >
+          MPSC गट-क सेवा संयुक्त पूर्व परीक्षा – २०२६
+        </h2>
+
+        <p class="text-xs sm:text-sm text-text-muted m-0 font-medium leading-relaxed">
+          क्रमांक: <strong class="text-text-main">सीएमए-०४२६/प्र.क्र.४२/२०२६/जाहिरात</strong> (जाहिरात क्र. ०१७/२०२६)
+        </p>
+      </div>
+
+      <!-- Date Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <!-- Old Date Box -->
+        <div
+          class="bg-bg-surface/90 border border-rose-500/25 p-4 rounded-2xl flex flex-col justify-center text-center shadow-xs"
+        >
+          <span
+            class="block text-xs font-bold text-rose-500 uppercase tracking-wider mb-1"
+          >
+            जुनी पूर्व परीक्षा तारीख (Old Date)
+          </span>
+          <span
+            class="block text-xl sm:text-2xl font-black text-text-muted line-through decoration-rose-500/70"
+          >
+            २५ ऑक्टोबर २०२६
+          </span>
+        </div>
+
+        <!-- New Date Box -->
+        <div
+          class="bg-gradient-to-br from-emerald-500/15 to-emerald-600/5 border-2 border-emerald-500/60 p-4 rounded-2xl flex flex-col justify-center text-center shadow-xs"
+        >
+          <span
+            class="block text-xs font-black text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-1"
+          >
+            👉 नवीन परीक्षेचा सुधारित दिनांक (New Date)
+          </span>
+          <span
+            class="block text-2xl sm:text-3xl font-black text-emerald-600 dark:text-emerald-400 animate-pulse"
+          >
+            ०३ जानेवारी २०२७
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Official Notice Main Content -->
+    <div
+      class="bg-bg-surface border border-border-card rounded-3xl p-6 md:p-8 shadow-xs space-y-8 text-text-main leading-relaxed"
+    >
+      <div class="border-b border-border-card/60 pb-4">
+        <h2
+          class="text-xl md:text-2xl font-black text-rose-600 dark:text-rose-400 m-0 flex items-center gap-2"
+        >
+          <HiOutlineShieldCheck className="text-2xl shrink-0" />
+          MPSC गट-क संयुक्त पूर्व परीक्षा २०२६ अधिकृत शुद्धीपत्रक महत्त्वाचे मुद्दे
+        </h2>
+      </div>
+
+      <!-- Section 1: Summary of Postponement -->
+      <div class="space-y-4">
+        <h3
+          class="text-lg font-black text-primary border-l-4 border-primary pl-3 m-0"
+        >
+          १. परीक्षा पुढे ढकलण्याबाबत पार्श्वभूमी व घोषणा
+        </h3>
+        <p class="text-sm md:text-base leading-relaxed m-0 text-text-secondary">
+          शासन सेवेतील विविध विभागांतील गट-क संवर्गातील ५,७०७ पदे भरण्यासाठी <strong
+            >महाराष्ट्र लोकसेवा आयोगामार्फत (MPSC)</strong
+          > आयोजित <strong
+            >महाराष्ट्र गट-क सेवा संयुक्त पूर्व परीक्षा – २०२६ (जाहिरात क्रमांक
+            ०१७/२०२६ दिनांक २५ जून, २०२६)</strong
+          > च्या आयोजनाबाबत दिनांक १६ जुलै, २०२६ रोजीच्या शुद्धीपत्रकाद्वारे सदर परीक्षा
+          **दिनांक २५ ऑक्टोबर, २०२६** रोजी प्रचलित पद्धतीने (Offline OMR आधारित) घेण्यात
+          येणार असल्याचे जाहीर करण्यात आले होते.
+        </p>
+
+        <div
+          class="bg-gradient-to-br from-violet-500/10 via-primary/5 to-rose-500/10 border border-violet-500/20 p-5 rounded-2xl space-y-3"
+        >
+          <div class="flex items-start gap-3">
+            <HiOutlineCheckCircle
+              className="text-lg text-rose-600 dark:text-rose-400 shrink-0 mt-0.5"
+            />
+            <div class="text-xs sm:text-sm font-medium leading-relaxed">
+              <strong>सुधारित परीक्षा तारीख:</strong> सदर परीक्षा २५ ऑक्टोबर, २०२६
+              ऐवजी आता <strong
+                class="text-rose-600 dark:text-rose-400 text-sm sm:text-base"
+                >दिनांक ०३ जानेवारी, २०२७ (रविवार)</strong
+              > रोजी सर्व जिल्हा केंद्रांवर आयोजित करण्यात येणार आहे.
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <HiOutlineCheckCircle
+              className="text-lg text-violet-600 dark:text-violet-400 shrink-0 mt-0.5"
+            />
+            <div class="text-xs sm:text-sm font-medium leading-relaxed">
+              <strong>परीक्षेची पद्धत:</strong> परीक्षा ऑफलाईन OMR (Offline OMR Card
+              Based) पद्धतीनेच घेतली जाणार आहे.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2: Admit Card & Center Instructions -->
+      <div class="space-y-4">
+        <h3
+          class="text-lg font-black text-rose-600 dark:text-rose-400 border-l-4 border-rose-500 pl-3 m-0"
+        >
+          २. प्रवेशपत्र (Hall Ticket) व परीक्षेची वेळ
+        </h3>
+
+        <div
+          class="p-5 bg-rose-500/10 border border-rose-500/30 rounded-2xl space-y-3"
+        >
+          <div
+            class="flex items-start gap-3 text-rose-700 dark:text-rose-300 text-xs sm:text-sm font-semibold"
+          >
+            <HiOutlineInformationCircle
+              className="text-2xl shrink-0 mt-0.5 text-rose-600 dark:text-rose-400"
+            />
+            <div class="leading-relaxed">
+              <strong>हॉलतिकीट प्रसिद्धी:</strong> परीक्षेचे केंद्र, ऑनलाईन प्रवेशपत्र
+              (Admit Card / Hall Ticket), परीक्षेची वेळ, परीक्षा केंद्रनिहाय आवश्यक
+              सूचना तसेच इतर बाबींबाबतची सविस्तर माहिती <strong
+                >MPSC च्या अधिकृत संकेतस्थळावर (mpsc.gov.in)</strong
+              > यथावकाश प्रसिद्ध करण्यात येईल.
+            </div>
+          </div>
+          <div
+            class="p-3 bg-bg-surface border border-rose-500/30 rounded-xl text-rose-600 dark:text-rose-400 font-bold text-xs sm:text-sm"
+          >
+            📢 उमेदवारांनी परीक्षेच्या अपडेट्ससाठी MPSC च्या अधिकृत वेबसाईटला
+            नियमित भेट द्यावी.
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 3: Notice Verification Details -->
+      <div class="space-y-4">
+        <h3
+          class="text-lg font-black text-primary border-l-4 border-primary pl-3 m-0"
+        >
+          ३. अधिकृत शुद्धीपत्रक तपशील (Official Document Info)
+        </h3>
+
+        <div
+          class="overflow-x-auto border border-border-card rounded-2xl bg-bg-surface"
+        >
+          <table class="w-full text-left border-collapse text-xs sm:text-sm">
+            <tbody class="divide-y divide-border-card/40">
+              <tr>
+                <td class="p-3 font-bold text-text-muted bg-primary/5 w-40"
+                  >प्राधिकरण (Authority)</td
+                >
+                <td class="p-3 font-semibold text-text-main"
+                  >महाराष्ट्र लोकसेवा आयोग (MPSC)</td
+                >
+              </tr>
+              <tr>
+                <td class="p-3 font-bold text-text-muted bg-primary/5"
+                  >पत्र क्रमांक (Notice No.)</td
+                >
+                <td class="p-3 font-bold text-primary"
+                  >सीएमए-०४२६/प्र.क्र.४२/२०२६/जाहिरात</td
+                >
+              </tr>
+              <tr>
+                <td class="p-3 font-bold text-text-muted bg-primary/5"
+                  >जाहिरात क्र. (Advt No.)</td
+                >
+                <td class="p-3 font-semibold text-text-main"
+                  >०१७/२०२६ (२५ जून २०२६)</td
+                >
+              </tr>
+              <tr>
+                <td class="p-3 font-bold text-text-muted bg-primary/5"
+                  >प्रसिद्धी दिनांक (Date)</td
+                >
+                <td class="p-3 font-semibold text-text-main"
+                  >०९ सप्टेंबर, २०२६</td
+                >
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Quick Action Buttons & Downloads -->
+      <div class="pt-4 border-t border-border-card flex flex-wrap gap-4">
+        <a
+          href="https://mpsc.gov.in"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-rose-600 hover:bg-rose-700 text-white font-black uppercase tracking-wider text-xs rounded-xl shadow-xs transition-colors no-underline"
+        >
+          <HiOutlineCursorArrowRays className="text-base shrink-0" /> MPSC Official
+          Portal (mpsc.gov.in)
+        </a>
+        <a
+          href="/mpsc-combine-group-c-2026"
+          class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary/10 hover:bg-primary/20 text-primary font-black uppercase tracking-wider text-xs rounded-xl transition-colors no-underline"
+        >
+          <HiOutlineArrowLeft className="text-base shrink-0" /> MPSC Combine Group
+          C Main Hub
+        </a>
+      </div>
+    </div>
+  </article>
+</Layout>

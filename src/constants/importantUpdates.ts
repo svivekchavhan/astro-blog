@@ -11,6 +11,28 @@ export interface ImportantUpdate {
 
 export const importantUpdates: ImportantUpdate[] = [
   {
+    id: "ssc-je-recruitment-2026",
+    title:
+      "🔥 SSC JE भरती २०२६: कनिष्ठ अभियंता (JE) १,७४८ जागांसाठी ऑनलाईन अर्ज सुरू (२२ सप्टेंबर मुदत)",
+    link: "/ssc-je-recruitment-2026",
+    date: "September 02, 2026",
+    expiry: "2026-09-23T00:00:00.000Z",
+    show: true,
+    badge: "SSC Bharti",
+    badgeType: "new",
+  },
+  {
+    id: "mpsc-group-c-exam-date-postponed-2026",
+    title:
+      "🚨 MPSC गट-क संयुक्त पूर्व परीक्षा २०२६ पुढे ढकलली: (अधिकृत शुद्धीपत्रक)",
+    link: "/mpsc-group-c-exam-date-postponed-2026",
+    date: "September 09, 2026",
+    expiry: "2026-10-30T00:00:00.000Z",
+    show: true,
+    badge: "Exam Rescheduled",
+    badgeType: "result",
+  },
+  {
     id: "india-post-gds-recruitment-2026",
     title:
       "भारतीय डाक विभागात GDS पदांच्या २३,७५७ जागांसाठी मेगाभरती! (२१ सप्टेंबर २०२६ अर्ज मुदत)",

@@ -28,6 +28,13 @@ interface UpdateArticle {
 
 const updatesArticles: UpdateArticle[] = [
   {
+    id: "mpsc-group-c-exam-date-postponed-2026",
+    title:
+      "🚨 MPSC गट-क संयुक्त पूर्व परीक्षा २०२६ पुढे ढकलली: (अधिकृत शुद्धीपत्रक)",
+    link: "/mpsc-group-c-exam-date-postponed-2026",
+    publishedAt: "2026-09-09T08:00:00.000Z",
+  },
+  {
     id: "mpsc-group-c-divyang-scribe-update-2026",
     title:
       "MPSC गट-क परीक्षा: दिव्यांग उमेदवारांसाठी लेखनिक व भरपाई वेळ परिपत्रक जारी",
@@ -77,6 +84,39 @@ function isNewArticle(dateString: string): boolean {
 >
   <section class="pt-2 pb-16 not-prose">
     <div class="max-w-[1100px] mx-auto px-2 md:px-0">
+      <!-- Postponed Notice Top Alert Banner -->
+      <div
+        class="mb-6 p-4 rounded-2xl bg-rose-500/10 border-2 border-rose-500/30 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left shadow-xs"
+      >
+        <div class="flex items-center gap-3">
+          <div
+            class="p-2.5 bg-rose-500 text-white rounded-xl shrink-0 animate-pulse"
+          >
+            <HiOutlineSparkles className="text-xl" />
+          </div>
+          <div>
+            <h3
+              class="text-sm sm:text-base font-black text-rose-600 dark:text-rose-400 m-0"
+            >
+              🚨 MPSC गट-क संयुक्त पूर्व परीक्षा २०२६ पुढे ढकलली!
+            </h3>
+            <p class="text-xs text-text-muted m-0 font-medium">
+              सुधारित नवीन परीक्षा दिनांक: <strong
+                class="text-rose-600 dark:text-rose-400"
+                >०३ जानेवारी २०२७</strong
+              > (अधिकृत शुद्धीपत्रक जारी)
+            </p>
+          </div>
+        </div>
+
+        <a
+          href="/mpsc-group-c-exam-date-postponed-2026"
+          class="px-4 py-2 bg-rose-600 hover:bg-rose-700 text-white text-xs font-black uppercase tracking-wider rounded-xl no-underline shadow-xs shrink-0 transition-colors"
+        >
+          शुद्धीपत्रक पाहा →
+        </a>
+      </div>
+
       <!-- Live Exam Countdown Banner (Simple & Light Background) -->
       <div
         class="mb-6 p-5 sm:p-6 md:p-8 rounded-3xl bg-gradient-to-br from-violet-500/10 via-primary/5 to-emerald-500/10 border border-violet-500/25 shadow-xs relative overflow-hidden"
@@ -98,8 +138,8 @@ function isNewArticle(dateString: string): boolean {
             </h2>
             <p class="text-xs sm:text-sm text-text-secondary m-0 font-medium">
               परीक्षेचा दिनांक: <span
-                class="font-black text-violet-600 dark:text-violet-400 text-sm sm:text-base"
-                >२५ ऑक्टोबर २०२६
+                class="font-black text-rose-600 dark:text-rose-400 text-sm sm:text-base"
+                >०३ जानेवारी २०२७ (सुधारित)
               </span>
             </p>
           </div>
@@ -237,7 +277,10 @@ function isNewArticle(dateString: string): boolean {
           class="text-xs md:text-base text-text-secondary leading-relaxed mb-6"
         >
           महाराष्ट्र लोकसेवा आयोग (MPSC) द्वारे गट-क संवर्गातील ५,७०७ रिक्त
-          पदांसाठी अर्ज प्रक्रिया सुरू आहे. ऑनलाईन अर्ज करण्याची सुधारित अंतिम मुदत <strong class="text-rose-600 dark:text-rose-400">१० ऑगस्ट २०२६</strong> पर्यंत आहे.
+          पदांसाठी अर्ज प्रक्रिया सुरू आहे. ऑनलाईन अर्ज करण्याची सुधारित अंतिम
+          मुदत <strong class="text-rose-600 dark:text-rose-400"
+            >१० ऑगस्ट २०२६</strong
+          > पर्यंत आहे.
         </p>
 
         <div
@@ -286,10 +329,10 @@ function isNewArticle(dateString: string): boolean {
             <div>
               <span
                 class="block text-[0.65rem] text-text-muted font-bold uppercase"
-                >पूर्व परीक्षा</span
+                >पूर्व परीक्षा (New)</span
               >
-              <span class="text-emerald-600 dark:text-emerald-400 font-extrabold"
-                >२५ ऑक्टोबर २०२६</span
+              <span class="text-rose-600 dark:text-rose-400 font-extrabold"
+                >०३ जानेवारी २०२७</span
               >
             </div>
           </div>
@@ -585,7 +628,7 @@ function isNewArticle(dateString: string): boolean {
 <!-- Live Countdown Timer & 48-Hour Update Script -->
 <script is:inline>
   function updateMpscPrelimsCountdown() {
-    const targetDate = new Date("2026-10-25T10:00:00+05:30").getTime();
+    const targetDate = new Date("2027-01-03T10:00:00+05:30").getTime();
     const now = new Date().getTime();
     const difference = targetDate - now;
 
