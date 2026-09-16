@@ -15,6 +15,22 @@ export interface ArticleMeta {
 export const articlesRegistry: ArticleMeta[] = [
   {
     titleEn:
+      "MECL Nagpur Recruitment 2026: Apply Online for 122 Non-Executive Vacancies",
+    titleMr:
+      "MECL नागपूर भरती २०२६: मिनेरल्स एक्सप्लोरेशन अँड कन्सल्टन्सी लि. मध्ये १२२ जागांसाठी भरती जाहीर!",
+    slug: "/mecl-nagpur-recruitment-2026",
+    category: "Central Govt",
+    date: "September 16, 2026",
+    image:
+      "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=1200",
+    postName: "Non-Executive (16 Categories)",
+    descriptionMr:
+      "नागपूर (Nagpur) येथील MECL मध्ये १२२ जागांवर भरती जाहिरात प्रसिद्ध. १०वी, ITI, डिप्लोमा व पदवीधरांसाठी संधी. ऑनलाईन अर्ज १२ सप्टेंबर ते ११ ऑक्टोबर २०२६.",
+    vacancies: "122",
+    lastDate: "11 Oct 2026",
+  },
+  {
+    titleEn:
       "Delhi High Court SPA & PA Recruitment 2026: Apply Online for 150 Senior Personal Assistant & Personal Assistant Vacancies",
     titleMr:
       "दिल्ली उच्च न्यायालय भरती २०२६: सिनियर पर्सनल असिस्टंट (SPA) व पर्सनल असिस्टंट (PA) १५० जागांसाठी ऑनलाईन अर्ज सुरू!",

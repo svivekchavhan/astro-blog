@@ -11,6 +11,15 @@ export interface NaukriUpdate {
 
 export const naukriUpdates: NaukriUpdate[] = [
   {
+    titleEn: "MECL Nagpur Recruitment 2026: Apply Online for 122 Non-Executive Vacancies",
+    titleHi: "MECL नागपूर भरती २०२६: १२२ जागांसाठी ऑनलाईन अर्ज सुरू",
+    date: "September 16, 2026",
+    badge: "New",
+    badgeType: "new",
+    link: "/mecl-nagpur-recruitment-2026",
+    description: "Mineral Exploration & Consultancy Limited (MECL), Nagpur invites online applications for 122 Non-Executive posts across 16 categories. 10th pass, ITI, Diploma & Graduates eligible. Apply online by 11 October 2026."
+  },
+  {
     titleEn: "Delhi High Court SPA & PA Recruitment 2026: Apply Online for 150 Vacancies",
     titleHi: "दिल्ली उच्च न्यायालय भरती २०२६: SPA व PA १५० जागांसाठी ऑनलाईन अर्ज सुरू",
     date: "September 16, 2026",

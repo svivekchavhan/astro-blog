@@ -31,6 +31,10 @@ export const OFFICIAL_LINKS = {
   delhiHighCourtPortal: "https://delhihighcourt.nic.in",
   delhiHighCourtApplyPortal: "https://cdn.digialm.com/EForms/configuredHtml/33131/102306/Index.html",
 
+  // MECL Nagpur Official & Apply Links
+  meclPortal: "https://www.mecl.co.in",
+  meclApplyPortal: "https://ibpsreg.ibps.in/mecljul26/",
+
   // Main Site URL
   mainSite: "https://mahasandhi.in",
 };
