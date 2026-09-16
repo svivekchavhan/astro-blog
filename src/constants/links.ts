@@ -27,6 +27,10 @@ export const OFFICIAL_LINKS = {
   // Chhatrapati Sambhajinagar MC Portal Link
   csmcRecruitmentPortal: "https://chhsambhajinagarmc.org/recruitment-2026",
 
+  // Delhi High Court Official & Apply Links
+  delhiHighCourtPortal: "https://delhihighcourt.nic.in",
+  delhiHighCourtApplyPortal: "https://cdn.digialm.com/EForms/configuredHtml/33131/102306/Index.html",
+
   // Main Site URL
   mainSite: "https://mahasandhi.in",
 };

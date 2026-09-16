@@ -11,6 +11,15 @@ export interface NaukriUpdate {
 
 export const naukriUpdates: NaukriUpdate[] = [
   {
+    titleEn: "Delhi High Court SPA & PA Recruitment 2026: Apply Online for 150 Vacancies",
+    titleHi: "दिल्ली उच्च न्यायालय भरती २०२६: SPA व PA १५० जागांसाठी ऑनलाईन अर्ज सुरू",
+    date: "September 16, 2026",
+    badge: "New",
+    badgeType: "new",
+    link: "/delhi-high-court-spa-pa-recruitment-2026",
+    description: "High Court of Delhi invites online applications for 150 Senior Personal Assistant (117) & Personal Assistant (33) posts. Graduate pass eligible. Apply online by 05 October 2026."
+  },
+  {
     titleEn: "Sindhudurg DCC Bank Clerk Recruitment 2026: Apply Online for 67 Vacancies",
     titleHi: "सिंधुदुर्ग जिल्हा मध्यवर्ती बँक भरती २०२६: लिपिक ६७ जागांसाठी ऑनलाईन अर्ज सुरू",
     date: "September 03, 2026",

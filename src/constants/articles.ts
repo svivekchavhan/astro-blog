@@ -15,6 +15,22 @@ export interface ArticleMeta {
 export const articlesRegistry: ArticleMeta[] = [
   {
     titleEn:
+      "Delhi High Court SPA & PA Recruitment 2026: Apply Online for 150 Senior Personal Assistant & Personal Assistant Vacancies",
+    titleMr:
+      "दिल्ली उच्च न्यायालय भरती २०२६: सिनियर पर्सनल असिस्टंट (SPA) व पर्सनल असिस्टंट (PA) १५० जागांसाठी ऑनलाईन अर्ज सुरू!",
+    slug: "/delhi-high-court-spa-pa-recruitment-2026",
+    category: "Central Govt",
+    date: "September 16, 2026",
+    image:
+      "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1200",
+    postName: "Senior Personal Assistant (SPA) & Personal Assistant (PA)",
+    descriptionMr:
+      "दिल्ली उच्च न्यायालयात (High Court of Delhi) १५० पदांची ऑनलाईन भरती जाहीर. SPA ११७ पदे व PA ३३ पदे. पदवीधर पात्र. ऑनलाईन अर्ज १५ सप्टेंबर ते ०५ ऑक्टोबर २०२६ पर्यंत.",
+    vacancies: "150",
+    lastDate: "05 Oct 2026",
+  },
+  {
+    titleEn:
       "Sindhudurg DCC Bank Clerk Recruitment 2026: Apply Online for 67 Vacancies",
     titleMr:
       "सिंधुदुर्ग जिल्हा मध्यवर्ती सहकारी बँक भरती २०२६: लिपिक ६७ पदांची सरळसेवा भरती जाहिरात प्रसिद्ध",
