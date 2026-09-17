@@ -20,6 +20,7 @@ import {
   HiOutlineCamera,
   HiOutlineClipboardDocumentCheck,
 } from "react-icons/hi2";
+import { FaWhatsapp } from "react-icons/fa";
 
 const title =
   "MECL नागपूर भरती २०२६: मिनिरत्न कंपनीत १६ संवर्गातील १२२ जागांसाठी भरती जाहीर! ऑनलाईन अर्ज सुरू";
@@ -691,9 +692,25 @@ const officialWebsiteUrl = OFFICIAL_LINKS.meclPortal;
                 <td class="p-3 border border-border-card">
                   <a
                     href="/mpsc-age-calculator-marathi"
-                    class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-purple500/10 hover:bg-purple-500/20 text-purple-600 dark:text-purple-400 text-xs font-bold uppercase tracking-wider rounded-xl transition-colors border border-purple-500/30 w-full sm:w-auto no-underline"
+                    class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-purple-500/10 hover:bg-purple-500/20 text-purple-600 dark:text-purple-400 text-xs font-bold uppercase tracking-wider rounded-xl transition-colors border border-purple-500/30 w-full sm:w-auto no-underline"
                   >
                     <HiOutlineCalculator className="text-base shrink-0" /> Age Calculator
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  class="p-3 border border-border-card text-text-muted font-medium"
+                  >सर्व नवीन अपडेट्ससाठी व्हॉट्सॲप ग्रुप जॉईन करा (WhatsApp Group)</td
+                >
+                <td class="p-3 border border-border-card">
+                  <a
+                    href={OFFICIAL_LINKS.whatsappGroup}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-bold uppercase tracking-wider rounded-xl transition-colors border border-emerald-500/30 w-full sm:w-auto no-underline"
+                  >
+                    <FaWhatsapp className="text-base shrink-0 text-emerald-500" /> Join WhatsApp Group
                   </a>
                 </td>
               </tr>
