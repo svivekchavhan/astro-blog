@@ -1,0 +1,115 @@
+---
+import { QUALIFICATION_OPTIONS, SECTOR_OPTIONS } from "../constants/jobFilterData";
+---
+
+<div
+  class="border-t border-border-card/40 bg-bg-surface/95 backdrop-blur-md py-2 px-4 sm:px-6"
+  id="job-filter-component"
+>
+  <div class="max-w-[1200px] mx-auto w-full flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-4 text-xs text-center">
+    <!-- Centered: Title & Job Filter Dropdowns -->
+    <div class="flex items-center justify-center gap-2 flex-wrap w-full sm:w-auto">
+      <span class="text-[0.68rem] font-black uppercase tracking-wider text-primary flex items-center justify-center gap-1.5 shrink-0">
+        <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+        Job Filter:
+      </span>
+
+      <!-- Qualification Dropdown (Strictly Educational Qualifications) -->
+      <select
+        id="navbar-job-qual-filter"
+        class="bg-bg-base dark:bg-bg-surface border border-border-card hover:border-primary focus:border-primary text-text-main font-semibold text-xs rounded-xl px-3 py-1.5 outline-none cursor-pointer transition-all shadow-2xs max-w-[200px] sm:max-w-none truncate"
+        aria-label="Job Filter by Qualification"
+      >
+        {QUALIFICATION_OPTIONS.map((opt) => (
+          <option value={opt.slug}>{opt.icon ? `${opt.icon} ` : ""}{opt.nameMr}</option>
+        ))}
+      </select>
+
+      <!-- Sector / Profession Dropdown (Strictly Departments & Sectors) -->
+      <select
+        id="navbar-job-cat-filter"
+        class="bg-bg-base dark:bg-bg-surface border border-border-card hover:border-secondary focus:border-secondary text-text-main font-semibold text-xs rounded-xl px-3 py-1.5 outline-none cursor-pointer transition-all shadow-2xs max-w-[200px] sm:max-w-none truncate"
+        aria-label="Job Filter by Sector / Profession"
+      >
+        {SECTOR_OPTIONS.map((opt) => (
+          <option value={opt.slug}>{opt.icon ? `${opt.icon} ` : ""}{opt.nameMr}</option>
+        ))}
+      </select>
+    </div>
+
+    <!-- Direct Link to Openings Hub -->
+    <a
+      href="/current-recruitment"
+      class="text-[0.68rem] font-bold text-primary hover:text-secondary flex items-center justify-center gap-1 no-underline transition-colors shrink-0"
+    >
+      <span>Current Openings Hub</span>
+      <span>→</span>
+    </a>
+  </div>
+</div>
+
+<script>
+  function initStandaloneJobFilter() {
+    const qualSelect = document.getElementById("navbar-job-qual-filter") as HTMLSelectElement;
+    const catSelect = document.getElementById("navbar-job-cat-filter") as HTMLSelectElement;
+    if (!qualSelect || !catSelect) return;
+
+    const currentPath = window.location.pathname.replace(/\/$/, "");
+
+    // Check if current URL path is /category/[slug] or /10th-pass-government-jobs-maharashtra
+    if (currentPath === "/10th-pass-government-jobs-maharashtra") {
+      qualSelect.value = "10th";
+      catSelect.value = "all";
+    } else if (currentPath.startsWith("/category/")) {
+      const activeSlug = currentPath.split("/category/")[1]?.toLowerCase();
+      if (activeSlug) {
+        if (Array.from(qualSelect.options).some((o) => o.value === activeSlug)) {
+          qualSelect.value = activeSlug;
+          catSelect.value = "all";
+        } else if (Array.from(catSelect.options).some((o) => o.value === activeSlug)) {
+          catSelect.value = activeSlug;
+          qualSelect.value = "all";
+        }
+      }
+    } else {
+      // Sync from URL search params if present
+      const currentUrlParams = new URLSearchParams(window.location.search);
+      if (currentUrlParams.has("qual")) {
+        qualSelect.value = currentUrlParams.get("qual") || "all";
+      }
+      if (currentUrlParams.has("cat")) {
+        catSelect.value = currentUrlParams.get("cat") || "all";
+      }
+    }
+
+    function handleQualChange() {
+      const val = qualSelect.value;
+      if (val === "all") {
+        window.location.href = "/current-recruitment";
+      } else if (val === "10th") {
+        window.location.href = "/10th-pass-government-jobs-maharashtra";
+      } else {
+        window.location.href = `/category/${val}`;
+      }
+    }
+
+    function handleCatChange() {
+      const val = catSelect.value;
+      if (val === "all") {
+        window.location.href = "/current-recruitment";
+      } else {
+        window.location.href = `/category/${val}`;
+      }
+    }
+
+    qualSelect.addEventListener("change", handleQualChange);
+    catSelect.addEventListener("change", handleCatChange);
+  }
+
+  document.addEventListener("astro:page-load", initStandaloneJobFilter);
+  if (document.readyState !== "loading") {
+    initStandaloneJobFilter();
+  } else {
+    document.addEventListener("DOMContentLoaded", initStandaloneJobFilter);
+  }
+</script>

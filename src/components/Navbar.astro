@@ -26,6 +26,7 @@ import { articlesRegistry } from "../constants/articles";
 import { MAHARASHTRA_DISTRICTS } from "../constants/districts";
 import { naukriUpdates } from "../constants/naukriUpdates";
 import Marquee from "./Marquee.astro";
+import JobFilter from "./JobFilter.astro";
 
 // Calculate latest post timestamps for dynamic NEW badges on navbar
 const latestResultDate = articlesRegistry
@@ -618,6 +619,9 @@ const searchData = rawSearchData.filter((item) => {
       </ul>
     </div>
   </div>
+
+  <!-- Standalone Job Filter Component (Below Navbar) -->
+  <JobFilter />
 </div>
 
 <div
