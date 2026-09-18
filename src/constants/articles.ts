@@ -638,4 +638,213 @@ export const articlesRegistry: ArticleMeta[] = [
       "MPSC पूर्व व मुख्य परीक्षेसाठी भारतीय संविधानाच्या उद्देशपत्रिकेचा सखोल अभ्यास व महत्त्वाचे प्रश्नोत्तर.",
     lastDate: "Free Notes",
   },
+  {
+    titleEn:
+      "RRB JE Recruitment 2026: Apply Online for 7,951 Railway Junior Engineer & DMS Vacancies",
+    titleMr:
+      "रेल्वे भरती बोर्ड (RRB) ज्युनियर इंजिनिअर (JE) व DMS भरती २०२६: ७,९५१ जागांसाठी ऑनलाईन अर्ज जाहीर!",
+    slug: "/rrb-je-dms-recruitment-2026",
+    category: "Central Govt",
+    date: "September 10, 2026",
+    image:
+      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=1200",
+    postName: "Junior Engineer (JE), Depot Material Superintendent (DMS)",
+    descriptionMr:
+      "भारतीय रेल्वे भरती मंडळ (RRB) अंतर्गत ७,९५१ ज्युनियर इंजिनिअर व डीएमएस पदांची सरळसेवा भरती जाहिरात प्रसिद्ध.",
+    vacancies: "7,951",
+    lastDate: "30 Oct 2026",
+  },
+  {
+    titleEn:
+      "SSC JE Recruitment 2026: Apply Online for 1,748 Junior Engineer Vacancies",
+    titleMr:
+      "कर्मचारी निवड आयोग (SSC) कनिष्ठ अभियंता (JE) १,७४८ जागा भरती २०२६: ऑनलाईन अर्ज सुरू!",
+    slug: "/ssc-je-recruitment-2026",
+    category: "Central Govt",
+    date: "September 02, 2026",
+    image:
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1200",
+    postName: "Junior Engineer (Civil, Electrical, Mechanical)",
+    descriptionMr:
+      "कर्मचारी निवड आयोगाद्वारे (SSC) १,७४८ कनिष्ठ अभियंता (JE) पदांची ऑनलाईन भरती जाहीर. इंजिनिअरिंग डिप्लोमा व पदवीधर पात्र.",
+    vacancies: "1,748",
+    lastDate: "23 Sep 2026",
+  },
+  {
+    titleEn:
+      "Mahajyoti Free Coaching CET 2026: Revised Exam Timetable & Schedule Released",
+    titleMr:
+      "महाज्योति मोफत स्पर्धा परीक्षा पूर्व प्रशिक्षण चाळणी परीक्षा २०२६: सुधारित वेळापत्रक जाहीर!",
+    slug: "/mahajyoti-free-coaching-exam-timetable-2026",
+    category: "Free Coaching",
+    date: "August 04, 2026",
+    image:
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1200",
+    postName: "महाज्योति CET सुधारित वेळापत्रक",
+    descriptionMr:
+      "महाज्योति संस्थेमार्फत घेतल्या जाणाऱ्या ऑनलाईन चाळणी परीक्षेचे सुधारित वेळापत्रक व सविस्तर सूचना प्रसिद्ध.",
+    vacancies: "Exam Timetable",
+    lastDate: "Active Notice",
+  },
+  {
+    titleEn:
+      "Pavitra Portal TAIT 2025: Teacher Recruitment Preference Filling & Login Instructions Notice",
+    titleMr:
+      "पवित्र पोर्टल TAIT-2025: शिक्षक भरती लॉगिन अडचण व पसंतीक्रम नोंदवण्याबाबत अधिकृत परिपत्रक",
+    slug: "/pavitra-portal-tait-2025-preference-filling-notice",
+    category: "Notice",
+    date: "August 08, 2026",
+    image:
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1200",
+    postName: "पवित्र पोर्टल शिक्षक भरती सूचना",
+    descriptionMr:
+      "महाराष्ट्र शासन शिक्षण संचालनालयाने पवित्र पोर्टल वरील TAIT २०२५ पसंतीक्रम लॉक करणे आणि लॉगीन समस्येबाबत अधिकृत सूचना जारी केली आहे.",
+    vacancies: "Teacher Bharti",
+    lastDate: "Official Notice",
+  },
+  {
+    titleEn:
+      "Maharashtra 10th SSC Board Result 2026: Marksheet Download & Verification Direct Link",
+    titleMr:
+      "महाराष्ट्र १०वी (SSC) निकाल २०२६: गुणपत्रक ऑनलाईन डाऊनलोड व पडताळणी लिंक",
+    slug: "/maharashtra-10th-ssc-board",
+    category: "Result",
+    date: "May 25, 2026",
+    image:
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1200",
+    postName: "SSC 10th Board Result 2026",
+    descriptionMr:
+      "महाराष्ट्र राज्य माध्यमिक व उच्च माध्यमिक शिक्षण मंडळाचा १०वी (SSC) परीक्षेचा अधिकृत ऑनलाईन निकाल व गुणपत्रक डाऊनलोड करा.",
+    vacancies: "Board Exam Result",
+    lastDate: "Result Out",
+  },
+  {
+    titleEn:
+      "Maharashtra 12th HSC Board Result 2026: Marksheet Download & Verification Direct Link",
+    titleMr:
+      "महाराष्ट्र १२वी (HSC) निकाल २०२६: गुणपत्रक ऑनलाईन डाऊनलोड व पडताळणी लिंक",
+    slug: "/maharashtra-12th-hsc-board",
+    category: "Result",
+    date: "May 20, 2026",
+    image:
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1200",
+    postName: "HSC 12th Board Result 2026",
+    descriptionMr:
+      "महाराष्ट्र राज्य मंडळाचा १२वी (HSC) कला, विज्ञान व वाणिज्य परीक्षेचा निकाल व विषयनिहाय गुणपत्रक डाऊनलोड दुवा.",
+    vacancies: "Board Exam Result",
+    lastDate: "Result Out",
+  },
+  {
+    titleEn:
+      "MPSC Combined Group C Exam 2026: 5,707 Vacancies Notification, Eligibility & Apply Link",
+    titleMr:
+      "MPSC संयुक्त गट-क भरती परीक्षा २०२६: ५,७०७ पदांची जाहिरात, पात्रता व ऑनलाईन अर्ज!",
+    slug: "/mpsc-combine-group-c-2026",
+    category: "MPSC Bharti",
+    date: "July 20, 2026",
+    image:
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1200",
+    postName: "लिपिक टंकलेखक, कर सहाय्यक व दुय्यम निरीक्षक",
+    descriptionMr:
+      "MPSC महाराष्ट्र गट-क सेवा संयुक्त पूर्व परीक्षा २०२६ अंतर्गत ५,७०७ जागांवर मेगाभरती जाहिरात प्रसिद्ध.",
+    vacancies: "5,707",
+    lastDate: "10 Aug 2026",
+  },
+  {
+    titleEn:
+      "MPSC Current Affairs 2026: Daily & Monthly Marathi Study Notes (चालू घडामोडी)",
+    titleMr:
+      "MPSC चालू घडामोडी २०२६: दैनिक व मासिक परीक्षाभिमुख नोट्स (Marathi Current Affairs)",
+    slug: "/mpsc/mpsc-current-affairs",
+    category: "MPSC",
+    date: "September 15, 2026",
+    image:
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1200",
+    postName: "MPSC चालू घडामोडी नोट्स",
+    descriptionMr:
+      "MPSC राज्यसेवा, संयुक्त गट ब आणि गट क परीक्षेसाठी अत्यंत उपयुक्त दैनिक चालू घडामोडी सविस्तर विश्लेषणासह.",
+    vacancies: "Study Notes",
+    lastDate: "Updated Daily",
+  },
+  {
+    titleEn:
+      "MPSC Exam Details & Information 2026: Eligibility, Age Limit, Posts & Selection Process",
+    titleMr:
+      "MPSC परीक्षा संपूर्ण माहिती २०२६: पात्रता, वयोमर्यादा, पदनिहाय वेतन व निवड प्रक्रिया मार्गदर्शक",
+    slug: "/mpsc/mpsc-exam-details-information",
+    category: "MPSC",
+    date: "August 10, 2026",
+    image:
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1200",
+    postName: "MPSC सर्व परीक्षा मार्गदर्शक",
+    descriptionMr:
+      "महाराष्ट्र लोकसेवा आयोग (MPSC) द्वारे घेतल्या जाणार्‍या सर्व परीक्षांची पात्रता, परीक्षेचे टप्पे व अभ्यासक्रमाची संपूर्ण माहिती.",
+    vacancies: "Complete Guide",
+    lastDate: "Guide",
+  },
+  {
+    titleEn:
+      "MPSC Group C Divyang Scribe Update 2026: Official Circular & Guidelines",
+    titleMr:
+      "MPSC गट-क परीक्षा २०२६: दिव्यांग उमेदवारांसाठी लेखनिक व भरपाई वेळ अधिकृत परिपत्रक",
+    slug: "/mpsc-group-c-divyang-scribe-update-2026",
+    category: "MPSC Notice",
+    date: "August 20, 2026",
+    image:
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1200",
+    postName: "दिव्यांग उमेदवारांसाठी परिपत्रक",
+    descriptionMr:
+      "MPSC गट-क पूर्व परीक्षेसाठी दिव्यांग उमेदवारांना लेखनिक सहाय्य व भरपाई वेळेबाबत आयोगाचे अधिकृत परिपत्रक.",
+    vacancies: "Notice",
+    lastDate: "Circular Out",
+  },
+  {
+    titleEn:
+      "MPSC Group C Exam Date Postponed 2026: Official Rescheduled Notice PDF",
+    titleMr:
+      "MPSC गट-क संयुक्त पूर्व परीक्षा २०२६ पुढे ढकलली: नवीन सुधारित तारीख आणि परिपत्रक",
+    slug: "/mpsc-group-c-exam-date-postponed-2026",
+    category: "MPSC Notice",
+    date: "September 09, 2026",
+    image:
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1200",
+    postName: "गट-क परीक्षा सुधारित तारीख",
+    descriptionMr:
+      "महाराष्ट्र लोकसेवा आयोगाने गट-क संयुक्त पूर्व परीक्षा २०२६ पुढे ढकलण्याबाबत अधिकृत प्रसिद्धीपत्रक जारी केले आहे.",
+    vacancies: "Rescheduled",
+    lastDate: "Exam Postponed",
+  },
+  {
+    titleEn:
+      "MPSC Group C Last Date Extended 2026: Online Form Submission Extended Window",
+    titleMr:
+      "MPSC गट-क परीक्षा २०२६: ऑनलाईन अर्ज भरण्यास मुदतवाढ जाहीर (शुद्धीपत्रक)",
+    slug: "/mpsc-group-c-last-date-extended-2026",
+    category: "MPSC Notice",
+    date: "August 01, 2026",
+    image:
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1200",
+    postName: "गट-क अर्ज मुदतवाढ",
+    descriptionMr:
+      "MPSC गट-क पूर्व परीक्षेच्या ५,७०७ जागांसाठी ऑनलाईन अर्ज सादर करण्यास मुदतवाढ देण्यात आलेली आहे.",
+    vacancies: "5,707",
+    lastDate: "10 Aug 2026",
+  },
+  {
+    titleEn:
+      "MPSC Group C PESA Reservation Update 2026: Official Notice & Rules",
+    titleMr:
+      "MPSC गट-क परीक्षा २०२६: पेसा (PESA) क्षेत्रातील रहिवासी आरक्षणाबाबत परिपत्रक",
+    slug: "/mpsc-group-c-pesa-update-2026",
+    category: "MPSC Notice",
+    date: "August 07, 2026",
+    image:
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1200",
+    postName: "PESA आरक्षण परिपत्रक",
+    descriptionMr:
+      "MPSC संयुक्त गट क परीक्षेतील अनुसूचित क्षेत्रातील (PESA) स्थानिक अनुसूचित जमातीच्या उमेदवारांसाठी महत्त्वपूर्ण परिपत्रक.",
+    vacancies: "Notice",
+    lastDate: "Official Circular",
+  },
 ];
+

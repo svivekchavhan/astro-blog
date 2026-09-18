@@ -172,7 +172,9 @@ const articleSearchItems = articlesRegistry.map((art) => ({
   title: `${art.titleMr} (${art.titleEn})`,
   href: art.slug,
   category: art.category || "Article",
-  keywords: `${art.titleMr} ${art.titleEn} ${art.category}`.toLowerCase(),
+  keywords: `${art.titleMr} ${art.titleEn} ${art.category} ${art.postName || ""} ${art.descriptionMr || ""}`.toLowerCase(),
+  vacancies: art.vacancies || "",
+  date: art.lastDate || art.date || "",
 }));
 
 // 3. All 35+ District Pages (Marathi + English)
@@ -182,6 +184,8 @@ const districtSearchItems = MAHARASHTRA_DISTRICTS.map((dist) => ({
   category: "District",
   keywords:
     `${dist.nameMr} ${dist.nameEn} district bharti jobs ${dist.division}`.toLowerCase(),
+  vacancies: "District Bharti",
+  date: "Updated Daily",
 }));
 
 // 4. Daily Naukri Updates
@@ -189,16 +193,25 @@ const naukriUpdateSearchItems = naukriUpdates.map((u) => ({
   title: `${u.titleHi} (${u.titleEn})`,
   href: u.link,
   category: "Alert",
-  keywords: `${u.titleHi} ${u.titleEn}`.toLowerCase(),
+  keywords: `${u.titleHi} ${u.titleEn} alert update news`.toLowerCase(),
+  vacancies: "",
+  date: u.date || "",
 }));
 
-// Combined Search Index
-const searchData = [
+// Combined Search Index with Deduplication
+const rawSearchData = [
   ...mainPages,
   ...articleSearchItems,
   ...districtSearchItems,
   ...naukriUpdateSearchItems,
 ];
+
+const seenHrefs = new Set();
+const searchData = rawSearchData.filter((item) => {
+  if (!item.href || seenHrefs.has(item.href)) return false;
+  seenHrefs.add(item.href);
+  return true;
+});
 ---
 
 <!-- Sticky Header Wrapper -->
@@ -256,115 +269,181 @@ const searchData = [
   </div>
 
   <header
-    class="min-h-[70px] py-3 lg:py-0 lg:h-[70px] transition-all duration-300 flex items-center"
+    class="min-h-[64px] lg:h-[70px] py-2 lg:py-0 transition-all duration-300 flex items-center"
   >
     <div
-      class="max-w-[1200px] mx-auto px-6 w-full flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 lg:gap-6"
+      class="max-w-[1200px] mx-auto px-4 sm:px-6 w-full flex items-center justify-between gap-2.5 sm:gap-4 md:gap-6"
     >
-      <!-- Top Row on Mobile: Brand and Hamburger -->
-      <div class="flex justify-between items-center w-full lg:w-auto">
-        <a
-          href="/"
-          class="group flex items-center gap-2.5 no-underline shrink-0"
-        >
-          <!-- Custom Premium SVG Logo (Compass/Direction Finder representing "Sandhi") -->
-          <div
-            class="relative flex items-center justify-center w-9.5 h-9.5 rounded-xl bg-gradient-to-tr from-primary to-secondary p-[1px] shadow-sm shadow-primary/20 transition-all duration-300 group-hover:shadow-md group-hover:shadow-secondary/20"
-          >
-            <div
-              class="w-full h-full bg-bg-surface rounded-[11px] flex items-center justify-center transition-all duration-300 group-hover:bg-transparent"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="w-5 h-5 text-primary group-hover:text-white transition-all duration-300 group-hover:rotate-45"
-              >
-                <polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9"
-                ></polygon>
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="1.5"
-                  fill="currentColor"
-                  class="text-secondary group-hover:text-white"></circle>
-              </svg>
-            </div>
-            <!-- Outer Glow ring on hover -->
-            <div
-              class="absolute -inset-0.5 bg-gradient-to-tr from-primary to-secondary rounded-xl blur-[2px] opacity-20 group-hover:opacity-50 transition-opacity duration-300 -z-10"
-            >
-            </div>
-          </div>
-
-          <!-- Logo Brand Text & Domain Pill -->
-          <div class="flex items-start gap-0.5">
-            <span
-              class="text-[1.9rem] md:text-[2.1rem] lg:text-[1.8rem] font-extrabold font-display tracking-tight leading-none text-text-main"
-            >
-              <span
-                class="bg-gradient-to-r from-primary via-secondary to-primary bg-[length:200%_auto] bg-clip-text text-transparent group-hover:bg-right transition-all duration-700"
-                >महा</span
-              ><span
-                class="text-text-main transition-colors duration-300 group-hover:text-primary"
-                >संधी</span
-              >
-            </span>
-            <span
-              class="px-1 py-[1px] text-[0.55rem] font-extrabold tracking-wider text-white uppercase rounded bg-gradient-to-r from-secondary to-primary shadow-xs transition-all duration-300 group-hover:from-primary group-hover:to-secondary"
-            >
-              in
-            </span>
-          </div>
-        </a>
-
-        <!-- Hamburger button (visible on mobile only) -->
-        <button
-          class="lg:hidden flex flex-col justify-between w-6 h-[18px] bg-transparent border-none cursor-pointer p-0 z-[1001]"
-          id="menu-toggle"
-          aria-label="Toggle Menu"
-        >
-          <span
-            class="w-full h-[2px] bg-text-main transition-all duration-300 origin-center"
-          ></span>
-          <span class="w-full h-[2px] bg-text-main transition-all duration-300"
-          ></span>
-          <span
-            class="w-full h-[2px] bg-text-main transition-all duration-300 origin-center"
-          ></span>
-        </button>
-      </div>
-
-      <!-- Search Bar (Visible on both mobile and desktop) -->
-      <div class="relative w-full lg:w-[450px] z-50">
+      <!-- Left: Logo & Brand -->
+      <a
+        href="/"
+        class="group flex items-center gap-2 sm:gap-2.5 no-underline shrink-0"
+      >
+        <!-- Custom Premium SVG Logo -->
         <div
-          class="flex items-center bg-bg-surface dark:bg-bg-surface/50 border-2 border-primary px-4 py-2 rounded-full w-full transition-all duration-300 focus-within:border-secondary focus-within:shadow-md focus-within:shadow-primary/10"
+          class="relative flex items-center justify-center w-8.5 h-8.5 sm:w-9.5 sm:h-9.5 rounded-xl bg-gradient-to-tr from-primary to-secondary p-[1px] shadow-sm shadow-primary/20 transition-all duration-300 group-hover:shadow-md group-hover:shadow-secondary/20"
+        >
+          <div
+            class="w-full h-full bg-bg-surface rounded-[11px] flex items-center justify-center transition-all duration-300 group-hover:bg-transparent"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="w-4.5 h-4.5 sm:w-5 sm:h-5 text-primary group-hover:text-white transition-all duration-300 group-hover:rotate-45"
+            >
+              <polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9"
+              ></polygon>
+              <circle
+                cx="12"
+                cy="12"
+                r="1.5"
+                fill="currentColor"
+                class="text-secondary group-hover:text-white"></circle>
+            </svg>
+          </div>
+          <!-- Outer Glow ring on hover -->
+          <div
+            class="absolute -inset-0.5 bg-gradient-to-tr from-primary to-secondary rounded-xl blur-[2px] opacity-20 group-hover:opacity-50 transition-opacity duration-300 -z-10"
+          >
+          </div>
+        </div>
+
+        <!-- Logo Brand Text & Domain Pill -->
+        <div class="flex items-start gap-0.5">
+          <span
+            class="text-[1.6rem] sm:text-[1.9rem] md:text-[2.1rem] lg:text-[1.8rem] font-extrabold font-display tracking-tight leading-none text-text-main"
+          >
+            <span
+              class="bg-gradient-to-r from-primary via-secondary to-primary bg-[length:200%_auto] bg-clip-text text-transparent group-hover:bg-right transition-all duration-700"
+              >महा</span
+            ><span
+              class="text-text-main transition-colors duration-300 group-hover:text-primary"
+              >संधी</span
+            >
+          </span>
+          <span
+            class="px-1 py-[1px] text-[0.5rem] sm:text-[0.55rem] font-extrabold tracking-wider text-white uppercase rounded bg-gradient-to-r from-secondary to-primary shadow-xs transition-all duration-300 group-hover:from-primary group-hover:to-secondary"
+          >
+            in
+          </span>
+        </div>
+      </a>
+
+      <!-- Center: Header Search Bar (Desktop & Mobile trigger) -->
+      <div class="relative flex-1 max-w-[480px] z-50">
+        <div
+          id="search-box-container"
+          class="flex items-center bg-bg-surface dark:bg-bg-surface/60 border border-border-card hover:border-primary/50 focus-within:border-primary px-3 sm:px-4 py-1.5 sm:py-2 rounded-full w-full transition-all duration-300 shadow-xs focus-within:shadow-md focus-within:shadow-primary/10 cursor-text"
         >
           <HiOutlineMagnifyingGlass
-            className="text-text-muted mr-2.5 text-lg"
+            className="text-primary text-base sm:text-lg mr-2 shrink-0"
           />
           <input
             type="text"
-            placeholder="Search latest jobs, results, exams..."
+            placeholder="Search jobs, results, admit cards, MPSC..."
             id="search-input"
             autocomplete="off"
-            class="bg-transparent border-none text-text-main font-sans text-sm outline-none w-full placeholder-text-muted"
+            class="bg-transparent border-none text-text-main font-sans text-xs sm:text-sm outline-none w-full placeholder-text-muted/80 truncate cursor-text"
           />
+          <!-- Clear Button -->
+          <button
+            id="search-clear-btn"
+            type="button"
+            aria-label="Clear Search"
+            class="hidden text-text-muted hover:text-text-main text-xs p-1 rounded-full transition-colors shrink-0"
+          >
+            ✕
+          </button>
+          <!-- Desktop Shortcut Badge -->
+          <kbd
+            class="hidden md:inline-flex items-center gap-0.5 px-2 py-0.5 ml-1.5 text-[0.6rem] font-bold text-text-muted bg-bg-base/80 border border-border-card rounded-md shadow-2xs pointer-events-none shrink-0"
+          >
+            Ctrl K
+          </kbd>
         </div>
-        <!-- Search Suggestions Dropdown -->
+
+        <!-- Desktop Search Suggestions Dropdown -->
         <div
           id="search-suggestions"
-          class="absolute top-full left-0 right-0 mt-2 bg-bg-surface border border-border-card rounded-2xl shadow-2xl overflow-hidden hidden opacity-0 translate-y-2 transition-all duration-300 z-[60] backdrop-blur-xl"
+          class="absolute top-full left-0 right-0 mt-2 bg-bg-surface/98 border border-border-card rounded-2xl shadow-2xl overflow-hidden hidden opacity-0 translate-y-2 transition-all duration-300 z-[60] backdrop-blur-2xl"
         >
-          <div class="p-2" id="suggestions-list">
+          <!-- Category Filter Chips -->
+          <div
+            class="px-3 pt-2.5 pb-2 border-b border-border-card/40 flex items-center gap-1.5 overflow-x-auto no-scrollbar text-xs"
+            id="desktop-category-chips"
+          >
+            <button
+              data-chip="all"
+              class="chip-btn active px-2.5 py-1 rounded-full font-bold text-[0.68rem] bg-primary text-white transition-all shrink-0 cursor-pointer"
+              >All</button
+            >
+            <button
+              data-chip="Jobs"
+              class="chip-btn px-2.5 py-1 rounded-full font-semibold text-[0.68rem] bg-bg-base hover:bg-primary/10 border border-border-card/60 text-text-main transition-all shrink-0 cursor-pointer"
+              >Jobs</button
+            >
+            <button
+              data-chip="Result"
+              class="chip-btn px-2.5 py-1 rounded-full font-semibold text-[0.68rem] bg-bg-base hover:bg-primary/10 border border-border-card/60 text-text-main transition-all shrink-0 cursor-pointer"
+              >Results</button
+            >
+            <button
+              data-chip="Admit Card"
+              class="chip-btn px-2.5 py-1 rounded-full font-semibold text-[0.68rem] bg-bg-base hover:bg-primary/10 border border-border-card/60 text-text-main transition-all shrink-0 cursor-pointer"
+              >Admit Cards</button
+            >
+            <button
+              data-chip="MPSC"
+              class="chip-btn px-2.5 py-1 rounded-full font-semibold text-[0.68rem] bg-bg-base hover:bg-primary/10 border border-border-card/60 text-text-main transition-all shrink-0 cursor-pointer"
+              >MPSC</button
+            >
+            <button
+              data-chip="Bank Job"
+              class="chip-btn px-2.5 py-1 rounded-full font-semibold text-[0.68rem] bg-bg-base hover:bg-primary/10 border border-border-card/60 text-text-main transition-all shrink-0 cursor-pointer"
+              >Bank Jobs</button
+            >
+            <button
+              data-chip="District"
+              class="chip-btn px-2.5 py-1 rounded-full font-semibold text-[0.68rem] bg-bg-base hover:bg-primary/10 border border-border-card/60 text-text-main transition-all shrink-0 cursor-pointer"
+              >Districts</button
+            >
+          </div>
+
+          <!-- Suggestions List -->
+          <div class="p-2 max-h-[380px] overflow-y-auto space-y-1" id="suggestions-list">
             <!-- Suggestions will be injected here -->
+          </div>
+
+          <!-- Suggestions Footer -->
+          <div
+            class="px-3.5 py-2 bg-bg-base/60 border-t border-border-card/40 flex justify-between items-center text-[0.65rem] text-text-muted font-medium"
+          >
+            <span id="search-results-count">Type to search 500+ items...</span>
+            <span class="hidden sm:inline">Use ↑ ↓ to navigate • Enter to open • Esc to close</span>
           </div>
         </div>
       </div>
+
+      <!-- Right: Hamburger button (visible on mobile only) -->
+      <button
+        class="lg:hidden flex flex-col justify-between w-6 h-[18px] bg-transparent border-none cursor-pointer p-0 shrink-0 z-[1001]"
+        id="menu-toggle"
+        aria-label="Toggle Menu"
+      >
+        <span
+          class="w-full h-[2px] bg-text-main transition-all duration-300 origin-center"
+        ></span>
+        <span class="w-full h-[2px] bg-text-main transition-all duration-300"
+        ></span>
+        <span
+          class="w-full h-[2px] bg-text-main transition-all duration-300 origin-center"
+        ></span>
+      </button>
     </div>
   </header>
 
@@ -729,6 +808,90 @@ const searchData = [
   </div>
 </div>
 
+<!-- Mobile Fullscreen Search Modal -->
+<div
+  id="mobile-search-modal"
+  class="fixed inset-0 z-[1050] bg-bg-surface/98 dark:bg-bg-surface/98 backdrop-blur-2xl flex flex-col hidden opacity-0 transition-all duration-300 p-4 sm:p-6 overflow-hidden"
+>
+  <!-- Modal Top Row -->
+  <div class="flex items-center gap-2.5 pb-3 border-b border-border-card/40 shrink-0">
+    <div
+      class="flex-1 flex items-center bg-bg-base dark:bg-bg-surface border-2 border-primary px-3.5 py-2 rounded-full shadow-inner"
+    >
+      <HiOutlineMagnifyingGlass className="text-primary text-lg mr-2 shrink-0" />
+      <input
+        type="text"
+        id="mobile-search-input"
+        placeholder="Search jobs, results, hall tickets, MPSC..."
+        autocomplete="off"
+        class="bg-transparent border-none text-text-main text-sm font-medium outline-none w-full placeholder-text-muted"
+      />
+      <button
+        id="mobile-search-clear-btn"
+        type="button"
+        aria-label="Clear Input"
+        class="hidden text-text-muted hover:text-text-main text-xs p-1 rounded-full transition-colors shrink-0 cursor-pointer"
+      >
+        ✕
+      </button>
+    </div>
+    <button
+      id="close-mobile-search"
+      type="button"
+      class="px-3.5 py-2 text-xs font-bold text-primary hover:text-secondary bg-primary/10 rounded-full transition-colors shrink-0 cursor-pointer"
+    >
+      Cancel
+    </button>
+  </div>
+
+  <!-- Mobile Category Filter Chips -->
+  <div
+    class="py-3 border-b border-border-card/30 flex items-center gap-1.5 overflow-x-auto no-scrollbar text-xs shrink-0"
+    id="mobile-category-chips"
+  >
+    <button
+      data-chip="all"
+      class="chip-btn active px-3 py-1.5 rounded-full font-bold text-xs bg-primary text-white transition-all shrink-0 cursor-pointer"
+      >All</button
+    >
+    <button
+      data-chip="Jobs"
+      class="chip-btn px-3 py-1.5 rounded-full font-semibold text-xs bg-bg-base hover:bg-primary/10 border border-border-card/60 text-text-main transition-all shrink-0 cursor-pointer"
+      >Jobs</button
+    >
+    <button
+      data-chip="Result"
+      class="chip-btn px-3 py-1.5 rounded-full font-semibold text-xs bg-bg-base hover:bg-primary/10 border border-border-card/60 text-text-main transition-all shrink-0 cursor-pointer"
+      >Results</button
+    >
+    <button
+      data-chip="Admit Card"
+      class="chip-btn px-3 py-1.5 rounded-full font-semibold text-xs bg-bg-base hover:bg-primary/10 border border-border-card/60 text-text-main transition-all shrink-0 cursor-pointer"
+      >Admit Cards</button
+    >
+    <button
+      data-chip="MPSC"
+      class="chip-btn px-3 py-1.5 rounded-full font-semibold text-xs bg-bg-base hover:bg-primary/10 border border-border-card/60 text-text-main transition-all shrink-0 cursor-pointer"
+      >MPSC</button
+    >
+    <button
+      data-chip="Bank Job"
+      class="chip-btn px-3 py-1.5 rounded-full font-semibold text-xs bg-bg-base hover:bg-primary/10 border border-border-card/60 text-text-main transition-all shrink-0 cursor-pointer"
+      >Bank Jobs</button
+    >
+    <button
+      data-chip="District"
+      class="chip-btn px-3 py-1.5 rounded-full font-semibold text-xs bg-bg-base hover:bg-primary/10 border border-border-card/60 text-text-main transition-all shrink-0 cursor-pointer"
+      >Districts</button
+    >
+  </div>
+
+  <!-- Mobile Search Results Container -->
+  <div class="flex-1 overflow-y-auto mt-2 py-2 space-y-2" id="mobile-search-results">
+    <!-- Results or empty state injected here -->
+  </div>
+</div>
+
 <div
   class="fixed inset-0 bg-black/60 backdrop-blur-[4px] z-[999] opacity-0 invisible transition-all duration-300"
   id="mobile-overlay"
@@ -740,148 +903,370 @@ const searchData = [
     const menuToggle = document.getElementById("menu-toggle");
     const mobileMenu = document.getElementById("mobile-menu");
     const mobileOverlay = document.getElementById("mobile-overlay");
+    
+    // Desktop Search Elements
     const searchInput = document.getElementById("search-input");
+    const searchBoxContainer = document.getElementById("search-box-container");
+    const searchClearBtn = document.getElementById("search-clear-btn");
     const suggestionsContainer = document.getElementById("search-suggestions");
     const suggestionsList = document.getElementById("suggestions-list");
+    const searchResultsCount = document.getElementById("search-results-count");
+    const desktopCategoryChips = document.getElementById("desktop-category-chips");
 
-    // Live Search Suggestions
+    // Mobile Search Elements
+    const mobileSearchModal = document.getElementById("mobile-search-modal");
+    const mobileSearchInput = document.getElementById("mobile-search-input");
+    const mobileSearchClearBtn = document.getElementById("mobile-search-clear-btn");
+    const closeMobileSearchBtn = document.getElementById("close-mobile-search");
+    const mobileSearchResults = document.getElementById("mobile-search-results");
+    const mobileCategoryChips = document.getElementById("mobile-category-chips");
+
+    let activeIndex = -1;
+    let desktopActiveCategory = "all";
+    let mobileActiveCategory = "all";
+
+    function getCategoryBadgeClass(category) {
+      const cat = (category || "").toLowerCase();
+      if (cat.includes("result")) return "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/30";
+      if (cat.includes("admit") || cat.includes("ticket")) return "bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/30";
+      if (cat.includes("bank") || cat.includes("sbi")) return "bg-sky-500/10 text-sky-600 dark:text-sky-400 border-sky-500/30";
+      if (cat.includes("mpsc")) return "bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-500/30";
+      if (cat.includes("district")) return "bg-teal-500/10 text-teal-600 dark:text-teal-400 border-teal-500/30";
+      if (cat.includes("alert") || cat.includes("update") || cat.includes("notice")) return "bg-orange-500/10 text-orange-600 dark:text-orange-400 border-orange-500/30";
+      if (cat.includes("syllabus") || cat.includes("calculator") || cat.includes("tool")) return "bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/30";
+      return "bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/30";
+    }
+
+    function highlightMatch(text, query) {
+      if (!query) return text;
+      const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, "gi");
+      return text.replace(
+        regex,
+        '<u class="text-primary no-underline font-bold bg-primary/10 px-0.5 rounded">$1</u>',
+      );
+    }
+
+    function renderEmptyState(query) {
+      return `
+        <div class="text-center py-8 px-4">
+          <div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center mx-auto mb-2.5 text-lg">
+            🔍
+          </div>
+          <p class="text-xs sm:text-sm font-bold text-text-main mb-1">No results found ${query ? `for "${query}"` : ''}</p>
+          <p class="text-[0.72rem] text-text-muted mb-4">Try checking spelling or tap a popular topic below:</p>
+          <div class="flex flex-wrap justify-center gap-1.5 max-w-xs mx-auto">
+            <button type="button" class="quick-suggest-btn text-[0.7rem] font-semibold px-2.5 py-1 rounded-full bg-bg-base hover:bg-primary/10 text-primary border border-primary/20 transition-all cursor-pointer" data-suggest="SBI Clerk">SBI Clerk</button>
+            <button type="button" class="quick-suggest-btn text-[0.7rem] font-semibold px-2.5 py-1 rounded-full bg-bg-base hover:bg-primary/10 text-primary border border-primary/20 transition-all cursor-pointer" data-suggest="MPSC">MPSC</button>
+            <button type="button" class="quick-suggest-btn text-[0.7rem] font-semibold px-2.5 py-1 rounded-full bg-bg-base hover:bg-primary/10 text-primary border border-primary/20 transition-all cursor-pointer" data-suggest="Admit Card">Admit Card</button>
+            <button type="button" class="quick-suggest-btn text-[0.7rem] font-semibold px-2.5 py-1 rounded-full bg-bg-base hover:bg-primary/10 text-primary border border-primary/20 transition-all cursor-pointer" data-suggest="Police Bharti">Police Bharti</button>
+            <button type="button" class="quick-suggest-btn text-[0.7rem] font-semibold px-2.5 py-1 rounded-full bg-bg-base hover:bg-primary/10 text-primary border border-primary/20 transition-all cursor-pointer" data-suggest="10th Pass">10th Pass</button>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderItemHTML(post, query) {
+      const badgeClass = getCategoryBadgeClass(post.category);
+      const highlightedTitle = highlightMatch(post.title, query);
+      const metaInfo = post.vacancies
+        ? `<span class="text-[0.62rem] font-semibold text-primary bg-primary/10 px-1.5 py-0.5 rounded shrink-0">${post.vacancies} Posts</span>`
+        : post.date
+        ? `<span class="text-[0.62rem] text-text-muted shrink-0">${post.date}</span>`
+        : "";
+
+      return `
+        <a href="${post.href}" class="search-item-link flex items-center justify-between gap-3 px-3.5 py-2.5 hover:bg-primary/5 rounded-xl transition-colors group no-underline border-b border-border-card/20 last:border-b-0">
+          <div class="flex items-center gap-2.5 min-w-0 flex-1">
+            <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all shrink-0 text-xs sm:text-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+            </div>
+            <div class="flex flex-col min-w-0 flex-1">
+              <span class="text-xs sm:text-sm text-text-main font-medium truncate group-hover:text-primary transition-colors">${highlightedTitle}</span>
+              ${metaInfo ? `<div class="mt-0.5 flex items-center gap-2">${metaInfo}</div>` : ""}
+            </div>
+          </div>
+          <span class="text-[0.55rem] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider shrink-0 border ${badgeClass}">
+            ${post.category || "Page"}
+          </span>
+        </a>
+      `;
+    }
+
+    function filterPosts(query, activeCategory) {
+      return searchData.filter((post) => {
+        const matchesCategory =
+          activeCategory === "all" ||
+          (post.category && post.category.toLowerCase().includes(activeCategory.toLowerCase()));
+
+        if (!matchesCategory) return false;
+
+        if (!query) return true;
+
+        const titleMatch = post.title.toLowerCase().includes(query);
+        const kwMatch = post.keywords
+          ? post.keywords.toLowerCase().includes(query)
+          : false;
+        return titleMatch || kwMatch;
+      });
+    }
+
+    // DESKTOP SEARCH LOGIC
     if (searchInput && suggestionsContainer && suggestionsList) {
-      let activeIndex = -1;
-
       function getSuggestionItems() {
-        return suggestionsList.querySelectorAll("a");
+        return suggestionsList.querySelectorAll("a.search-item-link");
       }
 
       function updateActiveItem() {
         const items = getSuggestionItems();
         items.forEach((item, idx) => {
-          const iconContainer = item.querySelector("div");
           if (idx === activeIndex) {
-            item.classList.add("bg-primary/5");
-            if (iconContainer) {
-              iconContainer.classList.add("!bg-primary", "!text-white");
-            }
+            item.classList.add("bg-primary/10", "ring-1", "ring-primary/30");
             item.scrollIntoView({ block: "nearest" });
           } else {
-            item.classList.remove("bg-primary/5");
-            if (iconContainer) {
-              iconContainer.classList.remove("!bg-primary", "!text-white");
-            }
+            item.classList.remove("bg-primary/10", "ring-1", "ring-primary/30");
           }
         });
       }
 
-      function highlightMatch(text, query) {
-        if (!query) return text;
-        const regex = new RegExp(`(${query})`, "gi");
-        return text.replace(
-          regex,
-          '<u class="text-primary no-underline font-bold">$1</u>',
-        );
-      }
+      function updateDesktopResults() {
+        const query = searchInput.value.toLowerCase().trim();
+        activeIndex = -1;
 
-      searchInput.addEventListener("input", (e) => {
-        const query = e.target.value.toLowerCase().trim();
-        activeIndex = -1; // Reset selection index on input change
-
-        if (query.length < 2) {
-          suggestionsContainer.classList.add(
-            "hidden",
-            "opacity-0",
-            "translate-y-2",
-          );
-          return;
+        if (searchClearBtn) {
+          searchClearBtn.classList.toggle("hidden", query.length === 0);
         }
 
-        const filtered = searchData
-          .filter((post) => {
-            const titleMatch = post.title.toLowerCase().includes(query);
-            const kwMatch = post.keywords
-              ? post.keywords.toLowerCase().includes(query)
-              : false;
-            return titleMatch || kwMatch;
-          })
-          .slice(0, 8);
+        const filtered = filterPosts(query, desktopActiveCategory).slice(0, 10);
 
         if (filtered.length > 0) {
-          suggestionsList.innerHTML = filtered
-            .map(
-              (post) => `
-            <a href="${post.href}" class="flex items-center justify-between gap-3 px-3.5 py-2.5 hover:bg-primary/5 rounded-xl transition-colors group no-underline border-b border-border-card/20 last:border-b-0">
-              <div class="flex items-center gap-2.5 min-w-0">
-                <div class="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all shrink-0 text-xs">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
-                </div>
-                <span class="text-xs md:text-sm text-text-main font-medium truncate">${highlightMatch(
-                  post.title,
-                  query,
-                )}</span>
-              </div>
-              <span class="text-[0.55rem] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider shrink-0 bg-primary/10 text-primary border border-primary/20">
-                ${post.category || "Page"}
-              </span>
-            </a>
-          `,
-            )
-            .join("");
-
+          suggestionsList.innerHTML = filtered.map((post) => renderItemHTML(post, query)).join("");
+          if (searchResultsCount) {
+            searchResultsCount.textContent = `Found ${filtered.length} results${query ? ` for "${query}"` : ''}`;
+          }
           suggestionsContainer.classList.remove("hidden");
           setTimeout(() => {
             suggestionsContainer.classList.remove("opacity-0", "translate-y-2");
           }, 10);
         } else {
-          suggestionsContainer.classList.add(
-            "hidden",
-            "opacity-0",
-            "translate-y-2",
-          );
+          suggestionsList.innerHTML = renderEmptyState(query);
+          if (searchResultsCount) {
+            searchResultsCount.textContent = `No matches found`;
+          }
+          suggestionsContainer.classList.remove("hidden");
+          setTimeout(() => {
+            suggestionsContainer.classList.remove("opacity-0", "translate-y-2");
+          }, 10);
+        }
+      }
+
+      searchInput.addEventListener("input", updateDesktopResults);
+      searchInput.addEventListener("focus", updateDesktopResults);
+
+      if (searchClearBtn) {
+        searchClearBtn.addEventListener("click", () => {
+          searchInput.value = "";
+          searchInput.focus();
+          updateDesktopResults();
+        });
+      }
+
+      // Desktop Category Chips Click
+      if (desktopCategoryChips) {
+        const chips = desktopCategoryChips.querySelectorAll("button[data-chip]");
+        chips.forEach((chip) => {
+          chip.addEventListener("click", () => {
+            chips.forEach((c) => {
+              c.classList.remove("active", "bg-primary", "text-white");
+              c.classList.add("bg-bg-base", "border-border-card/60", "text-text-main");
+            });
+            chip.classList.add("active", "bg-primary", "text-white");
+            chip.classList.remove("bg-bg-base", "border-border-card/60", "text-text-main");
+            desktopActiveCategory = chip.getAttribute("data-chip") || "all";
+            updateDesktopResults();
+          });
+        });
+      }
+
+      // Quick suggestions delegated click inside desktop dropdown
+      suggestionsList.addEventListener("click", (e) => {
+        const suggestBtn = e.target.closest(".quick-suggest-btn");
+        if (suggestBtn) {
+          const text = suggestBtn.getAttribute("data-suggest");
+          if (text) {
+            searchInput.value = text;
+            updateDesktopResults();
+          }
         }
       });
 
-      // Keyboard navigation
+      // Keyboard navigation for desktop search input
       searchInput.addEventListener("keydown", (e) => {
         const isOpen = !suggestionsContainer.classList.contains("hidden");
         if (!isOpen) return;
 
         const items = getSuggestionItems();
-        if (items.length === 0) return;
 
         if (e.key === "ArrowDown") {
           e.preventDefault();
-          activeIndex = (activeIndex + 1) % items.length;
-          updateActiveItem();
+          if (items.length > 0) {
+            activeIndex = (activeIndex + 1) % items.length;
+            updateActiveItem();
+          }
         } else if (e.key === "ArrowUp") {
           e.preventDefault();
-          activeIndex = (activeIndex - 1 + items.length) % items.length;
-          updateActiveItem();
+          if (items.length > 0) {
+            activeIndex = (activeIndex - 1 + items.length) % items.length;
+            updateActiveItem();
+          }
         } else if (e.key === "Enter") {
           if (activeIndex >= 0 && activeIndex < items.length) {
             e.preventDefault();
             items[activeIndex].click();
           }
         } else if (e.key === "Escape") {
-          suggestionsContainer.classList.add(
-            "hidden",
-            "opacity-0",
-            "translate-y-2",
-          );
+          suggestionsContainer.classList.add("hidden", "opacity-0", "translate-y-2");
+          searchInput.blur();
         }
       });
 
       // Close suggestions when clicking outside
       document.addEventListener("click", (e) => {
         if (
-          !searchInput.contains(e.target) &&
+          !searchBoxContainer?.contains(e.target) &&
           !suggestionsContainer.contains(e.target)
         ) {
-          suggestionsContainer.classList.add(
-            "hidden",
-            "opacity-0",
-            "translate-y-2",
-          );
+          suggestionsContainer.classList.add("hidden", "opacity-0", "translate-y-2");
         }
       });
     }
+
+    // MOBILE SEARCH MODAL OVERLAY LOGIC
+    function openMobileSearchModal(initialQuery = "") {
+      if (!mobileSearchModal) return;
+      mobileSearchModal.classList.remove("hidden");
+      document.body.classList.add("overflow-hidden");
+      setTimeout(() => {
+        mobileSearchModal.classList.remove("opacity-0");
+        if (mobileSearchInput) {
+          if (initialQuery) mobileSearchInput.value = initialQuery;
+          mobileSearchInput.focus();
+          updateMobileResults();
+        }
+      }, 10);
+    }
+
+    function closeMobileSearchModal() {
+      if (!mobileSearchModal) return;
+      mobileSearchModal.classList.add("opacity-0");
+      setTimeout(() => {
+        mobileSearchModal.classList.add("hidden");
+        document.body.classList.remove("overflow-hidden");
+      }, 300);
+    }
+
+    function updateMobileResults() {
+      if (!mobileSearchInput || !mobileSearchResults) return;
+      const query = mobileSearchInput.value.toLowerCase().trim();
+
+      if (mobileSearchClearBtn) {
+        mobileSearchClearBtn.classList.toggle("hidden", query.length === 0);
+      }
+
+      const filtered = filterPosts(query, mobileActiveCategory).slice(0, 15);
+
+      if (filtered.length > 0) {
+        mobileSearchResults.innerHTML = filtered.map((post) => renderItemHTML(post, query)).join("");
+      } else {
+        mobileSearchResults.innerHTML = renderEmptyState(query);
+      }
+    }
+
+    // Open Mobile Search Modal when tapping search box on small screens (< 768px)
+    if (searchBoxContainer) {
+      searchBoxContainer.addEventListener("click", (e) => {
+        if (window.innerWidth < 768) {
+          e.preventDefault();
+          const currentVal = searchInput ? searchInput.value : "";
+          openMobileSearchModal(currentVal);
+        }
+      });
+    }
+
+    if (mobileSearchInput) {
+      mobileSearchInput.addEventListener("input", updateMobileResults);
+    }
+
+    if (mobileSearchClearBtn) {
+      mobileSearchClearBtn.addEventListener("click", () => {
+        if (mobileSearchInput) {
+          mobileSearchInput.value = "";
+          mobileSearchInput.focus();
+          updateMobileResults();
+        }
+      });
+    }
+
+    if (closeMobileSearchBtn) {
+      closeMobileSearchBtn.addEventListener("click", closeMobileSearchModal);
+    }
+
+    // Mobile Category Chips Click
+    if (mobileCategoryChips) {
+      const chips = mobileCategoryChips.querySelectorAll("button[data-chip]");
+      chips.forEach((chip) => {
+        chip.addEventListener("click", () => {
+          chips.forEach((c) => {
+            c.classList.remove("active", "bg-primary", "text-white");
+            c.classList.add("bg-bg-base", "border-border-card/60", "text-text-main");
+          });
+          chip.classList.add("active", "bg-primary", "text-white");
+          chip.classList.remove("bg-bg-base", "border-border-card/60", "text-text-main");
+          mobileActiveCategory = chip.getAttribute("data-chip") || "all";
+          updateMobileResults();
+        });
+      });
+    }
+
+    // Quick suggestions click listener in mobile search modal
+    if (mobileSearchResults) {
+      mobileSearchResults.addEventListener("click", (e) => {
+        const suggestBtn = e.target.closest(".quick-suggest-btn");
+        if (suggestBtn && mobileSearchInput) {
+          const text = suggestBtn.getAttribute("data-suggest");
+          if (text) {
+            mobileSearchInput.value = text;
+            updateMobileResults();
+          }
+        }
+      });
+    }
+
+    // Global Keyboard Listeners (Ctrl+K, Cmd+K, '/')
+    document.addEventListener("keydown", (e) => {
+      // Ignore shortcut when typing in input/textarea unless it's Escape
+      const activeTag = document.activeElement ? document.activeElement.tagName.toLowerCase() : "";
+      const isInputActive = activeTag === "input" || activeTag === "textarea";
+
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
+        e.preventDefault();
+        if (window.innerWidth < 768) {
+          openMobileSearchModal();
+        } else {
+          searchInput?.focus();
+        }
+      } else if (e.key === "/" && !isInputActive) {
+        e.preventDefault();
+        if (window.innerWidth < 768) {
+          openMobileSearchModal();
+        } else {
+          searchInput?.focus();
+        }
+      } else if (e.key === "Escape") {
+        if (mobileSearchModal && !mobileSearchModal.classList.contains("hidden")) {
+          closeMobileSearchModal();
+        }
+      }
+    });
 
     function closeMenu() {
       if (menuToggle?.classList.contains("active")) {
