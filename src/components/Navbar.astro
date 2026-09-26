@@ -29,20 +29,33 @@ import Marquee from "./Marquee.astro";
 import JobFilter from "./JobFilter.astro";
 
 // Calculate latest post timestamps for dynamic NEW badges on navbar
-const latestResultDate = articlesRegistry
-  .filter((a) => a.category === "Result" || (a.titleEn && a.titleEn.toLowerCase().includes("result")))
-  .map((a) => new Date(a.date).getTime())
-  .sort((a, b) => b - a)[0] || 0;
+const latestResultDate =
+  articlesRegistry
+    .filter(
+      (a) =>
+        a.category === "Result" ||
+        (a.titleEn && a.titleEn.toLowerCase().includes("result")),
+    )
+    .map((a) => new Date(a.date).getTime())
+    .sort((a, b) => b - a)[0] || 0;
 
-const latestAdmitCardDate = articlesRegistry
-  .filter((a) => a.category === "Admit Card" || (a.titleEn && (a.titleEn.toLowerCase().includes("admit card") || a.titleEn.toLowerCase().includes("hall ticket"))))
-  .map((a) => new Date(a.date).getTime())
-  .sort((a, b) => b - a)[0] || 0;
+const latestAdmitCardDate =
+  articlesRegistry
+    .filter(
+      (a) =>
+        a.category === "Admit Card" ||
+        (a.titleEn &&
+          (a.titleEn.toLowerCase().includes("admit card") ||
+            a.titleEn.toLowerCase().includes("hall ticket"))),
+    )
+    .map((a) => new Date(a.date).getTime())
+    .sort((a, b) => b - a)[0] || 0;
 
-const latestNaukriUpdateDate = naukriUpdates
-  .filter((u) => u.show !== false)
-  .map((u) => new Date(u.date).getTime())
-  .sort((a, b) => b - a)[0] || 0;
+const latestNaukriUpdateDate =
+  naukriUpdates
+    .filter((u) => u.show !== false)
+    .map((u) => new Date(u.date).getTime())
+    .sort((a, b) => b - a)[0] || 0;
 
 // 1. Core Pages & Tools
 const mainPages = [
@@ -173,7 +186,8 @@ const articleSearchItems = articlesRegistry.map((art) => ({
   title: `${art.titleMr} (${art.titleEn})`,
   href: art.slug,
   category: art.category || "Article",
-  keywords: `${art.titleMr} ${art.titleEn} ${art.category} ${art.postName || ""} ${art.descriptionMr || ""}`.toLowerCase(),
+  keywords:
+    `${art.titleMr} ${art.titleEn} ${art.category} ${art.postName || ""} ${art.descriptionMr || ""}`.toLowerCase(),
   vacancies: art.vacancies || "",
   date: art.lastDate || art.date || "",
 }));
@@ -231,7 +245,9 @@ const searchData = rawSearchData.filter((item) => {
         </span>
         <span class="text-border-card opacity-60">|</span>
         <span class="flex items-center gap-1.5 font-bold text-primary"
-          ><HiOutlineClock className="text-primary text-xs shrink-0 animate-pulse" />
+          ><HiOutlineClock
+            className="text-primary text-xs shrink-0 animate-pulse"
+          />
           <span id="current-time">17:49:41</span>
         </span>
       </div>
@@ -416,7 +432,10 @@ const searchData = rawSearchData.filter((item) => {
           </div>
 
           <!-- Suggestions List -->
-          <div class="p-2 max-h-[380px] overflow-y-auto space-y-1" id="suggestions-list">
+          <div
+            class="p-2 max-h-[380px] overflow-y-auto space-y-1"
+            id="suggestions-list"
+          >
             <!-- Suggestions will be injected here -->
           </div>
 
@@ -425,7 +444,9 @@ const searchData = rawSearchData.filter((item) => {
             class="px-3.5 py-2 bg-bg-base/60 border-t border-border-card/40 flex justify-between items-center text-[0.65rem] text-text-muted font-medium"
           >
             <span id="search-results-count">Type to search 500+ items...</span>
-            <span class="hidden sm:inline">Use ↑ ↓ to navigate • Enter to open • Esc to close</span>
+            <span class="hidden sm:inline"
+              >Use ↑ ↓ to navigate • Enter to open • Esc to close</span
+            >
           </div>
         </div>
       </div>
@@ -480,7 +501,9 @@ const searchData = rawSearchData.filter((item) => {
           >
             <HiOutlineBell className="text-sm shrink-0 text-orange-500" />
             <span>Naukri Updates</span>
-            <span class="nav-new-badge hidden absolute -top-1.5 -right-1 px-1.5 py-0.5 text-[0.5rem] font-black uppercase tracking-widest bg-rose-500 text-white rounded-full shadow-xs animate-pulse">
+            <span
+              class="nav-new-badge hidden absolute -top-1.5 -right-1 px-1.5 py-0.5 text-[0.5rem] font-black uppercase tracking-widest bg-rose-500 text-white rounded-full shadow-xs animate-pulse"
+            >
               NEW
             </span>
           </a>
@@ -501,7 +524,9 @@ const searchData = rawSearchData.filter((item) => {
           >
             <HiOutlineQueueList className="text-sm shrink-0" />
             <span>Result</span>
-            <span class="nav-new-badge hidden absolute -top-1.5 -right-1 px-1.5 py-0.5 text-[0.5rem] font-black uppercase tracking-widest bg-rose-500 text-white rounded-full shadow-xs animate-pulse">
+            <span
+              class="nav-new-badge hidden absolute -top-1.5 -right-1 px-1.5 py-0.5 text-[0.5rem] font-black uppercase tracking-widest bg-rose-500 text-white rounded-full shadow-xs animate-pulse"
+            >
               NEW
             </span>
           </a>
@@ -515,7 +540,9 @@ const searchData = rawSearchData.filter((item) => {
           >
             <HiOutlineIdentification className="text-sm shrink-0" />
             <span>Admit Card</span>
-            <span class="nav-new-badge hidden absolute -top-1.5 -right-1 px-1.5 py-0.5 text-[0.5rem] font-black uppercase tracking-widest bg-rose-500 text-white rounded-full shadow-xs animate-pulse">
+            <span
+              class="nav-new-badge hidden absolute -top-1.5 -right-1 px-1.5 py-0.5 text-[0.5rem] font-black uppercase tracking-widest bg-rose-500 text-white rounded-full shadow-xs animate-pulse"
+            >
               NEW
             </span>
           </a>
@@ -605,14 +632,15 @@ const searchData = rawSearchData.filter((item) => {
               />
               <span>Syllabus</span>
             </a>
+
             <a
-              href="/calculator"
+              href="/tools"
               class="flex items-center gap-2 mx-2 my-1 px-3.5 py-2.5 rounded-xl bg-emerald-500/5 dark:bg-emerald-500/10 border border-solid border-emerald-500/25 text-text-main font-bold hover:bg-emerald-500/10 hover:border-emerald-500 hover:shadow-xs hover:shadow-emerald-500/5 transition-all duration-300 text-[0.68rem] uppercase tracking-wider group no-underline"
             >
               <HiOutlineCalculator
                 className="text-sm shrink-0 text-emerald-500 group-hover:scale-110 transition-transform"
               />
-              <span>Calculators & Tools</span>
+              <span>Tools & Utilities</span>
             </a>
           </div>
         </li>
@@ -681,7 +709,9 @@ const searchData = rawSearchData.filter((item) => {
             <HiOutlineBell className="text-lg shrink-0 text-orange-500" />
             <span>Naukri Updates</span>
           </div>
-          <span class="nav-new-badge hidden text-[0.5rem] font-black uppercase tracking-widest bg-rose-500 text-white px-2 py-0.5 rounded-full shadow-xs animate-pulse">
+          <span
+            class="nav-new-badge hidden text-[0.5rem] font-black uppercase tracking-widest bg-rose-500 text-white px-2 py-0.5 rounded-full shadow-xs animate-pulse"
+          >
             NEW
           </span>
         </a>
@@ -726,7 +756,9 @@ const searchData = rawSearchData.filter((item) => {
             <HiOutlineQueueList className="text-lg shrink-0 text-emerald-500" />
             <span>Result</span>
           </div>
-          <span class="nav-new-badge hidden text-[0.5rem] font-black uppercase tracking-widest bg-rose-500 text-white px-2 py-0.5 rounded-full shadow-xs animate-pulse">
+          <span
+            class="nav-new-badge hidden text-[0.5rem] font-black uppercase tracking-widest bg-rose-500 text-white px-2 py-0.5 rounded-full shadow-xs animate-pulse"
+          >
             NEW
           </span>
         </a>
@@ -739,10 +771,14 @@ const searchData = rawSearchData.filter((item) => {
           class="flex items-center justify-between px-4 py-3 rounded-2xl bg-rose-500/5 dark:bg-rose-500/10 border border-solid border-rose-500/20 text-text-main font-bold hover:bg-rose-500/10 transition-all duration-300 text-xs uppercase tracking-wider no-underline"
         >
           <div class="flex items-center gap-3">
-            <HiOutlineIdentification className="text-lg shrink-0 text-rose-500" />
+            <HiOutlineIdentification
+              className="text-lg shrink-0 text-rose-500"
+            />
             <span>Admit Card</span>
           </div>
-          <span class="nav-new-badge hidden text-[0.5rem] font-black uppercase tracking-widest bg-rose-500 text-white px-2 py-0.5 rounded-full shadow-xs animate-pulse">
+          <span
+            class="nav-new-badge hidden text-[0.5rem] font-black uppercase tracking-widest bg-rose-500 text-white px-2 py-0.5 rounded-full shadow-xs animate-pulse"
+          >
             NEW
           </span>
         </a>
@@ -818,11 +854,15 @@ const searchData = rawSearchData.filter((item) => {
   class="fixed inset-0 z-[1050] bg-bg-surface/98 dark:bg-bg-surface/98 backdrop-blur-2xl flex flex-col hidden opacity-0 transition-all duration-300 p-4 sm:p-6 overflow-hidden"
 >
   <!-- Modal Top Row -->
-  <div class="flex items-center gap-2.5 pb-3 border-b border-border-card/40 shrink-0">
+  <div
+    class="flex items-center gap-2.5 pb-3 border-b border-border-card/40 shrink-0"
+  >
     <div
       class="flex-1 flex items-center bg-bg-base dark:bg-bg-surface border-2 border-primary px-3.5 py-2 rounded-full shadow-inner"
     >
-      <HiOutlineMagnifyingGlass className="text-primary text-lg mr-2 shrink-0" />
+      <HiOutlineMagnifyingGlass
+        className="text-primary text-lg mr-2 shrink-0"
+      />
       <input
         type="text"
         id="mobile-search-input"
@@ -891,7 +931,10 @@ const searchData = rawSearchData.filter((item) => {
   </div>
 
   <!-- Mobile Search Results Container -->
-  <div class="flex-1 overflow-y-auto mt-2 py-2 space-y-2" id="mobile-search-results">
+  <div
+    class="flex-1 overflow-y-auto mt-2 py-2 space-y-2"
+    id="mobile-search-results"
+  >
     <!-- Results or empty state injected here -->
   </div>
 </div>
@@ -907,7 +950,7 @@ const searchData = rawSearchData.filter((item) => {
     const menuToggle = document.getElementById("menu-toggle");
     const mobileMenu = document.getElementById("mobile-menu");
     const mobileOverlay = document.getElementById("mobile-overlay");
-    
+
     // Desktop Search Elements
     const searchInput = document.getElementById("search-input");
     const searchBoxContainer = document.getElementById("search-box-container");
@@ -915,15 +958,23 @@ const searchData = rawSearchData.filter((item) => {
     const suggestionsContainer = document.getElementById("search-suggestions");
     const suggestionsList = document.getElementById("suggestions-list");
     const searchResultsCount = document.getElementById("search-results-count");
-    const desktopCategoryChips = document.getElementById("desktop-category-chips");
+    const desktopCategoryChips = document.getElementById(
+      "desktop-category-chips",
+    );
 
     // Mobile Search Elements
     const mobileSearchModal = document.getElementById("mobile-search-modal");
     const mobileSearchInput = document.getElementById("mobile-search-input");
-    const mobileSearchClearBtn = document.getElementById("mobile-search-clear-btn");
+    const mobileSearchClearBtn = document.getElementById(
+      "mobile-search-clear-btn",
+    );
     const closeMobileSearchBtn = document.getElementById("close-mobile-search");
-    const mobileSearchResults = document.getElementById("mobile-search-results");
-    const mobileCategoryChips = document.getElementById("mobile-category-chips");
+    const mobileSearchResults = document.getElementById(
+      "mobile-search-results",
+    );
+    const mobileCategoryChips = document.getElementById(
+      "mobile-category-chips",
+    );
 
     let activeIndex = -1;
     let desktopActiveCategory = "all";
@@ -931,19 +982,37 @@ const searchData = rawSearchData.filter((item) => {
 
     function getCategoryBadgeClass(category) {
       const cat = (category || "").toLowerCase();
-      if (cat.includes("result")) return "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/30";
-      if (cat.includes("admit") || cat.includes("ticket")) return "bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/30";
-      if (cat.includes("bank") || cat.includes("sbi")) return "bg-sky-500/10 text-sky-600 dark:text-sky-400 border-sky-500/30";
-      if (cat.includes("mpsc")) return "bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-500/30";
-      if (cat.includes("district")) return "bg-teal-500/10 text-teal-600 dark:text-teal-400 border-teal-500/30";
-      if (cat.includes("alert") || cat.includes("update") || cat.includes("notice")) return "bg-orange-500/10 text-orange-600 dark:text-orange-400 border-orange-500/30";
-      if (cat.includes("syllabus") || cat.includes("calculator") || cat.includes("tool")) return "bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/30";
+      if (cat.includes("result"))
+        return "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/30";
+      if (cat.includes("admit") || cat.includes("ticket"))
+        return "bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/30";
+      if (cat.includes("bank") || cat.includes("sbi"))
+        return "bg-sky-500/10 text-sky-600 dark:text-sky-400 border-sky-500/30";
+      if (cat.includes("mpsc"))
+        return "bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-500/30";
+      if (cat.includes("district"))
+        return "bg-teal-500/10 text-teal-600 dark:text-teal-400 border-teal-500/30";
+      if (
+        cat.includes("alert") ||
+        cat.includes("update") ||
+        cat.includes("notice")
+      )
+        return "bg-orange-500/10 text-orange-600 dark:text-orange-400 border-orange-500/30";
+      if (
+        cat.includes("syllabus") ||
+        cat.includes("calculator") ||
+        cat.includes("tool")
+      )
+        return "bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/30";
       return "bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/30";
     }
 
     function highlightMatch(text, query) {
       if (!query) return text;
-      const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, "gi");
+      const regex = new RegExp(
+        `(${query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})`,
+        "gi",
+      );
       return text.replace(
         regex,
         '<u class="text-primary no-underline font-bold bg-primary/10 px-0.5 rounded">$1</u>',
@@ -956,7 +1025,7 @@ const searchData = rawSearchData.filter((item) => {
           <div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center mx-auto mb-2.5 text-lg">
             🔍
           </div>
-          <p class="text-xs sm:text-sm font-bold text-text-main mb-1">No results found ${query ? `for "${query}"` : ''}</p>
+          <p class="text-xs sm:text-sm font-bold text-text-main mb-1">No results found ${query ? `for "${query}"` : ""}</p>
           <p class="text-[0.72rem] text-text-muted mb-4">Try checking spelling or tap a popular topic below:</p>
           <div class="flex flex-wrap justify-center gap-1.5 max-w-xs mx-auto">
             <button type="button" class="quick-suggest-btn text-[0.7rem] font-semibold px-2.5 py-1 rounded-full bg-bg-base hover:bg-primary/10 text-primary border border-primary/20 transition-all cursor-pointer" data-suggest="SBI Clerk">SBI Clerk</button>
@@ -975,8 +1044,8 @@ const searchData = rawSearchData.filter((item) => {
       const metaInfo = post.vacancies
         ? `<span class="text-[0.62rem] font-semibold text-primary bg-primary/10 px-1.5 py-0.5 rounded shrink-0">${post.vacancies} Posts</span>`
         : post.date
-        ? `<span class="text-[0.62rem] text-text-muted shrink-0">${post.date}</span>`
-        : "";
+          ? `<span class="text-[0.62rem] text-text-muted shrink-0">${post.date}</span>`
+          : "";
 
       return `
         <a href="${post.href}" class="search-item-link flex items-center justify-between gap-3 px-3.5 py-2.5 hover:bg-primary/5 rounded-xl transition-colors group no-underline border-b border-border-card/20 last:border-b-0">
@@ -1000,7 +1069,8 @@ const searchData = rawSearchData.filter((item) => {
       return searchData.filter((post) => {
         const matchesCategory =
           activeCategory === "all" ||
-          (post.category && post.category.toLowerCase().includes(activeCategory.toLowerCase()));
+          (post.category &&
+            post.category.toLowerCase().includes(activeCategory.toLowerCase()));
 
         if (!matchesCategory) return false;
 
@@ -1043,9 +1113,11 @@ const searchData = rawSearchData.filter((item) => {
         const filtered = filterPosts(query, desktopActiveCategory).slice(0, 10);
 
         if (filtered.length > 0) {
-          suggestionsList.innerHTML = filtered.map((post) => renderItemHTML(post, query)).join("");
+          suggestionsList.innerHTML = filtered
+            .map((post) => renderItemHTML(post, query))
+            .join("");
           if (searchResultsCount) {
-            searchResultsCount.textContent = `Found ${filtered.length} results${query ? ` for "${query}"` : ''}`;
+            searchResultsCount.textContent = `Found ${filtered.length} results${query ? ` for "${query}"` : ""}`;
           }
           suggestionsContainer.classList.remove("hidden");
           setTimeout(() => {
@@ -1076,15 +1148,24 @@ const searchData = rawSearchData.filter((item) => {
 
       // Desktop Category Chips Click
       if (desktopCategoryChips) {
-        const chips = desktopCategoryChips.querySelectorAll("button[data-chip]");
+        const chips =
+          desktopCategoryChips.querySelectorAll("button[data-chip]");
         chips.forEach((chip) => {
           chip.addEventListener("click", () => {
             chips.forEach((c) => {
               c.classList.remove("active", "bg-primary", "text-white");
-              c.classList.add("bg-bg-base", "border-border-card/60", "text-text-main");
+              c.classList.add(
+                "bg-bg-base",
+                "border-border-card/60",
+                "text-text-main",
+              );
             });
             chip.classList.add("active", "bg-primary", "text-white");
-            chip.classList.remove("bg-bg-base", "border-border-card/60", "text-text-main");
+            chip.classList.remove(
+              "bg-bg-base",
+              "border-border-card/60",
+              "text-text-main",
+            );
             desktopActiveCategory = chip.getAttribute("data-chip") || "all";
             updateDesktopResults();
           });
@@ -1128,7 +1209,11 @@ const searchData = rawSearchData.filter((item) => {
             items[activeIndex].click();
           }
         } else if (e.key === "Escape") {
-          suggestionsContainer.classList.add("hidden", "opacity-0", "translate-y-2");
+          suggestionsContainer.classList.add(
+            "hidden",
+            "opacity-0",
+            "translate-y-2",
+          );
           searchInput.blur();
         }
       });
@@ -1139,7 +1224,11 @@ const searchData = rawSearchData.filter((item) => {
           !searchBoxContainer?.contains(e.target) &&
           !suggestionsContainer.contains(e.target)
         ) {
-          suggestionsContainer.classList.add("hidden", "opacity-0", "translate-y-2");
+          suggestionsContainer.classList.add(
+            "hidden",
+            "opacity-0",
+            "translate-y-2",
+          );
         }
       });
     }
@@ -1179,7 +1268,9 @@ const searchData = rawSearchData.filter((item) => {
       const filtered = filterPosts(query, mobileActiveCategory).slice(0, 15);
 
       if (filtered.length > 0) {
-        mobileSearchResults.innerHTML = filtered.map((post) => renderItemHTML(post, query)).join("");
+        mobileSearchResults.innerHTML = filtered
+          .map((post) => renderItemHTML(post, query))
+          .join("");
       } else {
         mobileSearchResults.innerHTML = renderEmptyState(query);
       }
@@ -1221,10 +1312,18 @@ const searchData = rawSearchData.filter((item) => {
         chip.addEventListener("click", () => {
           chips.forEach((c) => {
             c.classList.remove("active", "bg-primary", "text-white");
-            c.classList.add("bg-bg-base", "border-border-card/60", "text-text-main");
+            c.classList.add(
+              "bg-bg-base",
+              "border-border-card/60",
+              "text-text-main",
+            );
           });
           chip.classList.add("active", "bg-primary", "text-white");
-          chip.classList.remove("bg-bg-base", "border-border-card/60", "text-text-main");
+          chip.classList.remove(
+            "bg-bg-base",
+            "border-border-card/60",
+            "text-text-main",
+          );
           mobileActiveCategory = chip.getAttribute("data-chip") || "all";
           updateMobileResults();
         });
@@ -1248,7 +1347,9 @@ const searchData = rawSearchData.filter((item) => {
     // Global Keyboard Listeners (Ctrl+K, Cmd+K, '/')
     document.addEventListener("keydown", (e) => {
       // Ignore shortcut when typing in input/textarea unless it's Escape
-      const activeTag = document.activeElement ? document.activeElement.tagName.toLowerCase() : "";
+      const activeTag = document.activeElement
+        ? document.activeElement.tagName.toLowerCase()
+        : "";
       const isInputActive = activeTag === "input" || activeTag === "textarea";
 
       if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
@@ -1266,7 +1367,10 @@ const searchData = rawSearchData.filter((item) => {
           searchInput?.focus();
         }
       } else if (e.key === "Escape") {
-        if (mobileSearchModal && !mobileSearchModal.classList.contains("hidden")) {
+        if (
+          mobileSearchModal &&
+          !mobileSearchModal.classList.contains("hidden")
+        ) {
           closeMobileSearchModal();
         }
       }

@@ -1,0 +1,115 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { 
+  HiOutlineWrenchScrewdriver, 
+  HiOutlineClock,
+  HiOutlineSparkles,
+  HiOutlineShieldCheck,
+  HiOutlineCalculator,
+  HiOutlineArrowRight
+} from "react-icons/hi2";
+
+const title = "Tools & Utilities Hub - Coming Soon | MahaSandhi";
+const description = "Free online tools and utility helpers for students and job seekers in Maharashtra are coming soon on MahaSandhi.";
+---
+
+<Layout title={title} description={description} hideSidebar={true}>
+  <section class="py-12 md:py-16 not-prose">
+    <div class="max-w-[1000px] mx-auto px-4 sm:px-6">
+      
+      <!-- Clean Minimal Header -->
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-extrabold uppercase tracking-wider mb-4">
+          <HiOutlineWrenchScrewdriver className="text-sm shrink-0" /> Free Online Utilities
+        </div>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-text-main tracking-tight mb-3">
+          Tools & <span class="gradient-text">Utilities Hub</span>
+        </h1>
+        <p class="text-text-muted text-sm sm:text-base leading-relaxed m-0 font-medium">
+          Powerful, fast, and free web utilities designed for Maharashtra job seekers and students.
+        </p>
+      </div>
+
+      <!-- Main Coming Soon Showcase Card -->
+      <div class="relative overflow-hidden bg-bg-surface border border-border-card rounded-3xl p-8 sm:p-12 text-center shadow-xl mb-10">
+        <!-- Ambient Background Glow Effects -->
+        <div class="absolute -top-24 -left-24 w-72 h-72 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -right-24 w-72 h-72 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-xl mx-auto flex flex-col items-center">
+          <!-- Animated Icon Badge -->
+          <div class="relative mb-6">
+            <div class="w-20 h-20 rounded-2xl bg-gradient-to-tr from-primary/20 to-secondary/20 border border-primary/30 flex items-center justify-center text-primary text-3xl shadow-inner">
+              <HiOutlineClock className="animate-pulse" />
+            </div>
+            <span class="absolute -top-2 -right-2 px-2.5 py-0.5 rounded-full text-[0.65rem] font-black uppercase tracking-wider bg-amber-500 text-white shadow-xs">
+              Coming Soon
+            </span>
+          </div>
+
+          <!-- Main Status Heading -->
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-text-main mb-2 tracking-tight">
+            नवीन साधने व टूल्स लवकरच येत आहेत!
+          </h2>
+          <p class="text-xs sm:text-sm font-semibold text-primary mb-4">
+            New Tools & Utilities Are Coming Soon
+          </p>
+
+          <p class="text-text-muted text-xs sm:text-sm leading-relaxed mb-8 font-medium">
+            आम्ही उमेदवारांसाठी फोटो/स्वाक्षरी रिसायझर, QR कोड जनरेटर व इतर उपयुक्त साधने विकसित करत आहोत. सर्व साधने लवकरच या पानावर मोफत उपलब्ध होतील!
+          </p>
+
+          <!-- Feature Badges -->
+          <div class="flex flex-wrap justify-center items-center gap-2 mb-8 text-xs font-bold text-text-main/80">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-bg-base border border-border-card">
+              <HiOutlineSparkles className="text-amber-500 text-sm" /> 100% Free Utilities
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-bg-base border border-border-card">
+              <HiOutlineShieldCheck className="text-emerald-500 text-sm" /> Browser Based & Private
+            </span>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-3 w-full sm:w-auto">
+            <a
+              href="/calculator"
+              class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary hover:bg-secondary text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-all shadow-md no-underline"
+            >
+              <HiOutlineCalculator className="text-base" />
+              <span>Explore Calculators Hub</span>
+            </a>
+            <a
+              href="/"
+              class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-bg-base hover:bg-bg-surface text-text-main border border-border-card text-xs font-bold uppercase tracking-wider rounded-xl transition-all no-underline"
+            >
+              <span>Back to Homepage</span>
+              <HiOutlineArrowRight className="text-sm" />
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Trust Note Banner -->
+      <div class="bg-bg-surface/60 border border-border-card/60 rounded-2xl p-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl shrink-0">
+            <HiOutlineShieldCheck />
+          </div>
+          <div>
+            <h3 class="text-xs sm:text-sm font-bold text-text-main m-0">100% Free & Privacy Focused</h3>
+            <p class="text-[0.72rem] text-text-muted m-0 font-medium">All upcoming tools will process data locally inside your browser with complete privacy.</p>
+          </div>
+        </div>
+        <a
+          href="/calculator"
+          class="px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider rounded-xl transition-colors no-underline shrink-0 border border-primary/20"
+        >
+          View Calculators
+        </a>
+      </div>
+
+    </div>
+  </section>
+</Layout>
+

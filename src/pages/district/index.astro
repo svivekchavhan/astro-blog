@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { MAHARASHTRA_DISTRICTS } from "../../constants/districts";
+import ToolsShowcaseWidget from "../../components/tools/ToolsShowcaseWidget.astro";
 import { 
   HiOutlineMapPin, 
   HiOutlineChevronRight,
@@ -143,6 +144,9 @@ const DIVISION_NAMES_MR: Record<string, string> = {
     <div id="no-districts-found" class="text-center py-16 bg-bg-surface border border-border-card rounded-2xl hidden mt-6">
       <p class="text-text-muted text-sm m-0">तुम्ही शोधलेला जिल्हा सापडला नाही. कृपया स्पेलिंग तपासा.</p>
     </div>
+
+    <!-- Tools & Utilities Showcase Section (Below District Jobs) -->
+    <ToolsShowcaseWidget />
 
   </section>
 </Layout>
