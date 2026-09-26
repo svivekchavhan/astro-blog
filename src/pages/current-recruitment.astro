@@ -10,6 +10,8 @@ import {
   HiOutlineBriefcase 
 } from "react-icons/hi2";
 
+import { articlesRegistry } from "../constants/articles";
+
 function getCountdownInfo(lastDateStr: string, extendedDateStr?: string) {
   const dateStr = extendedDateStr || lastDateStr;
   
@@ -22,8 +24,8 @@ function getCountdownInfo(lastDateStr: string, extendedDateStr?: string) {
     return { days: 30, text: "Active", isExpired: false };
   }
 
-  // Current system reference date: 2026-08-29
-  const today = new Date(2026, 7, 29);
+  // Current system reference date: 2026-09-26
+  const today = new Date();
   parsedDate.setHours(23, 59, 59, 999);
   today.setHours(0, 0, 0, 0);
 
@@ -39,231 +41,18 @@ function getCountdownInfo(lastDateStr: string, extendedDateStr?: string) {
   }
 }
 
-const latestJobs = [
-  {
-    category: "Central Govt",
-    status: "apply-now",
-    title: "MECL नागपूर भरती २०२६: मिनेरल्स एक्सप्लोरेशन अँड कन्सल्टन्सी लि. मध्ये १२२ जागांसाठी भरती जाहीर!",
-    link: "/mecl-nagpur-recruitment-2026",
-    organisation: "MECL Nagpur (Miniratna-I CPSE, Ministry of Mines)",
-    qualification: "10th Pass / ITI / Diploma / Graduation Degree",
-    vacancies: "122",
-    lastDate: "11 Oct 2026"
-  },
-  {
-    category: "Central Govt",
-    status: "apply-now",
-    title: "दिल्ली उच्च न्यायालय भरती २०२६: सिनियर पर्सनल असिस्टंट (SPA) व पर्सनल असिस्टंट (PA) १५० जागांसाठी ऑनलाईन अर्ज सुरू!",
-    link: "/delhi-high-court-spa-pa-recruitment-2026",
-    organisation: "High Court of Delhi (दिल्ली उच्च न्यायालय)",
-    qualification: "Graduate Degree + English Shorthand & Typewriting",
-    vacancies: "150",
-    lastDate: "05 Oct 2026"
-  },
-  {
-    category: "Bank Job",
-    status: "apply-now",
-    title: "सिंधुदुर्ग जिल्हा मध्यवर्ती बँक लिपिक पदभरती २०२६: ६७ जागांसाठी जाहिरात प्रसिद्ध (Sindhudurg DCCB Bharti)",
-    link: "/sindhudurg-dcc-bank-clerk-recruitment-2026",
-    organisation: "The Sindhudurg District Central Co-operative Bank Ltd",
-    qualification: "Graduate in any discipline (min 40% marks) + 10th Marathi",
-    vacancies: "67",
-    lastDate: "17 Sep 2026"
-  },
-  {
-    category: "Central Govt",
-    status: "apply-now",
-    title: "भारतीय डाक विभागात GDS पदांच्या २३,७५७ जागांसाठी मेगाभरती २०२६: ऑनलाईन अर्ज सुरू (India Post GDS Bharti)",
-    link: "/india-post-gds-recruitment-2026",
-    organisation: "Department of Posts (India Post)",
-    qualification: "10th Pass (Matriculation with Maths & English)",
-    vacancies: "23,757",
-    lastDate: "21 Sep 2026"
-  },
-  {
-    category: "Exam Alert",
-    status: "apply-now",
-    title: "CTET २०२६ ऑनलाईन अर्ज पुन्हा सुरू: २२ व्या केंद्रीय शिक्षक पात्रता परीक्षेसाठी ०१ सप्टेंबर पर्यंत मुदतवाढ",
-    link: "/ctet-2026-online-application-reopened",
-    organisation: "Central Board of Secondary Education (CBSE)",
-    qualification: "D.El.Ed / B.Ed / Graduation (Paper I & II)",
-    vacancies: "Eligibility Test",
-    lastDate: "01 Sep 2026"
-  },
-  {
-    category: "Free Coaching",
-    status: "apply-now",
-    title: "बार्टी, TRTI, सारथी, अमृत व आर्टी मोफत स्पर्धा परीक्षा पूर्व प्रशिक्षण चाळणी परीक्षा २०२६: वयोमर्यादा शिथिल व मुदतवाढ",
-    link: "/barti-trti-sarthi-age-relaxation-extension-2026",
-    organisation: "TRTI, BARTI, SARTHI, AMRUT & ARTI Maharashtra",
-    qualification: "Degree / Graduate in any discipline (Category Specific)",
-    vacancies: "Free CET Coaching",
-    lastDate: "04 Sep 2026"
-  },
-  {
-    category: "Bank Job",
-    status: "closed",
-    title: "IBPS भरती २०२६: क्लर्क (CSA-XVI) ११,४०३ जागांची भरती, ऑनलाईन अर्जास २८ ऑगस्ट मुदतवाढ (IBPS Clerk Bharti)",
-    link: "/ibps-csa-clerk-recruitment-2026",
-    organisation: "Institute of Banking Personnel Selection (IBPS)",
-    qualification: "Graduation in any discipline + Computer Knowledge + Local Language",
-    vacancies: "11,403 (Maha: 1,051)",
-    lastDate: "21 Aug 2026",
-    extendedDate: "28 Aug 2026"
-  },
-  {
-    category: "Central Govt",
-    status: "closed",
-    title: "ISRO भरती २०२६: भारतीय अंतराळ संशोधन संस्थेत २६७ जागांसाठी भरती जाहीर (ISRO Recruitment 2026)",
-    link: "/isro-recruitment-2026",
-    organisation: "Indian Space Research Organisation (ISRO)",
-    qualification: "Degree in any discipline (min 60% marks) / Diploma",
-    vacancies: "267",
-    lastDate: "16 Aug 2026",
-    extendedDate: "20 Aug 2026"
-  },
-  {
-    category: "Bank Job",
-    status: "apply-now",
-    title: "बँक ऑफ बडोदा मध्ये 'लोकल बँक ऑफिसर' २५०० जागांसाठी भरती २०२५: ऑनलाईन अर्ज सुरू (BOB LBO Bharti)",
-    link: "/bank-of-baroda-lbo-recruitment-2025",
-    organisation: "Bank of Baroda (BOB)",
-    qualification: "Degree in any discipline + 1 Year Officer Experience",
-    vacancies: "2,500",
-    lastDate: "07 Sep 2026"
-  },
-  {
-    category: "Central Govt",
-    status: "apply-now",
-    title: "आयकर विभाग पुणे भरती २०२६: खेळाडूंसाठी ८५ जागांवर ऑनलाईन अर्ज सुरू (Income Tax Pune Sports Quota Bharti)",
-    link: "/pune-income-tax-sports-quota-recruitment-2026",
-    organisation: "Income Tax Department, Pune (Pr.CCIT Pune)",
-    qualification: "10th Pass / 12th Pass / Graduate Degree + Sports Certificate",
-    vacancies: "85",
-    lastDate: "15 Sep 2026"
-  },
-  {
-    category: "State Govt",
-    status: "closed",
-    title: "GMC Gondia भरती २०२६: शासकीय वैद्यकीय महाविद्यालय गोंदिया सहाय्यक प्राध्यापक १३ जागांसाठी जाहिरात प्रसिद्ध",
-    link: "/gmc-gondia-assistant-professor-recruitment-2026",
-    organisation: "Government Medical College, Gondia (GMC Gondia)",
-    qualification: "MD / MS / DNB in relevant subject / M.Sc. + Ph.D. Statistics",
-    vacancies: "13",
-    lastDate: "20 Aug 2026"
-  },
-  {
-    category: "Central Govt",
-    status: "apply-now",
-    title: "RRB JE / DMS Recruitment 2026: रेल्वे भरती बोर्डात ३,९९३ जागांसाठी भरती (CEN 04/2026)",
-    link: "/rrb-je-dms-recruitment-2026",
-    organisation: "Railway Recruitment Boards (RRB)",
-    qualification: "Diploma / Degree in Engineering",
-    vacancies: "3,993",
-    lastDate: "13 Sep 2026"
-  },
-  {
-    category: "Bank Job",
-    status: "closed",
-    title: "सांगली जिल्हा मध्यवर्ती बँक शिपाई पदभरती २०२६: ७९ जागांसाठी जाहिरात प्रसिद्ध",
-    link: "/sangli-dcc-bank-peon-bharti-2026",
-    organisation: "Sangli District Central Cooperative Bank Ltd (Sangli DCCB)",
-    qualification: "12th Pass (HSC)",
-    vacancies: "79",
-    lastDate: "21 Aug 2026"
-  },
-  {
-    category: "Bank Job",
-    status: "closed",
-    title: "पुणे जिल्हा मध्यवर्ती सहकारी बँक भरती २०२६: शिपाई २८९ पदांची सरळसेवा भरती जाहिरात प्रसिद्ध",
-    link: "/pdcc-bank-peon-bharti-2026",
-    organisation: "Pune District Central Cooperative Bank Ltd (PDCC)",
-    qualification: "12th Pass (HSC) / Diploma",
-    vacancies: "289",
-    lastDate: "10 Aug 2026"
-  },
-  {
-    category: "State Govt",
-    status: "apply-now",
-    title: "सोलापूर महानगरपालिका भरती २०२६: १३० जागांच्या पदभरतीस शासन मान्यता जाहीर (शासन निर्णय)",
-    link: "/solapur-mahanagarpalika-bharti-2026",
-    organisation: "Solapur Municipal Corporation & Urban Development Dept",
-    qualification: "Degree / Diploma / 10th / 12th / ITI",
-    vacancies: "130",
-    lastDate: "Notification Soon"
-  },
-  {
-    category: "Bank Job",
-    status: "apply-now",
-    title: "लातूर जिल्हा मध्यवर्ती बँक भरती २०२६: ३७५ पदांची सुधारीत प्रतीक्षा यादी (Revised Waiting List) प्रसिद्ध",
-    link: "/latur-dcc-bank-revised-waiting-list-2026",
-    organisation: "Latur District Central Cooperative Bank Ltd. (Latur DCCB)",
-    qualification: "Graduate / 10th / 12th / Driver",
-    vacancies: "375 (20% Waiting List)",
-    lastDate: "Valid for 365 Days"
-  },
-  {
-    category: "State Govt",
-    status: "closed",
-    title: "महानिर्मिती भरती २०२६: मुख्य अभियंता (तांत्रिक व स्थापत्य) ७ जागांसाठी जाहिरात प्रसिद्ध",
-    link: "/mahagenco-recruitment-2026",
-    organisation: "MAHAGENCO (Maharashtra State Power Generation Co. Ltd)",
-    qualification: "B.E. / B.Tech (Electrical / Mechanical / Electronics / Instrumentation / Civil) + 15 Yrs Exp",
-    vacancies: "07",
-    lastDate: "20 Aug 2026"
-  },
-  {
-    category: "Bank Job",
-    status: "closed",
-    title: "लातूर जिल्हा मध्यवर्ती सहकारी बँक निकाल २०२६: ३७५ पदांपैकी २६३ उमेदवारांची Phase 1 निवड यादी प्रसिद्ध",
-    link: "/latur-dcc-bank-result-2026",
-    organisation: "Latur District Central Cooperative Bank Ltd. (Latur DCCB)",
-    qualification: "Graduate / 10th / 12th / Driver",
-    vacancies: "375 (263 Selected)",
-    lastDate: "14 Aug 2026"
-  },
-  {
-    category: "State Govt",
-    status: "closed",
-    title: "MPSC गट-क सेवा संयुक्त पूर्व परीक्षा २०२६: ५,७०७ जागांसाठी शुद्धिपत्रक प्रसिद्ध, अर्ज मुदतवाढ",
-    link: "/mpsc-group-c-bharti-2026",
-    organisation: "MPSC (Maharashtra Public Service Commission)",
-    qualification: "Degree in any discipline / B.F.Sc.",
-    vacancies: "5,707",
-    lastDate: "05 August 2026",
-    extendedDate: "10 August 2026"
-  },
-  {
-    category: "Central Govt",
-    status: "closed",
-    title: "HPCL Bharti 2026: हिंदुस्तान पेट्रोलियम मध्ये 116 जागांसाठी भरती",
-    link: "/hpcl-recruitment-2026",
-    organisation: "HPCL",
-    qualification: "Diploma/Degree in Engg/MBA/Post Graduate",
-    vacancies: "116",
-    lastDate: "20 July 2026"
-  },
-  {
-    category: "State Govt",
-    status: "closed",
-    title: "MH SET Exam 2026: महाराष्ट्र सेट परीक्षा अर्ज मुदतवाढ (विलंब शुल्कासह)",
-    link: "/maharashtra-set-exam-2026",
-    organisation: "SPPU Pune",
-    qualification: "Post Graduate",
-    vacancies: "Eligibility Test",
-    lastDate: "23 July 2026"
-  },
-  {
-    category: "Central Govt",
-    status: "closed",
-    title: "BSNL Bharti 2026: भारत संचार निगम लिमिटेड मध्ये 100 जागांसाठी भरती",
-    link: "/bsnl-bharti-2026",
-    organisation: "BSNL",
-    qualification: "Diploma/B.E./B.Tech/Graduate",
-    vacancies: "100",
-    lastDate: "30 June 2026"
-  }
-];
+// Dynamically generate latestJobs list from articlesRegistry so new posts automatically display on Current Recruitment page
+const latestJobs = articlesRegistry.map((art) => ({
+  category: art.category || "Govt Job",
+  status: "apply-now",
+  title: art.titleMr || art.titleEn,
+  link: art.slug,
+  organisation: art.postName || art.titleEn,
+  qualification: art.descriptionMr || art.titleEn,
+  vacancies: art.vacancies || "पहा",
+  lastDate: art.lastDate || "लवकरच",
+  extendedDate: art.extendedDate
+}));
 ---
 
 <Layout 

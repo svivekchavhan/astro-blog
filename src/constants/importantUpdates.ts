@@ -11,6 +11,17 @@ export interface ImportantUpdate {
 
 export const importantUpdates: ImportantUpdate[] = [
   {
+    id: "pmbi-recruitment-2026",
+    title:
+      "PMBI भरती २०२६: फार्मास्युटिकल्स अँड मेडिकल डिव्हाइसेस ब्युरो ऑफ इंडिया मध्ये १७८ जागांसाठी भरती",
+    link: "/pmbi-recruitment-2026",
+    date: "September 26, 2026",
+    expiry: "2026-10-10T00:00:00.000Z",
+    show: true,
+    badge: "PMBI",
+    badgeType: "new",
+  },
+  {
     id: "ssc-je-recruitment-2026",
     title:
       "🔥 SSC JE भरती २०२६: कनिष्ठ अभियंता (JE) १,७४८ जागांसाठी ऑनलाईन अर्ज सुरू",

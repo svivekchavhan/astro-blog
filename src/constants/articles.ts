@@ -15,6 +15,22 @@ export interface ArticleMeta {
 export const articlesRegistry: ArticleMeta[] = [
   {
     titleEn:
+      "PMBI Recruitment 2026: Apply for 178 Contractual Vacancies in Pharmaceuticals & Medical Devices Bureau of India",
+    titleMr:
+      "PMBI भरती २०२६: फार्मास्युटिकल्स अँड मेडिकल डिव्हाइसेस ब्युरो ऑफ इंडिया मध्ये १७८ जागांसाठी भरती जाहीर!",
+    slug: "/pmbi-recruitment-2026",
+    category: "Central Govt",
+    date: "September 26, 2026",
+    image:
+      "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=1200",
+    postName: "General Manager, Manager, Executive, Officer & Pharmacist (11 Categories)",
+    descriptionMr:
+      "फार्मास्युटिकल्स अँड मेडिकल डिव्हाइसेस ब्युरो ऑफ इंडिया (PMBI) अंतर्गत १७८ कंत्राटी जागांवर भरती जाहीर. १०+ विभागांमध्ये पदवीधर, B.Pharma, B.Tech व इतर पात्र. हार्ड कॉपी अर्ज २४ सप्टेंबर २०२६ पर्यंत.",
+    vacancies: "178",
+    lastDate: "24 Sep 2026",
+  },
+  {
+    titleEn:
       "MECL Nagpur Recruitment 2026: Apply Online for 122 Non-Executive Vacancies",
     titleMr:
       "MECL नागपूर भरती २०२६: मिनेरल्स एक्सप्लोरेशन अँड कन्सल्टन्सी लि. मध्ये १२२ जागांसाठी भरती जाहीर!",

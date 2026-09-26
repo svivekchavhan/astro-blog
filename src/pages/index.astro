@@ -5,173 +5,19 @@ import {
   HiOutlineBuildingOffice, 
   HiOutlineAcademicCap 
 } from "react-icons/hi2";
-const latestJobs = [
-  {
-    category: "Central Govt",
-    status: "apply-now",
-    title: "MECL नागपूर भरती २०२६: मिनिरत्न कंपनीत १६ संवर्गातील १२२ जागांसाठी भरती जाहीर! ऑनलाईन अर्ज सुरू",
-    link: "/mecl-nagpur-recruitment-2026",
-    description: "MECL Nagpur Recruitment 2026: Mineral Exploration & Consultancy Limited (MECL), नागपूर येथे १६ विविध पदांच्या १२२ जागांवर भरती. १०वी, ITI, डिप्लोमा, पदवीधर पात्र. ऑनलाईन अर्ज १२ सप्टेंबर ते ११ ऑक्टोबर २०२६.",
-    vacancies: "122",
-    lastDate: "11 Oct 2026"
-  },
-  {
-    category: "Central Govt",
-    status: "apply-now",
-    title: "दिल्ली उच्च न्यायालय भरती २०२६: सिनियर पर्सनल असिस्टंट (SPA) व पर्सनल असिस्टंट (PA) १५० जागांसाठी ऑनलाईन अर्ज सुरू!",
-    link: "/delhi-high-court-spa-pa-recruitment-2026",
-    description: "Delhi High Court SPA & PA Recruitment 2026: दिल्ली उच्च न्यायालयात (High Court of Delhi) १५० पदांची भरती (SPA-117, PA-33). पदवीधर पात्र. ऑनलाईन अर्ज १५ सप्टेंबर ते ०५ ऑक्टोबर २०२६ पर्यंत.",
-    vacancies: "150",
-    lastDate: "05 Oct 2026"
-  },
-  {
-    category: "Bank Job",
-    status: "apply-now",
-    title: "सिंधुदुर्ग जिल्हा मध्यवर्ती सहकारी बँक भरती २०२६: लिपिक ६७ पदांची सरळसेवा भरती जाहीर (Sindhudurg DCC Bank Bharti)",
-    link: "/sindhudurg-dcc-bank-clerk-recruitment-2026",
-    description: "Sindhudurg DCC Bank Recruitment 2026: दि सिंधुदुर्ग जिल्हा मध्यवर्ती सहकारी बँक लि. कडून सिंधुदुर्ग जिल्ह्यातील रहिवाशांसाठी लिपिक ६७ पदांची भरती जाहीर! पदवीधर पात्र. परिविक्षा कालावधीत ₹१८,००० मानधन. ऑनलाईन अर्ज मुदत ०३ सप्टेंबर ते १७ सप्टेंबर २०२६.",
-    vacancies: "67",
-    lastDate: "17 Sep 2026"
-  },
-  {
-    category: "Central Govt",
-    status: "apply-now",
-    title: "भारतीय डाक विभागात GDS पदांच्या २३,७५७ जागांसाठी मेगाभरती २०२६: ऑनलाईन अर्ज सुरू (India Post GDS Bharti)",
-    link: "/india-post-gds-recruitment-2026",
-    description: "India Post GDS Recruitment 2026: भारतीय टपाल विभागात २३,७५७ ग्रामीण डाक सेवक (GDS/BPM/ABPM) पदांची मेगा भरती जाहीर! १०वी पास पात्र. ऑनलाईन नोंदणी ३१ ऑगस्ट ते १९ सप्टेंबर २०२६. अर्ज करण्याची शेवटची तारीख २१ सप्टेंबर २०२६.",
-    vacancies: "23,757",
-    lastDate: "21 Sep 2026"
-  },
-  {
-    category: "Bank Job",
-    status: "apply-now",
-    title: "IBPS भरती २०२६: क्लर्क (CSA-XVI) ११,४०३ जागांची भरती, अर्ज मुदतवाढ २८ ऑगस्ट २०२६ (IBPS Clerk Bharti)",
-    link: "/ibps-csa-clerk-recruitment-2026",
-    description: "IBPS CRP CSA-XVI Recruitment 2026: सार्वजनिक क्षेत्रातील बँकांमध्ये ११,४०३ लिपिक (Customer Service Associate) पदांची भरती (महाराष्ट्रात १,०५१ जागा). पदवीधर पात्र. अर्ज भरण्यास २८ ऑगस्ट २०२६ पर्यंत वाढीव मुदत.",
-    vacancies: "11,403 (Maha: 1,051)",
-    lastDate: "21 Aug 2026",
-    extendedDate: "28 Aug 2026"
-  },
-  {
-    category: "Central Govt",
-    status: "apply-now",
-    title: "ISRO भरती २०२६: भारतीय अंतराळ संशोधन संस्थेत २६७ जागांसाठी भरती जाहीर (ISRO Recruitment 2026)",
-    link: "/isro-recruitment-2026",
-    description: "ISRO Bharti 2026: भारतीय अंतराळ संशोधन संस्था (ISRO) अंतर्गत सहायक, JPA, UDC व आशुलिपिक २६७ पदांची ऑनलाईन भरती जाहीर. पदवीधर पात्र. अर्ज करण्याची शेवटची तारीख २० ऑगस्ट २०२६.",
-    vacancies: "267",
-    lastDate: "16 Aug 2026",
-    extendedDate: "20 Aug 2026"
-  },
-  {
-    category: "Bank Job",
-    status: "apply-now",
-    title: "बँक ऑफ बडोदा मध्ये 'लोकल बँक ऑफिसर' २५०० जागांसाठी भरती २०२५: ऑनलाईन अर्ज करा (BOB LBO Bharti)",
-    link: "/bank-of-baroda-lbo-recruitment-2025",
-    description: "Bank of Baroda LBO Recruitment 2025: बैंक ऑफ बडोदा (BOB) द्वारे लोकल बँक ऑफिसर (JMG/S-I) २५०० पदांची ऑनलाईन भरती जाहीर. पदवीधर + १ वर्षाचा बँक अधिकारी अनुभव पात्र. अर्ज करण्याची शेवटची तारीख ०७ सप्टेंबर २०२६.",
-    vacancies: "2,500",
-    lastDate: "07 Sep 2026"
-  },
-  {
-    category: "Central Govt",
-    status: "apply-now",
-    title: "आयकर विभाग पुणे भरती २०२६: खेळाडूंसाठी ८५ जागांवर ऑनलाईन अर्ज सुरू (Income Tax Pune Sports Quota Bharti)",
-    link: "/pune-income-tax-sports-quota-recruitment-2026",
-    description: "Income Tax Pune Sports Quota Bharti 2026: प्रधान मुख्य आयकर आयुक्त कार्यालय, पुणे (Pr.CCIT Pune) अंतर्गत गुणवंत खेळाडूंसाठी स्टेनोग्राफर ग्रेड-II, टॅक्स असिस्टंट आणि MTS अशा ८५ जागांवर ऑनलाईन भरती जाहीर. ऑनलाईन अर्ज १५ ऑगस्ट ते १५ सप्टेंबर २०२६.",
-    vacancies: "85",
-    lastDate: "15 Sep 2026"
-  },
-  {
-    category: "State Govt",
-    status: "apply-now",
-    title: "GMC Gondia भरती २०२६: शासकीय वैद्यकीय महाविद्यालय गोंदिया सहाय्यक प्राध्यापक १३ जागांसाठी जाहिरात प्रसिद्ध",
-    link: "/gmc-gondia-assistant-professor-recruitment-2026",
-    description: "GMC Gondia Recruitment 2026: शासकीय वैद्यकीय महाविद्यालय, गोंदिया कडून सहाय्यक प्राध्यापक (Physiology, Pharmacology, Biochemistry, Anatomy, Forensic, Community Medicine, Obs & Gyn) आणि सांख्यिकीशास्त्रज्ञ १३ जागांसाठी भरती जाहीर (जाहिरात ०५/०८/२०२६). MD/MS/DNB पात्र.",
-    vacancies: "13",
-    lastDate: "20 Aug 2026"
-  },
-  {
-    category: "Central Govt",
-    status: "apply-now",
-    title: "RRB JE / DMS Recruitment 2026: रेल्वे भरती बोर्डात ३,९९३ जागांसाठी भरती ",
-    link: "/rrb-je-dms-recruitment-2026",
-    description: "RRB JE Recruitment 2026: रेल्वे भरती बोर्ड (RRB) द्वारे ज्युनियर इंजिनिअर (JE) व डेपो मटेरियल सुपरिंटेंडेंट (DMS) ३,९९३ पदांची भरती जाहीर (CEN 04/2026). वेतन श्रेणी Level 6 (₹३५,४००+). ऑनलाईन अर्ज मुदत १४ ऑगस्ट ते १३ सप्टेंबर २०२६.",
-    vacancies: "3,993",
-    lastDate: "13 Sep 2026"
-  },
-  {
-    category: "Bank Job",
-    status: "apply-now",
-    title: "सांगली जिल्हा मध्यवर्ती बँक शिपाई पदभरती २०२६: ७९ जागांसाठी जाहिरात प्रसिद्ध",
-    link: "/sangli-dcc-bank-peon-bharti-2026",
-    description: "Sangli DCC Bank Bharti 2026: सांगली जिल्हा मध्यवर्ती सहकारी बँक लि. सांगली द्वारे शिपाई पदांच्या ७९ जागांसाठी सरळसेवा भरती जाहीर. १२ वी उत्तीर्ण पात्र, ऑफलाईन ७० गुणांची परीक्षा, ऑनलाईन अर्ज मुदत १३ ऑगस्ट ते २१ ऑगस्ट २०२६.",
-    vacancies: "79",
-    lastDate: "21 Aug 2026"
-  },
-  {
-    category: "Bank Job",
-    status: "apply-now",
-    title: "भारतीय स्टेट बँकेत (SBI) लिपिक (Junior Associate) १५३८ जागांसाठी भरती २०२६",
-    link: "/sbi-clerk-recruitment-2026",
-    description: "SBI Clerk Bharti 2026: भारतीय स्टेट बँक (SBI) द्वारे लिपिक (कनिष्ठ सहाय्यक) पदांच्या १५३८ जागांसाठी ऑनलाईन भरती जाहीर. पदवीधर पात्र, पूर्व परीक्षा सप्टेंबर २०२६ मध्ये. ऑनलाईन अर्ज लिंक सक्रिय.",
-    vacancies: "1,538",
-    lastDate: "27 Aug 2026"
-  },
-  {
-    category: "State Govt",
-    status: "apply-now",
-    title: "MPSC Combine Group C Exam 2026: गट-क संयुक्त परीक्षा ५,७०७ जागा भरती, अर्ज मुदतवाढ १० ऑगस्ट २०२६",
-    link: "/mpsc-combine-group-c-2026",
-    description: "MPSC Group C Bharti 2026: महाराष्ट्र लोकसेवा आयोग गट-क संयुक्त पूर्व परीक्षा ५,७०७ पदे (तलाठी १५३९, लिपिक ३१९७ पदे). अर्ज भरण्यास १० ऑगस्ट २०२६ पर्यंत मुदतवाढ. सविस्तर माहिती, पात्रता, वयोमर्यादा व अभ्यासक्रम येथे पहा.",
-    vacancies: "5,707",
-    lastDate: "05 August 2026",
-    extendedDate: "10 August 2026"
-  },
-  {
-    category: "Bank Job",
-    status: "apply-now",
-    title: "पुणे जिल्हा मध्यवर्ती सहकारी बँक भरती २०२६: शिपाई २८९ पदांची सरळसेवा भरती जाहिरात प्रसिद्ध",
-    link: "/pdcc-bank-peon-bharti-2026",
-    description: "PDCC Bank Peon Bharti 2026: पुणे जिल्हा मध्यवर्ती सहकारी बँक लि. (पुणे) द्वारे शिपाई पदाच्या २८९ जागांसाठी भरती जाहीर. १२ वी उत्तीर्ण पात्र, ऑनलाईन अर्जाची मुदत ०४ ऑगस्ट ते १० ऑगस्ट २०२६.",
-    vacancies: "289",
-    lastDate: "10 Aug 2026"
-  },
-  {
-    category: "State Govt",
-    status: "apply-now",
-    title: "सोलापूर महानगरपालिका भरती २०२६: १३० जागांच्या पदभरतीस शासन मान्यता जाहीर (शासन निर्णय)",
-    link: "/solapur-mahanagarpalika-bharti-2026",
-    description: "Solapur Municipal Corporation Bharti 2026: नगर विकास विभागाकडून सोलापूर मनपातील १३० रिक्त पदांच्या भरतीस ३५% आस्थापना खर्चाची अट शिथील करून अधिकृत मान्यता (दि. ०६.०८.२०२६). TCS / IBPS मार्फत होणार ऑनलाईन परीक्षा.",
-    vacancies: "130",
-    lastDate: "Notification Soon"
-  },
-  {
-    category: "State Govt",
-    status: "apply-now",
-    title: "महानिर्मिती भरती २०२६: मुख्य अभियंता (तांत्रिक व स्थापत्य) ७ जागांसाठी जाहिरात प्रसिद्ध",
-    link: "/mahagenco-recruitment-2026",
-    description: "MAHAGENCO Bharti 2026: महाराष्ट्र राज्य विद्युत निर्मिती कंपनी मर्यादित (महानिर्मिती) जाहिरात क्र. ०७/२०२६ अंतर्गत मुख्य अभियंता (तांत्रिक व स्थापत्य) या पदांच्या एकूण ०७ जागांवर भरती जाहीर. ऑनलाईन अर्ज करण्याची अंतिम तारीख २० ऑगस्ट २०२६.",
-    vacancies: "07",
-    lastDate: "20 Aug 2026"
-  },
-  {
-    category: "Central Govt",
-    status: "apply-now",
-    title: "HPCL Bharti 2026: हिंदुस्तान पेट्रोलियम मध्ये 116 जागांसाठी भरती",
-    link: "/hpcl-recruitment-2026",
-    description: "Hindustan Petroleum Corporation Limited (HPCL) Recruitment 2026: हिंदुस्तान पेट्रोलियम कॉर्पोरेशन लिमिटेड (HPCL) ने विविध विभागांतील ११६ रिक्त जागांसाठी मेगा भरतीची घोषणा केली आहे. सविस्तर पात्रता, पगार आणि अर्ज करण्याची पद्धत येथे पहा.",
-    vacancies: "116",
-    lastDate: "20 July 2026"
-  },
-  {
-    category: "Central Govt",
-    status: "apply-now",
-    title: "BSNL Bharti 2026: भारत संचार निगम लिमिटेड मध्ये 100 जागांसाठी भरती",
-    link: "/bsnl-bharti-2026",
-    description: "BSNL (भारत संचार निगम लिमिटेड) ने विविध पदांसाठी १०० रिक्त जागांची भरती जाहीर केली आहे. पात्रता, अर्ज प्रक्रिया आणि शेवटची तारीख याबाबत संपूर्ण माहिती येथे वाचा.",
-    vacancies: "100",
-    lastDate: "30 June 2026"
-  }
-];
+import { articlesRegistry } from "../constants/articles";
+
+// Dynamically generate latestJobs list from articlesRegistry so new posts automatically display on Homepage
+const latestJobs = articlesRegistry.map((art) => ({
+  category: art.category || "Govt Job",
+  status: "apply-now",
+  title: art.titleMr || art.titleEn,
+  link: art.slug,
+  description: art.descriptionMr || art.titleEn,
+  vacancies: art.vacancies || "पहा",
+  lastDate: art.lastDate || "लवकरच",
+  extendedDate: art.extendedDate
+}));
 
 function truncateWords(str: string, wordLimit: number = 15): string {
   if (!str) return "";
