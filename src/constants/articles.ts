@@ -15,6 +15,22 @@ export interface ArticleMeta {
 export const articlesRegistry: ArticleMeta[] = [
   {
     titleEn:
+      "IBPS RRB XV Recruitment 2026: Apply Online for 13,688 Office Assistant & Officer Scale I, II, III Vacancies",
+    titleMr:
+      "IBPS RRB भरती २०२६: प्रादेशिक ग्रामीण बँकांमध्ये १३,६८८ जागांसाठी महाभरती जाहीर! ऑनलाईन अर्ज सुरू (मुदतवाढ)",
+    slug: "/ibps-rrb-recruitment-2026",
+    category: "Bank Job",
+    date: "September 27, 2026",
+    image: "",
+    postName: "Office Assistant (Multipurpose) & Officer Scale I, II, III",
+    descriptionMr:
+      "इन्स्टिट्यूट ऑफ बँकिंग पर्सनल सिलेक्शन (IBPS) द्वारे २८ प्रादेशिक ग्रामीण बँकांमध्ये (RRBs) १३,६८८ पदांची मेगा भरती जाहीर. पदवीधर पात्र. ऑनलाईन अर्ज मुदतवाढ २७ सप्टेंबर २०२६ पर्यंत.",
+    vacancies: "13,688",
+    lastDate: "27 Sep 2026",
+    extendedDate: "27 Sep 2026",
+  },
+  {
+    titleEn:
       "PMBI Recruitment 2026: Apply for 178 Contractual Vacancies in Pharmaceuticals & Medical Devices Bureau of India",
     titleMr:
       "PMBI भरती २०२६: फार्मास्युटिकल्स अँड मेडिकल डिव्हाइसेस ब्युरो ऑफ इंडिया मध्ये १७८ जागांसाठी भरती जाहीर!",

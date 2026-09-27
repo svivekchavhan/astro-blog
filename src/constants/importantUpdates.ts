@@ -11,6 +11,17 @@ export interface ImportantUpdate {
 
 export const importantUpdates: ImportantUpdate[] = [
   {
+    id: "ibps-rrb-recruitment-2026",
+    title:
+      "🚨 IBPS RRB भरती २०२६: प्रादेशिक ग्रामीण बँकांमध्ये १३,६८८ जागांची महाभरती - ऑनलाईन अर्ज २७ सप्टेंबर २०२६ पर्यंत मुदतवाढ!",
+    link: "/ibps-rrb-recruitment-2026",
+    date: "September 27, 2026",
+    expiry: "2026-10-15T00:00:00.000Z",
+    show: true,
+    badge: "मुदतवाढ",
+    badgeType: "extended",
+  },
+  {
     id: "pmbi-recruitment-2026",
     title:
       "PMBI भरती २०२६: फार्मास्युटिकल्स अँड मेडिकल डिव्हाइसेस ब्युरो ऑफ इंडिया मध्ये १७८ जागांसाठी भरती",
