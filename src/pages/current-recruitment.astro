@@ -12,19 +12,61 @@ import {
 
 import { articlesRegistry } from "../constants/articles";
 
+function parseDateString(rawStr: string): Date | null {
+  if (!rawStr) return null;
+  
+  // Clean string and replace "Sept" -> "Sep"
+  let str = rawStr.replace(/Sept/gi, "Sep").trim();
+
+  // If contains "&", take the last date e.g. "Exam: 01 & 02 Sep 2026" => "02 Sep 2026"
+  if (str.includes("&")) {
+    const parts = str.split("&");
+    if (parts.length > 1) {
+      str = parts[parts.length - 1].trim();
+    }
+  }
+  str = str.replace(/^(Exam:\s*|Till\s*|Last Date:\s*)/i, "").trim();
+
+  // Try standard parse
+  let d = new Date(str);
+  if (!isNaN(d.getTime())) return d;
+
+  // Extract pattern e.g. "24 Sep 2026" or "11 Oct 2026" or "10 August 2026"
+  const datePattern = /(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})/;
+  const match = str.match(datePattern);
+  if (match) {
+    const [_, day, month, year] = match;
+    d = new Date(`${day} ${month} ${year}`);
+    if (!isNaN(d.getTime())) return d;
+  }
+
+  // Extract ISO pattern e.g. "2026-09-24"
+  const isoPattern = /(\d{4})[-/](\d{1,2})[-/](\d{1,2})/;
+  const isoMatch = str.match(isoPattern);
+  if (isoMatch) {
+    const [_, year, month, day] = isoMatch;
+    d = new Date(Number(year), Number(month) - 1, Number(day));
+    if (!isNaN(d.getTime())) return d;
+  }
+
+  return null;
+}
+
 function getCountdownInfo(lastDateStr: string, extendedDateStr?: string) {
   const dateStr = extendedDateStr || lastDateStr;
   
   if (!dateStr || dateStr.toLowerCase().includes("soon") || dateStr.includes("365")) {
-    return { days: 30, text: "Active", isExpired: false };
+    return { days: 365, text: "Active", isExpired: false, status: "apply-now" };
   }
 
-  const parsedDate = new Date(dateStr);
-  if (isNaN(parsedDate.getTime())) {
-    return { days: 30, text: "Active", isExpired: false };
+  const parsedDate = parseDateString(dateStr);
+  if (!parsedDate) {
+    if (/out|pdf|result|list|card/i.test(dateStr)) {
+      return { days: 0, text: "Notice", isExpired: false, status: "upcoming" };
+    }
+    return { days: 30, text: "Active", isExpired: false, status: "apply-now" };
   }
 
-  // Current system reference date: 2026-09-26
   const today = new Date();
   parsedDate.setHours(23, 59, 59, 999);
   today.setHours(0, 0, 0, 0);
@@ -33,26 +75,30 @@ function getCountdownInfo(lastDateStr: string, extendedDateStr?: string) {
   const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
   if (diffDays < 0) {
-    return { days: 0, text: "0", isExpired: true };
+    return { days: 0, text: "0", isExpired: true, status: "closed" };
   } else if (diffDays === 0) {
-    return { days: 0, text: "Today", isExpired: false };
+    return { days: 0, text: "Today", isExpired: false, status: "apply-now" };
   } else {
-    return { days: diffDays, text: `${diffDays}`, isExpired: false };
+    return { days: diffDays, text: `${diffDays}`, isExpired: false, status: "apply-now" };
   }
 }
 
-// Dynamically generate latestJobs list from articlesRegistry so new posts automatically display on Current Recruitment page
-const latestJobs = articlesRegistry.map((art) => ({
-  category: art.category || "Govt Job",
-  status: "apply-now",
-  title: art.titleMr || art.titleEn,
-  link: art.slug,
-  organisation: art.postName || art.titleEn,
-  qualification: art.descriptionMr || art.titleEn,
-  vacancies: art.vacancies || "पहा",
-  lastDate: art.lastDate || "लवकरच",
-  extendedDate: art.extendedDate
-}));
+// Dynamically generate latestJobs list from articlesRegistry with accurate countdown parsing
+const latestJobs = articlesRegistry.map((art) => {
+  const countdown = getCountdownInfo(art.lastDate || "", art.extendedDate);
+  return {
+    category: art.category || "Govt Job",
+    status: countdown.status,
+    countdown: countdown,
+    title: art.titleMr || art.titleEn,
+    link: art.slug,
+    organisation: art.postName || art.titleEn,
+    qualification: art.descriptionMr || art.titleEn,
+    vacancies: art.vacancies || "पहा",
+    lastDate: art.lastDate || "लवकरच",
+    extendedDate: art.extendedDate
+  };
+});
 ---
 
 <Layout 
@@ -82,7 +128,7 @@ const latestJobs = articlesRegistry.map((art) => ({
           </div>
         ) : (
           latestJobs.map((job) => {
-            const countdown = getCountdownInfo(job.lastDate, job.extendedDate);
+            const { countdown } = job;
             return (
               <div
                 class="group job-card-item flex flex-row items-center justify-between p-3.5 md:p-5 bg-bg-surface border border-border-card rounded-2xl transition-all duration-300 hover:border-primary gap-3 md:gap-5"
@@ -104,11 +150,11 @@ const latestJobs = articlesRegistry.map((art) => ({
                     {job.status === "upcoming" && (
                       <span class="text-[0.6rem] bg-amber-500/10 text-amber-500 px-2 py-0.5 rounded-full font-bold uppercase tracking-wide border border-amber-500/20 flex items-center gap-1 whitespace-nowrap">
                         <span class="w-1.5 h-1.5 bg-amber-500 rounded-full shadow-[0_0_6px] shadow-emerald-500 animate-pulse inline-block"></span>
-                        Upcoming
+                        Notice
                       </span>
                     )}
 
-                    {(job.status === "closed" || countdown.isExpired) && (
+                    {countdown.isExpired && (
                       <span class="text-[0.6rem] bg-rose-500/10 text-rose-500 px-2 py-0.5 rounded-full font-bold uppercase tracking-wide border border-rose-500/20 flex items-center gap-1 whitespace-nowrap">
                         <span class="w-1 h-1 bg-rose-500 rounded-full inline-block"></span>
                         Closed
@@ -120,18 +166,16 @@ const latestJobs = articlesRegistry.map((art) => ({
                     <h3 class="text-base text-text-main font-bold leading-tight mb-1.5 group-hover:text-primary transition-colors">{job.title}</h3>
                   </a>
                   
-                  <div class="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs text-text-muted mb-3">
-                    <div class="flex items-center gap-1.5 min-w-0">
-                      <HiOutlineBuildingOffice className="shrink-0 text-xs text-primary/70" />
-                      <span class="truncate">{job.organisation}</span>
-                    </div>
-                    <div class="flex items-center gap-1.5 shrink-0">
-                      <HiOutlineAcademicCap className="text-xs text-primary/70" />
-                      <span>{job.qualification}</span>
-                    </div>
+                  <div class="flex items-center gap-1.5 text-xs text-text-muted mb-2 min-w-0">
+                    <HiOutlineBuildingOffice className="shrink-0 text-xs text-primary/70" />
+                    <span class="font-semibold text-text-main/90 truncate">{job.organisation}</span>
                   </div>
 
-                  <!-- Bottom Meta Row: Last Date, Total Posts, and Shifted Apply Online Button -->
+                  <p class="text-xs sm:text-sm text-text-secondary leading-relaxed mb-3 min-w-0 line-clamp-2">
+                    {job.qualification}
+                  </p>
+
+                  <!-- Bottom Meta Row: Last Date, Total Posts, and Apply Online Button -->
                   <div class="flex flex-wrap items-center gap-2 pt-1">
                     <span class="text-[0.65rem] font-bold bg-primary/5 text-primary border border-solid border-primary/20 px-2.5 py-1 rounded-lg uppercase tracking-wide">
                       Total Posts: <strong class="text-primary font-extrabold">{job.vacancies}</strong>
@@ -147,12 +191,12 @@ const latestJobs = articlesRegistry.map((art) => ({
                           <span class="text-rose-600 dark:text-rose-400 font-extrabold">{job.extendedDate}</span>
                         </strong>
                       ) : (
-                        <strong class={`font-extrabold ${(job.status === "closed" || countdown.isExpired) ? "line-through text-text-muted/70" : ""}`}>{job.lastDate}</strong>
+                        <strong class={`font-extrabold ${countdown.isExpired ? "line-through text-text-muted/70" : ""}`}>{job.lastDate}</strong>
                       )}
                     </span>
 
-                    <!-- Apply Online CTA Button (Shifted Right of Last Date) -->
-                    {job.status === "apply-now" && !countdown.isExpired && (
+                    <!-- Apply Online CTA Button -->
+                    {!countdown.isExpired && job.status === "apply-now" && (
                       <a
                         href={job.link}
                         class="inline-flex items-center gap-1 px-3 py-1 bg-violet-600 hover:bg-violet-700 text-white rounded-lg text-[0.68rem] font-extrabold uppercase tracking-wider transition-all shadow-2xs hover:shadow-xs group/btn no-underline shrink-0"
@@ -172,7 +216,7 @@ const latestJobs = articlesRegistry.map((art) => ({
                       </a>
                     )}
 
-                    {(job.status === "closed" || countdown.isExpired) && (
+                    {countdown.isExpired && (
                       <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-rose-500/5 border border-rose-500/15 text-rose-500/60 font-bold uppercase tracking-wider text-[0.65rem] rounded-lg cursor-not-allowed">
                         <HiOutlineXCircle className="text-xs shrink-0" />
                         <span>Closed</span>
@@ -181,7 +225,7 @@ const latestJobs = articlesRegistry.map((art) => ({
                   </div>
                 </div>
 
-                <!-- Right: Days Remaining Square Countdown Badge (Old Apply Online Position) -->
+                <!-- Right: Days Remaining Square Countdown Badge -->
                 <div class="shrink-0 flex items-center justify-center p-1">
                   <div
                     class:list={[
@@ -202,7 +246,9 @@ const latestJobs = articlesRegistry.map((art) => ({
                     ) : (
                       <>
                         <span class="text-base sm:text-lg font-black tracking-tight leading-none">{countdown.text}</span>
-                        <span class="text-[0.52rem] font-extrabold uppercase tracking-wider text-text-muted leading-tight mt-1">Days Left</span>
+                        <span class="text-[0.52rem] font-extrabold uppercase tracking-wider text-text-muted leading-tight mt-1">
+                          {typeof countdown.days === "number" && countdown.days < 300 ? "Days Left" : "Active"}
+                        </span>
                       </>
                     )}
                   </div>
