@@ -57,9 +57,10 @@ import Layout from "../layouts/Layout.astro";
         <!-- Global Form Status Message -->
         <div id="form-status" class="hidden p-4 rounded-xl text-sm font-semibold"></div>
 
-        <button type="submit" id="submit-btn" class="mt-2 py-4 px-8 bg-gradient-to-r from-primary to-secondary text-white border-none rounded-xl font-bold text-base cursor-pointer flex items-center justify-center gap-3 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/20 disabled:opacity-50 disabled:pointer-events-none">
+        <button type="submit" id="submit-btn" class="mt-2 py-4 px-8 bg-gradient-to-r from-primary to-secondary text-white border-none rounded-xl font-bold text-base cursor-pointer flex items-center justify-center gap-3 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/20 disabled:opacity-75 disabled:cursor-not-allowed">
+          <span id="spinner" class="hidden animate-spin w-5 h-5 border-2 border-white border-t-transparent rounded-full shrink-0"></span>
           <span id="btn-text">Send Message</span>
-          <svg id="btn-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          <svg id="btn-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
         </button>
       </form>
     </div>
@@ -79,6 +80,8 @@ import Layout from "../layouts/Layout.astro";
     const captchaLabel = document.getElementById("captcha-label");
     const submitBtn = document.getElementById("submit-btn") as HTMLButtonElement;
     const btnText = document.getElementById("btn-text");
+    const btnIcon = document.getElementById("btn-icon");
+    const spinner = document.getElementById("spinner");
     const formStatus = document.getElementById("form-status");
 
     // Error message elements
@@ -188,6 +191,8 @@ import Layout from "../layouts/Layout.astro";
       // Valid: Submit to Google Sheets via Google Apps Script
       submitBtn.disabled = true;
       if (btnText) btnText.textContent = "Sending...";
+      if (btnIcon) btnIcon.classList.add("hidden");
+      if (spinner) spinner.classList.remove("hidden");
 
       const subjectInput = document.getElementById("subject") as HTMLSelectElement;
       const subjectVal = subjectInput ? subjectInput.value : "general";
@@ -229,6 +234,8 @@ import Layout from "../layouts/Layout.astro";
       } finally {
         submitBtn.disabled = false;
         if (btnText) btnText.textContent = "Send Message";
+        if (btnIcon) btnIcon.classList.remove("hidden");
+        if (spinner) spinner.classList.add("hidden");
       }
     });
   }
