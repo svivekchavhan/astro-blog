@@ -164,6 +164,9 @@ const breadcrumbSchema = {
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Google AdSense Account Ownership -->
+    <meta name="google-adsense-account" content="ca-pub-1771479946023518" />
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-V2VJMCV1HW"></script>
     <script is:inline>
@@ -396,8 +399,8 @@ const breadcrumbSchema = {
         <div class={article ? "space-y-8 mt-10 block" : "hidden"}>
           {
             urgentUpdates.length > 0 && (
-              <!-- Important Updates Section -->
               <div class="space-y-4 not-prose mb-6">
+                <!-- Important Updates Section -->
                 <UpdatesSeparator />
                 <div class="bg-bg-surface border border-border-card p-6 rounded-3xl flex flex-col gap-4 shadow-xs">
                   {urgentUpdates.map((update) => (
@@ -438,7 +441,7 @@ const breadcrumbSchema = {
                   <span>Share This Article / शेअर करा</span>
                 </h3>
                 <p class="text-xs md:text-sm text-text-secondary leading-relaxed m-0">
-                  If you found this information helpful, please share it with your friends and groups on WhatsApp and Telegram.
+                  If you found this information helpful, please share it with your friends and groups on WhatsApp.
                 </p>
                 
                 <div class="flex flex-wrap justify-center md:justify-start gap-3 !mt-5">
@@ -454,20 +457,7 @@ const breadcrumbSchema = {
                     </svg>
                     <span>WhatsApp</span>
                   </a>
-                  
-                  <!-- Telegram Share -->
-                  <a 
-                    href={`https://t.me/share/url?url=${encodeURIComponent(Astro.url.href)}&text=${encodeURIComponent(title)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-sky-500 hover:bg-sky-600 text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-all shadow-sm no-underline"
-                  >
-                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1 .22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.94-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.37.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .24z"/>
-                  </svg>
-                  <span>Telegram</span>
-                </a>
-              </div>
+                </div>
               
               <!-- Page URL QR Code -->
               <div class="flex flex-col items-center text-center gap-1.5 shrink-0 self-center md:absolute md:top-8 md:right-8 md:self-auto">
@@ -527,8 +517,8 @@ const breadcrumbSchema = {
             </div>
 
             {false && (
-              <!-- Latest Jobs Widget -->
               <div class="bg-bg-surface border border-border-card p-6 rounded-xl">
+                <!-- Latest Jobs Widget -->
                 <h4 class="text-[1.1rem] text-text-main border-b-2 border-primary inline-flex items-center gap-2 pb-1.5 mb-4 font-semibold">
                   <span class="text-primary flex items-center shrink-0">
                     <HiOutlineBriefcase className="text-primary text-[1.15rem]" />
@@ -554,24 +544,24 @@ const breadcrumbSchema = {
             )}
 
             {false && (
-              <!-- Latest Updates Widget -->
               <div class="flex flex-col">
+                <!-- Latest Updates Widget -->
                 <!-- Heading Container for Latest Updates -->
                 <div class="bg-primary text-white px-5 py-3 rounded-t-2xl font-bold flex items-center gap-2 border border-primary border-b-0 shadow-xs mt-0">
                   <HiOutlineBell className="text-white text-[1.1rem] shrink-0" />
                   <span class="text-xs font-extrabold uppercase tracking-wider">Latest Updates</span>
                 </div>
                 
-                <!-- Content Container for Latest Updates -->
+                {/* Content Container for Latest Updates */}
                 <div class="bg-bg-surface border border-border-card border-t-0 p-5 rounded-b-2xl relative overflow-hidden mt-0">
-                  <!-- Accent Glow background effect -->
+                  {/* Accent Glow background effect */}
                   <div class="absolute -right-24 -top-24 w-48 h-48 bg-primary/5 rounded-full blur-3xl -z-10"></div>
                   <p class="text-xs text-text-secondary leading-relaxed mb-4">
                     Join our channels to get immediate updates on new jobs, admit cards, results, and notifications directly on your mobile.
                   </p>
                   
                   <div class="flex flex-col gap-6">
-                    <!-- WhatsApp Section -->
+                    {/* WhatsApp Section */}
                     <div class="space-y-3">
                       <a 
                         href={OFFICIAL_LINKS.whatsappGroup} 
@@ -609,50 +599,6 @@ const breadcrumbSchema = {
                             </div>
                           </div>
                           <span class="text-[0.6rem] font-bold text-text-secondary uppercase tracking-wider mt-1.5 group-hover/qr:text-emerald-500 transition-colors">Scan WhatsApp QR</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="h-[1px] w-full bg-border-card/30 dark:bg-border-card/10"></div>
-
-                    <!-- Telegram Section -->
-                    <div class="space-y-3">
-                      <a 
-                        href={OFFICIAL_LINKS.telegramChannel} 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="flex items-center justify-between p-3.5 bg-sky-500/10 hover:bg-sky-500/20 border border-sky-500/20 hover:border-sky-500/40 rounded-xl text-sky-600 dark:text-sky-400 transition-all duration-300 group/link no-underline font-bold text-xs uppercase tracking-wider"
-                      >
-                        <div class="flex items-center gap-2.5">
-                          <svg class="w-4.5 h-4.5 shrink-0 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1 .22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.94-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.37.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .24z"/>
-                          </svg>
-                          <span>Telegram Channel</span>
-                        </div>
-                        <svg class="w-4 h-4 transform group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
-                        </svg>
-                      </a>
-                      
-                      <div class="flex justify-center">
-                        <div 
-                          class="flex flex-col items-center text-center group/qr cursor-pointer qr-reveal-container select-none"
-                          data-revealed="false"
-                        >
-                          <div class="w-32 h-32 bg-white p-2.5 rounded-xl border border-border-card group-hover/qr:border-sky-500/50 flex items-center justify-center shadow-xs transition-colors duration-300 relative overflow-hidden">
-                            <img 
-                              src={`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(OFFICIAL_LINKS.telegramChannel)}`} 
-                              alt="Telegram Channel QR Code" 
-                              class="w-full h-full qr-image blur-md transition-all duration-300"
-                              loading="lazy"
-                            />
-                            <div class="absolute inset-0 bg-white/70 dark:bg-zinc-900/70 backdrop-blur-[2px] flex items-center justify-center qr-overlay transition-all duration-300">
-                              <span class="bg-sky-500 text-white text-[0.65rem] px-2.5 py-1.5 rounded-lg font-bold shadow-xs uppercase tracking-wider pointer-events-none">
-                                Show Code
-                              </span>
-                            </div>
-                          </div>
-                          <span class="text-[0.6rem] font-bold text-text-secondary uppercase tracking-wider mt-1.5 group-hover/qr:text-sky-500 transition-colors">Scan Telegram QR</span>
                         </div>
                       </div>
                     </div>
