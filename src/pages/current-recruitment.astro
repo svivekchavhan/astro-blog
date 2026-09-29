@@ -217,15 +217,18 @@ const latestJobs = articlesRegistry.map((art) => {
                     )}
 
                     {countdown.isExpired && (
-                      <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-rose-500/5 border border-rose-500/15 text-rose-500/60 font-bold uppercase tracking-wider text-[0.65rem] rounded-lg cursor-not-allowed">
+                      <button
+                        disabled
+                        class="inline-flex items-center gap-1 px-3 py-1 bg-rose-500/10 border border-rose-500/20 text-rose-500/70 rounded-lg text-[0.68rem] font-extrabold uppercase tracking-wider cursor-not-allowed opacity-75 shrink-0"
+                      >
                         <HiOutlineXCircle className="text-xs shrink-0" />
-                        <span>Closed</span>
-                      </span>
+                        <span>Apply Closed</span>
+                      </button>
                     )}
                   </div>
                 </div>
 
-                <!-- Right: Days Remaining Square Countdown Badge -->
+                <!-- Right: Countdown / Status Badge -->
                 <div class="shrink-0 flex items-center justify-center p-1">
                   <div
                     class:list={[
@@ -240,8 +243,8 @@ const latestJobs = articlesRegistry.map((art) => {
                   >
                     {countdown.isExpired ? (
                       <>
-                        <span class="text-xs sm:text-sm font-black uppercase tracking-tight leading-none text-rose-500">0</span>
-                        <span class="text-[0.5rem] font-black uppercase tracking-wider text-rose-500/80 leading-tight mt-1">Days Left</span>
+                        <HiOutlineXCircle className="text-xl sm:text-2xl text-rose-500 shrink-0" />
+                        <span class="text-[0.55rem] sm:text-[0.6rem] font-black uppercase tracking-wider text-rose-500 leading-tight mt-0.5">Closed</span>
                       </>
                     ) : (
                       <>
