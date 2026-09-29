@@ -35,6 +35,10 @@ export const OFFICIAL_LINKS = {
   meclPortal: "https://www.mecl.co.in",
   meclApplyPortal: "https://ibpsreg.ibps.in/mecljul26/",
 
+  // SSC Official Links
+  sscPortal: "https://ssc.gov.in",
+  sscCapfNotice2026: "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_capf_2026.pdf",
+
   // Main Site URL
   mainSite: "https://mahasandhi.in",
 };

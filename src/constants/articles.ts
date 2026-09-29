@@ -15,6 +15,22 @@ export interface ArticleMeta {
 export const articlesRegistry: ArticleMeta[] = [
   {
     titleEn:
+      "SSC CPO Sub-Inspector Recruitment 2026: Apply Online for 1,871 SI Posts in Delhi Police & CAPFs",
+    titleMr:
+      "SSC CPO Sub-Inspector भरती २०२६: दिल्ली पोलीस व CAPF मध्ये १,८७१ उपनिरीक्षक (SI) पदांची मोठी भरती!",
+    slug: "/ssc-cpo-sub-inspector-recruitment-2026",
+    category: "Central Govt",
+    date: "September 10, 2026",
+    image:
+      "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1200",
+    postName: "Sub-Inspector (Exe.) in Delhi Police, SI (GD) in CAPFs & SI (Fire) in CISF",
+    descriptionMr:
+      "कर्मचारी निवड आयोग (SSC) द्वारे दिल्ली पोलीस, CAPFs व CISF मध्ये १,८७१ उपनिरीक्षक (SI) पदांची ऑनलाईन भरती जाहीर. पदवीधरांसाठी सुवर्णसंधी. अर्ज १० ते ३० सप्टेंबर २०२६.",
+    vacancies: "1,871",
+    lastDate: "30 Sep 2026",
+  },
+  {
+    titleEn:
       "IBPS RRB XV Recruitment 2026: Apply Online for 13,688 Office Assistant & Officer Scale I, II, III Vacancies",
     titleMr:
       "IBPS RRB भरती २०२६: प्रादेशिक ग्रामीण बँकांमध्ये १३,६८८ जागांसाठी महाभरती जाहीर! ऑनलाईन अर्ज सुरू (मुदतवाढ)",
