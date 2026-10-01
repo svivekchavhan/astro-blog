@@ -1,3 +1,18 @@
+export type PostType = "recruitment" | "result" | "admit-card" | "notice";
+export type PostPriority = "normal" | "important" | "mega";
+export type EducationTag =
+  | "10th"
+  | "12th"
+  | "iti"
+  | "diploma"
+  | "degree"
+  | "pg"
+  | "engg"
+  | "medical"
+  | "law"
+  | "sports"
+  | "other";
+
 export interface ArticleMeta {
   titleEn: string;
   titleMr: string;
@@ -10,9 +25,68 @@ export interface ArticleMeta {
   vacancies?: string;
   lastDate?: string;
   extendedDate?: string;
+  postType?: PostType;
+  priority?: PostPriority;
+  isImportant?: boolean;
+  badge?: string;
+  badgeType?: "new" | "extended" | "important" | "result" | "admit" | string;
+  educationTags?: EducationTag[];
+  districts?: string[];
+  status?: "apply-now" | "closed" | "upcoming" | "declared" | "available";
+  organisation?: string;
 }
 
 export const articlesRegistry: ArticleMeta[] = [
+  {
+    titleEn:
+      "Canara Bank Graduate Apprentice Recruitment FY 2026-27: Apply Online for 3,500 Vacancies (Stipend ₹16,650)",
+    titleMr:
+      "कॅनरा बँक ग्रॅज्युएट अप्रेंटिस भरती २०२६: ३,५०० जागांसाठी ऑनलाईन अर्ज सुरू ",
+    slug: "/canara-bank-apprentice-recruitment-2026",
+    category: "Bank Job",
+    date: "October 01, 2026",
+    image:
+      "https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?auto=format&fit=crop&q=80&w=1200",
+    postName: "Graduate Apprentice (FY 2026-27)",
+    descriptionMr:
+      "कॅनरा बँकेत ३,५०० ग्रॅज्युएट अप्रेंटिस पदांसाठी मेगा भरती जाहीर. महाराष्ट्रात २०५ जागा. कोणतीही पदवी/डिप्लोमाधारक ६०% गुणांसह पात्र (मासिक स्टायपेन्ड ₹१६,६५०). अर्ज १७ ऑक्टोबर २०२६ पर्यंत.",
+    vacancies: "3,500",
+    lastDate: "17 Oct 2026",
+    postType: "recruitment",
+    priority: "mega",
+    isImportant: true,
+    badge: "Canara Bank",
+    badgeType: "new",
+    educationTags: ["degree", "12th", "diploma"],
+    districts: ["all-maharashtra"],
+    status: "apply-now",
+    organisation: "Canara Bank",
+  },
+  {
+    titleEn:
+      "Assam Rifles Technical and Tradesman Recruitment Rally 2026: Apply Online for 354 Group C Posts",
+    titleMr:
+      "आसाम रायफल्स (Assam Rifles) भरती २०२६: ३५४ जागांसाठी तांत्रिक व ट्रेड्समन रॅली जाहीर! ऑनलाईन अर्ज सुरू",
+    slug: "/assam-rifles-technical-tradesman-recruitment-2026",
+    category: "Central Govt",
+    date: "September 28, 2026",
+    image:
+      "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=1200",
+    postName: "Warrant Officer, Rifleman Tradesman & Havildar (17 Trades)",
+    descriptionMr:
+      "आसाम रायफल्स (DGAR Shillong) अंतर्गत ग्रुप C संवर्गातील ३५४ जागांवर ऑनलाईन भरती रॅली २०२६ जाहीर. १०वी, १२वी, ITI, डिप्लोमा व पदवीधर पात्र. अर्ज २८ ऑक्टोबर २०२६ पर्यंत.",
+    vacancies: "354",
+    lastDate: "28 Oct 2026",
+    postType: "recruitment",
+    priority: "important",
+    isImportant: true,
+    badge: "Assam Rifles",
+    badgeType: "new",
+    educationTags: ["10th", "12th", "iti", "diploma", "degree"],
+    districts: ["all-maharashtra"],
+    status: "apply-now",
+    organisation: "Assam Rifles (HQ DGAR Shillong)",
+  },
   {
     titleEn:
       "SSC CPO Sub-Inspector Recruitment 2026: Apply Online for 1,871 SI Posts in Delhi Police & CAPFs",
@@ -23,7 +97,8 @@ export const articlesRegistry: ArticleMeta[] = [
     date: "September 10, 2026",
     image:
       "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1200",
-    postName: "Sub-Inspector (Exe.) in Delhi Police, SI (GD) in CAPFs & SI (Fire) in CISF",
+    postName:
+      "Sub-Inspector (Exe.) in Delhi Police, SI (GD) in CAPFs & SI (Fire) in CISF",
     descriptionMr:
       "कर्मचारी निवड आयोग (SSC) द्वारे दिल्ली पोलीस, CAPFs व CISF मध्ये १,८७१ उपनिरीक्षक (SI) पदांची ऑनलाईन भरती जाहीर. पदवीधरांसाठी सुवर्णसंधी. अर्ज १० ते ३० सप्टेंबर २०२६.",
     vacancies: "1,871",
@@ -55,7 +130,8 @@ export const articlesRegistry: ArticleMeta[] = [
     date: "September 26, 2026",
     image:
       "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=1200",
-    postName: "General Manager, Manager, Executive, Officer & Pharmacist (11 Categories)",
+    postName:
+      "General Manager, Manager, Executive, Officer & Pharmacist (11 Categories)",
     descriptionMr:
       "फार्मास्युटिकल्स अँड मेडिकल डिव्हाइसेस ब्युरो ऑफ इंडिया (PMBI) अंतर्गत १७८ कंत्राटी जागांवर भरती जाहीर. १०+ विभागांमध्ये पदवीधर, B.Pharma, B.Tech व इतर पात्र. हार्ड कॉपी अर्ज २४ सप्टेंबर २०२६ पर्यंत.",
     vacancies: "178",
@@ -895,4 +971,3 @@ export const articlesRegistry: ArticleMeta[] = [
     lastDate: "Official Circular",
   },
 ];
-

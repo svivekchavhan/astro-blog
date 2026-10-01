@@ -5,10 +5,7 @@ import {
   HiOutlineChevronLeft,
   HiOutlineCalendarDays,
 } from "react-icons/hi2";
-import {
-  importantUpdates,
-  type ImportantUpdate,
-} from "../constants/importantUpdates";
+import { getImportantPosts } from "../utils/postUtils";
 import { isWithin7Days } from "../utils/dateUtils";
 
 interface Props {
@@ -17,10 +14,34 @@ interface Props {
 
 const { pageSize = 5 } = Astro.props;
 
-// Filter out items where show === false
-const activeUpdates = importantUpdates.filter(
-  (update) => update.show !== false,
-);
+const rawImportantPosts = getImportantPosts();
+const activeUpdates = rawImportantPosts.map((post) => ({
+  id: post.slug.replace(/^\//, ""),
+  title: post.titleMr || post.titleEn,
+  link: post.slug,
+  date: post.date,
+  badge:
+    post.badge ||
+    (post.priority === "mega"
+      ? "Mega Bharti"
+      : post.extendedDate
+        ? "मुदतवाढ"
+        : post.postType === "result"
+          ? "Result Out"
+          : post.postType === "admit-card"
+            ? "Admit Card"
+            : "Important"),
+  badgeType:
+    post.badgeType ||
+    (post.extendedDate
+      ? "extended"
+      : post.postType === "result"
+        ? "result"
+        : post.postType === "admit-card"
+          ? "admit"
+          : "important"),
+}));
+
 const totalItems = activeUpdates.length;
 const totalPages = Math.ceil(totalItems / pageSize);
 ---

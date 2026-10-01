@@ -39,6 +39,15 @@ export const OFFICIAL_LINKS = {
   sscPortal: "https://ssc.gov.in",
   sscCapfNotice2026: "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_capf_2026.pdf",
 
+  // Assam Rifles Official Links
+  assamRiflesPortal: "https://www.assamrifles.gov.in",
+  assamRiflesNotice2026: "https://cdn.majhinaukri.net/news/09/assam-rifles-bharti-2026-for-354-posts.pdf",
+
+  // Canara Bank Official Links
+  canaraBankPortal: "https://canarabank.com",
+  canaraBankApprenticeNotice2026: "https://www.canarabank.bank.in/engagement-of-graduate-apprentices-in-canara-bank-under-apprentices-act-1961-for-fy-2026-27",
+  natsPortal: "https://nats.education.gov.in",
+
   // Main Site URL
   mainSite: "https://mahasandhi.in",
 };
