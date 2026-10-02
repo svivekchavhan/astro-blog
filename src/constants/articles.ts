@@ -39,7 +39,7 @@ export interface ArticleMeta {
 export const articlesRegistry: ArticleMeta[] = [
   {
     titleEn:
-      "Canara Bank Graduate Apprentice Recruitment FY 2026-27: Apply Online for 3,500 Vacancies (Stipend ₹16,650)",
+      "Canara Bank Graduate Apprentice Recruitment FY 2026-27: Apply Online for 3,500 Vacancies ",
     titleMr:
       "कॅनरा बँक ग्रॅज्युएट अप्रेंटिस भरती २०२६: ३,५०० जागांसाठी ऑनलाईन अर्ज सुरू",
     slug: "/canara-bank-apprentice-recruitment-2026",
