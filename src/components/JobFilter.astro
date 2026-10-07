@@ -6,62 +6,76 @@ import {
 ---
 
 <div
-  class="border-t border-border-card/40 bg-bg-surface/95 backdrop-blur-md py-2 px-4 sm:px-6"
+  class="border-t border-b border-border-card/40 bg-bg-surface/95 dark:bg-bg-surface/90 backdrop-blur-md py-2.5 sm:py-2 px-3 sm:px-6 transition-all duration-300 shadow-xs relative z-40"
   id="job-filter-component"
 >
   <div
-    class="max-w-[1200px] mx-auto w-full flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-4 text-xs text-center"
+    class="max-w-[1200px] mx-auto w-full flex flex-col sm:flex-row items-center justify-between sm:justify-center gap-2 sm:gap-4 text-xs"
   >
-    <!-- Centered: Title & Job Filter Dropdowns -->
-    <div
-      class="flex items-center justify-center gap-2 flex-wrap w-full sm:w-auto"
-    >
+    <!-- Top Bar for Mobile: Header Label & Quick Hub Link -->
+    <div class="flex items-center justify-between sm:justify-start gap-2 w-full sm:w-auto shrink-0">
       <span
-        class="text-[0.68rem] font-black uppercase tracking-wider text-primary flex items-center justify-center gap-1.5 shrink-0"
+        class="text-[0.72rem] sm:text-[0.68rem] font-black uppercase tracking-wider text-primary flex items-center gap-1.5 shrink-0"
       >
         <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-        Job Filter:
+        <span>Job Filter:</span>
       </span>
 
-      <!-- Qualification Dropdown (Strictly Educational Qualifications) -->
-      <select
-        id="navbar-job-qual-filter"
-        class="bg-bg-base dark:bg-bg-surface border border-border-card hover:border-primary focus:border-primary text-text-main font-semibold text-xs rounded-xl px-3 py-1.5 outline-none cursor-pointer transition-all shadow-2xs max-w-[200px] sm:max-w-none truncate"
-        aria-label="Job Filter by Qualification"
+      <!-- Direct Link on Mobile Top Row -->
+      <a
+        href="/current-recruitment"
+        class="sm:hidden inline-flex items-center justify-center gap-1 px-2.5 py-1 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary font-extrabold text-[0.68rem] no-underline transition-colors shrink-0"
       >
-        {
-          QUALIFICATION_OPTIONS.map((opt) => (
-            <option value={opt.slug}>
-              {opt.icon ? `${opt.icon} ` : ""}
-              {opt.nameMr}
-            </option>
-          ))
-        }
-      </select>
-
-      <!-- Sector / Profession Dropdown (Strictly Departments & Sectors) -->
-      <select
-        id="navbar-job-cat-filter"
-        class="bg-bg-base dark:bg-bg-surface border border-border-card hover:border-secondary focus:border-secondary text-text-main font-semibold text-xs rounded-xl px-3 py-1.5 outline-none cursor-pointer transition-all shadow-2xs max-w-[200px] sm:max-w-none truncate"
-        aria-label="Job Filter by Sector / Profession"
-      >
-        {
-          SECTOR_OPTIONS.map((opt) => (
-            <option value={opt.slug}>
-              {opt.icon ? `${opt.icon} ` : ""}
-              {opt.nameMr}
-            </option>
-          ))
-        }
-      </select>
+        <span>Current Openings</span>
+        <span>→</span>
+      </a>
     </div>
 
-    <!-- Direct Link to Openings Hub -->
+    <!-- Dropdowns Grid (Full-width 2 columns on mobile, flex inline on desktop) -->
+    <div class="grid grid-cols-2 gap-2 w-full sm:w-auto sm:flex sm:items-center sm:gap-2.5">
+      <!-- Qualification Dropdown (Educational Qualifications) -->
+      <div class="relative w-full sm:w-auto">
+        <select
+          id="navbar-job-qual-filter"
+          class="w-full sm:w-auto sm:max-w-[220px] bg-bg-base dark:bg-bg-surface border border-border-card hover:border-primary focus:border-primary focus:ring-2 focus:ring-primary/20 text-text-main font-bold text-[0.78rem] sm:text-xs rounded-xl px-3 py-2 sm:py-1.5 outline-none cursor-pointer transition-all shadow-2xs truncate min-h-[40px] sm:min-h-0"
+          aria-label="Job Filter by Qualification"
+        >
+          {
+            QUALIFICATION_OPTIONS.map((opt) => (
+              <option value={opt.slug}>
+                {opt.icon ? `${opt.icon} ` : ""}
+                {opt.nameMr}
+              </option>
+            ))
+          }
+        </select>
+      </div>
+
+      <!-- Sector / Profession Dropdown (Departments & Sectors) -->
+      <div class="relative w-full sm:w-auto">
+        <select
+          id="navbar-job-cat-filter"
+          class="w-full sm:w-auto sm:max-w-[220px] bg-bg-base dark:bg-bg-surface border border-border-card hover:border-secondary focus:border-secondary focus:ring-2 focus:ring-secondary/20 text-text-main font-bold text-[0.78rem] sm:text-xs rounded-xl px-3 py-2 sm:py-1.5 outline-none cursor-pointer transition-all shadow-2xs truncate min-h-[40px] sm:min-h-0"
+          aria-label="Job Filter by Sector / Profession"
+        >
+          {
+            SECTOR_OPTIONS.map((opt) => (
+              <option value={opt.slug}>
+                {opt.icon ? `${opt.icon} ` : ""}
+                {opt.nameMr}
+              </option>
+            ))
+          }
+        </select>
+      </div>
+    </div>
+
+    <!-- Direct Link to Openings Hub (Desktop view) -->
     <a
       href="/current-recruitment"
-      class="text-[0.68rem] font-bold text-primary hover:text-secondary flex items-center justify-center gap-1 no-underline transition-colors shrink-0"
+      class="hidden sm:inline-flex text-[0.68rem] font-bold text-primary hover:text-secondary items-center justify-center gap-1 no-underline transition-colors shrink-0 px-2.5 py-1 rounded-lg bg-primary/10 hover:bg-primary/20"
     >
-      <span>Current Openings </span>
+      <span>Current Openings</span>
       <span>→</span>
     </a>
   </div>

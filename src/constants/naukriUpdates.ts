@@ -11,6 +11,15 @@ export interface NaukriUpdate {
 
 export const naukriUpdates: NaukriUpdate[] = [
   {
+    titleEn: "Mahajyoti & VANARTI Free Coaching Screening Test Timetable 2026: Exam Dates 07 to 09 October Declared",
+    titleHi: "महाज्योति व वनार्टी मोफत स्पर्धा परीक्षा पूर्व प्रशिक्षण २०२६: चाळणी परीक्षा वेळापत्रक जाहीर",
+    date: "October 06, 2026",
+    badge: "Timetable Out",
+    badgeType: "important",
+    link: "/mahajyoti-vanarti-screening-test-timetable-2026",
+    description: "Mahajyoti & VANARTI Nagpur have officially released the screening test timetable for FY 2026-27 pre-coaching schemes (MPSC Group B & C, Army Soldier, UPSC, MPSC Rajyaseva, Engineering Services & Gowari Special Coaching). Screening exams will take place on 07, 08, and 09 October 2026."
+  },
+  {
     titleEn: "MECL Nagpur Recruitment 2026: Apply Online for 122 Non-Executive Vacancies",
     titleHi: "MECL नागपूर भरती २०२६: १२२ जागांसाठी ऑनलाईन अर्ज सुरू",
     date: "September 16, 2026",

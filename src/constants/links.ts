@@ -8,6 +8,8 @@ export const OFFICIAL_LINKS = {
   cetCell: "https://cetcell.mahacet.org/",
 
   // Autonomous Institutes (Free Coaching CET)
+  mahajyotiPortal: "https://mahajyoti.org.in",
+  vanartiPortal: "https://vanarti.org.in",
   trtiPortal: "https://trti.maharashtra.gov.in",
   bartiPortal: "https://barti.maharashtra.gov.in",
   sarthiPortal: "https://sarthi.maharashtra.gov.in/announcement",

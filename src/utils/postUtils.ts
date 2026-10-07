@@ -72,9 +72,10 @@ export function getMegaPosts(): ArticleMeta[] {
 
 export function getPostsByEducation(slug: string): ArticleMeta[] {
   const s = slug.toLowerCase().trim();
-  if (!s || s === "all") return articlesRegistry;
+  const recruitments = articlesRegistry.filter((post) => inferPostType(post) === "recruitment");
+  if (!s || s === "all") return recruitments;
 
-  return articlesRegistry.filter((post) => {
+  return recruitments.filter((post) => {
     if (post.educationTags && post.educationTags.length > 0) {
       if (post.educationTags.some((tag) => tag.toLowerCase() === s)) return true;
     }

@@ -39,6 +39,31 @@ export interface ArticleMeta {
 export const articlesRegistry: ArticleMeta[] = [
   {
     titleEn:
+      "Mahajyoti & VANARTI Free Coaching Screening Test Timetable 2026: Exam Dates 07 to 09 October Declared",
+    titleMr:
+      "महाज्योति व वनार्टी मोफत स्पर्धा परीक्षा पूर्व प्रशिक्षण २०२६: चाळणी परीक्षा वेळापत्रक जाहीर ",
+    slug: "/mahajyoti-vanarti-screening-test-timetable-2026",
+    category: "Exam Alert",
+    date: "October 06, 2026",
+    image:
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1200",
+    postName: "MPSC, UPSC, Rajyaseva, Army Bharti & Engg Coaching CET",
+    descriptionMr:
+      "महात्मा जोतिबा फुले संशोधन व प्रशिक्षण संस्था (महाज्योति) व वसंतराव नाईक संशोधन व प्रशिक्षण संस्था (वनार्टी), नागपूर द्वारे २०२६-२७ चाळणी परीक्षांचे वेळापत्रक जाहीर. परीक्षा ०७, ०८ व ०९ ऑक्टोबर २०२६ रोजी विविध सत्रात.",
+    vacancies: "Free CET Coaching",
+    lastDate: "Exam: 07-09 Oct 2026",
+    postType: "notice",
+    priority: "important",
+    isImportant: true,
+    badge: "Timetable Out",
+    badgeType: "important",
+    educationTags: ["degree", "12th", "iti", "diploma"],
+    districts: ["nagpur", "all-maharashtra"],
+    status: "declared",
+    organisation: "Mahajyoti & VANARTI Nagpur",
+  },
+  {
+    titleEn:
       "Canara Bank Graduate Apprentice Recruitment FY 2026-27: Apply Online for 3,500 Vacancies ",
     titleMr:
       "कॅनरा बँक ग्रॅज्युएट अप्रेंटिस भरती २०२६: ३,५०० जागांसाठी ऑनलाईन अर्ज सुरू",

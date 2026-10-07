@@ -11,94 +11,27 @@ import {
 } from "react-icons/hi2";
 
 import { articlesRegistry } from "../constants/articles";
+import { getCountdownInfo } from "../utils/dateUtils";
+import { inferPostType } from "../utils/postUtils";
 
-function parseDateString(rawStr: string): Date | null {
-  if (!rawStr) return null;
-  
-  // Clean string and replace "Sept" -> "Sep"
-  let str = rawStr.replace(/Sept/gi, "Sep").trim();
-
-  // If contains "&", take the last date e.g. "Exam: 01 & 02 Sep 2026" => "02 Sep 2026"
-  if (str.includes("&")) {
-    const parts = str.split("&");
-    if (parts.length > 1) {
-      str = parts[parts.length - 1].trim();
-    }
-  }
-  str = str.replace(/^(Exam:\s*|Till\s*|Last Date:\s*)/i, "").trim();
-
-  // Try standard parse
-  let d = new Date(str);
-  if (!isNaN(d.getTime())) return d;
-
-  // Extract pattern e.g. "24 Sep 2026" or "11 Oct 2026" or "10 August 2026"
-  const datePattern = /(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})/;
-  const match = str.match(datePattern);
-  if (match) {
-    const [_, day, month, year] = match;
-    d = new Date(`${day} ${month} ${year}`);
-    if (!isNaN(d.getTime())) return d;
-  }
-
-  // Extract ISO pattern e.g. "2026-09-24"
-  const isoPattern = /(\d{4})[-/](\d{1,2})[-/](\d{1,2})/;
-  const isoMatch = str.match(isoPattern);
-  if (isoMatch) {
-    const [_, year, month, day] = isoMatch;
-    d = new Date(Number(year), Number(month) - 1, Number(day));
-    if (!isNaN(d.getTime())) return d;
-  }
-
-  return null;
-}
-
-function getCountdownInfo(lastDateStr: string, extendedDateStr?: string) {
-  const dateStr = extendedDateStr || lastDateStr;
-  
-  if (!dateStr || dateStr.toLowerCase().includes("soon") || dateStr.includes("365")) {
-    return { days: 365, text: "Active", isExpired: false, status: "apply-now" };
-  }
-
-  const parsedDate = parseDateString(dateStr);
-  if (!parsedDate) {
-    if (/out|pdf|result|list|card/i.test(dateStr)) {
-      return { days: 0, text: "Notice", isExpired: false, status: "upcoming" };
-    }
-    return { days: 30, text: "Active", isExpired: false, status: "apply-now" };
-  }
-
-  const today = new Date();
-  parsedDate.setHours(23, 59, 59, 999);
-  today.setHours(0, 0, 0, 0);
-
-  const diffTime = parsedDate.getTime() - today.getTime();
-  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-
-  if (diffDays < 0) {
-    return { days: 0, text: "0", isExpired: true, status: "closed" };
-  } else if (diffDays === 0) {
-    return { days: 0, text: "Today", isExpired: false, status: "apply-now" };
-  } else {
-    return { days: diffDays, text: `${diffDays}`, isExpired: false, status: "apply-now" };
-  }
-}
-
-// Dynamically generate latestJobs list from articlesRegistry with accurate countdown parsing
-const latestJobs = articlesRegistry.map((art) => {
-  const countdown = getCountdownInfo(art.lastDate || "", art.extendedDate);
-  return {
-    category: art.category || "Govt Job",
-    status: countdown.status,
-    countdown: countdown,
-    title: art.titleMr || art.titleEn,
-    link: art.slug,
-    organisation: art.postName || art.titleEn,
-    qualification: art.descriptionMr || art.titleEn,
-    vacancies: art.vacancies || "पहा",
-    lastDate: art.lastDate || "लवकरच",
-    extendedDate: art.extendedDate
-  };
-});
+// Dynamically generate latestJobs list (active job recruitments ONLY) from articlesRegistry
+const latestJobs = articlesRegistry
+  .filter((art) => inferPostType(art) === "recruitment")
+  .map((art) => {
+    const countdown = getCountdownInfo(art.lastDate || "", art.extendedDate);
+    return {
+      category: art.category || "Govt Job",
+      status: countdown.status,
+      countdown: countdown,
+      title: art.titleMr || art.titleEn,
+      link: art.slug,
+      organisation: art.postName || art.titleEn,
+      qualification: art.descriptionMr || art.titleEn,
+      vacancies: art.vacancies || "पहा",
+      lastDate: art.lastDate || "लवकरच",
+      extendedDate: art.extendedDate
+    };
+  });
 ---
 
 <Layout 

@@ -11,6 +11,17 @@ export interface ImportantUpdate {
 
 export const importantUpdates: ImportantUpdate[] = [
   {
+    id: "mahajyoti-vanarti-screening-test-timetable-2026",
+    title:
+      "🔥 महाज्योति व वनार्टी मोफत स्पर्धा परीक्षा पूर्व प्रशिक्षण २०२६: चाळणी परीक्षा वेळापत्रक जाहीर (०७ ते ०९ ऑक्टोबर परीक्षा)",
+    link: "/mahajyoti-vanarti-screening-test-timetable-2026",
+    date: "October 06, 2026",
+    expiry: "2026-10-15T00:00:00.000Z",
+    show: true,
+    badge: "Timetable Out",
+    badgeType: "important",
+  },
+  {
     id: "ibps-rrb-recruitment-2026",
     title:
       "🚨 IBPS RRB भरती २०२६: प्रादेशिक ग्रामीण बँकांमध्ये १३,६८८ जागांची महाभरती - ऑनलाईन अर्ज २७ सप्टेंबर २०२६ पर्यंत मुदतवाढ!",

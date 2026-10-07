@@ -6,150 +6,13 @@ import {
   HiOutlineChevronDown,
   HiOutlineCalendarDays,
 } from "react-icons/hi2";
-import { isWithin7Days } from "../utils/dateUtils";
+import { importantUpdates } from "../constants/importantUpdates";
+import { isWithin7Days, isNotExpired } from "../utils/dateUtils";
 
-export interface MobileUrgentPost {
-  id: string;
-  title: string;
-  link: string;
-  date: string;
-  expiry?: string;
-  show?: boolean; // Set to false to hide item from mobile board
-}
-
-// Separate post array created directly inside MobileUrgentBoard
-const mobileUrgentPosts: MobileUrgentPost[] = [
-  {
-    id: "ssc-je-recruitment-2026",
-    title: "🔥 SSC JE भरती २०२६: १,७४८ कनिष्ठ अभियंता (JE) जागांसाठी ऑनलाईन अर्ज सुरू ",
-    link: "/ssc-je-recruitment-2026",
-    date: "September 02, 2026",
-    expiry: "2026-09-23T00:00:00.000Z",
-    show: true,
-  },
-  {
-    id: "mpsc-group-c-exam-date-postponed-2026",
-    title: "🚨 MPSC गट-क संयुक्त पूर्व परीक्षा २०२६ पुढे ढकलली: (अधिकृत शुद्धीपत्रक)",
-    link: "/mpsc-group-c-exam-date-postponed-2026",
-    date: "September 09, 2026",
-    expiry: "2026-10-30T00:00:00.000Z",
-    show: true,
-  },
-  {
-    id: "ctet-2026-online-application-reopened",
-    title: "🔥 CTET २०२६: २२ व्या केंद्रीय शिक्षक पात्रता परीक्षेचे ऑनलाईन अर्ज पुन्हा सुरू (०१ सप्टेंबर मुदतवाढ)",
-    link: "/ctet-2026-online-application-reopened",
-    date: "August 25, 2026",
-    expiry: "2026-09-05T00:00:00.000Z",
-    show: true,
-  },
-  {
-    id: "barti-trti-sarthi-free-coaching-extension-2026",
-    title: "BARTI, TRTI, SARTHI, AMRUT & ARTI मोफत परीक्षा पूर्व प्रशिक्षण २०२६: वयोमर्यादा शिथिल व अर्जास मुदतवाढ",
-    link: "/barti-trti-sarthi-age-relaxation-extension-2026",
-    date: "August 25, 2026",
-    expiry: "2026-09-10T00:00:00.000Z",
-    show: true,
-  },
-  {
-    id: "mpsc-rajyaseva-mains-result-2025",
-    title: "🔥 MPSC राज्यसेवा मुख्य परीक्षा २०२५: लिखित परीक्षेचा निकाल व अधिकृत कट-ऑफ जाहीर",
-    link: "/mpsc-rajyaseva-mains-result-2025",
-    date: "August 25, 2026",
-    expiry: "2026-09-30T00:00:00.000Z",
-    show: true,
-  },
-  {
-    id: "chhatrapati-sambhajinagar-mahanagarpalika-result-2026",
-    title: "🚨 छत्रपती संभाजीनगर महानगरपालिका भरती: ५ विविध पदांचे निकाल व निवड यादी जाहीर",
-    link: "/chhatrapati-sambhajinagar-mahanagarpalika-result-2026",
-    date: "August 24, 2026",
-    expiry: "2026-09-30T00:00:00.000Z",
-    show: true,
-  },
-  {
-    id: "pdcc-bank-peon-hall-ticket-2026",
-    title: "🎫 पुणे बँक (PDCC Bank) शिपाई २८९ पदांचे हॉल तिकीट उपलब्ध",
-    link: "/pdcc-bank-peon-hall-ticket-2026",
-    date: "August 23, 2026",
-    expiry: "2026-09-20T00:00:00.000Z",
-    show: true,
-  },
-  {
-    id: "ibps-csa-clerk-recruitment-2026",
-    title: "🔥 IBPS क्लर्क (CSA) ११,४०३ जागा भरती: ऑनलाईन अर्जास २८ ऑगस्ट पर्यंत मुदतवाढ",
-    link: "/ibps-csa-clerk-recruitment-2026",
-    date: "August 22, 2026",
-    expiry: "2026-08-30T00:00:00.000Z",
-    show: true,
-  },
-  {
-    id: "tmc-thane-hall-ticket-2026",
-    title: "♦️ ठाणे महानगरपालिका (TMC) भरती परीक्षा प्रवेशपत्र / हॉलतिकीट उपलब्ध",
-    link: "/tmc-thane-hall-ticket-2026",
-    date: "August 22, 2026",
-    expiry: "2026-09-15T00:00:00.000Z",
-    show: true,
-  },
-  {
-    id: "mahajyoti-vanarti-free-coaching-extension-2026",
-    title: "🔥 महाज्योति व वनार्टी मोफत स्पर्धा परीक्षा प्रशिक्षण: ऑनलाईन अर्जास २६ ऑगस्ट पर्यंत मुदतवाढ",
-    link: "/mahajyoti-vanarti-free-coaching-extension-2026",
-    date: "August 21, 2026",
-    expiry: "2026-08-30T00:00:00.000Z",
-    show: true,
-  },
-  {
-    id: "mpsc-group-c-divyang-scribe-update-2026",
-    title: "MPSC गट-क परीक्षा: दिव्यांग उमेदवारांसाठी लेखनिक व भरपाई वेळ परिपत्रक जारी",
-    link: "/mpsc-group-c-divyang-scribe-update-2026",
-    date: "August 20, 2026",
-    show: true,
-  },
-  {
-    id: "pavitra-portal-tait-2025-preference-notice",
-    title: "🔥 पवित्र पोर्टल TAIT-2025: पवित्र पोर्टल वरील Log In Problem बाबतीत सूचना",
-    link: "/pavitra-portal-tait-2025-preference-filling-notice",
-    date: "August 08, 2026",
-    expiry: "2026-09-30T00:00:00.000Z",
-    show: true,
-  },
-  {
-    id: "mumbai-police-final-selection-list-2026",
-    title: "🚨 मुंबई पोलीस शिपाई भरती: ३,५२१ पदांची अंतिम निवड यादी व प्रतीक्षा यादी जाहीर",
-    link: "/mumbai-police-constable-final-selection-list-2026",
-    date: "August 07, 2026",
-    expiry: "2026-09-15T00:00:00.000Z",
-    show: true,
-  },
-  {
-    id: "mpsc-combine-group-c-2026",
-    title: "🔥 MPSC गट-क संयुक्त परीक्षा २०२६: ५,७०७ पदे भरती व १० ऑगस्ट मुदतवाढ",
-    link: "/mpsc-combine-group-c-2026",
-    date: "August 07, 2026",
-    expiry: "2026-08-30T00:00:00.000Z",
-    show: true,
-  },
-  {
-    id: "mahajyoti-free-coaching-exam-timetable-2026",
-    title: "महाज्योति परीक्षा सुधारित वेळापत्रक",
-    link: "/mahajyoti-free-coaching-exam-timetable-2026",
-    date: "August 04, 2026",
-    expiry: "2026-08-30T00:00:00.000Z",
-    show: true,
-  },
-  {
-    id: "mpsc-group-c-last-date-extended-2026",
-    title: "MPSC गट-क संयुक्त पूर्व परीक्षा २०२६: तलाठी भरती अर्ज मुदतवाढ : १० ऑगस्ट २०२६ पर्यंत",
-    link: "/mpsc-group-c-last-date-extended-2026",
-    date: "August 05, 2026",
-    expiry: "2026-08-30T00:00:00.000Z",
-    show: true,
-  },
-];
-
-// Filter active updates (where show !== false)
-const activeUpdates = mobileUrgentPosts.filter(update => update.show !== false);
+// Filter active and non-expired updates
+const activeUpdates = importantUpdates.filter(
+  (update) => update.show !== false && isNotExpired(update.expiry),
+);
 const initialVisibleCount = 3;
 ---
 
@@ -196,14 +59,30 @@ const initialVisibleCount = 3;
                 </div>
               </div>
               
-              {isWithin7Days(update.date) && (
+              {update.badge ? (
+                <span
+                  class={`shrink-0 text-[0.55rem] px-1.5 py-0.5 rounded font-extrabold uppercase tracking-widest select-none ${
+                    update.badgeType === "result"
+                      ? "bg-rose-600 text-white"
+                      : update.badgeType === "admit"
+                        ? "bg-indigo-600 text-white"
+                        : update.badgeType === "extended"
+                          ? "bg-amber-500 text-white"
+                          : update.badgeType === "important"
+                            ? "bg-purple-600 text-white"
+                            : "bg-emerald-600 text-white"
+                  }`}
+                >
+                  {update.badge}
+                </span>
+              ) : isWithin7Days(update.date) ? (
                 <span 
                   class="urgent-new-badge shrink-0 text-[0.5rem] bg-rose-500 text-white px-1.5 py-0.5 rounded font-black uppercase tracking-wider select-none animate-pulse self-start mt-0.5"
                   data-expiry={update.expiry}
                 >
                   NEW
                 </span>
-              )}
+              ) : null}
             </a>
           );
         })}
@@ -217,7 +96,7 @@ const initialVisibleCount = 3;
           class="w-full mt-2 py-1.5 px-3 bg-rose-500/10 hover:bg-rose-500/20 text-rose-600 dark:text-rose-400 font-extrabold text-[0.7rem] uppercase tracking-wider rounded-xl border border-rose-500/30 flex items-center justify-center gap-1.5 transition-all cursor-pointer"
         >
           <span id="mobile-board-toggle-text">
-            Show  ({activeUpdates.length - initialVisibleCount} More)
+            अधिक पाहा / Show More ({activeUpdates.length - initialVisibleCount} आणखी)
           </span>
           <HiOutlineChevronDown id="mobile-board-toggle-icon" className="text-xs transition-transform duration-300 shrink-0" />
         </button>
