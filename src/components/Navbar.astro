@@ -21,6 +21,7 @@ import {
   HiOutlineAcademicCap,
   HiOutlineCalculator,
   HiOutlineUserGroup,
+  HiOutlineCommandLine,
 } from "react-icons/hi2";
 import { articlesRegistry } from "../constants/articles";
 import { MAHARASHTRA_DISTRICTS } from "../constants/districts";
@@ -376,12 +377,18 @@ const searchData = rawSearchData.filter((item) => {
           >
             ✕
           </button>
-          <!-- Desktop Shortcut Badge -->
-          <kbd
-            class="hidden lg:inline-flex items-center gap-0.5 px-2.5 py-0.5 ml-1 text-[0.6rem] font-bold text-text-muted bg-bg-base/90 border border-border-card rounded-md shadow-2xs pointer-events-none shrink-0"
+          <!-- Workable Desktop Shortcut Button with Icon -->
+          <button
+            id="search-shortcut-btn"
+            type="button"
+            aria-label="Activate search (Ctrl + K)"
+            title="Click or press Ctrl + K to search"
+            class="hidden md:inline-flex items-center gap-1.5 px-2.5 py-1 ml-1.5 text-[0.68rem] font-bold text-primary dark:text-primary-light bg-primary/10 hover:bg-primary/20 border border-primary/30 hover:border-primary/60 rounded-xl shadow-2xs transition-all duration-200 cursor-pointer shrink-0 active:scale-95 group/btn"
           >
-            Ctrl K
-          </kbd>
+            <HiOutlineCommandLine className="text-xs text-primary shrink-0 group-hover/btn:scale-110 transition-transform" />
+            <span class="tracking-tight text-text-main dark:text-text-main font-semibold">Ctrl</span>
+            <span class="font-extrabold text-[0.65rem] bg-primary text-white px-1.5 py-0.2 rounded-md shadow-2xs">K</span>
+          </button>
         </div>
 
         <!-- Desktop Search Suggestions Dropdown -->
@@ -1311,6 +1318,19 @@ const searchData = rawSearchData.filter((item) => {
       });
     }
 
+    const searchShortcutBtn = document.getElementById("search-shortcut-btn");
+    if (searchShortcutBtn) {
+      searchShortcutBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        if (window.innerWidth < 768) {
+          openMobileSearchModal();
+        } else if (searchInput) {
+          searchInput.focus();
+          updateDesktopResults();
+        }
+      });
+    }
+
     const mobileSearchBarBelowNav = document.getElementById("mobile-search-bar-below-nav");
     const mobileNavSearchInput = document.getElementById("mobile-nav-search-input") as HTMLInputElement;
     const mobileNavSearchBtn = document.getElementById("mobile-nav-search-btn");
@@ -1399,27 +1419,35 @@ const searchData = rawSearchData.filter((item) => {
       });
     }
 
-    // Global Keyboard Listeners (Ctrl+K, Cmd+K, '/')
-    document.addEventListener("keydown", (e) => {
-      // Ignore shortcut when typing in input/textarea unless it's Escape
+    // Global Keyboard Listeners (Ctrl+K, Cmd+K, '/') - Using window capture phase to override browser default address bar focus
+    const handleGlobalKeyDown = (e: KeyboardEvent) => {
+      const isCtrlK = (e.ctrlKey || e.metaKey) && (e.key.toLowerCase() === "k" || e.code === "KeyK");
       const activeTag = document.activeElement
         ? document.activeElement.tagName.toLowerCase()
         : "";
       const isInputActive = activeTag === "input" || activeTag === "textarea";
 
-      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
+      if (isCtrlK) {
         e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+
         if (window.innerWidth < 768) {
           openMobileSearchModal();
-        } else {
-          searchInput?.focus();
+        } else if (searchInput) {
+          searchInput.focus();
+          searchInput.select();
+          updateDesktopResults();
         }
       } else if (e.key === "/" && !isInputActive) {
         e.preventDefault();
+        e.stopPropagation();
+
         if (window.innerWidth < 768) {
           openMobileSearchModal();
-        } else {
-          searchInput?.focus();
+        } else if (searchInput) {
+          searchInput.focus();
+          updateDesktopResults();
         }
       } else if (e.key === "Escape") {
         if (
@@ -1427,9 +1455,18 @@ const searchData = rawSearchData.filter((item) => {
           !mobileSearchModal.classList.contains("hidden")
         ) {
           closeMobileSearchModal();
+        } else if (suggestionsContainer && !suggestionsContainer.classList.contains("hidden")) {
+          suggestionsContainer.classList.add("hidden", "opacity-0", "translate-y-2");
+          searchInput?.blur();
         }
       }
-    });
+    };
+
+    if ((window as any)._globalNavKeyDownHandler) {
+      window.removeEventListener("keydown", (window as any)._globalNavKeyDownHandler, true);
+    }
+    (window as any)._globalNavKeyDownHandler = handleGlobalKeyDown;
+    window.addEventListener("keydown", handleGlobalKeyDown, true);
 
     function closeMenu() {
       if (menuToggle?.classList.contains("active")) {
