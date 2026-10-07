@@ -351,34 +351,34 @@ const searchData = rawSearchData.filter((item) => {
         </div>
       </a>
 
-      <!-- Center: Header Search Bar (Desktop & Mobile trigger) -->
-      <div class="relative flex-1 max-w-[480px] z-50">
+      <!-- Center: Header Search Bar (Desktop View: Increased Width & Attractive Glow Border) -->
+      <div class="relative flex-1 max-w-[650px] lg:max-w-[720px] hidden md:block z-50">
         <div
           id="search-box-container"
-          class="flex items-center bg-bg-surface dark:bg-bg-surface/60 border border-border-card hover:border-primary/50 focus-within:border-primary px-3 sm:px-4 py-1.5 sm:py-2 rounded-full w-full transition-all duration-300 shadow-xs focus-within:shadow-md focus-within:shadow-primary/10 cursor-text"
+          class="group relative flex items-center bg-bg-surface/90 dark:bg-bg-surface/80 border-2 border-primary/35 hover:border-primary focus-within:border-primary focus-within:ring-4 focus-within:ring-primary/20 px-4 py-2 rounded-full w-full transition-all duration-300 shadow-xs hover:shadow-md focus-within:shadow-xl focus-within:shadow-primary/15 cursor-text"
         >
           <HiOutlineMagnifyingGlass
-            className="text-primary text-base sm:text-lg mr-2 shrink-0"
+            className="text-primary text-lg sm:text-xl mr-2.5 shrink-0 transition-transform duration-300 group-hover:scale-110"
           />
           <input
             type="text"
-            placeholder="Search jobs, results, admit cards, MPSC..."
+            placeholder="Search 500+ jobs, results, hall tickets, MPSC..."
             id="search-input"
             autocomplete="off"
-            class="bg-transparent border-none text-text-main font-sans text-xs sm:text-sm outline-none w-full placeholder-text-muted/80 truncate cursor-text"
+            class="bg-transparent border-none text-text-main font-sans text-xs sm:text-sm outline-none w-full placeholder-text-muted/75 truncate cursor-text"
           />
           <!-- Clear Button -->
           <button
             id="search-clear-btn"
             type="button"
             aria-label="Clear Search"
-            class="hidden text-text-muted hover:text-text-main text-xs p-1 rounded-full transition-colors shrink-0"
+            class="hidden text-text-muted hover:text-text-main text-xs p-1 rounded-full transition-colors shrink-0 mr-1.5 cursor-pointer"
           >
             ✕
           </button>
           <!-- Desktop Shortcut Badge -->
           <kbd
-            class="hidden md:inline-flex items-center gap-0.5 px-2 py-0.5 ml-1.5 text-[0.6rem] font-bold text-text-muted bg-bg-base/80 border border-border-card rounded-md shadow-2xs pointer-events-none shrink-0"
+            class="hidden lg:inline-flex items-center gap-0.5 px-2.5 py-0.5 ml-1 text-[0.6rem] font-bold text-text-muted bg-bg-base/90 border border-border-card rounded-md shadow-2xs pointer-events-none shrink-0"
           >
             Ctrl K
           </kbd>
@@ -648,7 +648,31 @@ const searchData = rawSearchData.filter((item) => {
     </div>
   </div>
 
-  <!-- Standalone Job Filter Component (Below Navbar) -->
+  <!-- Mobile Dedicated Search Bar (Visible on mobile only, positioned below navbar header & directly ABOVE Job Filter) -->
+  <div class="block md:hidden px-3 sm:px-4 py-2 bg-bg-surface/95 dark:bg-bg-surface/90 border-t border-b border-border-card/40 backdrop-blur-md">
+    <div
+      id="mobile-search-bar-below-nav"
+      class="group relative flex items-center bg-bg-base dark:bg-bg-surface border-2 border-primary/40 hover:border-primary focus-within:border-primary px-3 py-1.5 rounded-2xl w-full shadow-xs cursor-text transition-all duration-300"
+    >
+      <HiOutlineMagnifyingGlass className="text-primary text-base mr-2 shrink-0 animate-pulse" />
+      <input
+        type="text"
+        placeholder="Search 500+ jobs, results, hall tickets..."
+        id="mobile-nav-search-input"
+        autocomplete="off"
+        class="bg-transparent border-none text-text-main font-sans text-xs outline-none w-full placeholder-text-muted/80 truncate cursor-text"
+      />
+      <button
+        type="button"
+        id="mobile-nav-search-btn"
+        class="px-2.5 py-1 text-[0.68rem] font-extrabold text-white bg-gradient-to-r from-primary to-secondary rounded-xl shrink-0 ml-1 shadow-xs hover:opacity-95 active:scale-95 transition-all cursor-pointer"
+      >
+        शोधा
+      </button>
+    </div>
+  </div>
+
+  <!-- Standalone Job Filter Component (Below Navbar & Mobile Search Bar) -->
   <JobFilter />
 </div>
 
@@ -1276,7 +1300,7 @@ const searchData = rawSearchData.filter((item) => {
       }
     }
 
-    // Open Mobile Search Modal when tapping search box on small screens (< 768px)
+    // Open Mobile Search Modal when tapping header or dedicated mobile search bar
     if (searchBoxContainer) {
       searchBoxContainer.addEventListener("click", (e) => {
         if (window.innerWidth < 768) {
@@ -1284,6 +1308,36 @@ const searchData = rawSearchData.filter((item) => {
           const currentVal = searchInput ? searchInput.value : "";
           openMobileSearchModal(currentVal);
         }
+      });
+    }
+
+    const mobileSearchBarBelowNav = document.getElementById("mobile-search-bar-below-nav");
+    const mobileNavSearchInput = document.getElementById("mobile-nav-search-input") as HTMLInputElement;
+    const mobileNavSearchBtn = document.getElementById("mobile-nav-search-btn");
+
+    if (mobileSearchBarBelowNav) {
+      mobileSearchBarBelowNav.addEventListener("click", (e) => {
+        const val = mobileNavSearchInput ? mobileNavSearchInput.value : "";
+        openMobileSearchModal(val);
+      });
+    }
+
+    if (mobileNavSearchInput) {
+      mobileNavSearchInput.addEventListener("input", (e) => {
+        e.stopPropagation();
+        openMobileSearchModal(mobileNavSearchInput.value);
+      });
+      mobileNavSearchInput.addEventListener("focus", (e) => {
+        e.stopPropagation();
+        openMobileSearchModal(mobileNavSearchInput.value);
+      });
+    }
+
+    if (mobileNavSearchBtn) {
+      mobileNavSearchBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const val = mobileNavSearchInput ? mobileNavSearchInput.value : "";
+        openMobileSearchModal(val);
       });
     }
 
@@ -1295,6 +1349,7 @@ const searchData = rawSearchData.filter((item) => {
       mobileSearchClearBtn.addEventListener("click", () => {
         if (mobileSearchInput) {
           mobileSearchInput.value = "";
+          if (mobileNavSearchInput) mobileNavSearchInput.value = "";
           mobileSearchInput.focus();
           updateMobileResults();
         }
