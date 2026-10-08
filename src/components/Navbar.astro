@@ -1205,11 +1205,11 @@ const searchData = rawSearchData.filter((item) => {
 
       // Quick suggestions delegated click inside desktop dropdown
       suggestionsList.addEventListener("click", (e) => {
-        const suggestBtn = e.target.closest(".quick-suggest-btn");
-        if (suggestBtn) {
+        const suggestBtn = (e.target as HTMLElement | null)?.closest(".quick-suggest-btn");
+        if (suggestBtn && searchInput) {
           const text = suggestBtn.getAttribute("data-suggest");
           if (text) {
-            searchInput.value = text;
+            (searchInput as HTMLInputElement).value = text;
             updateDesktopResults();
           }
         }
@@ -1245,15 +1245,17 @@ const searchData = rawSearchData.filter((item) => {
             "opacity-0",
             "translate-y-2",
           );
-          searchInput.blur();
+          (searchInput as HTMLInputElement).blur();
         }
       });
 
       // Close suggestions when clicking outside
       document.addEventListener("click", (e) => {
+        const targetNode = e.target as Node | null;
         if (
-          !searchBoxContainer?.contains(e.target) &&
-          !suggestionsContainer.contains(e.target)
+          targetNode &&
+          !searchBoxContainer?.contains(targetNode) &&
+          !suggestionsContainer.contains(targetNode)
         ) {
           suggestionsContainer.classList.add(
             "hidden",
@@ -1264,19 +1266,47 @@ const searchData = rawSearchData.filter((item) => {
       });
     }
 
+    // UNIFIED SEARCH UI CONTROLLER (Desktop & Mobile)
+    function openSearchUI(initialQuery = "") {
+      console.log("[Search Shortcut] Opening search UI...");
+      const isMobile = window.innerWidth < 768 || !searchInput || searchInput.offsetParent === null;
+
+      if (isMobile) {
+        if (!mobileSearchModal) return;
+        mobileSearchModal.classList.remove("hidden");
+        document.body.classList.add("overflow-hidden");
+        requestAnimationFrame(() => {
+          setTimeout(() => {
+            mobileSearchModal.classList.remove("opacity-0");
+            if (mobileSearchInput) {
+              const inputEl = mobileSearchInput as HTMLInputElement;
+              if (initialQuery) inputEl.value = initialQuery;
+              inputEl.focus();
+              if (typeof inputEl.select === "function") {
+                inputEl.select();
+              }
+              updateMobileResults();
+              console.log("[Search Shortcut] Input focused (Mobile modal)");
+            }
+          }, 20);
+        });
+      } else {
+        if (searchInput) {
+          const inputEl = searchInput as HTMLInputElement;
+          inputEl.focus();
+          if (typeof inputEl.select === "function") {
+            inputEl.select();
+          }
+          if (initialQuery) inputEl.value = initialQuery;
+          updateDesktopResults();
+          console.log("[Search Shortcut] Input focused (Desktop input)");
+        }
+      }
+    }
+
     // MOBILE SEARCH MODAL OVERLAY LOGIC
     function openMobileSearchModal(initialQuery = "") {
-      if (!mobileSearchModal) return;
-      mobileSearchModal.classList.remove("hidden");
-      document.body.classList.add("overflow-hidden");
-      setTimeout(() => {
-        mobileSearchModal.classList.remove("opacity-0");
-        if (mobileSearchInput) {
-          if (initialQuery) mobileSearchInput.value = initialQuery;
-          mobileSearchInput.focus();
-          updateMobileResults();
-        }
-      }, 10);
+      openSearchUI(initialQuery);
     }
 
     function closeMobileSearchModal() {
@@ -1285,12 +1315,13 @@ const searchData = rawSearchData.filter((item) => {
       setTimeout(() => {
         mobileSearchModal.classList.add("hidden");
         document.body.classList.remove("overflow-hidden");
+        if (mobileSearchInput) mobileSearchInput.blur();
       }, 300);
     }
 
     function updateMobileResults() {
       if (!mobileSearchInput || !mobileSearchResults) return;
-      const query = mobileSearchInput.value.toLowerCase().trim();
+      const query = (mobileSearchInput as HTMLInputElement).value.toLowerCase().trim();
 
       if (mobileSearchClearBtn) {
         mobileSearchClearBtn.classList.toggle("hidden", query.length === 0);
@@ -1312,8 +1343,8 @@ const searchData = rawSearchData.filter((item) => {
       searchBoxContainer.addEventListener("click", (e) => {
         if (window.innerWidth < 768) {
           e.preventDefault();
-          const currentVal = searchInput ? searchInput.value : "";
-          openMobileSearchModal(currentVal);
+          const currentVal = searchInput ? (searchInput as HTMLInputElement).value : "";
+          openSearchUI(currentVal);
         }
       });
     }
@@ -1322,12 +1353,8 @@ const searchData = rawSearchData.filter((item) => {
     if (searchShortcutBtn) {
       searchShortcutBtn.addEventListener("click", (e) => {
         e.stopPropagation();
-        if (window.innerWidth < 768) {
-          openMobileSearchModal();
-        } else if (searchInput) {
-          searchInput.focus();
-          updateDesktopResults();
-        }
+        e.preventDefault();
+        openSearchUI();
       });
     }
 
@@ -1338,18 +1365,18 @@ const searchData = rawSearchData.filter((item) => {
     if (mobileSearchBarBelowNav) {
       mobileSearchBarBelowNav.addEventListener("click", (e) => {
         const val = mobileNavSearchInput ? mobileNavSearchInput.value : "";
-        openMobileSearchModal(val);
+        openSearchUI(val);
       });
     }
 
     if (mobileNavSearchInput) {
       mobileNavSearchInput.addEventListener("input", (e) => {
         e.stopPropagation();
-        openMobileSearchModal(mobileNavSearchInput.value);
+        openSearchUI(mobileNavSearchInput.value);
       });
       mobileNavSearchInput.addEventListener("focus", (e) => {
         e.stopPropagation();
-        openMobileSearchModal(mobileNavSearchInput.value);
+        openSearchUI(mobileNavSearchInput.value);
       });
     }
 
@@ -1357,7 +1384,7 @@ const searchData = rawSearchData.filter((item) => {
       mobileNavSearchBtn.addEventListener("click", (e) => {
         e.stopPropagation();
         const val = mobileNavSearchInput ? mobileNavSearchInput.value : "";
-        openMobileSearchModal(val);
+        openSearchUI(val);
       });
     }
 
@@ -1368,7 +1395,7 @@ const searchData = rawSearchData.filter((item) => {
     if (mobileSearchClearBtn) {
       mobileSearchClearBtn.addEventListener("click", () => {
         if (mobileSearchInput) {
-          mobileSearchInput.value = "";
+          (mobileSearchInput as HTMLInputElement).value = "";
           if (mobileNavSearchInput) mobileNavSearchInput.value = "";
           mobileSearchInput.focus();
           updateMobileResults();
@@ -1408,11 +1435,11 @@ const searchData = rawSearchData.filter((item) => {
     // Quick suggestions click listener in mobile search modal
     if (mobileSearchResults) {
       mobileSearchResults.addEventListener("click", (e) => {
-        const suggestBtn = e.target.closest(".quick-suggest-btn");
+        const suggestBtn = (e.target as HTMLElement).closest(".quick-suggest-btn");
         if (suggestBtn && mobileSearchInput) {
           const text = suggestBtn.getAttribute("data-suggest");
           if (text) {
-            mobileSearchInput.value = text;
+            (mobileSearchInput as HTMLInputElement).value = text;
             updateMobileResults();
           }
         }
@@ -1421,34 +1448,28 @@ const searchData = rawSearchData.filter((item) => {
 
     // Global Keyboard Listeners (Ctrl+K, Cmd+K, '/') - Using window capture phase to override browser default address bar focus
     const handleGlobalKeyDown = (e: KeyboardEvent) => {
-      const isCtrlK = (e.ctrlKey || e.metaKey) && (e.key.toLowerCase() === "k" || e.code === "KeyK");
-      const activeTag = document.activeElement
-        ? document.activeElement.tagName.toLowerCase()
-        : "";
-      const isInputActive = activeTag === "input" || activeTag === "textarea";
+      const key = (e.key || "").toLowerCase();
+      const code = (e.code || "").toLowerCase();
+      const isKKey = key === "k" || code === "keyk" || e.keyCode === 75;
+      const isCtrlK = (e.ctrlKey || e.metaKey) && isKKey;
+
+      const activeElement = document.activeElement as HTMLElement | null;
+      const activeTag = activeElement ? activeElement.tagName.toLowerCase() : "";
+      const isInputActive = activeTag === "input" || activeTag === "textarea" || activeElement?.isContentEditable;
 
       if (isCtrlK) {
+        console.log("[Search Shortcut] Ctrl+K / Cmd+K detected");
         e.preventDefault();
         e.stopPropagation();
         e.stopImmediatePropagation();
 
-        if (window.innerWidth < 768) {
-          openMobileSearchModal();
-        } else if (searchInput) {
-          searchInput.focus();
-          searchInput.select();
-          updateDesktopResults();
-        }
+        openSearchUI();
       } else if (e.key === "/" && !isInputActive) {
+        console.log("[Search Shortcut] '/' detected");
         e.preventDefault();
         e.stopPropagation();
 
-        if (window.innerWidth < 768) {
-          openMobileSearchModal();
-        } else if (searchInput) {
-          searchInput.focus();
-          updateDesktopResults();
-        }
+        openSearchUI();
       } else if (e.key === "Escape") {
         if (
           mobileSearchModal &&
@@ -1603,15 +1624,22 @@ const searchData = rawSearchData.filter((item) => {
     });
   }
 
-  // Initialize on page load and after view transitions
-  document.addEventListener("astro:page-load", () => {
+  function runAllNavInits() {
     initNavbar();
     initDateTime();
     initNavBadges();
     updateNavbarHeight();
+  }
 
-    // Add event listener to recalculate height on window resize
-    window.removeEventListener("resize", updateNavbarHeight);
-    window.addEventListener("resize", updateNavbarHeight);
-  });
+  // Initialize on page load, DOM ready, and after view transitions
+  document.addEventListener("astro:page-load", runAllNavInits);
+
+  if (document.readyState === "interactive" || document.readyState === "complete") {
+    runAllNavInits();
+  } else {
+    document.addEventListener("DOMContentLoaded", runAllNavInits);
+  }
+
+  window.removeEventListener("resize", updateNavbarHeight);
+  window.addEventListener("resize", updateNavbarHeight);
 </script>
