@@ -1,4 +1,10 @@
-export type PostType = "recruitment" | "result" | "admit-card" | "notice";
+export type PostType =
+  | "recruitment"
+  | "result"
+  | "admit-card"
+  | "admission"
+  | "notice"
+  | "answer-key";
 export type PostPriority = "normal" | "important" | "mega";
 export type EducationTag =
   | "10th"
@@ -25,6 +31,10 @@ export interface ArticleMeta {
   vacancies?: string;
   lastDate?: string;
   extendedDate?: string;
+  examDate?: string;
+  resultDate?: string;
+  admitCardReleaseDate?: string;
+  admissionDeadline?: string;
   postType?: PostType;
   priority?: PostPriority;
   isImportant?: boolean;
@@ -32,11 +42,41 @@ export interface ArticleMeta {
   badgeType?: "new" | "extended" | "important" | "result" | "admit" | string;
   educationTags?: EducationTag[];
   districts?: string[];
-  status?: "apply-now" | "closed" | "upcoming" | "declared" | "available";
+  status?: "apply-now" | "closed" | "upcoming" | "declared" | "available" | "open";
   organisation?: string;
+  pillarPage?: string;
+  officialWebsiteUrl?: string;
+  officialResultUrl?: string;
+  officialAdmitCardUrl?: string;
+  officialNotificationUrl?: string;
 }
 
 export const articlesRegistry: ArticleMeta[] = [
+  {
+    titleEn:
+      "RRB NTPC Recruitment 2026: Apply Online for 5,236 Vacancies (Graduate & Undergraduate Posts)",
+    titleMr:
+      "रेल्वे भरती मंडळ (RRB NTPC) भरती २०२६: ५,२३६ जागांसाठी जाहिरात प्रसिद्ध! ऑनलाईन अर्ज सुरू",
+    slug: "/rrb-ntpc-recruitment-2026",
+    category: "Railway Job",
+    date: "October 08, 2026",
+    image:
+      "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=1200",
+    postName: "Station Master, Goods Guard, Senior Clerk & Junior Clerk",
+    descriptionMr:
+      "रेल्वे भरती बोर्ड (RRB) द्वारे ५,२३६ नॉन-टेक्निकल (NTPC) जागांवर भरती जाहीर. १२वी पास व पदवीधरांसाठी सुवर्णसंधी. ऑनलाईन अर्ज मुदत १५ नोव्हेंबर २०२६ पर्यंत.",
+    vacancies: "5,236",
+    lastDate: "15 Nov 2026",
+    postType: "recruitment",
+    priority: "mega",
+    isImportant: true,
+    badge: "RRB NTPC",
+    badgeType: "new",
+    educationTags: ["12th", "degree"],
+    districts: ["all-maharashtra", "mumbai"],
+    status: "apply-now",
+    organisation: "Railway Recruitment Board (RRB)",
+  },
   {
     titleEn:
       "Mahajyoti & VANARTI Free Coaching Screening Test Timetable 2026: Exam Dates 07 to 09 October Declared",
@@ -273,6 +313,9 @@ export const articlesRegistry: ArticleMeta[] = [
       "महाराष्ट्र लोकसेवा आयोग (MPSC) राज्यसेवा मुख्य परीक्षा २०२५ चा लिखित निकाल व प्रवर्गनिहाय कट-ऑफ गुण mpsc.gov.in वर जाहीर.",
     vacancies: "Main Exam Cutoff Out",
     lastDate: "25 Aug 2026",
+    postType: "result",
+    status: "declared",
+    organisation: "Maharashtra Public Service Commission (MPSC)",
   },
   {
     titleEn:
@@ -289,6 +332,9 @@ export const articlesRegistry: ArticleMeta[] = [
       "छत्रपती संभाजीनगर महानगरपालिका (CSMC) ५ विविध पदांचा ऑनलाईन परीक्षा निकाल व निवड यादी chhsambhajinagarmc.org वर प्रसिद्ध.",
     vacancies: "5 Posts Result Out",
     lastDate: "Merit List Out",
+    postType: "result",
+    status: "declared",
+    organisation: "छत्रपती संभाजीनगर महानगरपालिका (CSMC)",
   },
   {
     titleEn:
@@ -304,6 +350,10 @@ export const articlesRegistry: ArticleMeta[] = [
     descriptionMr:
       "पुणे जिल्हा मध्यवर्ती सहकारी बँक शिपाई भरती परीक्षेचे प्रवेशपत्र (Hall Ticket) ऑनलाईन उपलब्ध. डायरेक्ट डाउनलोड करा.",
     vacancies: "289",
+    postType: "admit-card",
+    status: "available",
+    organisation: "पुणे जिल्हा मध्यवर्ती सहकारी बँक (PDCC)",
+    examDate: "August / September 2026",
   },
   {
     titleEn:
@@ -337,6 +387,10 @@ export const articlesRegistry: ArticleMeta[] = [
       "ठाणे महानगरपालिका (TMC) अग्निशमन व अभियांत्रिकी विभागातील ७ संवर्गातील भरती परीक्षा ०१ व ०२ सप्टेंबर २०२६ रोजी होणार असून हॉलतिकीट डाऊनलोड दुवा उपलब्ध.",
     vacancies: "07 Cadres (CBT)",
     lastDate: "Exam: 01 & 02 Sep 2026",
+    postType: "admit-card",
+    status: "available",
+    organisation: "ठाणे महानगरपालिका (TMC)",
+    examDate: "01 & 02 September 2026",
   },
   {
     titleEn:
@@ -418,6 +472,10 @@ export const articlesRegistry: ArticleMeta[] = [
       "बॉम्बे उच्च न्यायालय (BHC) लिपिक टंकलेखक चाचणी परीक्षेचे प्रवेशपत्र ऑनलाईन जाहीर. 👉 लिपिक हॉल तिकीट डाउनलोड करण्यासाठी खालील लिंकवर क्लिक करा 👇👇👇",
     vacancies: "Clerk Hall Ticket",
     lastDate: "Admit Card Out",
+    postType: "admit-card",
+    status: "available",
+    organisation: "बॉम्बे उच्च न्यायालय (BHC)",
+    examDate: "August / September 2026",
   },
   {
     titleEn:
@@ -466,6 +524,10 @@ export const articlesRegistry: ArticleMeta[] = [
       "वनार्टी (VANARTI) मोफत स्पर्धा परीक्षा पूर्व प्रशिक्षण चाळणी परीक्षा २०२६ प्रवेशपत्र विद्यार्थ्यांच्या ऑनलाईन लॉगिनवर उपलब्ध.",
     vacancies: "Free Coaching 2026",
     lastDate: "Admit Card Out",
+    postType: "admit-card",
+    status: "available",
+    organisation: "वनार्टी (VANARTI)",
+    examDate: "August 2026",
   },
   {
     titleEn:
@@ -498,6 +560,9 @@ export const articlesRegistry: ArticleMeta[] = [
       "बृहन्मुंबई पोलीस आयुक्त कार्यालयाने ३,५२१ पोलीस शिपाई पदांची अंतिम निवड यादी व प्रतीक्षा यादी कट-ऑफसह जाहीर केली आहे.",
     vacancies: "3,521",
     lastDate: "Result Out",
+    postType: "result",
+    status: "declared",
+    organisation: "बृहन्मुंबई पोलीस आयुक्त कार्यालय (Brihanmumbai Police)",
   },
   {
     titleEn:
@@ -578,6 +643,9 @@ export const articlesRegistry: ArticleMeta[] = [
       "दि लातूर जिल्हा मध्यवर्ती सहकारी बँक लि., लातूर (Latur DCCB) कडून शासन निर्णय १५.०६.२०१८ नुसार २०% सुधारीत प्रतीक्षा यादी अधिकृत वेबसाईटवर प्रसिद्ध.",
     vacancies: "375 (20% Waiting List)",
     lastDate: "Valid for 365 Days",
+    postType: "result",
+    status: "declared",
+    organisation: "दि लातूर जिल्हा मध्यवर्ती सहकारी बँक लि., लातूर (Latur DCCB)",
   },
   {
     titleEn:
@@ -610,6 +678,9 @@ export const articlesRegistry: ArticleMeta[] = [
       "लातूर DCC बँकेच्या भरती परीक्षेचा निकाल व Phase 1 अंतर्गत २६३ पात्र उमेदवारांची निवड यादी प्रसिद्ध करण्यात आली आहे.",
     vacancies: "375 (263 Selected)",
     lastDate: "14 Aug 2026",
+    postType: "result",
+    status: "declared",
+    organisation: "दि लातूर जिल्हा मध्यवर्ती सहकारी बँक लि., लातूर (Latur DCCB)",
   },
   {
     titleEn:
@@ -640,6 +711,10 @@ export const articlesRegistry: ArticleMeta[] = [
     descriptionMr:
       "सावित्रीबाई फुले पुणे विद्यापीठातर्फे आयोजित MH-SET परीक्षा पुढे ढकलण्यात आली असून सुधारित तारीख जाहीर झाली आहे.",
     lastDate: "27 Sept 2026",
+    postType: "admit-card",
+    status: "available",
+    organisation: "सावित्रीबाई फुले पुणे विद्यापीठ (SPPU)",
+    examDate: "27 September 2026",
   },
   {
     titleEn: "MH SET 2026 Application Date Extended & Exam Postponed",
@@ -684,6 +759,10 @@ export const articlesRegistry: ArticleMeta[] = [
     descriptionMr:
       "नवी मुंबई महानगरपालिका भरती परीक्षेचे हॉलतिकीट अधिकृत वेबसाईटवर प्रसिद्ध झाले असून डाऊनलोड करा.",
     lastDate: "Exam: July 2026",
+    postType: "admit-card",
+    status: "available",
+    organisation: "नवी मुंबई महानगरपालिका (NMMC)",
+    examDate: "21 - 22 July 2026",
   },
   {
     titleEn:
@@ -699,6 +778,10 @@ export const articlesRegistry: ArticleMeta[] = [
     descriptionMr:
       "MHT CET समुपदेशन व कॅप राउंड प्रवेश नोंदणीसाठी आवश्यक असणाऱ्या कागदपत्रांची सविस्तर माहिती.",
     lastDate: "Active Now",
+    postType: "admission",
+    status: "open",
+    organisation: "State Common Entrance Test Cell, Maharashtra",
+    examDate: "12 July 2026",
   },
   {
     titleEn: "BSNL Bharti 2026: Recruitment for 100 Posts Announced",
@@ -727,6 +810,10 @@ export const articlesRegistry: ArticleMeta[] = [
     descriptionMr:
       "भारतीय लष्कर अग्निवीर CEE परीक्षेचे हॉलतिकीट जारी करण्यात आले आहे.",
     lastDate: "Exam: June 2026",
+    postType: "admit-card",
+    status: "available",
+    organisation: "Indian Army",
+    examDate: "June - July 2026",
   },
   {
     titleEn:
@@ -742,6 +829,10 @@ export const articlesRegistry: ArticleMeta[] = [
     descriptionMr:
       "महाराष्ट्र राज्य व्यवसाय शिक्षण व प्रशिक्षण संचालनालयातर्फे आयटीआय प्रवेश प्रक्रिया सुरू झाली आहे.",
     lastDate: "20 June 2026",
+    postType: "admission",
+    status: "upcoming",
+    organisation: "Directorate of Vocational Education and Training (DVET)",
+    examDate: "21 June 2026",
   },
   {
     titleEn:
@@ -866,6 +957,9 @@ export const articlesRegistry: ArticleMeta[] = [
       "महाराष्ट्र राज्य माध्यमिक व उच्च माध्यमिक शिक्षण मंडळाचा १०वी (SSC) परीक्षेचा अधिकृत ऑनलाईन निकाल व गुणपत्रक डाऊनलोड करा.",
     vacancies: "Board Exam Result",
     lastDate: "Result Out",
+    postType: "result",
+    status: "declared",
+    organisation: "MSBSHSE Pune",
   },
   {
     titleEn:
@@ -882,6 +976,9 @@ export const articlesRegistry: ArticleMeta[] = [
       "महाराष्ट्र राज्य मंडळाचा १२वी (HSC) कला, विज्ञान व वाणिज्य परीक्षेचा निकाल व विषयनिहाय गुणपत्रक डाऊनलोड दुवा.",
     vacancies: "Board Exam Result",
     lastDate: "Result Out",
+    postType: "result",
+    status: "declared",
+    organisation: "MSBSHSE Pune",
   },
   {
     titleEn:

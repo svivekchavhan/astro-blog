@@ -1,5 +1,5 @@
 import { articlesRegistry } from "./articles";
-import { getPostsByEducation } from "../utils/postUtils";
+import { getPostsByEducation, getRecruitmentPosts } from "../utils/postUtils";
 
 export interface FilterOption {
   slug: string;
@@ -48,7 +48,7 @@ export interface JobItem {
   summaryMr?: string;
 }
 
-export const ALL_JOB_POSTS: JobItem[] = articlesRegistry.map((art) => ({
+export const ALL_JOB_POSTS: JobItem[] = getRecruitmentPosts().map((art) => ({
   id: art.slug.replace(/^\//, ""),
   title: art.titleMr || art.titleEn,
   titleEn: art.titleEn,

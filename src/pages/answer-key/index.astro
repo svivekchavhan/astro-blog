@@ -1,10 +1,18 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import { getAnswerKeyPosts } from "../../utils/postUtils";
 import { HiOutlineCalendarDays, HiOutlineArrowTopRightOnSquare, HiOutlineBell, HiOutlineBuildingOffice } from "react-icons/hi2";
 
-const answerKeys = [];
-
-
+const answerKeyPosts = getAnswerKeyPosts();
+const answerKeys = answerKeyPosts.map((card) => ({
+  title: card.titleMr || card.titleEn,
+  organisation: card.organisation || card.postName || card.category,
+  category: card.category,
+  releaseDate: card.date,
+  examDate: card.examDate || "TBA",
+  status: card.status || "available",
+  link: card.slug
+}));
 ---
 
 <Layout title="Official Answer Key 2026 - Exam Solutions & OMR Sheet Download | MahaSandhi" description="Download official answer keys and exam solutions 2026. Get UPSC, SSC, SBI, IBPS, RRB, MPSC solved question papers, OMR sheets, and objection tracker links at mahasandhi.in.">

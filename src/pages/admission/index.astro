@@ -1,29 +1,18 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import { getAdmissionPosts } from "../../utils/postUtils";
 import { HiOutlineCalendarDays, HiOutlineArrowTopRightOnSquare, HiOutlineBell, HiOutlineBuildingOffice } from "react-icons/hi2";
 
-const admissions = [
-  {
-    title: "MHT CET B.E. / B.Tech Counselling 2026: अभियांत्रिकी प्रथम वर्ष प्रवेश प्रक्रिया",
-    organisation: "State Common Entrance Test Cell, Maharashtra",
-    category: "Engineering",
-    releaseDate: "25 June 2026",
-    examDate: "12 July 2026",
-    status: "open",
-    link: "/admission/mht-cet-counselling-registration-documents-2026"
-  },
-  {
-    title: "Maharashtra ITI Admission 2026: महाराष्ट्र आयटीआय प्रवेश प्रक्रिया",
-    organisation: "Directorate of Vocational Education and Training (DVET)",
-    category: "Vocational",
-    releaseDate: "21 May 2026",
-    examDate: "21 June 2026",
-    status: "upcoming",
-    link: "/admission/iti-admission-2026-maharashtra"
-  }
-];
-
-
+const admissionPosts = getAdmissionPosts();
+const admissions = admissionPosts.map((card) => ({
+  title: card.titleMr || card.titleEn,
+  organisation: card.organisation || card.postName || "Maharashtra Admission Cell",
+  category: card.category,
+  releaseDate: card.date,
+  examDate: card.examDate || card.admissionDeadline || card.lastDate || "TBA",
+  status: card.status || "open",
+  link: card.slug
+}));
 ---
 
 <Layout title="College Admission 2026 - University Entrance Form & Counseling Schedule | MahaSandhi" description="Apply for college and university admissions 2026. Find DU, IIT JEE, NEET, CLAT, IIM, BITSAT, AIIMS entrance exam forms, counseling dates, and direct registration portals at mahasandhi.in.">

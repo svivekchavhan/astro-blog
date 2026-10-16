@@ -1,81 +1,18 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import { getAdmitCardPosts } from "../../utils/postUtils";
 import { HiOutlineCalendarDays, HiOutlineArrowTopRightOnSquare, HiOutlineBell, HiOutlineBuildingOffice } from "react-icons/hi2";
 
-const admitCards = [
-  {
-    title: "PDCC Bank Peon Hall Ticket 2026: पुणे बँक शिपाई २८९ जागा भरती प्रवेशपत्र उपलब्ध",
-    organisation: "पुणे जिल्हा मध्यवर्ती सहकारी बँक (PDCC)",
-    category: "Bank Job",
-    releaseDate: "23 August 2026",
-    examDate: "August / September 2026",
-    status: "available",
-    link: "/pdcc-bank-peon-hall-ticket-2026"
-  },
-  {
-    title: "TMC Thane Hall Ticket 2026: ठाणे मनपा अग्निशमन व अभियांत्रिकी प्रवेशपत्र डाऊनलोड",
-    organisation: "ठाणे महानगरपालिका (TMC)",
-    category: "State Govt",
-    releaseDate: "22 August 2026",
-    examDate: "01 & 02 September 2026",
-    status: "available",
-    link: "/tmc-thane-hall-ticket-2026"
-  },
-  {
-    title: "बॉम्बे उच्च न्यायालय लिपिक हॉल तिकीट २०२६: टंकलेखक चाचणी प्रवेशपत्र ऑनलाईन उपलब्ध",
-    organisation: "बॉम्बे उच्च न्यायालय (BHC)",
-    category: "State Govt / Court",
-    releaseDate: "15 August 2026",
-    examDate: "August / September 2026",
-    status: "available",
-    link: "/bhc-clerk-admit-card-2026"
-  },
-  {
-    title: "वनार्टी (VANARTI) प्रवेशपत्र २०२६: हॉलतिकीट उपलब्ध झाले आहे.",
-    organisation: "वनार्टी (VANARTI)",
-    category: "Free Coaching",
-    releaseDate: "10 August 2026",
-    examDate: "August 2026",
-    status: "available",
-    link: "/vanarti-admit-card-2026"
-  },
-  {
-    title: "MH SET Exam Date Postponed 2026: महाराष्ट्र सेट परीक्षा पुढे ढकलली, नवीन तारीख जाहीर",
-    organisation: "सावित्रीबाई फुले पुणे विद्यापीठ (SPPU)",
-    category: "Exam Date",
-    releaseDate: "20 July 2026",
-    examDate: "27 September 2026",
-    status: "available",
-    link: "/admit-card/maharashtra-set-exam-date-postponed"
-  },
-  {
-    title: "NMMC Hall Ticket Download 2026: नवी मुंबई महानगरपालिका हॉलतिकीट उपलब्ध",
-    organisation: "नवी मुंबई महानगरपालिका (NMMC)",
-    category: "State Govt",
-    releaseDate: "10 July 2026",
-    examDate: "21 - 22 July 2026",
-    status: "available",
-    link: "/admit-card/nmmc-hall-ticket-download"
-  },
-  {
-    title: "कामगार विभाग भरती हॉलतिकीट उपलब्ध..",
-    organisation: "कामगार विभाग (Kamgar Vibhag)",
-    category: "State Govt",
-    releaseDate: "20 July 2026",
-    examDate: "TBA",
-    status: "available",
-    link: "https://cdn.digialm.com/EForms/configuredHtml/33058/95164/login.html"
-  },
-  {
-    title: "Indian Army Agniveer Admit Card 2026: भारतीय लष्कर अग्निवीर प्रवेश पत्र उपलब्ध",
-    organisation: "Indian Army",
-    category: "Agniveer",
-    releaseDate: "02 June 2026",
-    examDate: "June - July 2026",
-    status: "available",
-    link: "/admit-card/agniveer-admit-card-2026"
-  }
-];
+const admitCardPosts = getAdmitCardPosts();
+const admitCards = admitCardPosts.map((card) => ({
+  title: card.titleMr || card.titleEn,
+  organisation: card.organisation || card.postName || card.category,
+  category: card.category,
+  releaseDate: card.date,
+  examDate: card.examDate || card.lastDate || "TBA",
+  status: card.status || "available",
+  link: card.slug
+}));
 ---
 
 <Layout title="Admit Card Download 2026 - Hall Ticket & Exam Date Schedule | MahaSandhi" description="Download official admit cards and hall tickets 2026. Get UPSC, SSC, SBI, IBPS, RRB, MPSC exam admit card release dates, exam schedules, and direct download links at mahasandhi.in.">

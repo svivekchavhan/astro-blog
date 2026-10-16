@@ -7,25 +7,23 @@ import {
 } from "react-icons/hi2";
 import { articlesRegistry } from "../constants/articles";
 import { getCountdownInfo } from "../utils/dateUtils";
-import { inferPostType } from "../utils/postUtils";
+import { getRecruitmentPosts } from "../utils/postUtils";
 
-// Dynamically generate latestJobs list (active job recruitments ONLY) from articlesRegistry
-const latestJobs = articlesRegistry
-  .filter((art) => inferPostType(art) === "recruitment")
-  .map((art) => {
-    const countdown = getCountdownInfo(art.lastDate || "", art.extendedDate);
-    return {
-      category: art.category || "Govt Job",
-      status: countdown.status,
-      countdown: countdown,
-      title: art.titleMr || art.titleEn,
-      link: art.slug,
-      description: art.descriptionMr || art.titleEn,
-      vacancies: art.vacancies || "पहा",
-      lastDate: art.lastDate || "लवकरच",
-      extendedDate: art.extendedDate
-    };
-  });
+// Dynamically generate latestJobs list (active job recruitments ONLY, newest first)
+const latestJobs = getRecruitmentPosts().map((art) => {
+  const countdown = getCountdownInfo(art.lastDate || "", art.extendedDate);
+  return {
+    category: art.category || "Govt Job",
+    status: countdown.status,
+    countdown: countdown,
+    title: art.titleMr || art.titleEn,
+    link: art.slug,
+    description: art.descriptionMr || art.titleEn,
+    vacancies: art.vacancies || "पहा",
+    lastDate: art.lastDate || "लवकरच",
+    extendedDate: art.extendedDate
+  };
+});
 
 function truncateWords(str: string, wordLimit: number = 15): string {
   if (!str) return "";

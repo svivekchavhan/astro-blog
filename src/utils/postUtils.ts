@@ -1,15 +1,118 @@
 import { articlesRegistry, type ArticleMeta, type PostType, type EducationTag } from "../constants/articles";
+import { parseDateString } from "./dateUtils";
+
+export function sortByDateDesc(posts: ArticleMeta[]): ArticleMeta[] {
+  return [...posts].sort((a, b) => {
+    const timeA = (a.date ? (parseDateString(a.date) || new Date(a.date))?.getTime() : 0) || 0;
+    const timeB = (b.date ? (parseDateString(b.date) || new Date(b.date))?.getTime() : 0) || 0;
+    return timeB - timeA;
+  });
+}
 
 export function inferPostType(post: ArticleMeta): PostType {
   if (post.postType) return post.postType;
   const category = (post.category || "").toLowerCase();
   const slug = (post.slug || "").toLowerCase();
-  const title = `${post.titleEn} ${post.titleMr}`.toLowerCase();
+  const title = `${post.titleEn || ""} ${post.titleMr || ""}`.toLowerCase();
 
-  if (category.includes("result") || title.includes("result") || title.includes("निकाल")) return "result";
-  if (category.includes("admit card") || title.includes("admit card") || title.includes("hall ticket") || title.includes("प्रवेशपत्र") || title.includes("हॉल तिकीट")) return "admit-card";
-  if (category.includes("notice") || title.includes("notice") || title.includes("शुद्धिपत्रक") || title.includes("परिपत्रक") || title.includes("update") || title.includes("नियम")) return "notice";
-  
+  // 1. Result detection (Strictly routed away from Homepage / Current / Mega)
+  if (
+    category.includes("result") ||
+    slug.includes("/result/") ||
+    slug.includes("-result-") ||
+    slug.endsWith("-result-2026") ||
+    slug.endsWith("-selection-list-2026") ||
+    slug.endsWith("-waiting-list-2026") ||
+    title.includes("result") ||
+    title.includes("निकाल") ||
+    title.includes("merit list") ||
+    title.includes("waiting list") ||
+    title.includes("निवड यादी") ||
+    title.includes("प्रतीक्षा यादी") ||
+    title.includes("गुणपत्रक") ||
+    title.includes("marksheet")
+  ) {
+    return "result";
+  }
+
+  // 2. Admit Card detection (Strictly routed away from Homepage / Current / Mega)
+  if (
+    category.includes("admit card") ||
+    category.includes("hall ticket") ||
+    slug.includes("/admit-card/") ||
+    slug.includes("-hall-ticket-") ||
+    slug.includes("-admit-card-") ||
+    title.includes("admit card") ||
+    title.includes("hall ticket") ||
+    title.includes("प्रवेशपत्र") ||
+    title.includes("हॉल तिकीट") ||
+    title.includes("कॉल लेटर") ||
+    title.includes("call letter")
+  ) {
+    return "admit-card";
+  }
+
+  // 3. Admission detection (Strictly routed away from Homepage / Current / Mega)
+  if (
+    category.includes("admission") ||
+    slug.includes("/admission/") ||
+    slug.includes("-admission-") ||
+    title.includes("admission") ||
+    title.includes("प्रवेश प्रक्रिया") ||
+    title.includes("counselling") ||
+    title.includes("समुपदेशन") ||
+    title.includes("cap round") ||
+    title.includes("प्रवेश फेरी") ||
+    title.includes("प्रवेश अर्ज") ||
+    title.includes("iti admission") ||
+    title.includes("cet counselling")
+  ) {
+    return "admission";
+  }
+
+  // 4. Answer Key detection (Strictly routed away from Homepage / Current / Mega)
+  if (
+    category.includes("answer key") ||
+    slug.includes("/answer-key/") ||
+    slug.includes("-answer-key-") ||
+    title.includes("answer key") ||
+    title.includes("उत्तरतालिका") ||
+    title.includes("उत्तरपत्रिका") ||
+    title.includes("omr sheet") ||
+    title.includes("objection tracker") ||
+    title.includes("मॉडेल आन्सर")
+  ) {
+    return "answer-key";
+  }
+
+  // 5. Notice / Circular / Syllabus detection
+  if (
+    category.includes("notice") ||
+    category.includes("update") ||
+    category.includes("syllabus") ||
+    category.includes("study material") ||
+    category.includes("rules") ||
+    category.includes("free coaching") ||
+    slug.includes("-syllabus-") ||
+    slug.includes("-notice-") ||
+    slug.includes("-circular-") ||
+    slug.includes("-postponed-") ||
+    title.includes("notice") ||
+    title.includes("शुद्धिपत्रक") ||
+    title.includes("परिपत्रक") ||
+    title.includes("नियम") ||
+    title.includes("अभ्यासक्रम") ||
+    title.includes("syllabus") ||
+    title.includes("timetable") ||
+    title.includes("वेळापत्रक") ||
+    title.includes("चालू घडामोडी") ||
+    title.includes("current affairs") ||
+    title.includes("मार्गदर्शक") ||
+    title.includes("study notes")
+  ) {
+    return "notice";
+  }
+
   return "recruitment";
 }
 
@@ -39,40 +142,66 @@ export function inferIsImportant(post: ArticleMeta): boolean {
 }
 
 export function getAllPosts(): ArticleMeta[] {
-  return articlesRegistry;
+  return sortByDateDesc(articlesRegistry);
 }
 
 export function getRecruitmentPosts(): ArticleMeta[] {
-  return articlesRegistry.filter((post) => inferPostType(post) === "recruitment");
+  return sortByDateDesc(
+    articlesRegistry.filter((post) => inferPostType(post) === "recruitment")
+  );
 }
 
 export function getResultPosts(): ArticleMeta[] {
-  return articlesRegistry.filter((post) => inferPostType(post) === "result");
+  return sortByDateDesc(
+    articlesRegistry.filter((post) => inferPostType(post) === "result")
+  );
 }
 
 export function getAdmitCardPosts(): ArticleMeta[] {
-  return articlesRegistry.filter((post) => inferPostType(post) === "admit-card");
+  return sortByDateDesc(
+    articlesRegistry.filter((post) => inferPostType(post) === "admit-card")
+  );
+}
+
+export function getAdmissionPosts(): ArticleMeta[] {
+  return sortByDateDesc(
+    articlesRegistry.filter((post) => inferPostType(post) === "admission")
+  );
+}
+
+export function getAnswerKeyPosts(): ArticleMeta[] {
+  return sortByDateDesc(
+    articlesRegistry.filter((post) => inferPostType(post) === "answer-key")
+  );
 }
 
 export function getNoticePosts(): ArticleMeta[] {
-  return articlesRegistry.filter((post) => inferPostType(post) === "notice");
+  return sortByDateDesc(
+    articlesRegistry.filter((post) => inferPostType(post) === "notice")
+  );
 }
 
 export function getImportantPosts(): ArticleMeta[] {
-  return articlesRegistry.filter((post) => inferIsImportant(post));
+  return sortByDateDesc(
+    articlesRegistry.filter((post) => inferIsImportant(post))
+  );
 }
 
 export function getMegaPosts(): ArticleMeta[] {
-  return articlesRegistry.filter((post) => {
-    if (post.priority === "mega") return true;
-    const vacNum = parseInt((post.vacancies || "").replace(/[^0-9]/g, ""), 10);
-    return !isNaN(vacNum) && vacNum >= 1000;
-  });
+  return sortByDateDesc(
+    articlesRegistry.filter((post) => {
+      // Mega posts must strictly be recruitment articles
+      if (inferPostType(post) !== "recruitment") return false;
+      if (post.priority === "mega") return true;
+      const vacNum = parseInt((post.vacancies || "").replace(/[^0-9]/g, ""), 10);
+      return !isNaN(vacNum) && vacNum >= 1000;
+    })
+  );
 }
 
 export function getPostsByEducation(slug: string): ArticleMeta[] {
   const s = slug.toLowerCase().trim();
-  const recruitments = articlesRegistry.filter((post) => inferPostType(post) === "recruitment");
+  const recruitments = getRecruitmentPosts();
   if (!s || s === "all") return recruitments;
 
   return recruitments.filter((post) => {
@@ -98,9 +227,10 @@ export function getPostsByEducation(slug: string): ArticleMeta[] {
 
 export function getPostsByDistrict(districtSlug: string): ArticleMeta[] {
   const s = districtSlug.toLowerCase().trim();
-  if (!s || s === "all") return articlesRegistry;
+  const allPosts = getRecruitmentPosts();
+  if (!s || s === "all") return allPosts;
 
-  return articlesRegistry.filter((post) => {
+  return allPosts.filter((post) => {
     if (post.districts && post.districts.length > 0) {
       if (post.districts.some((d) => d.toLowerCase() === s || d.toLowerCase() === "all-maharashtra")) return true;
     }
@@ -110,3 +240,4 @@ export function getPostsByDistrict(districtSlug: string): ArticleMeta[] {
     return searchable.includes(s) || searchable.includes(slugWithoutHyphen);
   });
 }
+

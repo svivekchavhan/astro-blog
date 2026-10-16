@@ -1,0 +1,889 @@
+---
+import ArticleContainer from "../components/ArticleContainer.astro";
+import { 
+  HiOutlineCalendarDays, 
+  HiOutlineArrowTopRightOnSquare, 
+  HiOutlineAcademicCap, 
+  HiOutlineBriefcase, 
+  HiOutlineBuildingOffice, 
+  HiOutlineCheckCircle, 
+  HiOutlineDocumentText, 
+  HiOutlineCurrencyRupee, 
+  HiOutlineUserGroup,
+  HiOutlineQuestionMarkCircle
+} from "react-icons/hi2";
+
+const title = "RRB NTPC Recruitment 2026: Apply Online for 5,236 Vacancies (रेल्वे NTPC ५,२३६ जागा भरती) - MahaSandhi";
+const description = "Railway Recruitment Board (RRB) has announced 5,236 vacancies under RRB NTPC Recruitment 2026 for 12th Pass & Graduates. Check qualification, age limit, CBT pattern, salary & online application link at mahasandhi.in.";
+const canonicalURL = "https://mahasandhi.in/rrb-ntpc-recruitment-2026";
+const date = "October 08, 2026";
+const category = "Railway Job";
+const image = "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=1200";
+
+// JSON-LD Schemas for Schema.org SEO Validation
+const jobPostingSchema = {
+  "@context": "https://schema.org/",
+  "@type": "JobPosting",
+  "title": "RRB NTPC Recruitment 2026 (5,236 Vacancies)",
+  "description": "Railway Recruitment Board (RRB) has released notification for 5,236 Non-Technical Popular Categories (NTPC) vacancies including Goods Train Manager, Station Master, Senior Clerk, Junior Clerk, and Typist.",
+  "identifier": {
+    "@type": "PropertyValue",
+    "name": "Railway Recruitment Board",
+    "value": "CEN 05/2026"
+  },
+  "datePosted": "2026-10-08",
+  "validThrough": "2026-11-15",
+  "employmentType": "FULL_TIME",
+  "hiringOrganization": {
+    "@type": "Organization",
+    "name": "Railway Recruitment Board (RRB)",
+    "sameAs": "https://www.rrbmumbai.gov.in"
+  },
+  "jobLocation": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Maharashtra & All India",
+      "addressCountry": "IN"
+    }
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "रेल्वे NTPC भरती २०२६ मध्ये एकूण किती जागा आहेत? (What are total RRB NTPC 2026 vacancies?)",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "रेल्वे भरती मंडळातर्फे (RRB) NTPC अंतर्गत एकूण ५,२३६ जागांसाठी (5,236 Posts) मेगा भरती जाहिरात प्रसिद्ध करण्यात आली आहे."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "RRB NTPC भरतीसाठी शैक्षणिक पात्रता काय आहे?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Undergraduate (१२वी पास) पदांसाठी ५०% गुणांसह १२वी उत्तीर्ण आणि Graduate (पदवीधर) पदांसाठी मान्यताप्राप्त विद्यापीठाची कोणत्याही शाखेतील पदवी आवश्यक आहे."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "RRB NTPC अर्ज करण्याची मुदत काय आहे?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ऑनलाईन अर्ज प्रक्रिया सुरु झाली असून मुदत १५ नोव्हेंबर २०२६ पर्यंत आहे."
+      }
+    }
+  ]
+};
+---
+
+<ArticleContainer
+  title={title}
+  description={description}
+  canonicalURL={canonicalURL}
+  date={date}
+  category={category}
+  image={image}
+  customBreadcrumbs={[
+    { name: "Home", url: "/" },
+    { name: "Railway Jobs", url: "/category/railway" },
+    { name: "RRB NTPC 2026" }
+  ]}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jobPostingSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Quick Highlight Overview Card -->
+  <div class="bg-gradient-to-r from-primary/10 via-sky-500/10 to-primary/5 border border-primary/20 rounded-3xl p-5 sm:p-8 mb-8 not-prose">
+    <div class="flex items-center gap-2 mb-3">
+      <span class="px-3 py-1 bg-primary text-white font-extrabold text-xs uppercase tracking-wider rounded-full shadow-2xs">
+        🔥 Mega Railway Recruitment 2026
+      </span>
+      <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-full">
+        5,236 Posts Out
+      </span>
+    </div>
+    <h2 class="text-xl sm:text-2xl md:text-3xl font-black text-text-main mb-3 leading-snug">
+      रेल्वे भरती बोर्ड (RRB) द्वारे NTPC अंतर्गत ५,२३६ पदांची मोठी भरती जाहीर!
+    </h2>
+    <p class="text-xs sm:text-sm text-text-muted leading-relaxed m-0 font-medium">
+      The Railway Recruitment Board (RRB) has officially released the recruitment advertisement for <strong>5,236 vacancies</strong> under Non-Technical Popular Categories (NTPC). Both 12th Pass (Undergraduate) and Degree Graduates are eligible to apply online.
+    </p>
+
+    <!-- Key Metrics Grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6 pt-6 border-t border-border-card/60 text-xs">
+      <div class="bg-bg-surface p-3 rounded-xl border border-border-card">
+        <span class="text-text-muted block text-[0.7rem] uppercase font-bold">एकूण जागा (Vacancies)</span>
+        <strong class="text-primary text-base font-extrabold">5,236 Posiitons</strong>
+      </div>
+      <div class="bg-bg-surface p-3 rounded-xl border border-border-card">
+        <span class="text-text-muted block text-[0.7rem] uppercase font-bold">पात्रता (Qualification)</span>
+        <strong class="text-text-main text-sm font-extrabold">12th / Graduate</strong>
+      </div>
+      <div class="bg-bg-surface p-3 rounded-xl border border-border-card">
+        <span class="text-text-muted block text-[0.7rem] uppercase font-bold">वय मर्यादा (Age Limit)</span>
+        <strong class="text-text-main text-sm font-extrabold">18 to 36 Years</strong>
+      </div>
+      <div class="bg-bg-surface p-3 rounded-xl border border-border-card">
+        <span class="text-text-muted block text-[0.7rem] uppercase font-bold">अंतिम तारीख (Last Date)</span>
+        <strong class="text-rose-600 dark:text-rose-400 text-sm font-extrabold">15 Nov 2026</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- ARTICLE BODY (MARATHI VERSION) -->
+  <div class="space-y-8 text-text-main leading-relaxed">
+    
+    <!-- Introduction Section -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>RRB NTPC भरती २०२६: थोडक्यात माहिती (Overview)</span>
+      </h2>
+      <p class="text-sm sm:text-base leading-relaxed text-text-secondary">
+        भारतीय रेल्वे भरती मंडळाने (Railway Recruitment Board - RRB) देशभरातील विविध विभागीय रेल्वेमध्ये Non-Technical Popular Categories (NTPC) अंतर्गत <strong>५,२३६ रिक्त पदांसाठी</strong> अधिकृत भरती जाहिरात प्रसिद्ध केली आहे. यामध्ये स्टेशन मास्टर, गुड्स ट्रेन मॅनेजर, ज्युनियर क्लर्क, अकाउंट्स क्लर्क व टंकलेखक यांसारख्या विविध लोकप्रिय पदांचा समावेश आहे.
+      </p>
+      <p class="text-sm sm:text-base leading-relaxed text-text-secondary">
+        महाराष्ट्रातील उमेदवारांसाठी <strong>आरआरबी मुंबई (RRB Mumbai)</strong> अंतर्गत मध्य रेल्वे व पश्चिम रेल्वे क्षेत्रात मोठ्या प्रमाणात पदे उपलब्ध आहेत. १०वी/१२वी उत्तीर्ण तसेच कोणत्याही शाखेतील पदवीधर उमेदवार या भरतीसाठी ऑनलाईन अर्ज करू शकतात.
+      </p>
+    </section>
+
+    <!-- Overview Table -->
+    <section class="not-prose">
+      <div class="bg-bg-surface border border-border-card rounded-2xl overflow-hidden shadow-xs">
+        <div class="bg-primary/10 px-5 py-3 border-b border-border-card flex items-center gap-2">
+          <HiOutlineDocumentText className="text-primary text-lg" />
+          <h3 class="text-sm font-extrabold uppercase tracking-wider text-primary m-0">
+            RRB NTPC Bharti 2026 Highlight Summary
+          </h3>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs sm:text-sm text-left border-collapse">
+            <tbody class="divide-y divide-border-card/40">
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 w-1/3 text-text-main">भरती संस्था (Organization)</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">भारतीय रेल्वे भरती मंडळ (Railway Recruitment Board - RRB)</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">जाहिरात क्रमांक (Notice No.)</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">CEN 05/2026 (NTPC Graduate & Undergraduate)</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">एकूण जागा (Total Vacancies)</td>
+                <td class="px-4 py-3 text-primary font-black">५,२३६ पदे (5,236 Posts)</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">पदनामे (Post Names)</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">Station Master, Goods Guard, Senior Clerk, Junior Clerk-cum-Typist, Commercial Apprentice</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">नोकरी ठिकाण (Job Location)</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">संपूर्ण भारत (महाराष्ट्रात RRB Mumbai अंतर्गत पदे)</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">अर्ज पद्धती (Application Mode)</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">ऑनलाईन (Online Application Form)</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">अधिकृत संकेतस्थळ (Official Website)</td>
+                <td class="px-4 py-3 text-primary font-bold">rrbmumbai.gov.in / indianrailways.gov.in</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Post Details Table -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>पदनिहाय जागा आणि वेतनमान (Vacancy Breakdown & Pay Scale)</span>
+      </h2>
+
+      <div class="space-y-4 not-prose">
+        <!-- Graduate Posts Table -->
+        <div class="bg-bg-surface border border-border-card rounded-2xl overflow-hidden shadow-xs">
+          <div class="bg-violet-600/10 px-5 py-3 border-b border-border-card flex items-center justify-between">
+            <span class="text-xs font-black uppercase tracking-wider text-violet-600 dark:text-violet-400">
+              १) पदवीधर पदे (Graduate Level Posts - Degree Required)
+            </span>
+            <span class="text-[0.68rem] bg-violet-600 text-white font-bold px-2 py-0.5 rounded">Level 4, 5 & 6</span>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-xs sm:text-sm text-left border-collapse">
+              <thead class="bg-bg-base border-b border-border-card text-text-main font-bold">
+                <tr>
+                  <th class="px-4 py-2.5">पदनाम (Post Name)</th>
+                  <th class="px-4 py-2.5">पे लेव्हल (Pay Level)</th>
+                  <th class="px-4 py-2.5">आरंभिक वेतन (Initial Pay)</th>
+                  <th class="px-4 py-2.5">एकूण जागा</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-border-card/40 text-text-secondary font-medium">
+                <tr>
+                  <td class="px-4 py-2.5 font-bold text-text-main">Chief Commercial cum Ticket Supervisor</td>
+                  <td class="px-4 py-2.5">Level 5</td>
+                  <td class="px-4 py-2.5">₹ 29,200/-</td>
+                  <td class="px-4 py-2.5 font-bold text-primary">1,738</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2.5 font-bold text-text-main">Station Master (स्टेशन मास्टर)</td>
+                  <td class="px-4 py-2.5">Level 6</td>
+                  <td class="px-4 py-2.5">₹ 35,400/-</td>
+                  <td class="px-4 py-2.5 font-bold text-primary">994</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2.5 font-bold text-text-main">Goods Train Manager (गुड्स गार्ड)</td>
+                  <td class="px-4 py-2.5">Level 5</td>
+                  <td class="px-4 py-2.5">₹ 29,200/-</td>
+                  <td class="px-4 py-2.5 font-bold text-primary">1,578</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2.5 font-bold text-text-main">Junior Account Assistant cum Typist</td>
+                  <td class="px-4 py-2.5">Level 5</td>
+                  <td class="px-4 py-2.5">₹ 29,200/-</td>
+                  <td class="px-4 py-2.5 font-bold text-primary">740</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2.5 font-bold text-text-main">Senior Clerk cum Typist</td>
+                  <td class="px-4 py-2.5">Level 5</td>
+                  <td class="px-4 py-2.5">₹ 29,200/-</td>
+                  <td class="px-4 py-2.5 font-bold text-primary">186</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Undergraduate Posts Table -->
+        <div class="bg-bg-surface border border-border-card rounded-2xl overflow-hidden shadow-xs">
+          <div class="bg-emerald-500/10 px-5 py-3 border-b border-border-card flex items-center justify-between">
+            <span class="text-xs font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
+              २) १२वी पास पदे (Undergraduate Level Posts - 12th Pass)
+            </span>
+            <span class="text-[0.68rem] bg-emerald-600 text-white font-bold px-2 py-0.5 rounded">Level 2 & 3</span>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-xs sm:text-sm text-left border-collapse">
+              <thead class="bg-bg-base border-b border-border-card text-text-main font-bold">
+                <tr>
+                  <th class="px-4 py-2.5">पदनाम (Post Name)</th>
+                  <th class="px-4 py-2.5">पे लेव्हल (Pay Level)</th>
+                  <th class="px-4 py-2.5">आरंभिक वेतन (Initial Pay)</th>
+                  <th class="px-4 py-2.5">पात्रता</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-border-card/40 text-text-secondary font-medium">
+                <tr>
+                  <td class="px-4 py-2.5 font-bold text-text-main">Commercial cum Ticket Clerk</td>
+                  <td class="px-4 py-2.5">Level 3</td>
+                  <td class="px-4 py-2.5">₹ 21,700/-</td>
+                  <td class="px-4 py-2.5">12th Pass (50% Marks)</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2.5 font-bold text-text-main">Junior Clerk cum Typist</td>
+                  <td class="px-4 py-2.5">Level 2</td>
+                  <td class="px-4 py-2.5">₹ 19,900/-</td>
+                  <td class="px-4 py-2.5">12th Pass + Typing</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2.5 font-bold text-text-main">Accounts Clerk cum Typist</td>
+                  <td class="px-4 py-2.5">Level 2</td>
+                  <td class="px-4 py-2.5">₹ 19,900/-</td>
+                  <td class="px-4 py-2.5">12th Pass + Typing</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2.5 font-bold text-text-main">Trains Clerk</td>
+                  <td class="px-4 py-2.5">Level 2</td>
+                  <td class="px-4 py-2.5">₹ 19,900/-</td>
+                  <td class="px-4 py-2.5">12th Pass</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Qualification & Age Limit -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>पात्रता व वयोमर्यादा (Eligibility Criteria & Age Limit)</span>
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose mb-4">
+        <!-- Educational Qualification Card -->
+        <div class="bg-bg-surface border border-border-card p-5 rounded-2xl space-y-3">
+          <div class="flex items-center gap-2 text-primary font-bold text-sm">
+            <HiOutlineAcademicCap className="text-lg" />
+            <span>शैक्षणिक पात्रता (Educational Qualification)</span>
+          </div>
+          <ul class="text-xs sm:text-sm text-text-secondary space-y-2 pl-4 list-disc font-medium">
+            <li><strong>१२वी पास पदे:</strong> मान्यताप्राप्त बोर्डातून किमान ५०% गुणांसह १२वी (HSC) उत्तीर्ण. (SC/ST/Divyang उमेदवारांसाठी टक्केवारीची अट नाही).</li>
+            <li><strong>पदवीधर पदे:</strong> मान्यताप्राप्त विद्यापीठाची कोणत्याही शाखेतील पदवी (Bachelor's Degree in any discipline).</li>
+            <li>टंकलेखक पदांसाठी संगणक टंकलेखन कौशल्य (Typing Proficiency in English/Hindi) आवश्यक.</li>
+          </ul>
+        </div>
+
+        <!-- Age Limit Card -->
+        <div class="bg-bg-surface border border-border-card p-5 rounded-2xl space-y-3">
+          <div class="flex items-center gap-2 text-rose-500 font-bold text-sm">
+            <HiOutlineUserGroup className="text-lg" />
+            <span>वयोमर्यादा व सवलत (Age Limit & Relaxation)</span>
+          </div>
+          <p class="text-xs sm:text-sm text-text-secondary font-medium m-0">
+            <strong>गट अ (12th Pass):</strong> १८ ते ३३ वर्षे <br />
+            <strong>गट ब (Graduate):</strong> १८ ते ३६ वर्षे (०१ जुलै २०२६ रोजी)
+          </p>
+          <div class="pt-2 border-t border-border-card/40 text-xs space-y-1 text-text-muted">
+            <p class="m-0">• OBC उमेदवारांसाठी: <strong>३ वर्षे सवलत</strong></p>
+            <p class="m-0">• SC/ST उमेदवारांसाठी: <strong>५ वर्षे सवलत</strong></p>
+            <p class="m-0">• दिव्यांग (PwBD) उमेदवारांसाठी: <strong>१० ते १५ वर्षे सवलत</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Application Fee & Refund Section -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>परीक्षा शुल्क व फी परतावा (Application Fee & Refund)</span>
+      </h2>
+
+      <div class="bg-bg-surface border border-border-card rounded-2xl p-5 not-prose space-y-3">
+        <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-bold text-sm">
+          <HiOutlineCurrencyRupee className="text-lg" />
+          <span>Category-wise Application Fee & Bank Refund Scheme</span>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs sm:text-sm text-left border-collapse">
+            <thead class="bg-bg-base border-b border-border-card text-text-main font-bold">
+              <tr>
+                <th class="px-4 py-2">उमेदवार प्रवर्ग (Category)</th>
+                <th class="px-4 py-2">एकूण शुल्क (Fee)</th>
+                <th class="px-4 py-2">CBT-1 परीक्षा दिल्यानंतर परतावा (Refund Amount)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-border-card/40 text-text-secondary font-medium">
+              <tr>
+                <td class="px-4 py-2.5 font-bold text-text-main">सर्व मागासवर्गीय नसलेले (UR / OBC / EWS Male)</td>
+                <td class="px-4 py-2.5">₹ 500/-</td>
+                <td class="px-4 py-2.5 font-bold text-emerald-600 dark:text-emerald-400">₹ 400/- बँकेत जमा होतील</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2.5 font-bold text-text-main">SC / ST / Ex-Servicemen / PwBD / महिला / अल्पसंख्याक / EBC</td>
+                <td class="px-4 py-2.5">₹ 250/-</td>
+                <td class="px-4 py-2.5 font-bold text-emerald-600 dark:text-emerald-400">₹ 250/- पूर्ण फी परतावा मिळतो</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-[0.75rem] text-text-muted italic m-0 pt-2 border-t border-border-card/40">
+          *टीप: ऑनलाईन CBT-1 परीक्षेला उपस्थित राहणाऱ्या उमेदवारांनाच बँक खात्यात फी परतावा (Refund) हस्तांतरित केला जातो.
+        </p>
+      </div>
+    </section>
+
+    <!-- Selection Process -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>निवड प्रक्रिया व परीक्षा स्वरूप (Selection Process & Exam Pattern)</span>
+      </h2>
+
+      <div class="space-y-3 text-sm text-text-secondary">
+        <p>RRB NTPC भरती अंतर्गत खालील ४ टप्प्यांमध्ये निवड केली जाते:</p>
+        <ol class="list-decimal pl-5 space-y-2 font-medium">
+          <li><strong>पहिला टप्पा (Computer Based Test - CBT 1):</strong> १०० गुणांची संगणकाधारित चाळणी परीक्षा (सर्व पदांसाठी सामान्य).</li>
+          <li><strong>दूसरा टप्पा (Computer Based Test - CBT 2):</strong> १२० गुणांची मुख्य परीक्षा (प्रवर्गनिहाय).</li>
+          <li><strong>कौशल्य चाचणी (Computer Based Aptitude Test / Typing Skill Test):</strong> स्टेशन मास्टरसाठी CBAT व टंकलेखक पदांसाठी Typing Test.</li>
+          <li><strong>कागदपत्र पडताळणी व वैद्यकीय तपासणी (Document Verification & Medical Exam):</strong> अंतिम निवड यादीनुसार वैद्यकीय तपासणी.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Important Links & Dates Table -->
+    <section class="not-prose">
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>महत्वाच्या तारखा व ऑनलाईन लिंक्स (Important Dates & Links)</span>
+      </h2>
+
+      <div class="bg-bg-surface border border-border-card rounded-2xl p-5 space-y-4 shadow-xs">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+          <div class="flex items-center justify-between p-3 bg-bg-base rounded-xl border border-border-card">
+            <span class="text-text-muted font-bold">अर्ज सुरू होण्याची तारीख:</span>
+            <strong class="text-emerald-600 dark:text-emerald-400">सुरू झाले आहेत</strong>
+          </div>
+          <div class="flex items-center justify-between p-3 bg-bg-base rounded-xl border border-border-card">
+            <span class="text-text-muted font-bold">ऑनलाईन अर्जाची अंतिम तारीख:</span>
+            <strong class="text-rose-600 dark:text-rose-400 font-extrabold">15 नोव्हेंबर 2026</strong>
+          </div>
+        </div>
+
+        <!-- Call to Action Buttons Grid -->
+        <div class="pt-2 flex flex-col sm:flex-row gap-3">
+          <a
+            href="https://www.rrbmumbai.gov.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-700 hover:to-indigo-700 text-white rounded-xl font-extrabold text-xs sm:text-sm uppercase tracking-wider transition-all shadow-md no-underline"
+          >
+            <span>अधिकृत वेबसाईट (RRB Mumbai Portal)</span>
+            <HiOutlineArrowTopRightOnSquare className="text-base shrink-0" />
+          </a>
+
+          <a
+            href="https://www.rrbmumbai.gov.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-extrabold text-xs sm:text-sm uppercase tracking-wider transition-all shadow-md no-underline"
+          >
+            <span>ऑनलाईन अर्ज करा (Apply Online)</span>
+            <HiOutlineArrowTopRightOnSquare className="text-base shrink-0" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="not-prose pt-4 border-t border-border-card/60">
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-6 flex items-center gap-2">
+        <HiOutlineQuestionMarkCircle className="text-primary" />
+        <span>सतत विचारले जाणारे प्रश्न (Frequently Asked Questions)</span>
+      </h2>
+
+      <div class="space-y-4">
+        <div class="bg-bg-surface border border-border-card rounded-2xl p-4 sm:p-5">
+          <h3 class="text-base font-bold text-text-main mb-1.5">
+            प्र.१) रेल्वे NTPC भरती २०२६ मध्ये एकूण किती जागा आहेत?
+          </h3>
+          <p class="text-xs sm:text-sm text-text-muted m-0 leading-relaxed font-medium">
+            उत्तर: रेल्वे भरती मंडळाने (RRB) NTPC अंतर्गत एकूण ५,२३६ जागांवर मेगा भरती जाहीर केली आहे.
+          </p>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card rounded-2xl p-4 sm:p-5">
+          <h3 class="text-base font-bold text-text-main mb-1.5">
+            प्र.२) RRB NTPC परीक्षेसाठी १२वी पास उमेदवार अर्ज करू शकतात का?
+          </h3>
+          <p class="text-xs sm:text-sm text-text-muted m-0 leading-relaxed font-medium">
+            उत्तर: होय, Undergraduate (१२वी पास) अंतर्गत ज्युनियर क्लर्क, ट्रेन क्लर्क व कमर्शियल तिकीट क्लर्क या पदांसाठी ५०% गुणांसह १२वी पास उमेदवार अर्ज करू शकतात.
+          </p>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card rounded-2xl p-4 sm:p-5">
+          <h3 class="text-base font-bold text-text-main mb-1.5">
+            प्र.३) आरआरबी मुंबई (RRB Mumbai) अंतर्गत अर्ज कसा करावा?
+          </h3>
+          <p class="text-xs sm:text-sm text-text-muted m-0 leading-relaxed font-medium">
+            उत्तर: उमेदवार rrbmumbai.gov.in किंवा अधिकृत RRB पोर्टलवर जाऊन मध्य रेल्वे व पश्चिम रेल्वेसाठी ऑनलाईन नोंदणी पूर्ण करू शकतात.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ENGLISH VERSION SLOT FOR BILINGUAL SUPPORT -->
+  <div slot="english" class="space-y-8 text-text-main leading-relaxed">
+    <!-- Quick Highlight Overview Card -->
+    <div class="bg-gradient-to-r from-primary/10 via-sky-500/10 to-primary/5 border border-primary/20 rounded-3xl p-5 sm:p-8 mb-8 not-prose">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="px-3 py-1 bg-primary text-white font-extrabold text-xs uppercase tracking-wider rounded-full shadow-2xs">
+          🔥 Mega Railway Recruitment 2026
+        </span>
+        <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-full">
+          5,236 Posts Out
+        </span>
+      </div>
+      <h2 class="text-xl sm:text-2xl md:text-3xl font-black text-text-main mb-3 leading-snug">
+        Railway Recruitment Board (RRB) NTPC Recruitment 2026: 5,236 Posts Declared!
+      </h2>
+      <p class="text-xs sm:text-sm text-text-muted leading-relaxed m-0 font-medium">
+        The Railway Recruitment Board (RRB) has officially released the recruitment advertisement for <strong>5,236 vacancies</strong> under Non-Technical Popular Categories (NTPC). Both 12th Pass (Undergraduate) and Degree Graduates are eligible to apply online.
+      </p>
+
+      <!-- Key Metrics Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6 pt-6 border-t border-border-card/60 text-xs">
+        <div class="bg-bg-surface p-3 rounded-xl border border-border-card">
+          <span class="text-text-muted block text-[0.7rem] uppercase font-bold">Total Vacancies</span>
+          <strong class="text-primary text-base font-extrabold">5,236 Positions</strong>
+        </div>
+        <div class="bg-bg-surface p-3 rounded-xl border border-border-card">
+          <span class="text-text-muted block text-[0.7rem] uppercase font-bold">Qualification</span>
+          <strong class="text-text-main text-sm font-extrabold">12th Pass / Degree</strong>
+        </div>
+        <div class="bg-bg-surface p-3 rounded-xl border border-border-card">
+          <span class="text-text-muted block text-[0.7rem] uppercase font-bold">Age Limit</span>
+          <strong class="text-text-main text-sm font-extrabold">18 to 36 Years</strong>
+        </div>
+        <div class="bg-bg-surface p-3 rounded-xl border border-border-card">
+          <span class="text-text-muted block text-[0.7rem] uppercase font-bold">Last Date</span>
+          <strong class="text-rose-600 dark:text-rose-400 text-sm font-extrabold">15 Nov 2026</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- Introduction Section -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>RRB NTPC Recruitment 2026: Overview</span>
+      </h2>
+      <p class="text-sm sm:text-base leading-relaxed text-text-secondary">
+        The Railway Recruitment Board (RRB) has announced Centralized Employment Notice (CEN 05/2026) for Non-Technical Popular Categories (NTPC). A total of <strong>5,236 vacancies</strong> are available across various Zonal Railways in India, including popular posts like Station Master, Goods Train Manager, Junior Clerk, Accounts Clerk, and Typist.
+      </p>
+      <p class="text-sm sm:text-base leading-relaxed text-text-secondary">
+        For candidates in Maharashtra, <strong>RRB Mumbai</strong> has advertised numerous posts across Central Railway and Western Railway divisions. 10th/12th Pass and Graduates from any discipline are eligible to apply online.
+      </p>
+    </section>
+
+    <!-- Overview Table -->
+    <section class="not-prose">
+      <div class="bg-bg-surface border border-border-card rounded-2xl overflow-hidden shadow-xs">
+        <div class="bg-primary/10 px-5 py-3 border-b border-border-card flex items-center gap-2">
+          <HiOutlineDocumentText className="text-primary text-lg" />
+          <h3 class="text-sm font-extrabold uppercase tracking-wider text-primary m-0">
+            RRB NTPC Recruitment 2026 Key Highlights
+          </h3>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs sm:text-sm text-left border-collapse">
+            <tbody class="divide-y divide-border-card/40">
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 w-1/3 text-text-main">Hiring Organization</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">Railway Recruitment Board (RRB)</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">Notification Number</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">CEN 05/2026 (NTPC Graduate & Undergraduate)</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">Total Vacancies</td>
+                <td class="px-4 py-3 text-primary font-black">5,236 Posts</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">Post Names</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">Station Master, Goods Guard, Senior Clerk, Junior Clerk-cum-Typist, Commercial Supervisor</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">Job Location</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">All India (RRB Mumbai Region included)</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">Application Mode</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">Online Form (RRB Regional Portals)</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">Official Website</td>
+                <td class="px-4 py-3 text-primary font-bold">rrbmumbai.gov.in / indianrailways.gov.in</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Post Details Table -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>Post-wise Vacancy Breakdown & Pay Scale</span>
+      </h2>
+
+      <div class="space-y-4 not-prose">
+        <!-- Graduate Posts Table -->
+        <div class="bg-bg-surface border border-border-card rounded-2xl overflow-hidden shadow-xs">
+          <div class="bg-violet-600/10 px-5 py-3 border-b border-border-card flex items-center justify-between">
+            <span class="text-xs font-black uppercase tracking-wider text-violet-600 dark:text-violet-400">
+              1) Graduate Level Posts (Degree Required)
+            </span>
+            <span class="text-[0.68rem] bg-violet-600 text-white font-bold px-2 py-0.5 rounded">Level 4, 5 & 6</span>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-xs sm:text-sm text-left border-collapse">
+              <thead class="bg-bg-base border-b border-border-card text-text-main font-bold">
+                <tr>
+                  <th class="px-4 py-2.5">Post Name</th>
+                  <th class="px-4 py-2.5">Pay Level</th>
+                  <th class="px-4 py-2.5">Initial Pay</th>
+                  <th class="px-4 py-2.5">Vacancies</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-border-card/40 text-text-secondary font-medium">
+                <tr>
+                  <td class="px-4 py-2.5 font-bold text-text-main">Chief Commercial cum Ticket Supervisor</td>
+                  <td class="px-4 py-2.5">Level 5</td>
+                  <td class="px-4 py-2.5">₹ 29,200/-</td>
+                  <td class="px-4 py-2.5 font-bold text-primary">1,738</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2.5 font-bold text-text-main">Station Master</td>
+                  <td class="px-4 py-2.5">Level 6</td>
+                  <td class="px-4 py-2.5">₹ 35,400/-</td>
+                  <td class="px-4 py-2.5 font-bold text-primary">994</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2.5 font-bold text-text-main">Goods Train Manager</td>
+                  <td class="px-4 py-2.5">Level 5</td>
+                  <td class="px-4 py-2.5">₹ 29,200/-</td>
+                  <td class="px-4 py-2.5 font-bold text-primary">1,578</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2.5 font-bold text-text-main">Junior Account Assistant cum Typist</td>
+                  <td class="px-4 py-2.5">Level 5</td>
+                  <td class="px-4 py-2.5">₹ 29,200/-</td>
+                  <td class="px-4 py-2.5 font-bold text-primary">740</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2.5 font-bold text-text-main">Senior Clerk cum Typist</td>
+                  <td class="px-4 py-2.5">Level 5</td>
+                  <td class="px-4 py-2.5">₹ 29,200/-</td>
+                  <td class="px-4 py-2.5 font-bold text-primary">186</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Undergraduate Posts Table -->
+        <div class="bg-bg-surface border border-border-card rounded-2xl overflow-hidden shadow-xs">
+          <div class="bg-emerald-500/10 px-5 py-3 border-b border-border-card flex items-center justify-between">
+            <span class="text-xs font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
+              2) Undergraduate Level Posts (12th Pass)
+            </span>
+            <span class="text-[0.68rem] bg-emerald-600 text-white font-bold px-2 py-0.5 rounded">Level 2 & 3</span>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-xs sm:text-sm text-left border-collapse">
+              <thead class="bg-bg-base border-b border-border-card text-text-main font-bold">
+                <tr>
+                  <th class="px-4 py-2.5">Post Name</th>
+                  <th class="px-4 py-2.5">Pay Level</th>
+                  <th class="px-4 py-2.5">Initial Pay</th>
+                  <th class="px-4 py-2.5">Eligibility</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-border-card/40 text-text-secondary font-medium">
+                <tr>
+                  <td class="px-4 py-2.5 font-bold text-text-main">Commercial cum Ticket Clerk</td>
+                  <td class="px-4 py-2.5">Level 3</td>
+                  <td class="px-4 py-2.5">₹ 21,700/-</td>
+                  <td class="px-4 py-2.5">12th Pass (50% Marks)</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2.5 font-bold text-text-main">Junior Clerk cum Typist</td>
+                  <td class="px-4 py-2.5">Level 2</td>
+                  <td class="px-4 py-2.5">₹ 19,900/-</td>
+                  <td class="px-4 py-2.5">12th Pass + Typing</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2.5 font-bold text-text-main">Accounts Clerk cum Typist</td>
+                  <td class="px-4 py-2.5">Level 2</td>
+                  <td class="px-4 py-2.5">₹ 19,900/-</td>
+                  <td class="px-4 py-2.5">12th Pass + Typing</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2.5 font-bold text-text-main">Trains Clerk</td>
+                  <td class="px-4 py-2.5">Level 2</td>
+                  <td class="px-4 py-2.5">₹ 19,900/-</td>
+                  <td class="px-4 py-2.5">12th Pass</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Qualification & Age Limit -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>Eligibility Criteria & Age Limit</span>
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose mb-4">
+        <!-- Educational Qualification Card -->
+        <div class="bg-bg-surface border border-border-card p-5 rounded-2xl space-y-3">
+          <div class="flex items-center gap-2 text-primary font-bold text-sm">
+            <HiOutlineAcademicCap className="text-lg" />
+            <span>Educational Qualification</span>
+          </div>
+          <ul class="text-xs sm:text-sm text-text-secondary space-y-2 pl-4 list-disc font-medium">
+            <li><strong>Undergraduate Posts:</strong> 12th (HSC) pass with minimum 50% aggregate marks (No percentage criteria for SC/ST/PwBD).</li>
+            <li><strong>Graduate Posts:</strong> Bachelor's Degree in any discipline from a recognized University.</li>
+            <li>Typing Proficiency (English / Hindi) required for Typist positions.</li>
+          </ul>
+        </div>
+
+        <!-- Age Limit Card -->
+        <div class="bg-bg-surface border border-border-card p-5 rounded-2xl space-y-3">
+          <div class="flex items-center gap-2 text-rose-500 font-bold text-sm">
+            <HiOutlineUserGroup className="text-lg" />
+            <span>Age Limit & Relaxation (As on 01 July 2026)</span>
+          </div>
+          <p class="text-xs sm:text-sm text-text-secondary font-medium m-0">
+            <strong>12th Pass Posts:</strong> 18 to 33 Years <br />
+            <strong>Graduate Posts:</strong> 18 to 36 Years
+          </p>
+          <div class="pt-2 border-t border-border-card/40 text-xs space-y-1 text-text-muted">
+            <p class="m-0">• OBC Candidates: <strong>3 Years Relaxation</strong></p>
+            <p class="m-0">• SC/ST Candidates: <strong>5 Years Relaxation</strong></p>
+            <p class="m-0">• PwBD Candidates: <strong>10 to 15 Years Relaxation</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Application Fee & Refund Section -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>Application Fee & Fee Refund Policy</span>
+      </h2>
+
+      <div class="bg-bg-surface border border-border-card rounded-2xl p-5 not-prose space-y-3">
+        <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-bold text-sm">
+          <HiOutlineCurrencyRupee className="text-lg" />
+          <span>Category-wise Application Fee & Bank Refund Scheme</span>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs sm:text-sm text-left border-collapse">
+            <thead class="bg-bg-base border-b border-border-card text-text-main font-bold">
+              <tr>
+                <th class="px-4 py-2">Category</th>
+                <th class="px-4 py-2">Application Fee</th>
+                <th class="px-4 py-2">Refund Amount (After CBT-1 Exam)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-border-card/40 text-text-secondary font-medium">
+              <tr>
+                <td class="px-4 py-2.5 font-bold text-text-main">UR / OBC / EWS Male Candidates</td>
+                <td class="px-4 py-2.5">₹ 500/-</td>
+                <td class="px-4 py-2.5 font-bold text-emerald-600 dark:text-emerald-400">₹ 400/- Refunded to Bank Account</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2.5 font-bold text-text-main">SC / ST / Ex-Servicemen / PwBD / Female / Minorities / EBC</td>
+                <td class="px-4 py-2.5">₹ 250/-</td>
+                <td class="px-4 py-2.5 font-bold text-emerald-600 dark:text-emerald-400">₹ 250/- Full Refund</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-[0.75rem] text-text-muted italic m-0 pt-2 border-t border-border-card/40">
+          *Note: Fee refund is processed back to bank accounts only for candidates who appear in the CBT 1 Examination.
+        </p>
+      </div>
+    </section>
+
+    <!-- Selection Process -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>Selection Process & CBT Exam Pattern</span>
+      </h2>
+
+      <div class="space-y-3 text-sm text-text-secondary">
+        <p>The RRB NTPC recruitment selection process comprises 4 main stages:</p>
+        <ol class="list-decimal pl-5 space-y-2 font-medium">
+          <li><strong>1st Stage CBT (Screening Exam):</strong> 100 Marks Computer Based Test (Common for all posts).</li>
+          <li><strong>2nd Stage CBT (Mains Exam):</strong> 120 Marks Computer Based Test (Post-level specific).</li>
+          <li><strong>Skill Test:</strong> Computer Based Aptitude Test (CBAT) for Station Master; Typing Skill Test for Typist posts.</li>
+          <li><strong>Document Verification & Medical Exam:</strong> Verification of original documents and medical fitness test.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Important Links & Dates Table -->
+    <section class="not-prose">
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>Important Dates & Application Links</span>
+      </h2>
+
+      <div class="bg-bg-surface border border-border-card rounded-2xl p-5 space-y-4 shadow-xs">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+          <div class="flex items-center justify-between p-3 bg-bg-base rounded-xl border border-border-card">
+            <span class="text-text-muted font-bold">Online Application Starts:</span>
+            <strong class="text-emerald-600 dark:text-emerald-400">Started / Active</strong>
+          </div>
+          <div class="flex items-center justify-between p-3 bg-bg-base rounded-xl border border-border-card">
+            <span class="text-text-muted font-bold">Online Application Deadline:</span>
+            <strong class="text-rose-600 dark:text-rose-400 font-extrabold">15 November 2026</strong>
+          </div>
+        </div>
+
+        <!-- Call to Action Buttons Grid -->
+        <div class="pt-2 flex flex-col sm:flex-row gap-3">
+          <a
+            href="https://www.rrbmumbai.gov.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-700 hover:to-indigo-700 text-white rounded-xl font-extrabold text-xs sm:text-sm uppercase tracking-wider transition-all shadow-md no-underline"
+          >
+            <span>Official Portal (RRB Mumbai)</span>
+            <HiOutlineArrowTopRightOnSquare className="text-base shrink-0" />
+          </a>
+
+          <a
+            href="https://www.rrbmumbai.gov.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-extrabold text-xs sm:text-sm uppercase tracking-wider transition-all shadow-md no-underline"
+          >
+            <span>Apply Online Now</span>
+            <HiOutlineArrowTopRightOnSquare className="text-base shrink-0" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="not-prose pt-4 border-t border-border-card/60">
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-6 flex items-center gap-2">
+        <HiOutlineQuestionMarkCircle className="text-primary" />
+        <span>Frequently Asked Questions (FAQ)</span>
+      </h2>
+
+      <div class="space-y-4">
+        <div class="bg-bg-surface border border-border-card rounded-2xl p-4 sm:p-5">
+          <h3 class="text-base font-bold text-text-main mb-1.5">
+            Q1) How many total vacancies are announced in RRB NTPC 2026?
+          </h3>
+          <p class="text-xs sm:text-sm text-text-muted m-0 leading-relaxed font-medium">
+            Answer: Railway Recruitment Board (RRB) has declared a total of 5,236 vacancies under RRB NTPC Recruitment 2026.
+          </p>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card rounded-2xl p-4 sm:p-5">
+          <h3 class="text-base font-bold text-text-main mb-1.5">
+            Q2) Are 12th Pass candidates eligible to apply for RRB NTPC 2026?
+          </h3>
+          <p class="text-xs sm:text-sm text-text-muted m-0 leading-relaxed font-medium">
+            Answer: Yes, 12th (HSC) pass candidates with at least 50% aggregate marks are eligible for Undergraduate posts like Junior Clerk, Accounts Clerk, and Trains Clerk.
+          </p>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card rounded-2xl p-4 sm:p-5">
+          <h3 class="text-base font-bold text-text-main mb-1.5">
+            Q3) How can candidates in Maharashtra apply for RRB Mumbai posts?
+          </h3>
+          <p class="text-xs sm:text-sm text-text-muted m-0 leading-relaxed font-medium">
+            Answer: Candidates can register online through the official regional portal www.rrbmumbai.gov.in for Central Railway and Western Railway vacancies.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+</ArticleContainer>
