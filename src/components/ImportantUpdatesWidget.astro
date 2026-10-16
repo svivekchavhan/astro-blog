@@ -4,9 +4,11 @@ import {
   HiOutlineChevronRight,
   HiOutlineChevronLeft,
   HiOutlineCalendarDays,
+  HiOutlineArrowRight,
 } from "react-icons/hi2";
 import { importantUpdates } from "../constants/importantUpdates";
 import { isWithin7Days, isNotExpired } from "../utils/dateUtils";
+import { getAllPosts } from "../utils/postUtils";
 
 interface Props {
   pageSize?: number;
@@ -20,8 +22,12 @@ const activeUpdates = importantUpdates.filter(
 
 const totalItems = activeUpdates.length;
 const totalPages = Math.ceil(totalItems / pageSize);
+
+const latestPosts = getAllPosts().slice(0, 3);
 ---
 
+{/* TEMPORARILY HIDDEN — change false to true to restore */}
+{false && (
 <div class="flex flex-col important-updates-widget">
   <!-- Heading Container for Important Updates -->
   <div
@@ -140,6 +146,31 @@ const totalPages = Math.ceil(totalItems / pageSize);
     }
   </div>
 </div>
+)}
+
+<!-- Latest 3 Posts -->
+{latestPosts.length > 0 && (
+  <div class="mt-3 bg-bg-surface border border-border-card rounded-2xl overflow-hidden shadow-sm">
+    <div class="px-4 py-2.5 border-b border-border-card bg-primary/5 flex items-center gap-2">
+      <HiOutlineArrowRight className="text-primary text-sm shrink-0" />
+      <span class="text-[0.7rem] font-extrabold uppercase tracking-wider text-primary">Latest Posts</span>
+    </div>
+    <div class="flex flex-col divide-y divide-border-card/40">
+      {latestPosts.map((post) => (
+        <a
+          href={post.slug}
+          class="group flex items-start gap-2 px-4 py-2.5 hover:bg-primary/5 no-underline transition-colors"
+        >
+          <HiOutlineChevronRight className="text-primary text-[0.75rem] shrink-0 mt-0.5 group-hover:translate-x-0.5 transition-transform" />
+          <span class="text-xs font-semibold text-text-main group-hover:text-primary transition-colors line-clamp-2 leading-snug">
+            {post.titleMr || post.titleEn}
+          </span>
+        </a>
+      ))}
+    </div>
+  </div>
+)}
+
 
 <script>
   function initWidgetPagination() {

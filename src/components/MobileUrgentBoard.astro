@@ -5,15 +5,20 @@ import {
   HiOutlineSparkles,
   HiOutlineChevronDown,
   HiOutlineCalendarDays,
+  HiOutlineBolt,
 } from "react-icons/hi2";
 import { importantUpdates } from "../constants/importantUpdates";
 import { isWithin7Days, isNotExpired } from "../utils/dateUtils";
+import { getAllPosts } from "../utils/postUtils";
 
 // Filter active and non-expired updates
 const activeUpdates = importantUpdates.filter(
   (update) => update.show !== false && isNotExpired(update.expiry),
 );
 const initialVisibleCount = 3;
+
+// Latest 3 posts from registry
+const latestPosts = getAllPosts().slice(0, 3);
 ---
 
 {activeUpdates.length > 0 && (
@@ -102,7 +107,31 @@ const initialVisibleCount = 3;
         </button>
       )}
     </div>
+
+    <!-- Latest Posts Row -->
+    {latestPosts.length > 0 && (
+      <div class="mt-3 pt-2.5 border-t border-violet-500/20">
+        <div class="flex items-center gap-1.5 mb-1.5">
+          <HiOutlineBolt className="text-violet-500 text-xs shrink-0" />
+          <span class="text-[0.6rem] font-extrabold uppercase tracking-wider text-violet-600 dark:text-violet-400">Latest Posts</span>
+        </div>
+        <div class="flex flex-col gap-1">
+          {latestPosts.map((post) => (
+            <a
+              href={post.slug}
+              class="group flex items-start gap-1.5 p-2 bg-bg-surface/80 hover:bg-bg-surface border border-violet-500/15 rounded-xl no-underline transition-all active:scale-[0.99]"
+            >
+              <HiOutlineChevronRight className="text-violet-500 text-sm shrink-0 mt-0.5 group-hover:translate-x-0.5 transition-transform" />
+              <span class="text-xs font-bold text-text-main group-hover:text-violet-600 dark:group-hover:text-violet-400 line-clamp-2 leading-snug transition-colors">
+                {post.titleMr || post.titleEn}
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
   </div>
+</div>
 )}
 
 <script>
