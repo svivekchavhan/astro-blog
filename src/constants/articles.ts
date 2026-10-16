@@ -128,6 +128,27 @@ export const articlesRegistry: ArticleMeta[] = [
     organisation: "Canara Bank",
   },
   {
+    titleEn: "Deogiri Nagari Sahakari Bank Ltd. – Trainee Junior Officer Recruitment 2026",
+    titleMr: "देओगिरी नागरी सहकारी बँक लि. – प्रशिक्षणार्थी कनिष्ठ अधिकारी भर्ती 2026",
+    slug: "/deogiri-nagari-sahakari-bank-recruitment-2026",
+    category: "Bank Job",
+    date: "October 16, 2026",
+    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=1200",
+    postName: "Trainee Junior Officer (प्रशिक्षणार्थी कनिष्ठ अधिकारी)",
+    descriptionMr: "देओगिरी नागरी सहकारी बँक लि. महाराष्ट्रातील शासकीय बँक नेत्रुत्वात, 100 पदांसाठी प्रशिक्षणार्थी कनिष्ठ अधिकारी नियुक्ती. अर्ज ऑनलाइन MUCBF पोर्टलवर 14 Oct 2026 – 31 Oct 2026.",
+    vacancies: "100",
+    lastDate: "31 Oct 2026",
+    postType: "recruitment",
+    priority: "important",
+    isImportant: true,
+    badge: "Deogiri Bank",
+    badgeType: "new",
+    educationTags: ["degree", "12th"],
+    districts: ["all-maharashtra"],
+    status: "apply-now",
+    organisation: "Deogiri Nagari Sahakari Bank Ltd."
+  },
+  {
     titleEn:
       "Assam Rifles Technical and Tradesman Recruitment Rally 2026: Apply Online for 354 Group C Posts",
     titleMr:
