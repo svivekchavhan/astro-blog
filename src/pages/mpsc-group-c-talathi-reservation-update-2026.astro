@@ -1,0 +1,376 @@
+---
+import Layout from "../layouts/Layout.astro";
+import {
+  HiOutlineCalendarDays,
+  HiOutlineCursorArrowRays,
+  HiOutlineArrowTopRightOnSquare,
+  HiOutlineDocumentText,
+  HiOutlineBuildingOffice,
+  HiOutlineShieldCheck,
+  HiOutlineMegaphone,
+  HiOutlineExclamationTriangle,
+  HiOutlineArrowLeft,
+  HiOutlineCheckCircle,
+  HiOutlineInformationCircle,
+  HiOutlineUserGroup,
+  HiOutlineGlobeAlt,
+  HiOutlineSparkles,
+} from "react-icons/hi2";
+
+const title =
+  "MPSC गट-क सेवा संयुक्त पूर्व परीक्षा २०२६ – महत्त्वाची सूचना: तलाठी संवर्ग आरक्षण व शुद्धिपत्रक";
+const description =
+  "MPSC Combine Group C Exam 2026: महाराष्ट्र लोकसेवा आयोग गट-क सेवा संयुक्त पूर्व परीक्षा २०२६ (जाहिरात क्र. ०१७/२०२६) मधील तलाठी संवर्गातील सामाजिक व समांतर आरक्षणनिहाय पदांच्या तपशीलाबाबत महत्त्वाची सूचना प्रसिद्ध. २२ जुलै २०२६ रोजीच्या शुद्धिपत्रकातील तरतुदी तपासाव्यात.";
+const canonicalURL =
+  "https://mahasandhi.in/mpsc-group-c-talathi-reservation-update-2026";
+const date = "October 18, 2026";
+const category = "MPSC महत्त्वाची सूचना";
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonicalURL={canonicalURL}
+  article={true}
+  customBreadcrumbs={[
+    { name: "MPSC Exam Hub", url: "/mpsc" },
+    { name: "MPSC Combine Group C 2026", url: "/mpsc-combine-group-c-2026" },
+    { name: "तलाठी आरक्षण महत्त्वाची सूचना" },
+  ]}
+>
+  <article class="py-8">
+    <!-- Back Button -->
+    <div class="mb-6 not-prose">
+      <a
+        href="/mpsc-combine-group-c-2026"
+        class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold uppercase tracking-wider text-text-muted hover:text-primary bg-bg-surface border border-border-card rounded-xl transition-all duration-300 no-underline shadow-xs"
+      >
+        <HiOutlineArrowLeft className="text-sm" /> back to combine group c hub / मागे जा
+      </a>
+    </div>
+
+    <!-- Header Section -->
+    <div class="mb-10">
+      <div class="flex items-center gap-3 mb-4 flex-wrap">
+        <span
+          class="bg-rose-600 text-white px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider flex items-center gap-1.5 shadow-xs animate-pulse"
+        >
+          <HiOutlineMegaphone className="text-sm" />
+          महत्त्वाची सूचना (Important Notice)
+        </span>
+        <span
+          class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider border border-primary/20 flex items-center gap-1.5"
+        >
+          <HiOutlineBuildingOffice className="text-sm" /> MPSC जाहिरात क्र. ०१७/२०२६
+        </span>
+        <span class="text-text-muted text-sm font-semibold flex items-center gap-1">
+          <HiOutlineCalendarDays className="text-base text-primary" /> {date}
+        </span>
+      </div>
+
+      <h1
+        class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-text-main mb-5 leading-tight"
+      >
+        📢 {title}
+      </h1>
+
+      <p
+        class="text-text-muted text-base md:text-lg leading-relaxed border-l-4 border-rose-500 pl-4 sm:pl-6 py-2 italic font-medium"
+      >
+        {description}
+      </p>
+    </div>
+
+    <!-- Quick Action / Official Links Banner -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 not-prose">
+      <a
+        href="https://mpsc.gov.in"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group p-5 bg-gradient-to-br from-rose-600 to-violet-600 text-white rounded-2xl transition-all duration-300 shadow-md hover:shadow-rose-500/20 flex items-center justify-between no-underline"
+      >
+        <div>
+          <span
+            class="text-[0.65rem] uppercase font-extrabold tracking-wider bg-white/20 px-2.5 py-0.5 rounded text-white block w-fit mb-1"
+          >
+            अधिकृत संकेतस्थळ (Official Website)
+          </span>
+          <h3 class="text-base sm:text-lg font-extrabold text-white m-0 flex items-center gap-1.5">
+            MPSC अधिकृत पोर्टल (mpsc.gov.in)
+            <HiOutlineArrowTopRightOnSquare className="text-lg shrink-0" />
+          </h3>
+          <p class="text-xs text-white/90 m-0 mt-1">
+            नवीन परिपत्रके, शुद्धिपत्रक व सूचना पाहण्यासाठी क्लिक करा
+          </p>
+        </div>
+        <div
+          class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform"
+        >
+          <HiOutlineGlobeAlt className="text-2xl" />
+        </div>
+      </a>
+
+      <a
+        href="https://mpsconline.gov.in"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="p-5 bg-bg-surface border border-border-card hover:border-primary/50 rounded-2xl flex items-center justify-between transition-all duration-300 no-underline group shadow-xs"
+      >
+        <div class="flex items-center gap-4">
+          <div
+            class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"
+          >
+            <HiOutlineCursorArrowRays className="text-2xl" />
+          </div>
+          <div>
+            <span class="text-xs text-text-muted font-bold uppercase tracking-wider block">
+              MPSC Online Application Portal
+            </span>
+            <h4 class="text-sm sm:text-base font-bold text-text-main m-0 group-hover:text-primary transition-colors flex items-center gap-1">
+              mpsconline.gov.in <HiOutlineArrowTopRightOnSquare className="text-xs" />
+            </h4>
+            <p class="text-xs text-text-muted m-0 mt-0.5">
+              उमेदवार प्रोफाईल व ऑनलाईन अर्ज स्थिती
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Official Notice Highlight Card -->
+    <div
+      class="mb-10 p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-rose-500/10 via-bg-surface to-amber-500/10 border-2 border-rose-500/30 shadow-xs not-prose space-y-6"
+    >
+      <div class="flex items-center gap-2 flex-wrap">
+        <span
+          class="inline-flex items-center gap-1.5 px-3 py-1 bg-rose-600 text-white rounded-full text-xs font-black uppercase tracking-wider shadow-xs"
+        >
+          <HiOutlineExclamationTriangle className="text-sm shrink-0" />
+          <span>आयोगाची महत्त्वाची सूचना</span>
+        </span>
+        <span
+          class="inline-flex items-center gap-1 px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded-full text-xs font-bold"
+        >
+          जाहिरात क्र. ०१७/२०२६
+        </span>
+      </div>
+
+      <div class="space-y-4">
+        <h2
+          class="text-xl sm:text-2xl font-black text-text-main m-0 leading-snug"
+        >
+          महाराष्ट्र लोकसेवा आयोगाच्या सूचनेनुसार:
+        </h2>
+
+        <div class="space-y-3">
+          <div class="flex items-start gap-3 p-4 bg-bg-surface/90 border border-border-card rounded-2xl shadow-xs">
+            <span class="text-xl shrink-0">🔹</span>
+            <div class="text-sm sm:text-base text-text-main font-semibold leading-relaxed">
+              दिनांक <strong>२५ जून २०२६</strong> रोजी प्रसिद्ध जाहिरात क्रमांक <strong>०१७/२०२६</strong> मधील गट-क सेवा संयुक्त पूर्व परीक्षा २०२६ च्या संदर्भात दिनांक <strong>२२ जुलै २०२६</strong> रोजी प्रसिद्ध शुद्धिपत्रकातील तरतुदी उमेदवारांनी तपासाव्यात.
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3 p-4 bg-bg-surface/90 border border-border-card rounded-2xl shadow-xs">
+            <span class="text-xl shrink-0">🔹</span>
+            <div class="text-sm sm:text-base text-text-main font-semibold leading-relaxed">
+              <strong>तलाठी संवर्गातील</strong> सामाजिक व समांतर आरक्षणनिहाय पदांच्या तपशीलाबाबत शुद्धिपत्रक आयोगाच्या अधिकृत संकेतस्थळावर प्रसिद्ध करण्यात येईल.
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3 p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-2xl shadow-xs">
+            <span class="text-xl shrink-0">🌐</span>
+            <div class="text-sm sm:text-base text-emerald-800 dark:text-emerald-300 font-bold leading-relaxed">
+              अधिक माहितीसाठी व पुढील अधिकृत घोषणांसाठी <strong>MPSC च्या अधिकृत संकेतस्थळाला (mpsc.gov.in)</strong> भेट द्या.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Official Notice Main Article Body -->
+    <div
+      class="bg-bg-surface border border-border-card rounded-3xl p-6 md:p-8 shadow-xs space-y-8 text-text-main leading-relaxed"
+    >
+      <div class="border-b border-border-card/60 pb-4">
+        <h2
+          class="text-xl md:text-2xl font-black text-rose-600 dark:text-rose-400 m-0 flex items-center gap-2"
+        >
+          <HiOutlineShieldCheck className="text-2xl shrink-0" />
+          MPSC गट-क परीक्षा २०२६ - सूचनेचे सविस्तर विश्लेषण व मार्गदर्शक बाबी
+        </h2>
+      </div>
+
+      <!-- Section 1: पार्श्वभूमी व संदर्भ -->
+      <div class="space-y-4">
+        <h3
+          class="text-lg font-black text-primary border-l-4 border-primary pl-3 m-0"
+        >
+          १. सूचनेची पार्श्वभूमी व संदर्भ
+        </h3>
+        <p class="text-sm md:text-base leading-relaxed m-0 text-text-secondary">
+          महाराष्ट्र लोकसेवा आयोगामार्फत (MPSC) विविध शासकीय विभागांतील ५,७०७ पदांच्या भरतीसाठी <strong>महाराष्ट्र गट-क सेवा संयुक्त पूर्व परीक्षा – २०२६ (जाहिरात क्र. ०१७/२०२६)</strong> ची अधिसूचना २५ जून २०२६ रोजी प्रसिद्ध करण्यात आली होती. यामध्ये तलाठी संवर्गातील १,५३९ पदे तसेच लिपिक-टंकलेखक ३,१९७ पदांसह इतर महत्त्वपूर्ण संवर्गांचा समावेश आहे.
+        </p>
+        <p class="text-sm md:text-base leading-relaxed m-0 text-text-secondary">
+          आयोगाने आता परिपत्रक/सूचनेद्वारे स्पष्ट केले आहे की, उमेदवारांनी दिनांक <strong>२२ जुलै २०२६</strong> रोजी प्रसिद्ध झालेल्या शुद्धिपत्रकातील सर्व कायदेशीर व प्रशासकीय तरतुदी काळजीपूर्वक तपासाव्यात.
+        </p>
+      </div>
+
+      <!-- Section 2: तलाठी संवर्ग सामाजिक व समांतर आरक्षण -->
+      <div class="space-y-4">
+        <h3
+          class="text-lg font-black text-primary border-l-4 border-primary pl-3 m-0"
+        >
+          २. तलाठी संवर्ग: सामाजिक व समांतर आरक्षण शुद्धिपत्रक
+        </h3>
+        <p class="text-sm md:text-base leading-relaxed m-0 text-text-secondary">
+          तलाठी (Talathi) संवर्गासाठी अर्ज केलेल्या सर्व उमेदवारांसाठी ही अत्यंत महत्त्वाची सूचना आहे:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="p-5 bg-bg-surface/80 border border-border-card rounded-2xl space-y-2 shadow-xs">
+            <div class="flex items-center gap-2 text-primary font-black text-sm">
+              <HiOutlineUserGroup className="text-xl" />
+              सामाजिक आरक्षण (Social Reservation)
+            </div>
+            <p class="text-text-muted leading-relaxed m-0">
+              अनुसूचित जाती (SC), अनुसूचित जमाती (ST), विमुक्त जाती/भटक्या जमाती (VJNT), इतर मागासवर्ग (OBC), विशेष मागास प्रवर्ग (SBC) तसेच ईडब्ल्यूएस (EWS) प्रवर्गातील पदांची सुधारित आरक्षणनिहाय आकडेवारी.
+            </p>
+          </div>
+
+          <div class="p-5 bg-bg-surface/80 border border-border-card rounded-2xl space-y-2 shadow-xs">
+            <div class="flex items-center gap-2 text-rose-600 dark:text-rose-400 font-black text-sm">
+              <HiOutlineSparkles className="text-xl" />
+              समांतर आरक्षण (Parallel Reservation)
+            </div>
+            <p class="text-text-muted leading-relaxed m-0">
+              महिला आरक्षण, माजी सैनिक (Ex-Servicemen), दिव्यांग (PwD), खेळाडू (Sports Person), अनाथ (Orphan) तसेच प्रकल्पग्रस्त/भूकंपग्रस्त प्रवर्गांतील आरक्षित पदांचा तपशील.
+            </p>
+          </div>
+        </div>
+
+        <div class="p-4 bg-amber-500/10 border border-amber-500/30 rounded-2xl text-xs sm:text-sm text-text-main">
+          <strong>📌 नोंद:</strong> तलाठी संवर्गातील सामाजिक व समांतर आरक्षणनिहाय सुधारित पदसंख्येचा सविस्तर तक्ता आयोगामार्फत स्वतंत्र शुद्धिपत्रकाद्वारे लवकरच <a href="https://mpsc.gov.in" target="_blank" rel="noopener noreferrer" class="text-primary underline font-bold">mpsc.gov.in</a> या अधिकृत संकेतस्थळावर प्रसिद्ध करण्यात येणार आहे.
+        </div>
+      </div>
+
+      <!-- Section 3: महत्वाचा संदर्भ तक्ता -->
+      <div class="space-y-4">
+        <h3
+          class="text-lg font-black text-primary border-l-4 border-primary pl-3 m-0"
+        >
+          ३. अधिकृत संदर्भ व तपशील तक्ता (Key Information Table)
+        </h3>
+
+        <div class="overflow-x-auto border border-border-card rounded-2xl bg-bg-surface">
+          <table class="w-full text-left border-collapse text-xs sm:text-sm">
+            <tbody class="divide-y divide-border-card/40">
+              <tr>
+                <td class="p-3.5 font-bold text-text-muted bg-primary/5 w-48">भरती प्राधिकरण</td>
+                <td class="p-3.5 font-semibold text-text-main">महाराष्ट्र लोकसेवा आयोग (MPSC)</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-bold text-text-muted bg-primary/5">परीक्षेचे नाव</td>
+                <td class="p-3.5 font-semibold text-text-main">महाराष्ट्र गट-क सेवा संयुक्त पूर्व परीक्षा – २०२६</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-bold text-text-muted bg-primary/5">मूळ जाहिरात क्रमांक</td>
+                <td class="p-3.5 font-bold text-primary">०१७/२०२६ (प्रसिद्धी दिनांक: २५ जून २०२६)</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-bold text-text-muted bg-primary/5">शुद्धिपत्रक संदर्भ</td>
+                <td class="p-3.5 font-semibold text-text-main">दिनांक २२ जुलै २०२६ रोजीचे शुद्धिपत्रक</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-bold text-text-muted bg-primary/5">संबंधित संवर्ग</td>
+                <td class="p-3.5 font-bold text-rose-600 dark:text-rose-400">तलाठी संवर्ग (सामाजिक व समांतर आरक्षण)</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-bold text-text-muted bg-primary/5">सुधारित पूर्व परीक्षा तारीख</td>
+                <td class="p-3.5 font-bold text-emerald-600 dark:text-emerald-400">०३ जानेवारी २०२७ (रविवार)</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-bold text-text-muted bg-primary/5">अधिकृत संकेतस्थळ</td>
+                <td class="p-3.5 font-semibold text-primary">
+                  <a href="https://mpsc.gov.in" target="_blank" rel="noopener noreferrer" class="hover:underline">
+                    https://mpsc.gov.in
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Section 4: उमेदवारांनी काय करावे? -->
+      <div class="space-y-4">
+        <h3
+          class="text-lg font-black text-primary border-l-4 border-primary pl-3 m-0"
+        >
+          ४. उमेदवारांसाठी मार्गदर्शक सूचना (Action Steps for Candidates)
+        </h3>
+
+        <div class="space-y-3">
+          <div class="flex items-start gap-3 p-3.5 bg-bg-surface/60 border border-border-card rounded-xl">
+            <HiOutlineCheckCircle className="text-lg text-emerald-500 shrink-0 mt-0.5" />
+            <div class="text-xs sm:text-sm font-medium">
+              <strong>२२ जुलै २०२६ चे शुद्धिपत्रक वाचा:</strong> आयोगाने जारी केलेल्या शुद्धिपत्रकातील आरक्षण, अर्हता आणि इतर सुधारित अटी पुन्हा एकदा तपासून घ्या.
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3 p-3.5 bg-bg-surface/60 border border-border-card rounded-xl">
+            <HiOutlineCheckCircle className="text-lg text-emerald-500 shrink-0 mt-0.5" />
+            <div class="text-xs sm:text-sm font-medium">
+              <strong>तलाठी आरक्षण शुद्धिपत्रकावर लक्ष ठेवा:</strong> तलाठी पदांच्या आरक्षणनिहाय जागांचे शुद्धिपत्रक आयोगाच्या संकेतस्थळावर प्रसिद्ध होताच त्याचे विश्लेषण महासंधी पोर्टलवर उपलब्ध करून दिले जाईल.
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3 p-3.5 bg-bg-surface/60 border border-border-card rounded-xl">
+            <HiOutlineCheckCircle className="text-lg text-emerald-500 shrink-0 mt-0.5" />
+            <div class="text-xs sm:text-sm font-medium">
+              <strong>परीक्षेची तयारी जोमाने सुरू ठेवा:</strong> पूर्व परीक्षा दिनांक ०३ जानेवारी २०२७ रोजी होणार असल्याने अभ्यासक्रमाच्या पुनरावृत्तीवर भर द्या.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 5: Hashtags & Sharing -->
+      <div class="p-4 bg-bg-surface/50 border border-border-card/60 rounded-2xl flex flex-wrap items-center justify-between gap-3 not-prose">
+        <div class="flex items-center gap-2 flex-wrap text-xs font-bold text-primary">
+          <span class="px-2.5 py-1 bg-primary/10 rounded-lg">#MPSC</span>
+          <span class="px-2.5 py-1 bg-primary/10 rounded-lg">#MPSCUpdate</span>
+          <span class="px-2.5 py-1 bg-primary/10 rounded-lg">#GroupC2026</span>
+          <span class="px-2.5 py-1 bg-primary/10 rounded-lg">#महाराष्ट्रभरती</span>
+        </div>
+        <span class="text-xs text-text-muted font-medium">
+          MahaSandhi • सरकारी नोकरी व परीक्षा माहिती पोर्टल
+        </span>
+      </div>
+
+      <!-- Footer Action Links -->
+      <div class="pt-4 border-t border-border-card flex flex-wrap gap-4">
+        <a
+          href="https://mpsc.gov.in"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-rose-600 hover:bg-rose-700 text-white font-black uppercase tracking-wider text-xs rounded-xl shadow-xs transition-colors no-underline"
+        >
+          <HiOutlineGlobeAlt className="text-base shrink-0" /> MPSC Official Website (mpsc.gov.in)
+        </a>
+
+        <a
+          href="/mpsc-combine-group-c-2026"
+          class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary/10 hover:bg-primary/20 text-primary font-black uppercase tracking-wider text-xs rounded-xl transition-colors no-underline"
+        >
+          <HiOutlineArrowLeft className="text-base shrink-0" /> MPSC Combine Group C Hub
+        </a>
+
+        <a
+          href="/mpsc"
+          class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-bg-surface hover:bg-border-card/40 text-text-main border border-border-card font-black uppercase tracking-wider text-xs rounded-xl transition-colors no-underline"
+        >
+          <HiOutlineDocumentText className="text-base shrink-0" /> All MPSC Updates
+        </a>
+      </div>
+    </div>
+  </article>
+</Layout>

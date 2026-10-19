@@ -1113,4 +1113,28 @@ export const articlesRegistry: ArticleMeta[] = [
     vacancies: "Notice",
     lastDate: "Official Circular",
   },
+  {
+    titleEn:
+      "MPSC Group C Exam 2026 Important Notice: Talathi Cadre Reservation & Corrigendum",
+    titleMr:
+      "MPSC गट-क सेवा संयुक्त पूर्व परीक्षा २०२६ – महत्त्वाची सूचना: तलाठी संवर्ग आरक्षण शुद्धिपत्रक",
+    slug: "/mpsc-group-c-talathi-reservation-update-2026",
+    category: "MPSC Notice",
+    date: "October 18, 2026",
+    image:
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1200",
+    postName: "तलाठी संवर्ग आरक्षण व शुद्धिपत्रक",
+    descriptionMr:
+      "MPSC गट-क सेवा संयुक्त पूर्व परीक्षा २०२६ मधील तलाठी संवर्गातील सामाजिक व समांतर आरक्षणनिहाय पदांच्या तपशीलाबाबत महत्त्वाची सूचना प्रसिद्ध.",
+    vacancies: "Notice",
+    lastDate: "Check Notice",
+    postType: "notice",
+    priority: "important",
+    isImportant: true,
+    badge: "Important Notice",
+    badgeType: "important",
+    educationTags: ["degree"],
+    organisation: "Maharashtra Public Service Commission (MPSC)",
+  },
 ];
+

@@ -11,6 +11,15 @@ export interface NaukriUpdate {
 
 export const naukriUpdates: NaukriUpdate[] = [
   {
+    titleEn: "MPSC Group C Exam 2026 Important Notice: Talathi Cadre Reservation & Corrigendum",
+    titleHi: "MPSC गट-क सेवा संयुक्त पूर्व परीक्षा २०२६: तलाठी संवर्ग आरक्षण व शुद्धिपत्रक महत्त्वाची सूचना",
+    date: "October 18, 2026",
+    badge: "Important Notice",
+    badgeType: "important",
+    link: "/mpsc-group-c-talathi-reservation-update-2026",
+    description: "महाराष्ट्र लोकसेवा आयोगामार्फत गट-क सेवा संयुक्त पूर्व परीक्षा २०२६ मधील तलाठी संवर्गातील सामाजिक व समांतर आरक्षणनिहाय पदांच्या तपशीलाबाबत महत्त्वाची सूचना प्रसिद्ध करण्यात आलेली आहे."
+  },
+  {
     titleEn: "Mahajyoti & VANARTI Free Coaching Screening Test Timetable 2026: Exam Dates 07 to 09 October Declared",
     titleHi: "महाज्योति व वनार्टी मोफत स्पर्धा परीक्षा पूर्व प्रशिक्षण २०२६: चाळणी परीक्षा वेळापत्रक जाहीर",
     date: "October 06, 2026",
