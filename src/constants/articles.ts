@@ -54,6 +54,31 @@ export interface ArticleMeta {
 export const articlesRegistry: ArticleMeta[] = [
   {
     titleEn:
+      "MPSC Bailiff Cum Clerk Group C Exam 2026: Official Recommendation Cutoff Marks Declared (Advt 015/2026)",
+    titleMr:
+      "MPSC बेलिफ तथा लिपिक परीक्षा २०२६: अधिकृत शिफारस कट-ऑफ (Cutoff Marks) जाहीर (जाहिरात क्र. ०१५/२०२६)",
+    slug: "/mpsc-bailiff-cum-clerk-cutoff-2026",
+    category: "MPSC Cutoff",
+    date: "October 19, 2026",
+    image:
+      "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&q=80&w=1200",
+    postName: "Bailiff Cum Clerk in the Office of Sheriff of Mumbai (Group C)",
+    descriptionMr:
+      "महाराष्ट्र लोकसेवा आयोग (MPSC) द्वारे मुंबईच्या शेरिफ कार्यालयातील बेलिफ तथा लिपिक गट-क परीक्षा २०२६ चा अधिकृत शिफारस कट-ऑफ (Recommendation Cutoff) जाहीर. सर्व प्रवर्गांचे कट-ऑफ मार्क्स येथे पाहा.",
+    postType: "result",
+    priority: "important",
+    isImportant: true,
+    badge: "Cutoff",
+    badgeType: "result",
+    educationTags: ["degree", "12th"],
+    districts: ["mumbai", "all-maharashtra"],
+    status: "declared",
+    organisation: "Maharashtra Public Service Commission (MPSC)",
+    officialWebsiteUrl: "https://mpsc.gov.in",
+    officialResultUrl: "https://mpsc.gov.in/result_of_exam/11",
+  },
+  {
+    titleEn:
       "RRB NTPC Recruitment 2026: Apply Online for 5,236 Vacancies (Graduate & Undergraduate Posts)",
     titleMr:
       "रेल्वे भरती मंडळ (RRB NTPC) भरती २०२६: ५,२३६ जागांसाठी जाहिरात प्रसिद्ध! ऑनलाईन अर्ज सुरू",

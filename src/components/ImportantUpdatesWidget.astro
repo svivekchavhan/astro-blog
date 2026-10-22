@@ -16,9 +16,58 @@ interface Props {
 
 const { pageSize = 5 } = Astro.props;
 
-const activeUpdates = importantUpdates.filter(
-  (update) => update.show !== false && isNotExpired(update.expiry),
-);
+// Strictly filter only Answer Key, Admit Card, or Cutoff posts that are explicitly marked with show: true
+const activeUpdates = importantUpdates.filter((update) => {
+  if (update.show !== true) return false;
+  if (!isNotExpired(update.expiry)) return false;
+
+  const badgeType = (update.badgeType || "").toLowerCase();
+  const category = (update.category || "").toLowerCase();
+  const badge = (update.badge || "").toLowerCase();
+  const title = (update.title || "").toLowerCase();
+
+  const isAnswerKey =
+    badgeType === "answer-key" ||
+    category === "answer-key" ||
+    badge.includes("answer key") ||
+    badge.includes("उत्तरतालिका") ||
+    title.includes("answer key") ||
+    title.includes("उत्तरतालिका");
+
+  const isAdmitCard =
+    badgeType === "admit" ||
+    badgeType === "admit-card" ||
+    category === "admit" ||
+    category === "admit-card" ||
+    badge.includes("admit") ||
+    badge.includes("hall ticket") ||
+    badge.includes("प्रवेशपत्र") ||
+    badge.includes("हॉल तिकीट") ||
+    title.includes("admit card") ||
+    title.includes("hall ticket") ||
+    title.includes("प्रवेशपत्र") ||
+    title.includes("हॉल तिकीट");
+
+  const isCutoffOrResult =
+    badgeType === "cutoff" ||
+    badgeType === "cut-off" ||
+    badgeType === "result" ||
+    category === "cutoff" ||
+    category === "cut-off" ||
+    category === "result" ||
+    badge.includes("cutoff") ||
+    badge.includes("cut-off") ||
+    badge.includes("कट-ऑफ") ||
+    badge.includes("निकाल") ||
+    badge.includes("result") ||
+    title.includes("cutoff") ||
+    title.includes("cut-off") ||
+    title.includes("कट-ऑफ") ||
+    title.includes("निकाल") ||
+    title.includes("result");
+
+  return isAnswerKey || isAdmitCard || isCutoffOrResult;
+});
 
 const totalItems = activeUpdates.length;
 const totalPages = Math.ceil(totalItems / pageSize);
@@ -26,8 +75,7 @@ const totalPages = Math.ceil(totalItems / pageSize);
 const latestPosts = getAllPosts().slice(0, 3);
 ---
 
-{/* TEMPORARILY HIDDEN — change false to true to restore */}
-{false && (
+{activeUpdates.length > 0 && (
 <div class="flex flex-col important-updates-widget">
   <!-- Heading Container for Important Updates -->
   <div
@@ -79,15 +127,13 @@ const latestPosts = getAllPosts().slice(0, 3);
                     {update.badge ? (
                       <span
                         class={`shrink-0 text-[0.55rem] px-1.5 py-0.5 rounded font-extrabold uppercase tracking-widest ${
-                          update.badgeType === "result"
+                          update.badgeType === "cutoff" || update.badgeType === "cut-off" || update.badgeType === "result"
                             ? "bg-rose-600 text-white"
-                            : update.badgeType === "admit"
+                            : update.badgeType === "admit" || update.badgeType === "admit-card"
                               ? "bg-indigo-600 text-white"
-                              : update.badgeType === "extended"
-                                ? "bg-amber-500 text-white"
-                                : update.badgeType === "important"
-                                  ? "bg-purple-600 text-white"
-                                  : "bg-emerald-600 text-white"
+                              : update.badgeType === "answer-key"
+                                ? "bg-amber-600 text-white"
+                                : "bg-purple-600 text-white"
                         }`}
                       >
                         {update.badge}
@@ -215,6 +261,7 @@ const latestPosts = getAllPosts().slice(0, 3);
     });
   }
 
-  // Initialize on page loads (supports Astro client-side navigation)
+  // Initialize immediately and on Astro client-side navigation
+  initWidgetPagination();
   document.addEventListener("astro:page-load", initWidgetPagination);
 </script>

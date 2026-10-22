@@ -11,10 +11,25 @@ import { importantUpdates } from "../constants/importantUpdates";
 import { isWithin7Days, isNotExpired } from "../utils/dateUtils";
 import { getAllPosts } from "../utils/postUtils";
 
-// Filter active and non-expired updates
-const activeUpdates = importantUpdates.filter(
-  (update) => update.show !== false && isNotExpired(update.expiry),
-);
+// Filter active and non-expired updates (only answer key, admit card, or cutoff when show is true)
+const activeUpdates = importantUpdates.filter((update) => {
+  if (update.show !== true) return false;
+  if (!isNotExpired(update.expiry)) return false;
+  const bType = (update.badgeType || "").toLowerCase();
+  const cat = (update.category || "").toLowerCase();
+  return (
+    bType === "cutoff" ||
+    bType === "result" ||
+    bType === "admit" ||
+    bType === "admit-card" ||
+    bType === "answer-key" ||
+    cat === "cutoff" ||
+    cat === "result" ||
+    cat === "admit" ||
+    cat === "admit-card" ||
+    cat === "answer-key"
+  );
+});
 const initialVisibleCount = 3;
 
 // Latest 3 posts from registry

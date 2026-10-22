@@ -1,0 +1,504 @@
+---
+import Layout from "../layouts/Layout.astro";
+import {
+  HiOutlineCalendarDays,
+  HiOutlineCursorArrowRays,
+  HiOutlineArrowTopRightOnSquare,
+  HiOutlineDocumentText,
+  HiOutlineBuildingOffice,
+  HiOutlineAcademicCap,
+  HiOutlineCheckBadge,
+  HiOutlineSparkles,
+  HiOutlineArrowDownTray,
+  HiOutlineInformationCircle,
+  HiOutlineTableCells,
+  HiOutlineCheckCircle,
+} from "react-icons/hi2";
+
+const title =
+  "MPSC बेलिफ तथा लिपिक परीक्षा २०२६: अधिकृत शिफारस कट-ऑफ (Cutoff Marks) जाहीर (जाहिरात क्र. ०१५/२०२६)";
+const description =
+  "MPSC Bailiff Cum Clerk Group C Exam 2026 Cutoff: महाराष्ट्र लोकसेवा आयोगाने (MPSC) मुंबईच्या शेरिफ कार्यालयातील बेलिफ तथा लिपिक, गट-क परीक्षा २०२६ चा अधिकृत शिफारस कट-ऑफ (Recommendation Cutoff) जाहीर केला आहे. सर्व प्रवर्गांचे कट-ऑफ मार्क्स (Open, SC, ST, OBC, EWS, SEBC, NT, SBC) येथे पाहा.";
+const canonicalURL = "https://mahasandhi.in/mpsc-bailiff-cum-clerk-cutoff-2026";
+const date = "October 19, 2026";
+const category = "MPSC Cutoff";
+
+const cutoffData = [
+  {
+    category: "UNRESERVED",
+    subCategory: "GENERAL",
+    marks: "293.50",
+    badgeClass: "bg-rose-500/10 text-rose-600 border-rose-500/20",
+  },
+  {
+    category: "UNRESERVED",
+    subCategory: "FEMALE",
+    marks: "283.00",
+    badgeClass: "bg-rose-500/10 text-rose-600 border-rose-500/20",
+  },
+  {
+    category: "SC",
+    subCategory: "GENERAL",
+    marks: "267.00",
+    badgeClass: "bg-blue-500/10 text-blue-600 border-blue-500/20",
+  },
+  {
+    category: "SC",
+    subCategory: "FEMALE",
+    marks: "248.00",
+    badgeClass: "bg-blue-500/10 text-blue-600 border-blue-500/20",
+  },
+  {
+    category: "ST",
+    subCategory: "GENERAL",
+    marks: "230.50",
+    badgeClass: "bg-emerald-500/10 text-emerald-600 border-emerald-500/20",
+  },
+  {
+    category: "ST",
+    subCategory: "FEMALE",
+    marks: "218.00",
+    badgeClass: "bg-emerald-500/10 text-emerald-600 border-emerald-500/20",
+  },
+  {
+    category: "DT (A)",
+    subCategory: "GENERAL",
+    marks: "271.00",
+    badgeClass: "bg-purple-500/10 text-purple-600 border-purple-500/20",
+  },
+  {
+    category: "NT (B)",
+    subCategory: "GENERAL",
+    marks: "265.50",
+    badgeClass: "bg-purple-500/10 text-purple-600 border-purple-500/20",
+  },
+  {
+    category: "SBC",
+    subCategory: "GENERAL",
+    marks: "252.50",
+    badgeClass: "bg-amber-500/10 text-amber-600 border-amber-500/20",
+  },
+  {
+    category: "NT (C)",
+    subCategory: "GENERAL",
+    marks: "286.50",
+    badgeClass: "bg-purple-500/10 text-purple-600 border-purple-500/20",
+  },
+  {
+    category: "NT (D)",
+    subCategory: "FEMALE",
+    marks: "263.00",
+    badgeClass: "bg-purple-500/10 text-purple-600 border-purple-500/20",
+  },
+  {
+    category: "OBC",
+    subCategory: "GENERAL",
+    marks: "283.50",
+    badgeClass: "bg-indigo-500/10 text-indigo-600 border-indigo-500/20",
+  },
+  {
+    category: "OBC",
+    subCategory: "FEMALE",
+    marks: "271.50",
+    badgeClass: "bg-indigo-500/10 text-indigo-600 border-indigo-500/20",
+  },
+  {
+    category: "EWS",
+    subCategory: "GENERAL",
+    marks: "253.50",
+    badgeClass: "bg-cyan-500/10 text-cyan-600 border-cyan-500/20",
+  },
+  {
+    category: "EWS",
+    subCategory: "FEMALE",
+    marks: "232.00",
+    badgeClass: "bg-cyan-500/10 text-cyan-600 border-cyan-500/20",
+  },
+  {
+    category: "SEBC",
+    subCategory: "GENERAL",
+    marks: "288.50",
+    badgeClass: "bg-teal-500/10 text-teal-600 border-teal-500/20",
+  },
+  {
+    category: "SEBC",
+    subCategory: "FEMALE",
+    marks: "281.50",
+    badgeClass: "bg-teal-500/10 text-teal-600 border-teal-500/20",
+  },
+];
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonicalURL={canonicalURL}
+  pubDate={date}
+  category={category}
+  image="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&q=80&w=1200"
+  article={true}
+  customBreadcrumbs={[
+    { name: "MPSC", url: "/mpsc" },
+    { name: "Exam Results", url: "/result" },
+    { name: "MPSC बेलिफ तथा लिपिक कट-ऑफ २०२६" },
+  ]}
+>
+  <article class="pt-2 pb-8">
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="flex items-center gap-3 mb-4 flex-wrap">
+        <span
+          class="bg-rose-500/10 text-rose-600 dark:text-rose-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-rose-500/20 flex items-center gap-1.5"
+        >
+          <HiOutlineCheckBadge className="text-sm" />
+          {category} (शिफारस कट-ऑफ)
+        </span>
+        <span
+          class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-primary/20 flex items-center gap-1.5"
+        >
+          <HiOutlineBuildingOffice className="text-sm" /> MPSC (महाराष्ट्र लोकसेवा
+          आयोग)
+        </span>
+        <span class="text-text-muted text-sm flex items-center gap-1">
+          <HiOutlineCalendarDays className="text-sm text-primary" />
+          {date}
+        </span>
+      </div>
+
+      <h1
+        class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-text-main mb-6 leading-[1.25]"
+      >
+        {title}
+      </h1>
+      <p
+        class="text-text-muted text-base sm:text-lg leading-relaxed border-l-4 border-rose-500 pl-4 sm:pl-6 py-2 italic bg-rose-500/5 rounded-r-xl"
+      >
+        {description}
+      </p>
+    </div>
+
+    <!-- Quick Highlights Banner -->
+    <div
+      class="bg-gradient-to-br from-rose-500/10 via-amber-500/5 to-transparent border border-rose-500/20 rounded-2xl sm:rounded-3xl p-4 sm:p-6 mb-8 shadow-xs"
+    >
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+        <div
+          class="p-3 bg-bg-surface/90 backdrop-blur-xs rounded-xl border border-border-card flex flex-col justify-center items-center shadow-xs"
+        >
+          <span
+            class="text-[0.65rem] sm:text-xs text-text-muted block uppercase font-bold tracking-wider mb-1"
+          >
+            जाहिरात क्र. (Advt No.)
+          </span>
+          <span class="text-sm sm:text-base font-black text-primary"
+            >015/2026</span
+          >
+        </div>
+
+        <div
+          class="p-3 bg-bg-surface/90 backdrop-blur-xs rounded-xl border border-border-card flex flex-col justify-center items-center shadow-xs"
+        >
+          <span
+            class="text-[0.65rem] sm:text-xs text-text-muted block uppercase font-bold tracking-wider mb-1"
+          >
+            खुला प्रवर्ग (Open General)
+          </span>
+          <span
+            class="text-base sm:text-lg font-black text-rose-600 dark:text-rose-400"
+            >293.50 Marks</span
+          >
+        </div>
+
+        <div
+          class="p-3 bg-bg-surface/90 backdrop-blur-xs rounded-xl border border-border-card flex flex-col justify-center items-center shadow-xs"
+        >
+          <span
+            class="text-[0.65rem] sm:text-xs text-text-muted block uppercase font-bold tracking-wider mb-1"
+          >
+            OBC General
+          </span>
+          <span
+            class="text-base sm:text-lg font-black text-indigo-600 dark:text-indigo-400"
+            >283.50 Marks</span
+          >
+        </div>
+
+        <div
+          class="p-3 bg-bg-surface/90 backdrop-blur-xs rounded-xl border border-border-card flex flex-col justify-center items-center shadow-xs"
+        >
+          <span
+            class="text-[0.65rem] sm:text-xs text-text-muted block uppercase font-bold tracking-wider mb-1"
+          >
+            प्रसिद्धी दिनांक (Date)
+          </span>
+          <span
+            class="text-sm sm:text-base font-bold text-emerald-600 dark:text-emerald-400"
+            >19 ऑक्टोबर 2026</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Official Summary Card -->
+    <div
+      class="bg-bg-surface border border-border-card rounded-2xl p-5 sm:p-6 mb-8 shadow-xs"
+    >
+      <h2
+        class="text-lg sm:text-xl font-black text-text-main flex items-center gap-2 mb-4"
+      >
+        <HiOutlineInformationCircle className="text-primary text-xl" />
+        परीक्षेचा सविस्तर तपशील (Exam Information)
+      </h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm border-collapse">
+          <tbody>
+            <tr class="border-b border-border-card/40">
+              <td
+                class="py-2.5 px-3 font-bold text-text-muted bg-primary/5 w-1/3"
+                >आयोग (Authority)</td
+              >
+              <td class="py-2.5 px-3 text-text-main font-semibold"
+                >महाराष्ट्र लोकसेवा आयोग (MPSC)</td
+              >
+            </tr>
+            <tr class="border-b border-border-card/40">
+              <td class="py-2.5 px-3 font-bold text-text-muted bg-primary/5"
+                >पदाचे नाव (Post Name)</td
+              >
+              <td class="py-2.5 px-3 text-text-main font-semibold">
+                मुंबईच्या शेरिफ यांच्या कार्यालयातील बेलिफ तथा लिपिक (Bailiff
+                Cum Clerk in the Office of the Sheriff of Mumbai)
+              </td>
+            </tr>
+            <tr class="border-b border-border-card/40">
+              <td class="py-2.5 px-3 font-bold text-text-muted bg-primary/5"
+                >परीक्षा वर्ग (Class / Group)</td
+              >
+              <td class="py-2.5 px-3 text-text-main font-semibold"
+                >गट-क (Group-C Examination - 2026)</td
+              >
+            </tr>
+            <tr class="border-b border-border-card/40">
+              <td class="py-2.5 px-3 font-bold text-text-muted bg-primary/5"
+                >जाहिरात क्रमांक (Advt No.)</td
+              >
+              <td class="py-2.5 px-3 text-text-main font-semibold">015/2026</td>
+            </tr>
+            <tr class="border-b border-border-card/40">
+              <td class="py-2.5 px-3 font-bold text-text-muted bg-primary/5"
+                >घोषणा प्रकार (Notice Type)</td
+              >
+              <td class="py-2.5 px-3 text-rose-600 font-bold"
+                >शिफारस कट-ऑफ (Recommendation Cutoff)</td
+              >
+            </tr>
+            <tr>
+              <td class="py-2.5 px-3 font-bold text-text-muted bg-primary/5"
+                >अधिकृत संकेतस्थळ (Website)</td
+              >
+              <td class="py-2.5 px-3">
+                <a
+                  href="https://mpsc.gov.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-primary hover:underline font-bold"
+                >
+                  mpsc.gov.in
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Official Cutoff Table Section -->
+    <div class="mb-10">
+      <div class="flex items-center justify-between mb-4 flex-wrap gap-2">
+        <h2
+          class="text-lg sm:text-2xl font-black text-text-main m-0 flex items-center gap-2"
+        >
+          <HiOutlineTableCells className="text-rose-500 text-xl" />
+          अधिकृत शिफारस कट-ऑफ गुण (Recommendation Cutoff Marks)
+        </h2>
+        <span
+          class="text-xs bg-rose-500/10 text-rose-600 px-2.5 py-1 rounded-full font-bold border border-rose-500/20"
+        >
+          Advt. No. 015/2026
+        </span>
+      </div>
+
+      <div
+        class="overflow-x-auto border border-border-card rounded-2xl shadow-xs bg-bg-surface"
+      >
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr
+              class="bg-primary/10 text-text-main border-b border-border-card"
+            >
+              <th
+                class="p-3 sm:p-4 font-black text-xs sm:text-sm uppercase tracking-wider text-center w-12"
+                >#</th
+              >
+              <th
+                class="p-3 sm:p-4 font-black text-xs sm:text-sm uppercase tracking-wider"
+                >प्रवर्ग (Category)</th
+              >
+              <th
+                class="p-3 sm:p-4 font-black text-xs sm:text-sm uppercase tracking-wider"
+                >उप-प्रवर्ग (Sub Category)</th
+              >
+              <th
+                class="p-3 sm:p-4 font-black text-xs sm:text-sm uppercase tracking-wider text-right"
+                >कट-ऑफ गुण (Cutoff Marks)</th
+              >
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-border-card/40 text-sm">
+            {
+              cutoffData.map((row, index) => (
+                <tr class="hover:bg-primary/5 transition-colors">
+                  <td class="p-3 sm:p-4 text-center font-bold text-xs text-text-muted">
+                    {index + 1}
+                  </td>
+                  <td class="p-3 sm:p-4 font-extrabold text-text-main">
+                    <span
+                      class={`inline-block px-2.5 py-1 rounded-lg text-xs font-black border ${row.badgeClass}`}
+                    >
+                      {row.category}
+                    </span>
+                  </td>
+                  <td class="p-3 sm:p-4 font-bold text-text-muted text-xs sm:text-sm">
+                    {row.subCategory}
+                  </td>
+                  <td class="p-3 sm:p-4 text-right font-black text-base sm:text-lg text-rose-600 dark:text-rose-400">
+                    {row.marks}
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-text-muted mt-2 italic">
+        * टीप: वरील कट-ऑफ गुण महाराष्ट्र लोकसेवा आयोगाने (MPSC) १९ ऑक्टोबर २०२६
+        रोजी प्रसिद्ध केलेल्या अधिकृत पत्रकानुसार आहेत.
+      </p>
+    </div>
+
+    <!-- Direct Action Download Button -->
+    <div
+      class="p-5 sm:p-6 bg-gradient-to-br from-rose-600 to-primary text-white rounded-2xl shadow-md mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4"
+    >
+      <div>
+        <span
+          class="text-[0.65rem] uppercase font-extrabold tracking-wider bg-white/20 px-2 py-0.5 rounded text-white block w-fit mb-1"
+        >
+          अधिकृत MPSC परिपत्रक
+        </span>
+        <h3 class="text-lg sm:text-xl font-black text-white m-0">
+          MPSC बेलिफ तथा लिपिक शिफारस यादी व कट-ऑफ PDF डाऊनलोड करा
+        </h3>
+        <p class="text-xs text-white/80 m-0 mt-1">
+          mpsc.gov.in वरील अधिकृत निकाल व गुणवत्ता यादी डाउनलोड करण्यासाठी खालील
+          बटणावर क्लिक करा.
+        </p>
+      </div>
+      <a
+        href="https://mpsc.gov.in/candidates_scoring_below_qualifying_marks/125"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-rose-600 font-extrabold rounded-xl hover:bg-white/90 transition-all text-xs uppercase tracking-wider shadow-sm shrink-0 no-underline cursor-pointer"
+      >
+        <span>अधिकृत PDF डाउनलोड करा</span>
+        <HiOutlineArrowTopRightOnSquare className="text-base" />
+      </a>
+    </div>
+
+    <!-- Step by Step Guide -->
+    <div
+      class="bg-bg-surface border border-border-card rounded-2xl p-5 sm:p-6 mb-8 shadow-xs"
+    >
+      <h2
+        class="text-lg sm:text-xl font-black text-text-main flex items-center gap-2 mb-4"
+      >
+        <HiOutlineCheckCircle className="text-emerald-500 text-xl" />
+        MPSC निकाल व कट-ऑफ कसा तपासावा? (How to Check)
+      </h2>
+      <ol
+        class="space-y-3 pl-5 text-sm text-text-muted list-decimal leading-relaxed"
+      >
+        <li>
+          प्रथम महाराष्ट्र लोकसेवा आयोगाच्या अधिकृत संकेतस्थळास भेट द्या: <a
+            href="https://mpsc.gov.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-primary font-bold hover:underline">mpsc.gov.in</a
+          >.
+        </li>
+        <li>
+          मुख्य पृष्ठावरील <strong>'Candidate Information'</strong> टॅबवर क्लिक करा.
+        </li>
+        <li>
+          त्यानंतर <strong>'candidates_scoring_below_qualifying_marks'</strong> पर्याय
+          निवडा.
+        </li>
+        <li>
+          तिथे <strong
+            >'Advt No. 015/2026 - Bailiff Cum Clerk in the Office of Sheriff of
+            Mumbai'</strong
+          > या लिंकवर क्लिक करा.
+        </li>
+        <li>स्क्रीनवर शिफारस यादी आणि अंतिम कट-ऑफ गुणांची अधिकृत PDF उघडेल.</li>
+        <li>
+          आपला रोल नंबर किंवा नाव शोधण्यासाठी <strong>Ctrl + F</strong> चा वापर करा
+          आणि भविष्यासाठी PDF डाउनलोड करून जतन करा.
+        </li>
+      </ol>
+    </div>
+
+    <!-- Official Links Box -->
+    <div class="border border-border-card rounded-2xl p-5 bg-primary/5 mb-8">
+      <h3
+        class="text-base font-bold text-text-main mb-3 flex items-center gap-2"
+      >
+        <HiOutlineDocumentText className="text-primary" /> महत्वाच्या अधिकृत लिंक्स
+        (Important Links)
+      </h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+        <a
+          href="https://mpsc.gov.in/result_of_exam/11"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center justify-between p-3 bg-bg-surface border border-border-card rounded-xl text-primary font-bold hover:bg-primary/5 transition-all no-underline"
+        >
+          <span>MPSC निकाल व शिफारस यादी पोर्टल</span>
+          <HiOutlineArrowTopRightOnSquare className="text-sm" />
+        </a>
+        <a
+          href="https://mpsc.gov.in"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center justify-between p-3 bg-bg-surface border border-border-card rounded-xl text-primary font-bold hover:bg-primary/5 transition-all no-underline"
+        >
+          <span>MPSC अधिकृत मुख्य संकेतस्थळ</span>
+          <HiOutlineArrowTopRightOnSquare className="text-sm" />
+        </a>
+        <a
+          href="/result"
+          class="flex items-center justify-between p-3 bg-bg-surface border border-border-card rounded-xl text-text-main font-bold hover:bg-primary/5 transition-all no-underline"
+        >
+          <span>सर्व चालू निकाल (All Latest Results)</span>
+          <HiOutlineArrowTopRightOnSquare className="text-sm" />
+        </a>
+        <a
+          href="/mpsc"
+          class="flex items-center justify-between p-3 bg-bg-surface border border-border-card rounded-xl text-text-main font-bold hover:bg-primary/5 transition-all no-underline"
+        >
+          <span>सर्व एमपीएससी अपडेट्स (All MPSC Updates)</span>
+          <HiOutlineArrowTopRightOnSquare className="text-sm" />
+        </a>
+      </div>
+    </div>
+  </article>
+</Layout>
