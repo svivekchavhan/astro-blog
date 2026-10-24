@@ -54,6 +54,31 @@ export interface ArticleMeta {
 export const articlesRegistry: ArticleMeta[] = [
   {
     titleEn:
+      "BMC Junior Engineer (Civil) Result 2025: MCGM JE Civil Merit List, Scorecard & Cutoff Search (Test 03 & 08 March 2025)",
+    titleMr:
+      "BMC कनिष्ठ अभियंता (स्थापत्य) निकाल २०२५: मुंबई मनपा JE Civil गुणवत्ता यादी व गुण जाहीर; थेट नाव व रोल नंबरनुसार निकाल शोधा",
+    slug: "/bmc-je-civil-result-2025",
+    category: "Result",
+    date: "October 24, 2026",
+    image:
+      "https://images.unsplash.com/photo-1541888946425-d0fbb18f15f7?auto=format&fit=crop&q=80&w=1200",
+    postName: "BMC Junior Engineer (Civil) / मुंबई मनपा कनिष्ठ अभियंता (स्थापत्य)",
+    descriptionMr:
+      "बृहन्मुंबई महानगरपालिका (BMC) कनिष्ठ अभियंता (स्थापत्य) परीक्षा ०३ व ०८ मार्च २०२५ चा अधिकृत निकाल व गुणवत्ता यादी प्रसिद्ध. २५,०४९ उमेदवारांचे गुण, प्रवर्गनिहाय रँक व कट-ऑफ मार्क्स येथे थेट नाव अथवा रोल नंबर टाकून शोधा आणि फिल्टर केलेली गुणवत्ता यादी PDF डाऊनलोड करा.",
+    postType: "result",
+    priority: "important",
+    isImportant: true,
+    badge: "BMC Result",
+    badgeType: "result",
+    educationTags: ["diploma", "degree", "engg"],
+    districts: ["mumbai", "all-maharashtra"],
+    status: "declared",
+    organisation: "Brihanmumbai Municipal Corporation (BMC / MCGM)",
+    officialWebsiteUrl: "https://portal.mcgm.gov.in",
+    officialResultUrl: "https://portal.mcgm.gov.in",
+  },
+  {
+    titleEn:
       "MPSC Bailiff Cum Clerk Group C Exam 2026: Official Recommendation Cutoff Marks Declared (Advt 015/2026)",
     titleMr:
       "MPSC बेलिफ तथा लिपिक परीक्षा २०२६: अधिकृत शिफारस कट-ऑफ (Cutoff Marks) जाहीर (जाहिरात क्र. ०१५/२०२६)",

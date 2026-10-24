@@ -12,6 +12,18 @@ export interface ImportantUpdate {
 
 export const importantUpdates: ImportantUpdate[] = [
   {
+    id: "je-civil-result-2025",
+    title:
+      "🏆 BMC कनिष्ठ अभियंता (स्थापत्य) निकाल २०२५: मुंबई मनपा JE Civil गुणवत्ता यादी व गुण जाहीर; थेट रोल नंबरनुसार तपासा",
+    link: "/bmc-je-civil-result-2025",
+    date: "October 24, 2026",
+    expiry: "2026-11-30T00:00:00.000Z",
+    show: true,
+    badge: "Result",
+    badgeType: "result",
+    category: "result",
+  },
+  {
     id: "mpsc-bailiff-cum-clerk-cutoff-2026",
     title:
       "🎯 MPSC बेलिफ तथा लिपिक गट-क परीक्षा २०२६: अधिकृत शिफारस कट-ऑफ (Cutoff Marks) जाहीर (जाहिरात ०१५/२०२६)",

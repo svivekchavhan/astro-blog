@@ -1,0 +1,890 @@
+---
+import Layout from "../layouts/Layout.astro";
+import {
+  HiOutlineCalendarDays,
+  HiOutlineMagnifyingGlass,
+  HiOutlineArrowDownTray,
+  HiOutlineArrowPath,
+  HiOutlineCheckBadge,
+  HiOutlineUserGroup,
+  HiOutlineBuildingOffice,
+  HiOutlineArrowTopRightOnSquare,
+  HiOutlineFunnel,
+  HiOutlineQuestionMarkCircle,
+  HiOutlineDocumentText,
+  HiOutlineChevronLeft,
+  HiOutlineChevronRight,
+  HiOutlineExclamationTriangle,
+  HiOutlineShieldCheck
+} from "react-icons/hi2";
+
+const title = "BMC JE Civil Result 2025: MCGM Junior Engineer (Civil) Merit List, Cutoff Marks & Scorecard Search | MahaSandhi";
+const marathiTitle = "BMC कनिष्ठ अभियंता (स्थापत्य) निकाल २०२५: मुंबई मनपा JE Civil गुणवत्ता यादी व गुण जाहीर; थेट नाव व रोल नंबरनुसार निकाल शोधा";
+const description = "BMC JE Civil Result 2025: Brihanmumbai Municipal Corporation (MCGM) Junior Engineer (Civil) CBT Exam held on 03.03.2025 & 08.03.2025 result declared. Search 25,049 candidates marks by Roll Number or Name, filter category-wise cutoffs, rank finder, and download filtered PDF at mahasandhi.in.";
+const canonicalURL = "https://mahasandhi.in/bmc-je-civil-result-2025";
+const pubDate = "October 24, 2026";
+const category = "Result";
+const officialResultPdfUrl = "https://www.mcgm.gov.in/irj/go/km/docs/documents/MCGM%20Department%20List/Chief%20Personnel%20Officer/Recruitment%20Notice/%e0%a4%b8%e0%a4%b0%e0%a4%b3%e0%a4%b8%e0%a5%87%e0%a4%b5%e0%a4%be%20%e0%a4%ad%e0%a4%b0%e0%a4%a4%e0%a5%80%e0%a5%a8%e0%a5%a6%e0%a5%a8%e0%a5%aa-%e0%a5%a8%e0%a5%a6%e0%a5%a8%e0%a5%ab%20%e0%a4%95%e0%a4%a8%e0%a4%bf%e0%a4%b7%e0%a5%8d_%e0%a4%a0%20%e0%a4%85.pdf";
+
+const faqList = [
+  {
+    q: "How can I check my BMC Junior Engineer (Civil) Result 2025?",
+    a: "You can check your result directly on this page using the live search tool above. Enter your 10-digit Roll Number (e.g., 1130000001) or your Name to immediately view your exact marks, category, and overall rank."
+  },
+  {
+    q: "Where can I download the official BMC JE Civil Result PDF?",
+    a: "You can download the official BMC (MCGM) PDF directly using the official link provided at the top of this page or visit the official portal at portal.mcgm.gov.in."
+  },
+  {
+    q: "When was the BMC JE Civil examination conducted?",
+    a: "The Computer Based Test (CBT) for BMC Junior Engineer (Civil) was conducted across examination centers on 03 March 2025 and 08 March 2025."
+  },
+  {
+    q: "How many candidates appeared for the BMC JE Civil exam?",
+    a: "A total of 25,049 candidates appeared in the Brihanmumbai Municipal Corporation Junior Engineer (Civil) examination."
+  },
+  {
+    q: "What should I do if I have any doubt regarding the results?",
+    a: "If you have any doubt regarding the results, merit list, or marks, please visit and verify with the official MCGM portal (portal.mcgm.gov.in) or refer to the official PDF notification issued by the Chief Personnel Officer, BMC."
+  }
+];
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonicalURL={canonicalURL}
+  pubDate={pubDate}
+  category={category}
+  article={true}
+  hideSidebar={true}
+  customBreadcrumbs={[
+    { name: "Exam Results", url: "/result" },
+    { name: "BMC JE Civil Result 2025" }
+  ]}
+>
+  <link rel="preload" href="/data/je-civil-result-2025.json" as="fetch" crossorigin="anonymous" slot="head" />
+
+  <!-- Structured Data Schemas -->
+  <script type="application/ld+json" is:inline set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": title,
+    "description": description,
+    "inLanguage": "en-IN",
+    "datePublished": "2026-10-24T00:00:00+05:30",
+    "dateModified": "2026-10-24T00:00:00+05:30",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": canonicalURL
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "MahaSandhi",
+      "url": "https://mahasandhi.in"
+    }
+  })} />
+
+  <script type="application/ld+json" is:inline set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqList.map(item => ({
+      "@type": "Question",
+      "name": item.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.a
+      }
+    }))
+  })} />
+
+  <article class="pt-2 pb-12 not-prose max-w-[1100px] mx-auto px-4 sm:px-6 md:px-0">
+    <!-- Header Badges -->
+    <div class="mb-6">
+      <div class="flex items-center gap-2.5 mb-4 flex-wrap">
+        <span class="bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-emerald-500/20 flex items-center gap-1.5 shadow-xs">
+          <HiOutlineCheckBadge className="text-sm" /> BMC Result Declared
+        </span>
+        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-primary/20 flex items-center gap-1.5">
+          <HiOutlineBuildingOffice className="text-sm" /> Brihanmumbai Municipal Corporation (BMC / MCGM)
+        </span>
+        <span class="bg-slate-500/10 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-slate-500/20 flex items-center gap-1.5">
+          <HiOutlineCalendarDays className="text-sm" /> Exam: 03.03.2025 &amp; 08.03.2025
+        </span>
+        <span class="bg-amber-500/10 text-amber-600 dark:text-amber-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-amber-500/20 flex items-center gap-1.5">
+          <HiOutlineUserGroup className="text-sm" /> 25,049 Candidates
+        </span>
+      </div>
+
+      <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-text-main mb-4 leading-tight">
+        BMC Junior Engineer (Civil) Result 2025: <span class="gradient-text">Merit List, Cutoff &amp; Score Search</span>
+      </h1>
+      <p class="text-base sm:text-lg text-text-muted leading-relaxed font-medium m-0 border-l-4 border-primary pl-4 sm:pl-5 py-1">
+        {marathiTitle}. बृहन्मुंबई महानगरपालिका (BMC / MCGM) कनिष्ठ अभियंता (स्थापत्य) परीक्षेचा निकाल व गुणवत्ता यादी जाहीर झाली असून एकूण २५,०४९ उमेदवारांचे गुण, प्रवर्गनिहाय कट-ऑफ व रँक खालील सर्च टूलद्वारे थेट नाव किंवा रोल नंबर टाकून तपासा.
+      </p>
+    </div>
+
+    <!-- Official PDF Link & Doubt Alert Banner (Upper Top Side) -->
+    <div class="mb-8 space-y-4">
+      <!-- Direct Official PDF Download Card -->
+      <div class="p-4 sm:p-5 bg-gradient-to-r from-emerald-500/10 via-teal-500/10 to-transparent border-2 border-emerald-500/30 rounded-2xl sm:rounded-3xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-xs">
+        <div class="flex items-start gap-3">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center shrink-0 shadow-xs mt-0.5 sm:mt-0">
+            <HiOutlineDocumentText className="text-xl" />
+          </div>
+          <div>
+            <span class="text-[0.65rem] sm:text-xs font-extrabold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 block mb-0.5">
+              Official PDF Download
+            </span>
+            <h3 class="text-base sm:text-lg font-black text-text-main m-0 leading-snug">
+              BMC JE (Civil) अधिकृत निकाल व गुणवत्ता यादी PDF
+            </h3>
+            <p class="text-xs text-text-muted m-0 mt-0.5">
+              मुंबई महानगरपालिकेच्या मुख्य कार्मिक अधिकारी कार्यालयाद्वारे प्रसिद्ध मूळ अधिकृत निकाल पत्रक
+            </p>
+          </div>
+        </div>
+        <a
+          href={officialResultPdfUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full sm:w-auto btn-primary !bg-gradient-to-r !from-emerald-600 !to-teal-600 hover:!from-emerald-500 hover:!to-teal-500 !text-white !rounded-xl !py-2.5 !px-5 inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-wider no-underline shrink-0 shadow-sm shadow-emerald-500/20 transition-all cursor-pointer"
+        >
+          <HiOutlineArrowDownTray className="text-base shrink-0" />
+          <span>Official Result PDF Download</span>
+          <HiOutlineArrowTopRightOnSquare className="text-sm shrink-0" />
+        </a>
+      </div>
+
+      <!-- Doubt / Official Verification Note Alert -->
+      <div class="p-4 bg-amber-500/10 border border-amber-500/30 rounded-2xl flex items-start gap-3">
+        <HiOutlineExclamationTriangle className="text-amber-600 dark:text-amber-400 text-xl shrink-0 mt-0.5" />
+        <div class="text-xs sm:text-sm text-text-main leading-relaxed">
+          <strong class="font-bold text-amber-700 dark:text-amber-300 block mb-0.5">
+            महत्त्वाची सूचना (Important Notice - Check Official Website If Any Doubt):
+          </strong>
+          उमेदवारांना निकालाबाबत, गुणांबाबत अथवा प्रवर्गाबाबत कोणतीही शंका किंवा आक्षेप असल्यास, कृपया बृहन्मुंबई महानगरपालिकेच्या (BMC) अधिकृत संकेतस्थळाला (<a href="https://portal.mcgm.gov.in" target="_blank" rel="noopener noreferrer" class="text-primary underline font-bold hover:text-secondary">portal.mcgm.gov.in</a> / <a href="https://www.mcgm.gov.in" target="_blank" rel="noopener noreferrer" class="text-primary underline font-bold hover:text-secondary">mcgm.gov.in</a>) भेट देऊन मूळ अधिकृत निकाल पत्रकाची पडताळणी करावी. If you have any doubt regarding the scorecard or merit list, always verify with the official MCGM website.
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Stats Cards -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-8">
+      <div class="p-4 bg-bg-surface border border-border-card rounded-2xl shadow-xs text-center flex flex-col justify-center items-center">
+        <span class="text-[0.7rem] sm:text-xs text-text-muted uppercase font-bold tracking-wider mb-1">एकूण उमेदवार (Candidates)</span>
+        <span class="text-xl sm:text-3xl font-black text-primary">25,049</span>
+      </div>
+      <div class="p-4 bg-bg-surface border border-border-card rounded-2xl shadow-xs text-center flex flex-col justify-center items-center">
+        <span class="text-[0.7rem] sm:text-xs text-text-muted uppercase font-bold tracking-wider mb-1">सर्वोच्च गुण (Top Score)</span>
+        <span class="text-xl sm:text-3xl font-black text-emerald-600 dark:text-emerald-400">80.00 <span class="text-xs text-text-muted">/ 100</span></span>
+      </div>
+      <div class="p-4 bg-bg-surface border border-border-card rounded-2xl shadow-xs text-center flex flex-col justify-center items-center">
+        <span class="text-[0.7rem] sm:text-xs text-text-muted uppercase font-bold tracking-wider mb-1">सरासरी गुण (Average)</span>
+        <span class="text-xl sm:text-3xl font-black text-amber-500">27.34</span>
+      </div>
+      <div class="p-4 bg-bg-surface border border-border-card rounded-2xl shadow-xs text-center flex flex-col justify-center items-center">
+        <span class="text-[0.7rem] sm:text-xs text-text-muted uppercase font-bold tracking-wider mb-1">परीक्षा दिनांक (Exam Date)</span>
+        <span class="text-sm sm:text-base font-black text-text-main">03 &amp; 08 Mar 2025</span>
+      </div>
+    </div>
+
+    <!-- Interactive Search & Filter Container (App) -->
+    <div id="result-app-section" class="scroll-mt-24 mb-12">
+      <div class="bg-bg-surface border-2 border-primary/30 rounded-3xl p-4 sm:p-6 md:p-8 shadow-md">
+        <!-- Panel Header -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 mb-5 border-b border-border-card">
+          <div>
+            <h2 class="text-xl sm:text-2xl font-black text-text-main m-0 flex items-center gap-2">
+              <HiOutlineMagnifyingGlass className="text-primary text-2xl" /> Live BMC Result Search &amp; Filter
+            </h2>
+            <p class="text-xs sm:text-sm text-text-muted m-0 mt-1">
+              Search by candidate name, roll number, category and filter marks instantly.
+            </p>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Instant Filter
+            </span>
+          </div>
+        </div>
+
+        <!-- Filter Controls Row -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-3 sm:gap-4 mb-4">
+          <!-- Search input -->
+          <div class="lg:col-span-2">
+            <label for="q" class="text-xs font-bold text-text-main block mb-1.5">
+              Name / Roll No. Search
+            </label>
+            <div class="relative">
+              <input
+                id="q"
+                type="text"
+                placeholder="e.g. SHINDE or 1130000107"
+                class="w-full pl-9 pr-3 py-2.5 bg-bg-base border border-border-card rounded-xl text-sm text-text-main focus:outline-none focus:border-primary transition-colors"
+              />
+              <HiOutlineMagnifyingGlass className="absolute left-3 top-3 text-text-muted text-base" />
+            </div>
+          </div>
+
+          <!-- Min Marks -->
+          <div>
+            <label for="mn" class="text-xs font-bold text-text-main block mb-1.5">
+              Min Marks
+            </label>
+            <input
+              id="mn"
+              type="number"
+              step="0.25"
+              placeholder="Min"
+              class="w-full px-3 py-2.5 bg-bg-base border border-border-card rounded-xl text-sm text-text-main focus:outline-none focus:border-primary transition-colors"
+            />
+          </div>
+
+          <!-- Max Marks -->
+          <div>
+            <label for="mx" class="text-xs font-bold text-text-main block mb-1.5">
+              Max Marks
+            </label>
+            <input
+              id="mx"
+              type="number"
+              step="0.25"
+              placeholder="Max"
+              class="w-full px-3 py-2.5 bg-bg-base border border-border-card rounded-xl text-sm text-text-main focus:outline-none focus:border-primary transition-colors"
+            />
+          </div>
+
+          <!-- Gender Select -->
+          <div>
+            <label for="g" class="text-xs font-bold text-text-main block mb-1.5">
+              Gender
+            </label>
+            <select
+              id="g"
+              class="w-full px-3 py-2.5 bg-bg-base border border-border-card rounded-xl text-sm text-text-main focus:outline-none focus:border-primary transition-colors cursor-pointer"
+            >
+              <option value="">All Genders</option>
+              <option value="M">Male</option>
+              <option value="F">Female</option>
+              <option value="O">Others</option>
+            </select>
+          </div>
+
+          <!-- Sort Select -->
+          <div>
+            <label for="s" class="text-xs font-bold text-text-main block mb-1.5">
+              Sort By
+            </label>
+            <select
+              id="s"
+              class="w-full px-3 py-2.5 bg-bg-base border border-border-card rounded-xl text-sm text-text-main focus:outline-none focus:border-primary transition-colors cursor-pointer"
+            >
+              <option value="md">Marks (High → Low)</option>
+              <option value="ma">Marks (Low → High)</option>
+              <option value="na">Name (A → Z)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Reset & Quick Actions -->
+        <div class="flex items-center justify-between flex-wrap gap-2 pt-2 pb-4">
+          <div class="text-xs font-bold text-text-muted flex items-center gap-1.5">
+            <HiOutlineFunnel className="text-primary text-base" />
+            <span>Select Category Filter:</span>
+          </div>
+          <button
+            id="rs"
+            type="button"
+            class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-text-muted hover:text-rose-500 bg-bg-base hover:bg-rose-500/10 border border-border-card hover:border-rose-500/30 rounded-lg transition-colors cursor-pointer"
+          >
+            <HiOutlineArrowPath className="text-sm" /> Reset All Filters
+          </button>
+        </div>
+
+        <!-- Category Chips -->
+        <div id="chips" class="flex flex-wrap gap-1.5 sm:gap-2 mb-3">
+          <!-- Dynamic category chips will be injected here -->
+        </div>
+
+        <!-- Quick Filter Shortcuts -->
+        <div class="flex flex-wrap gap-2 pt-1 pb-4 border-b border-border-card">
+          <button
+            type="button"
+            id="vj"
+            class="px-3 py-1 bg-amber-500/10 hover:bg-amber-500/20 text-amber-600 dark:text-amber-400 border border-amber-500/30 rounded-full text-xs font-bold transition-all cursor-pointer flex items-center gap-1"
+          >
+            <span>⚡ VJNT Only</span>
+            <span class="text-[0.65rem] opacity-75">(VJ-A + NT-B/C/D)</span>
+          </button>
+          <button
+            type="button"
+            id="all"
+            class="px-3 py-1 bg-bg-base hover:bg-primary/10 text-text-main hover:text-primary border border-border-card hover:border-primary/30 rounded-full text-xs font-bold transition-all cursor-pointer"
+          >
+            Select All Categories
+          </button>
+          <button
+            type="button"
+            id="none"
+            class="px-3 py-1 bg-bg-base hover:bg-rose-500/10 text-text-main hover:text-rose-500 border border-border-card hover:border-rose-500/30 rounded-full text-xs font-bold transition-all cursor-pointer"
+          >
+            Clear All
+          </button>
+        </div>
+
+        <!-- Info Bar (Showing count & PDF Export) -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 py-4 my-2">
+          <div id="cnt" class="text-xs sm:text-sm font-semibold text-text-main flex items-center gap-2">
+            <span class="inline-block w-2.5 h-2.5 rounded-full bg-primary animate-ping"></span>
+            Loading candidates database...
+          </div>
+          <button
+            id="pdf"
+            type="button"
+            class="btn-primary !bg-gradient-to-r !from-rose-600 !to-red-600 hover:!from-rose-500 hover:!to-red-500 !border-transparent !rounded-xl !py-2.5 !px-5 inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-wider text-white shadow-sm shadow-rose-600/20 cursor-pointer transition-all"
+          >
+            <HiOutlineArrowDownTray className="text-base shrink-0" />
+            <span>Download PDF (Filtered List)</span>
+          </button>
+        </div>
+
+        <!-- Table Container -->
+        <div class="relative overflow-x-auto rounded-2xl border border-border-card shadow-xs bg-bg-surface">
+          <table class="w-full text-left text-xs sm:text-sm border-collapse">
+            <thead>
+              <tr class="bg-slate-900 text-white font-bold border-b border-slate-700">
+                <th data-s="r" class="py-3 px-3 sm:px-4 cursor-pointer hover:bg-slate-800 transition-colors whitespace-nowrap">
+                  Rank ⬍
+                </th>
+                <th class="py-3 px-3 sm:px-4 whitespace-nowrap">Roll No.</th>
+                <th data-s="n" class="py-3 px-3 sm:px-4 cursor-pointer hover:bg-slate-800 transition-colors">
+                  Candidate Name ⬍
+                </th>
+                <th class="py-3 px-3 sm:px-4 text-center whitespace-nowrap">Gender</th>
+                <th class="py-3 px-3 sm:px-4 text-center whitespace-nowrap">Category</th>
+                <th data-s="m" class="py-3 px-3 sm:px-4 text-right cursor-pointer hover:bg-slate-800 transition-colors whitespace-nowrap">
+                  Marks (100) ⬍
+                </th>
+              </tr>
+            </thead>
+            <tbody id="tb" class="divide-y divide-border-card text-text-main">
+              <tr>
+                <td colspan="6" class="py-12 text-center text-text-muted">
+                  <div class="inline-flex items-center gap-2">
+                    <span class="w-4 h-4 border-2 border-primary border-t-transparent rounded-full animate-spin"></span>
+                    <span>Loading candidate scores...</span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Pagination Controls -->
+        <div class="flex items-center justify-between flex-wrap gap-3 pt-6 mt-2">
+          <button
+            id="pv"
+            type="button"
+            disabled
+            class="px-4 py-2 bg-bg-base border border-border-card text-text-main rounded-xl text-xs font-bold hover:border-primary disabled:opacity-40 disabled:cursor-not-allowed transition-all inline-flex items-center gap-1.5 cursor-pointer shadow-xs"
+          >
+            <HiOutlineChevronLeft className="text-sm" /> Previous
+          </button>
+          <span id="pn" class="text-xs sm:text-sm font-bold text-text-muted px-3 py-1.5 bg-bg-base border border-border-card rounded-xl">
+            Page 1 / 1
+          </span>
+          <button
+            id="nx"
+            type="button"
+            disabled
+            class="px-4 py-2 bg-bg-base border border-border-card text-text-main rounded-xl text-xs font-bold hover:border-primary disabled:opacity-40 disabled:cursor-not-allowed transition-all inline-flex items-center gap-1.5 cursor-pointer shadow-xs"
+          >
+            Next <HiOutlineChevronRight className="text-sm" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step-by-Step Guide -->
+    <div class="bg-bg-surface border border-border-card rounded-3xl p-6 sm:p-8 mb-12 shadow-xs">
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <HiOutlineDocumentText className="text-primary text-2xl" /> How to Search &amp; Download BMC JE Civil Result (कसा तपासावा निकाल?)
+      </h2>
+      <ol class="space-y-3 text-sm sm:text-base text-text-muted leading-relaxed pl-5 list-decimal m-0 font-medium">
+        <li>
+          <strong class="text-text-main">रोल नंबर किंवा नावाने शोधणे:</strong> वरील सर्च बॉक्समध्ये आपला परीक्षेचा १० अंकी रोल नंबर (उदा. 1130000001) अथवा आडनाव/नाव इंग्रजीत टाईप करा. परिणाम तत्काळ स्क्रीनवर दिसतील.
+        </li>
+        <li>
+          <strong class="text-text-main">प्रवर्गनिहाय फिल्टर (Category Filter):</strong> केवळ आपल्या प्रवर्गाचे (उदा. OBC, SC, SEBC, VJNT) गुण पाहण्यासाठी संबंधित कॅटेगरी चिपवर क्लिक करा.
+        </li>
+        <li>
+          <strong class="text-text-main">VJNT शॉर्टकट:</strong> VJ-A, NT-B, NT-C व NT-D चे एकत्रित गुण पाहण्यासाठी <code class="px-1.5 py-0.5 bg-amber-500/10 text-amber-600 font-bold rounded">⚡ VJNT Only</code> बटनावर क्लिक करा.
+        </li>
+        <li>
+          <strong class="text-text-main">कमीतकमी / जास्तीत जास्त गुण फिल्टर:</strong> Min Marks व Max Marks टाकून कट-ऑफ रेंजमधील उमेदवार त्वरित तपासा.
+        </li>
+        <li>
+          <strong class="text-text-main">पीडीएफ डाऊनलोड करा (Download PDF):</strong> आपण लावलेल्या फिल्टरनुसार निवडक गुणवत्ता यादी डाऊनलोड करण्यासाठी <code class="px-1.5 py-0.5 bg-rose-500/10 text-rose-600 font-bold rounded">Download PDF</code> बटनावर क्लिक करा.
+        </li>
+      </ol>
+    </div>
+
+    <!-- Frequently Asked Questions (FAQ) -->
+    <div class="bg-bg-surface border border-border-card rounded-3xl p-6 sm:p-8 mb-12 shadow-xs">
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-6 flex items-center gap-2">
+        <HiOutlineQuestionMarkCircle className="text-primary text-2xl" /> Frequently Asked Questions (नेहमी विचारले जाणारे प्रश्न)
+      </h2>
+      <div class="space-y-4">
+        {faqList.map((faq, index) => (
+          <div class="p-4 sm:p-5 bg-bg-base/70 border border-border-card rounded-2xl">
+            <h3 class="text-base sm:text-lg font-bold text-text-main mb-2 m-0 flex items-start gap-2">
+              <span class="text-primary font-black">Q{index + 1}.</span>
+              <span>{faq.q}</span>
+            </h3>
+            <p class="text-xs sm:text-sm text-text-muted m-0 leading-relaxed pl-6">
+              {faq.a}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Official Portal & Related Results -->
+    <div class="bg-gradient-to-r from-primary/10 via-primary/5 to-transparent border border-primary/20 rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        <h3 class="text-lg sm:text-xl font-bold text-text-main m-0 mb-1">इतर शासकीय परीक्षा निकाल पाहण्यासाठी</h3>
+        <p class="text-xs sm:text-sm text-text-muted m-0">सर्व चालू व मागील निकाल, गुणवत्ता यादी व कट-ऑफ मार्क्स एकाच ठिकाणी पहा.</p>
+      </div>
+      <a
+        href="/result"
+        class="btn-primary !bg-primary hover:!bg-primary/90 !rounded-xl !py-3 !px-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-white no-underline shrink-0 shadow-sm"
+      >
+        <span>All Exam Results Hub</span>
+        <HiOutlineArrowTopRightOnSquare className="text-sm" />
+      </a>
+    </div>
+  </article>
+
+  <!-- Client Script for Interactive Live Search, Filtering, and PDF Generation -->
+  <script is:inline>
+    (function() {
+      let D = [];
+      const CATS = ["OPEN", "EWS", "OBC", "SEBC", "SC", "ST", "VJ-A", "NT-B", "NT-C", "NT-D", "SBC"];
+      const VJ = ["VJ-A", "NT-B", "NT-C", "NT-D"];
+      const GN = { M: "Male", F: "Female", O: "Others" };
+      const PS = 100;
+
+      let rk = [];
+      let sel = new Set(CATS);
+      let page = 1;
+      let F = [];
+
+      const $ = (id) => document.getElementById(id);
+
+      // Render category chips
+      function chips() {
+        const c = $("chips");
+        if (!c) return;
+        c.innerHTML = "";
+        CATS.forEach((k) => {
+          const n = D.filter((r) => r[3] === k).length;
+          const e = document.createElement("button");
+          e.type = "button";
+          const isOn = sel.has(k);
+          e.className =
+            "px-3 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer border " +
+            (isOn
+              ? "bg-primary text-white border-primary shadow-xs"
+              : "bg-bg-base text-text-main border-border-card hover:border-primary/50");
+          e.innerHTML = `<span>${k}</span> <span class="text-[0.65rem] opacity-80">(${n.toLocaleString()})</span>`;
+          e.onclick = () => {
+            if (sel.has(k)) {
+              sel.delete(k);
+            } else {
+              sel.add(k);
+            }
+            page = 1;
+            chips();
+            run();
+          };
+          c.appendChild(e);
+        });
+      }
+
+      // Filter and sort
+      function run() {
+        const qEl = $("q");
+        const mnEl = $("mn");
+        const mxEl = $("mx");
+        const gEl = $("g");
+        const sEl = $("s");
+
+        const q = qEl ? qEl.value.trim().toLowerCase() : "";
+        const mn = mnEl ? mnEl.value : "";
+        const mx = mxEl ? mxEl.value : "";
+        const g = gEl ? gEl.value : "";
+        const s = sEl ? sEl.value : "md";
+
+        F = [];
+        for (let i = 0; i < D.length; i++) {
+          const r = D[i];
+          if (!sel.has(r[3])) continue;
+          if (g && r[2] !== g) continue;
+          if (mn !== "" && r[4] < +mn) continue;
+          if (mx !== "" && r[4] > +mx) continue;
+          if (q && !(r[1].toLowerCase().includes(q) || String(r[0]).includes(q))) continue;
+          F.push(i);
+        }
+
+        if (s === "md") {
+          F.sort((a, b) => D[b][4] - D[a][4]);
+        } else if (s === "ma") {
+          F.sort((a, b) => D[a][4] - D[b][4]);
+        } else {
+          F.sort((a, b) => D[a][1].localeCompare(D[b][1]));
+        }
+
+        const tp = Math.max(1, Math.ceil(F.length / PS));
+        if (page > tp) page = tp;
+        draw();
+      }
+
+      function row(i) {
+        const r = D[i];
+        const genderLabel = GN[r[2]] || r[2];
+        return `
+          <tr class="hover:bg-primary/5 transition-colors">
+            <td class="py-2.5 px-3 sm:px-4 font-black">
+              <span class="inline-flex items-center justify-center min-w-[28px] h-6 px-1.5 rounded bg-bg-base border border-border-card text-xs">
+                #${rk[i]}
+              </span>
+            </td>
+            <td class="py-2.5 px-3 sm:px-4 font-mono font-bold text-text-muted">${r[0]}</td>
+            <td class="py-2.5 px-3 sm:px-4 font-bold text-text-main">${r[1]}</td>
+            <td class="py-2.5 px-3 sm:px-4 text-center text-text-muted text-xs">${genderLabel}</td>
+            <td class="py-2.5 px-3 sm:px-4 text-center">
+              <span class="px-2 py-0.5 rounded text-[0.7rem] font-bold bg-primary/10 text-primary border border-primary/20">
+                ${r[3]}
+              </span>
+            </td>
+            <td class="py-2.5 px-3 sm:px-4 text-right font-black text-emerald-600 dark:text-emerald-400">
+              ${r[4].toFixed(2)}
+            </td>
+          </tr>
+        `;
+      }
+
+      function draw() {
+        const tp = Math.max(1, Math.ceil(F.length / PS));
+        const st = (page - 1) * PS;
+        const tb = $("tb");
+        if (tb) {
+          tb.innerHTML =
+            F.slice(st, st + PS).map(row).join("") ||
+            '<tr><td colspan="6" class="py-8 text-center text-text-muted font-bold">No candidates found matching the selected criteria</td></tr>';
+        }
+
+        const cnt = $("cnt");
+        if (cnt) {
+          cnt.innerHTML = `Showing: <b class="text-primary">${F.length.toLocaleString()}</b> of <b>${D.length.toLocaleString()}</b> candidates`;
+        }
+
+        const pn = $("pn");
+        if (pn) {
+          pn.textContent = `Page ${page} of ${tp}`;
+        }
+
+        const pv = $("pv");
+        const nx = $("nx");
+        if (pv) pv.disabled = page <= 1;
+        if (nx) nx.disabled = page >= tp;
+      }
+
+      function desc() {
+        const q = $("q") ? $("q").value.trim() : "";
+        const mn = $("mn") ? $("mn").value : "";
+        const mx = $("mx") ? $("mx").value : "";
+        const g = $("g") ? $("g").value : "";
+        const cs = sel.size === CATS.length ? "All Categories" : [...sel].join(", ");
+        return (
+          "BMC JE Civil | Category: " +
+          cs +
+          (q ? " | Search: " + q : "") +
+          (mn !== "" ? " | Min: " + mn : "") +
+          (mx !== "" ? " | Max: " + mx : "") +
+          (g ? " | Gender: " + GN[g] : "") +
+          " | Total: " +
+          F.length.toLocaleString() +
+          " candidates"
+        );
+      }
+
+      // Load vendor script dynamically
+      function loadScript(src) {
+        return new Promise((resolve, reject) => {
+          if (document.querySelector(`script[src="${src}"]`)) {
+            resolve();
+            return;
+          }
+          const s = document.createElement("script");
+          s.src = src;
+          s.onload = () => resolve();
+          s.onerror = (e) => reject(e);
+          document.head.appendChild(s);
+        });
+      }
+
+      // PDF export handler
+      async function exportPDF() {
+        if (!F.length) {
+          alert("No results to export.");
+          return;
+        }
+
+        const b = $("pdf");
+        const oldText = b.innerHTML;
+        b.disabled = true;
+        b.textContent = "Loading PDF Generator...";
+
+        try {
+          if (!window.jspdf) {
+            await loadScript("/vendor/jspdf.umd.min.js");
+          }
+          if (!window.jspdf || !window.jspdf.jsPDF.API.autoTable) {
+            await loadScript("/vendor/jspdf.plugin.autotable.min.js");
+          }
+
+          b.textContent = "Creating PDF Table...";
+
+          setTimeout(() => {
+            try {
+              const { jsPDF } = window.jspdf;
+              const doc = new jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
+
+              doc.setFontSize(14);
+              doc.setFont("helvetica", "bold");
+              doc.text("BMC Junior Engineer (Civil) - Result & Merit List 2025 (MCGM)", 10, 12);
+
+              doc.setFontSize(8);
+              doc.setFont("helvetica", "normal");
+              doc.text(doc.splitTextToSize(desc(), 190), 10, 17);
+
+              doc.autoTable({
+                startY: 23,
+                margin: { left: 10, right: 10, top: 12, bottom: 12 },
+                theme: "grid",
+                head: [["Sr.", "Rank", "Roll No.", "Candidate Name", "Gender", "Category", "Marks"]],
+                body: F.map((i, n) => {
+                  const r = D[i];
+                  return [n + 1, rk[i], r[0], r[1], GN[r[2]] || r[2], r[3], r[4].toFixed(2)];
+                }),
+                styles: {
+                  font: "helvetica",
+                  fontSize: 8,
+                  cellPadding: 1.6,
+                  lineColor: [220, 220, 220],
+                  lineWidth: 0.1
+                },
+                headStyles: {
+                  fillColor: [31, 56, 100],
+                  textColor: 255,
+                  fontStyle: "bold",
+                  halign: "center"
+                },
+                alternateRowStyles: {
+                  fillColor: [248, 250, 252]
+                },
+                columnStyles: {
+                  0: { cellWidth: 12, halign: "center" },
+                  1: { cellWidth: 14, halign: "center" },
+                  2: { cellWidth: 28 },
+                  3: { cellWidth: 68 },
+                  4: { cellWidth: 18, halign: "center" },
+                  5: { cellWidth: 22, halign: "center" },
+                  6: { cellWidth: 24, halign: "right", fontStyle: "bold" }
+                },
+                showHead: "everyPage",
+                didDrawPage: (data) => {
+                  doc.setFontSize(8);
+                  doc.text(
+                    "Page " + doc.internal.getNumberOfPages() + " | MahaSandhi.in (BMC Result)",
+                    200,
+                    290,
+                    { align: "right" }
+                  );
+                }
+              });
+
+              const n = new Date();
+              const z = (x) => String(x).padStart(2, "0");
+              const filename =
+                z(n.getDate()) +
+                "-" +
+                z(n.getMonth() + 1) +
+                "-" +
+                n.getFullYear() +
+                " " +
+                z(n.getHours()) +
+                "-" +
+                z(n.getMinutes()) +
+                " - BMC JE Civil Result Filtered.pdf";
+
+              doc.save(filename);
+            } catch (err) {
+              alert("PDF Generation error: " + err.message);
+            } finally {
+              b.disabled = false;
+              b.innerHTML = oldText;
+            }
+          }, 50);
+        } catch (err) {
+          alert("Error loading PDF tools: " + err.message);
+          b.disabled = false;
+          b.innerHTML = oldText;
+        }
+      }
+
+      // Initialize dataset
+      async function init() {
+        try {
+          const res = await fetch("/data/je-civil-result-2025.json");
+          if (!res.ok) throw new Error("Network response was not ok");
+          D = await res.json();
+
+          // Calculate overall ranks (same marks = same rank)
+          const srt = D.map((r, i) => i).sort((a, b) => D[b][4] - D[a][4]);
+          rk = new Array(D.length);
+          let last = null;
+          let lr = 0;
+          srt.forEach((i, p) => {
+            if (D[i][4] !== last) {
+              lr = p + 1;
+              last = D[i][4];
+            }
+            rk[i] = lr;
+          });
+
+          // Render UI
+          chips();
+          run();
+
+          // Bind event listeners
+          ["q", "mn", "mx", "g", "s"].forEach((id) => {
+            const el = $(id);
+            if (el) {
+              el.addEventListener("input", () => {
+                page = 1;
+                run();
+              });
+            }
+          });
+
+          const pv = $("pv");
+          if (pv) {
+            pv.onclick = () => {
+              if (page > 1) {
+                page--;
+                draw();
+                const appSec = $("result-app-section");
+                if (appSec) appSec.scrollIntoView({ behavior: "smooth" });
+              }
+            };
+          }
+
+          const nx = $("nx");
+          if (nx) {
+            nx.onclick = () => {
+              const tp = Math.max(1, Math.ceil(F.length / PS));
+              if (page < tp) {
+                page++;
+                draw();
+                const appSec = $("result-app-section");
+                if (appSec) appSec.scrollIntoView({ behavior: "smooth" });
+              }
+            };
+          }
+
+          const vj = $("vj");
+          if (vj) {
+            vj.onclick = () => {
+              sel.clear();
+              VJ.forEach((k) => sel.add(k));
+              page = 1;
+              chips();
+              run();
+            };
+          }
+
+          const allBtn = $("all");
+          if (allBtn) {
+            allBtn.onclick = () => {
+              CATS.forEach((k) => sel.add(k));
+              page = 1;
+              chips();
+              run();
+            };
+          }
+
+          const noneBtn = $("none");
+          if (noneBtn) {
+            noneBtn.onclick = () => {
+              sel.clear();
+              page = 1;
+              chips();
+              run();
+            };
+          }
+
+          const rsBtn = $("rs");
+          if (rsBtn) {
+            rsBtn.onclick = () => {
+              ["q", "mn", "mx", "g"].forEach((id) => {
+                const el = $(id);
+                if (el) el.value = "";
+              });
+              const sEl = $("s");
+              if (sEl) sEl.value = "md";
+              CATS.forEach((k) => sel.add(k));
+              page = 1;
+              chips();
+              run();
+            };
+          }
+
+          document.querySelectorAll("th[data-s]").forEach((th) => {
+            th.onclick = () => {
+              const sEl = $("s");
+              if (!sEl) return;
+              const type = th.dataset.s;
+              if (type === "m") {
+                sEl.value = sEl.value === "md" ? "ma" : "md";
+              } else if (type === "n") {
+                sEl.value = "na";
+              } else if (type === "r") {
+                sEl.value = "md";
+              }
+              page = 1;
+              run();
+            };
+          });
+
+          const pdfBtn = $("pdf");
+          if (pdfBtn) {
+            pdfBtn.onclick = exportPDF;
+          }
+        } catch (e) {
+          const tb = $("tb");
+          if (tb) {
+            tb.innerHTML = `<tr><td colspan="6" class="py-8 text-center text-rose-500 font-bold">Error loading database: ${e.message}</td></tr>`;
+          }
+        }
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", init);
+      } else {
+        init();
+      }
+    })();
+  </script>
+</Layout>

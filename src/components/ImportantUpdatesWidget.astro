@@ -8,7 +8,7 @@ import {
 } from "react-icons/hi2";
 import { importantUpdates } from "../constants/importantUpdates";
 import { isWithin7Days, isNotExpired } from "../utils/dateUtils";
-import { getAllPosts } from "../utils/postUtils";
+import { getAllPosts, getRecruitmentPosts } from "../utils/postUtils";
 
 interface Props {
   pageSize?: number;
@@ -72,7 +72,7 @@ const activeUpdates = importantUpdates.filter((update) => {
 const totalItems = activeUpdates.length;
 const totalPages = Math.ceil(totalItems / pageSize);
 
-const latestPosts = getAllPosts().slice(0, 3);
+const latestPosts = getRecruitmentPosts().slice(0, 3);
 ---
 
 {activeUpdates.length > 0 && (
