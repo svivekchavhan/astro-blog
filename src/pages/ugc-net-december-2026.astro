@@ -1,0 +1,1160 @@
+---
+import ArticleContainer from "../components/ArticleContainer.astro";
+import { 
+  HiOutlineCalendarDays, 
+  HiOutlineArrowTopRightOnSquare, 
+  HiOutlineAcademicCap, 
+  HiOutlineBriefcase, 
+  HiOutlineBuildingOffice, 
+  HiOutlineCheckCircle, 
+  HiOutlineDocumentText, 
+  HiOutlineCurrencyRupee, 
+  HiOutlineUserGroup,
+  HiOutlineQuestionMarkCircle,
+  HiOutlineExclamationTriangle,
+  HiOutlineSparkles,
+  HiOutlineShieldCheck,
+  HiOutlineClock
+} from "react-icons/hi2";
+
+const title = "UGC NET December 2026: Online Application Form, Exam Date (14-19 Dec), JRF, Assistant Professor & PhD Eligibility";
+const description = "NTA UGC NET December 2026 Notification Out: Apply online for JRF, Assistant Professor & PhD Admission eligibility. Check category-wise criteria, 4-year degree eligibility, age relaxation, exam pattern, fees, and apply online at ugcnet.nta.nic.in.";
+const canonicalURL = "https://mahasandhi.in/ugc-net-december-2026";
+const date = "October 28, 2026";
+const category = "Exam Alert";
+const image = "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=1200";
+
+// JSON-LD Schemas for Schema.org SEO Validation
+const examinationSchema = {
+  "@context": "https://schema.org",
+  "@type": "EducationalOccupationalCredential",
+  "name": "UGC NET December 2026 (Junior Research Fellowship, Assistant Professor & PhD Admission)",
+  "description": "National Testing Agency (NTA) conducts UGC NET December 2026 across 83 subjects in Computer Based Test (CBT) mode from 14 to 19 December 2026 for eligibility of JRF, Assistant Professor and PhD admissions.",
+  "credentialCategory": "National Eligibility Test",
+  "recognizedBy": {
+    "@type": "Organization",
+    "name": "University Grants Commission (UGC) & National Testing Agency (NTA)",
+    "url": "https://ugcnet.nta.nic.in"
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "UGC NET डिसेंबर २०२६ ही परीक्षा कशासाठी घेतली जाते? (What is UGC NET?)",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "UGC NET ही राष्ट्रीय स्तरावरील पात्रता परीक्षा (Eligibility Test) असून याद्वारे: १) जुनियर रिसर्च फेलोशिप (JRF) + सहाय्यक प्राध्यापक + PhD प्रवेश, २) केवळ सहाय्यक प्राध्यापक + PhD प्रवेश, आणि ३) थेट PhD प्रवेश या तीन श्रेणींसाठी पात्रता निश्चित केली जाते. ही थेट पदभरती नसून पात्रता परीक्षा आहे."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "UGC NET परीक्षेसाठी शैक्षणिक पात्रता काय आहे?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "सर्वसाधारण / EWS उमेदवारांसाठी पदव्युत्तर पदवीमध्ये (Master's Degree) किमान ५५% गुण, तर OBC-NCL, SC, ST, PwD आणि तृतीयपंथी उमेदवारांसाठी किमान ५०% गुण आवश्यक आहेत. अंतिम वर्षात शिकणारे उमेदवारही तात्पुरते (Provisional) अर्ज करू शकतात. तसेच ४ वर्षांची पदवी (75% गुणांसह) उत्तीर्ण उमेदवार JRF व PhD साठी पात्र आहेत."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "सहाय्यक प्राध्यापक पदासाठी वयाची काही अट आहे का?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "नाही. सहाय्यक प्राध्यापक (Assistant Professor) आणि थेट PhD प्रवेशासाठी कोणतीही कमाल वयोमर्यादा (No Upper Age Limit) नाही. केवळ JRF साठी कमाल ३० वर्षे वयोमर्यादा असून राखीव प्रवर्गांना व महिलांना ५ वर्षांपर्यंत सवलत मिळते."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "UGC NET परीक्षेत निगेटिव्ह मार्किंग (Negative Marking) असते का?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "नाही. UGC NET परीक्षेत कोणतीही नकारात्मक गुण पद्धत (No Negative Marking) नाही. प्रत्येक अचूक उत्तरासाठी २ गुण दिले जातात."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "अर्ज करण्याची शेवटची तारीख काय आहे?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "नियमित शुल्कासह ऑनलाईन अर्ज करण्याची अंतिम तारीख २८ ऑक्टोबर २०२६ (रात्री ११:५० वाजेपर्यंत) आहे, तर ५०० रुपये विलंब शुल्कासह २९ ते ३१ ऑक्टोबर २०२६ पर्यंत अर्ज सादर करता येतील."
+      }
+    }
+  ]
+};
+---
+
+<ArticleContainer
+  title={title}
+  description={description}
+  canonicalURL={canonicalURL}
+  date={date}
+  category={category}
+  image={image}
+  hideRelatedArticles={false}
+  customBreadcrumbs={[
+    { name: "Home", url: "/" },
+    { name: "Exam Alert", url: "/naukri-updates" },
+    { name: "UGC NET December 2026" }
+  ]}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(examinationSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Quick Highlight Overview Card -->
+  <div class="bg-gradient-to-r from-primary/10 via-indigo-500/10 to-primary/5 border border-primary/20 rounded-3xl p-5 sm:p-8 mb-8 not-prose">
+    <div class="flex flex-wrap items-center gap-2 mb-3">
+      <span class="px-3 py-1 bg-primary text-white font-extrabold text-xs uppercase tracking-wider rounded-full shadow-2xs">
+        🎓 राष्ट्रीय पात्रता परीक्षा २०२६
+      </span>
+      <span class="text-xs font-bold text-indigo-700 dark:text-indigo-400 bg-indigo-500/10 border border-indigo-500/20 px-2.5 py-1 rounded-full">
+        JRF • सहाय्यक प्राध्यापक • PhD प्रवेश
+      </span>
+      <span class="text-xs font-bold text-emerald-700 dark:text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-full">
+        निगेटिव्ह मार्किंग नाही
+      </span>
+    </div>
+    <h2 class="text-xl sm:text-2xl md:text-3xl font-black text-text-main mb-3 leading-snug">
+      UGC-NET डिसेंबर २०२६ अधिकृत अधिसूचना जाहीर: जेआरएफ, प्राध्यापक व पीएचडी पात्रतेसाठी ऑनलाईन अर्ज सुरू!
+    </h2>
+    <p class="text-xs sm:text-sm text-text-muted leading-relaxed m-0 font-medium">
+      राष्ट्रीय परीक्षा एजन्सी (NTA) द्वारे विद्यापीठ अनुदान आयोग राष्ट्रीय पात्रता परीक्षा (UGC NET December 2026) ची घोषणा झाली आहे. ही <strong>थेट नोकरी भरती नसून पात्रता परीक्षा (Eligibility Test)</strong> आहे. परीक्षा <strong>१४ ते १९ डिसेंबर २०२६</strong> दरम्यान देशभरात संगणक आधारित (CBT) पद्धतीने घेतली जाईल.
+    </p>
+
+    <!-- Key Metrics Grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6 pt-6 border-t border-border-card/60 text-xs">
+      <div class="bg-bg-surface p-3.5 rounded-xl border border-border-card">
+        <span class="text-text-muted block text-[0.7rem] uppercase font-bold">परीक्षेचे नाव (Exam)</span>
+        <strong class="text-primary text-sm sm:text-base font-black">UGC NET Dec 2026</strong>
+      </div>
+      <div class="bg-bg-surface p-3.5 rounded-xl border border-border-card">
+        <span class="text-text-muted block text-[0.7rem] uppercase font-bold">किमान पात्रता (Qualification)</span>
+        <strong class="text-text-main text-xs sm:text-sm font-extrabold">Master's (55% / 50%)</strong>
+      </div>
+      <div class="bg-bg-surface p-3.5 rounded-xl border border-border-card">
+        <span class="text-text-muted block text-[0.7rem] uppercase font-bold">परीक्षा दिनांक (Exam Date)</span>
+        <strong class="text-indigo-600 dark:text-indigo-400 text-xs sm:text-sm font-extrabold">१४ - १९ डिसेंबर २०२६</strong>
+      </div>
+      <div class="bg-bg-surface p-3.5 rounded-xl border border-border-card">
+        <span class="text-text-muted block text-[0.7rem] uppercase font-bold">अंतिम तारीख (Last Date)</span>
+        <strong class="text-rose-600 dark:text-rose-400 text-xs sm:text-sm font-extrabold">२८ ऑक्टोबर (Late: ३१ ऑक्टोबर)</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- ARTICLE BODY (MARATHI VERSION) -->
+  <div class="space-y-8 text-text-main leading-relaxed">
+    
+    <!-- Introduction Section -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>UGC-NET डिसेंबर २०२६: थोडक्यात माहिती (Overview)</span>
+      </h2>
+      <p class="text-sm sm:text-base leading-relaxed text-text-secondary">
+        नॅशनल टेस्टिंग एजन्सी (NTA) तर्फे विद्यापीठ अनुदान आयोगाच्या (UGC) वतीने भारतीय विद्यापीठे व महाविद्यालयांमध्ये कनिष्ठ संशोधन फेलोशिप (JRF), सहाय्यक प्राध्यापक (Assistant Professor) पात्रता आणि विविध विद्यापीठांमध्ये थेट <strong>पीएचडी (Ph.D.) प्रवेशासाठी</strong> राष्ट्रीय पात्रता परीक्षा म्हणजेच <strong>UGC NET डिसेंबर २०२६</strong> चे आयोजन करण्यात आले आहे.
+      </p>
+      <div class="bg-indigo-500/10 border border-indigo-500/20 rounded-2xl p-4 sm:p-5 text-xs sm:text-sm text-text-secondary font-medium">
+        📌 <strong>महत्त्वाची नोंद:</strong> ही परीक्षा कोणतीही थेट पदभरती (Direct Job Vacancy) नसून एक राष्ट्रीय स्तरावरील पात्रता परीक्षा आहे. त्यामुळे या परीक्षेमध्ये पदांची कोणतीही निश्चित संख्या (Fixed Vacancies) नसते. सहाय्यक प्राध्यापक पात्रतेसाठी परीक्षेत बसलेल्या एकूण उमेदवारांपैकी अव्वल ६% उमेदवार पात्र ठरतात, तर JRF च्या जागांची संख्या UGC च्या निकषांनुसार निश्चित केली जाते.
+      </div>
+    </section>
+
+    <!-- 3 Eligibility Categories Box -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>पात्रतेच्या ३ प्रमुख श्रेणी (3 Eligibility Categories)</span>
+      </h2>
+
+      <p class="text-sm text-text-secondary mb-4">
+        यूजीसीच्या नवीन नियमांनुसार, उमेदवार खालील तीन श्रेणींपैकी एकासाठी पात्र ठरतात:
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 not-prose mb-4">
+        <div class="bg-bg-surface border border-primary/30 p-5 rounded-2xl space-y-2">
+          <span class="w-7 h-7 rounded-full bg-primary text-white font-extrabold flex items-center justify-center text-xs">१</span>
+          <h3 class="text-base font-bold text-text-main m-0">कॅटेगरी - १ (Category-1)</h3>
+          <p class="text-xs text-text-muted leading-relaxed m-0 font-medium">
+            <strong>JRF + सहाय्यक प्राध्यापक + PhD प्रवेश:</strong> उमेदवाराला संशोधन फेलोशिप (JRF) मिळते, तो देशभरातील महाविद्यालयांमध्ये सहाय्यक प्राध्यापक पदासाठी पात्र ठरतो आणि थेट PhD प्रवेशासाठीही पात्र ठरतो.
+          </p>
+        </div>
+
+        <div class="bg-bg-surface border border-indigo-500/30 p-5 rounded-2xl space-y-2">
+          <span class="w-7 h-7 rounded-full bg-indigo-600 text-white font-extrabold flex items-center justify-center text-xs">२</span>
+          <h3 class="text-base font-bold text-text-main m-0">कॅटेगरी - २ (Category-2)</h3>
+          <p class="text-xs text-text-muted leading-relaxed m-0 font-medium">
+            <strong>सहाय्यक प्राध्यापक + PhD प्रवेश (JRF नाही):</strong> उमेदवार सहाय्यक प्राध्यापक नियुक्तीसाठी आजीवन पात्र ठरतो तसेच विद्यापीठांमध्ये PhD प्रवेशासाठी पात्र मानला जातो.
+          </p>
+        </div>
+
+        <div class="bg-bg-surface border border-emerald-500/30 p-5 rounded-2xl space-y-2">
+          <span class="w-7 h-7 rounded-full bg-emerald-600 text-white font-extrabold flex items-center justify-center text-xs">३</span>
+          <h3 class="text-base font-bold text-text-main m-0">कॅटेगरी - ३ (Category-3)</h3>
+          <p class="text-xs text-text-muted leading-relaxed m-0 font-medium">
+            <strong>केवळ PhD प्रवेश (Only PhD Admission):</strong> या श्रेणीतील गुण केवळ विद्यापीठांमध्ये PhD प्रवेशासाठी १ वर्षाच्या कालावधीकरिता ग्राह्य धरले जातात.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Highlights Summary Table -->
+    <section class="not-prose">
+      <div class="bg-bg-surface border border-border-card rounded-2xl overflow-hidden shadow-xs">
+        <div class="bg-primary/10 px-5 py-3 border-b border-border-card flex items-center gap-2">
+          <HiOutlineDocumentText className="text-primary text-lg" />
+          <h3 class="text-sm font-extrabold uppercase tracking-wider text-primary m-0">
+            UGC NET December 2026 Highlight Summary
+          </h3>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs sm:text-sm text-left border-collapse">
+            <tbody class="divide-y divide-border-card/40">
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 w-1/3 text-text-main">परीक्षा संस्था (Exam Body)</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">राष्ट्रीय परीक्षा एजन्सी (National Testing Agency - NTA)</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">परीक्षेचे नाव (Exam Name)</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">UGC - National Eligibility Test (NET) December 2026</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">उद्दिष्ट / उद्दिष्टे (Objective)</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">JRF, सहाय्यक प्राध्यापक पात्रता आणि थेट PhD प्रवेश</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">जागांची संख्या (Vacancies)</td>
+                <td class="px-4 py-3 text-primary font-bold">पात्रता परीक्षा (Fixed Posts नसतात; ६% निकष)</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">परीक्षा पद्धती (Exam Mode)</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">संगणक आधारित परीक्षा (CBT - Computer Based Test)</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">परीक्षेचा कालावधी</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">१८० मिनिटे (३ तास) - पेपर १ व पेपर २ मध्ये कोणतीही सुट्टी नाही</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">प्रश्न व गुण</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">१५० प्रश्न, ३०० गुण (निगेटिव्ह मार्किंग नाही)</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">परीक्षेचे माध्यम (Language Medium)</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">इंग्रजी आणि हिंदी (भाषा विषय वगळून)</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">अधिकृत संकेतस्थळ</td>
+                <td class="px-4 py-3 text-primary font-bold">ugcnet.nta.nic.in</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Important Dates & Schedule -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>महत्त्वाच्या तारखा व वेळापत्रक (Important Dates)</span>
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 not-prose mb-4">
+        <div class="bg-bg-surface border border-emerald-500/30 p-4 rounded-xl flex items-start gap-3">
+          <HiOutlineCalendarDays className="text-emerald-500 text-2xl shrink-0 mt-0.5" />
+          <div>
+            <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">ऑनलाईन अर्ज सुरू (Start Date)</span>
+            <strong class="text-emerald-600 dark:text-emerald-400 text-sm font-extrabold">०८ ऑक्टोबर २०२६</strong>
+          </div>
+        </div>
+
+        <div class="bg-bg-surface border border-rose-500/30 p-4 rounded-xl flex items-start gap-3">
+          <HiOutlineClock className="text-rose-500 text-2xl shrink-0 mt-0.5" />
+          <div>
+            <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">नियमित अर्ज शेवटची तारीख</span>
+            <strong class="text-rose-600 dark:text-rose-400 text-sm font-extrabold">२८ ऑक्टोबर २०२६ (११:५० PM)</strong>
+          </div>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
+          <HiOutlineCurrencyRupee className="text-amber-500 text-2xl shrink-0 mt-0.5" />
+          <div>
+            <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">नियमित फी भरण्याची अंतिम मुदत</span>
+            <strong class="text-text-main text-sm font-extrabold">२८ ऑक्टोबर २०२६ (११:५० PM)</strong>
+          </div>
+        </div>
+
+        <div class="bg-bg-surface border border-amber-500/30 p-4 rounded-xl flex items-start gap-3">
+          <HiOutlineClock className="text-amber-600 text-2xl shrink-0 mt-0.5" />
+          <div>
+            <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">विलंब शुल्कासह अर्ज मुदत (₹५०० Late Fee)</span>
+            <strong class="text-amber-600 dark:text-amber-400 text-sm font-extrabold">२९ ते ३१ ऑक्टोबर २०२६</strong>
+          </div>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
+          <HiOutlineDocumentText className="text-sky-500 text-2xl shrink-0 mt-0.5" />
+          <div>
+            <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">अर्ज दुरुस्ती विंडो (Correction Window)</span>
+            <strong class="text-text-main text-sm font-extrabold">०२ ते ०४ नोव्हेंबर २०२६</strong>
+          </div>
+        </div>
+
+        <div class="bg-bg-surface border border-primary/30 p-4 rounded-xl flex items-start gap-3">
+          <HiOutlineSparkles className="text-primary text-2xl shrink-0 mt-0.5" />
+          <div>
+            <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">CBT परीक्षा दिनांक (Exam Dates)</span>
+            <strong class="text-primary text-sm font-extrabold">१४ ते १९ डिसेंबर २०२६</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Educational Qualification -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>सविस्तर शैक्षणिक पात्रता (Educational Qualification)</span>
+      </h2>
+
+      <div class="space-y-4 not-prose">
+        <div class="bg-bg-surface border border-border-card p-5 rounded-2xl space-y-3">
+          <div class="flex items-center gap-2 text-primary font-bold text-sm">
+            <HiOutlineAcademicCap className="text-xl" />
+            <span>१) पदव्युत्तर पदवीधर (Master's Degree Candidates):</span>
+          </div>
+          <ul class="text-xs sm:text-sm text-text-secondary space-y-2 pl-4 list-disc font-medium">
+            <li>
+              <strong>खुला व EWS प्रवर्ग:</strong> मान्यताप्राप्त विद्यापीठातून Master's Degree (पदव्युत्तर पदवी) मध्ये किमान <strong>५५% गुण</strong> (Rounding off न करता).
+            </li>
+            <li>
+              <strong>OBC-NCL / SC / ST / PwD / PwBD / तृतीयपंथी:</strong> Master's Degree मध्ये किमान <strong>५०% गुण</strong> आवश्यक.
+            </li>
+            <li>
+              <strong>अंतिम वर्षातील विद्यार्थी (Awaiting Results):</strong> जे उमेदवार पदव्युत्तर पदवीच्या अंतिम वर्षात शिकत आहेत अथवा ज्यांचा निकाल प्रलंबित आहे, ते तात्पुरते (Provisional) अर्ज करू शकतात. निकाल जाहीर झाल्यानंतर त्यांनी विहित गुणांसह उत्तीर्ण होऊन २ वर्षांच्या आत पदवी पूर्ण करणे अनिवार्य आहे (Category-3 PhD साठी १ वर्ष).
+            </li>
+            <li>
+              <strong>PhD धारक उमेदवारांसाठी सूट:</strong> ज्या उमेदवारांची Master's पदवी १९ सप्टेंबर १९९१ पूर्वी पूर्ण झालेली आहे, त्यांना गुणांमध्ये ५% सवलत मिळेल (किमान ५०% गुण).
+            </li>
+          </ul>
+        </div>
+
+        <!-- 4-Year Bachelor's Degree Card -->
+        <div class="bg-gradient-to-r from-sky-500/10 via-primary/5 to-bg-surface border-2 border-sky-500/30 p-5 rounded-2xl space-y-2">
+          <div class="flex items-center gap-2 text-sky-600 dark:text-sky-400 font-bold text-sm">
+            <HiOutlineSparkles className="text-xl" />
+            <span>२) ४ वर्षांची पदवी (4-Year / 8-Semester Bachelor's Degree):</span>
+          </div>
+          <p class="text-xs sm:text-sm text-text-secondary leading-relaxed font-medium m-0">
+            ज्या उमेदवारांनी ४ वर्षांचा (८ सत्रांचा) पदवी अभ्यासक्रम (जसे B.E./B.Tech/BS/4-yr BA/B.Sc) पूर्ण केला आहे, त्यांना किमान <strong>७५% गुण</strong> किंवा समकक्ष ग्रेड असणे आवश्यक आहे (SC/ST/OBC-NCL/PwD/EWS साठी ५% सवलत = ७०% गुण).
+          </p>
+          <div class="bg-amber-500/10 border border-amber-500/20 p-2.5 rounded-xl text-xs text-amber-800 dark:text-amber-300 font-bold">
+            ⚠️ लक्ष द्या: ४ वर्षांच्या पदवीच्या आधारे अर्ज करणारे उमेदवार केवळ JRF आणि PhD प्रवेशासाठी पात्र आहेत; ते सहाय्यक प्राध्यापक (Assistant Professor) पदासाठी पात्र ठरणार नाहीत.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Age Limit & Relaxation -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>वयोमर्यादा व नियमानुसार सवलत (Age Limit as on 01.12.2026)</span>
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose mb-4">
+        <!-- JRF Age Limit Card -->
+        <div class="bg-bg-surface border border-border-card p-5 rounded-2xl space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black uppercase tracking-wider text-primary">१) ज्युनियर रिसर्च फेलोशिप (JRF)</span>
+            <span class="text-sm font-black bg-primary/10 text-primary px-2.5 py-0.5 rounded-full">कमाल ३० वर्षे</span>
+          </div>
+          <p class="text-xs sm:text-sm text-text-secondary font-medium m-0">
+            ०१ डिसेंबर २०२६ रोजी उमेदवाराचे वय <strong>कमाल ३० वर्षे</strong> असावे.
+          </p>
+          <div class="pt-2 border-t border-border-card/50 text-xs text-text-muted space-y-1">
+            <p class="m-0 font-bold text-text-main">JRF वयोमर्यादा सवलत:</p>
+            <p class="m-0">• OBC-NCL, SC, ST, PwD, PwBD, तृतीयपंथी व महिला उमेदवार: <strong>५ वर्षांपर्यंत सवलत</strong> (कमाल ३५ वर्षे).</p>
+            <p class="m-0">• संशोधन अनुभव (Research Experience) असलेले उमेदवार: प्रत्यक्ष कालावधीनुसार <strong>कमाल ५ वर्षे</strong>.</p>
+            <p class="m-0">• LL.M. पदवी धारक: <strong>३ वर्षे सवलत</strong>.</p>
+            <p class="m-0">• सशस्त्र दल (Armed Forces) सेवा: सेवेच्या कालावधीनुसार <strong>५ वर्षांपर्यंत</strong>.</p>
+            <p class="m-0 text-rose-500 font-semibold">* कोणत्याही परिस्थितीत एकत्रित सवलत ५ वर्षांपेक्षा जास्त मिळणार नाही.</p>
+          </div>
+        </div>
+
+        <!-- Assistant Professor & PhD Card -->
+        <div class="bg-bg-surface border border-emerald-500/30 p-5 rounded-2xl space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-400">२) सहाय्यक प्राध्यापक व PhD प्रवेश</span>
+            <span class="text-sm font-black bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 px-2.5 py-0.5 rounded-full">वयाची अट नाही</span>
+          </div>
+          <p class="text-xs sm:text-sm text-text-secondary font-medium m-0 leading-relaxed">
+            सहाय्यक प्राध्यापक (Assistant Professor) आणि थेट विद्यापीठ PhD प्रवेशासाठी <strong>कोणतीही कमाल वयोमर्यादा (No Upper Age Limit) नाही</strong>. कोणत्याही वयाचे पात्र पदव्युत्तर उमेदवार या श्रेणींसाठी अर्ज करू शकतात.
+          </p>
+          <div class="pt-2 border-t border-border-card/50 text-xs text-emerald-700 dark:text-emerald-300 font-semibold">
+            ✓ नोकरी किंवा पीएचडीसाठी इच्छुकांसाठी उत्तम संधी.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Application Fees & Late Fee -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>परीक्षा शुल्क व विलंब शुल्क (Application Fees & Late Fee)</span>
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 not-prose mb-4">
+        <div class="bg-bg-surface border border-border-card p-4 rounded-xl text-center space-y-1">
+          <span class="text-[0.7rem] text-text-muted uppercase font-bold block">सर्वसाधारण / Unreserved</span>
+          <span class="text-xl font-black text-primary">₹ १,१५०/-</span>
+          <span class="text-[0.65rem] text-text-muted block">+ बँक चार्जेस व GST</span>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card p-4 rounded-xl text-center space-y-1">
+          <span class="text-[0.7rem] text-text-muted uppercase font-bold block">General-EWS / OBC-NCL</span>
+          <span class="text-xl font-black text-indigo-600 dark:text-indigo-400">₹ ६००/-</span>
+          <span class="text-[0.65rem] text-text-muted block">+ बँक चार्जेस व GST</span>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card p-4 rounded-xl text-center space-y-1">
+          <span class="text-[0.7rem] text-text-muted uppercase font-bold block">SC / ST / PwD / तृतीयपंथी</span>
+          <span class="text-xl font-black text-emerald-600 dark:text-emerald-400">₹ ३२५/-</span>
+          <span class="text-[0.65rem] text-text-muted block">+ बँक चार्जेस व GST</span>
+        </div>
+      </div>
+
+      <div class="bg-amber-500/10 border border-amber-500/30 rounded-2xl p-4 text-xs sm:text-sm text-text-secondary space-y-1 font-medium">
+        <p class="font-bold text-amber-800 dark:text-amber-300 m-0">⚠️ विलंब शुल्क (Late Fee Window):</p>
+        <p class="m-0 leading-relaxed">
+          २८ ऑक्टोबरनंतर अर्ज करणाऱ्या उमेदवारांना <strong>२९ ते ३१ ऑक्टोबर २०२६</strong> दरम्यान नियमित शुल्काव्यतिरिक्त <strong>₹ ५००/- अतिरिक्त विलंब शुल्क (Late Fee)</strong> भरावे लागेल. परीक्षा शुल्क कोणत्याही परिस्थितीत परत (Refund) केले जात नाही.
+        </p>
+      </div>
+    </section>
+
+    <!-- Selection Process & Exam Pattern -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>परीक्षेचे स्वरूप व गुणदान पद्धती (Selection Process & CBT Pattern)</span>
+      </h2>
+
+      <p class="text-sm text-text-secondary mb-4">
+        UGC NET परीक्षेमध्ये <strong>कोणतीही मुलाखत (No Interview) घेतली जात नाही</strong>. संपूर्ण परीक्षा एकाच ३ तासांच्या सत्रात संगणकावर (CBT) पार पडेल.
+      </p>
+
+      <div class="bg-bg-surface border border-border-card rounded-2xl overflow-hidden shadow-xs not-prose mb-4">
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs sm:text-sm text-left border-collapse">
+            <thead class="bg-bg-base border-b border-border-card text-text-main font-bold">
+              <tr>
+                <th class="px-4 py-3">पेपर (Paper)</th>
+                <th class="px-4 py-3">प्रश्न स्वरूप व अभ्यासक्रम</th>
+                <th class="px-4 py-3">एकूण प्रश्न</th>
+                <th class="px-4 py-3">गुण (Marks)</th>
+                <th class="px-4 py-3">कालावधी (Duration)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-border-card/40 text-text-secondary font-medium">
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold text-text-main">पेपर १ (Paper 1)</td>
+                <td class="px-4 py-3">अध्यापन व संशोधन अभियोग्यता (Teaching & Research Aptitude), तार्किक विचार, कॉम्प्रिहेन्शन, सामान्य ज्ञान</td>
+                <td class="px-4 py-3 font-bold text-primary">५० प्रश्न</td>
+                <td class="px-4 py-3 font-bold text-text-main">१०० गुण</td>
+                <td class="px-4 py-3 rowspan-2 align-middle text-emerald-600 dark:text-emerald-400 font-extrabold" rowspan="2">
+                  एकूण १८० मिनिटे (३ तास) सलग <br /><span class="text-[0.7rem] text-text-muted font-normal">(कोणताही ब्रेक नाही)</span>
+                </td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold text-text-main">पेपर २ (Paper 2)</td>
+                <td class="px-4 py-3">उमेदवाराने निवडलेला पदव्युत्तर विषय (Domain Subject Knowledge)</td>
+                <td class="px-4 py-3 font-bold text-primary">१०० प्रश्न</td>
+                <td class="px-4 py-3 font-bold text-text-main">२०० गुण</td>
+              </tr>
+              <tr class="bg-primary/5 font-bold">
+                <td class="px-4 py-3 text-primary">एकूण (Total)</td>
+                <td class="px-4 py-3 text-text-main">वस्तुनिष्ठ बहुपर्यायी प्रश्न (Objective MCQs)</td>
+                <td class="px-4 py-3 text-primary">१५० प्रश्न</td>
+                <td class="px-4 py-3 text-primary">३०० गुण</td>
+                <td class="px-4 py-3 text-text-main">३ तास (CBT Mode)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose mb-4">
+        <div class="bg-bg-surface border border-border-card p-4 rounded-xl text-xs sm:text-sm text-text-secondary space-y-1">
+          <span class="font-bold text-text-main block">गुणदान नियम (Marking Scheme):</span>
+          <p class="m-0">• प्रत्येक अचूक उत्तरासाठी <strong>+२ गुण</strong> दिले जातील.</p>
+          <p class="m-0 font-bold text-emerald-600 dark:text-emerald-400">• निगेटिव्ह मार्किंग नाही (No Negative Marking).</p>
+          <p class="m-0">• अनुत्तरित प्रश्नासाठी शून्य गुण.</p>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card p-4 rounded-xl text-xs sm:text-sm text-text-secondary space-y-1">
+          <span class="font-bold text-text-main block">किमान पात्रता गुण (Minimum Aggregate):</span>
+          <p class="m-0">• General / EWS प्रवर्ग: दोन्ही पेपर मिळून किमान <strong>४०% गुण</strong>.</p>
+          <p class="m-0">• OBC-NCL / SC / ST / PwD / तृतीयपंथी: किमान <strong>३५% गुण</strong>.</p>
+          <p class="m-0">• एकापेक्षा जास्त सत्रांतील गुणांसाठी नॉर्मलायझेशन (Percentile) पद्धत वापरली जाते.</p>
+        </div>
+      </div>
+
+      <div class="bg-sky-500/10 border border-sky-500/20 p-4 rounded-2xl text-xs sm:text-sm text-text-secondary font-medium">
+        🎓 <strong>PhD प्रवेशासाठी विद्यापीठ मुलाखत:</strong> कॅटेगरी २ आणि ३ अंतर्गत PhD प्रवेशासाठी संबंधित विद्यापीठे स्वतंत्रपणे मुलाखत (Interview / Viva-Voce) घेतात. यामध्ये <strong>NET गुणांना ७०% वेटेज</strong> आणि <strong>मुलाखतीला ३०% वेटेज</strong> देऊन अंतिम प्रवेश यादी जाहीर केली जाते.
+      </div>
+    </section>
+
+    <!-- Step-by-Step Online Application Process -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>ऑनलाईन अर्ज कसा करावा? (Application & Registration Process)</span>
+      </h2>
+
+      <div class="bg-bg-surface border border-border-card rounded-2xl p-5 space-y-4 not-prose text-xs sm:text-sm text-text-secondary font-medium">
+        <div class="flex items-start gap-3">
+          <span class="w-6 h-6 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center shrink-0 mt-0.5">१</span>
+          <p class="m-0">
+            <strong>नोंदणी (Registration):</strong> अधिकृत संकेतस्थळ <a href="https://ugcnet.nta.nic.in" target="_blank" rel="noopener noreferrer" class="text-primary font-bold underline">ugcnet.nta.nic.in</a> वर जा. स्वतःचा सक्रिय ईमेल आयडी व मोबाईल क्रमांक वापरून नोंदणी करा किंवा 'मेरी पहचान' (Meri Pehchaan SSO) द्वारे लॉगिन करा.
+          </p>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <span class="w-6 h-6 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center shrink-0 mt-0.5">२</span>
+          <p class="m-0">
+            <strong>माहिती भरा व अर्ज क्रमांक नोंदवा:</strong> वैयक्तिक माहिती, शैक्षणिक पात्रता, विषय आणि परीक्षा शहरांचे प्राधान्य भरा. सिस्टम-जनरेटेड अर्ज क्रमांक (Application Number) सुरक्षित लिहून ठेवा.
+          </p>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <span class="w-6 h-6 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center shrink-0 mt-0.5">३</span>
+          <p class="m-0">
+            <strong>कागदपत्रे अपलोड करा:</strong> थेट फोटो (Live Photo) कॅप्चर करा. अलीकडील पासपोर्ट साईज फोटो (10 ते 200 KB, पांढरी पार्श्वभूमी, 80% चेहरा स्पष्ट), स्वाक्षरी (10 ते 50 KB) आणि PwD उमेदवारांसाठी UDID प्रमाणपत्र (PDF, 50 ते 300 KB) अपलोड करा.
+          </p>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <span class="w-6 h-6 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center shrink-0 mt-0.5">४</span>
+          <p class="m-0">
+            <strong>परीक्षा शुल्क भरा:</strong> UPI, नेट बँकिंग, डेबिट किंवा क्रेडिट कार्डद्वारे ऑनलाईन परीक्षा शुल्क जमा करा.
+          </p>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <span class="w-6 h-6 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center shrink-0 mt-0.5">५</span>
+          <p class="m-0">
+            <strong>कन्फर्मेशन पेज डाऊनलोड करा:</strong> यशस्वी फी भरल्यानंतर 'Confirmation Page' तयार होतो. त्याची प्रिंट काढून सुरक्षित ठेवा. कोणतेही कागदपत्र NTA कडे पोस्टाने अथवा ईमेलने पाठवण्याची आवश्यकता नाही.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Important Official Links Box -->
+    <section class="not-prose">
+      <div class="bg-gradient-to-r from-primary/15 via-indigo-500/10 to-primary/5 border-2 border-primary/30 rounded-3xl p-6 sm:p-8 shadow-sm">
+        <h3 class="text-lg sm:text-xl font-black text-text-main mb-2">
+          अधिकृत लिंक्स व थेट ऑनलाईन अर्ज (Important Official Links)
+        </h3>
+        <p class="text-xs sm:text-sm text-text-muted mb-6">
+          खालील थेट लिंक्सवरून अधिकृत जाहिरात PDF डाऊनलोड करा आणि ऑनलाईन अर्ज प्रक्रिया पूर्ण करा.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a
+            href="https://cdnbbsr.s3waas.gov.in/s301eee509ee2f68dc6014898c309e86bf/uploads/2026/10/202610081852912625.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center justify-center gap-2 px-5 py-3.5 bg-bg-surface hover:bg-primary/10 border-2 border-primary/40 rounded-xl font-bold text-sm text-primary transition-all shadow-xs text-center"
+          >
+            <HiOutlineDocumentText className="text-lg shrink-0" />
+            <span>अधिकृत जाहिरात (PDF डाऊनलोड करा)</span>
+          </a>
+
+          <a
+            href="https://examinationservices.nic.in/ExamSys27/root/home.aspx?enc=Ei4cajBkK1gZSfgr53ImFV/yIzhTZHBze3wooSg9DjjOvzupXmjixBOc0vZyJQ9v"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center justify-center gap-2 px-5 py-3.5 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold text-sm transition-all shadow-md text-center"
+          >
+            <span>थेट ऑनलाईन अर्ज करा (Apply Online)</span>
+            <HiOutlineArrowTopRightOnSquare className="text-lg shrink-0" />
+          </a>
+        </div>
+
+        <div class="mt-4 pt-4 border-t border-border-card/60 flex flex-wrap items-center justify-between text-xs text-text-muted">
+          <span>अधिकृत पोर्टल: <a href="https://ugcnet.nta.nic.in/" target="_blank" rel="noopener noreferrer" class="text-primary font-bold underline">ugcnet.nta.nic.in</a></span>
+          <span>NTA मुख्य वेबसाइट: <a href="https://nta.ac.in" target="_blank" rel="noopener noreferrer" class="text-primary font-bold underline">nta.ac.in</a></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section Marathi -->
+    <section class="not-prose pt-4 border-t border-border-card/60">
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-6 flex items-center gap-2">
+        <HiOutlineQuestionMarkCircle className="text-primary text-2xl" />
+        <span>नेहमी विचारले जाणारे प्रश्न (Frequently Asked Questions - FAQs)</span>
+      </h2>
+
+      <div class="space-y-4">
+        <div class="bg-bg-surface border border-border-card rounded-2xl p-4 sm:p-5">
+          <h3 class="text-base font-bold text-text-main mb-1.5">
+            प्र.१) UGC NET डिसेंबर २०२६ मध्ये एकूण किती जागा आहेत?
+          </h3>
+          <p class="text-xs sm:text-sm text-text-muted m-0 leading-relaxed font-medium">
+            उत्तर: UGC NET ही थेट नोकरी भरती नसून राष्ट्रीय पात्रता परीक्षा आहे, त्यामुळे या परीक्षेमध्ये ठरावीक पदांची संख्या नसते. परीक्षेत बसलेल्या एकूण विद्यार्थ्यांपैकी अव्वल ६% उमेदवार सहाय्यक प्राध्यापकासाठी पात्र ठरतात.
+          </p>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card rounded-2xl p-4 sm:p-5">
+          <h3 class="text-base font-bold text-text-main mb-1.5">
+            प्र.२) Master's पदवीच्या अंतिम वर्षात शिकणारे विद्यार्थी अर्ज करू शकतात का?
+          </h3>
+          <p class="text-xs sm:text-sm text-text-muted m-0 leading-relaxed font-medium">
+            उत्तर: होय, अंतिम वर्षातील अथवा निकालाची वाट पाहणारे उमेदवार तात्पुरत्या (Provisional) स्वरूपात अर्ज करू शकतात. त्यांना निकालानंतर विहित गुणांसह पदवी पूर्ण करण्यासाठी २ वर्षांची मुदत मिळते.
+          </p>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card rounded-2xl p-4 sm:p-5">
+          <h3 class="text-base font-bold text-text-main mb-1.5">
+            प्र.३) ४ वर्षांची पदवी असलेले उमेदवार UGC NET देऊ शकतात का?
+          </h3>
+          <p class="text-xs sm:text-sm text-text-muted m-0 leading-relaxed font-medium">
+            उत्तर: होय, ४ वर्षांची (८ सत्रांची) पदवी किमान ७५% गुणांसह पूर्ण केलेले उमेदवार JRF आणि थेट PhD प्रवेशासाठी पात्र आहेत. मात्र ते सहाय्यक प्राध्यापक पदासाठी पात्र मानले जाणार नाहीत.
+          </p>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card rounded-2xl p-4 sm:p-5">
+          <h3 class="text-base font-bold text-text-main mb-1.5">
+            प्र.४) या परीक्षेत निगेटिव्ह मार्किंग (Negative Marking) असते का?
+          </h3>
+          <p class="text-xs sm:text-sm text-text-muted m-0 leading-relaxed font-medium">
+            उत्तर: नाही, UGC NET परीक्षेत कोणतीही नकारात्मक गुण पद्धती नाही. प्रत्येक बरोबर उत्तराला २ गुण दिले जातात.
+          </p>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card rounded-2xl p-4 sm:p-5">
+          <h3 class="text-base font-bold text-text-main mb-1.5">
+            प्र.५) सहाय्यक प्राध्यापक पात्रतेसाठी वयाची काही कमाल मर्यादा आहे का?
+          </h3>
+          <p class="text-xs sm:text-sm text-text-muted m-0 leading-relaxed font-medium">
+            उत्तर: नाही. सहाय्यक प्राध्यापक (Assistant Professor) आणि PhD प्रवेशासाठी कोणतीही कमाल वयोमर्यादा नाही. केवळ JRF साठी कमाल ३० वर्षे वयोमर्यादा आहे.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ENGLISH VERSION SLOT FOR BILINGUAL SUPPORT -->
+  <div slot="english" class="space-y-8 text-text-main leading-relaxed">
+    
+    <!-- Quick Highlight Overview Card (English) -->
+    <div class="bg-gradient-to-r from-primary/10 via-indigo-500/10 to-primary/5 border border-primary/20 rounded-3xl p-5 sm:p-8 mb-8 not-prose">
+      <div class="flex flex-wrap items-center gap-2 mb-3">
+        <span class="px-3 py-1 bg-primary text-white font-extrabold text-xs uppercase tracking-wider rounded-full shadow-2xs">
+          🎓 National Eligibility Test December 2026
+        </span>
+        <span class="text-xs font-bold text-indigo-700 dark:text-indigo-400 bg-indigo-500/10 border border-indigo-500/20 px-2.5 py-1 rounded-full">
+          JRF • Assistant Professor • PhD Admission
+        </span>
+        <span class="text-xs font-bold text-emerald-700 dark:text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-full">
+          No Negative Marking
+        </span>
+      </div>
+      <h2 class="text-xl sm:text-2xl md:text-3xl font-black text-text-main mb-3 leading-snug">
+        NTA UGC NET December 2026 Notification Out: Apply Online for JRF, Assistant Professor & PhD Eligibility!
+      </h2>
+      <p class="text-xs sm:text-sm text-text-muted leading-relaxed m-0 font-medium">
+        The National Testing Agency (NTA) has released the information bulletin for UGC NET December 2026. This is a <strong>national eligibility examination</strong> determining eligibility for Junior Research Fellowship (JRF), Assistant Professor appointment, and Ph.D. admissions in Indian universities. CBT exams will be conducted between <strong>14 and 19 December 2026</strong>.
+      </p>
+
+      <!-- Key Metrics Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6 pt-6 border-t border-border-card/60 text-xs">
+        <div class="bg-bg-surface p-3.5 rounded-xl border border-border-card">
+          <span class="text-text-muted block text-[0.7rem] uppercase font-bold">Exam Name</span>
+          <strong class="text-primary text-sm sm:text-base font-black">UGC NET Dec 2026</strong>
+        </div>
+        <div class="bg-bg-surface p-3.5 rounded-xl border border-border-card">
+          <span class="text-text-muted block text-[0.7rem] uppercase font-bold">Qualification</span>
+          <strong class="text-text-main text-xs sm:text-sm font-extrabold">Master's (55% / 50%)</strong>
+        </div>
+        <div class="bg-bg-surface p-3.5 rounded-xl border border-border-card">
+          <span class="text-text-muted block text-[0.7rem] uppercase font-bold">Exam Dates</span>
+          <strong class="text-indigo-600 dark:text-indigo-400 text-xs sm:text-sm font-extrabold">14 - 19 Dec 2026</strong>
+        </div>
+        <div class="bg-bg-surface p-3.5 rounded-xl border border-border-card">
+          <span class="text-text-muted block text-[0.7rem] uppercase font-bold">Application Deadline</span>
+          <strong class="text-rose-600 dark:text-rose-400 text-xs sm:text-sm font-extrabold">28 Oct (Late: 31 Oct)</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- Overview Section -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>UGC NET December 2026: Comprehensive Overview</span>
+      </h2>
+      <p class="text-sm sm:text-base leading-relaxed text-text-secondary">
+        The University Grants Commission National Eligibility Test (UGC-NET) December 2026 is organized by the National Testing Agency (NTA). It evaluates candidates across 83 subject domains to award eligibility credentials across three distinct categories:
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 not-prose my-4">
+        <div class="bg-bg-surface border border-primary/30 p-4 rounded-2xl space-y-2">
+          <span class="w-6 h-6 rounded-full bg-primary text-white font-bold flex items-center justify-center text-xs">1</span>
+          <h3 class="text-sm font-extrabold text-text-main m-0">Category-1</h3>
+          <p class="text-xs text-text-muted leading-relaxed m-0 font-medium">
+            <strong>JRF + Assistant Professor + PhD Admission:</strong> Eligible for research fellowship stipends, assistant professorship recruitment, and direct doctoral admissions.
+          </p>
+        </div>
+
+        <div class="bg-bg-surface border border-indigo-500/30 p-4 rounded-2xl space-y-2">
+          <span class="w-6 h-6 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center text-xs">2</span>
+          <h3 class="text-sm font-extrabold text-text-main m-0">Category-2</h3>
+          <p class="text-xs text-text-muted leading-relaxed m-0 font-medium">
+            <strong>Assistant Professor + PhD Admission:</strong> Qualified for lifetime Assistant Professor appointment and university PhD admission (No JRF award).
+          </p>
+        </div>
+
+        <div class="bg-bg-surface border border-emerald-500/30 p-4 rounded-2xl space-y-2">
+          <span class="w-6 h-6 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-xs">3</span>
+          <h3 class="text-sm font-extrabold text-text-main m-0">Category-3</h3>
+          <p class="text-xs text-text-muted leading-relaxed m-0 font-medium">
+            <strong>PhD Admission Only:</strong> NET percentile score valid for 1 year for Ph.D. admissions across central, state, and private universities.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-indigo-500/10 border border-indigo-500/20 rounded-2xl p-4 text-xs sm:text-sm text-text-secondary font-medium">
+        📌 <strong>No Fixed Number of Vacancies:</strong> As an eligibility examination, there are no fixed posts. For Assistant Professor qualification, the top 6% of candidates appearing in both papers qualify. JRF slots are allocated by UGC in accordance with the national reservation policy.
+      </div>
+    </section>
+
+    <!-- Key Highlights Table -->
+    <section class="not-prose">
+      <div class="bg-bg-surface border border-border-card rounded-2xl overflow-hidden shadow-xs">
+        <div class="bg-primary/10 px-5 py-3 border-b border-border-card flex items-center gap-2">
+          <HiOutlineDocumentText className="text-primary text-lg" />
+          <h3 class="text-sm font-extrabold uppercase tracking-wider text-primary m-0">
+            UGC NET December 2026 Factsheet
+          </h3>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs sm:text-sm text-left border-collapse">
+            <tbody class="divide-y divide-border-card/40">
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 w-1/3 text-text-main">Conducting Body</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">National Testing Agency (NTA) on behalf of UGC</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">Examination Cycle</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">UGC NET December 2026 Session</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">Mode of Examination</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">Computer Based Test (CBT Mode)</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">Total Duration</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">180 Minutes (3 Hours) continuous session with no break</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">Number of Questions & Marks</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">150 Questions, 300 Marks (No negative marking)</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">Medium of Papers</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">Bilingual: English & Hindi (except language specific domains)</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">Selection / Interview</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">No Interview for NET qualification (CBT marks only)</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">Official Portal</td>
+                <td class="px-4 py-3 text-primary font-bold">ugcnet.nta.nic.in</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Important Dates -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>Important Dates & Examination Schedule</span>
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 not-prose mb-4">
+        <div class="bg-bg-surface border border-emerald-500/30 p-4 rounded-xl flex items-start gap-3">
+          <HiOutlineCalendarDays className="text-emerald-500 text-2xl shrink-0 mt-0.5" />
+          <div>
+            <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">Online Registration Opens</span>
+            <strong class="text-emerald-600 dark:text-emerald-400 text-sm font-extrabold">08 October 2026</strong>
+          </div>
+        </div>
+
+        <div class="bg-bg-surface border border-rose-500/30 p-4 rounded-xl flex items-start gap-3">
+          <HiOutlineClock className="text-rose-500 text-2xl shrink-0 mt-0.5" />
+          <div>
+            <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">Registration Deadline (Regular)</span>
+            <strong class="text-rose-600 dark:text-rose-400 text-sm font-extrabold">28 October 2026 (11:50 PM)</strong>
+          </div>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
+          <HiOutlineCurrencyRupee className="text-amber-500 text-2xl shrink-0 mt-0.5" />
+          <div>
+            <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">Fee Payment Deadline</span>
+            <strong class="text-text-main text-sm font-extrabold">28 October 2026 (11:50 PM)</strong>
+          </div>
+        </div>
+
+        <div class="bg-bg-surface border border-amber-500/30 p-4 rounded-xl flex items-start gap-3">
+          <HiOutlineClock className="text-amber-600 text-2xl shrink-0 mt-0.5" />
+          <div>
+            <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">Late Window (+₹500 Late Fee)</span>
+            <strong class="text-amber-600 dark:text-amber-400 text-sm font-extrabold">29 to 31 October 2026</strong>
+          </div>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
+          <HiOutlineDocumentText className="text-sky-500 text-2xl shrink-0 mt-0.5" />
+          <div>
+            <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">Application Correction Window</span>
+            <strong class="text-text-main text-sm font-extrabold">02 to 04 November 2026</strong>
+          </div>
+        </div>
+
+        <div class="bg-bg-surface border border-primary/30 p-4 rounded-xl flex items-start gap-3">
+          <HiOutlineSparkles className="text-primary text-2xl shrink-0 mt-0.5" />
+          <div>
+            <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">CBT Exam Dates</span>
+            <strong class="text-primary text-sm font-extrabold">14 to 19 December 2026</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Eligibility Criteria -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>Educational Eligibility Requirements</span>
+      </h2>
+
+      <div class="space-y-4 not-prose">
+        <div class="bg-bg-surface border border-border-card p-5 rounded-2xl space-y-3">
+          <div class="flex items-center gap-2 text-primary font-bold text-sm">
+            <HiOutlineAcademicCap className="text-xl" />
+            <span>Master's Degree Requirements</span>
+          </div>
+          <ul class="text-xs sm:text-sm text-text-secondary space-y-2 pl-4 list-disc font-medium">
+            <li>
+              <strong>General / General-EWS:</strong> At least <strong>55% marks</strong> in Master's degree (without rounding off) from UGC-recognized universities.
+            </li>
+            <li>
+              <strong>OBC-NCL / SC / ST / PwD / PwBD / Third Gender:</strong> At least <strong>50% marks</strong> in Master's degree.
+            </li>
+            <li>
+              <strong>Candidates in Final Year / Awaiting Results:</strong> Permitted to apply provisionally. They must pass their Master's within 2 years from the date of NET declaration with required percentage (within 1 year for Category-3 PhD candidates).
+            </li>
+            <li>
+              <strong>Ph.D. Degree Holders:</strong> Candidates who completed their Master's on or before 19 September 1991 are eligible for 5% relaxation (minimum 50% marks required).
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-gradient-to-r from-sky-500/10 via-primary/5 to-bg-surface border-2 border-sky-500/30 p-5 rounded-2xl space-y-2">
+          <div class="flex items-center gap-2 text-sky-600 dark:text-sky-400 font-bold text-sm">
+            <HiOutlineSparkles className="text-xl" />
+            <span>4-Year / 8-Semester Bachelor's Degree Holders</span>
+          </div>
+          <p class="text-xs sm:text-sm text-text-secondary leading-relaxed font-medium m-0">
+            Candidates pursuing or completed 4-year undergraduate degrees (e.g., B.Tech, B.E., 4-year BS/BA/B.Sc) with a minimum of <strong>75% marks in aggregate</strong> (5% relaxation for SC/ST/OBC-NCL/PwD/EWS = 70%) are eligible.
+          </p>
+          <div class="bg-amber-500/10 border border-amber-500/20 p-2.5 rounded-xl text-xs text-amber-800 dark:text-amber-300 font-bold">
+            ⚠️ Note: 4-Year Bachelor's candidates are eligible ONLY for JRF and PhD admission. They are NOT eligible for Assistant Professor.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Age Limit & Relaxations -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>Age Limit & Relaxations (As on 01.12.2026)</span>
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose mb-4">
+        <div class="bg-bg-surface border border-border-card p-5 rounded-2xl space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black uppercase tracking-wider text-primary">Junior Research Fellowship (JRF)</span>
+            <span class="text-sm font-black bg-primary/10 text-primary px-2.5 py-0.5 rounded-full">Max 30 Years</span>
+          </div>
+          <p class="text-xs sm:text-sm text-text-secondary font-medium m-0">
+            Candidates must not be more than <strong>30 years of age as on 01.12.2026</strong>.
+          </p>
+          <div class="pt-2 border-t border-border-card/50 text-xs text-text-muted space-y-1">
+            <p class="m-0 font-bold text-text-main">Permissible Age Relaxations:</p>
+            <p class="m-0">• OBC-NCL, SC, ST, PwD, PwBD, Third Gender & Women: <strong>Up to 5 Years</strong> (Max 35 years).</p>
+            <p class="m-0">• Candidates with research experience: <strong>Up to 5 Years</strong> (limited to actual research duration).</p>
+            <p class="m-0">• LL.M. degree holders: <strong>3 Years relaxation</strong>.</p>
+            <p class="m-0">• Armed forces personnel: <strong>Up to 5 Years</strong> based on service duration.</p>
+            <p class="m-0 text-rose-500 font-semibold">* Total cumulative relaxation shall not exceed 5 years in any circumstance.</p>
+          </div>
+        </div>
+
+        <div class="bg-bg-surface border border-emerald-500/30 p-5 rounded-2xl space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Assistant Professor & PhD Admission</span>
+            <span class="text-sm font-black bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 px-2.5 py-0.5 rounded-full">No Age Limit</span>
+          </div>
+          <p class="text-xs sm:text-sm text-text-secondary font-medium m-0 leading-relaxed">
+            There is <strong>NO UPPER AGE LIMIT</strong> for applying for Assistant Professorship eligibility and direct PhD admission. Eligible post-graduates of any age can appear.
+          </p>
+          <div class="pt-2 border-t border-border-card/50 text-xs text-emerald-700 dark:text-emerald-300 font-semibold">
+            ✓ Lifetime eligibility for academic teaching & research roles.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Application Fees -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>Application Fee Structure & Payment Modes</span>
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 not-prose mb-4">
+        <div class="bg-bg-surface border border-border-card p-4 rounded-xl text-center space-y-1">
+          <span class="text-[0.7rem] text-text-muted uppercase font-bold block">General / Unreserved</span>
+          <span class="text-xl font-black text-primary">₹ 1,150/-</span>
+          <span class="text-[0.65rem] text-text-muted block">+ Applicable Bank GST</span>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card p-4 rounded-xl text-center space-y-1">
+          <span class="text-[0.7rem] text-text-muted uppercase font-bold block">General-EWS / OBC-NCL</span>
+          <span class="text-xl font-black text-indigo-600 dark:text-indigo-400">₹ 600/-</span>
+          <span class="text-[0.65rem] text-text-muted block">+ Applicable Bank GST</span>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card p-4 rounded-xl text-center space-y-1">
+          <span class="text-[0.7rem] text-text-muted uppercase font-bold block">SC / ST / PwD / Third Gender</span>
+          <span class="text-xl font-black text-emerald-600 dark:text-emerald-400">₹ 325/-</span>
+          <span class="text-[0.65rem] text-text-muted block">+ Applicable Bank GST</span>
+        </div>
+      </div>
+
+      <div class="bg-amber-500/10 border border-amber-500/30 rounded-2xl p-4 text-xs sm:text-sm text-text-secondary space-y-1 font-medium">
+        <p class="font-bold text-amber-800 dark:text-amber-300 m-0">⚠️ Late Fee Submissions (29 - 31 Oct):</p>
+        <p class="m-0 leading-relaxed">
+          Applications submitted during the extended late fee window (29 to 31 October 2026) attract an additional <strong>late fee of ₹ 500/-</strong>. Fees are non-refundable under all conditions.
+        </p>
+      </div>
+    </section>
+
+    <!-- Exam Pattern & Syllabus -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>Computer Based Test (CBT) Pattern & Scoring</span>
+      </h2>
+
+      <div class="bg-bg-surface border border-border-card rounded-2xl overflow-hidden shadow-xs not-prose mb-4">
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs sm:text-sm text-left border-collapse">
+            <thead class="bg-bg-base border-b border-border-card text-text-main font-bold">
+              <tr>
+                <th class="px-4 py-3">Paper</th>
+                <th class="px-4 py-3">Subject & Focus Area</th>
+                <th class="px-4 py-3">Questions</th>
+                <th class="px-4 py-3">Marks</th>
+                <th class="px-4 py-3">Duration</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-border-card/40 text-text-secondary font-medium">
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold text-text-main">Paper 1</td>
+                <td class="px-4 py-3">Teaching & Research Aptitude, Reasoning, Comprehension & General Awareness</td>
+                <td class="px-4 py-3 font-bold text-primary">50 MCQs</td>
+                <td class="px-4 py-3 font-bold text-text-main">100 Marks</td>
+                <td class="px-4 py-3 rowspan-2 align-middle text-emerald-600 dark:text-emerald-400 font-extrabold" rowspan="2">
+                  180 Minutes (3 Hours) <br /><span class="text-[0.7rem] text-text-muted font-normal">(No break between papers)</span>
+                </td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold text-text-main">Paper 2</td>
+                <td class="px-4 py-3">Domain Knowledge of Selected Subject (83 available subjects)</td>
+                <td class="px-4 py-3 font-bold text-primary">100 MCQs</td>
+                <td class="px-4 py-3 font-bold text-text-main">200 Marks</td>
+              </tr>
+              <tr class="bg-primary/5 font-bold">
+                <td class="px-4 py-3 text-primary">Total</td>
+                <td class="px-4 py-3 text-text-main">All questions compulsory (Objective Multiple Choice)</td>
+                <td class="px-4 py-3 text-primary">150 Questions</td>
+                <td class="px-4 py-3 text-primary">300 Marks</td>
+                <td class="px-4 py-3 text-text-main">Continuous CBT</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose mb-4">
+        <div class="bg-bg-surface border border-border-card p-4 rounded-xl text-xs sm:text-sm text-text-secondary space-y-1">
+          <span class="font-bold text-text-main block">Marking System:</span>
+          <p class="m-0">• <strong>+2 Marks</strong> awarded for every correct answer.</p>
+          <p class="m-0 font-bold text-emerald-600 dark:text-emerald-400">• NO NEGATIVE MARKING for incorrect answers.</p>
+          <p class="m-0">• 0 marks for unattempted questions.</p>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card p-4 rounded-xl text-xs sm:text-sm text-text-secondary space-y-1">
+          <span class="font-bold text-text-main block">Qualifying Benchmarks:</span>
+          <p class="m-0">• General / EWS: Minimum <strong>40% aggregate marks</strong> across both papers.</p>
+          <p class="m-0">• Reserved Categories: Minimum <strong>35% aggregate marks</strong>.</p>
+          <p class="m-0">• Normalization applied across multi-shift sessions using percentile method.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Registration Steps -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>Online Application Procedure at ugcnet.nta.nic.in</span>
+      </h2>
+
+      <div class="bg-bg-surface border border-border-card rounded-2xl p-5 space-y-4 not-prose text-xs sm:text-sm text-text-secondary font-medium">
+        <div class="flex items-start gap-3">
+          <span class="w-6 h-6 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center shrink-0 mt-0.5">1</span>
+          <p class="m-0">
+            <strong>Register Online:</strong> Visit <a href="https://ugcnet.nta.nic.in" target="_blank" rel="noopener noreferrer" class="text-primary font-bold underline">ugcnet.nta.nic.in</a> and initiate registration using your primary email address and mobile number (or via Meri Pehchaan SSO gateway).
+          </p>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <span class="w-6 h-6 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center shrink-0 mt-0.5">2</span>
+          <p class="m-0">
+            <strong>Fill Application Form:</strong> Complete personal details, qualification data, subject selection, and choice of 4 examination cities. Note down the system-generated Application Number.
+          </p>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <span class="w-6 h-6 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center shrink-0 mt-0.5">3</span>
+          <p class="m-0">
+            <strong>Document Uploads:</strong> Capture live photo, upload recent scanned photograph (10 to 200 KB, white background, 80% face visibility), signature (10 to 50 KB), and disability/UDID certificate (PDF 50 to 300 KB) if applicable.
+          </p>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <span class="w-6 h-6 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center shrink-0 mt-0.5">4</span>
+          <p class="m-0">
+            <strong>Fee Payment & Confirmation:</strong> Pay application fee via Net Banking, Debit/Credit Card, or UPI. Download and print the Confirmation Page for your records. No physical documentation needs to be posted to NTA.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Important Links Box (English) -->
+    <section class="not-prose">
+      <div class="bg-gradient-to-r from-primary/15 via-indigo-500/10 to-primary/5 border-2 border-primary/30 rounded-3xl p-6 sm:p-8 shadow-sm">
+        <h3 class="text-lg sm:text-xl font-black text-text-main mb-2">
+          Direct Official Links (UGC NET Dec 2026)
+        </h3>
+        <p class="text-xs sm:text-sm text-text-muted mb-6">
+          Access the official notification bulletin and candidate registration gateway directly:
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a
+            href="https://cdnbbsr.s3waas.gov.in/s301eee509ee2f68dc6014898c309e86bf/uploads/2026/10/202610081852912625.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center justify-center gap-2 px-5 py-3.5 bg-bg-surface hover:bg-primary/10 border-2 border-primary/40 rounded-xl font-bold text-sm text-primary transition-all shadow-xs text-center"
+          >
+            <HiOutlineDocumentText className="text-lg shrink-0" />
+            <span>Download Official Notification PDF</span>
+          </a>
+
+          <a
+            href="https://examinationservices.nic.in/ExamSys27/root/home.aspx?enc=Ei4cajBkK1gZSfgr53ImFV/yIzhTZHBze3wooSg9DjjOvzupXmjixBOc0vZyJQ9v"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center justify-center gap-2 px-5 py-3.5 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold text-sm transition-all shadow-md text-center"
+          >
+            <span>Apply Online at ugcnet.nta.nic.in</span>
+            <HiOutlineArrowTopRightOnSquare className="text-lg shrink-0" />
+          </a>
+        </div>
+
+        <div class="mt-4 pt-4 border-t border-border-card/60 flex flex-wrap items-center justify-between text-xs text-text-muted">
+          <span>Official Portal: <a href="https://ugcnet.nta.nic.in/" target="_blank" rel="noopener noreferrer" class="text-primary font-bold underline">ugcnet.nta.nic.in</a></span>
+          <span>NTA Portal: <a href="https://nta.ac.in" target="_blank" rel="noopener noreferrer" class="text-primary font-bold underline">nta.ac.in</a></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section English -->
+    <section class="not-prose pt-4 border-t border-border-card/60">
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-6 flex items-center gap-2">
+        <HiOutlineQuestionMarkCircle className="text-primary text-2xl" />
+        <span>Frequently Asked Questions (FAQs)</span>
+      </h2>
+
+      <div class="space-y-4">
+        <div class="bg-bg-surface border border-border-card rounded-2xl p-4 sm:p-5">
+          <h3 class="text-base font-bold text-text-main mb-1.5">
+            Q1) Is UGC NET December 2026 a direct job recruitment test?
+          </h3>
+          <p class="text-xs sm:text-sm text-text-muted m-0 leading-relaxed font-medium">
+            Answer: No, it is a national eligibility credential determining eligibility for Junior Research Fellowship (JRF), Assistant Professorship, and direct PhD admission. There are no fixed vacancies.
+          </p>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card rounded-2xl p-4 sm:p-5">
+          <h3 class="text-base font-bold text-text-main mb-1.5">
+            Q2) Are candidates awaiting their Master's degree results eligible?
+          </h3>
+          <p class="text-xs sm:text-sm text-text-muted m-0 leading-relaxed font-medium">
+            Answer: Yes, final-year master's students or candidates awaiting final semester results can apply provisionally. They must pass with required percentage within 2 years of NET result declaration.
+          </p>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card rounded-2xl p-4 sm:p-5">
+          <h3 class="text-base font-bold text-text-main mb-1.5">
+            Q3) What is the upper age limit for Assistant Professor?
+          </h3>
+          <p class="text-xs sm:text-sm text-text-muted m-0 leading-relaxed font-medium">
+            Answer: There is no upper age limit for Assistant Professor eligibility and PhD admission. Only JRF has an upper age limit of 30 years (with applicable category relaxations).
+          </p>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card rounded-2xl p-4 sm:p-5">
+          <h3 class="text-base font-bold text-text-main mb-1.5">
+            Q4) Is there any negative marking in UGC NET?
+          </h3>
+          <p class="text-xs sm:text-sm text-text-muted m-0 leading-relaxed font-medium">
+            Answer: No, there is no negative marking for incorrect answers in the UGC NET exam.
+          </p>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card rounded-2xl p-4 sm:p-5">
+          <h3 class="text-base font-bold text-text-main mb-1.5">
+            Q5) What is the selection procedure for PhD admissions?
+          </h3>
+          <p class="text-xs sm:text-sm text-text-muted m-0 leading-relaxed font-medium">
+            Answer: For Category-2 & Category-3 candidates, universities conduct interviews/viva-voce. The final PhD admission merit is formulated giving 70% weightage to NET score and 30% weightage to the interview.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</ArticleContainer>

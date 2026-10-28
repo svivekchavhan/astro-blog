@@ -16,57 +16,11 @@ interface Props {
 
 const { pageSize = 5 } = Astro.props;
 
-// Strictly filter only Answer Key, Admit Card, or Cutoff posts that are explicitly marked with show: true
+// Show updates that are explicitly marked with show: true and have not expired
 const activeUpdates = importantUpdates.filter((update) => {
   if (update.show !== true) return false;
   if (!isNotExpired(update.expiry)) return false;
-
-  const badgeType = (update.badgeType || "").toLowerCase();
-  const category = (update.category || "").toLowerCase();
-  const badge = (update.badge || "").toLowerCase();
-  const title = (update.title || "").toLowerCase();
-
-  const isAnswerKey =
-    badgeType === "answer-key" ||
-    category === "answer-key" ||
-    badge.includes("answer key") ||
-    badge.includes("उत्तरतालिका") ||
-    title.includes("answer key") ||
-    title.includes("उत्तरतालिका");
-
-  const isAdmitCard =
-    badgeType === "admit" ||
-    badgeType === "admit-card" ||
-    category === "admit" ||
-    category === "admit-card" ||
-    badge.includes("admit") ||
-    badge.includes("hall ticket") ||
-    badge.includes("प्रवेशपत्र") ||
-    badge.includes("हॉल तिकीट") ||
-    title.includes("admit card") ||
-    title.includes("hall ticket") ||
-    title.includes("प्रवेशपत्र") ||
-    title.includes("हॉल तिकीट");
-
-  const isCutoffOrResult =
-    badgeType === "cutoff" ||
-    badgeType === "cut-off" ||
-    badgeType === "result" ||
-    category === "cutoff" ||
-    category === "cut-off" ||
-    category === "result" ||
-    badge.includes("cutoff") ||
-    badge.includes("cut-off") ||
-    badge.includes("कट-ऑफ") ||
-    badge.includes("निकाल") ||
-    badge.includes("result") ||
-    title.includes("cutoff") ||
-    title.includes("cut-off") ||
-    title.includes("कट-ऑफ") ||
-    title.includes("निकाल") ||
-    title.includes("result");
-
-  return isAnswerKey || isAdmitCard || isCutoffOrResult;
+  return true;
 });
 
 const totalItems = activeUpdates.length;
@@ -133,7 +87,9 @@ const latestPosts = getRecruitmentPosts().slice(0, 3);
                               ? "bg-indigo-600 text-white"
                               : update.badgeType === "answer-key"
                                 ? "bg-amber-600 text-white"
-                                : "bg-purple-600 text-white"
+                                : update.badgeType === "exam" || update.badgeType === "new"
+                                  ? "bg-emerald-600 text-white"
+                                  : "bg-purple-600 text-white"
                         }`}
                       >
                         {update.badge}

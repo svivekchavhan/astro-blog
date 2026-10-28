@@ -42,7 +42,8 @@ export interface ArticleMeta {
   badgeType?: "new" | "extended" | "important" | "result" | "admit" | string;
   educationTags?: EducationTag[];
   districts?: string[];
-  status?: "apply-now" | "closed" | "upcoming" | "declared" | "available" | "open";
+  status?:
+    "apply-now" | "closed" | "upcoming" | "declared" | "available" | "open";
   organisation?: string;
   pillarPage?: string;
   officialWebsiteUrl?: string;
@@ -54,9 +55,38 @@ export interface ArticleMeta {
 export const articlesRegistry: ArticleMeta[] = [
   {
     titleEn:
-      "RRB Station Master Recruitment 2026: Apply Online for 1,215 Vacancies (CEN 08/2026)",
+      "UGC NET December 2026: Online Application Form, Exam Date (14-19 Dec), JRF, Assistant Professor & PhD Eligibility",
     titleMr:
-      "रेल्वे भरती मंडळ (RRB) स्टेशन मास्टर भरती २०२६: १,२१५ पदांसाठी ऑनलाईन अर्ज सुरू (CEN 08/2026)",
+      "यूजीसी नेट डिसेंबर २०२६ (UGC NET Dec 2026): जेआरएफ, सहाय्यक प्राध्यापक व पीएचडी पात्रता परीक्षेसाठी ऑनलाईन अर्ज सुरू",
+    slug: "/ugc-net-december-2026",
+    category: "Exam Alert",
+    date: "October 28, 2026",
+    image:
+      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=1200",
+    postName:
+      "UGC NET Dec 2026 / JRF, Assistant Professor & PhD Admission Eligibility",
+    descriptionMr:
+      "राष्ट्रीय परीक्षा एजन्सी (NTA) द्वारे UGC NET डिसेंबर २०२६ ची अधिकृत अधिसूचना प्रसिद्ध. JRF, सहाय्यक प्राध्यापक आणि थेट पीएचडी प्रवेशासाठी परीक्षा १४ ते १९ डिसेंबर २०२६ दरम्यान CBT पद्धतीने होणार. ऑनलाईन अर्ज सुरू.",
+    lastDate: "28 Oct 2026 (Late: 31 Oct)",
+    examDate: "14 - 19 Dec 2026",
+    postType: "recruitment",
+    priority: "mega",
+    isImportant: true,
+    badge: "UGC NET 2026",
+    badgeType: "new",
+    educationTags: ["pg", "degree"],
+    districts: ["all-maharashtra", "mumbai", "pune", "nagpur"],
+    status: "apply-now",
+    organisation: "National Testing Agency (NTA / UGC)",
+    officialWebsiteUrl: "https://ugcnet.nta.nic.in/",
+    officialNotificationUrl:
+      "https://cdnbbsr.s3waas.gov.in/s301eee509ee2f68dc6014898c309e86bf/uploads/2026/10/202610081852912625.pdf",
+  },
+  {
+    titleEn:
+      "RRB Station Master Recruitment 2026: Apply Online for 1,215 Vacancies ",
+    titleMr:
+      "रेल्वे भरती मंडळ (RRB) स्टेशन मास्टर भरती २०२६: १,२१५ पदांसाठी ऑनलाईन अर्ज सुरू ",
     slug: "/rrb-station-master-recruitment-2026",
     category: "Railway Job",
     date: "October 27, 2026",
@@ -90,7 +120,8 @@ export const articlesRegistry: ArticleMeta[] = [
     date: "October 24, 2026",
     image:
       "https://images.unsplash.com/photo-1541888946425-d0fbb18f15f7?auto=format&fit=crop&q=80&w=1200",
-    postName: "BMC Junior Engineer (Civil) / मुंबई मनपा कनिष्ठ अभियंता (स्थापत्य)",
+    postName:
+      "BMC Junior Engineer (Civil) / मुंबई मनपा कनिष्ठ अभियंता (स्थापत्य)",
     descriptionMr:
       "बृहन्मुंबई महानगरपालिका (BMC) कनिष्ठ अभियंता (स्थापत्य) परीक्षा ०३ व ०८ मार्च २०२५ चा अधिकृत निकाल व गुणवत्ता यादी प्रसिद्ध. २५,०४९ उमेदवारांचे गुण, प्रवर्गनिहाय रँक व कट-ऑफ मार्क्स येथे थेट नाव अथवा रोल नंबर टाकून शोधा आणि फिल्टर केलेली गुणवत्ता यादी PDF डाऊनलोड करा.",
     postType: "result",
@@ -206,14 +237,18 @@ export const articlesRegistry: ArticleMeta[] = [
     organisation: "Canara Bank",
   },
   {
-    titleEn: "Deogiri Nagari Sahakari Bank Ltd. – Trainee Junior Officer Recruitment 2026",
-    titleMr: "देवगिरी नागरी सहकारी बँक लि. – प्रशिक्षणार्थी कनिष्ठ अधिकारी भर्ती 2026",
+    titleEn:
+      "Deogiri Nagari Sahakari Bank Ltd. – Trainee Junior Officer Recruitment 2026",
+    titleMr:
+      "देवगिरी नागरी सहकारी बँक लि. – प्रशिक्षणार्थी कनिष्ठ अधिकारी भर्ती 2026",
     slug: "/deogiri-nagari-sahakari-bank-recruitment-2026",
     category: "Bank Job",
     date: "October 16, 2026",
-    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=1200",
+    image:
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=1200",
     postName: "Trainee Junior Officer (प्रशिक्षणार्थी कनिष्ठ अधिकारी)",
-    descriptionMr: "देवगिरी नागरी सहकारी बँक लि. महाराष्ट्रातील शासकीय बँक नेत्रुत्वात, 100 पदांसाठी प्रशिक्षणार्थी कनिष्ठ अधिकारी नियुक्ती. अर्ज ऑनलाइन MUCBF पोर्टलवर 14 Oct 2026 – 31 Oct 2026.",
+    descriptionMr:
+      "देवगिरी नागरी सहकारी बँक लि. महाराष्ट्रातील शासकीय बँक नेत्रुत्वात, 100 पदांसाठी प्रशिक्षणार्थी कनिष्ठ अधिकारी नियुक्ती. अर्ज ऑनलाइन MUCBF पोर्टलवर 14 Oct 2026 – 31 Oct 2026.",
     vacancies: "100",
     lastDate: "31 Oct 2026",
     postType: "recruitment",
@@ -224,7 +259,7 @@ export const articlesRegistry: ArticleMeta[] = [
     educationTags: ["degree", "12th"],
     districts: ["all-maharashtra"],
     status: "apply-now",
-    organisation: "Deogiri Nagari Sahakari Bank Ltd."
+    organisation: "Deogiri Nagari Sahakari Bank Ltd.",
   },
   {
     titleEn:
@@ -744,7 +779,8 @@ export const articlesRegistry: ArticleMeta[] = [
     lastDate: "Valid for 365 Days",
     postType: "result",
     status: "declared",
-    organisation: "दि लातूर जिल्हा मध्यवर्ती सहकारी बँक लि., लातूर (Latur DCCB)",
+    organisation:
+      "दि लातूर जिल्हा मध्यवर्ती सहकारी बँक लि., लातूर (Latur DCCB)",
   },
   {
     titleEn:
@@ -779,7 +815,8 @@ export const articlesRegistry: ArticleMeta[] = [
     lastDate: "14 Aug 2026",
     postType: "result",
     status: "declared",
-    organisation: "दि लातूर जिल्हा मध्यवर्ती सहकारी बँक लि., लातूर (Latur DCCB)",
+    organisation:
+      "दि लातूर जिल्हा मध्यवर्ती सहकारी बँक लि., लातूर (Latur DCCB)",
   },
   {
     titleEn:
@@ -1215,4 +1252,3 @@ export const articlesRegistry: ArticleMeta[] = [
     organisation: "Maharashtra Public Service Commission (MPSC)",
   },
 ];
-
