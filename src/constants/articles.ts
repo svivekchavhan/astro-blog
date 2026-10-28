@@ -54,6 +54,34 @@ export interface ArticleMeta {
 export const articlesRegistry: ArticleMeta[] = [
   {
     titleEn:
+      "RRB Station Master Recruitment 2026: Apply Online for 1,215 Vacancies (CEN 08/2026)",
+    titleMr:
+      "रेल्वे भरती मंडळ (RRB) स्टेशन मास्टर भरती २०२६: १,२१५ पदांसाठी ऑनलाईन अर्ज सुरू (CEN 08/2026)",
+    slug: "/rrb-station-master-recruitment-2026",
+    category: "Railway Job",
+    date: "October 27, 2026",
+    image:
+      "https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&q=80&w=1200",
+    postName: "Station Master (Level 6) / स्टेशन मास्टर (लेव्हल ६)",
+    descriptionMr:
+      "रेल्वे भरती मंडळाने (RRB) CEN 08/2026 अंतर्गत स्टेशन मास्टर पदाच्या १,२१५ जागांसाठी भरती जाहीर केली आहे. पदवीधर उमेदवारांसाठी सुवर्णसंधी, आरंभिक वेतन ₹३५,४००/-. ऑनलाईन अर्ज मुदत २५ नोव्हेंबर २०२६ पर्यंत.",
+    vacancies: "1,215",
+    lastDate: "25 Nov 2026",
+    postType: "recruitment",
+    priority: "mega",
+    isImportant: true,
+    badge: "RRB 1,215 Posts",
+    badgeType: "new",
+    educationTags: ["degree"],
+    districts: ["all-maharashtra", "mumbai"],
+    status: "apply-now",
+    organisation: "Railway Recruitment Boards (RRB)",
+    officialWebsiteUrl: "https://www.rrbapply.gov.in",
+    officialNotificationUrl:
+      "https://www.rrbapply.gov.in/assets/forms/CEN_08_2026_StationMaster.pdf",
+  },
+  {
+    titleEn:
       "BMC Junior Engineer (Civil) Result 2025: MCGM JE Civil Merit List, Scorecard & Cutoff Search (Test 03 & 08 March 2025)",
     titleMr:
       "BMC कनिष्ठ अभियंता (स्थापत्य) निकाल २०२५: मुंबई मनपा JE Civil गुणवत्ता यादी व गुण जाहीर; थेट नाव व रोल नंबरनुसार निकाल शोधा",

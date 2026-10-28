@@ -1,0 +1,1226 @@
+---
+import ArticleContainer from "../components/ArticleContainer.astro";
+import { 
+  HiOutlineCalendarDays, 
+  HiOutlineArrowTopRightOnSquare, 
+  HiOutlineAcademicCap, 
+  HiOutlineBriefcase, 
+  HiOutlineBuildingOffice, 
+  HiOutlineCheckCircle, 
+  HiOutlineDocumentText, 
+  HiOutlineCurrencyRupee, 
+  HiOutlineUserGroup,
+  HiOutlineQuestionMarkCircle,
+  HiOutlineExclamationTriangle,
+  HiOutlineSparkles,
+  HiOutlineShieldCheck,
+  HiOutlineClock
+} from "react-icons/hi2";
+
+const title = "RRB Station Master Recruitment 2026: Apply Online for 1,215 Vacancies (CEN 08/2026) - रेल्वे स्टेशन मास्टर भरती";
+const description = "Railway Recruitment Boards (RRB) has released CEN 08/2026 notification for 1,215 Station Master (Level 6, Pay ₹35,400) vacancies. Check eligibility, age limit, CBT & CBAT exam pattern, syllabus, fees and apply online at rrbapply.gov.in.";
+const canonicalURL = "https://mahasandhi.in/rrb-station-master-recruitment-2026";
+const date = "October 27, 2026";
+const category = "Railway Job";
+const image = "https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&q=80&w=1200";
+
+// JSON-LD Schemas for Schema.org SEO Validation
+const jobPostingSchema = {
+  "@context": "https://schema.org/",
+  "@type": "JobPosting",
+  "title": "RRB Station Master Recruitment 2026 (1,215 Vacancies - CEN 08/2026)",
+  "description": "Railway Recruitment Boards (RRB) invites online applications for 1,215 Station Master vacancies under Centralised Employment Notice CEN 08/2026. Pay Level 6 (Initial Pay ₹35,400). Selection through CBT, CBAT, DV and Medical exam (No Interview).",
+  "identifier": {
+    "@type": "PropertyValue",
+    "name": "Railway Recruitment Boards",
+    "value": "CEN 08/2026"
+  },
+  "datePosted": "2026-10-27",
+  "validThrough": "2026-11-25",
+  "employmentType": "FULL_TIME",
+  "hiringOrganization": {
+    "@type": "Organization",
+    "name": "Railway Recruitment Boards (RRB)",
+    "sameAs": "https://www.rrbapply.gov.in"
+  },
+  "jobLocation": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "All India (All RRBs including RRB Mumbai)",
+      "addressCountry": "IN"
+    }
+  },
+  "baseSalary": {
+    "@type": "MonetaryAmount",
+    "currency": "INR",
+    "value": {
+      "@type": "QuantitativeValue",
+      "value": 35400,
+      "unitText": "MONTH"
+    }
+  },
+  "educationRequirements": "Graduate Degree in any stream from a recognized University or equivalent",
+  "experienceRequirements": "Fresher / No prior experience required"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "RRB स्टेशन मास्टर भरती २०२६ मध्ये एकूण किती जागा आहेत? (What are total Station Master vacancies?)",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "रेल्वे भरती मंडळाने (RRB) CEN 08/2026 अंतर्गत देशभरातील सर्व RRBs मध्ये स्टेशन मास्टर पदाच्या एकूण १,२१५ (1,215) रिक्त जागांसाठी भरती जाहीर केली आहे."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "RRB Station Master पदासाठी शैक्षणिक पात्रता काय आहे?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "मान्यताप्राप्त विद्यापीठाची कोणत्याही शाखेतील पदवी (Graduate Degree in any stream). अंतिम वर्षाचा निकाल प्रलंबित असलेले उमेदवार अर्ज करू शकत नाहीत; पात्रता २५ नोव्हेंबर २०२६ पर्यंत पूर्ण असावी."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "स्टेशन मास्टर भरतीसाठी वयोमर्यादा काय आहे?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "०१ जानेवारी २०२७ रोजी उमेदवाराचे वय २० ते ३३ वर्षे असावे. नियमांनुसार OBC-NCL प्रवर्गास ३ वर्षे आणि SC/ST प्रवर्गास ५ वर्षे वयोमर्यादेत सूट लागू आहे."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "या भरतीमध्ये मुलाखत (Interview) आहे का?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "नाही. या भरतीमध्ये कोणतीही मुलाखत (Interview) नाही. निवड केवळ CBT (संगणक आधारित चाचणी), CBAT (अ‍ॅप्टिट्यूड टेस्ट), कागदपत्र पडताळणी (DV) आणि वैद्यकीय चाचणी (Medical A-2) द्वारे होईल."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "अर्ज करण्याची शेवटची तारीख काय आहे?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ऑनलाईन अर्ज करण्याची अंतिम तारीख २५ नोव्हेंबर २०२६ (रात्री ११:५९ वाजेपर्यंत) असून परीक्षा शुल्क भरण्याची मुदत २७ नोव्हेंबर २०२६ पर्यंत आहे."
+      }
+    }
+  ]
+};
+---
+
+<ArticleContainer
+  title={title}
+  description={description}
+  canonicalURL={canonicalURL}
+  date={date}
+  category={category}
+  image={image}
+  hideRelatedArticles={false}
+  customBreadcrumbs={[
+    { name: "Home", url: "/" },
+    { name: "Railway Jobs", url: "/category/railway" },
+    { name: "RRB Station Master 2026" }
+  ]}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jobPostingSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Quick Highlight Overview Card -->
+  <div class="bg-gradient-to-r from-primary/10 via-amber-500/10 to-primary/5 border border-primary/20 rounded-3xl p-5 sm:p-8 mb-8 not-prose">
+    <div class="flex flex-wrap items-center gap-2 mb-3">
+      <span class="px-3 py-1 bg-primary text-white font-extrabold text-xs uppercase tracking-wider rounded-full shadow-2xs">
+        🔥 रेल्वे महाभरती CEN 08/2026
+      </span>
+      <span class="text-xs font-bold text-amber-700 dark:text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-1 rounded-full">
+        १,२१५ पदे जाहीर (Level 6 Pay)
+      </span>
+      <span class="text-xs font-bold text-emerald-700 dark:text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-full">
+        मुलाखत नाही (No Interview)
+      </span>
+    </div>
+    <h2 class="text-xl sm:text-2xl md:text-3xl font-black text-text-main mb-3 leading-snug">
+      रेल्वे भरती बोर्ड (RRB) द्वारे स्टेशन मास्टर (Station Master) पदांच्या १,२१५ जागांची भव्य भरती जाहीर!
+    </h2>
+    <p class="text-xs sm:text-sm text-text-muted leading-relaxed m-0 font-medium">
+      भारतीय रेल्वेच्या विविध विभागीय मंडळांमध्ये (All RRBs) ७व्या वेतन आयोगानुसार <strong>Level 6 (आरंभिक वेतन ₹३५,४००/- + भत्ते)</strong> या उच्च पदावर पदवीधर उमेदवारांसाठी सुवर्णसंधी उपलब्ध झाली आहे. ऑनलाईन अर्ज प्रक्रिया <strong>२७ ऑक्टोबर २०२६ पासून सुरू झाली असून २५ नोव्हेंबर २०२६</strong> पर्यंत अर्ज करता येतील.
+    </p>
+
+    <!-- Key Metrics Grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6 pt-6 border-t border-border-card/60 text-xs">
+      <div class="bg-bg-surface p-3.5 rounded-xl border border-border-card">
+        <span class="text-text-muted block text-[0.7rem] uppercase font-bold">एकूण पदे (Vacancies)</span>
+        <strong class="text-primary text-base sm:text-lg font-black">१,२१५ जागा</strong>
+      </div>
+      <div class="bg-bg-surface p-3.5 rounded-xl border border-border-card">
+        <span class="text-text-muted block text-[0.7rem] uppercase font-bold">पात्रता (Qualification)</span>
+        <strong class="text-text-main text-sm font-extrabold">कोणतीही पदवी (Graduate)</strong>
+      </div>
+      <div class="bg-bg-surface p-3.5 rounded-xl border border-border-card">
+        <span class="text-text-muted block text-[0.7rem] uppercase font-bold">वेतनमान (Initial Pay)</span>
+        <strong class="text-emerald-600 dark:text-emerald-400 text-sm font-extrabold">₹३५,४००/- (Level 6)</strong>
+      </div>
+      <div class="bg-bg-surface p-3.5 rounded-xl border border-border-card">
+        <span class="text-text-muted block text-[0.7rem] uppercase font-bold">शेवटची तारीख (Last Date)</span>
+        <strong class="text-rose-600 dark:text-rose-400 text-sm font-extrabold">२५ नोव्हेंबर २०२६</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- ARTICLE BODY (MARATHI VERSION) -->
+  <div class="space-y-8 text-text-main leading-relaxed">
+    
+    <!-- Introduction Section -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>RRB Station Master भरती २०२६: थोडक्यात माहिती (Overview)</span>
+      </h2>
+      <p class="text-sm sm:text-base leading-relaxed text-text-secondary">
+        रेल्वे भरती बोर्डाने (Railway Recruitment Boards - RRB) केंद्रीय रोजगार सूचना क्र. <strong>CEN 08/2026</strong> अंतर्गत <strong>स्टेशन मास्टर (Station Master)</strong> या अत्यंत महत्त्वाच्या व जबाबदार पदासाठी अधिकृत अधिसूचना जारी केली आहे. देशभरातील सर्व रेल्वे झोनमध्ये मिळून एकूण <strong>१,२१५ रिक्त पदे</strong> भरली जाणार आहेत.
+      </p>
+      <p class="text-sm sm:text-base leading-relaxed text-text-secondary">
+        या भरतीचे सर्वात मोठे वैशिष्ट्य म्हणजे यामध्ये <strong>कोणतीही मुलाखत (Interview) नाही</strong>. उमेदवारांची निवड पारदर्शक पद्धतीने संगणक आधारित परीक्षा (CBT), अ‍ॅप्टिट्यूड चाचणी (CBAT), मूळ कागदपत्र पडताळणी (DV) आणि वैद्यकीय तपासणी (Medical Test - A2 Standard) या चार टप्प्यांतून केली जाईल. महाराष्ट्रातील इच्छुक व पदवीधर उमेदवारांसाठी केंद्र सरकारी सेवेत रुजू होण्याची ही उत्तम संधी आहे.
+      </p>
+    </section>
+
+    <!-- Important Highlights Table -->
+    <section class="not-prose">
+      <div class="bg-bg-surface border border-border-card rounded-2xl overflow-hidden shadow-xs">
+        <div class="bg-primary/10 px-5 py-3 border-b border-border-card flex items-center gap-2">
+          <HiOutlineDocumentText className="text-primary text-lg" />
+          <h3 class="text-sm font-extrabold uppercase tracking-wider text-primary m-0">
+            RRB Station Master Bharti 2026 Highlights Summary
+          </h3>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs sm:text-sm text-left border-collapse">
+            <tbody class="divide-y divide-border-card/40">
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 w-1/3 text-text-main">भरती संस्था (Organization)</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">रेल्वे भरती मंडळ (Railway Recruitment Boards - RRB)</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">जाहिरात क्रमांक (Advt No.)</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">CEN 08/2026 (Station Master)</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">पदाचे नाव (Post Name)</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">स्टेशन मास्टर (Station Master)</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">एकूण रिक्त पदे (Total Vacancies)</td>
+                <td class="px-4 py-3 text-primary font-black">१,२१५ जागा (All RRBs, झोननिहाय तक्ता Annexure-B मध्ये)</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">वेतन श्रेणी (Pay Scale)</td>
+                <td class="px-4 py-3 text-emerald-600 dark:text-emerald-400 font-bold">लेव्हल ६ (7th CPC), आरंभिक मूळ वेतन ₹३५,४००/- + भत्ते (DA, HRA इ.)</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">आवश्यक पात्रता (Education)</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">कोणत्याही मान्यताप्राप्त विद्यापीठाची पदवी (Graduate in any stream)</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">वयोमर्यादा (Age Limit)</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">२० ते ३३ वर्षे (०१.०१.२०२७ रोजी) + नियमांनुसार सवलत</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">निवड प्रक्रिया (Selection Stages)</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">CBT (लेखी परीक्षा) → CBAT (अ‍ॅप्टिट्यूड टेस्ट) → DV → मेडिकल टेस्ट (मुलाखत नाही)</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">अर्ज पद्धती (Application Mode)</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">ऑनलाईन (Online Application at rrbapply.gov.in)</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">अधिकृत पोर्टल (Official Portals)</td>
+                <td class="px-4 py-3 text-primary font-bold">rrbapply.gov.in / rrb.indianrailways.gov.in</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Important Dates Section -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>महत्त्वाच्या तारखा व वेळापत्रक (Important Dates)</span>
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 not-prose mb-4">
+        <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
+          <HiOutlineCalendarDays className="text-primary text-2xl shrink-0 mt-0.5" />
+          <div>
+            <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">संक्षिप्त सूचना (Employment News)</span>
+            <strong class="text-text-main text-sm font-extrabold">२४ ऑक्टोबर २०२६</strong>
+          </div>
+        </div>
+
+        <div class="bg-bg-surface border border-emerald-500/30 p-4 rounded-xl flex items-start gap-3">
+          <HiOutlineCalendarDays className="text-emerald-500 text-2xl shrink-0 mt-0.5" />
+          <div>
+            <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">ऑनलाईन अर्ज सुरू (Start Date)</span>
+            <strong class="text-emerald-600 dark:text-emerald-400 text-sm font-extrabold">२७ ऑक्टोबर २०२६</strong>
+          </div>
+        </div>
+
+        <div class="bg-bg-surface border border-rose-500/30 p-4 rounded-xl flex items-start gap-3">
+          <HiOutlineClock className="text-rose-500 text-2xl shrink-0 mt-0.5" />
+          <div>
+            <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">अर्ज करण्याची अंतिम मुदत (Last Date)</span>
+            <strong class="text-rose-600 dark:text-rose-400 text-sm font-extrabold">२५ नोव्हेंबर २०२६ (११:५९ PM)</strong>
+          </div>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
+          <HiOutlineCurrencyRupee className="text-amber-500 text-2xl shrink-0 mt-0.5" />
+          <div>
+            <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">फी भरण्याची शेवटची तारीख</span>
+            <strong class="text-text-main text-sm font-extrabold">२७ नोव्हेंबर २०२६ (११:५९ PM)</strong>
+          </div>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
+          <HiOutlineDocumentText className="text-sky-500 text-2xl shrink-0 mt-0.5" />
+          <div>
+            <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">अर्ज दुरुस्ती विंडो (Correction Window)</span>
+            <strong class="text-text-main text-sm font-extrabold">२८ नोव्हेंबर ते ०७ डिसेंबर २०२६</strong>
+          </div>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
+          <HiOutlineSparkles className="text-primary text-2xl shrink-0 mt-0.5" />
+          <div>
+            <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">CBT परीक्षेची तारीख</span>
+            <strong class="text-primary text-sm font-extrabold">लवकरच जाहीर केली जाईल</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Post, Pay Scale & Eligibility -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>पदाचे नाव, जागा आणि शैक्षणिक पात्रता (Post & Qualification)</span>
+      </h2>
+
+      <div class="space-y-4 not-prose">
+        <div class="bg-bg-surface border border-border-card rounded-2xl overflow-hidden shadow-xs">
+          <div class="overflow-x-auto">
+            <table class="w-full text-xs sm:text-sm text-left border-collapse">
+              <thead class="bg-bg-base border-b border-border-card text-text-main font-bold">
+                <tr>
+                  <th class="px-4 py-3">पदाचे नाव (Post Name)</th>
+                  <th class="px-4 py-3">वेतन स्तर (Pay Level)</th>
+                  <th class="px-4 py-3">आरंभिक वेतन (Initial Pay)</th>
+                  <th class="px-4 py-3">एकूण पदे</th>
+                  <th class="px-4 py-3">किमान शैक्षणिक पात्रता</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-border-card/40 text-text-secondary font-medium">
+                <tr>
+                  <td class="px-4 py-3 font-bold text-text-main">
+                    स्टेशन मास्टर (Station Master)
+                  </td>
+                  <td class="px-4 py-3">Level 6 (7th CPC)</td>
+                  <td class="px-4 py-3 font-bold text-emerald-600 dark:text-emerald-400">₹ ३५,४००/-</td>
+                  <td class="px-4 py-3 font-black text-primary">१,२१५ पदे</td>
+                  <td class="px-4 py-3">
+                    मान्यताप्राप्त विद्यापीठाची <strong>कोणत्याही शाखेतील पदवी (Graduate Degree)</strong> किंवा समकक्ष पात्रता.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Critical Qualification Warning Note -->
+        <div class="bg-amber-500/10 border border-amber-500/30 rounded-2xl p-4 sm:p-5 flex items-start gap-3">
+          <HiOutlineExclamationTriangle className="text-amber-600 dark:text-amber-400 text-2xl shrink-0 mt-0.5" />
+          <div class="text-xs sm:text-sm text-text-secondary space-y-1">
+            <p class="font-bold text-text-main m-0">महत्त्वाची सूचना (Awaiting Results Not Eligible):</p>
+            <p class="m-0 leading-relaxed">
+              ज्या उमेदवारांचा अंतिम वर्षाचा निकाल प्रलंबित आहे (Awaiting Final Degree Result) ते या भरतीसाठी पात्र नाहीत. विहित शैक्षणिक पात्रता अर्ज करण्याच्या अंतिम तारखेपर्यंत म्हणजे <strong>२५ नोव्हेंबर २०२६</strong> पूर्वी पूर्ण झालेली असणे अनिवार्य आहे.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Age Limit & Category Relaxation -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>वयोमर्यादा व प्रवर्गनिहाय सवलत (Age Limit & Relaxation as on 01.01.2027)</span>
+      </h2>
+
+      <p class="text-sm text-text-secondary mb-4">
+        उमेदवारांचे वय <strong>०१ जानेवारी २०२७ रोजी २० ते ३३ वर्षे</strong> दरम्यान असणे आवश्यक आहे.
+      </p>
+
+      <div class="bg-bg-surface border border-border-card rounded-2xl overflow-hidden shadow-xs not-prose mb-4">
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs sm:text-sm text-left border-collapse">
+            <thead class="bg-bg-base border-b border-border-card text-text-main font-bold">
+              <tr>
+                <th class="px-4 py-3">प्रवर्ग (Category)</th>
+                <th class="px-4 py-3">वयोमर्यादा (Age Limit)</th>
+                <th class="px-4 py-3">जन्म तारीख मर्यादा (Born Between)</th>
+                <th class="px-4 py-3">सवलत (Relaxation)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-border-card/40 text-text-secondary font-medium">
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold text-text-main">खुला प्रवर्ग (UR) / EWS</td>
+                <td class="px-4 py-3">२० ते ३३ वर्षे</td>
+                <td class="px-4 py-3">०२.०१.१९९४ ते ०१.०१.२००७ दरम्यान</td>
+                <td class="px-4 py-3 text-text-muted">सवलत नाही (Regular)</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold text-text-main">इतर मागासवर्गीय (OBC - Non Creamy Layer)</td>
+                <td class="px-4 py-3">२० ते ३६ वर्षे</td>
+                <td class="px-4 py-3">०२.०१.१९९१ किंवा त्यानंतर जन्मलेले</td>
+                <td class="px-4 py-3 font-bold text-primary">३ वर्षे सवलत</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold text-text-main">अनुसूचित जाती / जमाती (SC / ST)</td>
+                <td class="px-4 py-3">२० ते ३८ वर्षे</td>
+                <td class="px-4 py-3">०२.०१.१९८९ किंवा त्यानंतर जन्मलेले</td>
+                <td class="px-4 py-3 font-bold text-primary">५ वर्षे सवलत</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold text-text-main">माजी सैनिक (Ex-Servicemen - ६ महिन्यांपेक्षा जास्त सेवा)</td>
+                <td class="px-4 py-3">सेवा कालावधी वजा करून</td>
+                <td class="px-4 py-3">UR/EWS: ३ वर्षे, OBC: ६ वर्षे, SC/ST: ८ वर्षे</td>
+                <td class="px-4 py-3">नियम लागू</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold text-text-main">कार्यरत रेल्वे कर्मचारी (Group C/D Staff - किमान ३ वर्षे सेवा)</td>
+                <td class="px-4 py-3">UR/EWS: ४० वर्षे, OBC: ४३ वर्षे, SC/ST: ४५ वर्षे</td>
+                <td class="px-4 py-3">रेल्वे सेवेतील सलग ३ वर्षे पूर्ण असणे आवश्यक</td>
+                <td class="px-4 py-3">कमाल ४० ते ४५ वर्षे</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold text-text-main">विधवा / घटस्फोटित / विभक्त महिला (पुनर्विवाह न केलेल्या)</td>
+                <td class="px-4 py-3">UR/EWS: ३५ वर्षे, OBC: ३८ वर्षे, SC/ST: ४० वर्षे</td>
+                <td class="px-4 py-3">सक्षम न्यायालयाचे आदेश/प्रमाणपत्र आवश्यक</td>
+                <td class="px-4 py-3">कमाल ३५ ते ४० वर्षे</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="text-xs sm:text-sm text-text-muted space-y-1">
+        <p class="m-0">• <strong>महत्त्वाचा नियम:</strong> वयातील सवलत संचयी (Cumulative) नाही; उमेदवाराला लागू असलेली केवळ सर्वोच्च एकच सवलत मिळेल.</p>
+        <p class="m-0">• अराखीव (Unreserved) जागेसाठी अर्ज करणाऱ्या SC/ST/OBC उमेदवारांना वयाची सवलत मिळणार नाही.</p>
+      </div>
+    </section>
+
+    <!-- Application Fees & Refund Policy -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>परीक्षा शुल्क व परतावा नियम (Application Fees & Refund Policy)</span>
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose mb-4">
+        <!-- Fee Card 1 -->
+        <div class="bg-bg-surface border border-border-card p-5 rounded-2xl space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black uppercase tracking-wider text-text-main">सर्वसाधारण / OBC / EWS उमेदवार</span>
+            <span class="text-lg font-black text-primary">₹ ५००/-</span>
+          </div>
+          <div class="pt-3 border-t border-border-card/50 text-xs sm:text-sm text-text-secondary space-y-2">
+            <p class="m-0 font-medium">
+              👉 <strong>परतावा (Refund):</strong> पहिल्या टप्प्यातील संगणक आधारित परीक्षेस (CBT) उपस्थित राहिल्यास बँक शुल्क वजा करून <strong>₹ ४००/-</strong> उमेदवाराच्या बँक खात्यावर परत केले जातील.
+            </p>
+          </div>
+        </div>
+
+        <!-- Fee Card 2 -->
+        <div class="bg-bg-surface border border-emerald-500/30 p-5 rounded-2xl space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-400">महिला / Transgender / Ex-SM / SC / ST / EBC / अल्पसंख्याक</span>
+            <span class="text-lg font-black text-emerald-600 dark:text-emerald-400">₹ २५०/-</span>
+          </div>
+          <div class="pt-3 border-t border-border-card/50 text-xs sm:text-sm text-text-secondary space-y-2">
+            <p class="m-0 font-medium">
+              👉 <strong>परतावा (Full Refund):</strong> पहिल्या टप्प्यातील CBT परीक्षेस उपस्थित राहिल्यास बँक शुल्क वजा करून संपूर्ण <strong>₹ २५०/-</strong> शुल्क बँक खात्यावर परत केले जाईल.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-xs text-text-muted m-0">
+        * <strong>टीप:</strong> परीक्षा शुल्क केवळ ऑनलाईन माध्यमातून (Internet Banking, Debit/Credit Card किंवा UPI द्वारे) स्वीकारले जाईल. रोख अथवा चालान पद्धत उपलब्ध नाही.
+      </p>
+    </section>
+
+    <!-- Selection Process (4 Stages) -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>निवड प्रक्रिया व परीक्षा स्वरूप (Selection Process - Interview: No)</span>
+      </h2>
+
+      <p class="text-sm text-text-secondary mb-4">
+        स्टेशन मास्टर पदासाठी थेट भरती असून मुलाखत (Interview) घेतली जात नाही. निवड खालील ४ टप्प्यांतून होते:
+      </p>
+
+      <div class="space-y-4 not-prose">
+        <!-- Stage 1 CBT -->
+        <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+            <div class="flex items-center gap-2">
+              <span class="w-7 h-7 rounded-full bg-primary text-white font-extrabold flex items-center justify-center text-xs">१</span>
+              <h3 class="text-base font-extrabold text-text-main m-0">टप्पा १: संगणक आधारित चाचणी (Computer Based Test - CBT)</h3>
+            </div>
+            <span class="text-xs font-bold bg-primary/10 text-primary px-2.5 py-1 rounded-full">१०० प्रश्न • १२० मिनिटे</span>
+          </div>
+          <div class="text-xs sm:text-sm text-text-secondary space-y-2">
+            <p class="m-0 leading-relaxed font-medium">
+              • <strong>परीक्षेचे विषय व गुण:</strong> बेसिक सायन्स, गणित व विश्लेषणात्मक क्षमता (Basic Science, Maths & Analytical) - <strong>६० गुण</strong>, लॉजिकल कॅपॅबिलिटी (Logical Capability) - <strong>२० गुण</strong>, मानसिक तर्कक्षमता (Mental Reasoning) - <strong>२० गुण</strong>. एकूण १०० प्रश्न, १०० गुण.
+            </p>
+            <p class="m-0 leading-relaxed font-medium">
+              • <strong>वेळ:</strong> १२० मिनिटे (२ तास).
+            </p>
+            <p class="m-0 leading-relaxed font-medium">
+              • <strong>नकारात्मक गुण (Negative Marking):</strong> प्रत्येक चुकीच्या उत्तरासाठी १/३ (one-third) गुण वजा केले जातील.
+            </p>
+            <p class="m-0 leading-relaxed font-medium">
+              • <strong>किमान पात्रता गुण (Minimum Qualifying Marks):</strong> UR/EWS: ४०%, OBC-NCL: ३०%, SC: ३०%, ST: २५%.
+            </p>
+          </div>
+        </div>
+
+        <!-- Stage 2 CBAT -->
+        <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+            <div class="flex items-center gap-2">
+              <span class="w-7 h-7 rounded-full bg-amber-500 text-white font-extrabold flex items-center justify-center text-xs">२</span>
+              <h3 class="text-base font-extrabold text-text-main m-0">टप्पा २: कॉम्प्युटर बेस्ड अ‍ॅप्टिट्यूड टेस्ट (CBAT)</h3>
+            </div>
+            <span class="text-xs font-bold bg-amber-500/10 text-amber-700 dark:text-amber-400 px-2.5 py-1 rounded-full">८ पट उमेदवार</span>
+          </div>
+          <div class="text-xs sm:text-sm text-text-secondary space-y-2">
+            <p class="m-0 leading-relaxed font-medium">
+              • CBT मधील गुणांच्या आधारे उपलब्ध रिक्त जागांच्या <strong>८ पट (8 times)</strong> उमेदवारांना CBAT साठी बोलावले जाईल.
+            </p>
+            <p class="m-0 leading-relaxed font-medium">
+              • उमेदवाराला प्रत्येक टेस्ट बॅटरीमध्ये (Test Battery) <strong>किमान ४२ T-Score</strong> मिळवणे अनिवार्य आहे; यामध्ये कोणत्याही प्रवर्गाला सवलत नाही.
+            </p>
+            <p class="m-0 leading-relaxed font-medium">
+              • <strong>अंतिम गुणवत्ता यादी (Final Merit List):</strong> CBT मधील गुणांचे <strong>७०% वेटेज</strong> + CBAT मधील गुणांचे <strong>३०% वेटेज</strong> एकत्रित करून गुणवत्ता यादी तयार केली जाईल.
+            </p>
+          </div>
+        </div>
+
+        <!-- Stage 3 DV -->
+        <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="w-7 h-7 rounded-full bg-sky-600 text-white font-extrabold flex items-center justify-center text-xs">३</span>
+            <h3 class="text-base font-extrabold text-text-main m-0">टप्पा ३: मूळ कागदपत्र पडताळणी (Document Verification - DV)</h3>
+          </div>
+          <p class="text-xs sm:text-sm text-text-secondary m-0 leading-relaxed font-medium">
+            गुणवत्ता यादी व उमेदवारांनी दिलेल्या रेल्वे पर्यायानुसार (Railway Option) रिक्त जागांच्या बरोबरीने (1:1 प्रमाण) उमेदवारांना कागदपत्र पडताळणीसाठी पाचारण केले जाईल.
+          </p>
+        </div>
+
+        <!-- Stage 4 Medical Exam -->
+        <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="w-7 h-7 rounded-full bg-emerald-600 text-white font-extrabold flex items-center justify-center text-xs">४</span>
+            <h3 class="text-base font-extrabold text-text-main m-0">टप्पा ४: वैद्यकीय तपासणी (Medical Examination - Standard A-2)</h3>
+          </div>
+          <p class="text-xs sm:text-sm text-text-secondary m-0 leading-relaxed font-medium">
+            स्टेशन मास्टर पदासाठी रेल्वेचे <strong>A-2 Medical Standard</strong> आवश्यक आहे (दूरदृष्टी, रंगदृष्टी व शारीरिक तंदुरुस्ती). विशेष नोंद: हे पद दिव्यांग (PwBD) प्रवर्गासाठी योग्य (Suitable) नाही.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Step-by-Step Online Application Guide -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>ऑनलाईन अर्ज कसा करावा? (Application & Registration Process)</span>
+      </h2>
+
+      <div class="bg-bg-surface border border-border-card rounded-2xl p-5 space-y-4 not-prose text-xs sm:text-sm text-text-secondary font-medium">
+        <div class="flex items-start gap-3">
+          <span class="w-6 h-6 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center shrink-0 mt-0.5">१</span>
+          <p class="m-0">
+            <strong>खाते तयार करा (Create an Account):</strong> सर्वप्रथम <a href="https://www.rrbapply.gov.in" target="_blank" rel="noopener noreferrer" class="text-primary font-bold underline">rrbapply.gov.in</a> पोर्टलवर जा. जर आपण यापूर्वी २०२४, २०२५ किंवा २०२६ मधील कोणत्याही RRB जाहिरातीसाठी खाते बनवले असेल, तर थेट त्याच लॉगिन आयडी व पासवर्डने लॉगिन करा.
+          </p>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <span class="w-6 h-6 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center shrink-0 mt-0.5">२</span>
+          <p class="m-0">
+            <strong>मोबाईल नंबर व ईमेल काळजीपूर्वक नोंदवा:</strong> नोंदणीसाठी उमेदवाराचा स्वतःचा चालू मोबाईल नंबर व सक्रीय ईमेल आयडी वापरणे बंधनकारक आहे. नोंदणीनंतर मोबाईल नंबर व ईमेल बदलता येत नाही.
+          </p>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <span class="w-6 h-6 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center shrink-0 mt-0.5">३</span>
+          <p class="m-0 text-rose-600 dark:text-rose-400 font-bold">
+            ⚠️ फक्त एकाच RRB ची निवड करा: उमेदवार फक्त एकाच RRB अंतर्गत अर्ज करू शकतात. एकापेक्षा जास्त RRB कडे अर्ज केल्यास सर्व अर्ज रद्द केले जातील आणि उमेदवाराला भविष्यातील सर्व RRB परीक्षांसाठी प्रतिबंधित (Debarred) केले जाऊ शकते.
+          </p>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <span class="w-6 h-6 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center shrink-0 mt-0.5">४</span>
+          <p class="m-0">
+            <strong>थेट फोटो (Live Photo Capture) व कागदपत्रे:</strong> फॉर्म भरताना वेबकॅम किंवा मोबाईल कॅमेऱ्याद्वारे थेट फोटो (Live Photo) कॅप्चर करावा लागेल. स्वाक्षरी आणि आवश्यक कागदपत्रे विहित साईजमध्ये अपलोड करा (पॅरा १६.५ व १६.६ नुसार).
+          </p>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <span class="w-6 h-6 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center shrink-0 mt-0.5">५</span>
+          <p class="m-0">
+            <strong>EBC सवलत प्रमाणपत्र:</strong> आर्थिकदृष्ट्या दुर्बल घटकातील (EBC) फी सवलतीसाठी सक्षम प्राधिकाऱ्याचे प्रमाणपत्र, BPL कार्ड अथवा इज्जत MST हे २५ नोव्हेंबर २०२६ पूर्वी जारी झालेले असावे.
+          </p>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <span class="w-6 h-6 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center shrink-0 mt-0.5">६</span>
+          <p class="m-0">
+            <strong>फी भरा व प्रिंट जतन करा:</strong> ऑनलाईन पद्धतीने परीक्षा शुल्क भरून अर्जाची अंतिम प्रत (Printout) भविष्यातील पडताळणीसाठी डाउनलोड करून सुरक्षित ठेवा.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Important Links & Call-To-Action Box -->
+    <section class="not-prose">
+      <div class="bg-gradient-to-r from-primary/15 via-sky-500/10 to-primary/5 border-2 border-primary/30 rounded-3xl p-6 sm:p-8 shadow-sm">
+        <h3 class="text-lg sm:text-xl font-black text-text-main mb-2">
+          अधिकृत लिंक्स व थेट अर्ज (Important Official Links)
+        </h3>
+        <p class="text-xs sm:text-sm text-text-muted mb-6">
+          खालील थेट लिंक्सवरून अधिकृत जाहिरात PDF डाऊनलोड करा आणि ऑनलाईन अर्ज प्रक्रिया पूर्ण करा.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a
+            href="https://www.rrbapply.gov.in/assets/forms/CEN_08_2026_StationMaster.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center justify-center gap-2 px-5 py-3.5 bg-bg-surface hover:bg-primary/10 border-2 border-primary/40 rounded-xl font-bold text-sm text-primary transition-all shadow-xs text-center"
+          >
+            <HiOutlineDocumentText className="text-lg shrink-0" />
+            <span>अधिकृत जाहिरात PDF डाउनलोड करा</span>
+          </a>
+
+          <a
+            href="https://www.rrbapply.gov.in/#/auth/landing"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center justify-center gap-2 px-5 py-3.5 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold text-sm transition-all shadow-md text-center"
+          >
+            <span>थेट ऑनलाईन अर्ज करा (Apply Online)</span>
+            <HiOutlineArrowTopRightOnSquare className="text-lg shrink-0" />
+          </a>
+        </div>
+
+        <div class="mt-4 pt-4 border-t border-border-card/60 flex flex-wrap items-center justify-between text-xs text-text-muted">
+          <span>अधिकृत माहिती पोर्टल: <a href="https://indianrailways.gov.in" target="_blank" rel="noopener noreferrer" class="text-primary font-bold underline">rrb.indianrailways.gov.in</a></span>
+          <span>अर्ज पोर्टल: <a href="https://www.rrbapply.gov.in" target="_blank" rel="noopener noreferrer" class="text-primary font-bold underline">rrbapply.gov.in</a></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section Marathi -->
+    <section class="not-prose pt-4 border-t border-border-card/60">
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-6 flex items-center gap-2">
+        <HiOutlineQuestionMarkCircle className="text-primary text-2xl" />
+        <span>नेहमी विचारले जाणारे प्रश्न (Frequently Asked Questions - FAQs)</span>
+      </h2>
+
+      <div class="space-y-4">
+        <div class="bg-bg-surface border border-border-card rounded-2xl p-4 sm:p-5">
+          <h3 class="text-base font-bold text-text-main mb-1.5">
+            प्र.१) रेल्वे स्टेशन मास्टर भरती २०२६ मध्ये एकूण किती जागा आहेत?
+          </h3>
+          <p class="text-xs sm:text-sm text-text-muted m-0 leading-relaxed font-medium">
+            उत्तर: रेल्वे भरती मंडळाने CEN 08/2026 अंतर्गत देशभरातील सर्व RRB मध्ये मिळून स्टेशन मास्टर पदाच्या एकूण १,२१५ रिक्त जागा जाहीर केल्या आहेत.
+          </p>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card rounded-2xl p-4 sm:p-5">
+          <h3 class="text-base font-bold text-text-main mb-1.5">
+            प्र.२) स्टेशन मास्टर पदासाठी पदवीच्या अंतिम वर्षात शिकणारे उमेदवार अर्ज करू शकतात का?
+          </h3>
+          <p class="text-xs sm:text-sm text-text-muted m-0 leading-relaxed font-medium">
+            उत्तर: नाही. ज्या उमेदवारांचा पदवीचा निकाल प्रलंबित आहे ते अर्ज करू शकत नाहीत. पदवी २५ नोव्हेंबर २०२६ पर्यंत पूर्ण झालेली असणे आवश्यक आहे.
+          </p>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card rounded-2xl p-4 sm:p-5">
+          <h3 class="text-base font-bold text-text-main mb-1.5">
+            प्र.३) या भरतीमध्ये मुलाखत (Interview) घेतली जाईल का?
+          </h3>
+          <p class="text-xs sm:text-sm text-text-muted m-0 leading-relaxed font-medium">
+            उत्तर: अजिबात नाही. या भरतीत कोणतीही मुलाखत नाही. अंतिम निवड ही CBT मधील ७०% वेटेज आणि CBAT (Aptitude Test) मधील ३०% वेटेजच्या आधारे तयार केलेल्या गुणवत्ता यादीनुसार होते.
+          </p>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card rounded-2xl p-4 sm:p-5">
+          <h3 class="text-base font-bold text-text-main mb-1.5">
+            प्र.४) एकापेक्षा जास्त RRB कडे अर्ज करता येतो का?
+          </h3>
+          <p class="text-xs sm:text-sm text-text-muted m-0 leading-relaxed font-medium">
+            उत्तर: नाही. उमेदवार संपूर्ण भारतात फक्त एकाच RRB झोनची निवड करू शकतात. एकापेक्षा जास्त RRBs कडे अर्ज केल्यास सर्व अर्ज तत्काळ बाद ठरवले जातील.
+          </p>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card rounded-2xl p-4 sm:p-5">
+          <h3 class="text-base font-bold text-text-main mb-1.5">
+            प्र.५) परीक्षा शुल्क परत (Refund) मिळण्याचे नियम काय आहेत?
+          </h3>
+          <p class="text-xs sm:text-sm text-text-muted m-0 leading-relaxed font-medium">
+            उत्तर: ज्या उमेदवारांनी फी भरली आहे व जे पहिल्या टप्प्यातील CBT परीक्षेस प्रत्यक्ष उपस्थित राहतील, त्यांना बँक चार्जेस वजा करून खुला/OBC प्रवर्गासाठी ₹४०० आणि महिला/SC/ST प्रवर्गासाठी पूर्ण ₹२५० बँक खात्यावर परत केले जातात.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ENGLISH VERSION SLOT FOR BILINGUAL SUPPORT -->
+  <div slot="english" class="space-y-8 text-text-main leading-relaxed">
+    
+    <!-- Quick Highlight Overview Card (English) -->
+    <div class="bg-gradient-to-r from-primary/10 via-sky-500/10 to-primary/5 border border-primary/20 rounded-3xl p-5 sm:p-8 mb-8 not-prose">
+      <div class="flex flex-wrap items-center gap-2 mb-3">
+        <span class="px-3 py-1 bg-primary text-white font-extrabold text-xs uppercase tracking-wider rounded-full shadow-2xs">
+          🔥 RRB Mega Notification CEN 08/2026
+        </span>
+        <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-full">
+          1,215 Vacancies Announced
+        </span>
+        <span class="text-xs font-bold text-sky-600 dark:text-sky-400 bg-sky-500/10 border border-sky-500/20 px-2.5 py-1 rounded-full">
+          Level 6 Pay (₹35,400)
+        </span>
+      </div>
+      <h2 class="text-xl sm:text-2xl md:text-3xl font-black text-text-main mb-3 leading-snug">
+        Railway Recruitment Boards (RRB) Station Master Recruitment 2026: 1,215 Vacancies Notification Out!
+      </h2>
+      <p class="text-xs sm:text-sm text-text-muted leading-relaxed m-0 font-medium">
+        Railway Recruitment Boards (RRB) has officially released the Centralised Employment Notice <strong>CEN 08/2026</strong> for <strong>1,215 vacancies</strong> of <strong>Station Master</strong> (Pay Level 6, Initial Pay ₹35,400/-). Graduates from any stream are eligible to apply online from <strong>27 October to 25 November 2026</strong> at <strong>rrbapply.gov.in</strong>.
+      </p>
+
+      <!-- Key Metrics Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6 pt-6 border-t border-border-card/60 text-xs">
+        <div class="bg-bg-surface p-3.5 rounded-xl border border-border-card">
+          <span class="text-text-muted block text-[0.7rem] uppercase font-bold">Total Vacancies</span>
+          <strong class="text-primary text-base sm:text-lg font-black">1,215 Posts</strong>
+        </div>
+        <div class="bg-bg-surface p-3.5 rounded-xl border border-border-card">
+          <span class="text-text-muted block text-[0.7rem] uppercase font-bold">Qualification</span>
+          <strong class="text-text-main text-sm font-extrabold">Any Graduate Degree</strong>
+        </div>
+        <div class="bg-bg-surface p-3.5 rounded-xl border border-border-card">
+          <span class="text-text-muted block text-[0.7rem] uppercase font-bold">Initial Pay Scale</span>
+          <strong class="text-emerald-600 dark:text-emerald-400 text-sm font-extrabold">₹35,400/- (Level 6)</strong>
+        </div>
+        <div class="bg-bg-surface p-3.5 rounded-xl border border-border-card">
+          <span class="text-text-muted block text-[0.7rem] uppercase font-bold">Closing Date</span>
+          <strong class="text-rose-600 dark:text-rose-400 text-sm font-extrabold">25 Nov 2026</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- Overview Section -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>RRB Station Master Recruitment 2026: Detailed Overview</span>
+      </h2>
+      <p class="text-sm sm:text-base leading-relaxed text-text-secondary">
+        The Railway Recruitment Boards (RRBs) have issued notification CEN 08/2026 to recruit 1,215 Station Masters across zonal railways nationwide. This prestigious Group 'C' post carries a Pay Level 6 scale with an initial basic pay of ₹35,400 plus applicable central government allowances (DA, HRA, Transport Allowance, Night Duty Allowance, etc.).
+      </p>
+      <p class="text-sm sm:text-base leading-relaxed text-text-secondary">
+        <strong>Important Note on Selection:</strong> There is <strong>NO INTERVIEW</strong> for this post. Candidates will be selected based on performance in Computer Based Test (CBT - 70% weightage), Computer Based Aptitude Test (CBAT - 30% weightage), followed by Document Verification and Medical Examination (Medical Standard A-2).
+      </p>
+    </section>
+
+    <!-- Key Highlights Table -->
+    <section class="not-prose">
+      <div class="bg-bg-surface border border-border-card rounded-2xl overflow-hidden shadow-xs">
+        <div class="bg-primary/10 px-5 py-3 border-b border-border-card flex items-center gap-2">
+          <HiOutlineDocumentText className="text-primary text-lg" />
+          <h3 class="text-sm font-extrabold uppercase tracking-wider text-primary m-0">
+            RRB Station Master 2026 Quick Factsheet
+          </h3>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs sm:text-sm text-left border-collapse">
+            <tbody class="divide-y divide-border-card/40">
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 w-1/3 text-text-main">Recruitment Authority</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">Railway Recruitment Boards (RRB)</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">Employment Notice No.</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">CEN 08/2026 (Station Master)</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">Designation</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">Station Master</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">Total Number of Vacancies</td>
+                <td class="px-4 py-3 text-primary font-black">1,215 Vacancies (All RRBs, zone-wise table in Annexure-B)</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">Pay Level & Scale</td>
+                <td class="px-4 py-3 text-emerald-600 dark:text-emerald-400 font-bold">Level 6 (7th CPC), Initial Pay ₹35,400/- + Allowances</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">Minimum Qualification</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">Graduate Degree in any discipline from a recognized University or equivalent</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">Age Limit (as on 01.01.2027)</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">20 to 33 Years (UR/EWS) + category relaxation</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">Stages of Selection</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">CBT (100 Marks) → CBAT (Aptitude Test) → DV → Medical Examination (A-2) (No Interview)</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">Mode of Application</td>
+                <td class="px-4 py-3 text-text-secondary font-medium">Online Form at rrbapply.gov.in</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold bg-bg-base/50 text-text-main">Official Websites</td>
+                <td class="px-4 py-3 text-primary font-bold">rrbapply.gov.in & rrb.indianrailways.gov.in</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Important Dates -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>Important Dates & Timeline (CEN 08/2026)</span>
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 not-prose mb-4">
+        <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
+          <HiOutlineCalendarDays className="text-primary text-2xl shrink-0 mt-0.5" />
+          <div>
+            <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">Employment News Notice</span>
+            <strong class="text-text-main text-sm font-extrabold">24 October 2026</strong>
+          </div>
+        </div>
+
+        <div class="bg-bg-surface border border-emerald-500/30 p-4 rounded-xl flex items-start gap-3">
+          <HiOutlineCalendarDays className="text-emerald-500 text-2xl shrink-0 mt-0.5" />
+          <div>
+            <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">Online Applications Open</span>
+            <strong class="text-emerald-600 dark:text-emerald-400 text-sm font-extrabold">27 October 2026</strong>
+          </div>
+        </div>
+
+        <div class="bg-bg-surface border border-rose-500/30 p-4 rounded-xl flex items-start gap-3">
+          <HiOutlineClock className="text-rose-500 text-2xl shrink-0 mt-0.5" />
+          <div>
+            <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">Last Date to Apply</span>
+            <strong class="text-rose-600 dark:text-rose-400 text-sm font-extrabold">25 November 2026 (11:59 PM)</strong>
+          </div>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
+          <HiOutlineCurrencyRupee className="text-amber-500 text-2xl shrink-0 mt-0.5" />
+          <div>
+            <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">Last Date for Fee Payment</span>
+            <strong class="text-text-main text-sm font-extrabold">27 November 2026 (11:59 PM)</strong>
+          </div>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
+          <HiOutlineDocumentText className="text-sky-500 text-2xl shrink-0 mt-0.5" />
+          <div>
+            <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">Application Correction Window</span>
+            <strong class="text-text-main text-sm font-extrabold">28 Nov to 07 Dec 2026</strong>
+          </div>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card p-4 rounded-xl flex items-start gap-3">
+          <HiOutlineSparkles className="text-primary text-2xl shrink-0 mt-0.5" />
+          <div>
+            <span class="text-xs text-text-muted block uppercase font-bold tracking-wider">CBT Examination Date</span>
+            <strong class="text-primary text-sm font-extrabold">To be announced soon</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Qualification Details -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>Educational Qualification & Crucial Date</span>
+      </h2>
+
+      <div class="bg-bg-surface border border-border-card p-5 rounded-2xl not-prose space-y-3 mb-4">
+        <div class="flex items-center gap-2 text-primary font-bold text-sm">
+          <HiOutlineAcademicCap className="text-xl" />
+          <span>Station Master Qualification Requirement</span>
+        </div>
+        <p class="text-xs sm:text-sm text-text-secondary leading-relaxed font-medium m-0">
+          Candidates must possess a <strong>Graduate Degree in any discipline (Arts, Science, Commerce, Engineering, etc.)</strong> from a recognized University or its equivalent.
+        </p>
+        <div class="bg-rose-500/10 border border-rose-500/20 p-3 rounded-xl text-xs text-rose-700 dark:text-rose-300 font-semibold">
+          ⚠️ <strong>Strict Rule for Appearing Students:</strong> Candidates awaiting results of their final examination are <strong>NOT ELIGIBLE</strong> to apply. The educational qualification must be completely acquired on or before the closing date: <strong>25 November 2026</strong>.
+        </div>
+      </div>
+    </section>
+
+    <!-- Age Limit & Category Relaxations -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>Age Limit & Relaxations (As on 01.01.2027)</span>
+      </h2>
+
+      <p class="text-sm text-text-secondary mb-4">
+        Candidates must be between <strong>20 to 33 years</strong> of age as on 01 January 2027. Category-wise permissible birth date brackets and relaxations are outlined below:
+      </p>
+
+      <div class="bg-bg-surface border border-border-card rounded-2xl overflow-hidden shadow-xs not-prose mb-4">
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs sm:text-sm text-left border-collapse">
+            <thead class="bg-bg-base border-b border-border-card text-text-main font-bold">
+              <tr>
+                <th class="px-4 py-3">Category</th>
+                <th class="px-4 py-3">Age Limit</th>
+                <th class="px-4 py-3">Permissible Birth Date Range</th>
+                <th class="px-4 py-3">Upper Age Relaxation</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-border-card/40 text-text-secondary font-medium">
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold text-text-main">UR / EWS</td>
+                <td class="px-4 py-3">20 to 33 Years</td>
+                <td class="px-4 py-3">Born between 02.01.1994 and 01.01.2007</td>
+                <td class="px-4 py-3 text-text-muted">Nil (Standard Age)</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold text-text-main">OBC-NCL (Non-Creamy Layer)</td>
+                <td class="px-4 py-3">20 to 36 Years</td>
+                <td class="px-4 py-3">Born on or after 02.01.1991</td>
+                <td class="px-4 py-3 font-bold text-primary">3 Years Relaxation</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold text-text-main">SC / ST</td>
+                <td class="px-4 py-3">20 to 38 Years</td>
+                <td class="px-4 py-3">Born on or after 02.01.1989</td>
+                <td class="px-4 py-3 font-bold text-primary">5 Years Relaxation</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold text-text-main">Ex-Servicemen (&gt; 6 months service)</td>
+                <td class="px-4 py-3">Service period deducted from age</td>
+                <td class="px-4 py-3">UR/EWS: 3 yrs, OBC-NCL: 6 yrs, SC/ST: 8 yrs</td>
+                <td class="px-4 py-3">Service + 3/6/8 Years</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold text-text-main">Serving Railway Group C/D Staff (min 3 yrs)</td>
+                <td class="px-4 py-3">UR/EWS: 40 yrs, OBC: 43 yrs, SC/ST: 45 yrs</td>
+                <td class="px-4 py-3">Regular service in Indian Railways</td>
+                <td class="px-4 py-3">Up to 40 - 45 Years</td>
+              </tr>
+              <tr class="hover:bg-primary/5">
+                <td class="px-4 py-3 font-bold text-text-main">Widowed / Divorced Women (not remarried)</td>
+                <td class="px-4 py-3">UR/EWS: 35 yrs, OBC: 38 yrs, SC/ST: 40 yrs</td>
+                <td class="px-4 py-3">Documentary evidence required</td>
+                <td class="px-4 py-3">Up to 35 - 40 Years</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="text-xs sm:text-sm text-text-muted space-y-1">
+        <p class="m-0">• <strong>Non-Cumulative Benefit:</strong> Age relaxation is not cumulative; only the single highest relaxation applicable will be granted.</p>
+        <p class="m-0">• SC/ST/OBC candidates applying against Unreserved (UR) vacancies will not receive age relaxation.</p>
+      </div>
+    </section>
+
+    <!-- Application Fees & Refund Policy -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>Application Fee & Refund Structure</span>
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose mb-4">
+        <div class="bg-bg-surface border border-border-card p-5 rounded-2xl space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black uppercase tracking-wider text-text-main">General / OBC / EWS Candidates</span>
+            <span class="text-lg font-black text-primary">₹ 500/-</span>
+          </div>
+          <div class="pt-3 border-t border-border-card/50 text-xs sm:text-sm text-text-secondary space-y-1 font-medium">
+            <p class="m-0">
+              💵 <strong>Refund on appearing in CBT:</strong> An amount of <strong>₹ 400/-</strong> will be refunded to the candidate's bank account after deducting applicable bank transaction charges.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-bg-surface border border-emerald-500/30 p-5 rounded-2xl space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Female / Transgender / Ex-SM / SC / ST / Minority / EBC</span>
+            <span class="text-lg font-black text-emerald-600 dark:text-emerald-400">₹ 250/-</span>
+          </div>
+          <div class="pt-3 border-t border-border-card/50 text-xs sm:text-sm text-text-secondary space-y-1 font-medium">
+            <p class="m-0">
+              💵 <strong>Full Refund on appearing in CBT:</strong> The complete fee of <strong>₹ 250/-</strong> will be refunded to candidate's bank account after deducting applicable bank charges.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-xs text-text-muted m-0">
+        * Fee payments must be completed online via Net Banking, Debit/Credit Card, or UPI only.
+      </p>
+    </section>
+
+    <!-- Comprehensive Selection Stages -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>Detailed Selection Procedure (Interview: No)</span>
+      </h2>
+
+      <div class="space-y-4 not-prose">
+        <!-- Stage 1 CBT -->
+        <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+            <div class="flex items-center gap-2">
+              <span class="w-7 h-7 rounded-full bg-primary text-white font-extrabold flex items-center justify-center text-xs">1</span>
+              <h3 class="text-base font-extrabold text-text-main m-0">Stage 1: Computer Based Test (CBT)</h3>
+            </div>
+            <span class="text-xs font-bold bg-primary/10 text-primary px-2.5 py-1 rounded-full">100 Questions • 120 Minutes</span>
+          </div>
+          <div class="text-xs sm:text-sm text-text-secondary space-y-2 font-medium">
+            <p class="m-0">
+              • <strong>Sectional Distribution:</strong> Basic Science, Maths & Analytical (60 marks), Logical Capability (20 marks), and Mental Reasoning (20 marks). Total: 100 Objective MCQs.
+            </p>
+            <p class="m-0">
+              • <strong>Duration:</strong> 120 minutes (2 hours).
+            </p>
+            <p class="m-0">
+              • <strong>Negative Marking:</strong> 1/3rd of the marks assigned to that question will be deducted for each incorrect answer.
+            </p>
+            <p class="m-0">
+              • <strong>Minimum Qualifying Marks:</strong> UR/EWS: 40%, OBC-NCL: 30%, SC: 30%, ST: 25%.
+            </p>
+          </div>
+        </div>
+
+        <!-- Stage 2 CBAT -->
+        <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+            <div class="flex items-center gap-2">
+              <span class="w-7 h-7 rounded-full bg-amber-500 text-white font-extrabold flex items-center justify-center text-xs">2</span>
+              <h3 class="text-base font-extrabold text-text-main m-0">Stage 2: Computer Based Aptitude Test (CBAT)</h3>
+            </div>
+            <span class="text-xs font-bold bg-amber-500/10 text-amber-700 dark:text-amber-400 px-2.5 py-1 rounded-full">8x Vacancy Shortlist</span>
+          </div>
+          <div class="text-xs sm:text-sm text-text-secondary space-y-2 font-medium">
+            <p class="m-0">
+              • Candidates equal to <strong>8 times the vacancies</strong> will be shortlisted for CBAT on the basis of CBT merit.
+            </p>
+            <p class="m-0">
+              • Candidates must achieve a <strong>minimum T-Score of 42</strong> in each test battery to qualify. No category relaxation applies to CBAT cutoffs.
+            </p>
+            <p class="m-0">
+              • <strong>Final Merit Weightage:</strong> <strong>70% weightage of CBT</strong> marks + <strong>30% weightage of CBAT</strong> marks will determine final rank.
+            </p>
+          </div>
+        </div>
+
+        <!-- Stage 3 DV -->
+        <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="w-7 h-7 rounded-full bg-sky-600 text-white font-extrabold flex items-center justify-center text-xs">3</span>
+            <h3 class="text-base font-extrabold text-text-main m-0">Stage 3: Document Verification (DV)</h3>
+          </div>
+          <p class="text-xs sm:text-sm text-text-secondary m-0 leading-relaxed font-medium">
+            Candidates equal to the number of vacancies will be called for Document Verification based on combined merit and railway options.
+          </p>
+        </div>
+
+        <!-- Stage 4 Medical Examination -->
+        <div class="bg-bg-surface border border-border-card p-5 rounded-2xl">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="w-7 h-7 rounded-full bg-emerald-600 text-white font-extrabold flex items-center justify-center text-xs">4</span>
+            <h3 class="text-base font-extrabold text-text-main m-0">Stage 4: Medical Examination (Medical Standard A-2)</h3>
+          </div>
+          <p class="text-xs sm:text-sm text-text-secondary m-0 leading-relaxed font-medium">
+            Candidates must qualify the rigorous <strong>A-2 Medical Fitness Standard</strong> (Distant Vision 6/9, 6/9 without glasses, Near Vision Sn. 0.6, 0.6 without glasses, color vision, binocular vision, night vision, and mesopic vision tests). <em>Please note that Station Master post is not suitable for PwBD candidates.</em>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Application / Registration Instructions -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-6 bg-primary rounded-full"></span>
+        <span>How to Apply Online at rrbapply.gov.in</span>
+      </h2>
+
+      <div class="bg-bg-surface border border-border-card rounded-2xl p-5 space-y-4 not-prose text-xs sm:text-sm text-text-secondary font-medium">
+        <div class="flex items-start gap-3">
+          <span class="w-6 h-6 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center shrink-0 mt-0.5">1</span>
+          <p class="m-0">
+            <strong>Account Creation:</strong> Visit <a href="https://www.rrbapply.gov.in" target="_blank" rel="noopener noreferrer" class="text-primary font-bold underline">rrbapply.gov.in</a>. If you have already created an account for any 2024, 2025, or 2026 CEN, log in using the same credentials. New applicants must create an account.
+          </p>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <span class="w-6 h-6 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center shrink-0 mt-0.5">2</span>
+          <p class="m-0">
+            <strong>Permanent Credentials:</strong> Enter your own active mobile number and email address. Note that email and mobile numbers cannot be altered after submission.
+          </p>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <span class="w-6 h-6 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center shrink-0 mt-0.5">3</span>
+          <p class="m-0 text-rose-600 dark:text-rose-400 font-bold">
+            ⚠️ Only One RRB Choice: You can choose and apply to only ONE RRB across India. Applying to more than one RRB will result in summary rejection of all applications and potential debarment from all future RRB examinations.
+          </p>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <span class="w-6 h-6 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center shrink-0 mt-0.5">4</span>
+          <p class="m-0">
+            <strong>Live Photo Capture & Uploads:</strong> Candidates must capture a live photo during application submission via webcam/camera and upload signatures and requisite certificates conforming to Paragraphs 16.5 & 16.6 of CEN 08/2026.
+          </p>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <span class="w-6 h-6 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center shrink-0 mt-0.5">5</span>
+          <p class="m-0">
+            <strong>EBC Concession Criteria:</strong> To claim EBC fee waiver, valid income certificate, BPL card, or Izzat MST must be issued prior to 25 November 2026.
+          </p>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <span class="w-6 h-6 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center shrink-0 mt-0.5">6</span>
+          <p class="m-0">
+            <strong>Payment & Submission:</strong> Pay the application fee online through Debit/Credit Card, Net Banking, or UPI and download the final submitted application form for future reference.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Important Official Links Box (English) -->
+    <section class="not-prose">
+      <div class="bg-gradient-to-r from-primary/15 via-sky-500/10 to-primary/5 border-2 border-primary/30 rounded-3xl p-6 sm:p-8 shadow-sm">
+        <h3 class="text-lg sm:text-xl font-black text-text-main mb-2">
+          Direct Official Links (CEN 08/2026)
+        </h3>
+        <p class="text-xs sm:text-sm text-text-muted mb-6">
+          Access the official notification brochure and candidate registration gateway directly below:
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a
+            href="https://www.rrbapply.gov.in/assets/forms/CEN_08_2026_StationMaster.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center justify-center gap-2 px-5 py-3.5 bg-bg-surface hover:bg-primary/10 border-2 border-primary/40 rounded-xl font-bold text-sm text-primary transition-all shadow-xs text-center"
+          >
+            <HiOutlineDocumentText className="text-lg shrink-0" />
+            <span>Download Official Notification PDF</span>
+          </a>
+
+          <a
+            href="https://www.rrbapply.gov.in/#/auth/landing"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center justify-center gap-2 px-5 py-3.5 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold text-sm transition-all shadow-md text-center"
+          >
+            <span>Apply Online at rrbapply.gov.in</span>
+            <HiOutlineArrowTopRightOnSquare className="text-lg shrink-0" />
+          </a>
+        </div>
+
+        <div class="mt-4 pt-4 border-t border-border-card/60 flex flex-wrap items-center justify-between text-xs text-text-muted">
+          <span>Official Portal: <a href="https://indianrailways.gov.in" target="_blank" rel="noopener noreferrer" class="text-primary font-bold underline">rrb.indianrailways.gov.in</a></span>
+          <span>Application Portal: <a href="https://www.rrbapply.gov.in" target="_blank" rel="noopener noreferrer" class="text-primary font-bold underline">rrbapply.gov.in</a></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section English -->
+    <section class="not-prose pt-4 border-t border-border-card/60">
+      <h2 class="text-xl sm:text-2xl font-black text-text-main mb-6 flex items-center gap-2">
+        <HiOutlineQuestionMarkCircle className="text-primary text-2xl" />
+        <span>Frequently Asked Questions (FAQs)</span>
+      </h2>
+
+      <div class="space-y-4">
+        <div class="bg-bg-surface border border-border-card rounded-2xl p-4 sm:p-5">
+          <h3 class="text-base font-bold text-text-main mb-1.5">
+            Q1) How many vacancies are announced in RRB Station Master CEN 08/2026?
+          </h3>
+          <p class="text-xs sm:text-sm text-text-muted m-0 leading-relaxed font-medium">
+            Answer: Railway Recruitment Boards have declared 1,215 vacancies for the Station Master post across all RRB zones.
+          </p>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card rounded-2xl p-4 sm:p-5">
+          <h3 class="text-base font-bold text-text-main mb-1.5">
+            Q2) Are candidates awaiting their final degree results eligible to apply?
+          </h3>
+          <p class="text-xs sm:text-sm text-text-muted m-0 leading-relaxed font-medium">
+            Answer: No, candidates whose final exam results are awaited are not eligible. The graduate degree qualification must be completed on or before 25 November 2026.
+          </p>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card rounded-2xl p-4 sm:p-5">
+          <h3 class="text-base font-bold text-text-main mb-1.5">
+            Q3) Is there any interview for the RRB Station Master recruitment?
+          </h3>
+          <p class="text-xs sm:text-sm text-text-muted m-0 leading-relaxed font-medium">
+            Answer: No, there is no interview. Selection is solely based on CBT (70% weightage) + CBAT Aptitude Test (30% weightage), followed by Document Verification and Medical Fitness.
+          </p>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card rounded-2xl p-4 sm:p-5">
+          <h3 class="text-base font-bold text-text-main mb-1.5">
+            Q4) Can an applicant apply to multiple RRBs?
+          </h3>
+          <p class="text-xs sm:text-sm text-text-muted m-0 leading-relaxed font-medium">
+            Answer: No. A candidate can choose and apply to only ONE RRB. Multiple applications across different RRBs will lead to immediate rejection of all forms and possible debarment.
+          </p>
+        </div>
+
+        <div class="bg-bg-surface border border-border-card rounded-2xl p-4 sm:p-5">
+          <h3 class="text-base font-bold text-text-main mb-1.5">
+            Q5) What is the medical standard required for Station Master?
+          </h3>
+          <p class="text-xs sm:text-sm text-text-muted m-0 leading-relaxed font-medium">
+            Answer: Station Master requires Medical Standard A-2 (including 6/9, 6/9 distant vision without glasses). The post is not suitable for PwBD category candidates.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</ArticleContainer>
