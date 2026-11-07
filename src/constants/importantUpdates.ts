@@ -12,16 +12,16 @@ export interface ImportantUpdate {
 
 export const importantUpdates: ImportantUpdate[] = [
   {
-    id: "ugc-net-december-2026",
+    id: "mpsc-group-c-recruitment-2026-16717-posts",
     title:
-      "🎓 UGC NET डिसेंबर २०२६: JRF, सहाय्यक प्राध्यापक व थेट PhD प्रवेशासाठी ऑनलाईन अर्ज सुरू (१४-१९ Dec परीक्षा)",
-    link: "/ugc-net-december-2026",
-    date: "October 28, 2026",
-    expiry: "2026-11-20T00:00:00.000Z",
+      "🔥 MPSC गट-क सेवा संयुक्त परीक्षा २०२६: १६,७१७ जागांसाठी मेगा भरती जाहीर (नवीन अर्ज तारखा व परीक्षा २४ जानेवारी २०२७)",
+    link: "/mpsc-group-c-recruitment-2026-16717-posts",
+    date: "November 07, 2026",
+    expiry: "2027-01-24T00:00:00.000Z",
     show: true,
-    badge: "UGC NET",
-    badgeType: "exam",
-    category: "exam",
+    badge: "16,717 पदे",
+    badgeType: "new",
+    category: "recruitment",
   },
   {
     id: "je-civil-result-2025",
@@ -46,17 +46,5 @@ export const importantUpdates: ImportantUpdate[] = [
     badge: "Cutoff",
     badgeType: "cutoff",
     category: "cutoff",
-  },
-  {
-    id: "rrb-station-master-recruitment-2026",
-    title:
-      "🔔 RRB स्टेशन मास्टर भरती २०२६: १,२१५ पदांसाठी ऑनलाईन अर्ज सुरू; थेट लिंक व संपूर्ण माहिती",
-    link: "/rrb-station-master-recruitment-2026",
-    date: "October 27, 2026",
-    expiry: "2026-11-26T00:00:00.000Z",
-    show: true,
-    badge: "New",
-    badgeType: "new",
-    category: "recruitment",
   },
 ];

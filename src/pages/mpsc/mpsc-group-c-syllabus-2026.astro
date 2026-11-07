@@ -12,7 +12,8 @@ import {
   HiOutlineIdentification,
   HiOutlineCheckCircle,
   HiOutlineBookOpen,
-  HiOutlineCalculator
+  HiOutlineCalculator,
+  HiOutlineSparkles
 } from "react-icons/hi2";
 
 const title = "MPSC Group C Syllabus 2026: संयुक्त गट क (Clerk, Tax Assistant) परीक्षा अभ्यासक्रम, स्वरूप व PDF";
@@ -34,6 +35,39 @@ const mpscSyllabusPortalUrl = OFFICIAL_LINKS.mpscSyllabus;
   hideSidebar={true}
 >
   <article class="py-8">
+    <!-- Postponed Notice Top Alert Banner -->
+    <div
+      class="mb-8 p-4 rounded-2xl bg-rose-500/10 border-2 border-rose-500/30 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left shadow-xs not-prose"
+    >
+      <div class="flex items-center gap-3">
+        <div
+          class="p-2.5 bg-rose-500 text-white rounded-xl shrink-0 animate-pulse"
+        >
+          <HiOutlineSparkles className="text-xl" />
+        </div>
+        <div>
+          <h3
+            class="text-sm sm:text-base font-black text-rose-600 dark:text-rose-400 m-0"
+          >
+            🚨 MPSC गट-क संयुक्त पूर्व परीक्षा २०२६ पुढे ढकलली!
+          </h3>
+          <p class="text-xs text-text-muted m-0 font-medium">
+            सुधारित नवीन परीक्षा दिनांक: <strong
+              class="text-rose-600 dark:text-rose-400"
+              >२४ जानेवारी २०२७ (24 January 2027)</strong
+            > (अधिकृत शुद्धीपत्रक जारी)
+          </p>
+        </div>
+      </div>
+
+      <a
+        href="/mpsc-group-c-exam-date-postponed-2026"
+        class="px-4 py-2 bg-rose-600 hover:bg-rose-700 text-white text-xs font-black uppercase tracking-wider rounded-xl no-underline shadow-xs shrink-0 transition-colors"
+      >
+        शुद्धीपत्रक पाहा →
+      </a>
+    </div>
+
     <!-- Header -->
     <div class="mb-12">
       <div class="flex items-center gap-3 mb-6">

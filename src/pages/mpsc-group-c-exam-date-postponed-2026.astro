@@ -17,9 +17,9 @@ import {
 } from "react-icons/hi2";
 
 const title =
-  "MPSC गट-क संयुक्त पूर्व परीक्षा २०२६ पुढे ढकलली: नवीन परीक्षा दिनांक ०३ जानेवारी २०२७ जाहीर! (अधिकृत शुद्धीपत्रक)";
+  "MPSC गट-क संयुक्त पूर्व परीक्षा २०२६ पुढे ढकलली: नवीन परीक्षा दिनांक २४ जानेवारी २०२७ जाहीर! (अधिकृत शुद्धीपत्रक)";
 const description =
-  "MPSC Combine Group C Exam 2026 Postponed: महाराष्ट्र लोकसेवा आयोग गट-क संयुक्त पूर्व परीक्षा-२०२६ ची दिनांक २५ ऑक्टोबर २०२६ रोजी होणारी परीक्षा पुढे ढकलण्यात आली असून सुधारित नवीन परीक्षा दिनांक ०३ जानेवारी २०२७ रोजी होणार आहे. अधिकृत शुद्धीपत्रक जारी.";
+  "MPSC Combine Group C Exam 2026 Postponed: महाराष्ट्र लोकसेवा आयोग गट-क संयुक्त पूर्व परीक्षा-२०२६ ची परीक्षा पुढे ढकलण्यात आली असून सुधारित नवीन परीक्षा दिनांक २४ जानेवारी २०२७ रोजी होणार आहे. अधिकृत शुद्धीपत्रक जारी.";
 const canonicalURL =
   "https://mahasandhi.in/mpsc-group-c-exam-date-postponed-2026";
 const date = "September 09, 2026";
@@ -79,66 +79,56 @@ const category = "Exam Date Postponed Notice";
 
     <!-- Highlight Comparison Card (Old vs New Exam Date) -->
     <div
-      class="mb-10 p-5 sm:p-6 md:p-8 rounded-3xl bg-gradient-to-br from-rose-500/10 via-bg-surface to-amber-500/10 border-2 border-rose-500/40 shadow-sm not-prose space-y-6"
+      class="mb-10 p-6 md:p-8 rounded-3xl bg-gradient-to-br from-rose-500/15 via-amber-500/10 to-violet-500/10 border-2 border-rose-500/30 shadow-md relative overflow-hidden not-prose"
     >
-      <!-- Top Title & Badge Bar -->
-      <div class="flex flex-col gap-2.5">
-        <div class="flex items-center gap-2 flex-wrap">
-          <span
-            class="inline-flex items-center gap-1.5 px-3 py-1 bg-rose-600 text-white rounded-full text-[0.7rem] sm:text-xs font-black uppercase tracking-wider shadow-xs"
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="space-y-2 text-center md:text-left">
+          <div
+            class="inline-flex items-center gap-1.5 px-3 py-1 bg-rose-600 text-white rounded-full text-xs font-black uppercase tracking-wider"
           >
-            <HiOutlineExclamationTriangle className="text-sm shrink-0" />
+            <HiOutlineExclamationTriangle className="text-sm" />
             <span>परीक्षेच्या वेळापत्रकात बदल / Exam Date Changed</span>
-          </span>
-          <span
-            class="inline-flex items-center gap-1 px-2.5 py-1 bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20 rounded-full text-[0.7rem] font-bold"
+          </div>
+          <h2
+            class="text-xl sm:text-2xl md:text-3xl font-black text-text-main m-0 leading-tight"
           >
-            दिनांक: ०९ सप्टेंबर, २०२६
-          </span>
+            MPSC गट-क सेवा संयुक्त पूर्व परीक्षा – २०२६
+          </h2>
+          <p class="text-xs sm:text-sm text-text-muted m-0 font-semibold">
+            क्रमांक: सीएमए-०४२६/प्र.क्र.४२/२०२६/जाहिरात | दिनांक: ०९ सप्टेंबर,
+            २०२६
+          </p>
         </div>
 
-        <h2
-          class="text-xl sm:text-2xl md:text-3xl font-black text-text-main m-0 leading-tight tracking-tight"
-        >
-          MPSC गट-क सेवा संयुक्त पूर्व परीक्षा – २०२६
-        </h2>
-
-        <p class="text-xs sm:text-sm text-text-muted m-0 font-medium leading-relaxed">
-          क्रमांक: <strong class="text-text-main">सीएमए-०४२६/प्र.क्र.४२/२०२६/जाहिरात</strong> (जाहिरात क्र. ०१७/२०२६)
-        </p>
-      </div>
-
-      <!-- Date Cards Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <!-- Old Date Box -->
         <div
-          class="bg-bg-surface/90 border border-rose-500/25 p-4 rounded-2xl flex flex-col justify-center text-center shadow-xs"
+          class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-center shrink-0 w-full md:w-auto"
         >
-          <span
-            class="block text-xs font-bold text-rose-500 uppercase tracking-wider mb-1"
+          <!-- Old Date Box -->
+          <div
+            class="bg-bg-surface/90 backdrop-blur-xs border border-rose-500/20 p-4 rounded-2xl shadow-xs"
           >
-            जुनी पूर्व परीक्षा तारीख (Old Date)
-          </span>
-          <span
-            class="block text-xl sm:text-2xl font-black text-text-muted line-through decoration-rose-500/70"
-          >
-            २५ ऑक्टोबर २०२६
-          </span>
-        </div>
+            <span
+              class="block text-[0.65rem] font-bold text-rose-500 uppercase tracking-wider mb-1"
+            >
+              जुनी पूर्व परीक्षा तारीख (Old Date)
+            </span>
+            <span
+              class="block text-xl sm:text-2xl font-black text-text-muted line-through text-rose-500/70"
+            >
+              २५ ऑक्टोबर २०२६
+            </span>
+          </div>
 
-        <!-- New Date Box -->
-        <div
-          class="bg-gradient-to-br from-emerald-500/15 to-emerald-600/5 border-2 border-emerald-500/60 p-4 rounded-2xl flex flex-col justify-center text-center shadow-xs"
-        >
-          <span
-            class="block text-xs font-black text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-1"
+          <!-- New Date Box -->
+          <div
+            class="bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 border-2 border-emerald-500/50 p-4 rounded-2xl shadow-sm"
           >
             👉 नवीन परीक्षेचा सुधारित दिनांक (New Date)
           </span>
           <span
             class="block text-2xl sm:text-3xl font-black text-emerald-600 dark:text-emerald-400 animate-pulse"
           >
-            ०३ जानेवारी २०२७
+            २४ जानेवारी २०२७
           </span>
         </div>
       </div>
@@ -186,7 +176,7 @@ const category = "Exam Date Postponed Notice";
               <strong>सुधारित परीक्षा तारीख:</strong> सदर परीक्षा २५ ऑक्टोबर, २०२६
               ऐवजी आता <strong
                 class="text-rose-600 dark:text-rose-400 text-sm sm:text-base"
-                >दिनांक ०३ जानेवारी, २०२७ (रविवार)</strong
+                >दिनांक २४ जानेवारी, २०२७ (रविवार)</strong
               > रोजी सर्व जिल्हा केंद्रांवर आयोजित करण्यात येणार आहे.
             </div>
           </div>
@@ -203,12 +193,92 @@ const category = "Exam Date Postponed Notice";
         </div>
       </div>
 
-      <!-- Section 2: Admit Card & Center Instructions -->
+      <!-- Section 2: Reasons for Postponement -->
+      <div class="space-y-4">
+        <h3
+          class="text-lg font-black text-primary border-l-4 border-primary pl-3 m-0"
+        >
+          २. परीक्षा पुढे ढकलण्यामागील प्रशासकीय कारणे
+        </h3>
+        <p class="text-sm md:text-base leading-relaxed m-0 text-text-secondary">
+          आयोगाने प्रसिद्ध केलेल्या अधिकृत प्रसिद्धीपत्रकानुसार, परीक्षा वेळेवर
+          व सुरक्षितपणे पार पाडण्यासाठी खालील विविध घटकांचा सर्वंकष विचार करून
+          परीक्षा पुढे ढकलण्याचा निर्णय घेण्यात आला आहे:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div
+            class="p-4 bg-bg-surface/80 border border-border-card rounded-2xl space-y-1.5 shadow-xs"
+          >
+            <h4
+              class="font-bold text-primary text-sm m-0 flex items-center gap-1.5"
+            >
+              <HiOutlineBuildingOffice className="text-primary text-lg" /> १. परीक्षा
+              उपकेंद्रांची उपलब्धता व वाहतूक
+            </h4>
+            <p class="text-text-muted leading-relaxed m-0">
+              राज्यातील विविध जिल्ह्यांमध्ये परीक्षा केंद्रांची पुरेशी उपलब्धता,
+              स्थानिक परिस्थिती, वाहतूक व्यवस्था व परीक्षार्थींना सुरक्षित
+              पोहोचण्याची शक्यता विचारात घेण्यात आली.
+            </p>
+          </div>
+
+          <div
+            class="p-4 bg-bg-surface/80 border border-border-card rounded-2xl space-y-1.5 shadow-xs"
+          >
+            <h4
+              class="font-bold text-primary text-sm m-0 flex items-center gap-1.5"
+            >
+              <HiOutlineAcademicCap className="text-primary text-lg" /> २. इतर स्पर्धा
+              परीक्षांचे वेळापत्रक
+            </h4>
+            <p class="text-text-muted leading-relaxed m-0">
+              राज्य सेवा (मुख्य) परीक्षा २०२६, इतर भरती संस्थांच्या परीक्षांचे
+              वेळापत्रक व उमेदवारांच्या परीक्षा तारखांमधील संभाव्य क्लॅश
+              टळण्यासाठी हा निर्णय घेण्यात आला.
+            </p>
+          </div>
+
+          <div
+            class="p-4 bg-bg-surface/80 border border-border-card rounded-2xl space-y-1.5 shadow-xs"
+          >
+            <h4
+              class="font-bold text-primary text-sm m-0 flex items-center gap-1.5"
+            >
+              <HiOutlineCalendarDays className="text-primary text-lg" /> ३. सणासुदीचा
+              काळ व हिवाळी अधिवेशन
+            </h4>
+            <p class="text-text-muted leading-relaxed m-0">
+              ऑक्टोबर/नोव्हेंबर महिन्यातील सणासुदीचा काळ, राज्य विधानमंडळाचे
+              हिवाळी अधिवेशन इत्यादी प्रशासकीय बाबींचा विचार करून ३ जानेवारी
+              २०२७ ही नवीन तारीख निश्चित करण्यात आली.
+            </p>
+          </div>
+
+          <div
+            class="p-4 bg-bg-surface/80 border border-border-card rounded-2xl space-y-1.5 shadow-xs"
+          >
+            <h4
+              class="font-bold text-primary text-sm m-0 flex items-center gap-1.5"
+            >
+              <HiOutlineShieldCheck className="text-primary text-lg" /> ४. जिल्हा
+              प्रशासनाचे अहवाल
+            </h4>
+            <p class="text-text-muted leading-relaxed m-0">
+              विविध जिल्ह्यांतील जिल्हा प्रशासनाकडून प्राप्त झालेले अहवाल व
+              परीक्षा सुरळीत, शांततापूर्ण वातावरणात घेण्याबाबत आवश्यक
+              उपाययोजनांचा विचार करण्यात आला.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 3: Admit Card & Center Instructions -->
       <div class="space-y-4">
         <h3
           class="text-lg font-black text-rose-600 dark:text-rose-400 border-l-4 border-rose-500 pl-3 m-0"
         >
-          २. प्रवेशपत्र (Hall Ticket) व परीक्षेची वेळ
+          ३. प्रवेशपत्र (Hall Ticket) व परीक्षेची वेळ
         </h3>
 
         <div
@@ -237,12 +307,12 @@ const category = "Exam Date Postponed Notice";
         </div>
       </div>
 
-      <!-- Section 3: Notice Verification Details -->
+      <!-- Section 4: Notice Verification Details -->
       <div class="space-y-4">
         <h3
           class="text-lg font-black text-primary border-l-4 border-primary pl-3 m-0"
         >
-          ३. अधिकृत शुद्धीपत्रक तपशील (Official Document Info)
+          ४. अधिकृत शुद्धीपत्रक तपशील (Official Document Info)
         </h3>
 
         <div
@@ -280,6 +350,14 @@ const category = "Exam Date Postponed Notice";
                 >
                 <td class="p-3 font-semibold text-text-main"
                   >०९ सप्टेंबर, २०२६</td
+                >
+              </tr>
+              <tr>
+                <td class="p-3 font-bold text-text-muted bg-primary/5"
+                  >स्वाक्षरीकर्ते (Signed By)</td
+                >
+                <td class="p-3 font-semibold text-text-main"
+                  >विवेक देशमुख (उप सचिव, जाहिरात), नवी मुंबई</td
                 >
               </tr>
             </tbody>

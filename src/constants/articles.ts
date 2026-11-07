@@ -55,6 +55,41 @@ export interface ArticleMeta {
 export const articlesRegistry: ArticleMeta[] = [
   {
     titleEn:
+      "MPSC Group C Recruitment 2026: 16,717 Posts, New Application Dates & Exam Postponed to 24 January 2027",
+    titleMr:
+      "MPSC Group C Recruitment 2026: १६,७१७ पदांची मेगा भरती! नवीन अर्ज तारखा व परीक्षा दिनांक जाहीर",
+    slug: "/mpsc-group-c-recruitment-2026-16717-posts",
+    category: "MPSC Bharti",
+    date: "November 07, 2026",
+    image:
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1200",
+    postName:
+      "MPSC Non-Gazetted Group C Services Combined Prelims 2026 (16,717 Vacancies)",
+    descriptionMr:
+      "महाराष्ट्र लोकसेवा आयोग (MPSC) गट-क संयुक्त पूर्व परीक्षा २०२६ चे नवीन शुद्धिपत्रक प्रसिद्ध. पदसंख्या वाढवून १६,७१७ करण्यात आली असून नवीन अर्ज मुदत १३ ते २७ नोव्हेंबर २०२६ आहे. पूर्व परीक्षा २४ जानेवारी २०२७ रोजी होईल.",
+    vacancies: "16,717 Posts",
+    lastDate: "27 Nov 2026",
+    examDate: "24 Jan 2027",
+    postType: "recruitment",
+    priority: "mega",
+    isImportant: true,
+    badge: "16,717 पदे",
+    badgeType: "new",
+    educationTags: ["degree", "diploma", "10th", "12th", "iti"],
+    districts: [
+      "all-maharashtra",
+      "mumbai",
+      "pune",
+      "nagpur",
+      "chhatrapati-sambhajinagar",
+    ],
+    status: "apply-now",
+    organisation: "Maharashtra Public Service Commission (MPSC)",
+    officialWebsiteUrl: "https://mpsc.gov.in",
+    officialNotificationUrl: "https://mpsconline.gov.in",
+  },
+  {
+    titleEn:
       "UGC NET December 2026: Online Application Form, Exam Date (14-19 Dec), JRF, Assistant Professor & PhD Eligibility",
     titleMr:
       "यूजीसी नेट डिसेंबर २०२६ (UGC NET Dec 2026): जेआरएफ, सहाय्यक प्राध्यापक व पीएचडी पात्रता परीक्षेसाठी ऑनलाईन अर्ज सुरू",

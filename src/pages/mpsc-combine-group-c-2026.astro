@@ -10,12 +10,14 @@ import {
   HiOutlineArrowRight,
   HiOutlineCursorArrowRays,
   HiOutlineClock,
+  HiOutlinePlusCircle,
+  HiOutlineCheckCircle,
 } from "react-icons/hi2";
 
 const title =
-  "MPSC Combine Group C 2026: गट-क संयुक्त परीक्षा ५,७०७ पदे भरती, मुदतवाढ व सर्व माहिती | MahaSandhi";
+  "MPSC Combine Group C 2026: गट-क संयुक्त परीक्षा १६,७१७ पदे भरती (नवीन पदे वाढ), मुदतवाढ व सर्व माहिती | MahaSandhi";
 const description =
-  "MPSC Combine Group C Exam 2026: महाराष्ट्र लोकसेवा आयोग गट-क संयुक्त पूर्व परीक्षा ५,७०७ जागा (तलाठी १५३९, लिपिक ३१९७ पदे). पूर्व परीक्षा २५ ऑक्टोबर २०२६. अर्ज मुदतवाढ १० ऑगस्ट २०२६. सविस्तर जाहिरात, अभ्यासक्रम व लाइव्ह काउंटडाउन एकाच ठिकाणी.";
+  "MPSC Combine Group C Exam 2026: महाराष्ट्र लोकसेवा आयोग गट-क संयुक्त पूर्व परीक्षा आता १६,७१७ जागा (२७ संवर्ग, तलाठी १८४०, लिपिक ३९६६, स्टाफ नर्स ३९११ पदे). पूर्व परीक्षा २४ जानेवारी २०२७. सविस्तर सुधारित पदनिहाय तक्ता, पात्रता व लाइव्ह काउंटडाउन एकाच ठिकाणी.";
 const canonicalURL = "https://mahasandhi.in/mpsc-combine-group-c-2026";
 
 interface UpdateArticle {
@@ -27,6 +29,14 @@ interface UpdateArticle {
 }
 
 const updatesArticles: UpdateArticle[] = [
+  {
+    id: "mpsc-group-c-vacancy-increase-16717-posts-2026",
+    title:
+      "🔥 MPSC गट-क भरतीत प्रचंड पदसंख्या वाढ: एकूण १६,७१७ पदे (२७ संवर्ग), नवीन अर्ज तारखा व सुधारित वेळापत्रक जाहीर",
+    link: "/mpsc-group-c-recruitment-2026-16717-posts",
+    publishedAt: "2026-11-07T08:00:00.000Z",
+    isMega: true,
+  },
   {
     id: "mpsc-group-c-talathi-reservation-update-2026",
     title:
@@ -71,6 +81,256 @@ const updatesArticles: UpdateArticle[] = [
   },
 ];
 
+interface VacancyItem {
+  srNo: number;
+  nameMr: string;
+  nameEn: string;
+  vacancies: string;
+  isNew: boolean;
+  isUpdated?: boolean;
+  oldVacancies?: string;
+  increase?: string;
+  qualification: string;
+}
+
+const vacanciesList: VacancyItem[] = [
+  {
+    srNo: 1,
+    nameMr: "उद्योग निरीक्षक",
+    nameEn: "Industries Inspector",
+    vacancies: "9",
+    isNew: false,
+    qualification:
+      "अभियांत्रिकी पदवी/पदविका किंवा तंत्रज्ञान किंवा विज्ञान शाखेतील पदवी",
+  },
+  {
+    srNo: 2,
+    nameMr: "तांत्रिक सहायक",
+    nameEn: "Technical Assistant",
+    vacancies: "3",
+    isNew: false,
+    qualification: "कोणत्याही शाखेतील पदवी",
+  },
+  {
+    srNo: 3,
+    nameMr: "कर सहायक",
+    nameEn: "Tax Assistant",
+    vacancies: "282",
+    isNew: false,
+    qualification:
+      "पदवी + मराठी टंकलेखन ३० श.प्र.मि. किंवा इंग्रजी ४० श.प्र.मि.",
+  },
+  {
+    srNo: 4,
+    nameMr: "सहायक मोटार वाहन निरीक्षक, गट-क",
+    nameEn: "Assistant Motor Vehicle Inspector",
+    vacancies: "461",
+    isNew: false,
+    qualification:
+      "मेकॅनिकल / ऑटोमोबाईल अभियांत्रिकी पदविका किंवा पदवी + वाहन चालक परवाना",
+  },
+  {
+    srNo: 5,
+    nameMr: "लिपिक-टंकलेखक",
+    nameEn: "Clerk-Typist",
+    vacancies: "3,966",
+    isNew: false,
+    isUpdated: true,
+    oldVacancies: "3,197",
+    increase: "+769",
+    qualification:
+      "पदवी + मराठी टंकलेखन ३० श.प्र.मि. किंवा इंग्रजी ४० श.प्र.मि.",
+  },
+  {
+    srNo: 6,
+    nameMr: "ग्राम महसूल अधिकारी (तलाठी), गट-क",
+    nameEn: "Gram Mahsul Adhikari – Talathi",
+    vacancies: "1,840",
+    isNew: false,
+    isUpdated: true,
+    oldVacancies: "1,539",
+    increase: "+301",
+    qualification:
+      "कोणत्याही शाखेतील मान्यताप्राप्त पदवी (Degree in any discipline)",
+  },
+  {
+    srNo: 7,
+    nameMr: "वरिष्ठ अभिलेखापाल / वरिष्ठ लिपिक / अभिलेखापाल, गट-क",
+    nameEn: "Senior Record Keeper / Senior Clerk / Record Keeper",
+    vacancies: "196",
+    isNew: false,
+    isUpdated: true,
+    oldVacancies: "11",
+    increase: "+185",
+    qualification: "कोणत्याही शाखेतील पदवी",
+  },
+  {
+    srNo: 8,
+    nameMr: "सहायक अधीक्षक, गट-क",
+    nameEn: "Assistant Superintendent",
+    vacancies: "11",
+    isNew: false,
+    qualification: "कोणत्याही शाखेतील पदवी",
+  },
+  {
+    srNo: 9,
+    nameMr: "सहायक मत्स्यव्यवसाय विकास अधिकारी (तांत्रिक), गट-क",
+    nameEn: "Assistant Fisheries Development Officer – Technical",
+    vacancies: "254",
+    isNew: false,
+    qualification:
+      "मत्स्यविज्ञान पदवी (B.F.Sc.) किंवा मत्स्यजीवशास्त्र विषयातील विज्ञान पदवी",
+  },
+  {
+    srNo: 10,
+    nameMr: "कनिष्ठ कौशल्य, रोजगार व मार्गदर्शन अधिकारी",
+    nameEn: "Junior Skill, Employment & Guidance Officer",
+    vacancies: "32",
+    isNew: true,
+    qualification: "कला, विज्ञान, वाणिज्य किंवा विधी शाखेतील पदवी",
+  },
+  {
+    srNo: 11,
+    nameMr: "कनिष्ठ शिक्षण विस्तार अधिकारी",
+    nameEn: "Junior Education Extension Officer",
+    vacancies: "58",
+    isNew: true,
+    qualification:
+      "किमान ५०% गुणांसह पदवी + डी.टी.एड. / डी.एल.एड. किंवा बी.एड.",
+  },
+  {
+    srNo: 12,
+    nameMr: "आदिवासी विकास निरीक्षक",
+    nameEn: "Tribal Development Inspector",
+    vacancies: "47",
+    isNew: true,
+    qualification: "कोणत्याही शाखेतील मान्यताप्राप्त पदवी",
+  },
+  {
+    srNo: 13,
+    nameMr: "अन्वेषक",
+    nameEn: "Investigator",
+    vacancies: "42",
+    isNew: true,
+    qualification: "गणित, सांख्यिकी किंवा अर्थशास्त्र विषयातील पदवी",
+  },
+  {
+    srNo: 14,
+    nameMr: "दूरध्वनीचालक",
+    nameEn: "Telephone Operator",
+    vacancies: "1",
+    isNew: true,
+    qualification: "एसएससी (१० वी उत्तीर्ण) + टेलिफोन ऑपरेटिंग ज्ञान/अनुभव",
+  },
+  {
+    srNo: 15,
+    nameMr: "पुरवठा निरीक्षक",
+    nameEn: "Supply Inspector",
+    vacancies: "214",
+    isNew: true,
+    qualification: "कोणत्याही शाखेतील मान्यताप्राप्त पदवी",
+  },
+  {
+    srNo: 16,
+    nameMr: "उपलेखापाल / मुख्य लिपिक",
+    nameEn: "Sub-Accountant / Head Clerk",
+    vacancies: "3",
+    isNew: true,
+    qualification: "वाणिज्य शाखेतील पदवी (B.Com) किंवा संबंधित पात्रता",
+  },
+  {
+    srNo: 17,
+    nameMr: "सहायक भांडारपाल",
+    nameEn: "Assistant Storekeeper",
+    vacancies: "6",
+    isNew: true,
+    qualification: "पदवी किंवा संबंधित अभियांत्रिकी / तंत्रज्ञान पदविका",
+  },
+  {
+    srNo: 18,
+    nameMr: "पशुधन पर्यवेक्षक",
+    nameEn: "Livestock Supervisor",
+    vacancies: "322",
+    isNew: true,
+    qualification: "पशुसंवर्धन व दुग्धव्यवसाय पदविका किंवा संबंधित पात्रता",
+  },
+  {
+    srNo: 19,
+    nameMr: "स्थापत्य अभियांत्रिकी सहायक (सार्वजनिक बांधकाम विभाग)",
+    nameEn: "Civil Engineering Assistant – Public Works Department",
+    vacancies: "934",
+    isNew: true,
+    qualification:
+      "स्थापत्य अभियांत्रिकी (Civil Engineering) पदविका किंवा पदवी",
+  },
+  {
+    srNo: 20,
+    nameMr: "गणित व चित्रकला निदेशक",
+    nameEn: "Mathematics & Drawing Instructor",
+    vacancies: "241",
+    isNew: true,
+    qualification: "संबंधित शाखेतील अभियांत्रिकी पदविका किंवा ITI / कला पदविका",
+  },
+  {
+    srNo: 21,
+    nameMr: "सहायक भांडारपाल (कौशल्य व रोजगार विभाग)",
+    nameEn: "Assistant Storekeeper – Skills & Employment Department",
+    vacancies: "182",
+    isNew: true,
+    qualification: "पदवी किंवा तंत्रज्ञान / अभियांत्रिकी पदविका",
+  },
+  {
+    srNo: 22,
+    nameMr: "भांडारपाल",
+    nameEn: "Storekeeper",
+    vacancies: "9",
+    isNew: true,
+    qualification: "पदवी किंवा संबंधित शाखेतील पदविका",
+  },
+  {
+    srNo: 23,
+    nameMr: "शिल्प निदेशक",
+    nameEn: "Craft Instructor",
+    vacancies: "1,388",
+    isNew: true,
+    qualification: "संबंधित व्यवसायातील ITI / CITS / अभियांत्रिकी पदविका",
+  },
+  {
+    srNo: 24,
+    nameMr: "अधिपरिचारिका",
+    nameEn: "Staff Nurse",
+    vacancies: "3,911",
+    isNew: true,
+    qualification:
+      "जी.एन.एम. (GNM) किंवा बी.एस्सी. नर्सिंग + महाराष्ट्र नर्सिंग कौन्सिल नोंदणी",
+  },
+  {
+    srNo: 25,
+    nameMr: "कनिष्ठ रसायनी",
+    nameEn: "Junior Chemist",
+    vacancies: "153",
+    isNew: true,
+    qualification: "रसायनशास्त्र (Chemistry) विषयातील विज्ञान पदवी (B.Sc)",
+  },
+  {
+    srNo: 26,
+    nameMr: "सहायक कृषी अधिकारी",
+    nameEn: "Assistant Agriculture Officer",
+    vacancies: "1,203",
+    isNew: true,
+    qualification: "कृषी पदविका किंवा बी.एस्सी. कृषी (B.Sc Agriculture) पदवी",
+  },
+  {
+    srNo: 27,
+    nameMr: "स्थापत्य अभियांत्रिकी सहायक (जलसंपदा विभाग)",
+    nameEn: "Civil Engineering Assistant – Water Resources Department",
+    vacancies: "949",
+    isNew: true,
+    qualification:
+      "स्थापत्य अभियांत्रिकी (Civil Engineering) पदविका किंवा पदवी",
+  },
+];
+
 // Helper function to check if published within 48 hours
 function isNewArticle(dateString: string): boolean {
   const publishedDate = new Date(dateString).getTime();
@@ -91,6 +351,42 @@ function isNewArticle(dateString: string): boolean {
 >
   <section class="pt-2 pb-16 not-prose">
     <div class="max-w-[1100px] mx-auto px-2 md:px-0">
+      <!-- Mega Vacancy Increase Banner (16,717 Posts) -->
+      <div
+        class="mb-6 p-4 rounded-2xl bg-gradient-to-r from-emerald-500/15 via-primary/10 to-emerald-500/15 border-2 border-emerald-500/40 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left shadow-xs"
+      >
+        <div class="flex items-center gap-3">
+          <div
+            class="p-2.5 bg-emerald-600 text-white rounded-xl shrink-0 animate-bounce"
+          >
+            <HiOutlineSparkles className="text-xl" />
+          </div>
+          <div>
+            <div
+              class="inline-flex items-center gap-1 px-2 py-0.5 bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 text-[0.65rem] font-black rounded uppercase tracking-wider mb-1"
+            >
+              🎉 मोठी बातमी: मेगा पदसंख्या वाढ
+            </div>
+            <h3 class="text-sm sm:text-base font-black text-text-main m-0">
+              MPSC गट-क परीक्षेत प्रचंड वाढ: आता एकूण १६,७१७ पदे (२७ संवर्ग)!
+            </h3>
+            <p class="text-xs text-text-muted m-0 font-medium">
+              मूळ ५,७०७ पदांमध्ये <strong
+                class="text-emerald-600 dark:text-emerald-400"
+                >+११,०१० नवीन पदांची वाढ</strong
+              >; १८ नवीन संवर्ग समाविष्ट झाले आहेत.
+            </p>
+          </div>
+        </div>
+
+        <a
+          href="#vacancy-breakdown"
+          class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-black uppercase tracking-wider rounded-xl no-underline shadow-xs shrink-0 transition-colors"
+        >
+          सुधारित पदनिहाय तक्ता पाहा ↓
+        </a>
+      </div>
+
       <!-- Postponed Notice Top Alert Banner -->
       <div
         class="mb-6 p-4 rounded-2xl bg-rose-500/10 border-2 border-rose-500/30 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left shadow-xs"
@@ -110,14 +406,16 @@ function isNewArticle(dateString: string): boolean {
             <p class="text-xs text-text-muted m-0 font-medium">
               सुधारित नवीन परीक्षा दिनांक: <strong
                 class="text-rose-600 dark:text-rose-400"
-                >०३ जानेवारी २०२७</strong
+                >२४ जानेवारी २०२७</strong
               > (अधिकृत शुद्धीपत्रक जारी)
             </p>
           </div>
         </div>
 
         <a
-          href="/mpsc-group-c-exam-date-postponed-2026"
+          href="https://mpsc.gov.in/adv_notification/8#"
+          target="_blank"
+          rel="noopener noreferrer"
           class="px-4 py-2 bg-rose-600 hover:bg-rose-700 text-white text-xs font-black uppercase tracking-wider rounded-xl no-underline shadow-xs shrink-0 transition-colors"
         >
           शुद्धीपत्रक पाहा →
@@ -146,7 +444,7 @@ function isNewArticle(dateString: string): boolean {
             <p class="text-xs sm:text-sm text-text-secondary m-0 font-medium">
               परीक्षेचा दिनांक: <span
                 class="font-black text-rose-600 dark:text-rose-400 text-sm sm:text-base"
-                >०३ जानेवारी २०२७ (सुधारित)
+                >२४ जानेवारी २०२७ (सुधारित)
               </span>
             </p>
           </div>
@@ -226,7 +524,7 @@ function isNewArticle(dateString: string): boolean {
               MPSC गट क पूर्व २०२६
             </h3>
             <p class="text-xs text-text-muted m-0">
-              ५,७०७ पदांसाठी प्राप्त ऑनलाईन अर्ज
+              १६,७१७ पदांसाठी प्राप्त ऑनलाईन अर्ज (सुधारित पदसंख्या)
             </p>
           </div>
         </div>
@@ -259,14 +557,14 @@ function isNewArticle(dateString: string): boolean {
       <div class="max-w-3xl">
         <div class="flex items-center gap-2 mb-3 flex-wrap">
           <span
-            class="text-[0.65rem] bg-violet-600 text-white px-3 py-1 rounded-full font-extrabold uppercase tracking-wider inline-flex items-center gap-1 shadow-xs"
+            class="text-[0.65rem] bg-emerald-600 text-white px-3 py-1 rounded-full font-extrabold uppercase tracking-wider inline-flex items-center gap-1 shadow-xs"
           >
-            <HiOutlineSparkles className="text-xs" /> MPSC Official Mega Bharti 2026
+            <HiOutlineSparkles className="text-xs" /> एकूण १६,७१७ पदे (Mega Update)
           </span>
           <span
             class="text-[0.65rem] bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20 px-3 py-1 rounded-full font-bold uppercase tracking-wider"
           >
-            एकूण ५,७०७ पदे
+            २७ संवर्ग भरती
           </span>
           <span
             class="text-[0.65rem] bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20 px-3 py-1 rounded-full font-bold uppercase tracking-wider"
@@ -283,11 +581,13 @@ function isNewArticle(dateString: string): boolean {
         <p
           class="text-xs md:text-base text-text-secondary leading-relaxed mb-6"
         >
-          महाराष्ट्र लोकसेवा आयोग (MPSC) द्वारे गट-क संवर्गातील ५,७०७ रिक्त
-          पदांसाठी अर्ज प्रक्रिया सुरू आहे. ऑनलाईन अर्ज करण्याची सुधारित अंतिम
-          मुदत <strong class="text-rose-600 dark:text-rose-400"
-            >१० ऑगस्ट २०२६</strong
-          > पर्यंत आहे.
+          महाराष्ट्र लोकसेवा आयोग (MPSC) द्वारे गट-क संवर्गात प्रचंड पदवाढ जाहीर
+          झाली असून आता एकूण <strong
+            class="text-emerald-600 dark:text-emerald-400"
+            >१६,७१७ पदांसाठी</strong
+          > (मूळ ५,७०७ + नवीन वाढ) भरती प्रक्रिया होत आहे. सुधारित पूर्व परीक्षा <strong
+            class="text-rose-600 dark:text-rose-400">२४ जानेवारी २०२७</strong
+          > रोजी आयोजित केली जाणार आहे.
         </p>
 
         <div
@@ -297,16 +597,19 @@ function isNewArticle(dateString: string): boolean {
             class="bg-bg-surface/80 border border-border-card/60 backdrop-blur-xs p-3 rounded-2xl flex items-center gap-2.5"
           >
             <div
-              class="p-2 bg-violet-500/10 text-violet-500 rounded-xl shrink-0"
+              class="p-2 bg-emerald-500/10 text-emerald-600 rounded-xl shrink-0"
             >
               <HiOutlineUserGroup className="text-lg" />
             </div>
             <div>
               <span
                 class="block text-[0.65rem] text-text-muted font-bold uppercase"
-                >एकूण जागा</span
+                >एकूण जागा (सुधारित)</span
               >
-              <span class="text-text-main font-extrabold">५,७०७ पदे</span>
+              <span
+                class="text-emerald-600 dark:text-emerald-400 font-extrabold"
+                >१६,७१७ पदे</span
+              >
             </div>
           </div>
           <div
@@ -339,7 +642,7 @@ function isNewArticle(dateString: string): boolean {
                 >पूर्व परीक्षा (New)</span
               >
               <span class="text-rose-600 dark:text-rose-400 font-extrabold"
-                >०३ जानेवारी २०२७</span
+                >२४ जानेवारी २०२७</span
               >
             </div>
           </div>
@@ -466,132 +769,276 @@ function isNewArticle(dateString: string): boolean {
 
     <!-- Vacancy Distribution Table -->
     <div
-      class="bg-bg-surface border border-border-card rounded-3xl p-6 sm:p-8 space-y-6 shadow-xs mb-10"
+      id="vacancy-breakdown"
+      class="bg-bg-surface border border-border-card rounded-3xl p-4 sm:p-6 md:p-8 space-y-6 shadow-xs mb-10"
     >
-      <div class="border-b border-border-card/40 pb-3">
+      <div class="border-b border-border-card/40 pb-4">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-2">
+          <div class="flex items-center gap-2">
+            <span
+              class="px-3 py-1 bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 rounded-full text-xs font-black uppercase tracking-wider border border-emerald-500/30"
+            >
+              🎉 मेगा सुधारित मागणीपत्र
+            </span>
+            <span
+              class="px-3 py-1 bg-violet-500/10 text-violet-600 dark:text-violet-400 rounded-full text-xs font-black uppercase tracking-wider border border-violet-500/20"
+            >
+              २७ संवर्ग
+            </span>
+          </div>
+          <span class="text-xs text-text-muted font-bold">
+            एकूण जागा: <strong
+              class="text-emerald-600 dark:text-emerald-400 font-black"
+              >१६,७१७ पदे</strong
+            >
+          </span>
+        </div>
         <h2
-          class="text-xl font-black text-text-main m-0 border-l-4 border-primary pl-3"
+          class="text-xl sm:text-2xl font-black text-text-main m-0 border-l-4 border-emerald-500 pl-3 leading-snug"
         >
-          MPSC गट-क पदनिहाय जागा तपशील (Vacancy Breakdown - 5,707 Posts)
+          MPSC गट-क सुधारित पदनिहाय जागा तपशील (Vacancy Breakdown - 16,717
+          Posts)
         </h2>
+        <p class="text-xs sm:text-sm text-text-muted mt-2 mb-0">
+          शासनाकडून प्राप्त अतिरिक्त मागणीपत्रानुसार गट-क संवर्गात तब्बल <strong
+            class="text-emerald-600 dark:text-emerald-400 font-extrabold"
+            >+११,०१० नवीन पदांची वाढ</strong
+          > झाली असून एकूण पदे <strong>१६,७१७</strong> झाली आहेत. खालील तक्त्यात जुनी
+          पदे (लाल रंगात) व नवीन समाविष्ट पदे (हिरव्या रंगात `+` चिन्हासह) सविस्तर
+          दिली आहेत:
+        </p>
       </div>
 
-      <div class="overflow-x-auto">
+      <!-- Quick Legend Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <div
+          class="p-3.5 rounded-2xl bg-rose-500/10 border border-rose-500/20 flex items-center gap-3"
+        >
+          <span class="w-4 h-4 rounded-full bg-rose-600 shrink-0"></span>
+          <div>
+            <span
+              class="block text-xs font-bold text-rose-600 dark:text-rose-400 uppercase tracking-wider"
+            >
+              🔴 जुनी पदे (Old Posts)
+            </span>
+            <span class="text-xs text-text-muted">
+              ९ संवर्ग (Sr. 1 ते 9) • <strong>७,०२२ पदे</strong> (वाढीसह `+`)
+            </span>
+          </div>
+        </div>
+        <div
+          class="p-3.5 rounded-2xl bg-emerald-500/10 border border-emerald-500/25 flex items-center gap-3"
+        >
+          <span
+            class="w-4 h-4 rounded-full bg-emerald-600 shrink-0 animate-pulse"
+          ></span>
+          <div>
+            <span
+              class="block text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider"
+            >
+              🟢 नवीन पदे (New Posts)
+            </span>
+            <span class="text-xs text-text-muted">
+              १८ संवर्ग (Sr. 10 ते 27) • <strong>+९,६९५ पदे</strong>
+            </span>
+          </div>
+        </div>
+        <div
+          class="p-3.5 rounded-2xl bg-violet-500/10 border border-violet-500/25 flex items-center gap-3"
+        >
+          <span class="w-4 h-4 rounded-full bg-violet-600 shrink-0"></span>
+          <div>
+            <span
+              class="block text-xs font-bold text-violet-600 dark:text-violet-400 uppercase tracking-wider"
+            >
+              🟣 एकूण सुधारित पदे (Grand Total)
+            </span>
+            <span class="text-xs text-text-muted">
+              २७ संवर्ग • <strong class="text-primary font-black"
+                >१६,७१७ पदे</strong
+              >
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 27 Posts Table -->
+      <div
+        class="overflow-x-auto rounded-2xl border border-border-card shadow-xs"
+      >
         <table class="w-full text-left border-collapse text-sm">
           <thead>
             <tr class="bg-primary/10">
-              <th class="p-3.5 border border-border-card font-bold"
-                >पदाचे नाव (Post Name)</th
+              <th
+                class="p-3 border border-border-card font-bold text-center w-14"
               >
-              <th class="p-3.5 border border-border-card font-bold text-center"
-                >एकूण जागा</th
+                अ.क्र.
+              </th>
+              <th class="p-3 border border-border-card font-bold min-w-[220px]">
+                पदाचे नाव (Post Name)
+              </th>
+              <th
+                class="p-3 border border-border-card font-bold text-center w-36"
               >
-              <th class="p-3.5 border border-border-card font-bold"
-                >शैक्षणिक पात्रता</th
+                स्थिती (Status)
+              </th>
+              <th
+                class="p-3 border border-border-card font-bold text-center w-32"
               >
+                एकूण जागा
+              </th>
+              <th class="p-3 border border-border-card font-bold min-w-[260px]">
+                शैक्षणिक पात्रता (Eligibility)
+              </th>
             </tr>
           </thead>
           <tbody class="divide-y divide-border-card/30">
-            <tr>
+            {
+              vacanciesList.map((post) => (
+                <tr
+                  class={
+                    post.isNew
+                      ? "bg-emerald-500/[0.04] hover:bg-emerald-500/[0.08] transition-colors"
+                      : "bg-rose-500/[0.03] hover:bg-rose-500/[0.07] transition-colors"
+                  }
+                >
+                  <td
+                    class={`p-3 border border-border-card text-center font-black text-sm ${
+                      post.isNew
+                        ? "text-emerald-600 dark:text-emerald-400"
+                        : "text-rose-600 dark:text-rose-400"
+                    }`}
+                  >
+                    {post.srNo}
+                  </td>
+                  <td class="p-3 border border-border-card">
+                    <div class="space-y-0.5">
+                      <span
+                        class={`block font-bold text-sm sm:text-base ${
+                          post.isNew
+                            ? "text-emerald-700 dark:text-emerald-300"
+                            : "text-rose-700 dark:text-rose-300"
+                        }`}
+                      >
+                        {post.nameMr}
+                      </span>
+                      <span
+                        class={`block text-[0.75rem] font-medium ${
+                          post.isNew
+                            ? "text-emerald-600/80 dark:text-emerald-400/80"
+                            : "text-rose-600/80 dark:text-rose-400/80"
+                        }`}
+                      >
+                        ({post.nameEn})
+                      </span>
+                    </div>
+                  </td>
+                  <td class="p-3 border border-border-card text-center">
+                    {post.isNew ? (
+                      <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 text-xs font-black rounded-full border border-emerald-500/30 shadow-2xs">
+                        <HiOutlinePlusCircle className="text-xs" /> नवीन पद
+                      </span>
+                    ) : post.isUpdated ? (
+                      <span class="inline-flex flex-col items-center gap-0.5 px-2.5 py-1 bg-rose-500/15 text-rose-700 dark:text-rose-300 text-xs font-extrabold rounded-full border border-rose-500/30">
+                        <span>जुने पद</span>
+                        <span class="text-[0.65rem] text-emerald-600 dark:text-emerald-400 font-black">
+                          ({post.increase} वाढ)
+                        </span>
+                      </span>
+                    ) : (
+                      <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-rose-500/10 text-rose-600 dark:text-rose-400 text-xs font-bold rounded-full border border-rose-500/20">
+                        जुने पद
+                      </span>
+                    )}
+                  </td>
+                  <td class="p-3 border border-border-card text-center">
+                    {post.isNew ? (
+                      <div class="inline-flex items-center justify-center gap-1">
+                        <span class="text-emerald-600 dark:text-emerald-400 font-black text-base sm:text-lg">
+                          + {post.vacancies}
+                        </span>
+                      </div>
+                    ) : post.isUpdated ? (
+                      <div class="text-center">
+                        <span class="text-rose-600 dark:text-rose-400 font-black text-base sm:text-lg">
+                          {post.vacancies}
+                        </span>
+                        <span class="block text-[0.7rem] font-bold text-emerald-600 dark:text-emerald-400">
+                          ({post.oldVacancies} {post.increase})
+                        </span>
+                      </div>
+                    ) : (
+                      <span class="text-rose-600 dark:text-rose-400 font-black text-base sm:text-lg">
+                        {post.vacancies}
+                      </span>
+                    )}
+                  </td>
+                  <td class="p-3 border border-border-card text-xs text-text-muted">
+                    {post.qualification}
+                  </td>
+                </tr>
+              ))
+            }
+
+            <!-- Subtotal: Old Posts -->
+            <tr class="bg-rose-500/10 font-bold">
               <td
-                class="p-3.5 border border-border-card font-bold text-primary"
+                colspan="3"
+                class="p-3 border border-border-card text-right text-rose-700 dark:text-rose-300 text-xs sm:text-sm"
               >
-                ग्राम महसूल अधिकारी (तलाठी / Gram Mahasul Adhikari)
+                🔴 मूळ ९ जुनी पदे (Old Posts Subtotal - Sr. 1 to 9)
               </td>
               <td
-                class="p-3.5 border border-border-card font-black text-rose-500 text-center text-base"
+                class="p-3 border border-border-card text-center font-black text-rose-600 dark:text-rose-400 text-base"
               >
-                १,५३९
+                ७,०२२
               </td>
               <td
-                class="p-3.5 border border-border-card text-text-muted text-xs"
+                class="p-3 border border-border-card text-xs text-rose-600 dark:text-rose-400"
               >
-                कोणत्याही शाखेतील पदवी (Graduate in any discipline)
+                मूळ ५,७०७ पदांमधील संवर्ग (+१,३१५ वाढीव जागांसह)
               </td>
             </tr>
-            <tr>
+
+            <!-- Subtotal: New Posts -->
+            <tr class="bg-emerald-500/10 font-bold">
               <td
-                class="p-3.5 border border-border-card font-bold text-text-main"
+                colspan="3"
+                class="p-3 border border-border-card text-right text-emerald-700 dark:text-emerald-300 text-xs sm:text-sm"
               >
-                लिपिक-टंकलेखक (Clerk-Typist)
+                🟢 नवे १८ समाविष्ट संवर्ग (New Posts Subtotal - Sr. 10 to 27)
               </td>
               <td
-                class="p-3.5 border border-border-card font-black text-rose-500 text-center text-base"
+                class="p-3 border border-border-card text-center font-black text-emerald-600 dark:text-emerald-400 text-base"
               >
-                ३,१९७
+                + ९,६९५
               </td>
               <td
-                class="p-3.5 border border-border-card text-text-muted text-xs"
+                class="p-3 border border-border-card text-xs text-emerald-600 dark:text-emerald-400"
               >
-                पदवी + मराठी/इंग्रजी टंकलेखन (Typing GCC-TBC certificate)
-              </td>
-            </tr>
-            <tr>
-              <td
-                class="p-3.5 border border-border-card font-bold text-text-main"
-              >
-                कर सहाय्यक (Tax Assistant)
-              </td>
-              <td
-                class="p-3.5 border border-border-card font-black text-rose-500 text-center text-base"
-              >
-                ४६८
-              </td>
-              <td
-                class="p-3.5 border border-border-card text-text-muted text-xs"
-              >
-                पदवी + टंकलेखन प्रमाणपत्र
+                शासनाने नव्याने समाविष्ट केलेले १८ पद संवर्ग
               </td>
             </tr>
-            <tr>
+
+            <!-- Grand Total -->
+            <tr
+              class="bg-gradient-to-r from-violet-600 to-primary text-white font-extrabold"
+            >
               <td
-                class="p-3.5 border border-border-card font-bold text-text-main"
+                colspan="3"
+                class="p-3.5 border border-violet-400/30 text-right text-sm sm:text-base"
               >
-                दुय्यम निरीक्षक, राज्य उत्पादन शुल्क (Excise Sub Inspector)
+                एकूण सुधारित गट-क पदे (Grand Total Vacancies)
               </td>
               <td
-                class="p-3.5 border border-border-card font-black text-rose-500 text-center text-base"
+                class="p-3.5 border border-violet-400/30 text-center font-black text-xl text-yellow-300"
               >
-                १९०
+                १६,७१७
               </td>
               <td
-                class="p-3.5 border border-border-card text-text-muted text-xs"
+                class="p-3.5 border border-violet-400/30 text-xs text-white/90 font-medium"
               >
-                पदवी + शारीरिक पात्रता
-              </td>
-            </tr>
-            <tr>
-              <td
-                class="p-3.5 border border-border-card font-bold text-text-main"
-              >
-                तांत्रिक सहाय्यक, उद्योग व इतर पदे
-              </td>
-              <td
-                class="p-3.5 border border-border-card font-black text-rose-500 text-center text-base"
-              >
-                ३१३
-              </td>
-              <td
-                class="p-3.5 border border-border-card text-text-muted text-xs"
-              >
-                संबंधित शाखेतील पदवी / पदविका
-              </td>
-            </tr>
-            <tr class="bg-primary/10">
-              <td
-                class="p-3.5 border border-border-card font-bold text-text-main text-right"
-              >
-                एकूण गट-क पदे (Total Group C Vacancies)
-              </td>
-              <td
-                class="p-3.5 border border-border-card font-black text-rose-600 dark:text-rose-400 text-center text-lg"
-              >
-                ५,७०७
-              </td>
-              <td
-                class="p-3.5 border border-border-card font-bold text-primary text-xs"
-              >
-                MPSC Official Advertisement 2026
+                २७ विविध संवर्ग भरती (५,७०७ + ११,०१० नवीन वाढ)
               </td>
             </tr>
           </tbody>
@@ -635,7 +1082,7 @@ function isNewArticle(dateString: string): boolean {
 <!-- Live Countdown Timer & 48-Hour Update Script -->
 <script is:inline>
   function updateMpscPrelimsCountdown() {
-    const targetDate = new Date("2027-01-03T10:00:00+05:30").getTime();
+    const targetDate = new Date("2027-01-24T10:00:00+05:30").getTime();
     const now = new Date().getTime();
     const difference = targetDate - now;
 

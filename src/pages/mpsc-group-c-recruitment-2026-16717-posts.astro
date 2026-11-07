@@ -1,0 +1,1972 @@
+---
+import Layout from "../layouts/Layout.astro";
+import {
+  HiOutlineCalendarDays,
+  HiOutlineCursorArrowRays,
+  HiOutlineArrowTopRightOnSquare,
+  HiOutlineDocumentText,
+  HiOutlineBuildingOffice,
+  HiOutlineAcademicCap,
+  HiOutlineArrowDownTray,
+  HiOutlineQueueList,
+  HiOutlineIdentification,
+  HiOutlineUserGroup,
+  HiOutlineBellAlert,
+  HiOutlineCheckBadge,
+  HiOutlineMegaphone,
+  HiOutlineClock,
+  HiOutlineArrowLeft,
+  HiOutlineShieldCheck,
+  HiOutlinePlusCircle,
+  HiOutlineExclamationTriangle,
+  HiOutlineCreditCard,
+  HiOutlineSparkles,
+} from "react-icons/hi2";
+
+const title =
+  "MPSC Group C Recruitment 2026: 16,717 Posts, New Application Dates & Exam Postponed to 24 January 2027";
+const description =
+  "MPSC Group C 2026 Corrigendum: Total vacancies increased to 16,717 posts across 27 cadres. New application window opens from 13 to 27 Nov 2026. Prelims exam rescheduled to 24 January 2027. Full schedule, old vs new timeline & 27 post-wise breakdown.";
+const canonicalURL =
+  "https://mahasandhi.in/mpsc-group-c-recruitment-2026-16717-posts";
+const date = "November 07, 2026";
+const category = "MPSC Bharti";
+const author = "Astatine";
+
+interface VacancyItem {
+  srNo: number;
+  nameMr: string;
+  nameEn: string;
+  vacancies: string;
+  qualification: string;
+  qualificationEn: string;
+  ageLimitMr: string;
+  ageLimitEn: string;
+}
+
+const vacanciesList: VacancyItem[] = [
+  {
+    srNo: 1,
+    nameMr: "उद्योग निरीक्षक",
+    nameEn: "Industries Inspector",
+    vacancies: "9",
+    qualification:
+      "अभियांत्रिकी पदवी/पदविका किंवा तंत्रज्ञान किंवा विज्ञान शाखेतील पदवी",
+    qualificationEn:
+      "Degree/Diploma in Engineering or Degree in Technology/Science",
+    ageLimitMr: "१९ ते ३८ वर्षे (मागासवर्गीय: ४३ वर्षांपर्यंत)",
+    ageLimitEn: "19 to 38 years (Reserved: up to 43 years)",
+  },
+  {
+    srNo: 2,
+    nameMr: "तांत्रिक सहायक",
+    nameEn: "Technical Assistant",
+    vacancies: "3",
+    qualification: "कोणत्याही मान्यताप्राप्त शाखेतील पदवी",
+    qualificationEn: "Bachelor's Degree in any discipline",
+    ageLimitMr: "१८ ते ३८ वर्षे (मागासवर्गीय: ४३ वर्षांपर्यंत)",
+    ageLimitEn: "18 to 38 years (Reserved: up to 43 years)",
+  },
+  {
+    srNo: 3,
+    nameMr: "कर सहायक",
+    nameEn: "Tax Assistant",
+    vacancies: "282",
+    qualification:
+      "पदवी + मराठी टंकलेखन ३० श.प्र.मि. किंवा इंग्रजी ४० श.प्र.मि.",
+    qualificationEn:
+      "Degree + Marathi Typing 30 wpm or English Typing 40 wpm",
+    ageLimitMr: "१८ ते ३८ वर्षे (मागासवर्गीय: ४३ वर्षांपर्यंत)",
+    ageLimitEn: "18 to 38 years (Reserved: up to 43 years)",
+  },
+  {
+    srNo: 4,
+    nameMr: "सहायक मोटार वाहन निरीक्षक, गट-क",
+    nameEn: "Assistant Motor Vehicle Inspector (AMVI)",
+    vacancies: "461",
+    qualification:
+      "मेकॅनिकल / ऑटोमोबाईल अभियांत्रिकी पदविका किंवा पदवी + वैध वाहन चालक परवाना",
+    qualificationEn:
+      "Diploma or Degree in Mechanical / Automobile Engineering + Valid Driving License",
+    ageLimitMr: "१९ ते ३८ वर्षे (मागासवर्गीय: ४३ वर्षांपर्यंत)",
+    ageLimitEn: "19 to 38 years (Reserved: up to 43 years)",
+  },
+  {
+    srNo: 5,
+    nameMr: "लिपिक-टंकलेखक",
+    nameEn: "Clerk-Typist",
+    vacancies: "3,966",
+    qualification:
+      "कोणत्याही शाखेतील पदवी + मराठी टंकलेखन ३० श.प्र.मि. किंवा इंग्रजी ४० श.प्र.मि.",
+    qualificationEn:
+      "Degree in any discipline + Marathi Typing 30 wpm or English 40 wpm",
+    ageLimitMr: "१९ ते ३८ वर्षे (मागासवर्गीय: ४३ वर्षांपर्यंत)",
+    ageLimitEn: "19 to 38 years (Reserved: up to 43 years)",
+  },
+  {
+    srNo: 6,
+    nameMr: "ग्राम महसूल अधिकारी (तलाठी), गट-क",
+    nameEn: "Gram Mahsul Adhikari – Talathi",
+    vacancies: "1,840",
+    qualification:
+      "कोणत्याही शाखेतील मान्यताप्राप्त पदवी + संगणक ज्ञान (MSCIT)",
+    qualificationEn:
+      "Bachelor's Degree in any discipline + Computer knowledge (MSCIT)",
+    ageLimitMr: "१९ ते ३८ वर्षे (मागासवर्गीय: ४३ वर्षांपर्यंत)",
+    ageLimitEn: "19 to 38 years (Reserved: up to 43 years)",
+  },
+  {
+    srNo: 7,
+    nameMr: "वरिष्ठ अभिलेखापाल / वरिष्ठ लिपिक / अभिलेखापाल, गट-क",
+    nameEn: "Senior Record Keeper / Senior Clerk / Record Keeper",
+    vacancies: "196",
+    qualification: "कोणत्याही शाखेतील मान्यताप्राप्त पदवी",
+    qualificationEn: "Bachelor's Degree in any discipline",
+    ageLimitMr: "१८ ते ३८ वर्षे (मागासवर्गीय: ४३ वर्षांपर्यंत)",
+    ageLimitEn: "18 to 38 years (Reserved: up to 43 years)",
+  },
+  {
+    srNo: 8,
+    nameMr: "सहायक अधीक्षक, गट-क",
+    nameEn: "Assistant Superintendent",
+    vacancies: "11",
+    qualification: "कोणत्याही शाखेतील मान्यताप्राप्त पदवी",
+    qualificationEn: "Bachelor's Degree in any discipline",
+    ageLimitMr: "१८ ते ३८ वर्षे (मागासवर्गीय: ४३ वर्षांपर्यंत)",
+    ageLimitEn: "18 to 38 years (Reserved: up to 43 years)",
+  },
+  {
+    srNo: 9,
+    nameMr: "सहायक मत्स्यव्यवसाय विकास अधिकारी (तांत्रिक), गट-क",
+    nameEn: "Assistant Fisheries Development Officer – Technical",
+    vacancies: "254",
+    qualification:
+      "मत्स्यविज्ञान पदवी (B.F.Sc.) किंवा मत्स्यजीवशास्त्र विषयातील विज्ञान पदवी",
+    qualificationEn:
+      "B.F.Sc. (Fisheries Science) or B.Sc. with Fisheries Biology",
+    ageLimitMr: "१८ ते ३८ वर्षे (मागासवर्गीय: ४३ वर्षांपर्यंत)",
+    ageLimitEn: "18 to 38 years (Reserved: up to 43 years)",
+  },
+  {
+    srNo: 10,
+    nameMr: "कनिष्ठ कौशल्य, रोजगार व मार्गदर्शन अधिकारी",
+    nameEn: "Junior Skill, Employment & Guidance Officer",
+    vacancies: "32",
+    qualification: "कला, विज्ञान, वाणिज्य किंवा विधी शाखेतील पदवी",
+    qualificationEn: "Bachelor's Degree in Arts, Science, Commerce or Law",
+    ageLimitMr: "१८ ते ३८ वर्षे (मागासवर्गीय: ४३ वर्षांपर्यंत)",
+    ageLimitEn: "18 to 38 years (Reserved: up to 43 years)",
+  },
+  {
+    srNo: 11,
+    nameMr: "कनिष्ठ शिक्षण विस्तार अधिकारी",
+    nameEn: "Junior Education Extension Officer",
+    vacancies: "58",
+    qualification:
+      "किमान ५०% गुणांसह पदवी + डी.टी.एड. / डी.एल.एड. किंवा बी.एड.",
+    qualificationEn:
+      "Degree with min 50% marks + D.T.Ed. / D.El.Ed. or B.Ed.",
+    ageLimitMr: "१८ ते ३८ वर्षे (मागासवर्गीय: ४३ वर्षांपर्यंत)",
+    ageLimitEn: "18 to 38 years (Reserved: up to 43 years)",
+  },
+  {
+    srNo: 12,
+    nameMr: "आदिवासी विकास निरीक्षक",
+    nameEn: "Tribal Development Inspector",
+    vacancies: "47",
+    qualification: "कोणत्याही शाखेतील मान्यताप्राप्त पदवी (समाजकार्यास प्राधान्य)",
+    qualificationEn:
+      "Bachelor's Degree in any discipline (Social Work preferred)",
+    ageLimitMr: "१८ ते ३८ वर्षे (मागासवर्गीय: ४३ वर्षांपर्यंत)",
+    ageLimitEn: "18 to 38 years (Reserved: up to 43 years)",
+  },
+  {
+    srNo: 13,
+    nameMr: "अन्वेषक",
+    nameEn: "Investigator",
+    vacancies: "42",
+    qualification: "गणित, सांख्यिकी, अर्थशास्त्र किंवा वाणिज्य विषयातील पदवी",
+    qualificationEn:
+      "Degree in Mathematics, Statistics, Economics or Commerce",
+    ageLimitMr: "१८ ते ३८ वर्षे (मागासवर्गीय: ४३ वर्षांपर्यंत)",
+    ageLimitEn: "18 to 38 years (Reserved: up to 43 years)",
+  },
+  {
+    srNo: 14,
+    nameMr: "दूरध्वनीचालक",
+    nameEn: "Telephone Operator",
+    vacancies: "1",
+    qualification: "एसएससी (१० वी उत्तीर्ण) + PBX/EPABX टेलिफोन ऑपरेटिंग प्रमाणपत्र/अनुभव",
+    qualificationEn:
+      "10th Pass (SSC) + PBX/EPABX Telephone Operating Certificate/Experience",
+    ageLimitMr: "१८ ते ३८ वर्षे (मागासवर्गीय: ४३ वर्षांपर्यंत)",
+    ageLimitEn: "18 to 38 years (Reserved: up to 43 years)",
+  },
+  {
+    srNo: 15,
+    nameMr: "पुरवठा निरीक्षक",
+    nameEn: "Supply Inspector",
+    vacancies: "214",
+    qualification: "कोणत्याही शाखेतील मान्यताप्राप्त पदवी",
+    qualificationEn: "Bachelor's Degree in any discipline",
+    ageLimitMr: "१८ ते ३८ वर्षे (मागासवर्गीय: ४३ वर्षांपर्यंत)",
+    ageLimitEn: "18 to 38 years (Reserved: up to 43 years)",
+  },
+  {
+    srNo: 16,
+    nameMr: "उपलेखापाल / मुख्य लिपिक",
+    nameEn: "Sub-Accountant / Head Clerk",
+    vacancies: "3",
+    qualification: "वाणिज्य शाखेतील पदवी (B.Com) किंवा पदवी + लेखा अनुभव",
+    qualificationEn:
+      "Commerce Degree (B.Com) or Bachelor's Degree with accounting experience",
+    ageLimitMr: "१८ ते ३८ वर्षे (मागासवर्गीय: ४३ वर्षांपर्यंत)",
+    ageLimitEn: "18 to 38 years (Reserved: up to 43 years)",
+  },
+  {
+    srNo: 17,
+    nameMr: "सहायक भांडारपाल",
+    nameEn: "Assistant Storekeeper",
+    vacancies: "6",
+    qualification: "पदवी किंवा संबंधित अभियांत्रिकी / तंत्रज्ञान पदविका",
+    qualificationEn:
+      "Bachelor's Degree or Diploma in Engineering / Technology",
+    ageLimitMr: "१८ ते ३८ वर्षे (मागासवर्गीय: ४३ वर्षांपर्यंत)",
+    ageLimitEn: "18 to 38 years (Reserved: up to 43 years)",
+  },
+  {
+    srNo: 18,
+    nameMr: "पशुधन पर्यवेक्षक",
+    nameEn: "Livestock Supervisor",
+    vacancies: "322",
+    qualification: "पशुसंवर्धन व दुग्धव्यवसाय पदविका (Diploma in Animal Husbandry)",
+    qualificationEn:
+      "Diploma in Animal Husbandry and Dairying",
+    ageLimitMr: "१८ ते ३८ वर्षे (मागासवर्गीय: ४३ वर्षांपर्यंत)",
+    ageLimitEn: "18 to 38 years (Reserved: up to 43 years)",
+  },
+  {
+    srNo: 19,
+    nameMr: "स्थापत्य अभियांत्रिकी सहायक (सार्वजनिक बांधकाम विभाग)",
+    nameEn: "Civil Engineering Assistant – Public Works Department",
+    vacancies: "934",
+    qualification:
+      "स्थापत्य अभियांत्रिकी (Civil Engineering) पदविका किंवा पदवी",
+    qualificationEn: "Diploma or Degree in Civil Engineering",
+    ageLimitMr: "१८ ते ३८ वर्षे (मागासवर्गीय: ४३ वर्षांपर्यंत)",
+    ageLimitEn: "18 to 38 years (Reserved: up to 43 years)",
+  },
+  {
+    srNo: 20,
+    nameMr: "गणित व चित्रकला निदेशक",
+    nameEn: "Mathematics & Drawing Instructor",
+    vacancies: "241",
+    qualification: "संबंधित शाखेतील अभियांत्रिकी पदविका किंवा ITI / कला पदविका",
+    qualificationEn:
+      "Diploma in Engineering or ITI / Diploma in Drawing/Art",
+    ageLimitMr: "१८ ते ३८ वर्षे (मागासवर्गीय: ४३ वर्षांपर्यंत)",
+    ageLimitEn: "18 to 38 years (Reserved: up to 43 years)",
+  },
+  {
+    srNo: 21,
+    nameMr: "सहायक भांडारपाल (कौशल्य व रोजगार विभाग)",
+    nameEn: "Assistant Storekeeper – Skills & Employment Department",
+    vacancies: "182",
+    qualification: "पदवी किंवा तंत्रज्ञान / अभियांत्रिकी पदविका",
+    qualificationEn:
+      "Bachelor's Degree or Diploma in Technology / Engineering",
+    ageLimitMr: "१८ ते ३८ वर्षे (मागासवर्गीय: ४३ वर्षांपर्यंत)",
+    ageLimitEn: "18 to 38 years (Reserved: up to 43 years)",
+  },
+  {
+    srNo: 22,
+    nameMr: "भांडारपाल",
+    nameEn: "Storekeeper",
+    vacancies: "9",
+    qualification: "पदवी किंवा संबंधित शाखेतील पदविका",
+    qualificationEn: "Bachelor's Degree or Diploma in relevant discipline",
+    ageLimitMr: "१८ ते ३८ वर्षे (मागासवर्गीय: ४३ वर्षांपर्यंत)",
+    ageLimitEn: "18 to 38 years (Reserved: up to 43 years)",
+  },
+  {
+    srNo: 23,
+    nameMr: "शिल्प निदेशक",
+    nameEn: "Craft Instructor",
+    vacancies: "1,388",
+    qualification: "संबंधित व्यवसायातील ITI / CITS / अभियांत्रिकी पदविका किंवा पदवी",
+    qualificationEn:
+      "ITI / CITS / Diploma or Degree in relevant trade/engineering",
+    ageLimitMr: "१८ ते ३८ वर्षे (मागासवर्गीय: ४३ वर्षांपर्यंत)",
+    ageLimitEn: "18 to 38 years (Reserved: up to 43 years)",
+  },
+  {
+    srNo: 24,
+    nameMr: "अधिपरिचारिका",
+    nameEn: "Staff Nurse",
+    vacancies: "3,911",
+    qualification:
+      "जी.एन.एम. (GNM) किंवा बी.एस्सी. नर्सिंग + महाराष्ट्र नर्सिंग कौन्सिल नोंदणी",
+    qualificationEn:
+      "GNM or B.Sc Nursing + Registered with Maharashtra Nursing Council",
+    ageLimitMr: "१८ ते ३८ वर्षे (मागासवर्गीय: ४३ वर्षांपर्यंत)",
+    ageLimitEn: "18 to 38 years (Reserved: up to 43 years)",
+  },
+  {
+    srNo: 25,
+    nameMr: "कनिष्ठ रसायनी",
+    nameEn: "Junior Chemist",
+    vacancies: "153",
+    qualification: "रसायनशास्त्र (Chemistry) विषयातील विज्ञान पदवी (B.Sc)",
+    qualificationEn: "Bachelor of Science (B.Sc) with Chemistry",
+    ageLimitMr: "१८ ते ३८ वर्षे (मागासवर्गीय: ४३ वर्षांपर्यंत)",
+    ageLimitEn: "18 to 38 years (Reserved: up to 43 years)",
+  },
+  {
+    srNo: 26,
+    nameMr: "सहायक कृषी अधिकारी",
+    nameEn: "Assistant Agriculture Officer",
+    vacancies: "1,203",
+    qualification: "कृषी पदविका किंवा बी.एस्सी. कृषी (B.Sc Agriculture) पदवी",
+    qualificationEn:
+      "Diploma in Agriculture or B.Sc (Agriculture) Degree",
+    ageLimitMr: "१८ ते ३८ वर्षे (मागासवर्गीय: ४३ वर्षांपर्यंत)",
+    ageLimitEn: "18 to 38 years (Reserved: up to 43 years)",
+  },
+  {
+    srNo: 27,
+    nameMr: "स्थापत्य अभियांत्रिकी सहायक (जलसंपदा विभाग)",
+    nameEn: "Civil Engineering Assistant – Water Resources Department",
+    vacancies: "949",
+    qualification:
+      "स्थापत्य अभियांत्रिकी (Civil Engineering) पदविका किंवा पदवी",
+    qualificationEn: "Diploma or Degree in Civil Engineering",
+    ageLimitMr: "१८ ते ३८ वर्षे (मागासवर्गीय: ४३ वर्षांपर्यंत)",
+    ageLimitEn: "18 to 38 years (Reserved: up to 43 years)",
+  },
+];
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonicalURL={canonicalURL}
+  pubDate={date}
+  category={category}
+  image="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1200"
+  article={true}
+  customBreadcrumbs={[
+    { name: "MPSC Exam Hub", url: "/mpsc" },
+    { name: "MPSC Combine Group C 2026", url: "/mpsc-combine-group-c-2026" },
+    { name: "16,717 Posts Corrigendum" },
+  ]}
+>
+  <article class="pt-2 pb-8">
+    <!-- Back Button -->
+    <div class="mb-6 not-prose">
+      <a
+        href="/mpsc-combine-group-c-2026"
+        class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold uppercase tracking-wider text-text-muted hover:text-primary bg-bg-surface border border-border-card rounded-xl transition-all duration-300 no-underline shadow-xs"
+      >
+        <HiOutlineArrowLeft className="text-sm" /> MPSC गट-क मुख्य हबकडे परत जा
+      </a>
+    </div>
+
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="flex items-center gap-3 mb-4 flex-wrap">
+        <span
+          class="bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider border border-emerald-500/20 flex items-center gap-1.5"
+        >
+          <HiOutlineSparkles className="text-sm" />
+          MPSC मेगा भरती २०२६
+        </span>
+        <span
+          class="bg-rose-500/10 text-rose-600 dark:text-rose-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-rose-500/20"
+        >
+          नवीन सुधारित शुद्धीपत्रक
+        </span>
+        <span class="text-text-muted text-xs font-semibold">
+          By <strong>{author}</strong> • Updated {date}
+        </span>
+      </div>
+
+      <h1
+        class="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-text-main mb-6 leading-[1.22]"
+      >
+        {title}
+      </h1>
+
+      <p
+        class="text-text-muted text-base md:text-lg leading-relaxed border-l-4 border-emerald-500 pl-6 py-2 italic bg-emerald-500/[0.03] rounded-r-2xl"
+      >
+        महाराष्ट्र लोकसेवा आयोगाने (MPSC) गट-क सेवा संयुक्त पूर्व परीक्षा २०२६
+        (जाहिरात क्र. ०१७/२०२६) अंतर्गत ऐतिहासिक पदसंख्या वाढ जाहीर केली असून
+        एकूण पदे <strong>२,६१९ वरून थेट १६,७१७ पदे</strong> झाली आहेत. नवीन उमेदवारांसाठी
+        अर्ज सादर करण्याची नवीन खिडकी उघडण्यात आली असून संयुक्त पूर्व परीक्षा आता
+        <strong class="text-rose-600 dark:text-rose-400"
+          >२४ जानेवारी २०२७</strong
+        > रोजी घेतली जाणार आहे.
+      </p>
+    </div>
+
+    <!-- Live Exam Countdown Banner -->
+    <div class="mb-10 space-y-4 not-prose">
+      <div
+        class="p-5 sm:p-6 md:p-8 rounded-3xl bg-gradient-to-br from-violet-500/10 via-primary/5 to-emerald-500/10 border border-violet-500/25 shadow-xs relative overflow-hidden"
+      >
+        <div
+          class="flex flex-col md:flex-row items-center justify-between gap-5 relative z-10"
+        >
+          <div class="text-center md:text-left space-y-1.5">
+            <div
+              class="inline-flex items-center gap-1.5 px-3 py-1 bg-violet-500/10 text-violet-600 dark:text-violet-400 rounded-full text-xs font-black uppercase tracking-wider border border-violet-500/20"
+            >
+              <HiOutlineClock className="text-sm animate-spin" />
+              <span>MPSC Prelim Countdown</span>
+            </div>
+            <h2
+              class="text-xl sm:text-2xl md:text-3xl font-black text-text-main m-0 leading-tight"
+            >
+              MPSC गट-क संयुक्त पूर्व परीक्षा २०२६
+            </h2>
+            <p class="text-xs sm:text-sm text-text-muted m-0 font-medium">
+              सुधारित परीक्षेचा दिनांक: <span
+                class="font-black text-rose-600 dark:text-rose-400 text-sm sm:text-base"
+                >२४ जानेवारी २०२७ (रविवार)</span
+              >
+            </p>
+          </div>
+
+          <!-- Countdown Boxes -->
+          <div
+            class="grid grid-cols-4 gap-2 sm:gap-3 text-center shrink-0 w-full md:w-auto"
+          >
+            <div
+              class="bg-bg-surface/90 backdrop-blur-xs border border-violet-500/25 p-2.5 sm:p-3.5 rounded-2xl min-w-[65px] sm:min-w-[80px] shadow-xs"
+            >
+              <span
+                id="cd-days"
+                class="block text-2xl sm:text-3xl font-black text-violet-600 dark:text-violet-400 leading-none"
+                >00</span
+              >
+              <span
+                class="text-[0.65rem] sm:text-xs font-bold text-text-muted uppercase tracking-wider"
+                >दिवस</span
+              >
+            </div>
+            <div
+              class="bg-bg-surface/90 backdrop-blur-xs border border-border-card/80 p-2.5 sm:p-3.5 rounded-2xl min-w-[65px] sm:min-w-[80px] shadow-xs"
+            >
+              <span
+                id="cd-hours"
+                class="block text-2xl sm:text-3xl font-black text-text-main leading-none"
+                >00</span
+              >
+              <span
+                class="text-[0.65rem] sm:text-xs font-bold text-text-muted uppercase tracking-wider"
+                >तास</span
+              >
+            </div>
+            <div
+              class="bg-bg-surface/90 backdrop-blur-xs border border-border-card/80 p-2.5 sm:p-3.5 rounded-2xl min-w-[65px] sm:min-w-[80px] shadow-xs"
+            >
+              <span
+                id="cd-minutes"
+                class="block text-2xl sm:text-3xl font-black text-text-main leading-none"
+                >00</span
+              >
+              <span
+                class="text-[0.65rem] sm:text-xs font-bold text-text-muted uppercase tracking-wider"
+                >मिनिटे</span
+              >
+            </div>
+            <div
+              class="bg-bg-surface/90 backdrop-blur-xs border border-rose-500/25 p-2.5 sm:p-3.5 rounded-2xl min-w-[65px] sm:min-w-[80px] shadow-xs"
+            >
+              <span
+                id="cd-seconds"
+                class="block text-2xl sm:text-3xl font-black text-rose-500 leading-none"
+                >00</span
+              >
+              <span
+                class="text-[0.65rem] sm:text-xs font-bold text-text-muted uppercase tracking-wider"
+                >सेकंद</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Highlights Banner -->
+    <div
+      class="bg-gradient-to-br from-emerald-500/10 via-primary/5 to-transparent border border-emerald-500/20 rounded-3xl p-6 md:p-8 mb-12 shadow-sm not-prose"
+    >
+      <div
+        class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 text-center"
+      >
+        <div
+          class="p-3 bg-bg-surface/80 backdrop-blur-sm rounded-2xl border border-border-card"
+        >
+          <span
+            class="text-[0.7rem] text-text-muted block uppercase font-bold tracking-wider mb-1"
+            >एकूण पदे (Total Vacancies)</span
+          >
+          <span
+            class="text-2xl md:text-3xl font-black text-emerald-600 dark:text-emerald-400"
+            >16,717</span
+          >
+          <span
+            class="text-[0.65rem] text-text-muted font-semibold block mt-0.5"
+            >(27 विविध संवर्ग)</span
+          >
+        </div>
+        <div
+          class="p-3 bg-bg-surface/80 backdrop-blur-sm rounded-2xl border border-border-card"
+        >
+          <span
+            class="text-[0.7rem] text-text-muted block uppercase font-bold tracking-wider mb-1"
+            >नवीन अर्ज प्रारंभ</span
+          >
+          <span class="text-base sm:text-lg font-black text-primary block"
+            >13 Nov 2026</span
+          >
+          <span class="text-[0.65rem] text-text-muted font-medium"
+            >दुपारी ०२:०० पासून</span
+          >
+        </div>
+        <div
+          class="p-3 bg-bg-surface/80 backdrop-blur-sm rounded-2xl border border-border-card"
+        >
+          <span
+            class="text-[0.7rem] text-text-muted block uppercase font-bold tracking-wider mb-1"
+            >अर्ज अंतिम मुदत</span
+          >
+          <span
+            class="text-base sm:text-lg font-black text-rose-600 dark:text-rose-400 block"
+            >27 Nov 2026</span
+          >
+          <span class="text-[0.65rem] text-text-muted font-medium"
+            >रात्री ११:५९ पर्यंत</span
+          >
+        </div>
+        <div
+          class="p-3 bg-bg-surface/80 backdrop-blur-sm rounded-2xl border border-border-card"
+        >
+          <span
+            class="text-[0.7rem] text-text-muted block uppercase font-bold tracking-wider mb-1"
+            >सुधारित परीक्षा तारीख</span
+          >
+          <span
+            class="text-base sm:text-lg font-black text-rose-600 dark:text-rose-400 block"
+            >24 Jan 2027</span
+          >
+          <span class="text-[0.65rem] text-text-muted font-medium"
+            >आधी ३ जानेवारी होती</span
+          >
+        </div>
+        <div
+          class="p-3 bg-bg-surface/80 backdrop-blur-sm rounded-2xl border border-border-card col-span-2 sm:col-span-1"
+        >
+          <span
+            class="text-[0.7rem] text-text-muted block uppercase font-bold tracking-wider mb-1"
+            >शुल्क भरण्याची पद्धत</span
+          >
+          <span class="text-base sm:text-lg font-black text-text-main block"
+            >Online Only</span
+          >
+          <span class="text-[0.65rem] text-rose-500 font-bold"
+            >चलन पद्धत बंद</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Language Navigation Links -->
+    <div class="flex gap-4 mb-8 not-prose">
+      <a
+        href="#marathi-version"
+        class="px-4 py-2 rounded-xl bg-primary/10 text-primary font-bold text-xs hover:bg-primary hover:text-white transition-all no-underline"
+        >↓ मराठी आवृत्ती (Marathi Version)</a
+      >
+      <span class="text-text-muted self-center">|</span>
+      <a
+        href="#english-version"
+        class="px-4 py-2 rounded-xl bg-violet-500/10 text-violet-600 dark:text-violet-400 font-bold text-xs hover:bg-violet-600 hover:text-white transition-all no-underline"
+        >↓ English Version</a
+      >
+    </div>
+
+    <!-- ================= MARATHI VERSION ================= -->
+    <div id="marathi-version">
+      <div class="space-y-8 text-text-main leading-relaxed">
+        <h2
+          class="text-2xl md:text-3xl font-black text-primary border-l-4 border-primary pl-4"
+        >
+          MPSC गट-क सेवा संयुक्त परीक्षा २०२६: एका दृष्टीक्षेपात (At a Glance)
+        </h2>
+
+        <p>
+          महाराष्ट्र लोकसेवा आयोगाने (MPSC) शासन सेवेतील विविध विभागांकडून
+          प्राप्त झालेल्या वाढीव मागणीपत्रांनुसार गट-क संवर्गात प्रचंड पदसंख्या
+          वाढ जाहीर केली आहे. जाहिरात क्र. ०१७/२०२६ च्या नवीन शुद्धिपत्रकानुसार
+          (क्रमांक: CMA-0426/प्र.क्र.४२/२०२६/जाहिरात, दिनांक ६ नोव्हेंबर २०२६)
+          एकूण पदसंख्या <strong>१६,७१७ पदांवर</strong> पोहोचली आहे.
+        </p>
+
+        <!-- Summary Table (Marathi) -->
+        <div class="overflow-x-auto my-6 not-prose">
+          <table
+            class="w-full text-left border-collapse text-sm rounded-2xl overflow-hidden border border-border-card shadow-xs"
+          >
+            <thead>
+              <tr class="bg-primary/10 text-text-main">
+                <th class="p-3.5 border border-border-card font-extrabold w-1/3"
+                  >तपशील (Detail)</th
+                >
+                <th class="p-3.5 border border-border-card font-extrabold"
+                  >माहिती (Information)</th
+                >
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-border-card/30">
+              <tr>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-muted"
+                  >संस्थेचे नाव (Organisation)</td
+                >
+                <td class="p-3.5 border border-border-card font-bold"
+                  >महाराष्ट्र लोकसेवा आयोग (MPSC)</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-muted"
+                  >परीक्षेचे नाव (Exam Name)</td
+                >
+                <td class="p-3.5 border border-border-card font-bold"
+                  >महाराष्ट्र गट-क सेवा संयुक्त पूर्व परीक्षा २०२६</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-muted"
+                  >मूळ जाहिरात (Original Advertisement)</td
+                >
+                <td class="p-3.5 border border-border-card"
+                  >क्रमांक ०१७/२०२६, दिनांक २५ जून २०२६</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-muted"
+                  >नवीनतम शुद्धिपत्रक (Latest Corrigendum)</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-semibold text-rose-600 dark:text-rose-400"
+                >
+                  क्रमांक: CMA-0426/प्र.क्र.४२/२०२६/जाहिरात, दिनांक ०६ नोव्हेंबर
+                  २०२६
+                </td>
+              </tr>
+              <tr>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-muted"
+                  >एकूण रिक्त पदे (Total Vacancies)</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-black text-emerald-600 dark:text-emerald-400 text-lg"
+                >
+                  १६,७१७ पदे (२७ संवर्ग)
+                </td>
+              </tr>
+              <tr>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-muted"
+                  >अर्ज करण्याची पद्धत (Application Mode)</td
+                >
+                <td class="p-3.5 border border-border-card font-bold"
+                  >ऑनलाईन (Online Application Portal)</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-muted"
+                  >अधिकृत संकेतस्थळे (Official Websites)</td
+                >
+                <td class="p-3.5 border border-border-card font-bold">
+                  <a
+                    href="https://mpsc.gov.in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-primary hover:underline">mpsc.gov.in</a
+                  > व
+                  <a
+                    href="https://mpsconline.gov.in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-primary hover:underline">mpsconline.gov.in</a
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- New Dates Section (Marathi) -->
+        <h2
+          class="text-xl md:text-2xl font-black text-primary border-l-4 border-primary pl-4 mt-10"
+        >
+          नवीन सुधारित वेळापत्रक (New Dates: What Has Changed)
+        </h2>
+
+        <p>
+          आयोगाने प्रसिद्ध केलेल्या नवीन शुद्धीपत्रकानुसार, नवीन इच्छुकांना अर्ज
+          करण्यासाठी तसेच आधी अर्ज केलेल्या उमेदवारांना संवर्ग पसंतीक्रम
+          नोंदवण्यासाठी सुधारित वेळापत्रक खालीलप्रमाणे जाहीर केले आहे:
+        </p>
+
+        <div class="overflow-x-auto my-6 not-prose">
+          <table
+            class="w-full text-left border-collapse text-sm rounded-2xl overflow-hidden border border-border-card shadow-xs"
+          >
+            <thead>
+              <tr class="bg-primary/10 text-text-main">
+                <th class="p-3.5 border border-border-card font-extrabold w-1/2"
+                  >टप्पा / प्रक्रीया (Event)</th
+                >
+                <th class="p-3.5 border border-border-card font-extrabold"
+                  >सुधारित नवीन दिनांक व वेळ (New Date & Time)</th
+                >
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-border-card/30">
+              <tr class="bg-emerald-500/[0.04]">
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                >
+                  ऑनलाईन अर्ज व संवर्ग विकल्प सादर करणे प्रारंभ (नवीन
+                  उमेदवारांसाठी)
+                </td>
+                <td
+                  class="p-3.5 border border-border-card font-black text-emerald-600 dark:text-emerald-400"
+                >
+                  १३ नोव्हेंबर २०२६, दुपारी ०२:०० वाजेपासून
+                </td>
+              </tr>
+              <tr class="bg-rose-500/[0.04]">
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                >
+                  ऑनलाईन अर्ज सादर करण्याची अंतिम मुदत (Application / Option End
+                  Date)
+                </td>
+                <td
+                  class="p-3.5 border border-border-card font-black text-rose-600 dark:text-rose-400"
+                >
+                  २७ नोव्हेंबर २०२६, रात्री ११:५९ वाजेपर्यंत
+                </td>
+              </tr>
+              <tr>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                >
+                  ऑनलाईन परीक्षा शुल्क भरण्याची अंतिम तारीख (Online Fee Payment
+                  Deadline)
+                </td>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-primary"
+                >
+                  ३० नोव्हेंबर २०२६, रात्री ११:५९ वाजेपर्यंत
+                </td>
+              </tr>
+              <tr class="bg-violet-500/[0.04]">
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                >
+                  सुधारित संयुक्त पूर्व परीक्षा दिनांक (Preliminary Exam Date)
+                </td>
+                <td
+                  class="p-3.5 border border-border-card font-black text-violet-600 dark:text-violet-400 text-base"
+                >
+                  २४ जानेवारी २०२७ (रविवार) <span
+                    class="text-xs text-text-muted font-normal block"
+                    >(पूर्वी ३ जानेवारी २०२७ जाहीर करण्यात आली होती)</span
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                >
+                  गट-क मुख्य परीक्षा दिनांक (Main Exam Date)
+                </td>
+                <td
+                  class="p-3.5 border border-border-card font-semibold text-text-muted"
+                >
+                  पूर्व परीक्षेच्या निकालानंतर स्वतंत्रपणे जाहीर केली जाईल.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Important Notes / Alert Boxes -->
+        <div class="space-y-4 my-8 not-prose">
+          <!-- Note 1: Fee Payment Method -->
+          <div
+            class="p-5 rounded-2xl bg-amber-500/10 border-2 border-amber-500/30 flex items-start gap-3 shadow-xs"
+          >
+            <HiOutlineCreditCard
+              className="text-2xl text-amber-600 dark:text-amber-400 shrink-0 mt-0.5"
+            />
+            <div class="space-y-1">
+              <h4
+                class="text-sm font-black text-amber-700 dark:text-amber-300 m-0"
+              >
+                ⚠️ महत्त्वाची सूचना: चलनाद्वारे शुल्क भरणे पूर्णपणे बंद!
+              </h4>
+              <p
+                class="text-xs sm:text-sm text-text-secondary m-0 leading-relaxed"
+              >
+                बँक चलनाद्वारे (Challan) परीक्षा शुल्क भरण्याची सुविधा आयोगाकडून
+                बंद करण्यात आली आहे. उमेदवारांनी परीक्षा शुल्क फक्त ऑनलाईन
+                पद्धतीने (Debit Card, Credit Card, Net Banking किंवा UPI द्वारे)
+                ३० नोव्हेंबर २०२६ रात्री ११:५९ वाजेपर्यंत भरणे बंधनकारक आहे.
+              </p>
+            </div>
+          </div>
+
+          <!-- Note 2: Already Applied Candidates -->
+          <div
+            class="p-5 rounded-2xl bg-emerald-500/10 border-2 border-emerald-500/30 flex items-start gap-3 shadow-xs"
+          >
+            <HiOutlineCheckBadge
+              className="text-2xl text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5"
+            />
+            <div class="space-y-1">
+              <h4
+                class="text-sm font-black text-emerald-700 dark:text-emerald-300 m-0"
+              >
+                ✅ आधी अर्ज केलेल्या उमेदवारांसाठी "Recheck Eligibility" सूचना
+              </h4>
+              <p
+                class="text-xs sm:text-sm text-text-secondary m-0 leading-relaxed"
+              >
+                ज्या उमेदवारांनी यापूर्वीच जाहिरात क्र. ०१७/२०२६ साठी
+                यशस्वीरित्या अर्ज सादर केलेला आहे, त्यांना नव्याने शुल्क
+                भरण्याची आवश्यकता नाही. ते उमेदवार १३ ते २७ नोव्हेंबर २०२६
+                दरम्यान आपल्या प्रोफाईलमध्ये लॉगिन करून
+                <strong>“Recheck Eligibility”</strong> पर्यायाचा वापर करून नव्याने
+                समाविष्ट झालेल्या पदांसाठी आपला संवर्ग विकल्प (Option) नोंदवू शकतात.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Old vs New Comparison Table (Marathi) -->
+        <h2
+          class="text-xl md:text-2xl font-black text-primary border-l-4 border-primary pl-4 mt-10"
+        >
+          जुन्या विरुद्ध नवीन तारखांची तुलना (Old Dates vs New Dates Timeline)
+        </h2>
+
+        <p>
+          जून २०२६ मध्ये भरती प्रक्रिया सुरू झाल्यापासून आतापर्यंत वेळोवेळी
+          झालेल्या बदलांचा तुलनात्मक तक्ता खालीलप्रमाणे आहे:
+        </p>
+
+        <div class="overflow-x-auto my-6 not-prose">
+          <table
+            class="w-full text-left border-collapse text-xs sm:text-sm rounded-2xl overflow-hidden border border-border-card shadow-xs"
+          >
+            <thead>
+              <tr class="bg-primary/10 text-text-main">
+                <th class="p-3 border border-border-card font-extrabold"
+                  >टप्पा (Item)</th
+                >
+                <th
+                  class="p-3 border border-border-card font-extrabold text-center"
+                  >मूळ जाहिरात (२५ जून २०२६)</th
+                >
+                <th
+                  class="p-3 border border-border-card font-extrabold text-center"
+                  >पूर्वीची सुधारणा</th
+                >
+                <th
+                  class="p-3 border border-border-card font-extrabold text-center bg-emerald-500/15 text-emerald-700 dark:text-emerald-300"
+                >
+                  नवीनतम सुधारणा (०६ नोव्हेंबर २०२६)
+                </th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-border-card/30">
+              <tr>
+                <td class="p-3 border border-border-card font-bold"
+                  >एकूण रिक्त पदे</td
+                >
+                <td
+                  class="p-3 border border-border-card text-center font-bold text-text-muted"
+                  >२,६१९ पदे</td
+                >
+                <td
+                  class="p-3 border border-border-card text-center font-bold text-rose-500"
+                  >५,७०७ पदे</td
+                >
+                <td
+                  class="p-3 border border-border-card text-center font-black text-emerald-600 dark:text-emerald-400 bg-emerald-500/[0.04] text-base"
+                >
+                  १६,७१७ पदे
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-bold"
+                  >अर्ज सुरू दिनांक</td
+                >
+                <td class="p-3 border border-border-card text-center"
+                  >२७ जून २०२६, दु. २:००</td
+                >
+                <td class="p-3 border border-border-card text-center">–</td>
+                <td
+                  class="p-3 border border-border-card text-center font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-500/[0.04]"
+                >
+                  १३ नोव्हेंबर २०२६, दु. २:०० (नवीन)
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-bold"
+                  >अर्ज अंतिम मुदत</td
+                >
+                <td class="p-3 border border-border-card text-center"
+                  >१७ जुलै २०२६</td
+                >
+                <td class="p-3 border border-border-card text-center"
+                  >१० ऑगस्ट २०२६ पर्यंत वाढ</td
+                >
+                <td
+                  class="p-3 border border-border-card text-center font-black text-rose-600 dark:text-rose-400 bg-emerald-500/[0.04]"
+                >
+                  २७ नोव्हेंबर २०२६ (रात्री ११:५९)
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-bold"
+                  >परीक्षा शुल्क अंतिम दिनांक</td
+                >
+                <td class="p-3 border border-border-card text-center"
+                  >१७ जुलै २०२६</td
+                >
+                <td class="p-3 border border-border-card text-center"
+                  >१० ऑगस्ट २०२६</td
+                >
+                <td
+                  class="p-3 border border-border-card text-center font-bold text-primary bg-emerald-500/[0.04]"
+                >
+                  ३० नोव्हेंबर २०२६ (फक्त ऑनलाईन)
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-bold"
+                  >पूर्व परीक्षा दिनांक</td
+                >
+                <td class="p-3 border border-border-card text-center"
+                  >२५ ऑक्टोबर २०२६</td
+                >
+                <td class="p-3 border border-border-card text-center"
+                  >०३ जानेवारी २०२७</td
+                >
+                <td
+                  class="p-3 border border-border-card text-center font-black text-violet-600 dark:text-violet-400 bg-emerald-500/[0.04] text-base"
+                >
+                  २४ जानेवारी २०२७ (सुधारित)
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Full 27 Post-wise Tables (Marathi) -->
+        <h2
+          id="vacancies-breakdown-mr"
+          class="text-xl md:text-2xl font-black text-primary border-l-4 border-primary pl-4 mt-10"
+        >
+          MPSC गट-क सुधारित पदनिहाय जागा तपशील (२७ संवर्ग • १६,७१७ पदे)
+        </h2>
+
+        <p>
+          महाराष्ट्र गट-क सेवा संयुक्त पूर्व परीक्षा २०२६ अंतर्गत ६ नोव्हेंबर २०२६ च्या शुद्धीपत्रकानुसार सर्व २७ संवर्गांमधील सुधारित पदसंख्या खालीलप्रमाणे आहे:
+        </p>
+
+        <!-- Table 1: Post Name and Vacancy (Simple Table) -->
+        <div class="mt-4 mb-8">
+          <h3 class="text-base sm:text-lg font-bold text-text-main mb-3 flex items-center gap-2">
+            <span>📋 तक्ता १: संवर्गनिहाय पदसंख्या (Post Name & Vacancies)</span>
+          </h3>
+
+          <div
+            class="overflow-x-auto rounded-2xl border border-border-card shadow-xs not-prose"
+          >
+            <table class="w-full text-left border-collapse text-sm">
+              <thead>
+                <tr class="bg-primary/10 text-text-main">
+                  <th
+                    class="p-3 border border-border-card font-bold text-center w-14"
+                    >अ.क्र.</th
+                  >
+                  <th class="p-3 border border-border-card font-bold"
+                    >पदाचे नाव (Post Name)</th
+                  >
+                  <th
+                    class="p-3 border border-border-card font-bold text-center w-36"
+                    >एकूण पदे (Vacancies)</th
+                  >
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-border-card/30">
+                {
+                  vacanciesList.map((post) => (
+                    <tr class="bg-bg-surface hover:bg-bg-surface/70 transition-colors">
+                      <td class="p-3 border border-border-card text-center font-bold text-text-muted">
+                        {post.srNo}
+                      </td>
+                      <td class="p-3 border border-border-card">
+                        <span class="block font-semibold text-text-main">
+                          {post.nameMr}
+                        </span>
+                        <span class="block text-xs text-text-muted">
+                          ({post.nameEn})
+                        </span>
+                      </td>
+                      <td class="p-3 border border-border-card text-center font-bold text-text-main">
+                        {post.vacancies}
+                      </td>
+                    </tr>
+                  ))
+                }
+              </tbody>
+              <tfoot>
+                <tr class="bg-primary/10 font-black text-text-main">
+                  <td
+                    colspan="2"
+                    class="p-3.5 border border-border-card text-right text-sm sm:text-base font-black"
+                  >
+                    एकूण पदे (Total Vacancies)
+                  </td>
+                  <td
+                    class="p-3.5 border border-border-card text-center font-black text-lg text-primary"
+                  >
+                    १६,७१७
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+
+        <!-- Table 2: Post Name, Qualification & Age Limit (Simple Table) -->
+        <div class="mt-8 mb-8">
+          <h3 class="text-base sm:text-lg font-bold text-text-main mb-3 flex items-center gap-2">
+            <span>🎓 तक्ता २: शैक्षणिक पात्रता व वयोमर्यादा (Educational Qualification & Age Limit)</span>
+          </h3>
+          <p class="text-xs sm:text-sm text-text-muted mb-3">
+            सर्व २७ संवर्गांसाठी आवश्यक किमान शैक्षणिक पात्रता व विहित वयोमर्यादा खालील तक्त्यामध्ये दिली आहे:
+          </p>
+
+          <div
+            class="overflow-x-auto rounded-2xl border border-border-card shadow-xs not-prose"
+          >
+            <table class="w-full text-left border-collapse text-sm">
+              <thead>
+                <tr class="bg-primary/10 text-text-main">
+                  <th
+                    class="p-3 border border-border-card font-bold text-center w-14"
+                    >अ.क्र.</th
+                  >
+                  <th
+                    class="p-3 border border-border-card font-bold min-w-[200px]"
+                    >पदाचे नाव (Post Name)</th
+                  >
+                  <th
+                    class="p-3 border border-border-card font-bold min-w-[260px]"
+                    >शैक्षणिक पात्रता (Educational Qualification)</th
+                  >
+                  <th
+                    class="p-3 border border-border-card font-bold min-w-[200px]"
+                    >वयोमर्यादा (Age Limit)</th
+                  >
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-border-card/30">
+                {
+                  vacanciesList.map((post) => (
+                    <tr class="bg-bg-surface hover:bg-bg-surface/70 transition-colors">
+                      <td class="p-3 border border-border-card text-center font-bold text-text-muted">
+                        {post.srNo}
+                      </td>
+                      <td class="p-3 border border-border-card">
+                        <span class="block font-semibold text-text-main">
+                          {post.nameMr}
+                        </span>
+                        <span class="block text-xs text-text-muted">
+                          ({post.nameEn})
+                        </span>
+                      </td>
+                      <td class="p-3 border border-border-card text-xs text-text-main">
+                        {post.qualification}
+                      </td>
+                      <td class="p-3 border border-border-card text-xs text-text-main font-medium">
+                        {post.ageLimitMr}
+                      </td>
+                    </tr>
+                  ))
+                }
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- How to Apply (Marathi) -->
+        <h2
+          class="text-xl md:text-2xl font-black text-primary border-l-4 border-primary pl-4 mt-10"
+        >
+          ऑनलाईन अर्ज कसा करावा? (Steps to Apply Online)
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6 not-prose">
+          <!-- Fresh Candidates Card -->
+          <div
+            class="p-5 rounded-2xl bg-bg-surface border border-border-card space-y-3 shadow-xs"
+          >
+            <h3
+              class="text-base font-black text-emerald-600 dark:text-emerald-400 m-0 flex items-center gap-2"
+            >
+              <HiOutlinePlusCircle className="text-xl" /> नवीन उमेदवारांसाठी अर्ज
+              पद्धत:
+            </h3>
+            <ol
+              class="text-xs sm:text-sm text-text-secondary space-y-2 pl-4 list-decimal m-0 leading-relaxed"
+            >
+              <li>
+                MPSC च्या अधिकृत पोर्टल <a
+                  href="https://mpsconline.gov.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-primary font-bold hover:underline"
+                  >mpsconline.gov.in</a
+                > वर जा.
+              </li>
+              <li>
+                "New User Registration" वर क्लिक करून आपली मूलभूत माहिती भरून
+                प्रोफाइल तयार करा.
+              </li>
+              <li>
+                आवश्यक शैक्षणिक कागदपत्रे, फोटो व स्वाक्षरी विहित आकारात अपलोड
+                करा.
+              </li>
+              <li>"Online Application" अंतर्गत जाहिरात क्र. ०१७/२०२६ निवडा.</li>
+              <li>
+                आपल्या पात्रतेनुसार पदांचे प्राधान्यक्रम निवडून ३० नोव्हेंबर
+                २०२६ पूर्वी ऑनलाईन शुल्क भरा.
+              </li>
+            </ol>
+          </div>
+
+          <!-- Existing Candidates Card -->
+          <div
+            class="p-5 rounded-2xl bg-bg-surface border border-border-card space-y-3 shadow-xs"
+          >
+            <h3
+              class="text-base font-black text-primary m-0 flex items-center gap-2"
+            >
+              <HiOutlineShieldCheck className="text-xl" /> आधी अर्ज केलेल्या उमेदवारांसाठी:
+            </h3>
+            <ol
+              class="text-xs sm:text-sm text-text-secondary space-y-2 pl-4 list-decimal m-0 leading-relaxed"
+            >
+              <li>
+                आपल्या युझरनेम व पासवर्डने <a
+                  href="https://mpsconline.gov.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-primary font-bold hover:underline"
+                  >mpsconline.gov.in</a
+                > वर लॉगिन करा.
+              </li>
+              <li>"My Account" मधील जाहिरात क्र. ०१७/२०२६ अर्जावर जा.</li>
+              <li>
+                <strong>"Recheck Eligibility"</strong> या बटणावर क्लिक करा.
+              </li>
+              <li>
+                नव्याने जोडलेल्या १८ संवर्गांपैकी आपण ज्या पदांसाठी पात्र आहात,
+                त्या पदांचे विकल्प जोडा.
+              </li>
+              <li>
+                अर्जाची पुष्टी करा. <strong
+                  >आपल्याला पुन्हा कोणतेही शुल्क भरावे लागणार नाही.</strong>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= LANGUAGE SEPARATOR ================= -->
+    <div
+      class="my-16 border-t-2 border-dashed border-border-card flex items-center justify-center relative not-prose"
+    >
+      <span
+        class="absolute bg-bg-base px-6 py-2 text-xs sm:text-sm font-extrabold uppercase tracking-widest text-primary border border-border-card rounded-full shadow-xs"
+      >
+        English Version Below
+      </span>
+    </div>
+
+    <!-- ================= ENGLISH VERSION ================= -->
+    <div id="english-version">
+      <div class="space-y-8 text-text-main leading-relaxed">
+        <h2
+          class="text-2xl md:text-3xl font-black text-primary border-l-4 border-primary pl-4"
+        >
+          MPSC Group C Recruitment 2026 at a Glance
+        </h2>
+
+        <p>
+          The Maharashtra Public Service Commission (MPSC) has issued a major
+          corrigendum for the Maharashtra Group-C Services Combined Preliminary
+          Examination 2026 (Advt. No. 017/2026). The number of vacancies has
+          grown from the original 2,619 to <strong>16,717 posts</strong>, a
+          fresh application window has opened for new candidates, and the
+          preliminary exam has moved from 3 January 2027 to <strong
+            >24 January 2027</strong
+          >.
+        </p>
+
+        <!-- Summary Table (English) -->
+        <div class="overflow-x-auto my-6 not-prose">
+          <table
+            class="w-full text-left border-collapse text-sm rounded-2xl overflow-hidden border border-border-card shadow-xs"
+          >
+            <thead>
+              <tr class="bg-primary/10 text-text-main">
+                <th class="p-3.5 border border-border-card font-extrabold w-1/3"
+                  >Detail</th
+                >
+                <th class="p-3.5 border border-border-card font-extrabold"
+                  >Information</th
+                >
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-border-card/30">
+              <tr>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-muted"
+                  >Organisation</td
+                >
+                <td class="p-3.5 border border-border-card font-bold"
+                  >Maharashtra Public Service Commission (MPSC)</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-muted"
+                  >Exam Name</td
+                >
+                <td class="p-3.5 border border-border-card font-bold"
+                  >Maharashtra Group-C Services Combined Preliminary Examination
+                  2026</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-muted"
+                  >Original Advertisement</td
+                >
+                <td class="p-3.5 border border-border-card"
+                  >No. 017/2026, dated 25 June 2026</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-muted"
+                  >Latest Corrigendum</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-semibold text-rose-600 dark:text-rose-400"
+                >
+                  No. CMA-0426/Pra.Kra.42/2026/Jahirat, dated 6 November 2026
+                </td>
+              </tr>
+              <tr>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-muted"
+                  >Total Vacancies (Now)</td
+                >
+                <td
+                  class="p-3.5 border border-border-card font-black text-emerald-600 dark:text-emerald-400 text-lg"
+                >
+                  16,717 Vacancies (27 Cadres)
+                </td>
+              </tr>
+              <tr>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-muted"
+                  >Application Mode</td
+                >
+                <td class="p-3.5 border border-border-card font-bold"
+                  >Online Only</td
+                >
+              </tr>
+              <tr>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-muted"
+                  >Official Websites</td
+                >
+                <td class="p-3.5 border border-border-card font-bold">
+                  <a
+                    href="https://mpsc.gov.in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-primary hover:underline">mpsc.gov.in</a
+                  > and
+                  <a
+                    href="https://mpsconline.gov.in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-primary hover:underline">mpsconline.gov.in</a
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- New Dates: What Has Changed -->
+        <h2
+          class="text-xl md:text-2xl font-black text-primary border-l-4 border-primary pl-4 mt-10"
+        >
+          New Dates: What Has Changed in the Latest Corrigendum
+        </h2>
+
+        <div class="overflow-x-auto my-6 not-prose">
+          <table
+            class="w-full text-left border-collapse text-sm rounded-2xl overflow-hidden border border-border-card shadow-xs"
+          >
+            <thead>
+              <tr class="bg-primary/10 text-text-main">
+                <th class="p-3.5 border border-border-card font-extrabold w-1/2"
+                  >Event</th
+                >
+                <th class="p-3.5 border border-border-card font-extrabold"
+                  >New Date & Timing</th
+                >
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-border-card/30">
+              <tr class="bg-emerald-500/[0.04]">
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                >
+                  Application / option submission starts
+                </td>
+                <td
+                  class="p-3.5 border border-border-card font-black text-emerald-600 dark:text-emerald-400"
+                >
+                  13 November 2026, 2:00 PM
+                </td>
+              </tr>
+              <tr class="bg-rose-500/[0.04]">
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                >
+                  Application / option submission ends
+                </td>
+                <td
+                  class="p-3.5 border border-border-card font-black text-rose-600 dark:text-rose-400"
+                >
+                  27 November 2026, 11:59 PM
+                </td>
+              </tr>
+              <tr>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                >
+                  Last date for online exam fee payment
+                </td>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-primary"
+                >
+                  30 November 2026, 11:59 PM
+                </td>
+              </tr>
+              <tr class="bg-violet-500/[0.04]">
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                >
+                  Preliminary exam date (Revised)
+                </td>
+                <td
+                  class="p-3.5 border border-border-card font-black text-violet-600 dark:text-violet-400 text-base"
+                >
+                  24 January 2027 (Sunday) <span
+                    class="text-xs text-text-muted font-normal block"
+                    >(earlier scheduled for 3 January 2027)</span
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td
+                  class="p-3.5 border border-border-card font-bold text-text-main"
+                >
+                  Main exam date
+                </td>
+                <td
+                  class="p-3.5 border border-border-card font-semibold text-text-muted"
+                >
+                  To be announced separately after the prelim result
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Important Rules (English) -->
+        <div class="space-y-4 my-8 not-prose">
+          <div
+            class="p-5 rounded-2xl bg-amber-500/10 border-2 border-amber-500/30 flex items-start gap-3 shadow-xs"
+          >
+            <HiOutlineCreditCard
+              className="text-2xl text-amber-600 dark:text-amber-400 shrink-0 mt-0.5"
+            />
+            <div class="space-y-1">
+              <h4
+                class="text-sm font-black text-amber-700 dark:text-amber-300 m-0"
+              >
+                Challan Payment Discontinued: Online Payment Mandatory
+              </h4>
+              <p
+                class="text-xs sm:text-sm text-text-secondary m-0 leading-relaxed"
+              >
+                Challan-based fee payment has been permanently stopped.
+                Candidates must pay the application fee online only, using a
+                debit card, credit card, net banking, or UPI before 30 November
+                2026, 11:59 PM.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="p-5 rounded-2xl bg-emerald-500/10 border-2 border-emerald-500/30 flex items-start gap-3 shadow-xs"
+          >
+            <HiOutlineCheckBadge
+              className="text-2xl text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5"
+            />
+            <div class="space-y-1">
+              <h4
+                class="text-sm font-black text-emerald-700 dark:text-emerald-300 m-0"
+              >
+                Notice for Previously Applied Candidates ("Recheck Eligibility")
+              </h4>
+              <p
+                class="text-xs sm:text-sm text-text-secondary m-0 leading-relaxed"
+              >
+                Candidates who have already applied under Advt. No. 017/2026 do
+                not need to register again or pay an additional fee. During the
+                window from 13 to 27 November 2026, they can log in and click <strong
+                  >“Recheck Eligibility”</strong
+                > to add options for newly introduced cadres.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Old vs New Comparison (English) -->
+        <h2
+          class="text-xl md:text-2xl font-black text-primary border-l-4 border-primary pl-4 mt-10"
+        >
+          Old Dates vs New Dates Timeline Comparison
+        </h2>
+
+        <p>
+          This recruitment has undergone multiple expansions since June 2026.
+          Here is how the key dates and numbers evolved:
+        </p>
+
+        <div class="overflow-x-auto my-6 not-prose">
+          <table
+            class="w-full text-left border-collapse text-xs sm:text-sm rounded-2xl overflow-hidden border border-border-card shadow-xs"
+          >
+            <thead>
+              <tr class="bg-primary/10 text-text-main">
+                <th class="p-3 border border-border-card font-extrabold"
+                  >Item</th
+                >
+                <th
+                  class="p-3 border border-border-card font-extrabold text-center"
+                  >Original Notice (25 June 2026)</th
+                >
+                <th
+                  class="p-3 border border-border-card font-extrabold text-center"
+                  >Earlier Revisions</th
+                >
+                <th
+                  class="p-3 border border-border-card font-extrabold text-center bg-emerald-500/15 text-emerald-700 dark:text-emerald-300"
+                >
+                  Latest (6 Nov 2026)
+                </th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-border-card/30">
+              <tr>
+                <td class="p-3 border border-border-card font-bold"
+                  >Total Posts</td
+                >
+                <td
+                  class="p-3 border border-border-card text-center font-bold text-text-muted"
+                  >2,619</td
+                >
+                <td
+                  class="p-3 border border-border-card text-center font-bold text-rose-500"
+                  >5,707 (added 3,088 posts on 22 July)</td
+                >
+                <td
+                  class="p-3 border border-border-card text-center font-black text-emerald-600 dark:text-emerald-400 bg-emerald-500/[0.04] text-base"
+                >
+                  16,717
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-bold"
+                  >Application Start</td
+                >
+                <td class="p-3 border border-border-card text-center"
+                  >27 June 2026, 2:00 PM</td
+                >
+                <td class="p-3 border border-border-card text-center">–</td>
+                <td
+                  class="p-3 border border-border-card text-center font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-500/[0.04]"
+                >
+                  13 November 2026, 2:00 PM
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-bold"
+                  >Last Date to Apply</td
+                >
+                <td class="p-3 border border-border-card text-center"
+                  >17 July 2026</td
+                >
+                <td class="p-3 border border-border-card text-center"
+                  >Extended to 10 August 2026</td
+                >
+                <td
+                  class="p-3 border border-border-card text-center font-black text-rose-600 dark:text-rose-400 bg-emerald-500/[0.04]"
+                >
+                  27 November 2026 (11:59 PM)
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-bold"
+                  >Online Fee Last Date</td
+                >
+                <td class="p-3 border border-border-card text-center"
+                  >17 July 2026</td
+                >
+                <td class="p-3 border border-border-card text-center"
+                  >10 August 2026</td
+                >
+                <td
+                  class="p-3 border border-border-card text-center font-bold text-primary bg-emerald-500/[0.04]"
+                >
+                  30 November 2026 (Online Only)
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-border-card font-bold"
+                  >Prelim Exam Date</td
+                >
+                <td class="p-3 border border-border-card text-center"
+                  >25 October 2026</td
+                >
+                <td class="p-3 border border-border-card text-center"
+                  >03 January 2027</td
+                >
+                <td
+                  class="p-3 border border-border-card text-center font-black text-violet-600 dark:text-violet-400 bg-emerald-500/[0.04] text-base"
+                >
+                  24 January 2027 (Postponed)
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Full 27 Post-wise Tables (English) -->
+        <h2
+          id="vacancies-breakdown-en"
+          class="text-xl md:text-2xl font-black text-primary border-l-4 border-primary pl-4 mt-10"
+        >
+          MPSC Group C Revised Post-Wise Vacancy Details (27 Cadres • 16,717 Posts)
+        </h2>
+
+        <p>
+          Following the latest corrigendum issued by MPSC, here is the complete breakdown of all 27 cadres and their revised vacancy figures:
+        </p>
+
+        <!-- Table 1: Post Name and Vacancy (Simple Table) -->
+        <div class="mt-4 mb-8">
+          <h3 class="text-base sm:text-lg font-bold text-text-main mb-3 flex items-center gap-2">
+            <span>📋 Table 1: Cadre-Wise Vacancy Distribution</span>
+          </h3>
+
+          <div
+            class="overflow-x-auto rounded-2xl border border-border-card shadow-xs not-prose"
+          >
+            <table class="w-full text-left border-collapse text-sm">
+              <thead>
+                <tr class="bg-primary/10 text-text-main">
+                  <th
+                    class="p-3 border border-border-card font-bold text-center w-14"
+                    >Sr. No.</th
+                  >
+                  <th class="p-3 border border-border-card font-bold"
+                    >Post Name (Cadre)</th
+                  >
+                  <th
+                    class="p-3 border border-border-card font-bold text-center w-36"
+                    >Vacancies</th
+                  >
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-border-card/30">
+                {
+                  vacanciesList.map((post) => (
+                    <tr class="bg-bg-surface hover:bg-bg-surface/70 transition-colors">
+                      <td class="p-3 border border-border-card text-center font-bold text-text-muted">
+                        {post.srNo}
+                      </td>
+                      <td class="p-3 border border-border-card">
+                        <span class="block font-semibold text-text-main">
+                          {post.nameEn}
+                        </span>
+                        <span class="block text-xs text-text-muted">
+                          {post.nameMr}
+                        </span>
+                      </td>
+                      <td class="p-3 border border-border-card text-center font-bold text-text-main">
+                        {post.vacancies}
+                      </td>
+                    </tr>
+                  ))
+                }
+              </tbody>
+              <tfoot>
+                <tr class="bg-primary/10 font-black text-text-main">
+                  <td
+                    colspan="2"
+                    class="p-3.5 border border-border-card text-right text-sm sm:text-base font-black"
+                  >
+                    Total Vacancies
+                  </td>
+                  <td
+                    class="p-3.5 border border-border-card text-center font-black text-lg text-primary"
+                  >
+                    16,717
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+
+        <!-- Table 2: Post Name, Qualification & Age Limit (Simple Table) -->
+        <div class="mt-8 mb-8">
+          <h3 class="text-base sm:text-lg font-bold text-text-main mb-3 flex items-center gap-2">
+            <span>🎓 Table 2: Educational Qualification & Age Limit</span>
+          </h3>
+          <p class="text-xs sm:text-sm text-text-muted mb-3">
+            Below is the cadre-wise minimum educational qualification and prescribed age limit for all 27 posts:
+          </p>
+
+          <div
+            class="overflow-x-auto rounded-2xl border border-border-card shadow-xs not-prose"
+          >
+            <table class="w-full text-left border-collapse text-sm">
+              <thead>
+                <tr class="bg-primary/10 text-text-main">
+                  <th
+                    class="p-3 border border-border-card font-bold text-center w-14"
+                    >Sr.</th
+                  >
+                  <th
+                    class="p-3 border border-border-card font-bold min-w-[200px]"
+                    >Post Name</th
+                  >
+                  <th
+                    class="p-3 border border-border-card font-bold min-w-[260px]"
+                    >Educational Qualification</th
+                  >
+                  <th
+                    class="p-3 border border-border-card font-bold min-w-[200px]"
+                    >Age Limit</th
+                  >
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-border-card/30">
+                {
+                  vacanciesList.map((post) => (
+                    <tr class="bg-bg-surface hover:bg-bg-surface/70 transition-colors">
+                      <td class="p-3 border border-border-card text-center font-bold text-text-muted">
+                        {post.srNo}
+                      </td>
+                      <td class="p-3 border border-border-card">
+                        <span class="block font-semibold text-text-main">
+                          {post.nameEn}
+                        </span>
+                        <span class="block text-xs text-text-muted">
+                          {post.nameMr}
+                        </span>
+                      </td>
+                      <td class="p-3 border border-border-card text-xs text-text-main">
+                        {post.qualificationEn}
+                      </td>
+                      <td class="p-3 border border-border-card text-xs text-text-main font-medium">
+                        {post.ageLimitEn}
+                      </td>
+                    </tr>
+                  ))
+                }
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Steps to Apply (English) -->
+        <h2
+          class="text-xl md:text-2xl font-black text-primary border-l-4 border-primary pl-4 mt-10"
+        >
+          How to Apply Online at MPSC Portal
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6 not-prose">
+          <div
+            class="p-5 rounded-2xl bg-bg-surface border border-border-card space-y-3 shadow-xs"
+          >
+            <h3
+              class="text-base font-black text-emerald-600 dark:text-emerald-400 m-0 flex items-center gap-2"
+            >
+              <HiOutlinePlusCircle className="text-xl" /> For New Candidates:
+            </h3>
+            <ol
+              class="text-xs sm:text-sm text-text-secondary space-y-2 pl-4 list-decimal m-0 leading-relaxed"
+            >
+              <li>
+                Visit the official portal at <a
+                  href="https://mpsconline.gov.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-primary font-bold hover:underline"
+                  >mpsconline.gov.in</a
+                >.
+              </li>
+              <li>
+                Click on "New User Registration" and create your profile with
+                verified email and mobile.
+              </li>
+              <li>
+                Upload required certificates, photographs, and signatures
+                according to specifications.
+              </li>
+              <li>
+                Under "Online Application", select Advertisement No. 017/2026.
+              </li>
+              <li>
+                Select your eligible post preferences and pay the online fee
+                before 30 November 2026.
+              </li>
+            </ol>
+          </div>
+
+          <div
+            class="p-5 rounded-2xl bg-bg-surface border border-border-card space-y-3 shadow-xs"
+          >
+            <h3
+              class="text-base font-black text-primary m-0 flex items-center gap-2"
+            >
+              <HiOutlineShieldCheck className="text-xl" /> For Previously Applied
+              Candidates:
+            </h3>
+            <ol
+              class="text-xs sm:text-sm text-text-secondary space-y-2 pl-4 list-decimal m-0 leading-relaxed"
+            >
+              <li>
+                Log in with your existing credentials at <a
+                  href="https://mpsconline.gov.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-primary font-bold hover:underline"
+                  >mpsconline.gov.in</a
+                >.
+              </li>
+              <li>
+                Open your application under Advertisement No. 017/2026 in "My
+                Account".
+              </li>
+              <li>
+                Click on the <strong>“Recheck Eligibility”</strong> button.
+              </li>
+              <li>
+                Review the newly added 18 cadres and add options for all
+                eligible posts.
+              </li>
+              <li>
+                Submit the updated preferences. <strong
+                  >No additional fee is charged.</strong>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Official Links -->
+        <h2
+          class="text-xl md:text-2xl font-black text-primary border-l-4 border-primary pl-4 mt-10"
+        >
+          Official Notification & Online Apply Links
+        </h2>
+
+        <div class="overflow-x-auto my-6 not-prose">
+          <table
+            class="w-full text-left border-collapse text-sm rounded-2xl overflow-hidden border border-border-card shadow-xs"
+          >
+            <thead>
+              <tr class="bg-primary/10 text-text-main">
+                <th class="p-3.5 border border-border-card font-extrabold"
+                  >Resource</th
+                >
+                <th
+                  class="p-3.5 border border-border-card font-extrabold text-center w-48"
+                  >Link</th
+                >
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-border-card/30">
+              <tr>
+                <td class="p-3.5 border border-border-card font-bold">
+                  MPSC Official Online Application Portal (New & Recheck
+                  Options)
+                </td>
+                <td class="p-3.5 border border-border-card text-center">
+                  <a
+                    href="https://mpsconline.gov.in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1.5 px-4 py-2 bg-primary text-white text-xs font-bold rounded-xl hover:bg-primary/90 transition-colors no-underline shadow-xs"
+                  >
+                    <span>mpsconline.gov.in</span>
+                    <HiOutlineArrowTopRightOnSquare className="text-sm" />
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3.5 border border-border-card font-bold">
+                  MPSC Official Commission Website (Corrigendum Notices &
+                  Circulars)
+                </td>
+                <td class="p-3.5 border border-border-card text-center">
+                  <a
+                    href="https://mpsc.gov.in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1.5 px-4 py-2 bg-bg-surface hover:bg-bg-surface/80 text-text-main border border-border-card text-xs font-bold rounded-xl transition-colors no-underline shadow-xs"
+                  >
+                    <span>mpsc.gov.in</span>
+                    <HiOutlineArrowTopRightOnSquare className="text-sm" />
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3.5 border border-border-card font-bold">
+                  MPSC Group C Syllabus & Exam Pattern Guide
+                </td>
+                <td class="p-3.5 border border-border-card text-center">
+                  <a
+                    href="/mpsc/mpsc-group-c-syllabus-2026"
+                    class="inline-flex items-center gap-1.5 px-4 py-2 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-bold rounded-xl transition-colors no-underline"
+                  >
+                    <span>अभ्यासक्रम पाहा</span>
+                    <HiOutlineDocumentText className="text-sm" />
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Action Apply Container -->
+    <div
+      class="mt-12 p-8 rounded-3xl bg-gradient-to-r from-primary/10 via-violet-500/10 to-primary/10 border border-primary/25 text-center space-y-4 shadow-sm not-prose"
+    >
+      <h3 class="text-2xl font-black text-text-main m-0">
+        MPSC गट-क सेवा संयुक्त पूर्व परीक्षा २०२६ साठी सज्ज व्हा!
+      </h3>
+      <p
+        class="text-xs sm:text-sm text-text-muted max-w-xl mx-auto m-0 leading-relaxed"
+      >
+        सुधारित मुदतीनुसार १३ नोव्हेंबर ते २७ नोव्हेंबर २०२६ पर्यंत ऑनलाईन अर्ज
+        स्वीकारले जातील. पूर्व परीक्षा २४ जानेवारी २०२७ रोजी होणार आहे.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4 pt-2">
+        <a
+          href="https://mpsconline.gov.in"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary hover:bg-primary/90 text-white font-bold uppercase tracking-wider text-xs rounded-2xl shadow-xs transition-colors no-underline"
+        >
+          <HiOutlineCursorArrowRays className="text-base shrink-0" /> MPSC Online
+          Apply Portal
+        </a>
+        <a
+          href="/mpsc-combine-group-c-2026"
+          class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-bg-surface hover:bg-bg-surface/80 text-text-main border border-border-card font-bold uppercase tracking-wider text-xs rounded-2xl transition-colors no-underline"
+        >
+          <HiOutlineDocumentText className="text-base shrink-0" /> गट-क मुख्य हब
+        </a>
+      </div>
+    </div>
+  </article>
+</Layout>
+
+<!-- Countdown Script -->
+<script is:inline>
+  function updateMpscPrelimsCountdown() {
+    const targetDate = new Date("2027-01-24T10:00:00+05:30").getTime();
+    const now = new Date().getTime();
+    const difference = targetDate - now;
+
+    if (difference > 0) {
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+      );
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+      const daysEl = document.getElementById("cd-days");
+      const hoursEl = document.getElementById("cd-hours");
+      const minutesEl = document.getElementById("cd-minutes");
+      const secondsEl = document.getElementById("cd-seconds");
+
+      if (daysEl) daysEl.innerText = String(days).padStart(2, "0");
+      if (hoursEl) hoursEl.innerText = String(hours).padStart(2, "0");
+      if (minutesEl) minutesEl.innerText = String(minutes).padStart(2, "0");
+      if (secondsEl) secondsEl.innerText = String(seconds).padStart(2, "0");
+    } else {
+      const daysEl = document.getElementById("cd-days");
+      if (daysEl) daysEl.innerText = "00";
+    }
+  }
+
+  updateMpscPrelimsCountdown();
+  setInterval(updateMpscPrelimsCountdown, 1000);
+</script>
