@@ -1153,19 +1153,20 @@ export const articlesRegistry: ArticleMeta[] = [
   },
   {
     titleEn:
-      "MPSC Combined Group C Exam 2026: 5,707 Vacancies Notification, Eligibility & Apply Link",
+      "MPSC Combined Group C Exam 2026: 16,717 Vacancies Notification, Eligibility & Apply Link",
     titleMr:
-      "MPSC संयुक्त गट-क भरती परीक्षा २०२६: ५,७०७ पदांची जाहिरात, पात्रता व ऑनलाईन अर्ज!",
+      "MPSC संयुक्त गट-क भरती परीक्षा २०२६: १६,७१७ पदांची महाभरती (२७ संवर्ग), सुधारित जाहिरात व ऑनलाईन अर्ज!",
     slug: "/mpsc-combine-group-c-2026",
     category: "MPSC Bharti",
-    date: "July 20, 2026",
+    date: "November 07, 2026",
     image:
       "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1200",
-    postName: "लिपिक टंकलेखक, कर सहाय्यक व दुय्यम निरीक्षक",
+    postName: "तलाठी, लिपिक टंकलेखक, स्टाफ नर्स व २७ संवर्ग",
     descriptionMr:
-      "MPSC महाराष्ट्र गट-क सेवा संयुक्त पूर्व परीक्षा २०२६ अंतर्गत ५,७०७ जागांवर मेगाभरती जाहिरात प्रसिद्ध.",
-    vacancies: "5,707",
-    lastDate: "10 Aug 2026",
+      "MPSC महाराष्ट्र गट-क सेवा संयुक्त पूर्व परीक्षा २०२६ अंतर्गत १६,७१७ जागांवर मेगाभरती जाहिरात प्रसिद्ध. पूर्व परीक्षा २४ जानेवारी २०२७.",
+    vacancies: "16,717",
+    lastDate: "27 Nov 2026",
+    extendedDate: "30 Nov 2026",
   },
   {
     titleEn:
